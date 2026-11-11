@@ -1,10 +1,10 @@
 /*
  * DMR Showcase — real-time 3D world (three.js).
  *
- * Loads every building registered in assets/world/buildings/ into one scene.
+ * Loads every building in DMR.buildings (content/buildings/) into one scene.
  * Each building is its own model: a shell generated from the building file's
  * `size`, plus that file's optional build() geometry, or a .glb file if the
- * building sets `model`. See assets/world/world.js for the building format.
+ * building sets `model`. The building format is described in CONTENT.md.
  *
  * tour.js owns the tour state and side panel; this module draws and reports clicks.
  */

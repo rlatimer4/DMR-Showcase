@@ -173,40 +173,10 @@
 <script type="importmap">
 { "imports": { "three": "./assets/vendor/three/three.module.min.js", "three/addons/controls/OrbitControls.js": "./assets/vendor/three/OrbitControls.js", "three/addons/loaders/GLTFLoader.js": "./assets/vendor/three/loaders/GLTFLoader.js" } }
 </script>
-<script src="assets/js/data.js"></script>
-<script src="assets/world/world.js"></script>
-<!-- One file per building model. Add a line here when you add a building. -->
-<script src="assets/world/buildings/data-center.js"></script>
-<script src="assets/world/buildings/recreation-center.js"></script>
-<script src="assets/world/buildings/hotel.js"></script>
-<script src="assets/world/buildings/high-rise-office.js"></script>
-<script src="assets/world/buildings/mid-rise-office.js"></script>
-<script src="assets/world/buildings/low-rise-office.js"></script>
-<script src="assets/world/buildings/airport.js"></script>
-<script src="assets/world/buildings/convention-center.js"></script>
-<script src="assets/world/buildings/retail-strip.js"></script>
-<script src="assets/world/buildings/hospital.js"></script>
-<script src="assets/world/buildings/sports-stadium.js"></script>
-<script src="assets/world/buildings/medical-clinic.js"></script>
-<script src="assets/world/buildings/government-office.js"></script>
-<script src="assets/world/buildings/religious-center.js"></script>
-<script src="assets/world/buildings/library.js"></script>
-<script src="assets/world/buildings/fine-arts-center.js"></script>
-<script src="assets/world/buildings/higher-education.js"></script>
-<script src="assets/world/buildings/museum.js"></script>
-<script src="assets/world/buildings/k-12-school.js"></script>
-<script src="assets/world/buildings/small-manufacturing.js"></script>
-<script src="assets/world/buildings/food-beverage-processing.js"></script>
-<script src="assets/world/buildings/warehouse.js"></script>
-<script src="assets/world/buildings/pharma-manufacturing.js"></script>
-<script src="assets/world/buildings/greenhouse.js"></script>
-<script src="assets/world/buildings/industrial-manufacturing.js"></script>
-<script src="assets/world/buildings/hi-tech-manufacturing.js"></script>
-<script src="assets/world/buildings/multifamily.js"></script>
-<script src="assets/js/installs.js"></script>
-<script src="assets/js/app.js"></script>
-<script src="assets/js/tour.js"></script>
-<script src="assets/js/map.js"></script>
-<script type="module" src="assets/js/scene3d.js"></script>
+<script src="content/settings.js"></script>
+<script src="content/categories.js"></script>
+<script src="content/manifest.js"></script>
+<!-- core.js loads everything named in content/manifest.js, then starts the site. -->
+<script src="assets/js/core.js"></script>
 </body>
 </html>

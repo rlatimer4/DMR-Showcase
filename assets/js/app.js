@@ -3,25 +3,8 @@
   "use strict";
   var D = window.DMR;
   var $ = function (s, r) { return (r || document).querySelector(s); };
-  var byId = function (list) {
-    var m = {};
-    list.forEach(function (x) { m[x.id] = x; });
-    return m;
-  };
-  var brands = byId(D.brands), cats = byId(D.categories), products = byId(D.products), buildings = byId(D.buildings);
-  D.lookup = { brands: brands, cats: cats, products: products, buildings: buildings };
+  var brands = D.lookup.brands, cats = D.lookup.cats, products = D.lookup.products, buildings = D.lookup.buildings;
 
-  // Put buildings in district order, and work out which buildings each product is used in.
-  D.buildings.sort(function (a, b) {
-    var ua = D.useTypes.findIndex(function (u) { return u.id === a.use; }), ub = D.useTypes.findIndex(function (u) { return u.id === b.use; });
-    return ua - ub;
-  });
-  D.products.forEach(function (p) { p.buildings = []; });
-  D.buildings.forEach(function (b) {
-    b.stops.forEach(function (s) {
-      s.products.forEach(function (id) { if (products[id] && products[id].buildings.indexOf(b.id) < 0) products[id].buildings.push(b.id); });
-    });
-  });
   // <option>s for a building-type <select>, grouped by use type.
   D.buildingOptions = function () {
     return D.useTypes.map(function (u) {
@@ -86,9 +69,8 @@
       D.media(p) + "</button>" +
       '<div class="card-body">' +
       '<p class="card-meta"><span class="idx">' + catIndex(p.category) + "</span> " + cats[p.category].name + "</p>" +
-      '<h3><span class="card-brand">' + brands[p.brand].name + "</span> " + p.name + "</h3>" +
+      '<h3><span class="card-brand">' + brands[p.brand].name + "</span> " + p.name + (p.badge ? ' <span class="badge">' + p.badge + "</span>" : "") + "</h3>" +
       "<p>" + p.summary + "</p>" +
-      (p.verify ? '<p class="pending">Details pending DMR review</p>' : "") +
       '<div class="card-actions"><button class="link" type="button" data-product="' + p.id + '">View details</button>' +
       '<button class="add" type="button" data-add="' + p.id + '"></button></div>' +
       "</div></article>";
@@ -100,7 +82,7 @@
       '<p class="empty">No products match these filters. Clear a filter, or call DMR at ' + D.company.phone + " and we will find what you need.</p>";
     $("#resultCount").textContent = found.length + (found.length === 1 ? " product line" : " product lines");
     $("#clearFilters").hidden = !(state.q || state.cat || state.building || state.brand);
-    $("#catBlurb").textContent = state.cat ? cats[state.cat].blurb : "";
+    $("#catBlurb").textContent = state.cat && cats[state.cat] ? cats[state.cat].blurb : (state.brand && brands[state.brand] ? brands[state.brand].blurb : "");
     document.querySelectorAll("#catChips button").forEach(function (b) {
       b.setAttribute("aria-pressed", b.dataset.cat === state.cat);
     });
@@ -154,9 +136,9 @@
 
   function initGallery() {
     $("#galleryGrid").innerHTML = D.gallery.map(function (g) {
-      var p = products[g.product];
+      var p = g.product && products[g.product];
       return '<figure class="shot' + (g.size === "wide" ? " wide" : "") + '">' + D.media(g, g.caption) +
-        "<figcaption>" + g.caption + ' · <button class="link" type="button" data-product="' + p.id + '">' + brands[p.brand].name + "</button></figcaption></figure>";
+        "<figcaption>" + g.caption + (p ? ' · <button class="link" type="button" data-product="' + p.id + '">' + brands[p.brand].name + "</button>" : "") + "</figcaption></figure>";
     }).join("");
   }
 
@@ -176,16 +158,18 @@
       '<form method="dialog"><button class="close" aria-label="Close">Close</button></form>' +
       '<div class="sheet-grid"><div>' + D.media(p) + "</div><div>" +
       '<p class="card-meta"><span class="idx">' + catIndex(p.category) + "</span> " + cats[p.category].name + "</p>" +
-      '<h2 id="pdTitle"><span class="card-brand">' + b.name + "</span> " + p.name + "</h2>" +
+      '<h2 id="pdTitle"><span class="card-brand">' + b.name + "</span> " + p.name + (p.badge ? ' <span class="badge">' + p.badge + "</span>" : "") + "</h2>" +
       '<p class="lede-sm">' + p.summary + "</p>" +
-      (p.verify ? '<p class="pending">Details pending DMR review</p>' : "") +
-      "<h3>Key points</h3><ul class='ticks'>" + p.features.map(function (f) { return "<li>" + f + "</li>"; }).join("") + "</ul>" +
+      (p.features.length ? "<h3>Key points</h3><ul class='ticks'>" + p.features.map(function (f) { return "<li>" + f + "</li>"; }).join("") + "</ul>" : "") +
+      (p.specs ? "<h3>Specifications</h3><dl class='specs'>" + Object.keys(p.specs).map(function (k) { return "<dt>" + k + "</dt><dd>" + p.specs[k] + "</dd>"; }).join("") + "</dl>" : "") +
+      (p.links && p.links.length ? "<h3>Documents and links</h3><ul class='doc-links'>" + p.links.map(function (l) { return '<li><a href="' + l.url + '" target="_blank" rel="noopener">' + l.label + "</a></li>"; }).join("") + "</ul>" : "") +
       (p.buildings.length ? "<h3>Used in</h3><p class='tags'>" + p.buildings.map(function (m) { return "<span>" + buildings[m].name + "</span>"; }).join("") + "</p>" : "") +
       (stops.length ? "<h3>See it in the walkthrough</h3><p class='tags'>" + stops.map(function (x) {
         return '<button type="button" class="tag-btn" data-stop="' + x.s.id + '">' + x.b.name + ": " + x.s.title + "</button>";
       }).join("") + "</p>" : "") +
       '<div class="sheet-actions"><button class="btn btn-primary add" type="button" data-add="' + p.id + '"></button>' +
       '<a class="btn btn-line" href="mailto:' + D.company.email + "?subject=" + encodeURIComponent("Inquiry: " + b.name + " " + p.name) + '">Ask DMR about this</a></div>' +
+      (b.website ? '<p class="maker-link"><a href="' + b.website + '" target="_blank" rel="noopener">Visit ' + b.name + "</a></p>" : "") +
       "</div></div>" +
       (related.length ? '<div class="related"><h3>More in ' + cats[p.category].name + "</h3><div class='related-row'>" + related.map(function (r) {
         return '<button type="button" data-product="' + r.id + '"><strong>' + brands[r.brand].name + "</strong>" + r.name + "</button>";
