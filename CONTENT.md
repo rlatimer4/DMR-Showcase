@@ -86,26 +86,64 @@ A manufacturer can also have `website: "https://..."`, shown as a link on each o
 Each building is one file in `content/buildings/`.
 
 - **Change what equipment a building shows**: edit the `products` list of a stop. Use product ids.
-- **Add a stop**: add a block to `stops`. `at.floor` is `"roof"` or a floor number (0 is the ground floor); `at.x` is the position across the width from 0 to 1.
+- **Add a stop**: add a block to `stops`. `at.floor` is `"roof"`, `"yard"` (a unit on the ground in front) or a floor number (0 is the ground floor); `at.x` is the position across the width from 0 to 1.
 - **Add a building**: copy a building file, change its `id`, `name`, `use`, `size` and `stops`, then add its name to `buildings` in `content/manifest.js`. It is placed in its district automatically.
 - **Remove a building**: remove its name from `content/manifest.js`.
 - **Add a use type (district)**: add a line to `DMR.useTypes` in `content/settings.js` and set `use` to its id in the building files.
 
-`size` is in metres: `width`, `depth`, `floors`, `floorHeight`, and `bays` (rooms across each floor).
+`size` is in metres: `width`, `depth`, `floors`, `floorHeight`, and `bays` (rooms
+across each floor). Add `extraHeight` if tall shapes on the roof get cut off by the camera.
 
-### Custom shapes
-A building file can have a `build(kit, d)` function that adds shapes to the
-generated shell. Positions are relative to the centre of the building at ground level.
+### Making a building recognizable
+
+Three things in each building file control how it looks from outside.
+
+**1. The front wall** (`facade`) and wall colour (`walls`):
+
+```js
+facade: { style: "brick", color: "#b5533c" },
+walls: "#c0603f",
+```
+
+| style | looks like |
+| --- | --- |
+| `"windows"` | rows of separate windows (the default) |
+| `"glass"` | full glass curtain wall |
+| `"brick"` | brick with framed windows |
+| `"bands"` | ribbon windows on a plain wall |
+| `"tall"` | tall narrow windows, for halls and chapels |
+| `"solid"` | windowless, with a coloured `stripe` |
+| `"storefront"` | shop fronts |
+
+Extra facade options: `stripe: "#hex"`, `doors: 4` (roll-up or dock doors),
+`entrance: false`. Set `walls: "glass"` and `roof: "open"` for an all-glass building.
+
+**2. The name board.** Every building gets a sign with its name at the kerb. Set `sign: false` to remove it.
+
+**3. Custom shapes** in `build(kit, d)`. This is where the hospital gets its
+helipad and red cross, the airport its tower and airplane, the school its bus.
+Positions are relative to the centre of the building at ground level; `d` holds
+`width`, `depth`, `height`, `floors`, `floorHeight` and `bays`.
 
 ```
-kit.box(w, h, d, x, y, z, material)      kit.cyl(rTop, rBottom, h, x, y, z, material)
-kit.cone(r, h, x, y, z, material)         kit.ring(rInner, rOuter, h, x, y, z, material)
-kit.gable(w, h, d, x, y, z, material)
+kit.box(w, h, d, x, y, z, color)          kit.cyl(rTop, rBottom, h, x, y, z, color)
+kit.cone(r, h, x, y, z, color, sides)     kit.dome(r, x, y, z, color)
+kit.disc(r, x, y, z, color)               kit.ring(rInner, rOuter, h, x, y, z, color)
+kit.gable(w, h, d, x, y, z, color)        pitched roof or pediment
+kit.barrel(w, h, d, x, y, z, color)       curved roof
+kit.sign(text, w, h, x, y, z, background, textColor)
+kit.front(shape)                          hide this shape when the building opens
 ```
 
-Materials: `"wall"`, `"slab"`, `"glass"`, `"accent"`, `"unit"`, `"equip"`, `"dark"`, `"supply"`, `"return"`.
-`d` holds the building's `width`, `depth`, `height`, `floors`, `floorHeight` and `bays`.
-See `airport.js`, `sports-stadium.js`, `greenhouse.js` and `religious-center.js`.
+`color` is a hex colour such as `"#c0392b"`, or one of the named materials:
+`"wall"`, `"slab"`, `"glass"`, `"unit"`, `"equip"`, `"dark"`, `"supply"`, `"return"`.
+Every helper returns the shape, so you can turn it: `kit.cyl(...).rotation.z = Math.PI / 2`.
+
+Guidelines that keep the cutaway readable:
+
+- Wrap anything attached to the front wall in `kit.front(...)` so it disappears when the building opens.
+- Put tall things (silos, stacks, towers) on the roof or behind the building, and low things (cars, trucks, pools) in front.
+- Leave room on the roof around each `"roof"` stop for its unit. For a building with a shaped roof, use `at: { floor: "yard", x: ... }` and the unit sits on the ground in front.
 
 ### Artist-made 3D models
 Export a `.glb` to `assets/models/` and set `model: "assets/models/<file>.glb"` in

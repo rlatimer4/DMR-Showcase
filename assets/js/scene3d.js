@@ -92,18 +92,76 @@ function init() {
 
   /* ---------- canvas textures ---------- */
 
-  function facadeTexture(cols, rowsN, color) {
-    const c = document.createElement("canvas");
-    c.width = 64 * cols; c.height = 64 * rowsN;
-    const g = c.getContext("2d");
-    g.fillStyle = color; g.fillRect(0, 0, c.width, c.height);
-    for (let r = 0; r < rowsN; r++) for (let k = 0; k < cols; k++) {
-      g.fillStyle = "rgba(255,255,255," + (0.5 + ((r * 7 + k * 3) % 5) * 0.07) + ")";
-      g.fillRect(k * 64 + 8, r * 64 + 12, 48, 38);
-    }
+  function canvasTexture(c) {
     const t = new THREE.CanvasTexture(c);
     t.colorSpace = THREE.SRGBColorSpace;
+    t.anisotropy = 4;
     return t;
+  }
+  /*
+   * Front-wall textures. style:
+   *   "windows"     rows of separate windows (default)       "glass"       full curtain wall
+   *   "brick"       brick with framed windows                "bands"       ribbon windows on a plain wall
+   *   "tall"        tall narrow windows (halls, chapels)     "solid"       windowless, with a stripe
+   *   "storefront"  shop fronts with a sign band
+   * doors: number of roll-up or dock doors along the ground floor.
+   */
+  function facadeTexture(w, h, floors, f) {
+    const U = 24, c = document.createElement("canvas");            // 24 px per metre
+    c.width = Math.round(w * U); c.height = Math.round(h * U);
+    const g = c.getContext("2d"), W = c.width, H = c.height, fh = H / floors;
+    const color = f.color, style = f.style || "windows", pane = "rgba(214,236,250,0.92)";
+    g.fillStyle = color; g.fillRect(0, 0, W, H);
+    if (style === "glass") {
+      g.fillStyle = "rgba(190,226,248,0.55)"; g.fillRect(0, 0, W, H);
+      g.strokeStyle = "rgba(255,255,255,0.75)"; g.lineWidth = 3;
+      for (let x = 0; x <= W; x += U * 2) { g.beginPath(); g.moveTo(x, 0); g.lineTo(x, H); g.stroke(); }
+      const rows = floors * Math.max(1, Math.round(fh / (U * 3.6)));
+      for (let r = 0; r <= rows; r++) { g.beginPath(); g.moveTo(0, r * H / rows); g.lineTo(W, r * H / rows); g.stroke(); }
+    } else if (style === "solid" || style === "storefront") {
+      g.fillStyle = f.stripe || "#1779ba"; g.fillRect(0, H * 0.1, W, Math.max(8, H * 0.07));
+      if (style === "storefront") {
+        g.fillStyle = pane; g.fillRect(U * 0.6, H - U * 2.9, W - U * 1.2, U * 2.6);
+        g.fillStyle = color; for (let x = U * 0.3; x < W; x += U * 3) g.fillRect(x, H - U * 2.9, U * 0.3, U * 2.6);
+      }
+    } else if (style === "bands") {
+      for (let i = 0; i < floors; i++) { g.fillStyle = pane; g.fillRect(U * 0.8, i * fh + fh * 0.3, W - U * 1.6, fh * 0.34); }
+    } else if (style === "tall") {
+      const n = Math.max(3, Math.round(w / 3.4)), step = W / n;
+      for (let k = 0; k < n; k++) { g.fillStyle = pane; g.beginPath(); g.roundRect(k * step + step * 0.34, H * 0.2, step * 0.32, H * 0.55, step * 0.16); g.fill(); }
+    } else {
+      const n = Math.max(3, Math.round(w / 2.6)), step = W / n;
+      if (style === "brick") {
+        g.strokeStyle = "rgba(0,0,0,0.13)"; g.lineWidth = 1;
+        for (let y = 0; y < H; y += 7) { g.beginPath(); g.moveTo(0, y); g.lineTo(W, y); g.stroke(); }
+      }
+      for (let i = 0; i < floors; i++) for (let k = 0; k < n; k++) {
+        const x = k * step + step * 0.22, y = i * fh + fh * 0.26, ww = step * 0.56, hh = fh * 0.46;
+        if (style === "brick") { g.fillStyle = "#f4efe6"; g.fillRect(x - 3, y - 3, ww + 6, hh + 6); }
+        g.fillStyle = pane; g.fillRect(x, y, ww, hh);
+      }
+    }
+    const doors = f.doors || 0;
+    for (let k = 0; k < doors; k++) {
+      const dw = Math.min(U * 3.2, W / doors * 0.6), x = (k + 0.5) * W / doors - dw / 2;
+      g.fillStyle = "#e9edf0"; g.fillRect(x, H - U * 3.4, dw, U * 3.4);
+      g.strokeStyle = "rgba(0,0,0,0.25)"; g.lineWidth = 1;
+      for (let y = H - U * 3.4; y < H; y += 9) { g.beginPath(); g.moveTo(x, y); g.lineTo(x + dw, y); g.stroke(); }
+    }
+    if (f.entrance !== false && !doors) { g.fillStyle = "#282c39"; g.fillRect(W / 2 - U * 1.3, H - U * 2.5, U * 2.6, U * 2.5); g.fillStyle = pane; g.fillRect(W / 2 - U * 1.1, H - U * 2.3, U * 2.2, U * 2.3); }
+    return canvasTexture(c);
+  }
+  function signTexture(text, bg, color, wRatio) {
+    const c = document.createElement("canvas");
+    c.height = 128; c.width = Math.round(128 * wRatio);
+    const g = c.getContext("2d");
+    g.fillStyle = bg; g.fillRect(0, 0, c.width, c.height);
+    let size = 84;
+    g.font = "800 " + size + "px Montserrat, Arial, sans-serif";
+    const tw = g.measureText(text).width;
+    if (tw > c.width - 24) { size = Math.floor(size * (c.width - 24) / tw); g.font = "800 " + size + "px Montserrat, Arial, sans-serif"; }
+    g.fillStyle = color; g.textAlign = "center"; g.textBaseline = "middle"; g.fillText(text, c.width / 2, 68);
+    return canvasTexture(c);
   }
   function dotTexture(n, active) {
     const c = document.createElement("canvas");
@@ -137,46 +195,79 @@ function init() {
 
   const models = {}, spots = [], hits = [], fans = [];
 
-  // Generated shell: floors, walls, partitions, ducts and a glass front that fades away.
+  const hexMats = {};
+  function material(name) {
+    if (M[name]) return M[name];
+    if (/^#/.test(name || "")) return hexMats[name] || (hexMats[name] = mat(new THREE.Color(name)));
+    return M.wall;
+  }
+
+  // Generated shell: floors, walls, partitions, ducts and a front wall that fades away.
   function generateShell(b, shell, m) {
     const { width: w, depth: dp, floors, floorHeight: fh, bays, height: h } = b.size;
-    const color = (D.useTypes.find(u => u.id === b.use) || {}).color || "#1779ba";
+    const useColor = (D.useTypes.find(u => u.id === b.use) || {}).color || "#1779ba";
+    const facadeDef = Object.assign({ style: "windows", color: useColor }, b.facade);
+    const wall = material(b.walls || "wall");
     box(shell, w + 3, 0.12, dp + 3, 0, 0.06, 0, M.pad, false);
-    for (let i = 0; i <= floors; i++) box(shell, w, 0.3, dp, 0, i * fh + 0.15, 0, M.slab);
-    box(shell, w, h, 0.4, 0, h / 2, -dp / 2 + 0.2, M.wall);
-    box(shell, 0.4, h, dp, -w / 2 + 0.2, h / 2, 0, M.wall);
-    box(shell, 0.4, h, dp, w / 2 - 0.2, h / 2, 0, M.wall);
+    for (let i = 0; i <= floors; i++) if (i < floors || b.roof !== "open") box(shell, w, 0.3, dp, 0, i * fh + 0.15, 0, M.slab);
+    box(shell, w, h, 0.4, 0, h / 2, -dp / 2 + 0.2, wall);
+    box(shell, 0.4, h, dp, -w / 2 + 0.2, h / 2, 0, wall);
+    box(shell, 0.4, h, dp, w / 2 - 0.2, h / 2, 0, wall);
     for (let i = 0; i < floors; i++) {
       for (let k = 1; k < bays; k++) box(shell, 0.25, fh - 0.3, dp * 0.62, -w / 2 + k * w / bays, i * fh + fh / 2 + 0.15, -dp * 0.19, M.partition);
       box(shell, w * 0.84, 0.5, 0.9, 0, (i + 1) * fh - 0.55, -dp * 0.1, M.supply, false);
       box(shell, w * 0.84, 0.4, 0.7, 0, (i + 1) * fh - 0.5, -dp * 0.36, M.return, false);
     }
-    const fm = new THREE.MeshStandardMaterial({ map: facadeTexture(Math.max(3, Math.round(w / 3)), Math.max(2, Math.round(h / 2.2)), color), transparent: true, roughness: 0.3 });
+    const fm = new THREE.MeshStandardMaterial({ map: facadeTexture(w, h, floors, facadeDef), transparent: true, roughness: 0.45 });
     const facade = box(shell, w, h, 0.3, 0, h / 2, dp / 2 + 0.16, fm, false);
     facade.renderOrder = 2;
     m.cutaways.push(facade);
 
-    // Per-building extras from the building file.
-    if (typeof b.build === "function") {
-      const pick = name => (name === "accent" ? (m.accent = m.accent || mat(new THREE.Color(color))) : M[name] || M.wall);
-      b.build({
-        box: (bw, bh, bd, x, y, z, name) => box(shell, bw, bh, bd, x, y, z, pick(name)),
-        cyl: (rt, rb, ch, x, y, z, name) => mesh(shell, new THREE.CylinderGeometry(rt, rb, ch, 24), pick(name), x, y, z),
-        cone: (r, ch, x, y, z, name) => mesh(shell, new THREE.ConeGeometry(r, ch, 4), pick(name), x, y, z).rotateY(Math.PI / 4),
-        ring: (ri, ro, rh, x, y, z, name) => {
-          const g = new THREE.CylinderGeometry(ro, ri, rh, 40, 1, true);
-          const r = mesh(shell, g, pick(name), x, y, z);
-          r.material = r.material.clone(); r.material.side = THREE.DoubleSide;
-          r.scale.z = 0.5;
-          return r;
-        },
-        gable: (gw, gh, gd, x, y, z, name) => {
-          const s = new THREE.Shape([new THREE.Vector2(-gw / 2, 0), new THREE.Vector2(gw / 2, 0), new THREE.Vector2(0, gh)]);
-          const g = new THREE.ExtrudeGeometry(s, { depth: gd, bevelEnabled: false });
-          return mesh(shell, g, pick(name), x, y, z - gd / 2);
-        }
-      }, b.size);
+    const kit = {
+      // Everything returns the mesh, so a building file can rotate or scale it.
+      box: (bw, bh, bd, x, y, z, name) => box(shell, bw, bh, bd, x, y, z, material(name)),
+      cyl: (rt, rb, ch, x, y, z, name) => mesh(shell, new THREE.CylinderGeometry(rt, rb, ch, 24), material(name), x, y, z),
+      cone: (r, ch, x, y, z, name, sides) => mesh(shell, new THREE.ConeGeometry(r, ch, sides || 4), material(name), x, y, z).rotateY(Math.PI / 4),
+      dome: (r, x, y, z, name) => mesh(shell, new THREE.SphereGeometry(r, 24, 12, 0, Math.PI * 2, 0, Math.PI / 2), material(name), x, y, z),
+      disc: (r, x, y, z, name) => mesh(shell, new THREE.CylinderGeometry(r, r, 0.15, 32), material(name), x, y, z, false),
+      ring: (ri, ro, rh, x, y, z, name) => {
+        const r = mesh(shell, new THREE.CylinderGeometry(ro, ri, rh, 40, 1, true), material(name).clone(), x, y, z);
+        r.material.side = THREE.DoubleSide;
+        r.scale.z = 0.5;
+        return r;
+      },
+      // Triangular roof or pediment: the triangle faces the front, the ridge runs front to back.
+      gable: (gw, gh, gd, x, y, z, name) => {
+        const s = new THREE.Shape([new THREE.Vector2(-gw / 2, 0), new THREE.Vector2(gw / 2, 0), new THREE.Vector2(0, gh)]);
+        const g = new THREE.ExtrudeGeometry(s, { depth: gd, bevelEnabled: false });
+        g.translate(0, 0, -gd / 2);
+        return mesh(shell, g, material(name), x, y, z);
+      },
+      // Curved roof: the arch faces the front and runs front to back.
+      barrel: (bw, bh, bd, x, y, z, name) => {
+        const g = new THREE.CylinderGeometry(1, 1, bd, 28, 1, false, 0, Math.PI);
+        g.rotateZ(Math.PI / 2); g.rotateY(Math.PI / 2);
+        const r = mesh(shell, g, material(name).clone(), x, y, z);
+        r.material.side = THREE.DoubleSide;
+        r.scale.set(bw / 2, bh, 1);
+        return r;
+      },
+      // Flat sign with text. Faces the front; rotate the returned mesh to turn it.
+      sign: (text, sw, sh, x, y, z, bg, color) => {
+        const sm = new THREE.MeshBasicMaterial({ map: signTexture(text, bg || "#282c39", color || "#ffffff", sw / sh), side: THREE.DoubleSide });
+        return mesh(shell, new THREE.PlaneGeometry(sw, sh), sm, x, y, z, false);
+      },
+      // Mark something on the front of the building so it disappears when the building opens.
+      front: o => { m.cutaways.push(o); return o; }
+    };
+    // Name board at the kerb, so every building is labelled even without custom shapes.
+    if (b.sign !== false) {
+      const sx = -w / 2 + 4.5, sz = dp / 2 + 3.4;
+      kit.box(8.4, 0.5, 0.7, sx, 0.3, sz, "dark");
+      kit.box(8.2, 1.9, 0.3, sx, 1.5, sz, "dark");
+      kit.sign(b.name.toUpperCase(), 8, 1.7, sx, 1.5, sz + 0.2, "#282c39", "#ffffff");
     }
+    if (typeof b.build === "function") b.build(kit, b.size);
   }
 
   // Optional artist-made model. Meshes named "Cutaway…" hide when the building opens.
@@ -218,7 +309,24 @@ function init() {
     b.stops.forEach(s => {
       const x = -w / 2 + s.at.x * w;
       let pos;
-      if (s.at.floor === "roof") {
+      if (s.at.floor === "yard") {
+        // Ground-mounted unit in front of the building, for buildings with shaped roofs.
+        const z = dp / 2 + 8.5;
+        if (!b.model) {
+          box(shell, 7, 2.8, 4, x, 1.6, z, M.unit);
+          box(shell, 7.1, 0.5, 4.1, x, 0.5, z, M.trim, false);
+          [-1.8, 1.8].forEach(dx => {
+            const f = mesh(shell, new THREE.CylinderGeometry(1.1, 1.1, 0.3, 20), M.dark, x + dx, 3.15, z, false);
+            const blade = new THREE.Mesh(new THREE.BoxGeometry(1.9, 0.1, 0.3), M.unit);
+            blade.position.y = 0.2; f.add(blade);
+            const blade2 = blade.clone(); blade2.rotation.y = Math.PI / 2; f.add(blade2);
+            fans.push(f);
+          });
+          box(shell, 0.9, 0.9, 6.5, x + 1.5, 0.9, z - 5, M.supply, false);
+          box(shell, 0.8, 0.8, 6.5, x - 1.5, 0.9, z - 5, M.return, false);
+        }
+        pos = new THREE.Vector3(x, 6, z);
+      } else if (s.at.floor === "roof") {
         if (!b.model) {
           box(shell, 8, 3, 5, x, h + 1.8, -1, M.unit);
           box(shell, 8.1, 0.5, 5.1, x, h + 0.75, -1, M.trim, false);
@@ -265,7 +373,7 @@ function init() {
     const tan = Math.tan(THREE.MathUtils.degToRad(camera.fov / 2));
     const fit = (wNeed, hNeed) => Math.max(hNeed / 2 / tan, wNeed / 2 / tan / camera.aspect);
     if (v.building) {
-      const s = v.building.size, p = v.building.pos, d = fit(s.width + 14, s.height + 18) + s.depth / 2;
+      const s = v.building.size, p = v.building.pos, d = fit(s.width + 16, s.height + (s.extraHeight || 0) + 18) + s.depth / 2 + 6;
       return [new THREE.Vector3(p.x + d * 0.34, s.height / 2 + 2 + d * 0.2, p.z + d * 0.92), new THREE.Vector3(p.x, s.height / 2 + 2, p.z)];
     }
     const a = v.use ? layout.districts[v.use] : { x: 0, z: -(layout.depth - cell.depth) / 2, width: layout.width, depth: layout.depth };
@@ -373,7 +481,7 @@ function init() {
   stage.appendChild(tip);
   new ResizeObserver(resize).observe(stage);
   resize();
-  D.view3d = { focus: v => focus(v, false) };
+  D.view3d = { focus: v => focus(v, false), models };
   focus(D.tourState ? D.tourState() : view, true);
   requestAnimationFrame(frame);
 }
