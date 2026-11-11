@@ -1,11 +1,11 @@
 /*
- * DMR Showcase — installations map.
+ * DMR Showcase — installations map (Google Maps).
  *
- * Two renderers share one data set (DMR.installs, each with lat/lng):
- *   - "leaflet": a real, pannable map (Leaflet + the tile server in DMR.mapConfig)
- *   - "schematic": a self-contained SVG drawing, used when tiles cannot load
- * Swapping tile providers (Mapbox, MapTiler, Esri) only means changing
- * DMR.mapConfig.tiles and .attribution in data.js.
+ * Pins come from DMR.installs (assets/js/installs.js). Each pin lists the
+ * manufacturers installed there, which drives the manufacturer filter.
+ *
+ * Pin editor: open the page with ?edit=1 to add, edit and delete pins, then
+ * download an updated installs.js. Edits are kept in this browser until then.
  */
 (function () {
   "use strict";
@@ -13,139 +13,205 @@
   var el = document.getElementById("map");
   var listEl = document.getElementById("installList");
   var note = document.getElementById("mapNote");
-  var btnLive = document.getElementById("mapLive"), btnSch = document.getElementById("mapSchematic");
-  var filter = "", selected = null, mode = null;
-  var lmap = null, lmarkers = {}, tilesOk = false;
+  var fBrand = document.getElementById("mapBrand"), fMarket = document.getElementById("mapMarket");
+  var editing = /[?&]edit(=1)?(&|$)/.test(location.search);
+  var DRAFT = "dmr-pin-drafts";
+  var gmap = null, info = null, markers = {}, selected = null, pendingClick = null;
 
-  var COLORS = { healthcare: "#e11d48", labs: "#7c3aed", datacenter: "#0284c7", education: "#059669", office: "#475569", industrial: "#d97706", government: "#4338ca", residential: "#be185d" };
-  function visible() { return D.installs.filter(function (i) { return !filter || i.market === filter; }); }
-  function popup(i) {
-    return "<strong>" + i.name + "</strong><br>" + i.city + " · " + L.markets[i.market].name + " · " + i.year + "<br>" +
-      i.products.map(function (p) { return L.brands[L.products[p].brand].name + " " + L.products[p].name; }).join("<br>");
+  if (editing) {
+    try {
+      var saved = JSON.parse(localStorage.getItem(DRAFT) || "null");
+      if (Array.isArray(saved)) D.installs = saved;
+    } catch (e) { /* ignore unreadable drafts */ }
   }
-
-  /* ---------- schematic renderer ---------- */
-
-  var b = cfg.bounds;
-  // The drawing uses its own wider frame so it fills a landscape panel.
-  var W = 1000, H = 600, sb = { minLat: 36.55, maxLat: 39.8, minLng: -80.47, maxLng: -73.53 };
-  function px(lat, lng) {
-    return [((lng - sb.minLng) / (sb.maxLng - sb.minLng)) * W, ((sb.maxLat - lat) / (sb.maxLat - sb.minLat)) * H];
-  }
-  function path(pts) { return pts.map(function (p, i) { return (i ? "L" : "M") + px(p[0], p[1]).map(Math.round).join(" "); }).join(" "); }
-  // Rough centre lines, for orientation only.
-  var BAY = [[36.95, -76.05], [37.5, -76.15], [38.0, -76.27], [38.45, -76.4], [38.9, -76.4], [39.2, -76.3], [39.45, -76.08], [39.58, -76.0]];
-  var POTOMAC = [[38.0, -76.4], [38.25, -76.9], [38.35, -77.27], [38.62, -77.2], [38.87, -77.03], [39.0, -77.25], [39.18, -77.5], [39.32, -77.74]];
-
-  var COAST = [[36.55, -75.87], [36.93, -76.0], [37.12, -75.95], [37.9, -75.35], [38.45, -75.05], [38.8, -75.09], [39.2, -75.4], [39.6, -75.58]];
-
-  function drawSchematic() {
-    var o = '<svg viewBox="0 0 ' + W + " " + H + '" preserveAspectRatio="xMidYMid slice" class="sch" role="img" aria-label="Schematic map of sample installations in Maryland, Virginia and Washington DC">' +
-      '<defs><pattern id="dots" width="18" height="18" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.2" class="sch-dot"/></pattern></defs>' +
-      '<rect width="' + W + '" height="' + H + '" fill="url(#dots)"/>' +
-      '<path class="sch-water wide" d="' + path(BAY) + '"/><path class="sch-water" d="' + path(POTOMAC) + '"/><path class="sch-coast" d="' + path(COAST) + '"/>' +
-      '<text class="sch-water-label" x="' + (px(37.6, -75.0)[0]) + '" y="' + px(37.6, -75.0)[1] + '">Atlantic Ocean</text>' +
-      '<text class="sch-water-label" x="' + (px(38.2, -76.2)[0] + 16) + '" y="' + px(38.2, -76.2)[1] + '">Chesapeake Bay</text>';
-    D.cities.forEach(function (c) {
-      var p = px(c.lat, c.lng);
-      o += '<rect class="sch-city" x="' + (p[0] - 2.5) + '" y="' + (p[1] - 2.5) + '" width="5" height="5"/><text class="sch-city-label" x="' + (p[0] + 8) + '" y="' + (p[1] + 4) + '">' + c.name + "</text>";
+  function saveDraft() { try { localStorage.setItem(DRAFT, JSON.stringify(D.installs)); } catch (e) { /* storage unavailable */ } }
+  function esc(s) { return String(s == null ? "" : s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); }
+  function find(id) { return D.installs.filter(function (i) { return i.id === id; })[0]; }
+  function brandsOf(i) { return (i.manufacturers || []).filter(function (b) { return L.brands[b]; }); }
+  function visible() {
+    return D.installs.filter(function (i) {
+      return (!fBrand.value || brandsOf(i).indexOf(fBrand.value) > -1) && (!fMarket.value || i.building === fMarket.value);
     });
-    var hq = px(D.company.hq.lat, D.company.hq.lng);
-    o += '<g class="sch-hq"><path d="M' + hq[0] + " " + (hq[1] - 9) + "l8 15h-16z" + '"/><text x="' + (hq[0] - 10) + '" y="' + (hq[1] - 13) + '" text-anchor="end">DMR office</text></g>';
+  }
+
+  /* ---------- pin content ---------- */
+
+  function infoHtml(i) {
+    var photos = (i.photos || []).filter(Boolean);
+    var prods = (i.products || []).filter(function (p) { return L.products[p]; });
+    return '<div class="pin-info">' +
+      (photos.length ? '<div class="pin-photos">' + photos.map(function (p) { return '<img src="' + esc(p) + '" alt="' + esc(i.name) + '" loading="lazy">'; }).join("") + "</div>" : "") +
+      "<strong>" + esc(i.name) + "</strong>" +
+      "<span>" + esc(i.city) + (L.buildings[i.building] ? " · " + L.buildings[i.building].name : "") + (i.year ? " · " + esc(i.year) : "") + "</span>" +
+      '<p class="tags">' + brandsOf(i).map(function (b) { return "<span>" + L.brands[b].name + "</span>"; }).join("") + "</p>" +
+      (prods.length ? "<ul>" + prods.map(function (p) { return "<li>" + L.brands[L.products[p].brand].name + " " + L.products[p].name + "</li>"; }).join("") + "</ul>" : "") +
+      (i.notes ? "<p>" + esc(i.notes) + "</p>" : "") +
+      (editing ? '<p><button type="button" class="link" data-edit-pin="' + i.id + '">Edit pin</button> · <button type="button" class="link" data-delete-pin="' + i.id + '">Delete</button></p>' : "") +
+      "</div>";
+  }
+  function icon(on) {
+    return {
+      path: "M12 2C7.6 2 4 5.6 4 10c0 5.6 8 12 8 12s8-6.4 8-12c0-4.4-3.600-8-8-8z",
+      fillColor: on ? "#ffa500" : "#1779ba", fillOpacity: 1, strokeColor: "#fff", strokeWeight: 2,
+      scale: on ? 1.9 : 1.5, anchor: new google.maps.Point(12, 22)
+    };
+  }
+
+  /* ---------- drawing ---------- */
+
+  function drawMarkers() {
+    if (!gmap) return;
+    Object.keys(markers).forEach(function (k) { markers[k].setMap(null); });
+    markers = {};
     visible().forEach(function (i) {
-      var p = px(i.lat, i.lng);
-      o += '<g class="pin' + (selected === i.id ? " on" : "") + '" data-install="' + i.id + '" tabindex="0" role="button" aria-label="' + i.name + ", " + i.city + '">' +
-        '<circle cx="' + p[0] + '" cy="' + p[1] + '" r="' + (selected === i.id ? 11 : 7) + '" fill="' + COLORS[i.market] + '"/></g>';
+      var m = new google.maps.Marker({ map: gmap, position: { lat: i.lat, lng: i.lng }, title: i.name, icon: icon(i.id === selected), draggable: editing });
+      m.addListener("click", function () { select(i.id); });
+      if (editing) m.addListener("dragend", function (e) { i.lat = +e.latLng.lat().toFixed(5); i.lng = +e.latLng.lng().toFixed(5); saveDraft(); });
+      markers[i.id] = m;
     });
-    var s = selected && D.installs.filter(function (i) { return i.id === selected; })[0];
-    el.innerHTML = o + "</svg>" + (s ? '<div class="sch-pop">' + popup(s) + "</div>" : "");
   }
-
-  /* ---------- leaflet renderer ---------- */
-
-  function drawLeaflet() {
-    if (!lmap) {
-      el.innerHTML = "";
-      lmap = window.L.map(el, { scrollWheelZoom: false }).fitBounds([[b.minLat + 0.9, b.minLng + 1.2], [b.maxLat - 0.1, b.maxLng - 0.4]]);
-      var layer = window.L.tileLayer(cfg.tiles, { attribution: cfg.attribution, maxZoom: 17 });
-      layer.on("tileload", function () { tilesOk = true; });
-      // If no tile has ever loaded, the network or provider is unavailable: use the drawing instead.
-      layer.on("tileerror", function () { if (!tilesOk && mode === "leaflet") setMode("schematic", "The live map could not load, so this is a schematic view."); });
-      layer.addTo(lmap);
-      window.L.marker([D.company.hq.lat, D.company.hq.lng], {
-        icon: window.L.divIcon({ className: "hq-icon", html: "<span>DMR</span>", iconSize: [40, 22] }), keyboard: false
-      }).addTo(lmap).bindPopup("<strong>" + D.company.name + "</strong><br>" + D.company.address.join("<br>"));
-    }
-    Object.keys(lmarkers).forEach(function (k) { lmarkers[k].remove(); });
-    lmarkers = {};
-    visible().forEach(function (i) {
-      lmarkers[i.id] = window.L.circleMarker([i.lat, i.lng], { radius: 8, color: "#fff", weight: 2, fillColor: COLORS[i.market], fillOpacity: 1 })
-        .addTo(lmap).bindPopup(popup(i)).on("click", function () { select(i.id, true); });
-    });
-    if (selected && lmarkers[selected]) lmarkers[selected].openPopup();
-  }
-
-  /* ---------- shared ---------- */
-
   function drawList() {
     var v = visible();
+    document.getElementById("pinCount").textContent = v.length + (v.length === 1 ? " installation" : " installations");
     listEl.innerHTML = v.length ? v.map(function (i) {
       return '<li><button type="button" data-install="' + i.id + '" aria-pressed="' + (selected === i.id) + '">' +
-        '<span class="dot" style="background:' + COLORS[i.market] + '"></span>' +
-        "<span><strong>" + i.name + "</strong><em>" + i.city + " · " + L.markets[i.market].name + " · " + i.year + "</em></span></button></li>";
-    }).join("") : '<li class="empty">No sample installations for this building type yet.</li>';
+        "<strong>" + esc(i.name) + "</strong><em>" + esc(i.city) + (i.year ? " · " + esc(i.year) : "") + "</em>" +
+        '<span class="mini-tags">' + brandsOf(i).map(function (b) { return "<span>" + L.brands[b].name + "</span>"; }).join("") + "</span></button></li>";
+    }).join("") : '<li class="empty">No installations match these filters yet.</li>';
   }
-  function draw() {
-    if (mode === "leaflet") drawLeaflet(); else drawSchematic();
+  function draw() { drawMarkers(); drawList(); }
+  function select(id) {
+    selected = id;
+    var i = find(id);
+    Object.keys(markers).forEach(function (k) { markers[k].setIcon(icon(k === id)); });
+    if (gmap && i && markers[id]) {
+      info.setContent(infoHtml(i));
+      info.open({ map: gmap, anchor: markers[id] });
+      gmap.panTo(markers[id].getPosition());
+    }
     drawList();
   }
-  function select(id, fromMap) {
-    selected = id;
-    if (mode === "leaflet") {
-      if (!fromMap && lmarkers[id]) { lmap.panTo(lmarkers[id].getLatLng()); lmarkers[id].openPopup(); }
-      drawList();
-    } else draw();
-  }
-  function setMode(m, msg) {
-    if (m === "leaflet" && !window.L) { m = "schematic"; msg = "The live map could not load, so this is a schematic view."; }
-    if (mode === "leaflet" && m !== "leaflet" && lmap) { lmap.remove(); lmap = null; lmarkers = {}; }
-    mode = m;
-    el.classList.toggle("is-schematic", m === "schematic");
-    btnLive.setAttribute("aria-pressed", m === "leaflet");
-    btnSch.setAttribute("aria-pressed", m === "schematic");
-    note.hidden = !msg;
-    note.textContent = msg || "";
-    draw();
-  }
 
-  var chips = document.getElementById("mapChips");
-  var used = D.markets.filter(function (m) { return D.installs.some(function (i) { return i.market === m.id; }); });
-  chips.innerHTML = '<button type="button" data-m="" aria-pressed="true">All</button>' + used.map(function (m) {
-    return '<button type="button" data-m="' + m.id + '" aria-pressed="false"><span class="dot" style="background:' + COLORS[m.id] + '"></span>' + m.name + "</button>";
-  }).join("");
-  chips.addEventListener("click", function (e) {
-    var t = e.target.closest("button");
-    if (!t) return;
-    filter = t.dataset.m; selected = null;
-    chips.querySelectorAll("button").forEach(function (x) { x.setAttribute("aria-pressed", x === t); });
-    draw();
-  });
+  /* ---------- filters ---------- */
+
+  function fillFilters() {
+    var b = fBrand.value, m = fMarket.value;
+    fBrand.innerHTML = '<option value="">All manufacturers</option>' + D.brands.filter(function (x) {
+      return editing || D.installs.some(function (i) { return brandsOf(i).indexOf(x.id) > -1; });
+    }).map(function (x) { return '<option value="' + x.id + '">' + x.name + "</option>"; }).join("");
+    fMarket.innerHTML = '<option value="">All building types</option>' + D.buildingOptions();
+    fBrand.value = b; fMarket.value = m;
+  }
+  fBrand.addEventListener("change", function () { selected = null; if (info) info.close(); draw(); });
+  fMarket.addEventListener("change", function () { selected = null; if (info) info.close(); draw(); });
   listEl.addEventListener("click", function (e) {
     var t = e.target.closest("[data-install]");
     if (t) select(t.dataset.install);
   });
-  el.addEventListener("click", function (e) {
-    if (mode !== "schematic") return;
-    var t = e.target.closest("[data-install]");
-    selected = t ? t.dataset.install : null;
-    draw();
-  });
-  el.addEventListener("keydown", function (e) {
-    var t = e.target.closest && e.target.closest("[data-install]");
-    if (t && (e.key === "Enter" || e.key === " ")) { e.preventDefault(); select(t.dataset.install); }
-  });
-  btnLive.addEventListener("click", function () { tilesOk = false; setMode("leaflet"); });
-  btnSch.addEventListener("click", function () { setMode("schematic"); });
 
-  setMode(cfg.provider === "leaflet" ? "leaflet" : "schematic");
+  /* ---------- pin editor (?edit=1) ---------- */
+
+  var form = document.getElementById("pinForm");
+  function openForm(i, latLng) {
+    var isNew = !i;
+    i = i || { id: "", name: "", city: "", lat: latLng.lat, lng: latLng.lng, building: "", year: new Date().getFullYear(), manufacturers: [], products: [], photos: [], notes: "" };
+    form.hidden = false;
+    form.innerHTML =
+      "<h3>" + (isNew ? "New pin" : "Edit pin") + "</h3>" +
+      '<input type="hidden" name="id" value="' + esc(i.id) + '">' +
+      '<label>Project name<input name="name" required value="' + esc(i.name) + '"></label>' +
+      '<label>City, state<input name="city" value="' + esc(i.city) + '" placeholder="Bethesda, MD"></label>' +
+      '<div class="row"><label>Latitude<input name="lat" required inputmode="decimal" value="' + i.lat + '"></label><label>Longitude<input name="lng" required inputmode="decimal" value="' + i.lng + '"></label></div>' +
+      '<div class="row"><label>Building type<select name="building"><option value="">Not set</option>' + D.buildingOptions() + "</select></label>" +
+      '<label>Year<input name="year" inputmode="numeric" value="' + esc(i.year) + '"></label></div>' +
+      "<fieldset><legend>Manufacturers at this site</legend>" + D.brands.map(function (b) {
+        return '<label class="check"><input type="checkbox" name="manufacturers" value="' + b.id + '"' + ((i.manufacturers || []).indexOf(b.id) > -1 ? " checked" : "") + "> " + b.name + "</label>";
+      }).join("") + "</fieldset>" +
+      '<label>Photos (optional, one image path or URL per line)<textarea name="photos" rows="2" placeholder="assets/photos/project-1.jpg">' + esc((i.photos || []).join("\n")) + "</textarea></label>" +
+      '<label>Notes (optional)<textarea name="notes" rows="2">' + esc(i.notes) + "</textarea></label>" +
+      '<div class="row"><button class="btn btn-primary" type="submit">Save pin</button><button class="btn btn-line" type="button" data-cancel-pin>Cancel</button></div>';
+    form.elements.building.value = i.building || "";
+    form.scrollIntoView({ block: "nearest" });
+    form.elements.name.focus();
+  }
+  function closeForm() { form.hidden = true; form.innerHTML = ""; if (pendingClick) { pendingClick.setMap(null); pendingClick = null; } }
+
+  function exportFile() {
+    return "/*\n * DMR Showcase — map pins. Generated by the pin editor (?edit=1).\n * `manufacturers` are brand ids from data.js; `photos` are optional image paths or URLs.\n */\n" +
+      "window.DMR = window.DMR || {};\nDMR.installs = [\n" + D.installs.map(function (i) { return "  " + JSON.stringify(i); }).join(",\n") + "\n];\n";
+  }
+
+  if (editing) {
+    document.getElementById("pinEditor").hidden = false;
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      var f = form.elements, lat = parseFloat(f.lat.value), lng = parseFloat(f.lng.value);
+      if (isNaN(lat) || isNaN(lng)) { f.lat.focus(); return; }
+      var rec = find(f.id.value);
+      if (!rec) { rec = { id: "p" + Date.now().toString(36), products: [] }; D.installs.push(rec); }
+      rec.name = f.name.value.trim(); rec.city = f.city.value.trim(); rec.lat = lat; rec.lng = lng;
+      rec.building = f.building.value; rec.year = parseInt(f.year.value, 10) || "";
+      rec.manufacturers = Array.prototype.filter.call(form.querySelectorAll("[name=manufacturers]"), function (c) { return c.checked; }).map(function (c) { return c.value; });
+      rec.photos = f.photos.value.split(/\n+/).map(function (s) { return s.trim(); }).filter(Boolean);
+      rec.notes = f.notes.value.trim();
+      saveDraft(); closeForm(); fillFilters(); draw(); select(rec.id);
+    });
+    document.getElementById("pinEditor").addEventListener("click", function (e) {
+      if (e.target.closest("[data-cancel-pin]")) closeForm();
+      if (e.target.closest("#pinNew")) openForm(null, gmap ? { lat: +gmap.getCenter().lat().toFixed(5), lng: +gmap.getCenter().lng().toFixed(5) } : cfg.center);
+      if (e.target.closest("#pinDownload")) {
+        var a = document.createElement("a");
+        a.href = URL.createObjectURL(new Blob([exportFile()], { type: "text/javascript" }));
+        a.download = "installs.js"; a.click(); URL.revokeObjectURL(a.href);
+      }
+      if (e.target.closest("#pinReset") && confirm("Discard all unsaved pin changes in this browser?")) {
+        try { localStorage.removeItem(DRAFT); } catch (err) { /* ignore */ }
+        location.reload();
+      }
+    });
+    document.addEventListener("click", function (e) {
+      var t;
+      if ((t = e.target.closest("[data-edit-pin]"))) openForm(find(t.dataset.editPin));
+      if ((t = e.target.closest("[data-delete-pin]")) && confirm("Delete this pin?")) {
+        D.installs = D.installs.filter(function (i) { return i.id !== t.dataset.deletePin; });
+        selected = null; info.close(); saveDraft(); fillFilters(); draw();
+      }
+    });
+  }
+
+  /* ---------- Google Maps loader ---------- */
+
+  function fail(msg) { el.classList.add("map-off"); note.hidden = false; note.textContent = msg; }
+  window.__dmrMapReady = function () {
+    gmap = new google.maps.Map(el, {
+      center: cfg.center, zoom: cfg.zoom, mapTypeControl: true, streetViewControl: false, fullscreenControl: true,
+      gestureHandling: "cooperative"
+    });
+    info = new google.maps.InfoWindow({ maxWidth: 320 });
+    new google.maps.Marker({
+      map: gmap, position: D.company.hq, title: D.company.name, zIndex: 999,
+      icon: { path: google.maps.SymbolPath.CIRCLE, scale: 9, fillColor: "#282c39", fillOpacity: 1, strokeColor: "#ffa500", strokeWeight: 3 }
+    }).addListener("click", function () {
+      info.setContent('<div class="pin-info"><strong>' + D.company.name + "</strong><span>" + D.company.address.join(", ") + "</span></div>");
+      info.setPosition(D.company.hq); info.open({ map: gmap });
+    });
+    if (editing) gmap.addListener("click", function (e) {
+      if (pendingClick) pendingClick.setMap(null);
+      pendingClick = new google.maps.Marker({ map: gmap, position: e.latLng, icon: icon(true) });
+      openForm(null, { lat: +e.latLng.lat().toFixed(5), lng: +e.latLng.lng().toFixed(5) });
+    });
+    draw();
+  };
+  window.gm_authFailure = function () {
+    note.hidden = false;
+    note.textContent = "Google Maps rejected the API key. Check the key and its allowed websites in DMR.mapConfig.";
+  };
+
+  fillFilters();
+  drawList();
+  var s = document.createElement("script");
+  s.src = "https://maps.googleapis.com/maps/api/js?v=weekly&loading=async&callback=__dmrMapReady" + (cfg.googleMapsApiKey ? "&key=" + encodeURIComponent(cfg.googleMapsApiKey) : "");
+  s.async = true;
+  s.onerror = function () { fail("Google Maps could not load. The list on the right still shows every installation."); };
+  document.head.appendChild(s);
 })();

@@ -8,8 +8,27 @@
     list.forEach(function (x) { m[x.id] = x; });
     return m;
   };
-  var brands = byId(D.brands), cats = byId(D.categories), markets = byId(D.markets), products = byId(D.products);
-  D.lookup = { brands: brands, cats: cats, markets: markets, products: products };
+  var brands = byId(D.brands), cats = byId(D.categories), products = byId(D.products), buildings = byId(D.buildings);
+  D.lookup = { brands: brands, cats: cats, products: products, buildings: buildings };
+
+  // Put buildings in district order, and work out which buildings each product is used in.
+  D.buildings.sort(function (a, b) {
+    var ua = D.useTypes.findIndex(function (u) { return u.id === a.use; }), ub = D.useTypes.findIndex(function (u) { return u.id === b.use; });
+    return ua - ub;
+  });
+  D.products.forEach(function (p) { p.buildings = []; });
+  D.buildings.forEach(function (b) {
+    b.stops.forEach(function (s) {
+      s.products.forEach(function (id) { if (products[id] && products[id].buildings.indexOf(b.id) < 0) products[id].buildings.push(b.id); });
+    });
+  });
+  // <option>s for a building-type <select>, grouped by use type.
+  D.buildingOptions = function () {
+    return D.useTypes.map(function (u) {
+      var list = D.buildings.filter(function (b) { return b.use === u.id; });
+      return list.length ? '<optgroup label="' + u.name + '">' + list.map(function (b) { return '<option value="' + b.id + '">' + b.name + "</option>"; }).join("") + "</optgroup>" : "";
+    }).join("");
+  };
 
   /* ---------- shared helpers ---------- */
 
@@ -48,11 +67,11 @@
 
   /* ---------- catalog ---------- */
 
-  var state = { q: "", cat: "", market: "", brand: "" };
+  var state = { q: "", cat: "", building: "", brand: "" };
 
   function matches(p) {
     if (state.cat && p.category !== state.cat) return false;
-    if (state.market && p.markets.indexOf(state.market) < 0) return false;
+    if (state.building && p.buildings.indexOf(state.building) < 0) return false;
     if (state.brand && p.brand !== state.brand) return false;
     if (state.q) {
       var hay = (p.name + " " + brands[p.brand].name + " " + cats[p.category].name + " " + p.summary + " " + p.features.join(" ")).toLowerCase();
@@ -80,19 +99,19 @@
     $("#productGrid").innerHTML = found.length ? found.map(card).join("") :
       '<p class="empty">No products match these filters. Clear a filter, or call DMR at ' + D.company.phone + " and we will find what you need.</p>";
     $("#resultCount").textContent = found.length + (found.length === 1 ? " product line" : " product lines");
-    $("#clearFilters").hidden = !(state.q || state.cat || state.market || state.brand);
+    $("#clearFilters").hidden = !(state.q || state.cat || state.building || state.brand);
     $("#catBlurb").textContent = state.cat ? cats[state.cat].blurb : "";
     document.querySelectorAll("#catChips button").forEach(function (b) {
       b.setAttribute("aria-pressed", b.dataset.cat === state.cat);
     });
-    $("#fMarket").value = state.market;
+    $("#fMarket").value = state.building;
     $("#fBrand").value = state.brand;
     if ($("#q").value !== state.q) $("#q").value = state.q;
     document.querySelectorAll("#productGrid [data-add]").forEach(syncAddBtn);
   }
 
   D.filterCatalog = function (patch, scroll) {
-    state = Object.assign({ q: "", cat: "", market: "", brand: "" }, patch);
+    state = Object.assign({ q: "", cat: "", building: "", brand: "" }, patch);
     renderCatalog();
     if (scroll) $("#products").scrollIntoView({ behavior: "smooth" });
   };
@@ -101,14 +120,14 @@
     $("#catChips").innerHTML = '<button type="button" data-cat="">All systems</button>' + D.categories.map(function (c) {
       return '<button type="button" data-cat="' + c.id + '"><span class="idx">' + catIndex(c.id) + "</span> " + c.name + "</button>";
     }).join("");
-    $("#fMarket").insertAdjacentHTML("beforeend", D.markets.map(function (m) { return '<option value="' + m.id + '">' + m.name + "</option>"; }).join(""));
+    $("#fMarket").insertAdjacentHTML("beforeend", D.buildingOptions());
     $("#fBrand").insertAdjacentHTML("beforeend", D.brands.map(function (b) { return '<option value="' + b.id + '">' + b.name + "</option>"; }).join(""));
     $("#catChips").addEventListener("click", function (e) {
       var b = e.target.closest("button");
       if (b) { state.cat = b.dataset.cat; renderCatalog(); }
     });
     $("#q").addEventListener("input", function (e) { state.q = e.target.value.trim(); renderCatalog(); });
-    $("#fMarket").addEventListener("change", function (e) { state.market = e.target.value; renderCatalog(); });
+    $("#fMarket").addEventListener("change", function (e) { state.building = e.target.value; renderCatalog(); });
     $("#fBrand").addEventListener("change", function (e) { state.brand = e.target.value; renderCatalog(); });
     $("#clearFilters").addEventListener("click", function () { D.filterCatalog({}); });
     renderCatalog();
@@ -120,6 +139,7 @@
     $("#brandGrid").innerHTML = D.brands.map(function (b) {
       var n = D.products.filter(function (p) { return p.brand === b.id; }).length;
       return '<button class="brand-tile" type="button" data-brand="' + b.id + '">' +
+        '<span class="brand-logo">' + (b.logo ? '<img src="' + b.logo + '" alt="">' : '<span class="brand-word">' + b.name + "</span>") + "</span>" +
         '<span class="brand-name">' + b.name + "</span>" +
         '<span class="brand-blurb">' + b.blurb + "</span>" +
         '<span class="brand-foot">' + (b.family !== "Independent" && b.id !== "nortek" ? "A Nortek Air Solutions brand · " : "") + n + (n === 1 ? " product line" : " product lines") + "</span></button>";
@@ -148,7 +168,7 @@
     if (!p) return;
     var b = brands[p.brand];
     var stops = [];
-    D.tour.buildings.forEach(function (bl) {
+    D.buildings.forEach(function (bl) {
       bl.stops.forEach(function (s) { if (s.products.indexOf(id) > -1) stops.push({ b: bl, s: s }); });
     });
     var related = D.products.filter(function (x) { return x.id !== id && x.category === p.category; }).slice(0, 4);
@@ -160,7 +180,7 @@
       '<p class="lede-sm">' + p.summary + "</p>" +
       (p.verify ? '<p class="pending">Details pending DMR review</p>' : "") +
       "<h3>Key points</h3><ul class='ticks'>" + p.features.map(function (f) { return "<li>" + f + "</li>"; }).join("") + "</ul>" +
-      "<h3>Used in</h3><p class='tags'>" + p.markets.map(function (m) { return "<span>" + markets[m].name + "</span>"; }).join("") + "</p>" +
+      (p.buildings.length ? "<h3>Used in</h3><p class='tags'>" + p.buildings.map(function (m) { return "<span>" + buildings[m].name + "</span>"; }).join("") + "</p>" : "") +
       (stops.length ? "<h3>See it in the walkthrough</h3><p class='tags'>" + stops.map(function (x) {
         return '<button type="button" class="tag-btn" data-stop="' + x.s.id + '">' + x.b.name + ": " + x.s.title + "</button>";
       }).join("") + "</p>" : "") +
@@ -223,7 +243,7 @@
   $("#statFounded").textContent = c.founded;
   $("#statBrands").textContent = D.brands.length;
   $("#statProducts").textContent = D.products.length;
-  $("#statMarkets").textContent = D.markets.length;
+  $("#statMarkets").textContent = D.buildings.length;
   $("#lineCardLink").href = c.lineCard;
   $("#contactCard").innerHTML = "<strong>" + c.name + "</strong><span>" + c.address.join("<br>") + "</span>" +
     '<a href="tel:' + c.phone.replace(/\D/g, "") + '">' + c.phone + '</a><a href="mailto:' + c.email + '">' + c.email + "</a>" +

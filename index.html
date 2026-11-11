@@ -5,7 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>DMR Associates — Product Showcase</title>
 <meta name="description" content="Walk through the HVAC equipment DMR Associates represents across DC, Maryland and Virginia.">
-<link rel="stylesheet" href="assets/vendor/leaflet/leaflet.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=Roboto+Condensed:wght@500;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
@@ -13,8 +15,7 @@
 
 <header class="site-header" id="top">
   <a class="brand" href="#top" aria-label="DMR Associates home">
-    <span class="brand-mark">DMR</span>
-    <span class="brand-sub">Associates, Inc.</span>
+    <img src="assets/logos/DMR-white.svg" alt="DMR Associates" width="104" height="51">
   </a>
   <button class="nav-toggle" aria-expanded="false" aria-controls="nav">Menu</button>
   <nav id="nav" class="site-nav" aria-label="Primary">
@@ -31,19 +32,11 @@
 <main id="main">
 
 <section class="hero">
-  <div class="hero-grid" aria-hidden="true"></div>
-  <svg class="hero-art" viewBox="0 0 520 260" aria-hidden="true">
-    <rect class="cab" x="60" y="50" width="400" height="140" rx="3"/>
-    <line class="part" x1="150" y1="50" x2="150" y2="190"/><line class="part" x1="270" y1="50" x2="270" y2="190"/>
-    <path class="part" d="M96 60l24 15l-24 15"/><path class="part" d="M96 90l24 15l-24 15"/><path class="part" d="M96 120l24 15l-24 15"/><path class="part" d="M96 150l24 15l-24 15"/><line class="part" x1="196" y1="62" x2="196" y2="178"/><line class="part" x1="205" y1="62" x2="205" y2="178"/><line class="part" x1="214" y1="62" x2="214" y2="178"/><line class="part" x1="223" y1="62" x2="223" y2="178"/><line class="part" x1="232" y1="62" x2="232" y2="178"/><line class="part" x1="241" y1="62" x2="241" y2="178"/><circle class="part" cx="318" cy="92" r="18"/><g class="spin"><path class="part" d="M304 92H332M318 78V106"/></g><circle class="part" cx="362" cy="92" r="18"/><g class="spin"><path class="part" d="M348 92H376M362 78V106"/></g><circle class="part" cx="406" cy="92" r="18"/><g class="spin"><path class="part" d="M392 92H420M406 78V106"/></g><circle class="part" cx="318" cy="148" r="18"/><g class="spin"><path class="part" d="M304 148H332M318 134V162"/></g><circle class="part" cx="362" cy="148" r="18"/><g class="spin"><path class="part" d="M348 148H376M362 134V162"/></g><circle class="part" cx="406" cy="148" r="18"/><g class="spin"><path class="part" d="M392 148H420M406 134V162"/></g>
-    <path class="air return" d="M0 120H60"/><path class="air" d="M460 120H520"/>
-    <text class="lbl" x="105" y="212">FILTERS</text><text class="lbl" x="210" y="212">COIL</text><text class="lbl" x="365" y="212">FAN ARRAY</text>
-    <text class="lbl" x="30" y="108">RETURN</text><text class="lbl" x="490" y="108">SUPPLY</text>
-  </svg>
+  <div class="hero-shapes" aria-hidden="true"><i></i><i></i><i></i></div>
   <div class="hero-inner">
     <p class="eyebrow">HVAC manufacturers' representative · DC · Maryland · Virginia</p>
     <h1>See where every piece of equipment goes.</h1>
-    <p class="lede">Walk through six building types and see the air handlers, heat pumps, humidifiers and controls DMR supplies for each one.</p>
+    <p class="lede">Explore a 3D world of building types and see the air handlers, heat pumps, humidifiers and controls DMR supplies for each one.</p>
     <div class="hero-cta">
       <a class="btn btn-primary" href="#walkthrough" id="heroTour">Start the walkthrough</a>
       <a class="btn btn-ghost" href="#products">Browse all products</a>
@@ -58,17 +51,15 @@
 </section>
 
 <section class="tour-section" id="walkthrough" aria-labelledby="tourTitle">
-  <div class="section-head on-dark">
-    <p class="eyebrow">Interactive walkthrough</p>
+  <div class="section-head">
+    <p class="eyebrow">Interactive 3D walkthrough</p>
     <h2 id="tourTitle">Pick a building. Follow the air.</h2>
-    <p>Select a numbered point to see what equipment belongs there, or take the guided tour through all <span id="stopTotal"></span> stops.</p>
+    <p><span id="bldTotal"></span> building types across commercial, institutional, industrial and residential use. Select one to open it as a 3D cutaway and see the equipment that belongs at each of its numbered points (<span id="stopTotal"></span> in all).</p>
   </div>
   <div class="tour">
-    <div class="tour-tabs" id="tourTabs" role="group" aria-label="Buildings"></div>
+    <div class="tour-tabs" id="tourTabs" role="group" aria-label="Building use types"></div>
     <div class="tour-body">
-      <div class="tour-stage">
-        <svg id="scene" role="group" aria-label="Campus cross-section with equipment locations" preserveAspectRatio="xMidYMid meet"></svg>
-      </div>
+      <div class="tour-stage"></div>
       <aside class="tour-panel" id="tourPanel" aria-live="polite"></aside>
     </div>
   </div>
@@ -102,7 +93,7 @@
   <div class="section-head">
     <p class="eyebrow">Manufacturers</p>
     <h2 id="brandTitle">The lines DMR represents.</h2>
-    <p>Select a manufacturer to see its products. Logos will replace these name tiles once brand assets are supplied.</p>
+    <p>Select a manufacturer to see its products.</p>
   </div>
   <div class="brand-grid" id="brandGrid"></div>
 </section>
@@ -113,12 +104,14 @@
     <h2 id="mapTitle">Equipment in service across the region.</h2>
     <p><strong class="sample-tag">Sample data</strong> These pins are placeholders that show how the map works. Real DMR project records will replace them.</p>
   </div>
-  <div class="map-tools">
-    <div class="chips" id="mapChips" role="group" aria-label="Filter installations by building type"></div>
-    <div class="seg" role="group" aria-label="Map style">
-      <button type="button" id="mapLive" aria-pressed="true">Map</button>
-      <button type="button" id="mapSchematic" aria-pressed="false">Schematic</button>
-    </div>
+  <div class="filters map-filters">
+    <label>Manufacturer
+      <select id="mapBrand"></select>
+    </label>
+    <label>Building type
+      <select id="mapMarket"></select>
+    </label>
+    <p class="result-line" id="pinCount"></p>
   </div>
   <div class="map-body">
     <div class="map-wrap">
@@ -126,6 +119,20 @@
       <p class="map-note" id="mapNote" hidden></p>
     </div>
     <ol class="install-list" id="installList"></ol>
+  </div>
+  <div class="pin-editor" id="pinEditor" hidden>
+    <div class="pin-editor-head">
+      <div>
+        <h3>Pin editor</h3>
+        <p>Click the map to drop a pin, or drag a pin to move it. Changes stay in this browser until you download the file and replace <code>assets/js/installs.js</code>.</p>
+      </div>
+      <div class="pin-editor-actions">
+        <button class="btn btn-line" type="button" id="pinNew">Add pin at map centre</button>
+        <button class="btn btn-primary" type="button" id="pinDownload">Download installs.js</button>
+        <button class="link" type="button" id="pinReset">Discard changes</button>
+      </div>
+    </div>
+    <form id="pinForm" class="pin-form" hidden></form>
   </div>
 </section>
 
@@ -163,10 +170,43 @@
 <dialog id="productDialog" class="sheet" aria-labelledby="pdTitle"></dialog>
 <dialog id="listDialog" class="sheet sheet-narrow" aria-labelledby="ldTitle"></dialog>
 
-<script src="assets/vendor/leaflet/leaflet.js"></script>
+<script type="importmap">
+{ "imports": { "three": "./assets/vendor/three/three.module.min.js", "three/addons/controls/OrbitControls.js": "./assets/vendor/three/OrbitControls.js", "three/addons/loaders/GLTFLoader.js": "./assets/vendor/three/loaders/GLTFLoader.js" } }
+</script>
 <script src="assets/js/data.js"></script>
+<script src="assets/world/world.js"></script>
+<!-- One file per building model. Add a line here when you add a building. -->
+<script src="assets/world/buildings/data-center.js"></script>
+<script src="assets/world/buildings/recreation-center.js"></script>
+<script src="assets/world/buildings/hotel.js"></script>
+<script src="assets/world/buildings/high-rise-office.js"></script>
+<script src="assets/world/buildings/mid-rise-office.js"></script>
+<script src="assets/world/buildings/low-rise-office.js"></script>
+<script src="assets/world/buildings/airport.js"></script>
+<script src="assets/world/buildings/convention-center.js"></script>
+<script src="assets/world/buildings/retail-strip.js"></script>
+<script src="assets/world/buildings/hospital.js"></script>
+<script src="assets/world/buildings/sports-stadium.js"></script>
+<script src="assets/world/buildings/medical-clinic.js"></script>
+<script src="assets/world/buildings/government-office.js"></script>
+<script src="assets/world/buildings/religious-center.js"></script>
+<script src="assets/world/buildings/library.js"></script>
+<script src="assets/world/buildings/fine-arts-center.js"></script>
+<script src="assets/world/buildings/higher-education.js"></script>
+<script src="assets/world/buildings/museum.js"></script>
+<script src="assets/world/buildings/k-12-school.js"></script>
+<script src="assets/world/buildings/small-manufacturing.js"></script>
+<script src="assets/world/buildings/food-beverage-processing.js"></script>
+<script src="assets/world/buildings/warehouse.js"></script>
+<script src="assets/world/buildings/pharma-manufacturing.js"></script>
+<script src="assets/world/buildings/greenhouse.js"></script>
+<script src="assets/world/buildings/industrial-manufacturing.js"></script>
+<script src="assets/world/buildings/hi-tech-manufacturing.js"></script>
+<script src="assets/world/buildings/multifamily.js"></script>
+<script src="assets/js/installs.js"></script>
 <script src="assets/js/app.js"></script>
 <script src="assets/js/tour.js"></script>
 <script src="assets/js/map.js"></script>
+<script type="module" src="assets/js/scene3d.js"></script>
 </body>
 </html>
