@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DMR Associates — Product Showcase</title>
+<meta name="description" content="Walk through the HVAC equipment DMR Associates represents across DC, Maryland and Virginia.">
+<link rel="stylesheet" href="assets/vendor/leaflet/leaflet.css">
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header" id="top">
+  <a class="brand" href="#top" aria-label="DMR Associates home">
+    <span class="brand-mark">DMR</span>
+    <span class="brand-sub">Associates, Inc.</span>
+  </a>
+  <button class="nav-toggle" aria-expanded="false" aria-controls="nav">Menu</button>
+  <nav id="nav" class="site-nav" aria-label="Primary">
+    <a href="#walkthrough">Walkthrough</a>
+    <a href="#products">Products</a>
+    <a href="#manufacturers">Manufacturers</a>
+    <a href="#installations">Installations</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <button class="list-btn" id="listBtn" type="button">Project list <span class="count" id="listCount">0</span></button>
+</header>
+
+<main id="main">
+
+<section class="hero">
+  <div class="hero-grid" aria-hidden="true"></div>
+  <svg class="hero-art" viewBox="0 0 520 260" aria-hidden="true">
+    <rect class="cab" x="60" y="50" width="400" height="140" rx="3"/>
+    <line class="part" x1="150" y1="50" x2="150" y2="190"/><line class="part" x1="270" y1="50" x2="270" y2="190"/>
+    <path class="part" d="M96 60l24 15l-24 15"/><path class="part" d="M96 90l24 15l-24 15"/><path class="part" d="M96 120l24 15l-24 15"/><path class="part" d="M96 150l24 15l-24 15"/><line class="part" x1="196" y1="62" x2="196" y2="178"/><line class="part" x1="205" y1="62" x2="205" y2="178"/><line class="part" x1="214" y1="62" x2="214" y2="178"/><line class="part" x1="223" y1="62" x2="223" y2="178"/><line class="part" x1="232" y1="62" x2="232" y2="178"/><line class="part" x1="241" y1="62" x2="241" y2="178"/><circle class="part" cx="318" cy="92" r="18"/><g class="spin"><path class="part" d="M304 92H332M318 78V106"/></g><circle class="part" cx="362" cy="92" r="18"/><g class="spin"><path class="part" d="M348 92H376M362 78V106"/></g><circle class="part" cx="406" cy="92" r="18"/><g class="spin"><path class="part" d="M392 92H420M406 78V106"/></g><circle class="part" cx="318" cy="148" r="18"/><g class="spin"><path class="part" d="M304 148H332M318 134V162"/></g><circle class="part" cx="362" cy="148" r="18"/><g class="spin"><path class="part" d="M348 148H376M362 134V162"/></g><circle class="part" cx="406" cy="148" r="18"/><g class="spin"><path class="part" d="M392 148H420M406 134V162"/></g>
+    <path class="air return" d="M0 120H60"/><path class="air" d="M460 120H520"/>
+    <text class="lbl" x="105" y="212">FILTERS</text><text class="lbl" x="210" y="212">COIL</text><text class="lbl" x="365" y="212">FAN ARRAY</text>
+    <text class="lbl" x="30" y="108">RETURN</text><text class="lbl" x="490" y="108">SUPPLY</text>
+  </svg>
+  <div class="hero-inner">
+    <p class="eyebrow">HVAC manufacturers' representative · DC · Maryland · Virginia</p>
+    <h1>See where every piece of equipment goes.</h1>
+    <p class="lede">Walk through six building types and see the air handlers, heat pumps, humidifiers and controls DMR supplies for each one.</p>
+    <div class="hero-cta">
+      <a class="btn btn-primary" href="#walkthrough" id="heroTour">Start the walkthrough</a>
+      <a class="btn btn-ghost" href="#products">Browse all products</a>
+    </div>
+    <dl class="stats">
+      <div><dt>Founded</dt><dd id="statFounded"></dd></div>
+      <div><dt>Manufacturers</dt><dd id="statBrands"></dd></div>
+      <div><dt>Product lines</dt><dd id="statProducts"></dd></div>
+      <div><dt>Building types</dt><dd id="statMarkets"></dd></div>
+    </dl>
+  </div>
+</section>
+
+<section class="tour-section" id="walkthrough" aria-labelledby="tourTitle">
+  <div class="section-head on-dark">
+    <p class="eyebrow">Interactive walkthrough</p>
+    <h2 id="tourTitle">Pick a building. Follow the air.</h2>
+    <p>Select a numbered point to see what equipment belongs there, or take the guided tour through all <span id="stopTotal"></span> stops.</p>
+  </div>
+  <div class="tour">
+    <div class="tour-tabs" id="tourTabs" role="group" aria-label="Buildings"></div>
+    <div class="tour-body">
+      <div class="tour-stage">
+        <svg id="scene" role="group" aria-label="Campus cross-section with equipment locations" preserveAspectRatio="xMidYMid meet"></svg>
+      </div>
+      <aside class="tour-panel" id="tourPanel" aria-live="polite"></aside>
+    </div>
+  </div>
+</section>
+
+<section class="catalog" id="products" aria-labelledby="catTitle">
+  <div class="section-head">
+    <p class="eyebrow">Product catalog</p>
+    <h2 id="catTitle">Every product line, in one place.</h2>
+    <p>Filter by system type, building type or manufacturer. Add products to your project list and send it to DMR for selection help.</p>
+  </div>
+  <div class="filters">
+    <label class="search">
+      <span class="sr-only">Search products</span>
+      <input type="search" id="q" placeholder="Search products, e.g. chilled beam" autocomplete="off">
+    </label>
+    <label>Building type
+      <select id="fMarket"><option value="">All building types</option></select>
+    </label>
+    <label>Manufacturer
+      <select id="fBrand"><option value="">All manufacturers</option></select>
+    </label>
+  </div>
+  <div class="chips" id="catChips" role="group" aria-label="System type"></div>
+  <p class="result-line"><span id="resultCount"></span> <button class="link" id="clearFilters" type="button" hidden>Clear filters</button></p>
+  <p class="cat-blurb" id="catBlurb"></p>
+  <div class="grid" id="productGrid"></div>
+</section>
+
+<section class="brands" id="manufacturers" aria-labelledby="brandTitle">
+  <div class="section-head">
+    <p class="eyebrow">Manufacturers</p>
+    <h2 id="brandTitle">The lines DMR represents.</h2>
+    <p>Select a manufacturer to see its products. Logos will replace these name tiles once brand assets are supplied.</p>
+  </div>
+  <div class="brand-grid" id="brandGrid"></div>
+</section>
+
+<section class="installs" id="installations" aria-labelledby="mapTitle">
+  <div class="section-head">
+    <p class="eyebrow">Installations</p>
+    <h2 id="mapTitle">Equipment in service across the region.</h2>
+    <p><strong class="sample-tag">Sample data</strong> These pins are placeholders that show how the map works. Real DMR project records will replace them.</p>
+  </div>
+  <div class="map-tools">
+    <div class="chips" id="mapChips" role="group" aria-label="Filter installations by building type"></div>
+    <div class="seg" role="group" aria-label="Map style">
+      <button type="button" id="mapLive" aria-pressed="true">Map</button>
+      <button type="button" id="mapSchematic" aria-pressed="false">Schematic</button>
+    </div>
+  </div>
+  <div class="map-body">
+    <div class="map-wrap">
+      <div id="map" class="map"></div>
+      <p class="map-note" id="mapNote" hidden></p>
+    </div>
+    <ol class="install-list" id="installList"></ol>
+  </div>
+</section>
+
+<section class="gallery" id="gallery" aria-labelledby="galTitle">
+  <div class="section-head">
+    <p class="eyebrow">Project gallery</p>
+    <h2 id="galTitle">Photos from the field.</h2>
+    <p>Reserved for photos of DMR-supplied equipment. Each tile below is a placeholder.</p>
+  </div>
+  <div class="gallery-grid" id="galleryGrid"></div>
+</section>
+
+<section class="contact" id="contact" aria-labelledby="conTitle">
+  <div class="contact-inner">
+    <div>
+      <p class="eyebrow">Talk to DMR</p>
+      <h2 id="conTitle">Have a project in mind?</h2>
+      <p>Send your project list or call the office. A DMR sales engineer will help with selections, budget pricing and submittals.</p>
+      <div class="hero-cta">
+        <button class="btn btn-primary" type="button" id="contactList">Review project list</button>
+        <a class="btn btn-ghost" id="lineCardLink" target="_blank" rel="noopener">Manufacturer line card</a>
+      </div>
+    </div>
+    <address id="contactCard"></address>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <p id="footLine"></p>
+  <p class="muted">Prototype. Product descriptions are draft copy, and installations and photos are placeholders.</p>
+</footer>
+
+<dialog id="productDialog" class="sheet" aria-labelledby="pdTitle"></dialog>
+<dialog id="listDialog" class="sheet sheet-narrow" aria-labelledby="ldTitle"></dialog>
+
+<script src="assets/vendor/leaflet/leaflet.js"></script>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/app.js"></script>
+<script src="assets/js/tour.js"></script>
+<script src="assets/js/map.js"></script>
+</body>
+</html>

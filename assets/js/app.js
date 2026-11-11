@@ -1,0 +1,245 @@
+/* DMR Showcase — catalog, manufacturers, gallery, project list, dialogs. */
+(function () {
+  "use strict";
+  var D = window.DMR;
+  var $ = function (s, r) { return (r || document).querySelector(s); };
+  var byId = function (list) {
+    var m = {};
+    list.forEach(function (x) { m[x.id] = x; });
+    return m;
+  };
+  var brands = byId(D.brands), cats = byId(D.categories), markets = byId(D.markets), products = byId(D.products);
+  D.lookup = { brands: brands, cats: cats, markets: markets, products: products };
+
+  /* ---------- shared helpers ---------- */
+
+  // Real photo if one is set, otherwise a labelled placeholder tile.
+  D.media = function (item, label) {
+    if (item.photo) return '<img class="media" src="' + item.photo + '" alt="' + (label || "") + '" loading="lazy">';
+    return '<div class="media ph" role="img" aria-label="Photo placeholder">' +
+      '<span class="ph-label">Photo placeholder</span>' + (label ? '<span class="ph-name">' + label + "</span>" : "") + "</div>";
+  };
+
+  var catIndex = function (id) {
+    var i = D.categories.findIndex(function (c) { return c.id === id; }) + 1;
+    return (i < 10 ? "0" : "") + i;
+  };
+
+  /* ---------- project list (saved in the browser) ---------- */
+
+  var KEY = "dmr-project-list";
+  var list = [];
+  try { list = JSON.parse(localStorage.getItem(KEY) || "[]").filter(function (id) { return products[id]; }); } catch (e) { list = []; }
+  function saveList() {
+    try { localStorage.setItem(KEY, JSON.stringify(list)); } catch (e) { /* storage unavailable */ }
+    $("#listCount").textContent = list.length;
+    document.querySelectorAll("[data-add]").forEach(syncAddBtn);
+  }
+  function syncAddBtn(btn) {
+    var on = list.indexOf(btn.dataset.add) > -1;
+    btn.setAttribute("aria-pressed", on);
+    btn.textContent = on ? "In project list" : "Add to project list";
+  }
+  function toggleList(id) {
+    var i = list.indexOf(id);
+    if (i > -1) list.splice(i, 1); else list.push(id);
+    saveList();
+  }
+
+  /* ---------- catalog ---------- */
+
+  var state = { q: "", cat: "", market: "", brand: "" };
+
+  function matches(p) {
+    if (state.cat && p.category !== state.cat) return false;
+    if (state.market && p.markets.indexOf(state.market) < 0) return false;
+    if (state.brand && p.brand !== state.brand) return false;
+    if (state.q) {
+      var hay = (p.name + " " + brands[p.brand].name + " " + cats[p.category].name + " " + p.summary + " " + p.features.join(" ")).toLowerCase();
+      return state.q.toLowerCase().split(/\s+/).every(function (w) { return hay.indexOf(w) > -1; });
+    }
+    return true;
+  }
+
+  function card(p) {
+    return '<article class="card">' +
+      '<button class="card-open" type="button" data-product="' + p.id + '" aria-label="' + brands[p.brand].name + " " + p.name + ': details">' +
+      D.media(p) + "</button>" +
+      '<div class="card-body">' +
+      '<p class="card-meta"><span class="idx">' + catIndex(p.category) + "</span> " + cats[p.category].name + "</p>" +
+      '<h3><span class="card-brand">' + brands[p.brand].name + "</span> " + p.name + "</h3>" +
+      "<p>" + p.summary + "</p>" +
+      (p.verify ? '<p class="pending">Details pending DMR review</p>' : "") +
+      '<div class="card-actions"><button class="link" type="button" data-product="' + p.id + '">View details</button>' +
+      '<button class="add" type="button" data-add="' + p.id + '"></button></div>' +
+      "</div></article>";
+  }
+
+  function renderCatalog() {
+    var found = D.products.filter(matches);
+    $("#productGrid").innerHTML = found.length ? found.map(card).join("") :
+      '<p class="empty">No products match these filters. Clear a filter, or call DMR at ' + D.company.phone + " and we will find what you need.</p>";
+    $("#resultCount").textContent = found.length + (found.length === 1 ? " product line" : " product lines");
+    $("#clearFilters").hidden = !(state.q || state.cat || state.market || state.brand);
+    $("#catBlurb").textContent = state.cat ? cats[state.cat].blurb : "";
+    document.querySelectorAll("#catChips button").forEach(function (b) {
+      b.setAttribute("aria-pressed", b.dataset.cat === state.cat);
+    });
+    $("#fMarket").value = state.market;
+    $("#fBrand").value = state.brand;
+    if ($("#q").value !== state.q) $("#q").value = state.q;
+    document.querySelectorAll("#productGrid [data-add]").forEach(syncAddBtn);
+  }
+
+  D.filterCatalog = function (patch, scroll) {
+    state = Object.assign({ q: "", cat: "", market: "", brand: "" }, patch);
+    renderCatalog();
+    if (scroll) $("#products").scrollIntoView({ behavior: "smooth" });
+  };
+
+  function initCatalog() {
+    $("#catChips").innerHTML = '<button type="button" data-cat="">All systems</button>' + D.categories.map(function (c) {
+      return '<button type="button" data-cat="' + c.id + '"><span class="idx">' + catIndex(c.id) + "</span> " + c.name + "</button>";
+    }).join("");
+    $("#fMarket").insertAdjacentHTML("beforeend", D.markets.map(function (m) { return '<option value="' + m.id + '">' + m.name + "</option>"; }).join(""));
+    $("#fBrand").insertAdjacentHTML("beforeend", D.brands.map(function (b) { return '<option value="' + b.id + '">' + b.name + "</option>"; }).join(""));
+    $("#catChips").addEventListener("click", function (e) {
+      var b = e.target.closest("button");
+      if (b) { state.cat = b.dataset.cat; renderCatalog(); }
+    });
+    $("#q").addEventListener("input", function (e) { state.q = e.target.value.trim(); renderCatalog(); });
+    $("#fMarket").addEventListener("change", function (e) { state.market = e.target.value; renderCatalog(); });
+    $("#fBrand").addEventListener("change", function (e) { state.brand = e.target.value; renderCatalog(); });
+    $("#clearFilters").addEventListener("click", function () { D.filterCatalog({}); });
+    renderCatalog();
+  }
+
+  /* ---------- manufacturers ---------- */
+
+  function initBrands() {
+    $("#brandGrid").innerHTML = D.brands.map(function (b) {
+      var n = D.products.filter(function (p) { return p.brand === b.id; }).length;
+      return '<button class="brand-tile" type="button" data-brand="' + b.id + '">' +
+        '<span class="brand-name">' + b.name + "</span>" +
+        '<span class="brand-blurb">' + b.blurb + "</span>" +
+        '<span class="brand-foot">' + (b.family !== "Independent" && b.id !== "nortek" ? "A Nortek Air Solutions brand · " : "") + n + (n === 1 ? " product line" : " product lines") + "</span></button>";
+    }).join("");
+    $("#brandGrid").addEventListener("click", function (e) {
+      var t = e.target.closest("[data-brand]");
+      if (t) D.filterCatalog({ brand: t.dataset.brand }, true);
+    });
+  }
+
+  /* ---------- gallery ---------- */
+
+  function initGallery() {
+    $("#galleryGrid").innerHTML = D.gallery.map(function (g) {
+      var p = products[g.product];
+      return '<figure class="shot' + (g.size === "wide" ? " wide" : "") + '">' + D.media(g, g.caption) +
+        "<figcaption>" + g.caption + ' · <button class="link" type="button" data-product="' + p.id + '">' + brands[p.brand].name + "</button></figcaption></figure>";
+    }).join("");
+  }
+
+  /* ---------- product dialog ---------- */
+
+  var pd = $("#productDialog");
+  D.openProduct = function (id) {
+    var p = products[id];
+    if (!p) return;
+    var b = brands[p.brand];
+    var stops = [];
+    D.tour.buildings.forEach(function (bl) {
+      bl.stops.forEach(function (s) { if (s.products.indexOf(id) > -1) stops.push({ b: bl, s: s }); });
+    });
+    var related = D.products.filter(function (x) { return x.id !== id && x.category === p.category; }).slice(0, 4);
+    pd.innerHTML =
+      '<form method="dialog"><button class="close" aria-label="Close">Close</button></form>' +
+      '<div class="sheet-grid"><div>' + D.media(p) + "</div><div>" +
+      '<p class="card-meta"><span class="idx">' + catIndex(p.category) + "</span> " + cats[p.category].name + "</p>" +
+      '<h2 id="pdTitle"><span class="card-brand">' + b.name + "</span> " + p.name + "</h2>" +
+      '<p class="lede-sm">' + p.summary + "</p>" +
+      (p.verify ? '<p class="pending">Details pending DMR review</p>' : "") +
+      "<h3>Key points</h3><ul class='ticks'>" + p.features.map(function (f) { return "<li>" + f + "</li>"; }).join("") + "</ul>" +
+      "<h3>Used in</h3><p class='tags'>" + p.markets.map(function (m) { return "<span>" + markets[m].name + "</span>"; }).join("") + "</p>" +
+      (stops.length ? "<h3>See it in the walkthrough</h3><p class='tags'>" + stops.map(function (x) {
+        return '<button type="button" class="tag-btn" data-stop="' + x.s.id + '">' + x.b.name + ": " + x.s.title + "</button>";
+      }).join("") + "</p>" : "") +
+      '<div class="sheet-actions"><button class="btn btn-primary add" type="button" data-add="' + p.id + '"></button>' +
+      '<a class="btn btn-line" href="mailto:' + D.company.email + "?subject=" + encodeURIComponent("Inquiry: " + b.name + " " + p.name) + '">Ask DMR about this</a></div>' +
+      "</div></div>" +
+      (related.length ? '<div class="related"><h3>More in ' + cats[p.category].name + "</h3><div class='related-row'>" + related.map(function (r) {
+        return '<button type="button" data-product="' + r.id + '"><strong>' + brands[r.brand].name + "</strong>" + r.name + "</button>";
+      }).join("") + "</div></div>" : "");
+    pd.querySelectorAll("[data-add]").forEach(syncAddBtn);
+    if (!pd.open) pd.showModal();
+    pd.scrollTop = 0;
+  };
+
+  /* ---------- project list dialog ---------- */
+
+  var ld = $("#listDialog");
+  function renderList() {
+    var body = "Hello DMR,\n\nI would like to discuss these products:\n\n" + list.map(function (id) {
+      return "- " + brands[products[id].brand].name + " " + products[id].name;
+    }).join("\n") + "\n\nProject name:\nLocation:\nSchedule:\n";
+    ld.innerHTML =
+      '<form method="dialog"><button class="close" aria-label="Close">Close</button></form>' +
+      '<h2 id="ldTitle">Project list</h2>' +
+      (list.length
+        ? '<p class="lede-sm">Send this list to DMR and a sales engineer will follow up.</p><ul class="pl">' + list.map(function (id) {
+          var p = products[id];
+          return "<li><span><strong>" + brands[p.brand].name + "</strong> " + p.name + '</span><button class="link" type="button" data-remove="' + id + '">Remove</button></li>';
+        }).join("") + '</ul><div class="sheet-actions"><a class="btn btn-primary" href="mailto:' + D.company.email + "?subject=" + encodeURIComponent("Project inquiry") + "&body=" + encodeURIComponent(body) + '">Email list to DMR</a>' +
+          '<button class="btn btn-line" type="button" data-clear>Clear list</button></div>'
+        : '<p class="lede-sm">Your list is empty. Add products from the catalog or the walkthrough, then send the list to DMR.</p>');
+  }
+  function openList() { renderList(); if (!ld.open) ld.showModal(); }
+
+  /* ---------- global events ---------- */
+
+  document.addEventListener("click", function (e) {
+    var t;
+    if ((t = e.target.closest("[data-add]"))) { toggleList(t.dataset.add); return; }
+    if ((t = e.target.closest("[data-remove]"))) { toggleList(t.dataset.remove); renderList(); return; }
+    if (e.target.closest("[data-clear]")) { list = []; saveList(); renderList(); return; }
+    if ((t = e.target.closest("[data-product]"))) { D.openProduct(t.dataset.product); return; }
+    if ((t = e.target.closest("dialog [data-stop]"))) { pd.close(); D.goToStop(t.dataset.stop, true); return; }
+    // Click on the backdrop closes a dialog.
+    if (e.target.tagName === "DIALOG") e.target.close();
+  });
+  $("#listBtn").addEventListener("click", openList);
+  $("#contactList").addEventListener("click", openList);
+
+  var toggle = $(".nav-toggle"), nav = $("#nav");
+  toggle.addEventListener("click", function () {
+    var open = nav.classList.toggle("open");
+    toggle.setAttribute("aria-expanded", open);
+  });
+  nav.addEventListener("click", function () { nav.classList.remove("open"); toggle.setAttribute("aria-expanded", false); });
+
+  /* ---------- static content ---------- */
+
+  var c = D.company;
+  $("#statFounded").textContent = c.founded;
+  $("#statBrands").textContent = D.brands.length;
+  $("#statProducts").textContent = D.products.length;
+  $("#statMarkets").textContent = D.markets.length;
+  $("#lineCardLink").href = c.lineCard;
+  $("#contactCard").innerHTML = "<strong>" + c.name + "</strong><span>" + c.address.join("<br>") + "</span>" +
+    '<a href="tel:' + c.phone.replace(/\D/g, "") + '">' + c.phone + '</a><a href="mailto:' + c.email + '">' + c.email + "</a>" +
+    '<a href="' + c.website + '" target="_blank" rel="noopener">dmr-hvac.com</a>';
+  $("#footLine").textContent = "© " + new Date().getFullYear() + " " + c.name + " · " + c.tagline;
+
+  initCatalog();
+  initBrands();
+  initGallery();
+  saveList();
+
+  // Deep link: #product/<id>
+  function route() {
+    var m = location.hash.match(/^#product\/(.+)$/);
+    if (m) D.openProduct(m[1]);
+  }
+  window.addEventListener("hashchange", route);
+  route();
+})();
