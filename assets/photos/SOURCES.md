@@ -14,8 +14,6 @@ site goes live, and replace any that are not cleared.
 | `assets/photos/huntair-ffu/1.jpg` | https://www.nortekair.com/wp-content/uploads/2024/06/Fan-Filter-Unit-On-Filter-4x4-1.png |
 | `assets/photos/huntair-ffu/2.jpg` | https://www.nortekair.com/wp-content/uploads/2024/06/CleanPak-Fan-Filter-Unit-CPFFU-EC-ZA-1-scaled.jpg |
 | `assets/photos/huntair-ffu/3.jpg` | https://www.nortekair.com/wp-content/uploads/2024/06/CleanPak-Fan-Filter-Unit-CPFFU-EC-ZA-4x4-1-scaled.jpg |
-| `assets/photos/huntair-cleanroom-ahu/1.jpg` | https://www.nortekair.com/wp-content/uploads/2024/06/Cleanroom_Diagram_with-PlenPak-2400x2400-High-Res.png |
-| `assets/photos/huntair-cleanroom-ahu/2.jpg` | https://www.nortekair.com/wp-content/uploads/2024/06/CLEANPAK-Air-Handling-Units-Model-DC-EB-Installation-Operation-Manual.jpg |
 | `assets/photos/huntair-ceiling-grid/1.jpg` | https://www.nortekair.com/wp-content/uploads/2024/06/CleanTrak-Modular-Flush-Ceiling-with-Integrated-Lighting.jpg |
 | `assets/photos/huntair-ceiling-grid/2.jpg` | https://www.nortekair.com/wp-content/uploads/2024/06/Clean-Trak-Bottom-Load-Flush-Ceiling-System-scaled.jpg |
 | `assets/photos/huntair-ceiling-grid/3.jpg` | https://www.nortekair.com/wp-content/uploads/2024/06/Clean-Trak-Top-Load-Flush-Ceiling-System-scaled.jpg |
@@ -26,7 +24,6 @@ site goes live, and replace any that are not cleared.
 | `assets/photos/huntair-light-grid/2.jpg` | https://www.nortekair.com/wp-content/uploads/bb-plugin/cache/CleanTrak-Modular-Cleanroom-Ceiling-Grids-landscape-e68261a7cd52b10416d622da675883af-.jpg |
 | `assets/photos/huntair-light-grid/3.jpg` | https://www.nortekair.com/wp-content/uploads/bb-plugin/cache/FlexTrak-T-Grid-Stick-Built-Assy-Walkable-Topside-with-4x4-FFU-installed-landscape-70ea9fd473f0f9466d02e1bba21b6ed5-.jpg |
 | `assets/photos/huntair-plenums/1.jpg` | https://www.nortekair.com/wp-content/uploads/2024/06/CleanTrak-Plenum-image.jpg |
-| `assets/photos/huntair-servicor/1.jpg` | https://www.nortekair.com/wp-content/uploads/2024/06/NEW_Servicor-prod-img-1.png |
 | `assets/photos/temtrol-lc/1.jpg` | https://www.nortekair.com/wp-content/uploads/2024/11/temtrol-lc-transparent.png |
 | `assets/photos/mammoth-ultraline/1.jpg` | https://www.nortekair.com/wp-content/uploads/2024/08/ultraline-packaged-unit.png |
 | `assets/photos/mammoth-ultraline/2.jpg` | https://www.nortekair.com/wp-content/uploads/2024/06/Mammoth-Ultraline-Custom-Packaged-Rooftop-Systems.jpg |

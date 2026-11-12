@@ -28,14 +28,15 @@ Location: hi-tech-manufacturing-1
 Title: Make-up air plant
 Text: A dedicated make-up air handler conditions the outdoor air the cleanroom needs.
 Equipment:
-- huntair-cleanroom-ahu | Cleanroom make-up air handler | Holds close temperature, humidity and pressure
+- huntair-ahu | Cleanroom make-up air handler | Custom unit that holds close temperature, humidity and pressure
 - cooney-freeze-block | Make-up air preheat coils
 
 Location: hi-tech-manufacturing-2
 Title: Cleanroom
 Text: Fan arrays and cleanroom air systems recirculate filtered air continuously.
 Equipment:
-- huntair-ffu | Fan filter units and recirculation air handlers
+- huntair-ffu | CleanPak fan filter units | Available with a sensible cooling coil on the side (PlenPak)
+- huntair-ceiling-grid | Cleanroom ceiling grid | Supports the filters, lights and fan filter units
 - huntair-fanwall | Recirculation fan array
 
 Location: hi-tech-manufacturing-3

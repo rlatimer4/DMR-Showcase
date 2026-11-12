@@ -32,7 +32,7 @@ Location: hospital-2
 Title: Operating suite
 Text: A single ceiling assembly delivers filtered air over the surgical table.
 Equipment:
-- huntair-cleansuite | Operating room ceiling system | One diffuser array over the table
+- huntair-ahu | Operating room air handler | Dedicated custom unit with HEPA final filters
 - steamovap-humid | Clean-steam humidifier | Holds the room at 20 to 60% relative humidity
 ```
 

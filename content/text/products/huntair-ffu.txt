@@ -6,10 +6,11 @@
 
 Name: CleanPak Fan Filter Units
 
-Summary: Fan filter units for cleanroom ceilings, with a backward-curved plenum fan and a high-efficiency brushless DC motor, plus monitoring and control for fab operation.
+Summary: Fan filter units for cleanroom ceilings, with a backward-curved plenum fan and a high-efficiency brushless DC motor, plus monitoring and control for fab operation. CleanPak units can be supplied with a sensible cooling coil on the side, an arrangement sometimes called PlenPak.
 
 Key points:
 - High-efficiency EC motor
+- Optional side-mounted sensible cooling coil (PlenPak)
 - Central monitoring and control
 - For semiconductor, pharmaceutical and research cleanrooms
 

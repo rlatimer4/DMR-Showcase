@@ -36,7 +36,8 @@ Location: pharma-manufacturing-2
 Title: Cleanroom
 Text: Recirculation units and fan filter units keep particle counts within class. Fan arrays provide redundancy.
 Equipment:
-- huntair-ffu | Cleanroom recirculation units and fan filter units
+- huntair-ffu | CleanPak fan filter units | Available with a sensible cooling coil on the side (PlenPak)
+- huntair-ceiling-grid | Cleanroom ceiling grid | Supports the filters, lights and fan filter units
 - huntair-fanwall | Fan array
 
 Location: pharma-manufacturing-3
