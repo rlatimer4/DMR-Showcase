@@ -1,15 +1,16 @@
 /*
- * Higher Education — building model.
+ * Higher Education — building model (shape and layout only).
  *
- * This file is one self-contained building. Edit it without touching the others:
- *  - size:   overall dimensions in metres; the shell, floors and ducts are generated from it
- *  - facade, walls: the look of the outside (styles are listed in CONTENT.md)
- *  - stops:  the numbered points visitors select. `at.floor` is "roof", "yard"
- *            (a unit on the ground in front) or a floor number (0 = ground);
- *            `at.x` is the position across the width, 0 to 1
- *  - model:  optional path to a .glb file that replaces the generated shell
- *  - build:  the shapes that make this building recognizable (kit helpers are in CONTENT.md)
- * Products listed in a stop that are no longer offered are skipped automatically.
+ * The words for this building are in content/text/buildings/higher-education.txt.
+ * This file controls the 3D model:
+ *  - size:    overall dimensions in metres
+ *  - facade, walls: the look of the outside
+ *  - stops:   where each equipment location sits. `at.floor` is "roof", "yard"
+ *             or a floor number (0 = ground); `at.x` is the position across
+ *             the width, 0 to 1; `space` picks how the room is furnished
+ *  - model:   optional path to a .glb file that replaces the generated shell
+ *  - build:   shapes that make the building recognizable
+ * CONTENT.md lists the facade styles, space types and kit helpers.
  */
 DMR.registerBuilding({
   id: "higher-education",
@@ -19,21 +20,11 @@ DMR.registerBuilding({
   model: null,
   facade: { style: "brick", color: "#9c4f35" },
   walls: "#a85a3c",
-  intro: "Campus buildings mix classrooms, labs and offices under one roof.",
-  challenges: ["Lab exhaust energy", "Mixed uses in one building", "Deferred maintenance"],
   stops: [
-    { id: "higher-education-1", at: { floor: "roof", x: 0.4 }, title: "Lab exhaust energy recovery", room: "",
-      text: "Plate exchangers recover energy from lab exhaust while keeping it separate from the supply air.",
-      products: ["klingenburg-plate", "ventrol-ahu"] },
-    { id: "higher-education-2", at: { floor: 2, x: 0.17 }, title: "Teaching labs", room: "Lab",
-      text: "Custom air handlers and fan arrays supply the high air change rates labs need.",
-      products: ["nortek-ahu", "huntair-fanwall"] },
-    { id: "higher-education-3", at: { floor: 1, x: 0.5 }, title: "Lecture halls", room: "Lecture",
-      text: "Chilled beams and water-source heat pumps keep lecture halls quiet.",
-      products: ["nuclimate-beam", "mammoth-wshp"] },
-    { id: "higher-education-4", at: { floor: 0, x: 0.83 }, title: "Mechanical room", room: "Mech",
-      text: "Freeze-resistant coils replace failed preheat coils in existing air handlers.",
-      products: ["cooney-coil", "fuji-vfd"] }
+    { id: "higher-education-1", at: { floor: "roof", x: 0.4 }, space: "plant" },
+    { id: "higher-education-2", at: { floor: 2, x: 0.17 }, space: "lab" },
+    { id: "higher-education-3", at: { floor: 1, x: 0.5 }, space: "lecture" },
+    { id: "higher-education-4", at: { floor: 0, x: 0.83 }, space: "mechanical" }
   ],
   // Shapes that make this building recognizable. See CONTENT.md for the kit.
   build: function (kit, d) {

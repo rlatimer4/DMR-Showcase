@@ -1,15 +1,16 @@
 /*
- * Airport — building model.
+ * Airport — building model (shape and layout only).
  *
- * This file is one self-contained building. Edit it without touching the others:
- *  - size:   overall dimensions in metres; the shell, floors and ducts are generated from it
- *  - facade, walls: the look of the outside (styles are listed in CONTENT.md)
- *  - stops:  the numbered points visitors select. `at.floor` is "roof", "yard"
- *            (a unit on the ground in front) or a floor number (0 = ground);
- *            `at.x` is the position across the width, 0 to 1
- *  - model:  optional path to a .glb file that replaces the generated shell
- *  - build:  the shapes that make this building recognizable (kit helpers are in CONTENT.md)
- * Products listed in a stop that are no longer offered are skipped automatically.
+ * The words for this building are in content/text/buildings/airport.txt.
+ * This file controls the 3D model:
+ *  - size:    overall dimensions in metres
+ *  - facade, walls: the look of the outside
+ *  - stops:   where each equipment location sits. `at.floor` is "roof", "yard"
+ *             or a floor number (0 = ground); `at.x` is the position across
+ *             the width, 0 to 1; `space` picks how the room is furnished
+ *  - model:   optional path to a .glb file that replaces the generated shell
+ *  - build:   shapes that make the building recognizable
+ * CONTENT.md lists the facade styles, space types and kit helpers.
  */
 DMR.registerBuilding({
   id: "airport",
@@ -18,18 +19,10 @@ DMR.registerBuilding({
   size: { width: 30, depth: 16, floors: 2, floorHeight: 6, bays: 2, extraHeight: 19 },
   model: null,
   facade: { style: "glass", color: "#2f86c2" },
-  intro: "Terminals are large, open and busy around the clock.",
-  challenges: ["Very large open volumes", "Doors that are always opening", "Jet fumes and outdoor air quality"],
   stops: [
-    { id: "airport-1", at: { floor: "roof", x: 0.3 }, title: "Terminal air handling", room: "",
-      text: "Custom air handlers with fan arrays serve the concourse and keep running through a fan failure.",
-      products: ["temtrol-ahu", "huntair-fanwall"] },
-    { id: "airport-2", at: { floor: 1, x: 0.7 }, title: "Concourse", room: "Concourse",
-      text: "Trench units along the glass and UV-C in the air stream keep gate areas comfortable.",
-      products: ["kampmann-trench", "uvr-air"] },
-    { id: "airport-3", at: { floor: 0, x: 0.25 }, title: "Baggage hall", room: "Baggage",
-      text: "Air curtains hold conditioned air at the doors and unit heaters cover the back-of-house.",
-      products: ["kampmann-curtain", "sterling-unit"] }
+    { id: "airport-1", at: { floor: "roof", x: 0.3 }, space: "plant" },
+    { id: "airport-2", at: { floor: 1, x: 0.7 }, space: "concourse" },
+    { id: "airport-3", at: { floor: 0, x: 0.25 }, space: "baggage" }
   ],
   // Shapes that make this building recognizable. See CONTENT.md for the kit.
   build: function (kit, d) {

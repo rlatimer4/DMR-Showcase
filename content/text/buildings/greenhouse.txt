@@ -1,0 +1,40 @@
+# GREENHOUSE
+#
+# This file holds the words shown for this building. Edit them freely.
+# Keep the labels (the words before each colon) and the dashes at the start of list lines.
+# Lines that start with # are notes and are not shown on the site.
+
+Name: Greenhouse
+
+Summary: Plants release moisture all day, and the glass loses heat all night.
+
+Why a DMR package:
+# One line per advantage, written as  - Short heading: one sentence
+- Healthy crop: Humidity is held where mould and mildew do not take hold
+- Even conditions: Heat and moisture are distributed across the whole growing floor
+- Lower fuel use: Desiccant drying avoids venting heated air to the outdoors
+
+Challenges:
+- High humidity from plants
+- Heat loss through glass
+- Even conditions across the crop
+
+# ---------------- Equipment locations ----------------
+# Each location starts with "Location:" and its code. Do not change the code.
+# Equipment lines read:  - product code | what it is in this building | why it suits (optional)
+# Product codes are the file names in content/text/products/.
+
+Location: greenhouse-1
+Title: Dehumidification
+Text: Desiccant systems remove plant moisture without overcooling the space.
+Equipment:
+- novelaire-desiccant | Grow room dehumidifier
+- fisair-dehum | Desiccant dehumidifier
+
+Location: greenhouse-2
+Title: Growing floor
+Text: Humidifiers and hydronic unit heaters hold conditions steady across the crop.
+Equipment:
+- fisair-humid | Fogging humidifier | Evaporative humidification with low energy use
+- sterling-unit | Hot water unit heaters
+- sterling-hydronic | Perimeter finned tube

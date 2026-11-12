@@ -1,15 +1,16 @@
 /*
- * Museum — building model.
+ * Museum — building model (shape and layout only).
  *
- * This file is one self-contained building. Edit it without touching the others:
- *  - size:   overall dimensions in metres; the shell, floors and ducts are generated from it
- *  - facade, walls: the look of the outside (styles are listed in CONTENT.md)
- *  - stops:  the numbered points visitors select. `at.floor` is "roof", "yard"
- *            (a unit on the ground in front) or a floor number (0 = ground);
- *            `at.x` is the position across the width, 0 to 1
- *  - model:  optional path to a .glb file that replaces the generated shell
- *  - build:  the shapes that make this building recognizable (kit helpers are in CONTENT.md)
- * Products listed in a stop that are no longer offered are skipped automatically.
+ * The words for this building are in content/text/buildings/museum.txt.
+ * This file controls the 3D model:
+ *  - size:    overall dimensions in metres
+ *  - facade, walls: the look of the outside
+ *  - stops:   where each equipment location sits. `at.floor` is "roof", "yard"
+ *             or a floor number (0 = ground); `at.x` is the position across
+ *             the width, 0 to 1; `space` picks how the room is furnished
+ *  - model:   optional path to a .glb file that replaces the generated shell
+ *  - build:   shapes that make the building recognizable
+ * CONTENT.md lists the facade styles, space types and kit helpers.
  */
 DMR.registerBuilding({
   id: "museum",
@@ -19,18 +20,10 @@ DMR.registerBuilding({
   model: null,
   facade: { style: "solid", color: "#e6dfd0", stripe: "#b9a15a" },
   walls: "#ece7db",
-  intro: "Galleries hold temperature and humidity within a narrow band all year.",
-  challenges: ["Tight humidity tolerance", "Protection of collections", "Variable visitor loads"],
   stops: [
-    { id: "museum-1", at: { floor: "roof", x: 0.4 }, title: "Gallery air handling", room: "",
-      text: "Custom air handlers with close humidity control serve the galleries.",
-      products: ["temtrol-ahu", "uvr-coil"] },
-    { id: "museum-2", at: { floor: 1, x: 0.3 }, title: "Galleries", room: "Gallery",
-      text: "Humidifiers and desiccant systems hold the galleries at setpoint in every season.",
-      products: ["fisair-humid", "novelaire-desiccant"] },
-    { id: "museum-3", at: { floor: 0, x: 0.7 }, title: "Collection storage", room: "Storage",
-      text: "Steam humidification and dehumidifiers protect stored collections.",
-      products: ["steamovap-humid", "fisair-dehum"] }
+    { id: "museum-1", at: { floor: "roof", x: 0.4 }, space: "plant" },
+    { id: "museum-2", at: { floor: 1, x: 0.3 }, space: "gallery" },
+    { id: "museum-3", at: { floor: 0, x: 0.7 }, space: "archive" }
   ],
   // Shapes that make this building recognizable. See CONTENT.md for the kit.
   build: function (kit, d) {

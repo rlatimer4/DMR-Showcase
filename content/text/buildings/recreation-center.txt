@@ -1,0 +1,40 @@
+# RECREATION CENTER
+#
+# This file holds the words shown for this building. Edit them freely.
+# Keep the labels (the words before each colon) and the dashes at the start of list lines.
+# Lines that start with # are notes and are not shown on the site.
+
+Name: Recreation Center
+
+Summary: Pools and gyms put moisture and people loads into one building.
+
+Why a DMR package:
+# One line per advantage, written as  - Short heading: one sentence
+- Dry pool hall: Desiccant dehumidification protects the structure from condensation and corrosion
+- Lower energy bills: Heat is recovered from the warm, humid pool exhaust
+- Comfort at the doors: Air curtains and unit heaters stop drafts at busy entrances
+
+Challenges:
+- Pool humidity and condensation
+- Large swings in occupancy
+- Odor and air quality
+
+# ---------------- Equipment locations ----------------
+# Each location starts with "Location:" and its code. Do not change the code.
+# Equipment lines read:  - product code | what it is in this building | why it suits (optional)
+# Product codes are the file names in content/text/products/.
+
+Location: recreation-center-1
+Title: Pool dehumidification
+Text: Desiccant systems hold pool-hall humidity down and protect the structure from condensation.
+Equipment:
+- novelaire-desiccant | Natatorium dehumidifier | Holds the pool hall at 50 to 60% relative humidity
+- venmar-erv | Pool exhaust energy recovery | Recovers heat from the humid exhaust air
+
+Location: recreation-center-2
+Title: Gymnasium
+Text: Packaged rooftop units handle the gym, and unit heaters cover the entrances.
+Equipment:
+- mammoth-rtu | Gym rooftop unit | Packaged heating and cooling sized for a full gym
+- sterling-unit | Vestibule unit heaters
+- kampmann-curtain | Entrance air curtain

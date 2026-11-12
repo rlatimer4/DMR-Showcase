@@ -1,0 +1,46 @@
+# HI-TECH MANUFACTURING
+#
+# This file holds the words shown for this building. Edit them freely.
+# Keep the labels (the words before each colon) and the dashes at the start of list lines.
+# Lines that start with # are notes and are not shown on the site.
+
+Name: Hi-Tech Manufacturing
+
+Summary: Semiconductor and electronics production runs in cleanrooms that never shut down.
+
+Why a DMR package:
+# One line per advantage, written as  - Short heading: one sentence
+- Never stops: Redundant fan arrays keep cleanrooms in class around the clock
+- Tight tolerance: Make-up air units hold temperature and humidity within narrow limits
+- Plant in a box: Packaged chilled water plants shorten construction
+
+Challenges:
+- Cleanroom recirculation volumes
+- Tight temperature and humidity
+- Continuous operation
+
+# ---------------- Equipment locations ----------------
+# Each location starts with "Location:" and its code. Do not change the code.
+# Equipment lines read:  - product code | what it is in this building | why it suits (optional)
+# Product codes are the file names in content/text/products/.
+
+Location: hi-tech-manufacturing-1
+Title: Chilled water plant
+Text: A packaged chiller plant supplies process and comfort cooling from one enclosure.
+Equipment:
+- governair-chiller | Process chiller plant
+- cooney-coil | Make-up air preheat coils
+
+Location: hi-tech-manufacturing-2
+Title: Cleanroom
+Text: Fan arrays and cleanroom air systems recirculate filtered air continuously.
+Equipment:
+- huntair-cleanroom | Fan filter units and recirculation air handlers
+- huntair-fanwall | Recirculation fan array
+
+Location: hi-tech-manufacturing-3
+Title: Make-up air
+Text: Make-up air units with humidifiers supply the cleanroom with conditioned outdoor air.
+Equipment:
+- nortek-ahu | Cleanroom make-up air handler
+- steamovap-humid | Clean-steam humidifier

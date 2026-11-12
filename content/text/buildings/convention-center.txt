@@ -1,0 +1,39 @@
+# CONVENTION CENTER
+#
+# This file holds the words shown for this building. Edit them freely.
+# Keep the labels (the words before each colon) and the dashes at the start of list lines.
+# Lines that start with # are notes and are not shown on the site.
+
+Name: Convention Center
+
+Summary: Exhibit halls go from empty to thousands of people in an hour.
+
+Why a DMR package:
+# One line per advantage, written as  - Short heading: one sentence
+- Sized for the crowd, efficient when empty: Fan arrays turn down to a fraction of full airflow
+- Outdoor air without the penalty: Energy recovery offsets the ventilation a full hall needs
+- Fast replacement: Custom rooftop units match existing openings
+
+Challenges:
+- Huge swings in occupancy
+- Long air throws in high spaces
+- Large outdoor air volumes
+
+# ---------------- Equipment locations ----------------
+# Each location starts with "Location:" and its code. Do not change the code.
+# Equipment lines read:  - product code | what it is in this building | why it suits (optional)
+# Product codes are the file names in content/text/products/.
+
+Location: convention-center-1
+Title: Hall air handling
+Text: Custom rooftop systems are sized for peak crowds and turn down when the hall is empty.
+Equipment:
+- governair-rtu | Exhibit hall rooftop unit | Large-tonnage custom unit that turns down for an empty hall
+- huntair-fanwall | Fan array | Wide turndown by staging fans
+
+Location: convention-center-2
+Title: Exhibit hall
+Text: Energy recovery wheels cut the cost of the outdoor air a full hall needs.
+Equipment:
+- klingenburg-wheel | Energy recovery wheel | Recovers energy from the large outdoor air load
+- nortek-ahu | Meeting room air handlers

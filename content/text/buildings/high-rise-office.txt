@@ -1,0 +1,54 @@
+# HIGH-RISE OFFICE
+#
+# This file holds the words shown for this building. Edit them freely.
+# Keep the labels (the words before each colon) and the dashes at the start of list lines.
+# Lines that start with # are notes and are not shown on the site.
+
+Name: High-Rise Office
+
+Summary: Tall office buildings are leased by the floor and refit often.
+
+Why a DMR package:
+# One line per advantage, written as  - Short heading: one sentence
+- Fits the building you have: Rooftop units are built to the existing curb, steel and crane limits
+- Leasable ceiling height: Compact terminals and small ducts keep ceilings shallow
+- Tenant flexibility: VRF and mini-splits add cooling for one tenant without touching the base building
+
+Challenges:
+- Limited ceiling and shaft space
+- Tenant-by-tenant flexibility
+- Replacing rooftop plant on an occupied building
+
+# ---------------- Equipment locations ----------------
+# Each location starts with "Location:" and its code. Do not change the code.
+# Equipment lines read:  - product code | what it is in this building | why it suits (optional)
+# Product codes are the file names in content/text/products/.
+
+Location: high-rise-office-1
+Title: Rooftop plant
+Text: A custom rooftop unit matches the existing curb and structure, so replacement does not require roof rework.
+Equipment:
+- governair-rtu | Custom rooftop air handler | Built to the existing curb and structure
+- klingenburg-wheel | Energy recovery wheel | Enthalpy wheel on the building exhaust
+
+Location: high-rise-office-2
+Title: Open office
+Text: Fan-powered VAV boxes condition the floor with small ducts and shallow ceilings.
+Equipment:
+- envirotec-vav | Fan-powered VAV boxes | Series boxes with hot water reheat at the perimeter
+- uvr-coil | UV-C coil fixture | Keeps the floor air handler coil clean
+
+Location: high-rise-office-3
+Title: Tenant fit-out
+Text: VRF and mini-splits add cooling for a tenant's server closet without changing the base building system.
+Equipment:
+- gree-vrf | Tenant VRF system | Heat recovery VRF for conference rooms
+- gree-mini | Server closet mini-split | 24-hour cooling independent of the base building
+
+Location: high-rise-office-4
+Title: Lobby
+Text: Trench units sit in the floor along the glass. Panel radiators and air curtains handle the entrance.
+Equipment:
+- kampmann-trench | Lobby trench heater
+- runtal-radiator | Vestibule panel radiator
+- kampmann-curtain | Entrance air curtain

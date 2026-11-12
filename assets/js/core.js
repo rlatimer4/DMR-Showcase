@@ -7,7 +7,8 @@
  * Order of events:
  *   1. index.html loads content/settings.js, categories.js, manifest.js, then this file.
  *   2. This file loads every manufacturer and building named in the manifest,
- *      plus installs.js and gallery.js.
+ *      plus installs.js and gallery.js, then the text file for each product
+ *      and building from content/text/.
  *   3. reconcile() removes anything switched off and any reference to something
  *      that no longer exists, recording each one in DMR.issues.
  *   4. The site scripts start (app.js, tour.js, map.js, scene3d.js).
@@ -33,7 +34,7 @@
     products.forEach(function (p) {
       p.brand = def.id;
       p.features = p.features || [];
-      if (!("photo" in p)) p.photo = null;
+      p.photos = p.photos || [];
       D.products.push(p);
     });
   };
@@ -42,8 +43,74 @@
     def.size.height = def.size.floors * def.size.floorHeight;
     def.stops = def.stops || [];
     def.challenges = def.challenges || [];
+    def.advantages = def.advantages || [];
     D.buildings.push(def);
   };
+
+  /* ---------- text files ---------- */
+
+  /*
+   * The words for every product and building are in plain text files under
+   * content/text/. The format is deliberately simple:
+   *
+   *   Label: one line of text
+   *   Another label:
+   *   - a list item
+   *   - another list item
+   *   # a note that is not shown
+   *
+   * parseText returns the entries in order: [{ key, value, items }].
+   */
+  function parseText(src) {
+    var out = [], cur = null;
+    src.split(/\r?\n/).forEach(function (line) {
+      line = line.trim();
+      if (!line || line.charAt(0) === "#") return;
+      var m;
+      if (/^[-*•]\s*/.test(line)) { if (cur) cur.items.push(line.replace(/^[-*•]\s*/, "").trim()); return; }
+      if ((m = line.match(/^([A-Za-z][A-Za-z '’-]{0,40}):\s*(.*)$/))) { cur = { key: m[1].trim().toLowerCase(), value: m[2].trim(), items: [] }; out.push(cur); return; }
+      if (cur) cur.value = (cur.value + " " + line).trim();
+    });
+    return out;
+  }
+  function cells(item) { return item.split("|").map(function (c) { return c.trim(); }); }
+  function pair(item) { var i = item.indexOf(":"); return i < 0 ? ["", item.trim()] : [item.slice(0, i).trim(), item.slice(i + 1).trim()]; }
+
+  function applyProductText(p, entries) {
+    entries.forEach(function (e) {
+      if (e.key === "name") p.name = e.value;
+      else if (e.key === "summary") p.summary = e.value;
+      else if (e.key === "key points") p.features = e.items;
+      else if (e.key === "badge") p.badge = e.value;
+      else if (e.key === "specifications") { p.specs = {}; e.items.forEach(function (i) { var kv = pair(i); p.specs[kv[0] || kv[1]] = kv[0] ? kv[1] : ""; }); }
+      else if (e.key === "documents") p.links = e.items.map(cells).filter(function (c) { return c[1]; }).map(function (c) { return { label: c[0], url: c[1] }; });
+      else if (e.key === "photos") p.photos = e.items.map(cells).map(function (c) { return { src: c[0], caption: c[1] || "" }; });
+    });
+  }
+  function applyBuildingText(b, entries) {
+    var stops = {}, stop = null;
+    b.stops.forEach(function (s) { stops[s.id] = s; });
+    entries.forEach(function (e) {
+      if (e.key === "location") {
+        stop = stops[e.value];
+        if (!stop) issue("warn", "content/text/buildings/" + b.id + ".txt mentions the location \"" + e.value + "\", which is not in content/buildings/" + b.id + ".js. It was ignored.");
+      } else if (stop && e.key === "title") stop.title = e.value;
+      else if (stop && e.key === "text") stop.text = e.value;
+      else if (stop && e.key === "equipment") stop.equipment = e.items.map(cells).map(function (c) { return { product: c[0], role: c[1] || "", note: c[2] || "" }; });
+      else if (e.key === "name") b.name = e.value;
+      else if (e.key === "summary") b.intro = e.value;
+      else if (e.key === "why a dmr package") b.advantages = e.items.map(pair).map(function (kv) { return { title: kv[0], text: kv[1] }; });
+      else if (e.key === "challenges") b.challenges = e.items;
+    });
+  }
+  function loadText(path, target, apply) {
+    return fetch(path).then(function (r) {
+      if (!r.ok) throw new Error(r.status);
+      return r.text();
+    }).then(function (t) { apply(target, parseText(t)); }, function () {
+      issue("error", "Could not read " + path + ". The words for \"" + (target.name || target.id) + "\" are missing until that file exists.");
+    });
+  }
 
   /* ---------- 3D world layout ---------- */
 
@@ -53,23 +120,33 @@
    * A building file can set `position: { x, z }` to place itself by hand.
    */
   D.layoutWorld = function () {
-    var W = D.world, x0 = 0, districts = {}, maxRows = 1;
+    var W = D.world, districts = {}, bands = [[]], bandWidth = 0;
+    // Group the districts into rows ("bands") no wider than W.maxWidth. The first band is at the back.
     D.useTypes.forEach(function (u) {
       var list = D.buildings.filter(function (b) { return b.use === u.id; })
         .sort(function (a, b) { return a.size.height - b.size.height; });
       if (!list.length) return;
-      var cols = Math.min(W.columns, list.length), rows = Math.ceil(list.length / cols);
-      maxRows = Math.max(maxRows, rows);
-      list.forEach(function (b, i) {
-        b.pos = b.position || { x: x0 + (i % cols + 0.5) * W.cell.width, z: -Math.floor(i / cols) * W.cell.depth };
-      });
-      districts[u.id] = { x: x0 + cols * W.cell.width / 2, z: -(rows - 1) * W.cell.depth / 2, width: cols * W.cell.width, depth: rows * W.cell.depth };
-      x0 += cols * W.cell.width + W.districtGap;
+      var cols = Math.min(W.columns, list.length), d = { id: u.id, list: list, cols: cols, rows: Math.ceil(list.length / cols), width: cols * W.cell.width };
+      if (bandWidth && bandWidth + W.districtGap + d.width > (W.maxWidth || Infinity)) { bands.push([]); bandWidth = 0; }
+      bands[bands.length - 1].push(d);
+      bandWidth += (bandWidth ? W.districtGap : 0) + d.width;
     });
-    var width = Math.max(W.cell.width, x0 - W.districtGap), shift = width / 2;
-    D.buildings.forEach(function (b) { if (!b.position) b.pos.x -= shift; });
-    Object.keys(districts).forEach(function (k) { districts[k].x -= shift; });
-    return { districts: districts, width: width, depth: maxRows * W.cell.depth };
+    var front = 0, minX = 0, maxX = 0, minZ = 0;
+    for (var n = bands.length - 1; n >= 0; n--) {
+      var band = bands[n], total = band.reduce(function (a, d) { return a + d.width; }, 0) + W.districtGap * (band.length - 1);
+      var x0 = -total / 2, rows = Math.max.apply(null, band.map(function (d) { return d.rows; }).concat(1));
+      band.forEach(function (d) {
+        d.list.forEach(function (b, i) {
+          b.pos = b.position || { x: x0 + (i % d.cols + 0.5) * W.cell.width, z: front - Math.floor(i / d.cols) * W.cell.depth };
+        });
+        districts[d.id] = { x: x0 + d.width / 2, z: front - (d.rows - 1) * W.cell.depth / 2, width: d.width, depth: d.rows * W.cell.depth, front: front };
+        x0 += d.width + W.districtGap;
+      });
+      minX = Math.min(minX, -total / 2); maxX = Math.max(maxX, total / 2);
+      minZ = front - (rows - 1) * W.cell.depth;
+      front -= rows * W.cell.depth + (W.bandGap || 0);
+    }
+    return { districts: districts, width: maxX - minX, depth: W.cell.depth - minZ, x: (minX + maxX) / 2, z: minZ / 2 };
   };
 
   /* ---------- reconcile: make the content consistent ---------- */
@@ -89,6 +166,12 @@
     var brands = index(D.brands);
     D.products = dedupe(D.products, "products").filter(function (p) { return p.active !== false && brands[p.brand]; });
     var products = index(D.products), cats = index(D.categories);
+    D.products.forEach(function (p) {
+      p.name = p.name || p.id;
+      p.summary = p.summary || "";
+      p.photos = p.photos.filter(function (x) { return x.src; });
+      p.photo = p.photos.length ? p.photos[0].src : null;
+    });
 
     D.products.forEach(function (p) {
       if (!cats[p.category]) {
@@ -110,10 +193,14 @@
       if (b.active === false) return false;
       if (!uses[b.use]) { issue("error", "Building \"" + b.id + "\" has the use type \"" + b.use + "\", which is not in content/settings.js. The building is hidden."); return false; }
       b.stops = b.stops.filter(function (s) {
-        var before = s.products.length;
-        s.products = s.products.filter(function (id) { return products[id]; });
+        s.title = s.title || s.id;
+        s.text = s.text || "";
+        s.equipment = s.equipment || (s.products || []).map(function (id) { return { product: id, role: "", note: "" }; });
+        var before = s.equipment.length;
+        s.equipment = s.equipment.filter(function (e) { return products[e.product]; });
+        s.products = s.equipment.map(function (e) { return e.product; });
         if (s.products.length < before) issue("info", "Building \"" + b.name + "\", stop \"" + s.title + "\": " + (before - s.products.length) + " product(s) no longer available were removed.");
-        if (!s.products.length) issue("warn", "Building \"" + b.name + "\", stop \"" + s.title + "\" has no products left and is hidden. Add products to it in content/buildings/" + b.id + ".js.");
+        if (!s.products.length) issue("warn", "Building \"" + b.name + "\", stop \"" + s.title + "\" has no products left and is hidden. Add equipment to it in content/text/buildings/" + b.id + ".txt.");
         return s.products.length > 0;
       });
       if (!b.stops.length) { issue("warn", "Building \"" + b.name + "\" has no stops left and is hidden."); return false; }
@@ -137,7 +224,7 @@
 
     // Map pins keep their place even when a manufacturer goes away.
     D.cleanInstall = function (i) {
-      i.manufacturers = (i.manufacturers || []).filter(function (id) { return brands[id]; });
+      i.manufacturers = (i.manufacturers || []).filter(function (id, n, all) { return brands[id] && all.indexOf(id) === n; });
       i.products = (i.products || []).filter(function (id) { return products[id]; });
       i.photos = i.photos || [];
       if (i.building && !buildings[i.building]) i.building = "";
@@ -190,6 +277,12 @@
     .concat(["content/installs.js", "content/gallery.js"]);
 
   Promise.all(content.map(function (src) { return load(src); }))
+    .then(function () {
+      // Read the words for every product and building before checking the content.
+      return Promise.all(
+        D.products.map(function (p) { return loadText("content/text/products/" + p.id + ".txt", p, applyProductText); })
+          .concat(D.buildings.map(function (b) { return loadText("content/text/buildings/" + b.id + ".txt", b, applyBuildingText); })));
+    })
     .then(function () {
       reconcile();
       return Promise.all(["assets/js/app.js", "assets/js/tour.js", "assets/js/map.js"].map(function (src) { return load(src); }));

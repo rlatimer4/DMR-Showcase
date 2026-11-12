@@ -1,10 +1,12 @@
 /*
  * Redd-i — manufacturer and its product lines.
  *
- * Everything about this manufacturer is in this file. To stop showing it, set
- * active: false (or remove "reddi" from content/manifest.js). To retire one
- * product line, set active: false on that product or delete its block.
- * See CONTENT.md for the optional fields (specs, links, badge, photo).
+ * The words and photos for each product are in content/text/products/<id>.txt.
+ * This file lists which product lines exist:
+ *  - category: a product type from content/categories.js
+ *  - shape:    which 3D equipment model stands for it in the buildings (see CONTENT.md)
+ * To stop showing the manufacturer, remove "reddi" from content/manifest.js.
+ * To retire one product line, delete its line here.
  */
 DMR.registerManufacturer({
   id: "reddi",
@@ -15,17 +17,6 @@ DMR.registerManufacturer({
   website: null,
   blurb: "Duct heaters, VAV systems and electric unit and wall heaters, built in the USA.",
   products: [
-    {
-      id: "reddi-line",
-      category: "industrial",
-      name: "Electric Duct & Unit Heaters",
-      summary: "Electric duct heaters, hazardous-location unit heaters and wall heaters, plus VAV systems.",
-      features: [
-        "Electric duct heaters for air handlers and terminal units",
-        "Unit heaters rated for hazardous locations",
-        "Residential and commercial wall heaters"
-      ],
-      photo: null
-    }
+    { id: "reddi-line", category: "electric", shape: "ductheater" }
   ]
 });

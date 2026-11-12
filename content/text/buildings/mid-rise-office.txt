@@ -1,0 +1,46 @@
+# MID-RISE OFFICE
+#
+# This file holds the words shown for this building. Edit them freely.
+# Keep the labels (the words before each colon) and the dashes at the start of list lines.
+# Lines that start with # are notes and are not shown on the site.
+
+Name: Mid-Rise Office
+
+Summary: Mid-rise offices balance first cost against energy use.
+
+Why a DMR package:
+# One line per advantage, written as  - Short heading: one sentence
+- Energy code compliance: Outdoor air is pre-conditioned with recovered energy
+- Zone-by-zone comfort: Every zone has its own heat pump or VAV box
+- Small mechanical footprint: Floor-by-floor units need only a closet on each floor
+
+Challenges:
+- Energy code compliance
+- Zone control on every floor
+- Mechanical space on each floor
+
+# ---------------- Equipment locations ----------------
+# Each location starts with "Location:" and its code. Do not change the code.
+# Equipment lines read:  - product code | what it is in this building | why it suits (optional)
+# Product codes are the file names in content/text/products/.
+
+Location: mid-rise-office-1
+Title: Outdoor air and recovery
+Text: Energy recovery ventilators pre-condition outdoor air using the building's exhaust.
+Equipment:
+- venmar-erv | Rooftop energy recovery ventilator
+- ventrol-ahu | Air handler with integral energy recovery
+
+Location: mid-rise-office-2
+Title: Office floor
+Text: Water-source heat pumps or VAV terminals serve each zone.
+Equipment:
+- mammoth-wshp | Ceiling water-source heat pumps | Horizontal units above the ceiling, one per zone
+- envirotec-vav | Single-duct VAV boxes
+
+Location: mid-rise-office-3
+Title: Floor-by-floor units
+Text: Vertical self-contained units serve one floor each from a small closet.
+Equipment:
+- mammoth-rtu | Vertical self-contained unit | One water-cooled unit per floor
+- reddi-line | Electric duct heater | Reheat for perimeter zones

@@ -1,15 +1,16 @@
 /*
- * Recreation Center — building model.
+ * Recreation Center — building model (shape and layout only).
  *
- * This file is one self-contained building. Edit it without touching the others:
- *  - size:   overall dimensions in metres; the shell, floors and ducts are generated from it
- *  - facade, walls: the look of the outside (styles are listed in CONTENT.md)
- *  - stops:  the numbered points visitors select. `at.floor` is "roof", "yard"
- *            (a unit on the ground in front) or a floor number (0 = ground);
- *            `at.x` is the position across the width, 0 to 1
- *  - model:  optional path to a .glb file that replaces the generated shell
- *  - build:  the shapes that make this building recognizable (kit helpers are in CONTENT.md)
- * Products listed in a stop that are no longer offered are skipped automatically.
+ * The words for this building are in content/text/buildings/recreation-center.txt.
+ * This file controls the 3D model:
+ *  - size:    overall dimensions in metres
+ *  - facade, walls: the look of the outside
+ *  - stops:   where each equipment location sits. `at.floor` is "roof", "yard"
+ *             or a floor number (0 = ground); `at.x` is the position across
+ *             the width, 0 to 1; `space` picks how the room is furnished
+ *  - model:   optional path to a .glb file that replaces the generated shell
+ *  - build:   shapes that make the building recognizable
+ * CONTENT.md lists the facade styles, space types and kit helpers.
  */
 DMR.registerBuilding({
   id: "recreation-center",
@@ -18,15 +19,9 @@ DMR.registerBuilding({
   size: { width: 26, depth: 16, floors: 1, floorHeight: 8, bays: 2, extraHeight: 5 },
   model: null,
   facade: { style: "glass", color: "#2f86c2" },
-  intro: "Pools and gyms put moisture and people loads into one building.",
-  challenges: ["Pool humidity and condensation", "Large swings in occupancy", "Odor and air quality"],
   stops: [
-    { id: "recreation-center-1", at: { floor: "yard", x: 0.35 }, title: "Pool dehumidification", room: "",
-      text: "Desiccant systems hold pool-hall humidity down and protect the structure from condensation.",
-      products: ["novelaire-desiccant", "venmar-erv"] },
-    { id: "recreation-center-2", at: { floor: 0, x: 0.75 }, title: "Gymnasium", room: "Gym",
-      text: "Packaged rooftop units handle the gym, and unit heaters cover the entrances.",
-      products: ["mammoth-rtu", "sterling-unit", "kampmann-curtain"] }
+    { id: "recreation-center-1", at: { floor: "yard", x: 0.35 }, space: "pool" },
+    { id: "recreation-center-2", at: { floor: 0, x: 0.75 }, space: "gym" }
   ],
   // Shapes that make this building recognizable. See CONTENT.md for the kit.
   build: function (kit, d) {

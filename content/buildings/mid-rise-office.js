@@ -1,15 +1,16 @@
 /*
- * Mid-Rise Office — building model.
+ * Mid-Rise Office — building model (shape and layout only).
  *
- * This file is one self-contained building. Edit it without touching the others:
- *  - size:   overall dimensions in metres; the shell, floors and ducts are generated from it
- *  - facade, walls: the look of the outside (styles are listed in CONTENT.md)
- *  - stops:  the numbered points visitors select. `at.floor` is "roof", "yard"
- *            (a unit on the ground in front) or a floor number (0 = ground);
- *            `at.x` is the position across the width, 0 to 1
- *  - model:  optional path to a .glb file that replaces the generated shell
- *  - build:  the shapes that make this building recognizable (kit helpers are in CONTENT.md)
- * Products listed in a stop that are no longer offered are skipped automatically.
+ * The words for this building are in content/text/buildings/mid-rise-office.txt.
+ * This file controls the 3D model:
+ *  - size:    overall dimensions in metres
+ *  - facade, walls: the look of the outside
+ *  - stops:   where each equipment location sits. `at.floor` is "roof", "yard"
+ *             or a floor number (0 = ground); `at.x` is the position across
+ *             the width, 0 to 1; `space` picks how the room is furnished
+ *  - model:   optional path to a .glb file that replaces the generated shell
+ *  - build:   shapes that make the building recognizable
+ * CONTENT.md lists the facade styles, space types and kit helpers.
  */
 DMR.registerBuilding({
   id: "mid-rise-office",
@@ -19,18 +20,10 @@ DMR.registerBuilding({
   model: null,
   facade: { style: "bands", color: "#cfd8df" },
   walls: "#cfd8df",
-  intro: "Mid-rise offices balance first cost against energy use.",
-  challenges: ["Energy code compliance", "Zone control on every floor", "Mechanical space on each floor"],
   stops: [
-    { id: "mid-rise-office-1", at: { floor: "roof", x: 0.4 }, title: "Outdoor air and recovery", room: "",
-      text: "Energy recovery ventilators pre-condition outdoor air using the building's exhaust.",
-      products: ["venmar-erv", "ventrol-ahu"] },
-    { id: "mid-rise-office-2", at: { floor: 3, x: 0.7 }, title: "Office floor", room: "Office",
-      text: "Water-source heat pumps or VAV terminals serve each zone.",
-      products: ["mammoth-wshp", "envirotec-vav"] },
-    { id: "mid-rise-office-3", at: { floor: 1, x: 0.25 }, title: "Floor-by-floor units", room: "Mech",
-      text: "Vertical self-contained units serve one floor each, driven by variable frequency drives.",
-      products: ["mammoth-rtu", "fuji-vfd"] }
+    { id: "mid-rise-office-1", at: { floor: "roof", x: 0.4 }, space: "plant" },
+    { id: "mid-rise-office-2", at: { floor: 3, x: 0.7 }, space: "open-office" },
+    { id: "mid-rise-office-3", at: { floor: 1, x: 0.25 }, space: "mechanical" }
   ],
   // Shapes that make this building recognizable. See CONTENT.md for the kit.
   build: function (kit, d) {

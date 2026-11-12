@@ -1,15 +1,16 @@
 /*
- * Retail Strip — building model.
+ * Retail Strip — building model (shape and layout only).
  *
- * This file is one self-contained building. Edit it without touching the others:
- *  - size:   overall dimensions in metres; the shell, floors and ducts are generated from it
- *  - facade, walls: the look of the outside (styles are listed in CONTENT.md)
- *  - stops:  the numbered points visitors select. `at.floor` is "roof", "yard"
- *            (a unit on the ground in front) or a floor number (0 = ground);
- *            `at.x` is the position across the width, 0 to 1
- *  - model:  optional path to a .glb file that replaces the generated shell
- *  - build:  the shapes that make this building recognizable (kit helpers are in CONTENT.md)
- * Products listed in a stop that are no longer offered are skipped automatically.
+ * The words for this building are in content/text/buildings/retail-strip.txt.
+ * This file controls the 3D model:
+ *  - size:    overall dimensions in metres
+ *  - facade, walls: the look of the outside
+ *  - stops:   where each equipment location sits. `at.floor` is "roof", "yard"
+ *             or a floor number (0 = ground); `at.x` is the position across
+ *             the width, 0 to 1; `space` picks how the room is furnished
+ *  - model:   optional path to a .glb file that replaces the generated shell
+ *  - build:   shapes that make the building recognizable
+ * CONTENT.md lists the facade styles, space types and kit helpers.
  */
 DMR.registerBuilding({
   id: "retail-strip",
@@ -19,15 +20,9 @@ DMR.registerBuilding({
   model: null,
   facade: { style: "storefront", color: "#e9e2d5", stripe: "#b7ada0" },
   walls: "#e9e2d5",
-  intro: "Each tenant pays its own utility bill and wants its own system.",
-  challenges: ["Separate systems for each tenant", "Frequent door openings", "Low maintenance budgets"],
   stops: [
-    { id: "retail-strip-1", at: { floor: "roof", x: 0.4 }, title: "Tenant rooftop units", room: "",
-      text: "Packaged rooftop units serve each storefront.",
-      products: ["mammoth-rtu"] },
-    { id: "retail-strip-2", at: { floor: 0, x: 0.12 }, title: "Storefront", room: "Shop",
-      text: "Air curtains keep conditioned air in at the door. Mini-splits handle small shops and stock rooms.",
-      products: ["kampmann-curtain", "gree-mini", "reddi-line"] }
+    { id: "retail-strip-1", at: { floor: "roof", x: 0.4 }, space: "plant" },
+    { id: "retail-strip-2", at: { floor: 0, x: 0.12 }, space: "shop" }
   ],
   // Shapes that make this building recognizable. See CONTENT.md for the kit.
   build: function (kit, d) {

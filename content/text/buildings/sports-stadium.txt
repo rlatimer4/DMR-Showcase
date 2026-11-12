@@ -1,0 +1,46 @@
+# SPORTS STADIUM
+#
+# This file holds the words shown for this building. Edit them freely.
+# Keep the labels (the words before each colon) and the dashes at the start of list lines.
+# Lines that start with # are notes and are not shown on the site.
+
+Name: Sports Stadium
+
+Summary: Stadiums sit idle most of the week and then fill in an hour.
+
+Why a DMR package:
+# One line per advantage, written as  - Short heading: one sentence
+- Ready for game day: Systems sized for a full house that idle efficiently between events
+- Premium spaces: Suites and clubs get individual control
+- High exhaust, low cost: Locker room and kitchen exhaust energy is recovered
+
+Challenges:
+- Peak loads a few days a month
+- Concourses open to the outdoors
+- Premium seating expectations
+
+# ---------------- Equipment locations ----------------
+# Each location starts with "Location:" and its code. Do not change the code.
+# Equipment lines read:  - product code | what it is in this building | why it suits (optional)
+# Product codes are the file names in content/text/products/.
+
+Location: sports-stadium-1
+Title: Concourse air handling
+Text: Custom rooftop systems condition clubs and concourses and turn down between events.
+Equipment:
+- governair-rtu | Club-level rooftop unit
+- nortek-ahu | Concourse air handler
+
+Location: sports-stadium-2
+Title: Suites and clubs
+Text: Fan coils and VRF give each suite its own control.
+Equipment:
+- envirotec-fancoil | Suite fan coil | One per suite, each with its own thermostat
+- gree-vrf | Club VRF
+
+Location: sports-stadium-3
+Title: Locker rooms
+Text: Energy recovery ventilators handle the high exhaust rates locker rooms need.
+Equipment:
+- venmar-erv | Locker room energy recovery ventilator | High exhaust rate with heat recovery
+- sterling-unit | Service tunnel unit heaters

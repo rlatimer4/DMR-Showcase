@@ -19,8 +19,8 @@ The 3D view needs the site served over http(s); opening `index.html` from disk w
 
 | Section | What it does |
 | --- | --- |
-| Walkthrough | A real-time 3D world of 27 building types in four use types (commercial, institutional, industrial, residential). Selecting a building opens it as a cutaway with numbered equipment locations. |
-| Products | Catalog with search and filters for system type, building type and manufacturer. |
+| Walkthrough | A real-time 3D world of building types in four use types (commercial, institutional, industrial, residential). Selecting a building shows what a DMR package brings to it and opens it as a cutaway; selecting a location zooms into the furnished room and lists the specific equipment. |
+| Products | Catalog with search and filters for product type, building type and manufacturer. Each product opens with its own photo gallery. |
 | Manufacturers | Logo tiles; selecting one filters the catalog. |
 | Installations | Google Map of installed equipment, filterable by manufacturer and building type. |
 | Gallery | Photo grid (placeholders). |
@@ -28,10 +28,11 @@ The 3D view needs the site served over http(s); opening `index.html` from disk w
 
 ## Changing content
 
-All content is in the `content/` folder, one file per manufacturer and one per
-building, with a single list (`content/manifest.js`) that decides what is shown.
-**[CONTENT.md](CONTENT.md) has step-by-step instructions** for adding or dropping
-a manufacturer, product line, product type, building, map pin or photo.
+All content is in the `content/` folder. The wording for every building and
+product is in plain text files (`content/text/`) that anyone can edit without
+programming. **[CONTENT.md](CONTENT.md) has step-by-step instructions** for
+editing text, adding product photos, and adding or dropping a manufacturer,
+product line, product type, building or map pin.
 
 Two tools help:
 
@@ -39,7 +40,7 @@ Two tools help:
 - `?edit=1` turns on the map pin editor.
 
 When a manufacturer or product is removed, everything that referred to it
-(building stops, map pins, gallery links, filters) adjusts automatically.
+(building locations, map pins, gallery links, filters) adjusts automatically.
 
 ## How it is organised
 
@@ -50,6 +51,7 @@ assets/js/core.js   loads the content, reconciles it, starts the site
 assets/js/app.js    catalog, manufacturers, gallery, project list
 assets/js/tour.js   walkthrough panel and tour state
 assets/js/scene3d.js  3D world (three.js)
+assets/js/props3d.js  room furnishings and equipment models for the 3D world
 assets/js/map.js    Google Map and pin editor
 assets/css/styles.css
 assets/logos, photos, models, vendor
@@ -63,7 +65,7 @@ purposes only" overlay.
 ## Before launch
 
 - Product descriptions and building text are draft copy and need DMR review.
-- Installations are sample records, not real projects.
+- Installations are sample records, not real projects, and product photos are placeholders.
 - The Residential district has one building (Multifamily Residential) that we
   added; the other 26 building types follow Nortek World's list.
 - The building models are simple generated shapes. For render-quality visuals,

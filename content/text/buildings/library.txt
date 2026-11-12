@@ -1,0 +1,45 @@
+# LIBRARY
+#
+# This file holds the words shown for this building. Edit them freely.
+# Keep the labels (the words before each colon) and the dashes at the start of list lines.
+# Lines that start with # are notes and are not shown on the site.
+
+Name: Library
+
+Summary: Collections need stable humidity and readers need quiet.
+
+Why a DMR package:
+# One line per advantage, written as  - Short heading: one sentence
+- Stable humidity: Collections are protected in every season
+- Quiet: Low-speed concealed units and radiant heat in reading rooms
+- Dry ventilation air: The outdoor air unit removes moisture before it reaches the stacks
+
+Challenges:
+- Humidity control for collections
+- Quiet reading rooms
+- Daylit perimeter spaces
+
+# ---------------- Equipment locations ----------------
+# Each location starts with "Location:" and its code. Do not change the code.
+# Equipment lines read:  - product code | what it is in this building | why it suits (optional)
+# Product codes are the file names in content/text/products/.
+
+Location: library-1
+Title: Outdoor air system
+Text: A dedicated outdoor air system delivers dry ventilation air so humidity stays stable.
+Equipment:
+- venmar-doas | Dedicated outdoor air unit | Delivers dry ventilation air year-round
+
+Location: library-2
+Title: Reading room
+Text: Concealed fan coils run quietly at low speed. Panel radiators heat the window wall.
+Equipment:
+- envirotec-fancoil | Concealed fan coils | Low-speed, quiet units
+- runtal-radiator | Window-wall radiators
+
+Location: library-3
+Title: Archive
+Text: Desiccant dehumidifiers and humidifiers hold the archive within a narrow humidity range.
+Equipment:
+- fisair-dehum | Archive dehumidifier | Desiccant unit holding 35 to 45% relative humidity
+- fisair-humid | Archive humidifier

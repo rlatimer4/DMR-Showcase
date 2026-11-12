@@ -38,9 +38,14 @@ DMR.useTypes = [
   { id: "residential", name: "Residential", color: "#2a8a8a" }
 ];
 
-/* Spacing of the 3D world's grid, in metres. */
+/*
+ * The 3D world's grid, in metres. Districts sit side by side until a row would
+ * be wider than maxWidth, then start a new row in front.
+ */
 DMR.world = {
-  cell: { width: 40, depth: 44 },
-  columns: 3,
-  districtGap: 30
+  cell: { width: 40, depth: 44 },   // spacing between building centres
+  columns: 3,                       // buildings per row inside a district
+  districtGap: 30,                  // space between districts
+  bandGap: 26,                      // space between rows of districts
+  maxWidth: 290
 };

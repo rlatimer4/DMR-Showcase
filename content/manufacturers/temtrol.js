@@ -1,10 +1,12 @@
 /*
  * Temtrol — manufacturer and its product lines.
  *
- * Everything about this manufacturer is in this file. To stop showing it, set
- * active: false (or remove "temtrol" from content/manifest.js). To retire one
- * product line, set active: false on that product or delete its block.
- * See CONTENT.md for the optional fields (specs, links, badge, photo).
+ * The words and photos for each product are in content/text/products/<id>.txt.
+ * This file lists which product lines exist:
+ *  - category: a product type from content/categories.js
+ *  - shape:    which 3D equipment model stands for it in the buildings (see CONTENT.md)
+ * To stop showing the manufacturer, remove "temtrol" from content/manifest.js.
+ * To retire one product line, delete its line here.
  */
 DMR.registerManufacturer({
   id: "temtrol",
@@ -15,17 +17,6 @@ DMR.registerManufacturer({
   website: null,
   blurb: "Custom air handlers for institutional and healthcare projects.",
   products: [
-    {
-      id: "temtrol-ahu",
-      category: "ahu",
-      name: "Custom Air Handlers",
-      summary: "Air handlers engineered unit by unit, for projects where a catalog cabinet will not fit the load or the room.",
-      features: [
-        "Built to project dimensions, including knock-down construction for existing buildings",
-        "Indoor and outdoor casings with custom coil, filter and fan sections",
-        "Pairs with FANWALL arrays for redundancy"
-      ],
-      photo: null
-    }
+    { id: "temtrol-ahu", category: "ahu", shape: "ahu" }
   ]
 });

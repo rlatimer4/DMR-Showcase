@@ -1,0 +1,47 @@
+# MULTIFAMILY RESIDENTIAL
+#
+# This file holds the words shown for this building. Edit them freely.
+# Keep the labels (the words before each colon) and the dashes at the start of list lines.
+# Lines that start with # are notes and are not shown on the site.
+
+Name: Multifamily Residential
+
+Summary: Apartments need individual control and individual billing in every unit.
+
+Why a DMR package:
+# One line per advantage, written as  - Short heading: one sentence
+- Every resident in control: Each apartment has its own system and its own bill
+- Fresh corridors: Energy recovery ventilation without the heating penalty
+- Small footprint: Equipment that fits closets, ceilings and balconies
+
+Challenges:
+- Individual control in each unit
+- Ventilation for corridors
+- Limited space for equipment
+
+# ---------------- Equipment locations ----------------
+# Each location starts with "Location:" and its code. Do not change the code.
+# Equipment lines read:  - product code | what it is in this building | why it suits (optional)
+# Product codes are the file names in content/text/products/.
+
+Location: multifamily-1
+Title: Corridor ventilation
+Text: Energy recovery ventilators supply corridors and units with fresh air.
+Equipment:
+- venmar-erv | Corridor energy recovery ventilator
+- novelaire-wheel | Energy recovery wheel
+
+Location: multifamily-2
+Title: Apartments
+Text: VRF, mini-splits or fan coils give each apartment its own system.
+Equipment:
+- gree-vrf | Apartment VRF
+- gree-mini | Mini-split heat pump
+- envirotec-fancoil | Vertical-stack fan coil
+
+Location: multifamily-3
+Title: Amenity level
+Text: Water-source heat pumps and trench units serve the lobby and amenity spaces.
+Equipment:
+- mammoth-wshp | Amenity water-source heat pumps
+- kampmann-trench | Lobby trench heater

@@ -1,0 +1,47 @@
+# HOTEL
+#
+# This file holds the words shown for this building. Edit them freely.
+# Keep the labels (the words before each colon) and the dashes at the start of list lines.
+# Lines that start with # are notes and are not shown on the site.
+
+Name: Hotel
+
+Summary: Every guest room needs quiet, individual control, and the corridors need fresh air.
+
+Why a DMR package:
+# One line per advantage, written as  - Short heading: one sentence
+- Quiet rooms: Guest room units are selected for sound first
+- Control in every room: Each guest sets their own temperature and unoccupied rooms set back
+- Fresh air without the energy cost: Corridor and bathroom exhaust energy is recovered
+
+Challenges:
+- Quiet guest rooms
+- Individual room control
+- Ventilation for corridors and bathrooms
+
+# ---------------- Equipment locations ----------------
+# Each location starts with "Location:" and its code. Do not change the code.
+# Equipment lines read:  - product code | what it is in this building | why it suits (optional)
+# Product codes are the file names in content/text/products/.
+
+Location: hotel-1
+Title: Corridor ventilation
+Text: A dedicated outdoor air system feeds corridors and guest rooms with dry, tempered air.
+Equipment:
+- venmar-doas | Corridor make-up air unit | 100% outdoor air unit feeding corridors and guest room ventilation
+- novelaire-wheel | Energy recovery wheel | Recovers energy from bathroom exhaust
+
+Location: hotel-2
+Title: Guest rooms
+Text: Vertical-stack fan coils or VRF give each room its own control.
+Equipment:
+- envirotec-fancoil | Vertical-stack fan coil | One riser-mounted unit per room, stacked floor to floor
+- gree-vrf | Guest room VRF | Ducted indoor units with heat recovery between rooms
+- runtal-radiator | Bathroom towel radiator
+
+Location: hotel-3
+Title: Lobby
+Text: Trench units sit in the floor along the glass and air curtains protect the entrance.
+Equipment:
+- kampmann-trench | Lobby trench heater | Floor-recessed along the storefront glass
+- kampmann-curtain | Entrance air curtain | Recessed above the main doors

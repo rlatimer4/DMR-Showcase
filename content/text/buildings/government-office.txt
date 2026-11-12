@@ -1,0 +1,47 @@
+# GOVERNMENT OFFICE
+#
+# This file holds the words shown for this building. Edit them freely.
+# Keep the labels (the words before each colon) and the dashes at the start of list lines.
+# Lines that start with # are notes and are not shown on the site.
+
+Name: Government Office
+
+Summary: Public buildings are built to last decades and are often renovated while occupied.
+
+Why a DMR package:
+# One line per advantage, written as  - Short heading: one sentence
+- Built to last: Custom equipment specified for decades of service
+- Renovation while occupied: Air handlers ship in sections that fit through existing doors
+- Energy targets met: Energy recovery and modern coils cut the load on the existing plant
+
+Challenges:
+- Long service life
+- Renovation in occupied buildings
+- Energy targets
+
+# ---------------- Equipment locations ----------------
+# Each location starts with "Location:" and its code. Do not change the code.
+# Equipment lines read:  - product code | what it is in this building | why it suits (optional)
+# Product codes are the file names in content/text/products/.
+
+Location: government-office-1
+Title: Custom air handlers
+Text: Air handlers built in sections fit through existing openings for replacement work.
+Equipment:
+- ventrol-ahu | Knock-down replacement air handler | Ships in sections that fit through existing doors
+- temtrol-ahu | Custom penthouse air handler
+
+Location: government-office-2
+Title: Office floors
+Text: VAV boxes and perimeter fan coils serve the office floors.
+Equipment:
+- envirotec-vav | VAV boxes with reheat
+- envirotec-fancoil | Perimeter fan coils
+
+Location: government-office-3
+Title: Mechanical room
+Text: Replacement coils and an energy recovery retrofit modernize the existing plant.
+Equipment:
+- cooney-coil | Replacement preheat coils
+- sterling-hydronic | Finned tube radiation
+- klingenburg-wheel | Retrofit energy recovery wheel

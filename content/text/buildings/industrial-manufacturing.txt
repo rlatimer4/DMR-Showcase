@@ -1,0 +1,45 @@
+# INDUSTRIAL MANUFACTURING
+#
+# This file holds the words shown for this building. Edit them freely.
+# Keep the labels (the words before each colon) and the dashes at the start of list lines.
+# Lines that start with # are notes and are not shown on the site.
+
+Name: Industrial Manufacturing
+
+Summary: Heavy manufacturing exhausts large air volumes and generates its own heat.
+
+Why a DMR package:
+# One line per advantage, written as  - Short heading: one sentence
+- Pressurized plant: Make-up air replaces large process exhaust volumes
+- Even heat end to end: Air turnover covers a long production floor from a few units
+- Process heat put to work: Plate exchangers recover energy from exhaust
+
+Challenges:
+- Large exhaust volumes
+- Process heat
+- Harsh environment for equipment
+
+# ---------------- Equipment locations ----------------
+# Each location starts with "Location:" and its code. Do not change the code.
+# Equipment lines read:  - product code | what it is in this building | why it suits (optional)
+# Product codes are the file names in content/text/products/.
+
+Location: industrial-manufacturing-1
+Title: Make-up air
+Text: Direct-fired make-up air units replace exhaust air and pressurize the plant.
+Equipment:
+- rapid-mua | Direct-fired make-up air unit
+- klingenburg-plate | Process exhaust heat recovery
+
+Location: industrial-manufacturing-2
+Title: Production floor
+Text: Air turnover units and unit heaters keep the floor even from end to end.
+Equipment:
+- rapid-turnover | Air turnover unit
+- sterling-unit | Unit heaters
+
+Location: industrial-manufacturing-3
+Title: Dock doors
+Text: Air curtains protect the dock doors.
+Equipment:
+- kampmann-curtain | Dock door air curtain

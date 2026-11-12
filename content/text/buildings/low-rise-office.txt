@@ -1,0 +1,46 @@
+# LOW-RISE OFFICE
+#
+# This file holds the words shown for this building. Edit them freely.
+# Keep the labels (the words before each colon) and the dashes at the start of list lines.
+# Lines that start with # are notes and are not shown on the site.
+
+Name: Low-Rise Office
+
+Summary: Small office buildings need simple systems that are easy to maintain.
+
+Why a DMR package:
+# One line per advantage, written as  - Short heading: one sentence
+- Simple to own: Packaged equipment any service contractor can maintain
+- Low first cost: Standard rooftop units and VRF with short lead times
+- Separate tenants, separate systems: Each suite is metered and controlled on its own
+
+Challenges:
+- Simple maintenance
+- Low first cost
+- Comfort at the perimeter
+
+# ---------------- Equipment locations ----------------
+# Each location starts with "Location:" and its code. Do not change the code.
+# Equipment lines read:  - product code | what it is in this building | why it suits (optional)
+# Product codes are the file names in content/text/products/.
+
+Location: low-rise-office-1
+Title: Packaged rooftop units
+Text: Packaged rooftop units provide heating, cooling and ventilation from one cabinet.
+Equipment:
+- mammoth-rtu | Packaged rooftop unit
+- uvr-coil | UV-C coil fixture
+
+Location: low-rise-office-2
+Title: Office suites
+Text: VRF gives each suite its own control without large ductwork.
+Equipment:
+- gree-vrf | Suite VRF | Cassette indoor units, one outdoor unit per tenant
+- gree-mini | IT room mini-split
+
+Location: low-rise-office-3
+Title: Perimeter
+Text: Finned tube and panel radiators offset heat loss at the glass.
+Equipment:
+- sterling-hydronic | Finned tube under the windows
+- runtal-radiator | Entry panel radiator

@@ -1,15 +1,16 @@
 /*
- * Industrial Manufacturing — building model.
+ * Industrial Manufacturing — building model (shape and layout only).
  *
- * This file is one self-contained building. Edit it without touching the others:
- *  - size:   overall dimensions in metres; the shell, floors and ducts are generated from it
- *  - facade, walls: the look of the outside (styles are listed in CONTENT.md)
- *  - stops:  the numbered points visitors select. `at.floor` is "roof", "yard"
- *            (a unit on the ground in front) or a floor number (0 = ground);
- *            `at.x` is the position across the width, 0 to 1
- *  - model:  optional path to a .glb file that replaces the generated shell
- *  - build:  the shapes that make this building recognizable (kit helpers are in CONTENT.md)
- * Products listed in a stop that are no longer offered are skipped automatically.
+ * The words for this building are in content/text/buildings/industrial-manufacturing.txt.
+ * This file controls the 3D model:
+ *  - size:    overall dimensions in metres
+ *  - facade, walls: the look of the outside
+ *  - stops:   where each equipment location sits. `at.floor` is "roof", "yard"
+ *             or a floor number (0 = ground); `at.x` is the position across
+ *             the width, 0 to 1; `space` picks how the room is furnished
+ *  - model:   optional path to a .glb file that replaces the generated shell
+ *  - build:   shapes that make the building recognizable
+ * CONTENT.md lists the facade styles, space types and kit helpers.
  */
 DMR.registerBuilding({
   id: "industrial-manufacturing",
@@ -19,18 +20,10 @@ DMR.registerBuilding({
   model: null,
   facade: { style: "solid", color: "#5b6673", stripe: "#d62828", doors: 3 },
   walls: "#667280",
-  intro: "Heavy manufacturing exhausts large air volumes and generates its own heat.",
-  challenges: ["Large exhaust volumes", "Process heat", "Harsh environment for equipment"],
   stops: [
-    { id: "industrial-manufacturing-1", at: { floor: "roof", x: 0.3 }, title: "Make-up air", room: "",
-      text: "Direct-fired make-up air units replace exhaust air and pressurize the plant.",
-      products: ["rapid-mua", "fuji-vfd"] },
-    { id: "industrial-manufacturing-2", at: { floor: 0, x: 0.3 }, title: "Production floor", room: "Production",
-      text: "Air turnover units and unit heaters keep the floor even from end to end.",
-      products: ["rapid-turnover", "sterling-unit"] },
-    { id: "industrial-manufacturing-3", at: { floor: 0, x: 0.8 }, title: "Dock doors", room: "Dock",
-      text: "Air curtains protect the dock doors.",
-      products: ["kampmann-curtain"] }
+    { id: "industrial-manufacturing-1", at: { floor: "roof", x: 0.3 }, space: "plant" },
+    { id: "industrial-manufacturing-2", at: { floor: 0, x: 0.3 }, space: "production" },
+    { id: "industrial-manufacturing-3", at: { floor: 0, x: 0.8 }, space: "dock" }
   ],
   // Shapes that make this building recognizable. See CONTENT.md for the kit.
   build: function (kit, d) {

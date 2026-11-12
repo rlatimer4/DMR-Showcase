@@ -22,10 +22,6 @@
       '<span class="ph-label">Photo placeholder</span>' + (label ? '<span class="ph-name">' + label + "</span>" : "") + "</div>";
   };
 
-  var catIndex = function (id) {
-    var i = D.categories.findIndex(function (c) { return c.id === id; }) + 1;
-    return (i < 10 ? "0" : "") + i;
-  };
 
   /* ---------- project list (saved in the browser) ---------- */
 
@@ -68,7 +64,7 @@
       '<button class="card-open" type="button" data-product="' + p.id + '" aria-label="' + brands[p.brand].name + " " + p.name + ': details">' +
       D.media(p) + "</button>" +
       '<div class="card-body">' +
-      '<p class="card-meta"><span class="idx">' + catIndex(p.category) + "</span> " + cats[p.category].name + "</p>" +
+      '<p class="card-meta">' + cats[p.category].name + "</p>" +
       '<h3><span class="card-brand">' + brands[p.brand].name + "</span> " + p.name + (p.badge ? ' <span class="badge">' + p.badge + "</span>" : "") + "</h3>" +
       "<p>" + p.summary + "</p>" +
       '<div class="card-actions"><button class="link" type="button" data-product="' + p.id + '">View details</button>' +
@@ -80,7 +76,7 @@
     var found = D.products.filter(matches);
     $("#productGrid").innerHTML = found.length ? found.map(card).join("") :
       '<p class="empty">No products match these filters. Clear a filter, or call DMR at ' + D.company.phone + " and we will find what you need.</p>";
-    $("#resultCount").textContent = found.length + (found.length === 1 ? " product line" : " product lines");
+    $("#resultCount").textContent = "";
     $("#clearFilters").hidden = !(state.q || state.cat || state.building || state.brand);
     $("#catBlurb").textContent = state.cat && cats[state.cat] ? cats[state.cat].blurb : (state.brand && brands[state.brand] ? brands[state.brand].blurb : "");
     document.querySelectorAll("#catChips button").forEach(function (b) {
@@ -100,7 +96,7 @@
 
   function initCatalog() {
     $("#catChips").innerHTML = '<button type="button" data-cat="">All systems</button>' + D.categories.map(function (c) {
-      return '<button type="button" data-cat="' + c.id + '"><span class="idx">' + catIndex(c.id) + "</span> " + c.name + "</button>";
+      return '<button type="button" data-cat="' + c.id + '">' + c.name + "</button>";
     }).join("");
     $("#fMarket").insertAdjacentHTML("beforeend", D.buildingOptions());
     $("#fBrand").insertAdjacentHTML("beforeend", D.brands.map(function (b) { return '<option value="' + b.id + '">' + b.name + "</option>"; }).join(""));
@@ -119,12 +115,11 @@
 
   function initBrands() {
     $("#brandGrid").innerHTML = D.brands.map(function (b) {
-      var n = D.products.filter(function (p) { return p.brand === b.id; }).length;
       return '<button class="brand-tile" type="button" data-brand="' + b.id + '">' +
         '<span class="brand-logo">' + (b.logo ? '<img src="' + b.logo + '" alt="">' : '<span class="brand-word">' + b.name + "</span>") + "</span>" +
         '<span class="brand-name">' + b.name + "</span>" +
         '<span class="brand-blurb">' + b.blurb + "</span>" +
-        '<span class="brand-foot">' + (b.family !== "Independent" && b.id !== "nortek" ? "A Nortek Air Solutions brand · " : "") + n + (n === 1 ? " product line" : " product lines") + "</span></button>";
+        "</button>";
     }).join("");
     $("#brandGrid").addEventListener("click", function (e) {
       var t = e.target.closest("[data-brand]");
@@ -142,6 +137,38 @@
     }).join("");
   }
 
+  /* ---------- product photo gallery ---------- */
+
+  // Photos come from the product's text file. Until real photos are added,
+  // placeholder tiles show the kinds of photo the gallery is meant to hold.
+  var SLOTS = ["Product photo", "Installed on site", "Close-up detail", "Inside the unit"];
+  function shots(p) {
+    return p.photos.length ? p.photos : SLOTS.map(function (c) { return { src: null, caption: c }; });
+  }
+  function shotHtml(x, alt) {
+    return x.src ? '<img class="media" src="' + x.src + '" alt="' + (x.caption || alt) + '">' : D.media({ photo: null }, x.caption);
+  }
+  function galleryHtml(p) {
+    var list = shots(p), name = brands[p.brand].name + " " + p.name;
+    return '<div class="pgal" data-gallery="' + p.id + '" data-at="0">' +
+      '<div class="pgal-main">' + shotHtml(list[0], name) + "</div>" +
+      (list.length > 1 ? '<div class="pgal-bar"><button type="button" class="pgal-nav" data-shot-step="-1" aria-label="Previous photo">‹</button>' +
+        '<p class="pgal-cap">' + (list[0].caption || "") + "</p>" +
+        '<button type="button" class="pgal-nav" data-shot-step="1" aria-label="Next photo">›</button></div>' +
+        '<div class="pgal-thumbs">' + list.map(function (x, i) {
+          return '<button type="button" data-shot="' + i + '" aria-pressed="' + (i === 0) + '" aria-label="Photo ' + (i + 1) + (x.caption ? ": " + x.caption : "") + '">' + shotHtml(x, name) + "</button>";
+        }).join("") + "</div>" : (list[0].caption ? '<p class="pgal-cap">' + list[0].caption + "</p>" : "")) +
+      "</div>";
+  }
+  function showShot(el, i) {
+    var p = products[el.dataset.gallery], list = shots(p);
+    i = (i + list.length) % list.length;
+    el.dataset.at = i;
+    el.querySelector(".pgal-main").innerHTML = shotHtml(list[i], p.name);
+    el.querySelector(".pgal-cap").textContent = list[i].caption || "";
+    el.querySelectorAll("[data-shot]").forEach(function (b) { b.setAttribute("aria-pressed", Number(b.dataset.shot) === i); });
+  }
+
   /* ---------- product dialog ---------- */
 
   var pd = $("#productDialog");
@@ -156,8 +183,8 @@
     var related = D.products.filter(function (x) { return x.id !== id && x.category === p.category; }).slice(0, 4);
     pd.innerHTML =
       '<form method="dialog"><button class="close" aria-label="Close">Close</button></form>' +
-      '<div class="sheet-grid"><div>' + D.media(p) + "</div><div>" +
-      '<p class="card-meta"><span class="idx">' + catIndex(p.category) + "</span> " + cats[p.category].name + "</p>" +
+      '<div class="sheet-grid"><div>' + galleryHtml(p) + "</div><div>" +
+      '<p class="card-meta">' + cats[p.category].name + "</p>" +
       '<h2 id="pdTitle"><span class="card-brand">' + b.name + "</span> " + p.name + (p.badge ? ' <span class="badge">' + p.badge + "</span>" : "") + "</h2>" +
       '<p class="lede-sm">' + p.summary + "</p>" +
       (p.features.length ? "<h3>Key points</h3><ul class='ticks'>" + p.features.map(function (f) { return "<li>" + f + "</li>"; }).join("") + "</ul>" : "") +
@@ -206,6 +233,8 @@
     if ((t = e.target.closest("[data-add]"))) { toggleList(t.dataset.add); return; }
     if ((t = e.target.closest("[data-remove]"))) { toggleList(t.dataset.remove); renderList(); return; }
     if (e.target.closest("[data-clear]")) { list = []; saveList(); renderList(); return; }
+    if ((t = e.target.closest("[data-shot]"))) { showShot(t.closest(".pgal"), Number(t.dataset.shot)); return; }
+    if ((t = e.target.closest("[data-shot-step]"))) { var gal = t.closest(".pgal"); showShot(gal, Number(gal.dataset.at) + Number(t.dataset.shotStep)); return; }
     if ((t = e.target.closest("[data-product]"))) { D.openProduct(t.dataset.product); return; }
     if ((t = e.target.closest("dialog [data-stop]"))) { pd.close(); D.goToStop(t.dataset.stop, true); return; }
     // Click on the backdrop closes a dialog.
@@ -225,9 +254,6 @@
 
   var c = D.company;
   $("#statFounded").textContent = c.founded;
-  $("#statBrands").textContent = D.brands.length;
-  $("#statProducts").textContent = D.products.length;
-  $("#statMarkets").textContent = D.buildings.length;
   $("#lineCardLink").href = c.lineCard;
   $("#contactCard").innerHTML = "<strong>" + c.name + "</strong><span>" + c.address.join("<br>") + "</span>" +
     '<a href="tel:' + c.phone.replace(/\D/g, "") + '">' + c.phone + '</a><a href="mailto:' + c.email + '">' + c.email + "</a>" +

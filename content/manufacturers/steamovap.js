@@ -1,10 +1,12 @@
 /*
  * SteamOVap Technologies — manufacturer and its product lines.
  *
- * Everything about this manufacturer is in this file. To stop showing it, set
- * active: false (or remove "steamovap" from content/manifest.js). To retire one
- * product line, set active: false on that product or delete its block.
- * See CONTENT.md for the optional fields (specs, links, badge, photo).
+ * The words and photos for each product are in content/text/products/<id>.txt.
+ * This file lists which product lines exist:
+ *  - category: a product type from content/categories.js
+ *  - shape:    which 3D equipment model stands for it in the buildings (see CONTENT.md)
+ * To stop showing the manufacturer, remove "steamovap" from content/manifest.js.
+ * To retire one product line, delete its line here.
  */
 DMR.registerManufacturer({
   id: "steamovap",
@@ -15,17 +17,6 @@ DMR.registerManufacturer({
   website: null,
   blurb: "Steam humidification systems.",
   products: [
-    {
-      id: "steamovap-humid",
-      category: "humidity",
-      name: "Steam Humidifiers",
-      summary: "Steam humidification for air handlers and ducts, with gas, electric and steam-to-steam generators.",
-      features: [
-        "Electric, gas-fired and steam-to-steam generators",
-        "Short-absorption dispersion panels",
-        "Clean steam for healthcare and labs"
-      ],
-      photo: null
-    }
+    { id: "steamovap-humid", category: "humid", shape: "humidifier" }
   ]
 });

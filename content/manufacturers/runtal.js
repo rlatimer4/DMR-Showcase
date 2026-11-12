@@ -1,10 +1,12 @@
 /*
  * Runtal — manufacturer and its product lines.
  *
- * Everything about this manufacturer is in this file. To stop showing it, set
- * active: false (or remove "runtal" from content/manifest.js). To retire one
- * product line, set active: false on that product or delete its block.
- * See CONTENT.md for the optional fields (specs, links, badge, photo).
+ * The words and photos for each product are in content/text/products/<id>.txt.
+ * This file lists which product lines exist:
+ *  - category: a product type from content/categories.js
+ *  - shape:    which 3D equipment model stands for it in the buildings (see CONTENT.md)
+ * To stop showing the manufacturer, remove "runtal" from content/manifest.js.
+ * To retire one product line, delete its line here.
  */
 DMR.registerManufacturer({
   id: "runtal",
@@ -15,18 +17,6 @@ DMR.registerManufacturer({
   website: null,
   blurb: "Hydronic, electric and steam panel radiators.",
   products: [
-    {
-      id: "runtal-radiator",
-      category: "hydronic",
-      name: "Panel Radiators",
-      summary: "Flat-tube steel radiators in wall panel, baseboard and vertical styles, with hydronic, electric and steam versions.",
-      features: [
-        "Wall panels, baseboards and vertical columns",
-        "Hydronic, electric and steam",
-        "Wide range of sizes and colors",
-        "Easy-to-clean flat surfaces"
-      ],
-      photo: null
-    }
+    { id: "runtal-radiator", category: "hydronic", shape: "radiator" }
   ]
 });

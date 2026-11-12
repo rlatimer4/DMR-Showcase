@@ -1,0 +1,46 @@
+# AIRPORT
+#
+# This file holds the words shown for this building. Edit them freely.
+# Keep the labels (the words before each colon) and the dashes at the start of list lines.
+# Lines that start with # are notes and are not shown on the site.
+
+Name: Airport
+
+Summary: Terminals are large, open and busy around the clock.
+
+Why a DMR package:
+# One line per advantage, written as  - Short heading: one sentence
+- Always open: Redundant fans keep the concourse conditioned 24 hours a day
+- Clean air beside the apron: Filtration and UV-C deal with jet fumes and crowds
+- Open doors, closed envelope: Air curtains hold conditioned air at baggage and curbside openings
+
+Challenges:
+- Very large open volumes
+- Doors that are always opening
+- Jet fumes and outdoor air quality
+
+# ---------------- Equipment locations ----------------
+# Each location starts with "Location:" and its code. Do not change the code.
+# Equipment lines read:  - product code | what it is in this building | why it suits (optional)
+# Product codes are the file names in content/text/products/.
+
+Location: airport-1
+Title: Terminal air handling
+Text: Custom air handlers with fan arrays serve the concourse and keep running through a fan failure.
+Equipment:
+- temtrol-ahu | Concourse air handler | Custom unit with carbon filtration for jet fumes
+- huntair-fanwall | Fan array | Redundant supply fans for 24-hour operation
+
+Location: airport-2
+Title: Concourse
+Text: Trench units along the glass and UV-C in the air stream keep gate areas comfortable.
+Equipment:
+- kampmann-trench | Gate lounge trench units | Fan-assisted heating and cooling along the glass
+- uvr-air | Air-stream UV-C | In-duct disinfection for crowded gate areas
+
+Location: airport-3
+Title: Baggage hall
+Text: Air curtains hold conditioned air at the doors and unit heaters cover the back-of-house.
+Equipment:
+- kampmann-curtain | Industrial air curtain | At the baggage belt openings
+- sterling-unit | Back-of-house unit heaters

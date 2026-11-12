@@ -1,0 +1,39 @@
+# RETAIL STRIP
+#
+# This file holds the words shown for this building. Edit them freely.
+# Keep the labels (the words before each colon) and the dashes at the start of list lines.
+# Lines that start with # are notes and are not shown on the site.
+
+Name: Retail Strip
+
+Summary: Each tenant pays its own utility bill and wants its own system.
+
+Why a DMR package:
+# One line per advantage, written as  - Short heading: one sentence
+- One system per tenant: Each storefront has its own separately metered unit
+- Doors that stay open: Air curtains keep conditioned air in the shop
+- Low upkeep: Packaged equipment with simple service
+
+Challenges:
+- Separate systems for each tenant
+- Frequent door openings
+- Low maintenance budgets
+
+# ---------------- Equipment locations ----------------
+# Each location starts with "Location:" and its code. Do not change the code.
+# Equipment lines read:  - product code | what it is in this building | why it suits (optional)
+# Product codes are the file names in content/text/products/.
+
+Location: retail-strip-1
+Title: Tenant rooftop units
+Text: Packaged rooftop units serve each storefront.
+Equipment:
+- mammoth-rtu | Tenant rooftop unit | One packaged unit per storefront
+
+Location: retail-strip-2
+Title: Storefront
+Text: Air curtains keep conditioned air in at the door. Mini-splits handle small shops and stock rooms.
+Equipment:
+- kampmann-curtain | Storefront air curtain
+- gree-mini | Stock room mini-split
+- reddi-line | Electric wall and duct heaters | Vestibule and restroom heat

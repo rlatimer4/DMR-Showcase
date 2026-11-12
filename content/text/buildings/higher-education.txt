@@ -1,0 +1,54 @@
+# HIGHER EDUCATION
+#
+# This file holds the words shown for this building. Edit them freely.
+# Keep the labels (the words before each colon) and the dashes at the start of list lines.
+# Lines that start with # are notes and are not shown on the site.
+
+Name: Higher Education
+
+Summary: Campus buildings mix classrooms, labs and offices under one roof.
+
+Why a DMR package:
+# One line per advantage, written as  - Short heading: one sentence
+- Lab energy recovered: Exhaust heat is reclaimed with no cross-contamination
+- One building, many uses: Labs, lecture halls and offices each get the right system
+- Fixes for ageing plant: Replacement coils and sectional air handlers for existing buildings
+
+Challenges:
+- Lab exhaust energy
+- Mixed uses in one building
+- Deferred maintenance
+
+# ---------------- Equipment locations ----------------
+# Each location starts with "Location:" and its code. Do not change the code.
+# Equipment lines read:  - product code | what it is in this building | why it suits (optional)
+# Product codes are the file names in content/text/products/.
+
+Location: higher-education-1
+Title: Lab exhaust energy recovery
+Text: Plate exchangers recover energy from lab exhaust while keeping it separate from the supply air.
+Equipment:
+- klingenburg-plate | Lab exhaust plate exchanger | Recovers energy with no cross-contamination
+- ventrol-ahu | Lab make-up air handler
+
+Location: higher-education-2
+Title: Teaching labs
+Text: Custom air handlers and fan arrays supply the high air change rates labs need.
+Equipment:
+- nortek-ahu | Lab air handler | 100% outdoor air
+- huntair-fanwall | Fan array
+- envirotec-vav | Lab airflow VAV terminals
+
+Location: higher-education-3
+Title: Lecture halls
+Text: Water-source heat pumps and fan coils keep lecture halls quiet.
+Equipment:
+- mammoth-wshp | Water-source heat pumps
+- envirotec-fancoil | Lecture hall fan coils
+
+Location: higher-education-4
+Title: Mechanical room
+Text: Freeze-resistant coils replace failed preheat coils in existing air handlers.
+Equipment:
+- cooney-coil | Freeze-resistant preheat coils
+- sterling-hydronic | Corridor finned tube

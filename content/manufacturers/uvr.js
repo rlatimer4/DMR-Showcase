@@ -1,10 +1,12 @@
 /*
  * UV Resources — manufacturer and its product lines.
  *
- * Everything about this manufacturer is in this file. To stop showing it, set
- * active: false (or remove "uvr" from content/manifest.js). To retire one
- * product line, set active: false on that product or delete its block.
- * See CONTENT.md for the optional fields (specs, links, badge, photo).
+ * The words and photos for each product are in content/text/products/<id>.txt.
+ * This file lists which product lines exist:
+ *  - category: a product type from content/categories.js
+ *  - shape:    which 3D equipment model stands for it in the buildings (see CONTENT.md)
+ * To stop showing the manufacturer, remove "uvr" from content/manifest.js.
+ * To retire one product line, delete its line here.
  */
 DMR.registerManufacturer({
   id: "uvr",
@@ -15,29 +17,7 @@ DMR.registerManufacturer({
   website: null,
   blurb: "UV-C fixtures for coil and air-stream disinfection.",
   products: [
-    {
-      id: "uvr-coil",
-      category: "iaq",
-      name: "UV-C Coil Disinfection",
-      summary: "UV-C fixtures that keep cooling coils and drain pans free of biological growth, which holds airflow and heat transfer at design levels.",
-      features: [
-        "Fixtures for new and existing air handlers",
-        "Reduces coil cleaning",
-        "Maintains coil pressure drop and capacity"
-      ],
-      photo: null
-    },
-    {
-      id: "uvr-air",
-      category: "iaq",
-      name: "Air-Stream & Upper-Room UV-C",
-      summary: "UV-C for disinfecting moving air in ducts and occupied rooms.",
-      features: [
-        "In-duct air-stream fixtures",
-        "Upper-room fixtures for occupied spaces",
-        "Sized to the airflow or room"
-      ],
-      photo: null
-    }
+    { id: "uvr-coil", category: "iaq", shape: "uv" },
+    { id: "uvr-air", category: "iaq", shape: "uv" }
   ]
 });

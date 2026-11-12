@@ -1,0 +1,39 @@
+# RELIGIOUS CENTER
+#
+# This file holds the words shown for this building. Edit them freely.
+# Keep the labels (the words before each colon) and the dashes at the start of list lines.
+# Lines that start with # are notes and are not shown on the site.
+
+Name: Religious Center
+
+Summary: A sanctuary is a tall, quiet room that is full a few hours a week.
+
+Why a DMR package:
+# One line per advantage, written as  - Short heading: one sentence
+- Silence: Radiant and trench heating have no fan noise in the sanctuary
+- Pay only when full: Ventilation ramps up for services and idles through the week
+- Clear roofline: Ground-mounted equipment keeps the architecture clean
+
+Challenges:
+- Very low noise
+- Tall spaces
+- Intermittent occupancy
+
+# ---------------- Equipment locations ----------------
+# Each location starts with "Location:" and its code. Do not change the code.
+# Equipment lines read:  - product code | what it is in this building | why it suits (optional)
+# Product codes are the file names in content/text/products/.
+
+Location: religious-center-1
+Title: Sanctuary air
+Text: Energy recovery ventilators bring in outdoor air for a full congregation at low operating cost.
+Equipment:
+- venmar-erv | Sanctuary ventilation unit | Brings in outdoor air only when the room is full
+- mammoth-rtu | Ground-mounted packaged unit | Keeps the roofline clear
+
+Location: religious-center-2
+Title: Sanctuary
+Text: Panel radiators and trench units heat quietly, with no fan noise in the room.
+Equipment:
+- runtal-radiator | Panel radiators | Silent perimeter heat
+- kampmann-trench | Aisle trench heaters

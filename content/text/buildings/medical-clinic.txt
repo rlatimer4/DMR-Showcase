@@ -1,0 +1,47 @@
+# MEDICAL CLINIC
+#
+# This file holds the words shown for this building. Edit them freely.
+# Keep the labels (the words before each colon) and the dashes at the start of list lines.
+# Lines that start with # are notes and are not shown on the site.
+
+Name: Medical Clinic
+
+Summary: Clinics need hospital-grade air quality on an office-building budget.
+
+Why a DMR package:
+# One line per advantage, written as  - Short heading: one sentence
+- Hospital-grade air on a clinic budget: Packaged equipment with high-efficiency filtration and UV-C
+- Quiet exam rooms: Terminal units selected for low sound
+- Fits a small building: Rooftop equipment frees up floor space
+
+Challenges:
+- Infection control in a small building
+- Quiet exam rooms
+- Limited mechanical space
+
+# ---------------- Equipment locations ----------------
+# Each location starts with "Location:" and its code. Do not change the code.
+# Equipment lines read:  - product code | what it is in this building | why it suits (optional)
+# Product codes are the file names in content/text/products/.
+
+Location: medical-clinic-1
+Title: Rooftop unit with UV-C
+Text: A packaged rooftop unit with UV-C keeps coils clean and air quality high.
+Equipment:
+- mammoth-rtu | Clinic rooftop unit | Packaged unit with high-efficiency filtration
+- uvr-coil | UV-C coil fixture
+
+Location: medical-clinic-2
+Title: Exam rooms
+Text: VAV terminals with reheat hold each exam room at its setpoint.
+Equipment:
+- envirotec-vav | Exam room VAV box with reheat
+- runtal-radiator | Panel radiator
+
+Location: medical-clinic-3
+Title: Procedure room
+Text: Steam humidifiers and upper-room UV-C support minor procedures.
+Equipment:
+- steamovap-humid | Procedure room humidifier
+- uvr-air | Upper-room UV-C
+- gree-mini | Imaging equipment room mini-split

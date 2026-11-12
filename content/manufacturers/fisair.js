@@ -1,10 +1,12 @@
 /*
  * Fisair — manufacturer and its product lines.
  *
- * Everything about this manufacturer is in this file. To stop showing it, set
- * active: false (or remove "fisair" from content/manifest.js). To retire one
- * product line, set active: false on that product or delete its block.
- * See CONTENT.md for the optional fields (specs, links, badge, photo).
+ * The words and photos for each product are in content/text/products/<id>.txt.
+ * This file lists which product lines exist:
+ *  - category: a product type from content/categories.js
+ *  - shape:    which 3D equipment model stands for it in the buildings (see CONTENT.md)
+ * To stop showing the manufacturer, remove "fisair" from content/manifest.js.
+ * To retire one product line, delete its line here.
  */
 DMR.registerManufacturer({
   id: "fisair",
@@ -15,29 +17,7 @@ DMR.registerManufacturer({
   website: null,
   blurb: "Humidifiers and desiccant dehumidifiers.",
   products: [
-    {
-      id: "fisair-humid",
-      category: "humidity",
-      name: "Humidifiers",
-      summary: "Isothermal (steam) and adiabatic (evaporative) humidifiers for comfort and process applications.",
-      features: [
-        "Steam and evaporative technologies",
-        "Duct, air handler and direct-room dispersion",
-        "Adiabatic options with low energy use"
-      ],
-      photo: null
-    },
-    {
-      id: "fisair-dehum",
-      category: "humidity",
-      name: "Desiccant Dehumidifiers",
-      summary: "Desiccant rotor dehumidifiers for spaces that need low humidity, including storage and process rooms.",
-      features: [
-        "Holds low dew points that cooling coils cannot reach",
-        "Standalone and air-handler-integrated units",
-        "Electric, steam and gas reactivation"
-      ],
-      photo: null
-    }
+    { id: "fisair-humid", category: "humid", shape: "humidifier" },
+    { id: "fisair-dehum", category: "dehum", shape: "dehumidifier" }
   ]
 });

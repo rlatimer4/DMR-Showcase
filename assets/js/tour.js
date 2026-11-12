@@ -14,42 +14,47 @@
   buildings.forEach(function (b) {
     b.stops.forEach(function (s, i) { s.building = b; s.n = i + 1; s.seq = stops.length; stops.push(s); });
   });
-  document.getElementById("stopTotal").textContent = stops.length;
-  document.getElementById("bldTotal").textContent = buildings.length;
 
   var cur = { use: null, building: null, stop: null };
   function useName(id) { return D.useTypes.filter(function (u) { return u.id === id; })[0].name; }
 
-  function chip(id) {
-    var p = L.products[id];
-    return '<li><button type="button" class="p-chip" data-product="' + id + '"><strong>' + L.brands[p.brand].name + "</strong><span>" + p.name + "</span></button></li>";
+  // One piece of equipment at a stop: what it is here, who makes it, why it suits.
+  function chip(e) {
+    var p = L.products[e.product];
+    return '<li><button type="button" class="p-chip" data-product="' + e.product + '">' +
+      "<span class='role'>" + (e.role || p.name) + "</span>" +
+      "<strong>" + L.brands[p.brand].name + " · " + p.name + "</strong>" +
+      (e.note ? "<em>" + e.note + "</em>" : "") + "</button></li>";
   }
 
   function render() {
     var b = cur.building, s = cur.stop, h;
     if (s) {
       h = '<button type="button" class="back" data-bld="' + b.id + '">' + b.name + "</button>" +
-        '<p class="panel-step">Stop ' + s.n + " of " + b.stops.length + "</p>" +
         "<h3>" + s.title + "</h3><p>" + s.text + "</p>" +
-        '<h4>Equipment at this stop</h4><ul class="p-chips">' + s.products.map(chip).join("") + "</ul>" +
+        '<h4>Equipment here</h4><ul class="p-chips">' + s.equipment.map(chip).join("") + "</ul>" +
         '<div class="panel-nav"><button type="button" class="btn btn-line" data-step="-1"' + (s.seq === 0 ? " disabled" : "") + ">Previous</button>" +
-        '<button type="button" class="btn btn-primary" data-step="1">' + (s.seq === stops.length - 1 ? "Finish tour" : "Next stop") + "</button></div>";
+        '<button type="button" class="btn btn-primary" data-step="1">' + (s.seq === stops.length - 1 ? "Finish tour" : "Next") + "</button></div>";
     } else if (b) {
       h = '<button type="button" class="back" data-use="' + b.use + '">' + useName(b.use) + " buildings</button>" +
-        '<p class="panel-step">' + useName(b.use) + "</p><h3>" + b.name + "</h3><p>" + b.intro + "</p>" +
-        "<h4>Building challenges</h4><ul class='ticks'>" + b.challenges.map(function (c) { return "<li>" + c + "</li>"; }).join("") + "</ul>" +
-        "<h4>Equipment locations</h4>" +
+        "<h3>" + b.name + "</h3><p>" + b.intro + "</p>" +
+        (b.advantages.length ? "<h4>What a DMR package brings</h4><ul class='adv'>" + b.advantages.map(function (a) {
+          return "<li>" + (a.title ? "<strong>" + a.title + "</strong>" : "") + "<span>" + a.text + "</span></li>";
+        }).join("") + "</ul>" : "") +
+        (b.challenges.length ? "<details><summary>Typical challenges in this building type</summary><ul class='ticks'>" + b.challenges.map(function (c) { return "<li>" + c + "</li>"; }).join("") + "</ul></details>" : "") +
+        "<h4>Where the equipment goes</h4>" +
         '<ol class="stop-list">' + b.stops.map(function (x) {
-          return '<li><button type="button" data-goto="' + x.id + '"><span class="num">' + x.n + "</span><span><strong>" + x.title + "</strong><em>" + x.products.length + (x.products.length === 1 ? " product" : " products") + "</em></span></button></li>";
+          return '<li><button type="button" data-goto="' + x.id + '"><span class="num">' + x.n + "</span><span><strong>" + x.title + "</strong><em>" +
+            x.equipment.map(function (e) { return e.role || L.products[e.product].name; }).join(" · ") + "</em></span></button></li>";
         }).join("") + "</ol>" +
         '<button type="button" class="link" data-catalog="' + b.id + '">See all products for this building type</button>';
     } else {
       var list = buildings.filter(function (x) { return !cur.use || x.use === cur.use; });
-      h = '<p class="panel-step">' + list.length + " building types</p><h3>" + (cur.use ? useName(cur.use) : "The DMR world") + "</h3>" +
-        "<p>Select a building to open it up and see where the equipment goes. Blue ducts carry supply air and amber ducts carry return air.</p>" +
+      h = "<h3>" + (cur.use ? useName(cur.use) + " buildings" : "The DMR world") + "</h3>" +
+        "<p>Select a building to see what a DMR equipment package brings to it, then open it up to see where each piece goes.</p>" +
         '<button type="button" class="btn btn-primary" data-goto="' + (list[0] ? list[0].stops[0].id : "") + '">Start guided tour</button>' +
         '<ul class="bld-list">' + list.map(function (x) {
-          return '<li><button type="button" data-bld="' + x.id + '"><strong>' + x.name + "</strong><em>" + (cur.use ? x.stops.length + " stops" : useName(x.use)) + "</em></button></li>";
+          return '<li><button type="button" data-bld="' + x.id + '"><strong>' + x.name + "</strong>" + (cur.use ? "" : "<em>" + useName(x.use) + "</em>") + "</button></li>";
         }).join("") + "</ul>";
     }
     panel.innerHTML = h;
@@ -76,8 +81,7 @@
   D.tourState = function () { return cur; };
 
   tabs.innerHTML = '<button type="button" data-use="">Whole world</button>' + D.useTypes.map(function (u) {
-    var n = buildings.filter(function (b) { return b.use === u.id; }).length;
-    return n ? '<button type="button" data-use="' + u.id + '">' + u.name + ' <span class="tab-n">' + n + "</span></button>" : "";
+    return buildings.some(function (b) { return b.use === u.id; }) ? '<button type="button" data-use="' + u.id + '">' + u.name + "</button>" : "";
   }).join("");
   tabs.addEventListener("click", function (e) {
     var t = e.target.closest("button");

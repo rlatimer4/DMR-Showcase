@@ -1,10 +1,12 @@
 /*
  * Enviro-Tec — manufacturer and its product lines.
  *
- * Everything about this manufacturer is in this file. To stop showing it, set
- * active: false (or remove "envirotec" from content/manifest.js). To retire one
- * product line, set active: false on that product or delete its block.
- * See CONTENT.md for the optional fields (specs, links, badge, photo).
+ * The words and photos for each product are in content/text/products/<id>.txt.
+ * This file lists which product lines exist:
+ *  - category: a product type from content/categories.js
+ *  - shape:    which 3D equipment model stands for it in the buildings (see CONTENT.md)
+ * To stop showing the manufacturer, remove "envirotec" from content/manifest.js.
+ * To retire one product line, delete its line here.
  */
 DMR.registerManufacturer({
   id: "envirotec",
@@ -15,29 +17,7 @@ DMR.registerManufacturer({
   website: null,
   blurb: "Fan coils, blower coils and VAV terminal units.",
   products: [
-    {
-      id: "envirotec-fancoil",
-      category: "terminal",
-      name: "Fan Coil & Blower Coil Units",
-      summary: "Room-level heating and cooling units in horizontal, vertical and high-rise stack configurations.",
-      features: [
-        "Horizontal, vertical and vertical-stack models",
-        "Two-pipe and four-pipe coils",
-        "Blower coils for higher static applications"
-      ],
-      photo: null
-    },
-    {
-      id: "envirotec-vav",
-      category: "terminal",
-      name: "VAV Terminal Units",
-      summary: "Single-duct and fan-powered terminals that vary airflow to each zone.",
-      features: [
-        "Single-duct, series and parallel fan-powered boxes",
-        "Hot water and electric reheat",
-        "Factory-mounted controls options"
-      ],
-      photo: null
-    }
+    { id: "envirotec-fancoil", category: "terminal", shape: "fancoil" },
+    { id: "envirotec-vav", category: "terminal", shape: "vav" }
   ]
 });

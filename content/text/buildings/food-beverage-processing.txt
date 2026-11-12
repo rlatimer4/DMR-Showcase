@@ -1,0 +1,40 @@
+# FOOD & BEVERAGE PROCESSING
+#
+# This file holds the words shown for this building. Edit them freely.
+# Keep the labels (the words before each colon) and the dashes at the start of list lines.
+# Lines that start with # are notes and are not shown on the site.
+
+Name: Food & Beverage Processing
+
+Summary: Processing rooms are washed down daily and must stay dry and clean.
+
+Why a DMR package:
+# One line per advantage, written as  - Short heading: one sentence
+- Dry after wash-down: Desiccant drying gets rooms back in production sooner
+- Sanitary construction: Stainless interiors, sloped drain pans and UV-C
+- Cold rooms stay cold: Air curtains separate temperature zones
+
+Challenges:
+- Wash-down humidity
+- Sanitation
+- Temperature-controlled process rooms
+
+# ---------------- Equipment locations ----------------
+# Each location starts with "Location:" and its code. Do not change the code.
+# Equipment lines read:  - product code | what it is in this building | why it suits (optional)
+# Product codes are the file names in content/text/products/.
+
+Location: food-beverage-processing-1
+Title: Process air handling
+Text: Custom air handlers with UV-C keep coils clean in sanitary applications.
+Equipment:
+- nortek-ahu | Wash-down air handler | Stainless interior with sloped drain pans
+- uvr-coil | UV-C coil fixture
+
+Location: food-beverage-processing-2
+Title: Processing room
+Text: Desiccant dehumidifiers dry the room after wash-down and prevent condensation.
+Equipment:
+- fisair-dehum | Processing room dehumidifier
+- novelaire-desiccant | Post-wash-down drying system
+- kampmann-curtain | Cold-room air curtain

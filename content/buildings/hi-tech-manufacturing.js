@@ -1,15 +1,16 @@
 /*
- * Hi-Tech Manufacturing — building model.
+ * Hi-Tech Manufacturing — building model (shape and layout only).
  *
- * This file is one self-contained building. Edit it without touching the others:
- *  - size:   overall dimensions in metres; the shell, floors and ducts are generated from it
- *  - facade, walls: the look of the outside (styles are listed in CONTENT.md)
- *  - stops:  the numbered points visitors select. `at.floor` is "roof", "yard"
- *            (a unit on the ground in front) or a floor number (0 = ground);
- *            `at.x` is the position across the width, 0 to 1
- *  - model:  optional path to a .glb file that replaces the generated shell
- *  - build:  the shapes that make this building recognizable (kit helpers are in CONTENT.md)
- * Products listed in a stop that are no longer offered are skipped automatically.
+ * The words for this building are in content/text/buildings/hi-tech-manufacturing.txt.
+ * This file controls the 3D model:
+ *  - size:    overall dimensions in metres
+ *  - facade, walls: the look of the outside
+ *  - stops:   where each equipment location sits. `at.floor` is "roof", "yard"
+ *             or a floor number (0 = ground); `at.x` is the position across
+ *             the width, 0 to 1; `space` picks how the room is furnished
+ *  - model:   optional path to a .glb file that replaces the generated shell
+ *  - build:   shapes that make the building recognizable
+ * CONTENT.md lists the facade styles, space types and kit helpers.
  */
 DMR.registerBuilding({
   id: "hi-tech-manufacturing",
@@ -19,18 +20,10 @@ DMR.registerBuilding({
   model: null,
   facade: { style: "bands", color: "#f4f6f8" },
   walls: "#f4f6f8",
-  intro: "Semiconductor and electronics production runs in cleanrooms that never shut down.",
-  challenges: ["Cleanroom recirculation volumes", "Tight temperature and humidity", "Continuous operation"],
   stops: [
-    { id: "hi-tech-manufacturing-1", at: { floor: "roof", x: 0.35 }, title: "Chilled water plant", room: "",
-      text: "A packaged chiller plant supplies process and comfort cooling from one enclosure.",
-      products: ["governair-chiller", "fuji-vfd"] },
-    { id: "hi-tech-manufacturing-2", at: { floor: 1, x: 0.5 }, title: "Cleanroom", room: "Cleanroom",
-      text: "Fan arrays and cleanroom air systems recirculate filtered air continuously.",
-      products: ["huntair-cleanroom", "huntair-fanwall"] },
-    { id: "hi-tech-manufacturing-3", at: { floor: 0, x: 0.25 }, title: "Make-up air", room: "MAU",
-      text: "Make-up air units with humidifiers supply the cleanroom with conditioned outdoor air.",
-      products: ["nortek-ahu", "steamovap-humid", "cooney-coil"] }
+    { id: "hi-tech-manufacturing-1", at: { floor: "roof", x: 0.35 }, space: "plant" },
+    { id: "hi-tech-manufacturing-2", at: { floor: 1, x: 0.5 }, space: "cleanroom" },
+    { id: "hi-tech-manufacturing-3", at: { floor: 0, x: 0.25 }, space: "mechanical" }
   ],
   // Shapes that make this building recognizable. See CONTENT.md for the kit.
   build: function (kit, d) {

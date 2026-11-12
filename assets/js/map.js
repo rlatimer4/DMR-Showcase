@@ -72,7 +72,6 @@
   }
   function drawList() {
     var v = visible();
-    document.getElementById("pinCount").textContent = v.length + (v.length === 1 ? " installation" : " installations");
     listEl.innerHTML = v.length ? v.map(function (i) {
       return '<li><button type="button" data-install="' + i.id + '" aria-pressed="' + (selected === i.id) + '">' +
         "<strong>" + esc(i.name) + "</strong><em>" + esc(i.city) + (i.year ? " · " + esc(i.year) : "") + "</em>" +

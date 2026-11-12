@@ -10,6 +10,7 @@
  */
 import * as THREE from "three";
 import { OrbitControls } from "three/addons/controls/OrbitControls.js";
+import { makeProps } from "./props3d.js";
 
 const D = window.DMR;
 const stage = document.querySelector(".tour-stage");
@@ -37,8 +38,11 @@ function init() {
   sun.position.set(-160, 260, 200);
   sun.castShadow = true;
   sun.shadow.mapSize.set(4096, 4096);
-  const half = layout.width / 2 + 40;
-  Object.assign(sun.shadow.camera, { left: -half, right: half, top: 160, bottom: -140, near: 10, far: 900 });
+  const half = layout.width / 2 + 60;
+  Object.assign(sun.shadow.camera, { left: -half, right: half, top: layout.depth * 0.7 + 60, bottom: -layout.depth * 0.5 - 40, near: 10, far: 1200 });
+  sun.target.position.set(layout.x, 0, layout.z);
+  scene.add(sun.target);
+  sun.position.set(layout.x - 160, 300, layout.z + 220);
   sun.shadow.bias = -0.0005;
   scene.add(sun);
 
@@ -67,12 +71,13 @@ function init() {
   ground.rotation.x = -Math.PI / 2;
   ground.receiveShadow = true;
   scene.add(ground);
-  const cell = D.world.cell, rows = Math.round(layout.depth / cell.depth);
-  for (let r = 0; r <= rows; r++) {
-    const z = cell.depth / 2 - r * cell.depth + (r === 0 ? 2 : 0);
-    box(scene, layout.width + 120, 0.06, 8, 0, 0.03, z, M.road, false);
-    for (let x = -layout.width / 2 - 50; x <= layout.width / 2 + 50; x += 12) box(scene, 5, 0.08, 0.3, x, 0.07, z, M.mark, false);
-  }
+  const cell = D.world.cell;
+  // A street in front of every row of buildings.
+  [...new Set(D.buildings.map(b => b.pos.z))].forEach(z0 => {
+    const z = z0 + cell.depth / 2;
+    box(scene, layout.width + 160, 0.06, 8, layout.x, 0.03, z, M.road, false);
+    for (let x = layout.x - layout.width / 2 - 70; x <= layout.x + layout.width / 2 + 70; x += 12) box(scene, 5, 0.08, 0.3, x, 0.07, z, M.mark, false);
+  });
   function tree(x, z, s) {
     mesh(scene, new THREE.CylinderGeometry(0.25 * s, 0.3 * s, 1.6 * s, 6), M.trunk, x, 0.8 * s, z);
     mesh(scene, new THREE.ConeGeometry(1.5 * s, 4 * s, 8), M.tree, x, 3.4 * s, z);
@@ -84,7 +89,7 @@ function init() {
   Object.keys(layout.districts).forEach(id => {
     const d = layout.districts[id], u = D.useTypes.find(x => x.id === id);
     const s = textSprite(u.name + " district", u.color, 44);
-    s.position.set(d.x, 1.5, cell.depth / 2 + 12);
+    s.position.set(d.x, 4.5, d.front + cell.depth / 2 + 7);
     s.scale.set(64, 8, 1);
     scene.add(s);
     districtSigns.push(s);
@@ -194,6 +199,7 @@ function init() {
   /* ---------- building models ---------- */
 
   const models = {}, spots = [], hits = [], fans = [];
+  let P;
 
   const hexMats = {};
   function material(name) {
@@ -201,6 +207,8 @@ function init() {
     if (/^#/.test(name || "")) return hexMats[name] || (hexMats[name] = mat(new THREE.Color(name)));
     return M.wall;
   }
+
+  P = makeProps({ THREE, box, mesh, material });
 
   // Generated shell: floors, walls, partitions, ducts and a front wall that fades away.
   function generateShell(b, shell, m) {
@@ -263,9 +271,10 @@ function init() {
     // Name board at the kerb, so every building is labelled even without custom shapes.
     if (b.sign !== false) {
       const sx = -w / 2 + 4.5, sz = dp / 2 + 3.4;
-      kit.box(8.4, 0.5, 0.7, sx, 0.3, sz, "dark");
-      kit.box(8.2, 1.9, 0.3, sx, 1.5, sz, "dark");
-      kit.sign(b.name.toUpperCase(), 8, 1.7, sx, 1.5, sz + 0.2, "#282c39", "#ffffff");
+      // It hides when the building opens so it never blocks a ground-floor room.
+      kit.front(kit.box(8.4, 0.5, 0.7, sx, 0.3, sz, "dark"));
+      kit.front(kit.box(8.2, 1.9, 0.3, sx, 1.5, sz, "dark"));
+      kit.front(kit.sign(b.name.toUpperCase(), 8, 1.7, sx, 1.5, sz + 0.2, "#282c39", "#ffffff"));
     }
     if (typeof b.build === "function") b.build(kit, b.size);
   }
@@ -308,52 +317,44 @@ function init() {
 
     b.stops.forEach(s => {
       const x = -w / 2 + s.at.x * w;
+      const shapes = s.equipment.map(e => D.lookup.products[e.product].shape || "box");
+      const outdoor = s.at.floor === "roof" || s.at.floor === "yard";
+      // Lay the stop's equipment out side by side, shrinking it if it would not fit.
+      const layout = (centre, room) => {
+        const widths = shapes.map(sh => P.footprint(sh, outdoor)), total = widths.reduce((a, v) => a + v, 0) || 1;
+        const k = Math.max(0.45, Math.min(1, room / total));
+        let at = centre - total * k / 2;
+        return shapes.map((sh, n) => { at += widths[n] * k; return { shape: sh, x: at - widths[n] * k / 2, k }; });
+      };
       let pos;
-      if (s.at.floor === "yard") {
-        // Ground-mounted unit in front of the building, for buildings with shaped roofs.
-        const z = dp / 2 + 8.5;
+      if (outdoor) {
+        const onRoof = s.at.floor === "roof", y = onRoof ? h + 0.3 : 0.12, z = onRoof ? -1 : dp / 2 + 8.5;
+        const room = Math.min(13, w - 2), cx = Math.max(-w / 2 + room / 2 + 0.5, Math.min(w / 2 - room / 2 - 0.5, x));
         if (!b.model) {
-          box(shell, 7, 2.8, 4, x, 1.6, z, M.unit);
-          box(shell, 7.1, 0.5, 4.1, x, 0.5, z, M.trim, false);
-          [-1.8, 1.8].forEach(dx => {
-            const f = mesh(shell, new THREE.CylinderGeometry(1.1, 1.1, 0.3, 20), M.dark, x + dx, 3.15, z, false);
-            const blade = new THREE.Mesh(new THREE.BoxGeometry(1.9, 0.1, 0.3), M.unit);
-            blade.position.y = 0.2; f.add(blade);
-            const blade2 = blade.clone(); blade2.rotation.y = Math.PI / 2; f.add(blade2);
-            fans.push(f);
-          });
-          box(shell, 0.9, 0.9, 6.5, x + 1.5, 0.9, z - 5, M.supply, false);
-          box(shell, 0.8, 0.8, 6.5, x - 1.5, 0.9, z - 5, M.return, false);
+          layout(cx, room).forEach(u => P.equip(shell, u.shape, { x: u.x, floorY: y, z, outdoor: true, scale: u.k }));
+          if (onRoof) {
+            box(shell, 1.1, h, 1.1, cx + 2.5, h / 2 + 0.3, -dp / 2 + 1.2, M.supply, false);
+            box(shell, 0.9, h, 0.9, cx - 2.5, h / 2 + 0.3, -dp / 2 + 1.2, M.return, false);
+          } else {
+            box(shell, 0.9, 0.9, 6.5, cx + 1.5, 0.9, z - 5, M.supply, false);
+            box(shell, 0.8, 0.8, 6.5, cx - 1.5, 0.9, z - 5, M.return, false);
+          }
         }
-        pos = new THREE.Vector3(x, 6, z);
-      } else if (s.at.floor === "roof") {
-        if (!b.model) {
-          box(shell, 8, 3, 5, x, h + 1.8, -1, M.unit);
-          box(shell, 8.1, 0.5, 5.1, x, h + 0.75, -1, M.trim, false);
-          [-2.2, 2.2].forEach(dx => {
-            const f = mesh(shell, new THREE.CylinderGeometry(1.25, 1.25, 0.3, 20), M.dark, x + dx, h + 3.45, -1, false);
-            const blade = new THREE.Mesh(new THREE.BoxGeometry(2.2, 0.1, 0.35), M.unit);
-            blade.position.y = 0.2; f.add(blade);
-            const blade2 = blade.clone(); blade2.rotation.y = Math.PI / 2; f.add(blade2);
-            fans.push(f);
-          });
-          box(shell, 1.1, h, 1.1, x + 2.5, h / 2 + 0.3, -dp / 2 + 1.2, M.supply, false);
-          box(shell, 0.9, h, 0.9, x - 2.5, h / 2 + 0.3, -dp / 2 + 1.2, M.return, false);
-        }
-        pos = new THREE.Vector3(x, h + 6.2, -1);
+        pos = new THREE.Vector3(cx, y + 5.8, z);
+        s.frame = { x: cx, y: y + 2, z, w: room + 5, h: 9, outdoor: true };
       } else {
-        const y0 = s.at.floor * fh, cw = w / bays, col = Math.min(bays - 1, Math.floor(s.at.x * bays));
+        const y0 = s.at.floor * fh, cw = w / bays, col = Math.min(bays - 1, Math.floor(s.at.x * bays)), bx = -w / 2 + (col + 0.5) * cw;
         if (!b.model) {
-          const eh = Math.min(2.2, fh * 0.35);
-          box(shell, 2.6, eh, 1.6, x, y0 + 0.3 + eh / 2, dp * 0.12, M.unit);
-          box(shell, 2.7, 0.3, 1.7, x, y0 + 0.55, dp * 0.12, M.trim, false);
+          P.furnish(shell, s.space, { cx: bx, y: y0, w: cw, h: fh, dp });
+          layout(bx, cw - 1.5).forEach(u => P.equip(shell, u.shape, { x: u.x, floorY: y0 + 0.3, ceilY: y0 + fh - 0.75, dp, scale: u.k }));
         }
         const room = new THREE.Mesh(new THREE.BoxGeometry(cw - 0.5, fh - 0.5, dp - 0.8),
-          new THREE.MeshBasicMaterial({ color: 0xffa500, transparent: true, opacity: 0.28, depthWrite: false }));
-        room.position.set(-w / 2 + (col + 0.5) * cw, y0 + fh / 2 + 0.15, 0);
+          new THREE.MeshBasicMaterial({ color: 0xffa500, transparent: true, opacity: 0.07, depthWrite: false }));
+        room.position.set(bx, y0 + fh / 2 + 0.15, 0);
         room.visible = false; room.renderOrder = 3;
         g.add(room); m.rooms[s.id] = room;
-        pos = new THREE.Vector3(x, y0 + fh * 0.62, dp * 0.34);
+        pos = new THREE.Vector3(bx - cw / 2 + 1.3, y0 + fh - 1.1, dp / 2 + 0.6);
+        s.frame = { x: bx, y: y0 + fh / 2, z: 0, w: cw + 3, h: fh + 2.5 };
       }
       const sp = new THREE.Sprite(new THREE.SpriteMaterial({ map: dotTexture(s.n, false), depthTest: false, transparent: true }));
       sp.position.copy(pos);
@@ -367,16 +368,25 @@ function init() {
   /* ---------- camera ---------- */
 
   let view = { use: null, building: null, stop: null };
+  // A light that moves into whichever room is being looked at.
+  const roomLight = new THREE.PointLight(0xffffff, 0, 60, 1.2);
+  scene.add(roomLight);
   const fromPos = new THREE.Vector3(), fromTgt = new THREE.Vector3(), toPos = new THREE.Vector3(), toTgt = new THREE.Vector3();
   let t0 = -1;
   function shot(v) {
     const tan = Math.tan(THREE.MathUtils.degToRad(camera.fov / 2));
     const fit = (wNeed, hNeed) => Math.max(hNeed / 2 / tan, wNeed / 2 / tan / camera.aspect);
+    if (v.stop && v.stop.frame) {
+      // Close-up of one room or one group of outdoor equipment.
+      const f = v.stop.frame, p = v.building.pos, d = fit(f.w, f.h) + (f.outdoor ? 3 : v.building.size.depth / 2);
+      const up = f.outdoor ? 0.34 : 0.16;
+      return [new THREE.Vector3(p.x + f.x + d * 0.3, f.y + d * up, p.z + f.z + d * 0.94), new THREE.Vector3(p.x + f.x, f.y, p.z + f.z)];
+    }
     if (v.building) {
       const s = v.building.size, p = v.building.pos, d = fit(s.width + 16, s.height + (s.extraHeight || 0) + 18) + s.depth / 2 + 6;
       return [new THREE.Vector3(p.x + d * 0.34, s.height / 2 + 2 + d * 0.2, p.z + d * 0.92), new THREE.Vector3(p.x, s.height / 2 + 2, p.z)];
     }
-    const a = v.use ? layout.districts[v.use] : { x: 0, z: -(layout.depth - cell.depth) / 2, width: layout.width, depth: layout.depth };
+    const a = v.use ? layout.districts[v.use] : { x: layout.x, z: layout.z, width: layout.width, depth: layout.depth };
     // The near edge of the area is closer to the camera than its centre, so allow extra width.
     const d = fit(a.width * 1.14 + 24, a.depth * 0.55 + 50);
     return [new THREE.Vector3(a.x, d * 0.42, a.z + cell.depth * 0.3 + d * 0.9), new THREE.Vector3(a.x, 6, a.z + cell.depth * 0.3)];
@@ -387,15 +397,21 @@ function init() {
     fromPos.copy(camera.position); fromTgt.copy(controls.target); toPos.copy(p); toTgt.copy(t);
     if (instant || reduce) { camera.position.copy(p); controls.target.copy(t); t0 = -1; } else t0 = performance.now();
     const fb = view.building;
+    if (view.stop && view.stop.frame && !view.stop.frame.outdoor) {
+      const f = view.stop.frame;
+      roomLight.position.set(fb.pos.x + f.x, f.y + f.h * 0.2, fb.pos.z + fb.size.depth * 0.3);
+      roomLight.intensity = 16;
+    } else roomLight.intensity = 0;
     districtSigns.forEach(x => { x.visible = !fb; });
     D.buildings.forEach(b => {
       const m = models[b.id], mine = b === fb;
       m.openTarget = mine ? 1 : 0;
       // Buildings standing between the camera and the open building step aside.
       m.g.visible = !fb || mine || b.pos.z <= fb.pos.z + 1;
-      m.label.visible = !fb && !!view.use && b.use === view.use;
+      m.label.visible = !fb && (!view.use || b.use === view.use);
+      m.label.scale.set(view.use ? 30 : 38, view.use ? 3.75 : 4.75, 1);
       m.spots.forEach(sp => {
-        sp.visible = mine;
+        sp.visible = mine && !(view.stop && sp.userData.stop === view.stop.id);
         sp.material.map = view.stop && sp.userData.stop === view.stop.id ? sp.userData.on : sp.userData.off;
       });
       Object.keys(m.rooms).forEach(id => { m.rooms[id].visible = mine && !!view.stop && view.stop.id === id; });
@@ -465,9 +481,8 @@ function init() {
         o.visible = m.open < 0.97;
       });
     });
-    const k = reduce ? 3.4 : null;
     if (!reduce) fans.forEach(f => { f.rotation.y += dt * 6; });
-    spots.forEach(sp => { if (sp.visible) { const s = k || 3.4 + Math.sin(now / 420 + sp.userData.phase) * 0.25; sp.scale.set(s, s, 1); } });
+    spots.forEach(sp => { if (sp.visible) { const base = view.stop ? 1.1 : 3; const s = reduce ? base : base + Math.sin(now / 420 + sp.userData.phase) * base * 0.07; sp.scale.set(s, s, 1); } });
     controls.update();
     renderer.render(scene, camera);
   }

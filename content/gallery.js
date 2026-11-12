@@ -12,7 +12,7 @@ DMR.gallery = [
   { id: "g3", caption: "Operating room ceiling", product: "huntair-cleansuite", photo: null },
   { id: "g4", caption: "Packaged chiller plant delivery", product: "governair-chiller", photo: null },
   { id: "g5", caption: "Data hall cooling", product: "nortek-dc", photo: null, size: "wide" },
-  { id: "g6", caption: "Chilled beams in a classroom", product: "nuclimate-beam", photo: null },
+  { id: "g6", caption: "Fan coils in a classroom", product: "envirotec-fancoil", photo: null },
   { id: "g7", caption: "Lobby trench heating", product: "kampmann-trench", photo: null },
   { id: "g8", caption: "Make-up air unit, warehouse", product: "rapid-mua", photo: null }
 ];

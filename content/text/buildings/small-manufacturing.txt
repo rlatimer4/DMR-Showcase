@@ -1,0 +1,38 @@
+# SMALL MANUFACTURING
+#
+# This file holds the words shown for this building. Edit them freely.
+# Keep the labels (the words before each colon) and the dashes at the start of list lines.
+# Lines that start with # are notes and are not shown on the site.
+
+Name: Small Manufacturing
+
+Summary: Small plants need dependable heat and make-up air without a maintenance staff.
+
+Why a DMR package:
+# One line per advantage, written as  - Short heading: one sentence
+- Replaces what exhaust removes: Make-up air keeps doors from whistling and heaters from backdrafting
+- Rugged and simple: Equipment a small shop can run without a maintenance staff
+- Safe in hazardous areas: Heaters rated for paint and solvent rooms
+
+Challenges:
+- Make-up air for process exhaust
+- Simple, rugged equipment
+- Heating a tall space
+
+# ---------------- Equipment locations ----------------
+# Each location starts with "Location:" and its code. Do not change the code.
+# Equipment lines read:  - product code | what it is in this building | why it suits (optional)
+# Product codes are the file names in content/text/products/.
+
+Location: small-manufacturing-1
+Title: Make-up air
+Text: Direct-fired units replace the air that process exhaust removes.
+Equipment:
+- rapid-mua | Direct-fired make-up air unit
+
+Location: small-manufacturing-2
+Title: Shop floor
+Text: Unit heaters and electric heaters cover the shop floor.
+Equipment:
+- sterling-unit | Gas unit heaters
+- reddi-line | Hazardous-location electric heater | For paint and solvent areas

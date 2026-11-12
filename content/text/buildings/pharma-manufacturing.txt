@@ -1,0 +1,48 @@
+# PHARMA MANUFACTURING
+#
+# This file holds the words shown for this building. Edit them freely.
+# Keep the labels (the words before each colon) and the dashes at the start of list lines.
+# Lines that start with # are notes and are not shown on the site.
+
+Name: Pharma Manufacturing
+
+Summary: Pharmaceutical production runs in classified cleanrooms with documented conditions.
+
+Why a DMR package:
+# One line per advantage, written as  - Short heading: one sentence
+- Cleanroom class held: Recirculation systems with redundant fan arrays
+- Very low humidity: Desiccant systems for powders and compounding
+- Energy recovered safely: Plate exchangers keep exhaust and supply air separate
+
+Challenges:
+- Cleanroom classification
+- Low humidity for powders
+- Validated, redundant systems
+
+# ---------------- Equipment locations ----------------
+# Each location starts with "Location:" and its code. Do not change the code.
+# Equipment lines read:  - product code | what it is in this building | why it suits (optional)
+# Product codes are the file names in content/text/products/.
+
+Location: pharma-manufacturing-1
+Title: Energy recovery
+Text: Plate exchangers recover energy from exhaust while keeping it separate from the supply air.
+Equipment:
+- klingenburg-plate | Exhaust plate exchanger
+- venmar-erv | General-area energy recovery ventilator
+- ventrol-ahu | Process make-up air handler
+
+Location: pharma-manufacturing-2
+Title: Cleanroom
+Text: Recirculation units and fan filter units keep particle counts within class. Fan arrays provide redundancy.
+Equipment:
+- huntair-cleanroom | Cleanroom recirculation units and fan filter units
+- huntair-fanwall | Fan array
+
+Location: pharma-manufacturing-3
+Title: Dry room
+Text: Desiccant systems hold humidity lower than a cooling coil can reach.
+Equipment:
+- novelaire-desiccant | Dry room desiccant system
+- fisair-dehum | Compounding room dehumidifier
+- fisair-humid | Humidifier for humidity-controlled suites

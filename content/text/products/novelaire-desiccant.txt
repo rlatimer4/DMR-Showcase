@@ -1,0 +1,28 @@
+# NOVELAIRE DESICCANT DEHUMIDIFICATION SYSTEMS
+#
+# This file holds the words and photos shown for this product. Edit them freely.
+# Keep the labels (the words before each colon) and the dashes at the start of list lines.
+# Lines that start with # are notes and are not shown on the site.
+
+Name: Desiccant Dehumidification Systems
+
+Summary: Packaged desiccant systems for humidity control independent of temperature.
+
+Key points:
+- Desiccant wheel systems with pre- and post-cooling
+- Dry rooms, ice rinks, pools and archives
+- Custom units for process loads
+
+Photos:
+# One photo per line:  - file | caption
+# Put the image files in assets/photos/novelaire-desiccant/ and list them here. The first one is the main photo.
+# - assets/photos/novelaire-desiccant/installed.jpg | Installed on a hospital roof
+
+# ---------------- Optional extras ----------------
+# Remove the # at the start of a line to use it.
+# Badge: New
+# Specifications:
+# - Capacity: 20 to 200 tons
+# - Refrigerant: R-454B
+# Documents:
+# - Brochure (PDF) | assets/docs/example.pdf

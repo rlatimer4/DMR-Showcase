@@ -1,0 +1,46 @@
+# WAREHOUSE
+#
+# This file holds the words shown for this building. Edit them freely.
+# Keep the labels (the words before each colon) and the dashes at the start of list lines.
+# Lines that start with # are notes and are not shown on the site.
+
+Name: Warehouse
+
+Summary: Large-volume buildings lose heat through dock doors and stratify from floor to roof.
+
+Why a DMR package:
+# One line per advantage, written as  - Short heading: one sentence
+- Even temperature floor to roof: Air turnover ends stratification in high bays
+- Heat stays in at the docks: Air curtains protect open dock doors
+- Low operating cost: Direct-fired heating puts nearly all of its fuel energy into the space
+
+Challenges:
+- Heat lost at dock doors
+- Stratification in high bays
+- Low operating cost
+
+# ---------------- Equipment locations ----------------
+# Each location starts with "Location:" and its code. Do not change the code.
+# Equipment lines read:  - product code | what it is in this building | why it suits (optional)
+# Product codes are the file names in content/text/products/.
+
+Location: warehouse-1
+Title: Make-up air
+Text: Direct-fired units heat outdoor air and keep the building at positive pressure.
+Equipment:
+- rapid-mua | Direct-fired make-up air unit
+
+Location: warehouse-2
+Title: Warehouse floor
+Text: Air turnover units keep temperature even from floor to roof. Unit heaters cover local areas.
+Equipment:
+- rapid-turnover | Air turnover unit
+- sterling-unit | Gas unit heaters
+- reddi-line | Electric heaters | For offices and guard booths
+
+Location: warehouse-3
+Title: Loading dock
+Text: Industrial air curtains hold conditioned air in while dock doors are open.
+Equipment:
+- kampmann-curtain | Dock door air curtain
+- sterling-unit | Dock unit heaters

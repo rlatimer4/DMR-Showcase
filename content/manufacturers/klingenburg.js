@@ -1,10 +1,12 @@
 /*
  * Klingenburg — manufacturer and its product lines.
  *
- * Everything about this manufacturer is in this file. To stop showing it, set
- * active: false (or remove "klingenburg" from content/manifest.js). To retire one
- * product line, set active: false on that product or delete its block.
- * See CONTENT.md for the optional fields (specs, links, badge, photo).
+ * The words and photos for each product are in content/text/products/<id>.txt.
+ * This file lists which product lines exist:
+ *  - category: a product type from content/categories.js
+ *  - shape:    which 3D equipment model stands for it in the buildings (see CONTENT.md)
+ * To stop showing the manufacturer, remove "klingenburg" from content/manifest.js.
+ * To retire one product line, delete its line here.
  */
 DMR.registerManufacturer({
   id: "klingenburg",
@@ -15,29 +17,7 @@ DMR.registerManufacturer({
   website: null,
   blurb: "Rotary and plate heat exchangers for energy recovery.",
   products: [
-    {
-      id: "klingenburg-wheel",
-      category: "recovery",
-      name: "Rotary Heat Exchangers",
-      summary: "Energy recovery wheels supplied as components for air handling units.",
-      features: [
-        "Sensible and enthalpy wheels",
-        "Wide range of diameters",
-        "Supplied to air handler manufacturers and for replacement"
-      ],
-      photo: null
-    },
-    {
-      id: "klingenburg-plate",
-      category: "recovery",
-      name: "Plate Heat Exchangers",
-      summary: "Fixed-plate exchangers that recover energy with supply and exhaust air streams kept separate.",
-      features: [
-        "No moving parts",
-        "Separated air streams for exhaust that must not recirculate",
-        "Cross-flow and counter-flow designs"
-      ],
-      photo: null
-    }
+    { id: "klingenburg-wheel", category: "recovery", shape: "wheel" },
+    { id: "klingenburg-plate", category: "recovery", shape: "plate" }
   ]
 });

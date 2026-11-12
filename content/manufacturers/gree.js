@@ -1,10 +1,12 @@
 /*
  * GREE — manufacturer and its product lines.
  *
- * Everything about this manufacturer is in this file. To stop showing it, set
- * active: false (or remove "gree" from content/manifest.js). To retire one
- * product line, set active: false on that product or delete its block.
- * See CONTENT.md for the optional fields (specs, links, badge, photo).
+ * The words and photos for each product are in content/text/products/<id>.txt.
+ * This file lists which product lines exist:
+ *  - category: a product type from content/categories.js
+ *  - shape:    which 3D equipment model stands for it in the buildings (see CONTENT.md)
+ * To stop showing the manufacturer, remove "gree" from content/manifest.js.
+ * To retire one product line, delete its line here.
  */
 DMR.registerManufacturer({
   id: "gree",
@@ -15,29 +17,7 @@ DMR.registerManufacturer({
   website: null,
   blurb: "GMV VRF systems and ductless mini-split heat pumps.",
   products: [
-    {
-      id: "gree-vrf",
-      category: "heatpump",
-      name: "GMV Variable Refrigerant Flow",
-      summary: "VRF heat pump and heat recovery systems that serve many indoor units from one outdoor unit.",
-      features: [
-        "Heat pump and heat recovery systems",
-        "GMV5 Mini for smaller buildings",
-        "Ducted, cassette and wall-mounted indoor units"
-      ],
-      photo: null
-    },
-    {
-      id: "gree-mini",
-      category: "heatpump",
-      name: "Mini-Split Heat Pumps",
-      summary: "Single-zone and multi-zone ductless heat pumps for rooms a central system does not reach.",
-      features: [
-        "Single-zone and multi-zone systems",
-        "Suited to server closets, additions and renovations",
-        "Inverter-driven compressors"
-      ],
-      photo: null
-    }
+    { id: "gree-vrf", category: "vrf", shape: "vrf" },
+    { id: "gree-mini", category: "vrf", shape: "minisplit" }
   ]
 });

@@ -1,0 +1,39 @@
+# FINE ARTS CENTER
+#
+# This file holds the words shown for this building. Edit them freely.
+# Keep the labels (the words before each colon) and the dashes at the start of list lines.
+# Lines that start with # are notes and are not shown on the site.
+
+Name: Fine Arts Center
+
+Summary: A performance hall needs air that the audience cannot hear.
+
+Why a DMR package:
+# One line per advantage, written as  - Short heading: one sentence
+- Air you cannot hear: Fan arrays and low-velocity air handlers meet concert hall noise criteria
+- Instruments protected: Humidification holds the stage and storage in range
+- One team for the whole building: Hall, lobby and rehearsal rooms from one source
+
+Challenges:
+- Very low background noise
+- Stage and audience loads
+- Instrument humidity
+
+# ---------------- Equipment locations ----------------
+# Each location starts with "Location:" and its code. Do not change the code.
+# Equipment lines read:  - product code | what it is in this building | why it suits (optional)
+# Product codes are the file names in content/text/products/.
+
+Location: fine-arts-center-1
+Title: Auditorium air handling
+Text: Fan arrays produce less low-frequency noise than a single large fan.
+Equipment:
+- temtrol-ahu | Auditorium air handler | Low-velocity unit with sound attenuators
+- huntair-fanwall | Fan array | Less low-frequency noise than a single large fan
+
+Location: fine-arts-center-2
+Title: Auditorium
+Text: Steam humidifiers protect instruments and finishes.
+Equipment:
+- steamovap-humid | Stage humidifier | Protects instruments and scenery
+- nortek-ahu | Lobby and rehearsal air handlers

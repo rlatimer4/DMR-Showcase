@@ -1,0 +1,46 @@
+# MUSEUM
+#
+# This file holds the words shown for this building. Edit them freely.
+# Keep the labels (the words before each colon) and the dashes at the start of list lines.
+# Lines that start with # are notes and are not shown on the site.
+
+Name: Museum
+
+Summary: Galleries hold temperature and humidity within a narrow band all year.
+
+Why a DMR package:
+# One line per advantage, written as  - Short heading: one sentence
+- Conservation-grade stability: Temperature and humidity held in a narrow band all year
+- Protection in every season: Humidification in winter and desiccant drying in summer
+- Clean coils, clean air: UV-C keeps air handlers free of growth
+
+Challenges:
+- Tight humidity tolerance
+- Protection of collections
+- Variable visitor loads
+
+# ---------------- Equipment locations ----------------
+# Each location starts with "Location:" and its code. Do not change the code.
+# Equipment lines read:  - product code | what it is in this building | why it suits (optional)
+# Product codes are the file names in content/text/products/.
+
+Location: museum-1
+Title: Gallery air handling
+Text: Custom air handlers with close humidity control serve the galleries.
+Equipment:
+- temtrol-ahu | Gallery air handler | Close temperature and humidity control with reheat and humidifier sections
+- uvr-coil | UV-C coil fixture
+
+Location: museum-2
+Title: Galleries
+Text: Humidifiers and desiccant systems hold the galleries at setpoint in every season.
+Equipment:
+- fisair-humid | Gallery humidifier
+- novelaire-desiccant | Gallery desiccant dehumidifier
+
+Location: museum-3
+Title: Collection storage
+Text: Steam humidification and dehumidifiers protect stored collections.
+Equipment:
+- steamovap-humid | Storage vault humidifier
+- fisair-dehum | Storage dehumidifier

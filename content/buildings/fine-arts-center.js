@@ -1,15 +1,16 @@
 /*
- * Fine Arts Center — building model.
+ * Fine Arts Center — building model (shape and layout only).
  *
- * This file is one self-contained building. Edit it without touching the others:
- *  - size:   overall dimensions in metres; the shell, floors and ducts are generated from it
- *  - facade, walls: the look of the outside (styles are listed in CONTENT.md)
- *  - stops:  the numbered points visitors select. `at.floor` is "roof", "yard"
- *            (a unit on the ground in front) or a floor number (0 = ground);
- *            `at.x` is the position across the width, 0 to 1
- *  - model:  optional path to a .glb file that replaces the generated shell
- *  - build:  the shapes that make this building recognizable (kit helpers are in CONTENT.md)
- * Products listed in a stop that are no longer offered are skipped automatically.
+ * The words for this building are in content/text/buildings/fine-arts-center.txt.
+ * This file controls the 3D model:
+ *  - size:    overall dimensions in metres
+ *  - facade, walls: the look of the outside
+ *  - stops:   where each equipment location sits. `at.floor` is "roof", "yard"
+ *             or a floor number (0 = ground); `at.x` is the position across
+ *             the width, 0 to 1; `space` picks how the room is furnished
+ *  - model:   optional path to a .glb file that replaces the generated shell
+ *  - build:   shapes that make the building recognizable
+ * CONTENT.md lists the facade styles, space types and kit helpers.
  */
 DMR.registerBuilding({
   id: "fine-arts-center",
@@ -19,15 +20,9 @@ DMR.registerBuilding({
   model: null,
   facade: { style: "glass", color: "#5b4a8a" },
   walls: "#e6e1ee",
-  intro: "A performance hall needs air that the audience cannot hear.",
-  challenges: ["Very low background noise", "Stage and audience loads", "Instrument humidity"],
   stops: [
-    { id: "fine-arts-center-1", at: { floor: "roof", x: 0.35 }, title: "Auditorium air handling", room: "",
-      text: "Fan arrays produce less low-frequency noise than a single large fan.",
-      products: ["temtrol-ahu", "huntair-fanwall"] },
-    { id: "fine-arts-center-2", at: { floor: 0, x: 0.3 }, title: "Auditorium", room: "Auditorium",
-      text: "Steam humidifiers protect instruments and finishes.",
-      products: ["steamovap-humid", "nortek-ahu"] }
+    { id: "fine-arts-center-1", at: { floor: "roof", x: 0.35 }, space: "plant" },
+    { id: "fine-arts-center-2", at: { floor: 0, x: 0.3 }, space: "auditorium" }
   ],
   // Shapes that make this building recognizable. See CONTENT.md for the kit.
   build: function (kit, d) {

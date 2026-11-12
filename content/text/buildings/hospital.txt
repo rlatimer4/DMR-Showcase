@@ -1,0 +1,58 @@
+# HOSPITAL
+#
+# This file holds the words shown for this building. Edit them freely.
+# Keep the labels (the words before each colon) and the dashes at the start of list lines.
+# Lines that start with # are notes and are not shown on the site.
+
+Name: Hospital
+
+Summary: Hospitals run around the clock and cannot lose airflow, so the equipment is chosen for redundancy and infection control.
+
+Why a DMR package:
+# One line per advantage, written as  - Short heading: one sentence
+- No lost airflow: Fan arrays keep operating rooms supplied through a fan failure
+- Infection control: HEPA filtration, UV-C and room-side equipment that is easy to clean
+- Humidity in range: Clean-steam humidifiers hold surgical suites within code limits
+- Built for renovation: Air handlers ship in sections that fit existing mechanical rooms
+
+Challenges:
+- No downtime for air systems
+- Infection control
+- Humidity limits in surgical spaces
+
+# ---------------- Equipment locations ----------------
+# Each location starts with "Location:" and its code. Do not change the code.
+# Equipment lines read:  - product code | what it is in this building | why it suits (optional)
+# Product codes are the file names in content/text/products/.
+
+Location: hospital-1
+Title: Rooftop air handling
+Text: Custom air handlers with fan arrays keep air moving through a fan failure. UV-C fixtures keep the cooling coils clean.
+Equipment:
+- temtrol-ahu | Surgery air handler | Custom double-wall unit with HEPA final filters
+- huntair-fanwall | Fan array | N+1 direct-drive fans, so a failed fan does not interrupt surgery
+- uvr-coil | UV-C coil fixture | Keeps the cooling coil free of growth
+
+Location: hospital-2
+Title: Operating suite
+Text: A single ceiling assembly delivers filtered air over the surgical table. Steam humidifiers hold the room within its required humidity range.
+Equipment:
+- huntair-cleansuite | Operating room ceiling system | One diffuser array over the table, with integrated lights and booms
+- steamovap-humid | Clean-steam humidifier | Holds the operating room at 20 to 60% relative humidity
+- uvr-air | Upper-room UV-C
+
+Location: hospital-3
+Title: Patient rooms
+Text: Quiet room-level units give each patient room its own temperature control. Flat panel radiators are easy to wipe down.
+Equipment:
+- envirotec-fancoil | Patient room fan coil | Quiet four-pipe unit above the entry ceiling
+- runtal-radiator | Flat panel radiator | Easy to wipe down, with no fins to trap dust
+- envirotec-vav | VAV box with reheat | Airflow tracking for isolation rooms
+
+Location: hospital-4
+Title: Mechanical room
+Text: Freeze-resistant preheat coils protect outdoor air systems in winter, and a central humidifier serves the general floors.
+Equipment:
+- cooney-coil | Freeze-resistant preheat coil
+- ventrol-ahu | General-floor air handler
+- fisair-humid | Central humidifier

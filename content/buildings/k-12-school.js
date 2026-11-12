@@ -1,15 +1,16 @@
 /*
- * K-12 School — building model.
+ * K-12 School — building model (shape and layout only).
  *
- * This file is one self-contained building. Edit it without touching the others:
- *  - size:   overall dimensions in metres; the shell, floors and ducts are generated from it
- *  - facade, walls: the look of the outside (styles are listed in CONTENT.md)
- *  - stops:  the numbered points visitors select. `at.floor` is "roof", "yard"
- *            (a unit on the ground in front) or a floor number (0 = ground);
- *            `at.x` is the position across the width, 0 to 1
- *  - model:  optional path to a .glb file that replaces the generated shell
- *  - build:  the shapes that make this building recognizable (kit helpers are in CONTENT.md)
- * Products listed in a stop that are no longer offered are skipped automatically.
+ * The words for this building are in content/text/buildings/k-12-school.txt.
+ * This file controls the 3D model:
+ *  - size:    overall dimensions in metres
+ *  - facade, walls: the look of the outside
+ *  - stops:   where each equipment location sits. `at.floor` is "roof", "yard"
+ *             or a floor number (0 = ground); `at.x` is the position across
+ *             the width, 0 to 1; `space` picks how the room is furnished
+ *  - model:   optional path to a .glb file that replaces the generated shell
+ *  - build:   shapes that make the building recognizable
+ * CONTENT.md lists the facade styles, space types and kit helpers.
  */
 DMR.registerBuilding({
   id: "k-12-school",
@@ -19,18 +20,10 @@ DMR.registerBuilding({
   model: null,
   facade: { style: "brick", color: "#b5533c" },
   walls: "#c0603f",
-  intro: "Schools need fresh air and quiet classrooms on a public budget.",
-  challenges: ["Ventilation for full classrooms", "Low noise", "Tight public budgets"],
   stops: [
-    { id: "k-12-school-1", at: { floor: "roof", x: 0.5 }, title: "Dedicated outdoor air", room: "",
-      text: "A dedicated outdoor air system dries and tempers ventilation air and recovers energy from the exhaust.",
-      products: ["venmar-doas", "mammoth-rtu", "novelaire-wheel"] },
-    { id: "k-12-school-2", at: { floor: 1, x: 0.4 }, title: "Classrooms", room: "Classroom",
-      text: "Chilled beams have no fan in the room, so they run quietly. Water-source heat pumps and VRF give each classroom its own control.",
-      products: ["nuclimate-beam", "mammoth-wshp", "gree-vrf"] },
-    { id: "k-12-school-3", at: { floor: 0, x: 0.12 }, title: "Entrance and gym", room: "Entry",
-      text: "Air curtains keep outdoor air out at busy doors. Finned tube and unit heaters cover the perimeter and the gym.",
-      products: ["kampmann-curtain", "sterling-hydronic", "sterling-unit"] }
+    { id: "k-12-school-1", at: { floor: "roof", x: 0.5 }, space: "plant" },
+    { id: "k-12-school-2", at: { floor: 1, x: 0.4 }, space: "classroom" },
+    { id: "k-12-school-3", at: { floor: 0, x: 0.12 }, space: "lobby" }
   ],
   // Shapes that make this building recognizable. See CONTENT.md for the kit.
   build: function (kit, d) {

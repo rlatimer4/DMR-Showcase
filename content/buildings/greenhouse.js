@@ -1,15 +1,16 @@
 /*
- * Greenhouse — building model.
+ * Greenhouse — building model (shape and layout only).
  *
- * This file is one self-contained building. Edit it without touching the others:
- *  - size:   overall dimensions in metres; the shell, floors and ducts are generated from it
- *  - facade, walls: the look of the outside (styles are listed in CONTENT.md)
- *  - stops:  the numbered points visitors select. `at.floor` is "roof", "yard"
- *            (a unit on the ground in front) or a floor number (0 = ground);
- *            `at.x` is the position across the width, 0 to 1
- *  - model:  optional path to a .glb file that replaces the generated shell
- *  - build:  the shapes that make this building recognizable (kit helpers are in CONTENT.md)
- * Products listed in a stop that are no longer offered are skipped automatically.
+ * The words for this building are in content/text/buildings/greenhouse.txt.
+ * This file controls the 3D model:
+ *  - size:    overall dimensions in metres
+ *  - facade, walls: the look of the outside
+ *  - stops:   where each equipment location sits. `at.floor` is "roof", "yard"
+ *             or a floor number (0 = ground); `at.x` is the position across
+ *             the width, 0 to 1; `space` picks how the room is furnished
+ *  - model:   optional path to a .glb file that replaces the generated shell
+ *  - build:   shapes that make the building recognizable
+ * CONTENT.md lists the facade styles, space types and kit helpers.
  */
 DMR.registerBuilding({
   id: "greenhouse",
@@ -20,15 +21,9 @@ DMR.registerBuilding({
   facade: { style: "glass", color: "#bfe3d0", entrance: false },
   walls: "glass",
   roof: "open",
-  intro: "Plants release moisture all day, and the glass loses heat all night.",
-  challenges: ["High humidity from plants", "Heat loss through glass", "Even conditions across the crop"],
   stops: [
-    { id: "greenhouse-1", at: { floor: "yard", x: 0.25 }, title: "Dehumidification", room: "",
-      text: "Desiccant systems remove plant moisture without overcooling the space.",
-      products: ["novelaire-desiccant", "fisair-dehum"] },
-    { id: "greenhouse-2", at: { floor: 0, x: 0.6 }, title: "Growing floor", room: "Grow",
-      text: "Humidifiers and hydronic unit heaters hold conditions steady across the crop.",
-      products: ["fisair-humid", "sterling-unit", "sterling-hydronic"] }
+    { id: "greenhouse-1", at: { floor: "yard", x: 0.25 }, space: "plant" },
+    { id: "greenhouse-2", at: { floor: 0, x: 0.6 }, space: "grow" }
   ],
   // Shapes that make this building recognizable. See CONTENT.md for the kit.
   build: function (kit, d) {

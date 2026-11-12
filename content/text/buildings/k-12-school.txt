@@ -1,0 +1,49 @@
+# K-12 SCHOOL
+#
+# This file holds the words shown for this building. Edit them freely.
+# Keep the labels (the words before each colon) and the dashes at the start of list lines.
+# Lines that start with # are notes and are not shown on the site.
+
+Name: K-12 School
+
+Summary: Schools need fresh air and quiet classrooms on a public budget.
+
+Why a DMR package:
+# One line per advantage, written as  - Short heading: one sentence
+- Fresh air for full classrooms: A dedicated outdoor air unit delivers ventilation dry and tempered
+- Quiet learning: Classroom units are selected for low sound
+- Budget-friendly: Energy recovery and simple, serviceable equipment keep costs down
+
+Challenges:
+- Ventilation for full classrooms
+- Low noise
+- Tight public budgets
+
+# ---------------- Equipment locations ----------------
+# Each location starts with "Location:" and its code. Do not change the code.
+# Equipment lines read:  - product code | what it is in this building | why it suits (optional)
+# Product codes are the file names in content/text/products/.
+
+Location: k-12-school-1
+Title: Dedicated outdoor air
+Text: A dedicated outdoor air system dries and tempers ventilation air and recovers energy from the exhaust.
+Equipment:
+- venmar-doas | Dedicated outdoor air unit
+- mammoth-rtu | Gym and cafeteria rooftop unit
+- novelaire-wheel | Energy recovery wheel
+
+Location: k-12-school-2
+Title: Classrooms
+Text: Each classroom has its own unit and its own thermostat.
+Equipment:
+- mammoth-wshp | Classroom water-source heat pump | Vertical unit in a closet beside each classroom
+- gree-vrf | Classroom VRF | Ceiling cassette indoor units
+- envirotec-fancoil | Classroom fan coil
+
+Location: k-12-school-3
+Title: Entrance and gym
+Text: Air curtains keep outdoor air out at busy doors. Finned tube and unit heaters cover the perimeter and the gym.
+Equipment:
+- kampmann-curtain | Entrance air curtain
+- sterling-hydronic | Corridor finned tube
+- sterling-unit | Gym unit heaters

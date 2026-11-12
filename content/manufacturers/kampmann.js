@@ -1,10 +1,12 @@
 /*
  * Kampmann — manufacturer and its product lines.
  *
- * Everything about this manufacturer is in this file. To stop showing it, set
- * active: false (or remove "kampmann" from content/manifest.js). To retire one
- * product line, set active: false on that product or delete its block.
- * See CONTENT.md for the optional fields (specs, links, badge, photo).
+ * The words and photos for each product are in content/text/products/<id>.txt.
+ * This file lists which product lines exist:
+ *  - category: a product type from content/categories.js
+ *  - shape:    which 3D equipment model stands for it in the buildings (see CONTENT.md)
+ * To stop showing the manufacturer, remove "kampmann" from content/manifest.js.
+ * To retire one product line, delete its line here.
  */
 DMR.registerManufacturer({
   id: "kampmann",
@@ -15,29 +17,7 @@ DMR.registerManufacturer({
   website: null,
   blurb: "Trench heating and cooling, air curtains and unit heaters.",
   products: [
-    {
-      id: "kampmann-trench",
-      category: "terminal",
-      name: "Trench Heating & Cooling",
-      summary: "Floor-recessed convectors that heat and cool along full-height glass without interrupting the view.",
-      features: [
-        "Natural convection and fan-assisted models",
-        "Heating-only and heating/cooling versions",
-        "Grilles in multiple finishes"
-      ],
-      photo: null
-    },
-    {
-      id: "kampmann-curtain",
-      category: "terminal",
-      name: "Air Curtains",
-      summary: "Air curtains that separate indoor and outdoor air at entrances and dock doors.",
-      features: [
-        "Exposed and recessed models",
-        "Hot water and electric heat",
-        "Sizes for pedestrian entrances and industrial doors"
-      ],
-      photo: null
-    }
+    { id: "kampmann-trench", category: "hydronic", shape: "trench" },
+    { id: "kampmann-curtain", category: "heaters", shape: "aircurtain" }
   ]
 });
