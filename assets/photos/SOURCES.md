@@ -37,7 +37,7 @@ site goes live, and replace any that are not cleared.
 | `assets/photos/venmar-energypack/2.jpg` | https://www.nortekair.com/wp-content/uploads/2024/06/EnergyPack-Product-Overview-scaled.jpg |
 | `assets/photos/venmar-erv/1.jpg` | https://www.nortekair.com/wp-content/uploads/2024/06/energypack.png |
 | `assets/photos/nortek-mua/1.jpg` | https://www.nortekair.com/wp-content/uploads/2024/06/Temtrol-Makeup-Air-AHU.jpg |
-| `assets/photos/nortek-air-rotation/1.jpg` | https://www.nortekair.com/wp-content/uploads/2024/10/air-rotation1.jpg |
+| `assets/photos/temtrol-air-rotation/1.jpg` | https://www.nortekair.com/wp-content/uploads/2024/10/air-rotation1.jpg |
 | `assets/photos/nortek-water-coils/1.jpg` | https://www.nortekair.com/wp-content/uploads/2024/06/water-coil.png |
 | `assets/photos/nortek-dx-coils/1.jpg` | https://www.nortekair.com/wp-content/uploads/2024/06/direct-expansion-dx-coils.png |
 | `assets/photos/nortek-steam-coils/1.jpg` | https://www.nortekair.com/wp-content/uploads/2024/06/standard-steam-coil.png |

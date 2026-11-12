@@ -11,7 +11,7 @@ Summary: Heavy manufacturing exhausts large air volumes and generates its own he
 Why a DMR package:
 # One line per advantage, written as  - Short heading: one sentence
 - Pressurized plant: Make-up air replaces large process exhaust volumes
-- Even heat end to end: Air turnover covers a long production floor from a few units
+- Even heat end to end: Air rotation covers a long production floor from a few units
 - Process heat put to work: Plate exchangers recover energy from exhaust
 
 Challenges:
@@ -33,9 +33,9 @@ Equipment:
 
 Location: industrial-manufacturing-2
 Title: Production floor
-Text: Air turnover units and unit heaters keep the floor even from end to end.
+Text: Air rotation units and unit heaters keep the floor even from end to end.
 Equipment:
-- rapid-turnover | Air turnover unit
+- temtrol-air-rotation | Air rotation unit
 - sterling-unit-heaters | Unit heaters
 
 Location: industrial-manufacturing-3

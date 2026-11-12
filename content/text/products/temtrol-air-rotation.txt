@@ -1,4 +1,4 @@
-# NORTEK AIR SOLUTIONS — AIR ROTATION UNITS
+# TEMTROL — AIR ROTATION UNITS
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -6,20 +6,21 @@
 
 Name: Air Rotation Units
 
-Summary: Vertically stacked air rotation units for large manufacturing and warehouse buildings. They move large air volumes from a small footprint to keep temperature even from floor to roof.
+Summary: Vertically stacked air rotation units for large manufacturing and warehouse buildings. They move large air volumes from a small footprint to keep temperature even from floor to roof, and are typically placed at the end of warehouse aisles.
 
 Key points:
 - Small footprint for the airflow delivered
+- Typically placed at the end of warehouse aisles
 - Reduces stratification in high bays
 - Little or no ductwork
 
 Photos:
 # One photo per line:  - file | caption
-# Put new image files in assets/photos/nortek-air-rotation/ and list them here. The first one is the main photo.
-- assets/photos/nortek-air-rotation/1.jpg | Image: Nortek Air Solutions
+# Put new image files in assets/photos/temtrol-air-rotation/ and list them here. The first one is the main photo.
+- assets/photos/temtrol-air-rotation/1.jpg | Image: Nortek Air Solutions
 
 Documents:
-- Nortek Air Solutions product page | https://www.nortekair.com/products/air-rotation-units/
+- Temtrol product page | https://www.nortekair.com/products/air-rotation-units/
 
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.

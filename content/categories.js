@@ -19,7 +19,7 @@ DMR.categories = [
   { id: "hydronic", name: "Hydronic Heating", blurb: "Radiators, finned tube and trench units for quiet perimeter heating." },
   { id: "electric", name: "Electric Heating", blurb: "Electric duct, unit and wall heaters." },
   { id: "heaters", name: "Unit Heaters & Ventilation", blurb: "Unit heaters, cabinet heaters and ventilation for large spaces and entrances." },
-  { id: "makeup", name: "Make-Up Air", blurb: "Direct-fired make-up air and air turnover systems for large-volume buildings." },
+  { id: "makeup", name: "Make-Up Air", blurb: "Make-up air and air rotation units for large-volume buildings." },
   { id: "humid", name: "Humidification", blurb: "Steam and evaporative humidifiers." },
   { id: "dehum", name: "Dehumidifiers", blurb: "Desiccant dehumidifiers for low and tightly held humidity." },
   { id: "iaq", name: "Air Quality & UV", blurb: "Germicidal UV-C for clean coils and cleaner air." },

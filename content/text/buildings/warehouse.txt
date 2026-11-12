@@ -10,7 +10,7 @@ Summary: Large-volume buildings lose heat through dock doors and stratify from f
 
 Why a DMR package:
 # One line per advantage, written as  - Short heading: one sentence
-- Even temperature floor to roof: Air turnover ends stratification in high bays
+- Even temperature floor to roof: Air rotation ends stratification in high bays
 - Warm docks: Unit heaters offset the cold at open dock doors
 - Low operating cost: Direct-fired heating puts nearly all of its fuel energy into the space
 
@@ -31,10 +31,10 @@ Equipment:
 - rapid-mua | Direct-fired make-up air unit
 
 Location: warehouse-2
-Title: Warehouse floor: air turnover system
-Text: Air turnover units move large air volumes to keep temperature even from floor to roof.
+Title: Warehouse floor: air rotation system
+Text: Air rotation units at the ends of the aisles move large air volumes to keep temperature even from floor to roof.
 Equipment:
-- rapid-turnover | Air turnover unit
+- temtrol-air-rotation | Air rotation unit | Placed at the end of an aisle, blowing down its length
 
 Location: warehouse-4
 Title: Warehouse floor: unit heater system

@@ -72,7 +72,8 @@ export function makeProps({ THREE, box, mesh, material }) {
     "process": t => { t.grid(3.4, 100, (x) => { t.C(1.1, 1.1, 3, x, 0.6, -2.5, STEEL, 20); t.C(1.1, 0.3, 0.6, x, 0, -2.5, STEEL, 20); }, 0, 0); t.B(t.w - 3, 0.9, 1, 0, 0, 2.5, STEEL); t.grid(1.4, 100, (x) => t.B(0.5, 0.5, 0.5, x, 0.9, 2.5, WOOD), 0, 0); },
     "production": t => { t.B(t.w - 3, 0.9, 1.2, 0, 0, 0, "#3f4854"); t.grid(2.6, 100, (x, z, i) => { t.B(1, 0.6, 0.9, x, 0.9, 0, STEEL); if (i % 2) { t.C(0.25, 0.3, 1.6, x, 0, 1.6, "#ffa500", 10); t.B(0.2, 0.2, 1.6, x, 1.6, 0.9, "#ffa500"); } }, 0, 0); t.grid(3, 100, (x) => t.B(1.8, 1.8, 1.4, x, 0, -3.5, BLUE), 0, 0); },
     "shop-floor": t => { t.grid(4, 4, (x, z, i, k) => { t.B(1.8, 1.3, 1.2, x, 0, z, (i + k) % 2 ? BLUE : "#3f4854"); t.B(0.4, 0.6, 0.4, x, 1.3, z, STEEL); }, -3, 2); t.B(2.2, 0.9, 0.8, -t.w / 2 + 2.2, 0, t.zd - 1.5, WOOD); },
-    "high-bay": t => t.grid(4.6, 100, (x) => { t.B(1.4, t.h - 3, t.zd * 2 - 4, x, 0, -0.5, "#ffa500").material = material("#f08c1a"); for (let k = 0; k < 3; k++) t.B(1.5, 1, t.zd * 2 - 4.4, x, 0.3 + k * 2.2, -0.5, k % 2 ? WOOD : "#cfd8df"); }, 0, 0),
+    // pallet racking in rows running front to back, with aisles between the rows
+    "high-bay": t => { const n = Math.max(2, Math.round(t.w / 4.4)), step = t.w / n, len = t.zd * 2 - 5; for (let i = 0; i < n; i++) { const x = (i - (n - 1) / 2) * step - step * 0.22; t.B(1.3, t.h - 3, len, x, 0, -1.2, "#f08c1a"); for (let k = 0; k < 3; k++) t.B(1.4, 1, len - 0.4, x, 0.3 + k * 2.2, -1.2, k % 2 ? WOOD : "#cfd8df"); } },
     "dock": t => { t.grid(2, 2, (x, z, i, k) => { t.B(1.2, 0.15, 1.2, x, 0, z, WOOD); t.B(1.1, 0.9 + ((i + k) % 2) * 0.5, 1.1, x, 0.15, z, "#cfa76a"); }, 0, t.zd - 1.5); t.B(1.2, 1.6, 2, 0, 0, -3, "#ffa500"); },
     "grow": () => {},
     "plant": () => {}
@@ -138,7 +139,7 @@ export function makeProps({ THREE, box, mesh, material }) {
     box: u => { u.B(2, 1.4, 1.2, 0, 0, 0); u.trim(2, 1.2, 0, 0); }
   };
   // Where a shape goes in a room. Rooftop-sized shapes are shrunk to fit indoors.
-  const MOUNT = { fancoil: "ceiling", vav: "ceiling", cassette: "ceiling", minisplit: "ceiling", unitheater: "ceiling", ductheater: "ceiling", orceiling: "ceiling", ffu: "ceiling", aircurtain: "door", trench: "front", uv: "ceiling" };
+  const MOUNT = { turnover: "aisle", fancoil: "ceiling", vav: "ceiling", cassette: "ceiling", minisplit: "ceiling", unitheater: "ceiling", ductheater: "ceiling", orceiling: "ceiling", ffu: "ceiling", aircurtain: "door", trench: "front", uv: "ceiling" };
   const INDOOR = { ahu: 0.5, rooftop: 0.5, chiller: 0.5, fanwall: 0.6, erv: 0.5, wheel: 0.6, plate: 0.55, mua: 0.5, turnover: 0.75, coil: 0.7, dehumidifier: 0.8, vrf: "cassette" };
 
   /*
@@ -154,6 +155,7 @@ export function makeProps({ THREE, box, mesh, material }) {
       if (mount === "ceiling") { o.y = p.ceilY; o.z = p.dp / 2 - 2.2; }
       else if (mount === "door") { o.y = Math.min(p.ceilY, p.floorY + 3.4); o.z = p.dp / 2 - 0.7; }
       else if (mount === "front") { o.z = p.dp / 2 - 1.1; }
+      else if (mount === "aisle") { o.z = p.dp / 2 - 2.2; o.x += 1.1; }   // at the open end of an aisle, clear of the racks
       else o.z = p.dp / 2 - 3.4;
     }
     SHAPES[name](unitTools(g, o));

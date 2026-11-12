@@ -15,10 +15,9 @@ DMR.registerManufacturer({
   family: "Nortek Air Solutions",
   logo: "assets/logos/nortek.png",
   website: "https://www.nortekair.com/",
-  blurb: "Make-up air, air rotation and low humidity units, coils, and data center cooling.",
+  blurb: "Make-up air and low humidity units, coils, and data center cooling.",
   products: [
     { id: "nortek-mua", category: "makeup", shape: "mua" },
-    { id: "nortek-air-rotation", category: "makeup", shape: "turnover" },
     { id: "nortek-low-humidity", category: "dehum", shape: "dehumidifier" },
     { id: "nortek-water-coils", category: "coils", shape: "coil" },
     { id: "nortek-dx-coils", category: "coils", shape: "coil" },

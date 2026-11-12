@@ -127,7 +127,7 @@ model that stands for it in the buildings:
 | `chiller` | air-cooled chiller with V-coils and fans |
 | `fanwall` | wall of fans |
 | `erv`, `wheel`, `plate` | energy recovery unit, wheel, plate exchanger |
-| `mua`, `turnover` | make-up air unit, air turnover tower |
+| `mua`, `turnover` | make-up air unit, air rotation unit (stands at the end of an aisle) |
 | `crah` | computer room air handlers |
 | `vrf`, `minisplit`, `wshp` | VRF unit, wall-mounted split, water-source heat pump |
 | `fancoil`, `vav` | ceiling fan coil, VAV box |
