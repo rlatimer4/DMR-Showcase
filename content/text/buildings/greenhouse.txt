@@ -28,13 +28,13 @@ Location: greenhouse-1
 Title: Dehumidification
 Text: Desiccant systems remove plant moisture without overcooling the space.
 Equipment:
-- novelaire-desiccant | Grow room dehumidifier
-- fisair-dehum | Desiccant dehumidifier
+- novelaire-comfortdry | Grow room dehumidifier
+- fisair-dfra | Desiccant dehumidifier
 
 Location: greenhouse-2
 Title: Growing floor
 Text: Humidifiers and hydronic unit heaters hold conditions steady across the crop.
 Equipment:
-- fisair-humid | Fogging humidifier | Evaporative humidification with low energy use
-- sterling-unit | Hot water unit heaters
-- sterling-hydronic | Perimeter finned tube
+- fisair-atomspray | Atomising humidifier | Fine mist humidifies and cools with low energy use
+- sterling-unit-heaters | Hot water unit heaters
+- sterling-versa-line | Perimeter finned tube

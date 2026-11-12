@@ -28,20 +28,20 @@ Location: medical-clinic-1
 Title: Rooftop unit with UV-C
 Text: A packaged rooftop unit with UV-C keeps coils clean and air quality high.
 Equipment:
-- mammoth-rtu | Clinic rooftop unit | Packaged unit with high-efficiency filtration
-- uvr-coil | UV-C coil fixture
+- mammoth-ultraline | Clinic rooftop unit | Packaged unit with high-efficiency filtration
+- uvr-rlm | UV-C coil fixture
 
 Location: medical-clinic-2
 Title: Exam rooms
 Text: VAV terminals with reheat hold each exam room at its setpoint.
 Equipment:
-- envirotec-vav | Exam room VAV box with reheat
-- runtal-radiator | Panel radiator
+- envirotec-sdr | Exam room VAV box with reheat
+- runtal-hydronic | Panel radiator
 
 Location: medical-clinic-3
 Title: Procedure room
 Text: Steam humidifiers and upper-room UV-C support minor procedures.
 Equipment:
-- steamovap-humid | Procedure room humidifier
-- uvr-air | Upper-room UV-C
-- gree-mini | Imaging equipment room mini-split
+- steamovap-ier | Procedure room humidifier
+- uvr-glo | Upper-room UV-C
+- gree-livo | Imaging equipment room mini-split

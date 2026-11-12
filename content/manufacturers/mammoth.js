@@ -14,10 +14,11 @@ DMR.registerManufacturer({
   active: true,
   family: "Nortek Air Solutions",
   logo: "assets/logos/Mammoth.jpg",
-  website: null,
-  blurb: "Water-source heat pumps and custom packaged HVAC.",
+  website: "https://www.nortekair.com/about/our-brands/mammoth/",
+  blurb: "UltraLine custom packaged rooftops and V-Cube vertical self-contained systems.",
   products: [
-    { id: "mammoth-rtu", category: "packaged", shape: "rooftop" },
-    { id: "mammoth-wshp", category: "wshp", shape: "wshp" }
+    { id: "mammoth-ultraline", category: "packaged", shape: "rooftop" },
+    { id: "mammoth-vcube", category: "packaged", shape: "wshp" },
+    { id: "mammoth-vcube-slim", category: "packaged", shape: "wshp" }
   ]
 });

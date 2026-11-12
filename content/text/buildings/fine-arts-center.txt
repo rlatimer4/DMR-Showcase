@@ -35,5 +35,5 @@ Location: fine-arts-center-2
 Title: Auditorium
 Text: Steam humidifiers protect instruments and finishes.
 Equipment:
-- steamovap-humid | Stage humidifier | Protects instruments and scenery
-- nortek-ahu | Lobby and rehearsal air handlers
+- steamovap-ier | Stage humidifier | Protects instruments and scenery
+- huntair-ahu | Lobby and rehearsal air handlers

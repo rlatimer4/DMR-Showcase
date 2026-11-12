@@ -14,10 +14,18 @@ DMR.registerManufacturer({
   active: true,
   family: "Independent",
   logo: "assets/logos/enviro-tec.png",
-  website: null,
-  blurb: "Fan coils, blower coils and VAV terminal units.",
+  website: "https://www.enviro-tec.com/",
+  blurb: "Air handlers, blower coils, fan coils and VAV terminals.",
   products: [
-    { id: "envirotec-fancoil", category: "terminal", shape: "fancoil" },
-    { id: "envirotec-vav", category: "terminal", shape: "vav" }
+    { id: "envirotec-mql", category: "ahu", shape: "ahu" },
+    { id: "envirotec-hdd", category: "terminal", shape: "fancoil" },
+    { id: "envirotec-vb", category: "terminal", shape: "wshp" },
+    { id: "envirotec-vh", category: "terminal", shape: "wshp" },
+    { id: "envirotec-hp", category: "terminal", shape: "fancoil" },
+    { id: "envirotec-vf", category: "terminal", shape: "radiator" },
+    { id: "envirotec-crb", category: "terminal", shape: "vav" },
+    { id: "envirotec-sdr", category: "terminal", shape: "vav" },
+    { id: "envirotec-vfr", category: "terminal", shape: "vav" },
+    { id: "envirotec-ddc", category: "controls", shape: "box" }
   ]
 });

@@ -1,0 +1,27 @@
+# REDD-I — ELECTRIC DUCT HEATERS
+#
+# This file holds the words and photos shown for this product. Edit them freely.
+# Keep the labels (the words before each colon) and the dashes at the start of list lines.
+# Lines that start with # are notes and are not shown on the site.
+
+Name: Electric Duct Heaters
+
+Summary: Electric duct heaters for air handlers, terminal units and ductwork.
+
+Key points:
+- Open-coil and finned tubular elements
+- Built in the USA
+
+Photos:
+# One photo per line:  - file | caption
+# Put new image files in assets/photos/reddi-duct-heaters/ and list them here. The first one is the main photo.
+- assets/photos/dmr/Redd-i-image.jpg | Redd-i product range. Image: dmr-hvac.com
+
+Documents:
+- Redd-i product page | https://www.redd-i.com/duct-heat-design.html
+
+# ---------------- Optional extras ----------------
+# Remove the # at the start of a line to use it.
+# Badge: New
+# Specifications:
+# - Capacity: 20 to 200 tons

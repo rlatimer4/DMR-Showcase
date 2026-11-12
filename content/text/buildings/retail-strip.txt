@@ -11,7 +11,7 @@ Summary: Each tenant pays its own utility bill and wants its own system.
 Why a DMR package:
 # One line per advantage, written as  - Short heading: one sentence
 - One system per tenant: Each storefront has its own separately metered unit
-- Doors that stay open: Air curtains keep conditioned air in the shop
+- Comfortable entrances: Cabinet unit heaters offset the cold at shop doors
 - Low upkeep: Packaged equipment with simple service
 
 Challenges:
@@ -28,12 +28,12 @@ Location: retail-strip-1
 Title: Tenant rooftop units
 Text: Packaged rooftop units serve each storefront.
 Equipment:
-- mammoth-rtu | Tenant rooftop unit | One packaged unit per storefront
+- mammoth-ultraline | Tenant rooftop unit | One packaged unit per storefront
 
 Location: retail-strip-2
 Title: Storefront
-Text: Air curtains keep conditioned air in at the door. Mini-splits handle small shops and stock rooms.
+Text: A cabinet unit heater warms the entrance. Mini-splits handle small shops and stock rooms.
 Equipment:
-- kampmann-curtain | Storefront air curtain
-- gree-mini | Stock room mini-split
-- reddi-line | Electric wall and duct heaters | Vestibule and restroom heat
+- sterling-cabinet | Entrance cabinet unit heater | Offsets cold air at the shop door
+- gree-livo | Stock room mini-split
+- reddi-unit-heaters | Electric wall and duct heaters | Vestibule and restroom heat

@@ -1,0 +1,30 @@
+# ENVIRO-TEC — HP HORIZONTAL HIGH PERFORMANCE FAN COIL UNITS
+#
+# This file holds the words and photos shown for this product. Edit them freely.
+# Keep the labels (the words before each colon) and the dashes at the start of list lines.
+# Lines that start with # are notes and are not shown on the site.
+
+Name: HP Horizontal High Performance Fan Coil Units
+
+Summary: Horizontal high-performance fan coil units in exposed and concealed cabinets, from 600 to 2,400 CFM, with sloped drain pans and insulated cabinets for air quality and low sound.
+
+Key points:
+- 600 to 2,400 CFM
+- Exposed, concealed free-return or plenum-return cabinets
+- Two-pipe or four-pipe coils
+
+Photos:
+# One photo per line:  - file | caption
+# Put new image files in assets/photos/envirotec-hp/ and list them here. The first one is the main photo.
+- assets/photos/envirotec-hp/1.jpg | Image: Enviro-Tec
+- assets/photos/envirotec-hp/2.jpg | Image: Enviro-Tec
+- assets/photos/envirotec-hp/3.jpg | Image: Enviro-Tec
+
+Documents:
+- Enviro-Tec product page | https://www.enviro-tec.com/products-and-solutions/fan-coil-units/hp_ad/hp-horizontal-high-performance-fan-coil-units
+
+# ---------------- Optional extras ----------------
+# Remove the # at the start of a line to use it.
+# Badge: New
+# Specifications:
+# - Capacity: 20 to 200 tons

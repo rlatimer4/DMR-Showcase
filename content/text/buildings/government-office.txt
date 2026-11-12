@@ -28,20 +28,20 @@ Location: government-office-1
 Title: Custom air handlers
 Text: Air handlers built in sections fit through existing openings for replacement work.
 Equipment:
-- ventrol-ahu | Knock-down replacement air handler | Ships in sections that fit through existing doors
+- ventrol-knockdown | Knockdown replacement air handler | Built to fit through existing doors and assembled in place
 - temtrol-ahu | Custom penthouse air handler
 
 Location: government-office-2
 Title: Office floors
 Text: VAV boxes and perimeter fan coils serve the office floors.
 Equipment:
-- envirotec-vav | VAV boxes with reheat
-- envirotec-fancoil | Perimeter fan coils
+- envirotec-sdr | VAV boxes with reheat
+- envirotec-hp | Perimeter fan coils
 
 Location: government-office-3
 Title: Mechanical room
 Text: Replacement coils and an energy recovery retrofit modernize the existing plant.
 Equipment:
-- cooney-coil | Replacement preheat coils
-- sterling-hydronic | Finned tube radiation
+- cooney-freeze-block | Replacement preheat coils
+- sterling-versa-line | Finned tube radiation
 - klingenburg-wheel | Retrofit energy recovery wheel

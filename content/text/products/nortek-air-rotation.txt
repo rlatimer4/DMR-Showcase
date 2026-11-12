@@ -1,0 +1,28 @@
+# NORTEK AIR SOLUTIONS — AIR ROTATION UNITS
+#
+# This file holds the words and photos shown for this product. Edit them freely.
+# Keep the labels (the words before each colon) and the dashes at the start of list lines.
+# Lines that start with # are notes and are not shown on the site.
+
+Name: Air Rotation Units
+
+Summary: Vertically stacked air rotation units for large manufacturing and warehouse buildings. They move large air volumes from a small footprint to keep temperature even from floor to roof.
+
+Key points:
+- Small footprint for the airflow delivered
+- Reduces stratification in high bays
+- Little or no ductwork
+
+Photos:
+# One photo per line:  - file | caption
+# Put new image files in assets/photos/nortek-air-rotation/ and list them here. The first one is the main photo.
+- assets/photos/nortek-air-rotation/1.jpg | Image: Nortek Air Solutions
+
+Documents:
+- Nortek Air Solutions product page | https://www.nortekair.com/products/air-rotation-units/
+
+# ---------------- Optional extras ----------------
+# Remove the # at the start of a line to use it.
+# Badge: New
+# Specifications:
+# - Capacity: 20 to 200 tons

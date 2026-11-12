@@ -28,7 +28,7 @@ Location: convention-center-1
 Title: Hall air handling
 Text: Custom rooftop systems are sized for peak crowds and turn down when the hall is empty.
 Equipment:
-- governair-rtu | Exhibit hall rooftop unit | Large-tonnage custom unit that turns down for an empty hall
+- mammoth-ultraline | Exhibit hall rooftop unit | Large-tonnage custom unit that turns down for an empty hall
 - huntair-fanwall | Fan array | Wide turndown by staging fans
 
 Location: convention-center-2
@@ -36,4 +36,4 @@ Title: Exhibit hall
 Text: Energy recovery wheels cut the cost of the outdoor air a full hall needs.
 Equipment:
 - klingenburg-wheel | Energy recovery wheel | Recovers energy from the large outdoor air load
-- nortek-ahu | Meeting room air handlers
+- huntair-ahu | Meeting room air handlers

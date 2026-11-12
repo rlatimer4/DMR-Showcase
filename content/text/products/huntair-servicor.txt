@@ -1,0 +1,27 @@
+# HUNTAIR — SERVICOR MODULAR CLEANROOM SYSTEMS
+#
+# This file holds the words and photos shown for this product. Edit them freely.
+# Keep the labels (the words before each colon) and the dashes at the start of list lines.
+# Lines that start with # are notes and are not shown on the site.
+
+Name: Servicor Modular Cleanroom Systems
+
+Summary: Modular cleanroom systems: walls, ceilings and air handling supplied as one coordinated package.
+
+Key points:
+- Pre-engineered modular construction
+- Shorter build time than site-built cleanrooms
+
+Photos:
+# One photo per line:  - file | caption
+# Put new image files in assets/photos/huntair-servicor/ and list them here. The first one is the main photo.
+- assets/photos/huntair-servicor/1.jpg | Image: Nortek Air Solutions
+
+Documents:
+- Huntair product page | https://www.nortekair.com/products/servicor-modular-cleanroom-systems/
+
+# ---------------- Optional extras ----------------
+# Remove the # at the start of a line to use it.
+# Badge: New
+# Specifications:
+# - Capacity: 20 to 200 tons

@@ -34,5 +34,5 @@ Location: small-manufacturing-2
 Title: Shop floor
 Text: Unit heaters and electric heaters cover the shop floor.
 Equipment:
-- sterling-unit | Gas unit heaters
-- reddi-line | Hazardous-location electric heater | For paint and solvent areas
+- sterling-unit-heaters | Hot water unit heaters
+- reddi-unit-heaters | Hazardous-location electric heater | For paint and solvent areas

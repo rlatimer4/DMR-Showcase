@@ -14,10 +14,21 @@ DMR.registerManufacturer({
   active: true,
   family: "Independent",
   logo: "assets/logos/Kampmann.png",
-  website: null,
-  blurb: "Trench heating and cooling, air curtains and unit heaters.",
+  website: "https://www.kampmann.ca/en-CA",
+  blurb: "Katherm trench units, fan coils, perimeter heating and unit heaters.",
   products: [
-    { id: "kampmann-trench", category: "hydronic", shape: "trench" },
-    { id: "kampmann-curtain", category: "heaters", shape: "aircurtain" }
+    { id: "kampmann-katherm-hk", category: "hydronic", shape: "trench" },
+    { id: "kampmann-katherm-qk", category: "hydronic", shape: "trench" },
+    { id: "kampmann-katherm-qk-nano", category: "hydronic", shape: "trench" },
+    { id: "kampmann-katherm-nk", category: "hydronic", shape: "trench" },
+    { id: "kampmann-katherm-qe", category: "hydronic", shape: "trench" },
+    { id: "kampmann-top", category: "heaters", shape: "unitheater" },
+    { id: "kampmann-perimeter", category: "hydronic", shape: "fintube" },
+    { id: "kampmann-kadius", category: "terminal", shape: "cassette" },
+    { id: "kampmann-venkon", category: "terminal", shape: "fancoil" },
+    { id: "kampmann-venkon-xl", category: "terminal", shape: "fancoil" },
+    { id: "kampmann-kadeck", category: "terminal", shape: "fancoil" },
+    { id: "kampmann-powerkon", category: "terminal", shape: "radiator" },
+    { id: "kampmann-baseboard", category: "hydronic", shape: "fintube" }
   ]
 });

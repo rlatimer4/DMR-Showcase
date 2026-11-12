@@ -28,20 +28,20 @@ Location: hotel-1
 Title: Corridor ventilation
 Text: A dedicated outdoor air system feeds corridors and guest rooms with dry, tempered air.
 Equipment:
-- venmar-doas | Corridor make-up air unit | 100% outdoor air unit feeding corridors and guest room ventilation
-- novelaire-wheel | Energy recovery wheel | Recovers energy from bathroom exhaust
+- venmar-energypack | Corridor make-up air unit | 100% outdoor air unit feeding corridors and guest room ventilation
+- novelaire-ecw | Energy recovery wheel | Recovers energy from bathroom exhaust
 
 Location: hotel-2
 Title: Guest rooms
 Text: Vertical-stack fan coils or VRF give each room its own control.
 Equipment:
-- envirotec-fancoil | Vertical-stack fan coil | One riser-mounted unit per room, stacked floor to floor
-- gree-vrf | Guest room VRF | Ducted indoor units with heat recovery between rooms
-- runtal-radiator | Bathroom towel radiator
+- envirotec-vh | Vertical hi-rise fan coil | One riser-mounted unit per room, stacked floor to floor
+- gree-gmv6 | Guest room VRF | Ducted indoor units with heat recovery between rooms
+- runtal-hydronic | Bathroom towel radiator
 
 Location: hotel-3
 Title: Lobby
-Text: Trench units sit in the floor along the glass and air curtains protect the entrance.
+Text: Trench units sit in the floor along the glass and a cabinet unit heater warms the entrance.
 Equipment:
-- kampmann-trench | Lobby trench heater | Floor-recessed along the storefront glass
-- kampmann-curtain | Entrance air curtain | Recessed above the main doors
+- kampmann-katherm-qk | Lobby trench heater | Floor-recessed along the storefront glass
+- sterling-cabinet | Vestibule cabinet unit heater | Recessed heater that offsets cold air at the main doors

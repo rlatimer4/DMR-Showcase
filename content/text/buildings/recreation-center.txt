@@ -12,7 +12,7 @@ Why a DMR package:
 # One line per advantage, written as  - Short heading: one sentence
 - Dry pool hall: Desiccant dehumidification protects the structure from condensation and corrosion
 - Lower energy bills: Heat is recovered from the warm, humid pool exhaust
-- Comfort at the doors: Air curtains and unit heaters stop drafts at busy entrances
+- Comfort at the doors: Cabinet and unit heaters stop drafts at busy entrances
 
 Challenges:
 - Pool humidity and condensation
@@ -28,13 +28,13 @@ Location: recreation-center-1
 Title: Pool dehumidification
 Text: Desiccant systems hold pool-hall humidity down and protect the structure from condensation.
 Equipment:
-- novelaire-desiccant | Natatorium dehumidifier | Holds the pool hall at 50 to 60% relative humidity
+- novelaire-comfortdry | Natatorium dehumidifier | Holds the pool hall at 50 to 60% relative humidity
 - venmar-erv | Pool exhaust energy recovery | Recovers heat from the humid exhaust air
 
 Location: recreation-center-2
 Title: Gymnasium
 Text: Packaged rooftop units handle the gym, and unit heaters cover the entrances.
 Equipment:
-- mammoth-rtu | Gym rooftop unit | Packaged heating and cooling sized for a full gym
-- sterling-unit | Vestibule unit heaters
-- kampmann-curtain | Entrance air curtain
+- mammoth-ultraline | Gym rooftop unit | Packaged heating and cooling sized for a full gym
+- sterling-unit-heaters | Vestibule unit heaters
+- sterling-cabinet | Vestibule cabinet unit heater | Offsets cold air at the doors

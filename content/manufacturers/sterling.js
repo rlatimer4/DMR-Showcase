@@ -14,10 +14,21 @@ DMR.registerManufacturer({
   active: true,
   family: "Independent",
   logo: "assets/logos/sterling-hvac.png",
-  website: null,
-  blurb: "Unit heaters and hydronic heating products.",
+  website: "https://www.sterlingheat.com/",
+  blurb: "Finned tube, convectors, cabinet and unit heaters, radiant panels and baseboard.",
   products: [
-    { id: "sterling-hydronic", category: "hydronic", shape: "fintube" },
-    { id: "sterling-unit", category: "heaters", shape: "unitheater" }
+    { id: "sterling-guardian", category: "hydronic", shape: "fintube" },
+    { id: "sterling-versa-line", category: "hydronic", shape: "fintube" },
+    { id: "sterling-light-commercial", category: "hydronic", shape: "fintube" },
+    { id: "sterling-classic", category: "hydronic", shape: "fintube" },
+    { id: "sterling-custom", category: "hydronic", shape: "fintube" },
+    { id: "sterling-dura-vane", category: "hydronic", shape: "fintube" },
+    { id: "sterling-convectors", category: "hydronic", shape: "radiator" },
+    { id: "sterling-cabinet", category: "heaters", shape: "radiator" },
+    { id: "sterling-unit-heaters", category: "heaters", shape: "unitheater" },
+    { id: "sterling-radiant", category: "hydronic", shape: "orceiling" },
+    { id: "sterling-panel-radiators", category: "hydronic", shape: "radiator" },
+    { id: "sterling-baseboard", category: "hydronic", shape: "fintube" },
+    { id: "sterling-electric-baseboard", category: "electric", shape: "fintube" }
   ]
 });

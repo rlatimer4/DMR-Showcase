@@ -28,19 +28,19 @@ Location: sports-stadium-1
 Title: Concourse air handling
 Text: Custom rooftop systems condition clubs and concourses and turn down between events.
 Equipment:
-- governair-rtu | Club-level rooftop unit
-- nortek-ahu | Concourse air handler
+- mammoth-ultraline | Club-level rooftop unit
+- huntair-ahu | Concourse air handler
 
 Location: sports-stadium-2
 Title: Suites and clubs
 Text: Fan coils and VRF give each suite its own control.
 Equipment:
-- envirotec-fancoil | Suite fan coil | One per suite, each with its own thermostat
-- gree-vrf | Club VRF
+- envirotec-hp | Suite fan coil | One per suite, each with its own thermostat
+- gree-gmv6 | Club VRF
 
 Location: sports-stadium-3
 Title: Locker rooms
 Text: Energy recovery ventilators handle the high exhaust rates locker rooms need.
 Equipment:
 - venmar-erv | Locker room energy recovery ventilator | High exhaust rate with heat recovery
-- sterling-unit | Service tunnel unit heaters
+- sterling-unit-heaters | Service tunnel unit heaters

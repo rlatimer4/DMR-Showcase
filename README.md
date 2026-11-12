@@ -21,7 +21,7 @@ The 3D view needs the site served over http(s); opening `index.html` from disk w
 | --- | --- |
 | Walkthrough | A real-time 3D world of building types in four use types (commercial, institutional, industrial, residential). Selecting a building shows what a DMR package brings to it and opens it as a cutaway; selecting a location zooms into the furnished room and lists the specific equipment. |
 | Products | Catalog with search and filters for product type, building type and manufacturer. Each product opens with its own photo gallery. |
-| Manufacturers | Logo tiles; selecting one filters the catalog. |
+| Manufacturers | Logo tiles; selecting one filters the catalog to that manufacturer's full range. |
 | Installations | Google Map of installed equipment, filterable by manufacturer and building type. |
 | Gallery | Photo grid (placeholders). |
 | Project list | Visitors collect products and email the list to DMR. Saved in the browser. |
@@ -65,7 +65,13 @@ purposes only" overlay.
 ## Before launch
 
 - Product descriptions and building text are draft copy and need DMR review.
-- Installations are sample records, not real projects, and product photos are placeholders.
+- Installations are sample records, not real projects.
+- Product photos were collected from the manufacturers' public product pages and
+  dmr-hvac.com. `assets/photos/SOURCES.md` lists where each one came from. Confirm
+  usage rights with each manufacturer before launch.
+- Product summaries were written from the manufacturers' published pages and need
+  DMR review. Klingenburg, Rapid Engineering, Runtal and most Redd-i lines could not
+  be read online and use one general image each.
 - The Residential district has one building (Multifamily Residential) that we
   added; the other 26 building types follow Nortek World's list.
 - The building models are simple generated shapes. For render-quality visuals,

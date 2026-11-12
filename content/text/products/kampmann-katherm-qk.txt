@@ -1,0 +1,30 @@
+# KAMPMANN — KATHERM QK TRENCH HEATING
+#
+# This file holds the words and photos shown for this product. Edit them freely.
+# Keep the labels (the words before each colon) and the dashes at the start of list lines.
+# Lines that start with # are notes and are not shown on the site.
+
+Name: Katherm QK Trench Heating
+
+Summary: Trench heating with EC tangential fans, for rooms with floor-to-ceiling windows and higher heating loads, including low-temperature systems.
+
+Key points:
+- Fan-assisted heating
+- Works with low water temperatures
+- Fast warm-up at low sound
+
+Photos:
+# One photo per line:  - file | caption
+# Put new image files in assets/photos/kampmann-katherm-qk/ and list them here. The first one is the main photo.
+- assets/photos/kampmann-katherm-qk/1.jpg | Image: Kampmann
+- assets/photos/kampmann-katherm-qk/2.jpg | Image: Kampmann
+- assets/photos/kampmann-katherm-qk/3.jpg | Image: Kampmann
+
+Documents:
+- Kampmann product page | https://www.kampmann.ca/en-CA/products/trench-technology/katherm-qk
+
+# ---------------- Optional extras ----------------
+# Remove the # at the start of a line to use it.
+# Badge: New
+# Specifications:
+# - Capacity: 20 to 200 tons

@@ -36,10 +36,10 @@ Title: Production floor
 Text: Air turnover units and unit heaters keep the floor even from end to end.
 Equipment:
 - rapid-turnover | Air turnover unit
-- sterling-unit | Unit heaters
+- sterling-unit-heaters | Unit heaters
 
 Location: industrial-manufacturing-3
 Title: Dock doors
-Text: Air curtains protect the dock doors.
+Text: Unit heaters offset the cold air at the dock doors.
 Equipment:
-- kampmann-curtain | Dock door air curtain
+- kampmann-top | Dock door unit heaters | High-output heaters aimed at each dock opening

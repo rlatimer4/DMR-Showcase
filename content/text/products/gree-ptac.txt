@@ -1,0 +1,29 @@
+# GREE — PTAC II R32
+#
+# This file holds the words and photos shown for this product. Edit them freely.
+# Keep the labels (the words before each colon) and the dashes at the start of list lines.
+# Lines that start with # are notes and are not shown on the site.
+
+Name: PTAC II R32
+
+Summary: Packaged terminal air conditioners and heat pumps for hospitality, healthcare and specialty residential rooms.
+
+Key points:
+- Heat pump and electric heat models
+- R32 refrigerant
+
+Photos:
+# One photo per line:  - file | caption
+# Put new image files in assets/photos/gree-ptac/ and list them here. The first one is the main photo.
+- assets/photos/gree-ptac/1.jpg | Image: GREE
+- assets/photos/gree-ptac/2.jpg | Image: GREE
+- assets/photos/gree-ptac/3.jpg | Image: GREE
+
+Documents:
+- GREE product page | https://www.greecomfort.com/our-products/ptac-ii-r32
+
+# ---------------- Optional extras ----------------
+# Remove the # at the start of a line to use it.
+# Badge: New
+# Specifications:
+# - Capacity: 20 to 200 tons

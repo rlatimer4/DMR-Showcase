@@ -14,10 +14,18 @@ DMR.registerManufacturer({
   active: true,
   family: "Independent",
   logo: "assets/logos/UVR-logo-for-website.jpg",
-  website: null,
-  blurb: "UV-C fixtures for coil and air-stream disinfection.",
+  website: "https://www.uvresources.com/",
+  blurb: "UV-C fixtures, lamps and accessories for HVAC coil and air disinfection.",
   products: [
-    { id: "uvr-coil", category: "iaq", shape: "uv" },
-    { id: "uvr-air", category: "iaq", shape: "uv" }
+    { id: "uvr-rlm", category: "iaq", shape: "uv" },
+    { id: "uvr-de", category: "iaq", shape: "uv" },
+    { id: "uvr-sln", category: "iaq", shape: "uv" },
+    { id: "uvr-sl", category: "iaq", shape: "uv" },
+    { id: "uvr-dln", category: "iaq", shape: "uv" },
+    { id: "uvr-uvk", category: "iaq", shape: "uv" },
+    { id: "uvr-x-plus", category: "iaq", shape: "uv" },
+    { id: "uvr-glo", category: "iaq", shape: "uv" },
+    { id: "uvr-lamps", category: "iaq", shape: "uv" },
+    { id: "uvr-accessories", category: "iaq", shape: "uv" }
   ]
 });

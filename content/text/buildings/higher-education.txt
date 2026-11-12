@@ -35,20 +35,20 @@ Location: higher-education-2
 Title: Teaching labs
 Text: Custom air handlers and fan arrays supply the high air change rates labs need.
 Equipment:
-- nortek-ahu | Lab air handler | 100% outdoor air
+- huntair-ahu | Lab air handler | 100% outdoor air
 - huntair-fanwall | Fan array
-- envirotec-vav | Lab airflow VAV terminals
+- envirotec-sdr | Lab airflow VAV terminals
 
 Location: higher-education-3
 Title: Lecture halls
-Text: Water-source heat pumps and fan coils keep lecture halls quiet.
+Text: A VRF heat recovery system and fan coils keep lecture halls quiet.
 Equipment:
-- mammoth-wshp | Water-source heat pumps
-- envirotec-fancoil | Lecture hall fan coils
+- gree-gmv6 | VRF heat recovery system | Moves heat between lecture halls and offices
+- envirotec-hp | Lecture hall fan coils
 
 Location: higher-education-4
 Title: Mechanical room
 Text: Freeze-resistant coils replace failed preheat coils in existing air handlers.
 Equipment:
-- cooney-coil | Freeze-resistant preheat coils
-- sterling-hydronic | Corridor finned tube
+- cooney-freeze-block | Freeze-resistant preheat coils
+- sterling-versa-line | Corridor finned tube

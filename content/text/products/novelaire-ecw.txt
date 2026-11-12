@@ -1,0 +1,28 @@
+# NOVELAIRE — ENERGY CONSERVATION WHEELS (ECW)
+#
+# This file holds the words and photos shown for this product. Edit them freely.
+# Keep the labels (the words before each colon) and the dashes at the start of list lines.
+# Lines that start with # are notes and are not shown on the site.
+
+Name: Energy Conservation Wheels (ECW)
+
+Summary: Energy conservation wheels that recover heat and moisture from exhaust air, reducing equipment size and energy use.
+
+Key points:
+- Total energy recovery
+- Cassettes for new equipment and replacement
+
+Photos:
+# One photo per line:  - file | caption
+# Put new image files in assets/photos/novelaire-ecw/ and list them here. The first one is the main photo.
+- assets/photos/novelaire-ecw/1.jpg | Image: NovelAire
+- assets/photos/novelaire-ecw/2.jpg | Image: NovelAire
+
+Documents:
+- NovelAire product page | https://www.novelaire.com/energy-conservation-wheels/
+
+# ---------------- Optional extras ----------------
+# Remove the # at the start of a line to use it.
+# Badge: New
+# Specifications:
+# - Capacity: 20 to 200 tons

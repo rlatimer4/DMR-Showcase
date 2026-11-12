@@ -1,0 +1,26 @@
+# GREE — 100% FRESH AIR PROCESSING UNIT
+#
+# This file holds the words and photos shown for this product. Edit them freely.
+# Keep the labels (the words before each colon) and the dashes at the start of list lines.
+# Lines that start with # are notes and are not shown on the site.
+
+Name: 100% Fresh Air Processing Unit
+
+Summary: A VRF indoor unit that conditions 100% outdoor air for ventilation.
+
+Key points:
+- 100% outdoor air
+
+Photos:
+# One photo per line:  - file | caption
+# Put new image files in assets/photos/gree-fresh-air/ and list them here. The first one is the main photo.
+- assets/photos/gree-fresh-air/1.jpg | Image: GREE
+
+Documents:
+- GREE product page | https://www.greecommercial.com/our-products/100-fresh-air-processing-unit
+
+# ---------------- Optional extras ----------------
+# Remove the # at the start of a line to use it.
+# Badge: New
+# Specifications:
+# - Capacity: 20 to 200 tons

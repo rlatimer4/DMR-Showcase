@@ -28,22 +28,22 @@ Location: k-12-school-1
 Title: Dedicated outdoor air
 Text: A dedicated outdoor air system dries and tempers ventilation air and recovers energy from the exhaust.
 Equipment:
-- venmar-doas | Dedicated outdoor air unit
-- mammoth-rtu | Gym and cafeteria rooftop unit
-- novelaire-wheel | Energy recovery wheel
+- venmar-energypack | Dedicated outdoor air unit
+- mammoth-ultraline | Gym and cafeteria rooftop unit
+- novelaire-ecw | Energy recovery wheel
 
 Location: k-12-school-2
 Title: Classrooms
 Text: Each classroom has its own unit and its own thermostat.
 Equipment:
-- mammoth-wshp | Classroom water-source heat pump | Vertical unit in a closet beside each classroom
-- gree-vrf | Classroom VRF | Ceiling cassette indoor units
-- envirotec-fancoil | Classroom fan coil
+- envirotec-vb | Classroom vertical blower coil | Reduced-footprint unit in a closet beside each classroom
+- gree-gmv6 | Classroom VRF | Ceiling cassette indoor units
+- envirotec-hp | Classroom fan coil
 
 Location: k-12-school-3
 Title: Entrance and gym
-Text: Air curtains keep outdoor air out at busy doors. Finned tube and unit heaters cover the perimeter and the gym.
+Text: A cabinet unit heater warms the vestibule. Finned tube and unit heaters cover the perimeter and the gym.
 Equipment:
-- kampmann-curtain | Entrance air curtain
-- sterling-hydronic | Corridor finned tube
-- sterling-unit | Gym unit heaters
+- sterling-cabinet | Vestibule cabinet unit heater | Offsets cold air at the doors
+- sterling-versa-line | Corridor finned tube
+- sterling-unit-heaters | Gym unit heaters

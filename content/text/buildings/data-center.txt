@@ -11,7 +11,7 @@ Summary: Data halls reject heat every hour of the year, so the equipment is chos
 Why a DMR package:
 # One line per advantage, written as  - Short heading: one sentence
 - Uptime: Fan arrays and N+1 plant keep cooling running through a failure or a service call
-- Speed to build: Chiller plants and air handlers arrive piped, wired and factory tested
+- Speed to build: Cooling plant and air handlers arrive factory assembled and tested
 - Room to grow: Air cooling today, with a path to liquid cooling as rack densities rise
 
 Challenges:
@@ -25,16 +25,16 @@ Challenges:
 # Product codes are the file names in content/text/products/.
 
 Location: data-center-1
-Title: Chilled water plant
-Text: A packaged chiller plant arrives piped, wired and tested, which shortens the construction schedule.
+Title: Cooling plant
+Text: StatePoint liquid cooling produces cold water for the hall, and coolant distribution units carry it to high-density racks.
 Equipment:
-- governair-chiller | Packaged chiller plant | Air-cooled chillers, pumps and controls in one enclosure, sized N+1
-- cooney-coil | Economizer coils | Freeze-resistant coils for winter free cooling
+- nortek-statepoint | StatePoint liquid cooling | Indirect evaporative system that produces cold water for the hall with low water and energy use
+- nortek-cdu | Coolant distribution units | Deliver coolant to high-density racks with 2N redundancy
 
 Location: data-center-2
 Title: Data hall
 Text: Computer room air handlers and liquid cooling remove heat from the racks. Fan arrays keep air moving during maintenance.
 Equipment:
-- nortek-dc | Computer room air handlers and liquid cooling | CRAH units along the hall, with liquid cooling for high-density racks
+- nortek-coilwall | Computer room air handlers and liquid cooling | CRAH units along the hall, with liquid cooling for high-density racks
 - huntair-fanwall | Fan wall | Supply fan arrays that hold airflow through a fan failure
-- steamovap-humid | Data hall humidifier | Holds minimum humidity to control static
+- steamovap-ier | Data hall humidifier | Holds minimum humidity to control static

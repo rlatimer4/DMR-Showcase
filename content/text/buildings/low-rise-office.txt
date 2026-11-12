@@ -28,19 +28,19 @@ Location: low-rise-office-1
 Title: Packaged rooftop units
 Text: Packaged rooftop units provide heating, cooling and ventilation from one cabinet.
 Equipment:
-- mammoth-rtu | Packaged rooftop unit
-- uvr-coil | UV-C coil fixture
+- mammoth-ultraline | Packaged rooftop unit
+- uvr-rlm | UV-C coil fixture
 
 Location: low-rise-office-2
 Title: Office suites
 Text: VRF gives each suite its own control without large ductwork.
 Equipment:
-- gree-vrf | Suite VRF | Cassette indoor units, one outdoor unit per tenant
-- gree-mini | IT room mini-split
+- gree-gmv6 | Suite VRF | Cassette indoor units, one outdoor unit per tenant
+- gree-livo | IT room mini-split
 
 Location: low-rise-office-3
 Title: Perimeter
 Text: Finned tube and panel radiators offset heat loss at the glass.
 Equipment:
-- sterling-hydronic | Finned tube under the windows
-- runtal-radiator | Entry panel radiator
+- sterling-versa-line | Finned tube under the windows
+- runtal-hydronic | Entry panel radiator

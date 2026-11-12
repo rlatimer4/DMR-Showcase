@@ -1,0 +1,29 @@
+# GOVERNAIR — CUSTOM AIR HANDLERS
+#
+# This file holds the words and photos shown for this product. Edit them freely.
+# Keep the labels (the words before each colon) and the dashes at the start of list lines.
+# Lines that start with # are notes and are not shown on the site.
+
+Name: Custom Air Handlers
+
+Summary: Air handlers engineered unit by unit for the fit, efficiency and reliability a project needs, used in healthcare, education, manufacturing, data centers, cleanrooms, offices and hospitality.
+
+Key points:
+- Custom construction, configuration and materials
+- Available with FANWALL TECHNOLOGY fan arrays
+- Water, steam, booster and DX coil options
+
+Photos:
+# One photo per line:  - file | caption
+# Put new image files in assets/photos/governair-ahu/ and list them here. The first one is the main photo.
+- assets/photos/governair-ahu/1.jpg | Image: Nortek Air Solutions
+- assets/photos/governair-ahu/2.jpg | Image: Nortek Air Solutions
+
+Documents:
+- Governair product page | https://www.nortekair.com/products/custom-air-handlers/
+
+# ---------------- Optional extras ----------------
+# Remove the # at the start of a line to use it.
+# Badge: New
+# Specifications:
+# - Capacity: 20 to 200 tons

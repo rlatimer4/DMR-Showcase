@@ -12,7 +12,7 @@ Why a DMR package:
 # One line per advantage, written as  - Short heading: one sentence
 - Always open: Redundant fans keep the concourse conditioned 24 hours a day
 - Clean air beside the apron: Filtration and UV-C deal with jet fumes and crowds
-- Open doors, closed envelope: Air curtains hold conditioned air at baggage and curbside openings
+- Warm at the openings: Unit heaters offset cold air at baggage and curbside openings
 
 Challenges:
 - Very large open volumes
@@ -35,12 +35,12 @@ Location: airport-2
 Title: Concourse
 Text: Trench units along the glass and UV-C in the air stream keep gate areas comfortable.
 Equipment:
-- kampmann-trench | Gate lounge trench units | Fan-assisted heating and cooling along the glass
-- uvr-air | Air-stream UV-C | In-duct disinfection for crowded gate areas
+- kampmann-katherm-qk | Gate lounge trench units | Fan-assisted heating and cooling along the glass
+- uvr-sl | In-duct UV-C fixtures | Airstream disinfection for crowded gate areas
 
 Location: airport-3
 Title: Baggage hall
-Text: Air curtains hold conditioned air at the doors and unit heaters cover the back-of-house.
+Text: Unit heaters offset the cold air at the belt openings and cover the back-of-house.
 Equipment:
-- kampmann-curtain | Industrial air curtain | At the baggage belt openings
-- sterling-unit | Back-of-house unit heaters
+- kampmann-top | Door unit heaters | High-output heaters aimed at the baggage belt openings
+- sterling-unit-heaters | Back-of-house unit heaters

@@ -29,11 +29,11 @@ Title: Sanctuary air
 Text: Energy recovery ventilators bring in outdoor air for a full congregation at low operating cost.
 Equipment:
 - venmar-erv | Sanctuary ventilation unit | Brings in outdoor air only when the room is full
-- mammoth-rtu | Ground-mounted packaged unit | Keeps the roofline clear
+- mammoth-ultraline | Ground-mounted packaged unit | Keeps the roofline clear
 
 Location: religious-center-2
 Title: Sanctuary
 Text: Panel radiators and trench units heat quietly, with no fan noise in the room.
 Equipment:
-- runtal-radiator | Panel radiators | Silent perimeter heat
-- kampmann-trench | Aisle trench heaters
+- runtal-hydronic | Panel radiators | Silent perimeter heat
+- kampmann-katherm-qk | Aisle trench heaters

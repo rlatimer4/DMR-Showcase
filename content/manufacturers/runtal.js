@@ -14,9 +14,10 @@ DMR.registerManufacturer({
   active: true,
   family: "Independent",
   logo: "assets/logos/runtal.png",
-  website: null,
-  blurb: "Hydronic, electric and steam panel radiators.",
+  website: "https://runtalnorthamerica.com/",
+  blurb: "Hydronic and electric panel radiators.",
   products: [
-    { id: "runtal-radiator", category: "hydronic", shape: "radiator" }
+    { id: "runtal-hydronic", category: "hydronic", shape: "radiator" },
+    { id: "runtal-electric", category: "electric", shape: "radiator" }
   ]
 });

@@ -14,10 +14,10 @@ DMR.registerManufacturer({
   active: true,
   family: "Nortek Air Solutions",
   logo: "assets/logos/Venmar.jpg",
-  website: null,
-  blurb: "Energy recovery ventilators and dedicated outdoor air systems.",
+  website: "https://www.nortekair.com/about/our-brands/venmar/",
+  blurb: "EnergyPack custom HVAC solutions and energy recovery units.",
   products: [
-    { id: "venmar-erv", category: "recovery", shape: "erv" },
-    { id: "venmar-doas", category: "recovery", shape: "erv" }
+    { id: "venmar-energypack", category: "recovery", shape: "erv" },
+    { id: "venmar-erv", category: "recovery", shape: "erv" }
   ]
 });

@@ -14,7 +14,7 @@ DMR.registerManufacturer({
   active: true,
   family: "Independent",
   logo: "assets/logos/Rapid-Engineering.png",
-  website: null,
+  website: "http://rapidengineering.com/",
   blurb: "Direct-fired make-up air and industrial space heating.",
   products: [
     { id: "rapid-mua", category: "makeup", shape: "mua" },

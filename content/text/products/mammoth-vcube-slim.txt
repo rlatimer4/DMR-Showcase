@@ -1,0 +1,29 @@
+# MAMMOTH — V-CUBE SLIM VERTICAL SELF-CONTAINED SYSTEMS
+#
+# This file holds the words and photos shown for this product. Edit them freely.
+# Keep the labels (the words before each colon) and the dashes at the start of list lines.
+# Lines that start with # are notes and are not shown on the site.
+
+Name: V-Cube Slim Vertical Self-Contained Systems
+
+Summary: A slim vertical self-contained cooling and heat pump system for floor-by-floor VAV service, from 15 to 80 tons, sized to pass through tight openings.
+
+Key points:
+- 15 to 80 tons
+- Floor-by-floor VAV cooling and heat pump operation
+- Narrow cabinet for elevator and doorway access
+
+Photos:
+# One photo per line:  - file | caption
+# Put new image files in assets/photos/mammoth-vcube-slim/ and list them here. The first one is the main photo.
+- assets/photos/mammoth-vcube-slim/1.jpg | Image: Nortek Air Solutions
+- assets/photos/mammoth-vcube-slim/2.jpg | Image: Nortek Air Solutions
+
+Documents:
+- Mammoth product page | https://www.nortekair.com/products/v-cube-slim-vertical-self-contained-systems/
+
+# ---------------- Optional extras ----------------
+# Remove the # at the start of a line to use it.
+# Badge: New
+# Specifications:
+# - Capacity: 20 to 200 tons

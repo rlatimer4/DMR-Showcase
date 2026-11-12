@@ -1,0 +1,27 @@
+# FISAIR — HEF7 EVAPORATIVE COOLERS
+#
+# This file holds the words and photos shown for this product. Edit them freely.
+# Keep the labels (the words before each colon) and the dashes at the start of list lines.
+# Lines that start with # are notes and are not shown on the site.
+
+Name: HEF7 Evaporative Coolers
+
+Summary: Evaporative pre-coolers for air-cooled chillers, cutting cooling energy by up to 20% and avoiding high-pressure trips in hot weather.
+
+Key points:
+- For air-cooled chillers and condensers
+- Up to 20% lower energy use
+
+Photos:
+# One photo per line:  - file | caption
+# Put new image files in assets/photos/fisair-hef7/ and list them here. The first one is the main photo.
+- assets/photos/fisair-hef7/1.jpg | Image: Fisair
+
+Documents:
+- Fisair product page | https://fisair.com/products/hef-evaporative-coolers/hef7/
+
+# ---------------- Optional extras ----------------
+# Remove the # at the start of a line to use it.
+# Badge: New
+# Specifications:
+# - Capacity: 20 to 200 tons

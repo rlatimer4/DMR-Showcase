@@ -14,7 +14,7 @@ DMR.registerManufacturer({
   active: true,
   family: "Independent",
   logo: "assets/logos/klingenburg.png",
-  website: null,
+  website: "http://www.klingenburg.de/en/",
   blurb: "Rotary and plate heat exchangers for energy recovery.",
   products: [
     { id: "klingenburg-wheel", category: "recovery", shape: "wheel" },

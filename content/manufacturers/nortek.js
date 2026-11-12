@@ -14,10 +14,19 @@ DMR.registerManufacturer({
   active: true,
   family: "Nortek Air Solutions",
   logo: "assets/logos/nortek.png",
-  website: null,
-  blurb: "Parent of the Governair, Huntair, Mammoth, Temtrol, Venmar CES and Ventrol brands, with custom air handling and data center cooling.",
+  website: "https://www.nortekair.com/",
+  blurb: "Make-up air, air rotation and low humidity units, coils, and data center cooling.",
   products: [
-    { id: "nortek-ahu", category: "ahu", shape: "ahu" },
-    { id: "nortek-dc", category: "datacenter", shape: "crah" }
+    { id: "nortek-mua", category: "makeup", shape: "mua" },
+    { id: "nortek-air-rotation", category: "makeup", shape: "turnover" },
+    { id: "nortek-low-humidity", category: "dehum", shape: "dehumidifier" },
+    { id: "nortek-water-coils", category: "coils", shape: "coil" },
+    { id: "nortek-dx-coils", category: "coils", shape: "coil" },
+    { id: "nortek-steam-coils", category: "coils", shape: "coil" },
+    { id: "nortek-steam-distributing-coils", category: "coils", shape: "coil" },
+    { id: "nortek-booster-coils", category: "coils", shape: "coil" },
+    { id: "nortek-statepoint", category: "datacenter", shape: "chiller" },
+    { id: "nortek-cdu", category: "datacenter", shape: "crah" },
+    { id: "nortek-coilwall", category: "datacenter", shape: "fanwall" }
   ]
 });

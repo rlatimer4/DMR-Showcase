@@ -12,7 +12,7 @@ Why a DMR package:
 # One line per advantage, written as  - Short heading: one sentence
 - Never stops: Redundant fan arrays keep cleanrooms in class around the clock
 - Tight tolerance: Make-up air units hold temperature and humidity within narrow limits
-- Plant in a box: Packaged chilled water plants shorten construction
+- Factory-built plant: Air handlers and cleanroom systems arrive tested, which shortens construction
 
 Challenges:
 - Cleanroom recirculation volumes
@@ -25,22 +25,22 @@ Challenges:
 # Product codes are the file names in content/text/products/.
 
 Location: hi-tech-manufacturing-1
-Title: Chilled water plant
-Text: A packaged chiller plant supplies process and comfort cooling from one enclosure.
+Title: Make-up air plant
+Text: A dedicated make-up air handler conditions the outdoor air the cleanroom needs.
 Equipment:
-- governair-chiller | Process chiller plant
-- cooney-coil | Make-up air preheat coils
+- huntair-cleanroom-ahu | Cleanroom make-up air handler | Holds close temperature, humidity and pressure
+- cooney-freeze-block | Make-up air preheat coils
 
 Location: hi-tech-manufacturing-2
 Title: Cleanroom
 Text: Fan arrays and cleanroom air systems recirculate filtered air continuously.
 Equipment:
-- huntair-cleanroom | Fan filter units and recirculation air handlers
+- huntair-ffu | Fan filter units and recirculation air handlers
 - huntair-fanwall | Recirculation fan array
 
 Location: hi-tech-manufacturing-3
 Title: Make-up air
 Text: Make-up air units with humidifiers supply the cleanroom with conditioned outdoor air.
 Equipment:
-- nortek-ahu | Cleanroom make-up air handler
-- steamovap-humid | Clean-steam humidifier
+- huntair-ahu | Cleanroom make-up air handler
+- steamovap-ise | Steam exchange humidifier | Clean steam made from central boiler steam

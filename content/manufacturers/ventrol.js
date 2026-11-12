@@ -14,9 +14,11 @@ DMR.registerManufacturer({
   active: true,
   family: "Nortek Air Solutions",
   logo: "assets/logos/Ventrol.jpg",
-  website: null,
-  blurb: "Custom air handling units for commercial and institutional buildings.",
+  website: "https://www.nortekair.com/about/our-brands/ventrol/",
+  blurb: "Custom and knockdown air handlers, and FANWALL systems.",
   products: [
-    { id: "ventrol-ahu", category: "ahu", shape: "ahu" }
+    { id: "ventrol-ahu", category: "ahu", shape: "ahu" },
+    { id: "ventrol-knockdown", category: "ahu", shape: "ahu" },
+    { id: "ventrol-fanwall", category: "fanwall", shape: "fanwall" }
   ]
 });

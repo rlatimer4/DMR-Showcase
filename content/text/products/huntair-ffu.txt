@@ -1,0 +1,30 @@
+# HUNTAIR — CLEANPAK FAN FILTER UNITS
+#
+# This file holds the words and photos shown for this product. Edit them freely.
+# Keep the labels (the words before each colon) and the dashes at the start of list lines.
+# Lines that start with # are notes and are not shown on the site.
+
+Name: CleanPak Fan Filter Units
+
+Summary: Fan filter units for cleanroom ceilings, with a backward-curved plenum fan and a high-efficiency brushless DC motor, plus monitoring and control for fab operation.
+
+Key points:
+- High-efficiency EC motor
+- Central monitoring and control
+- For semiconductor, pharmaceutical and research cleanrooms
+
+Photos:
+# One photo per line:  - file | caption
+# Put new image files in assets/photos/huntair-ffu/ and list them here. The first one is the main photo.
+- assets/photos/huntair-ffu/1.jpg | Image: Nortek Air Solutions
+- assets/photos/huntair-ffu/2.jpg | Image: Nortek Air Solutions
+- assets/photos/huntair-ffu/3.jpg | Image: Nortek Air Solutions
+
+Documents:
+- Huntair product page | https://www.nortekair.com/products/cleanpak-fan-filter-units/
+
+# ---------------- Optional extras ----------------
+# Remove the # at the start of a line to use it.
+# Badge: New
+# Specifications:
+# - Capacity: 20 to 200 tons

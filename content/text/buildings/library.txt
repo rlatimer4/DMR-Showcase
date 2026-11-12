@@ -28,18 +28,18 @@ Location: library-1
 Title: Outdoor air system
 Text: A dedicated outdoor air system delivers dry ventilation air so humidity stays stable.
 Equipment:
-- venmar-doas | Dedicated outdoor air unit | Delivers dry ventilation air year-round
+- venmar-energypack | Dedicated outdoor air unit | Delivers dry ventilation air year-round
 
 Location: library-2
 Title: Reading room
 Text: Concealed fan coils run quietly at low speed. Panel radiators heat the window wall.
 Equipment:
-- envirotec-fancoil | Concealed fan coils | Low-speed, quiet units
-- runtal-radiator | Window-wall radiators
+- envirotec-hp | Concealed fan coils | Low-speed, quiet units
+- runtal-hydronic | Window-wall radiators
 
 Location: library-3
 Title: Archive
 Text: Desiccant dehumidifiers and humidifiers hold the archive within a narrow humidity range.
 Equipment:
-- fisair-dehum | Archive dehumidifier | Desiccant unit holding 35 to 45% relative humidity
-- fisair-humid | Archive humidifier
+- fisair-dfra | Archive dehumidifier | Desiccant unit holding 35 to 45% relative humidity
+- fisair-resistance | Archive humidifier

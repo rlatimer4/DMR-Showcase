@@ -333,3 +333,6 @@ address a { color: #fff; font-weight: 700; }
 .pgal-thumbs .ph { padding: 2px; border-width: 1px; }
 .pgal-thumbs .ph-label { display: none; }
 .pgal-thumbs .ph-name { font-size: 10.5px; line-height: 1.15; }
+
+/* product photos are often cut-outs on white: show the whole image rather than cropping it */
+.card img.media, .pgal img.media { object-fit: contain; background: #fff; }

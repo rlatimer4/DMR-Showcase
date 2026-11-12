@@ -14,10 +14,11 @@ DMR.registerManufacturer({
   active: true,
   family: "Nortek Air Solutions",
   logo: "assets/logos/Governair.jpg",
-  website: null,
-  blurb: "Custom packaged rooftop systems and packaged chiller plants.",
+  website: "https://www.nortekair.com/about/our-brands/governair/",
+  blurb: "Custom and knockdown air handlers, and FANWALL retrofit systems.",
   products: [
-    { id: "governair-rtu", category: "packaged", shape: "rooftop" },
-    { id: "governair-chiller", category: "chillers", shape: "chiller" }
+    { id: "governair-ahu", category: "ahu", shape: "ahu" },
+    { id: "governair-knockdown", category: "ahu", shape: "ahu" },
+    { id: "governair-fanwall", category: "fanwall", shape: "fanwall" }
   ]
 });

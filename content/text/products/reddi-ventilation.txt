@@ -1,0 +1,26 @@
+# REDD-I — FANS AND VENTILATION
+#
+# This file holds the words and photos shown for this product. Edit them freely.
+# Keep the labels (the words before each colon) and the dashes at the start of list lines.
+# Lines that start with # are notes and are not shown on the site.
+
+Name: Fans and Ventilation
+
+Summary: Fans and ventilation products for commercial and industrial buildings.
+
+Key points:
+- Exhaust and circulation fans
+
+Photos:
+# One photo per line:  - file | caption
+# Put new image files in assets/photos/reddi-ventilation/ and list them here. The first one is the main photo.
+- assets/photos/dmr/Redd-i-image.jpg | Redd-i product range. Image: dmr-hvac.com
+
+Documents:
+- Redd-i product page | https://www.redd-i.com/
+
+# ---------------- Optional extras ----------------
+# Remove the # at the start of a line to use it.
+# Badge: New
+# Specifications:
+# - Capacity: 20 to 200 tons

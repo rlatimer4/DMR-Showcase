@@ -1,0 +1,29 @@
+# STEAMOVAP TECHNOLOGIES — ACA ATOMIZING HUMIDIFIER
+#
+# This file holds the words and photos shown for this product. Edit them freely.
+# Keep the labels (the words before each colon) and the dashes at the start of list lines.
+# Lines that start with # are notes and are not shown on the site.
+
+Name: ACA Atomizing Humidifier
+
+Summary: An atomizing humidifier and cooler with a nozzle that produces 2 to 4 micron droplets as a uniform dry fog.
+
+Key points:
+- 2 to 4 micron droplets
+- Humidifies and cools
+
+Photos:
+# One photo per line:  - file | caption
+# Put new image files in assets/photos/steamovap-aca/ and list them here. The first one is the main photo.
+- assets/photos/steamovap-aca/1.jpg | Image: SteamOVap Technologies
+- assets/photos/steamovap-aca/2.jpg | Image: SteamOVap Technologies
+- assets/photos/steamovap-aca/3.jpg | Image: SteamOVap Technologies
+
+Documents:
+- SteamOVap Technologies product page | https://steamovap.com/aca-atomizing-humidifier/
+
+# ---------------- Optional extras ----------------
+# Remove the # at the start of a line to use it.
+# Badge: New
+# Specifications:
+# - Capacity: 20 to 200 tons

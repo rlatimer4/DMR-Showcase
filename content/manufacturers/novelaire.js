@@ -14,10 +14,12 @@ DMR.registerManufacturer({
   active: true,
   family: "Independent",
   logo: "assets/logos/NovelAire-logo-2.jpg",
-  website: null,
-  blurb: "Desiccant dehumidification and energy recovery wheels.",
+  website: "https://www.novelaire.com/",
+  blurb: "Energy conservation wheels, desiccant wheels and packaged dehumidification units.",
   products: [
-    { id: "novelaire-wheel", category: "recovery", shape: "wheel" },
-    { id: "novelaire-desiccant", category: "dehum", shape: "dehumidifier" }
+    { id: "novelaire-ecw", category: "recovery", shape: "wheel" },
+    { id: "novelaire-desiccant-wheels", category: "dehum", shape: "wheel" },
+    { id: "novelaire-comfortdry", category: "dehum", shape: "dehumidifier" },
+    { id: "novelaire-precisiondry", category: "dehum", shape: "dehumidifier" }
   ]
 });

@@ -1,0 +1,29 @@
+# GOVERNAIR — FANWALL RETROFIT SYSTEMS
+#
+# This file holds the words and photos shown for this product. Edit them freely.
+# Keep the labels (the words before each colon) and the dashes at the start of list lines.
+# Lines that start with # are notes and are not shown on the site.
+
+Name: FANWALL Retrofit Systems
+
+Summary: Arrays of smaller direct-drive fans that replace one large fan. Used to replace ageing fans in existing air handlers, they avoid the cost and disruption of a failure and can cut fan energy by as much as 40%.
+
+Key points:
+- Redundancy: remaining fans keep running if one fails
+- Even airflow across coils and filters
+- Fan cubes pass through a standard doorway for retrofit
+
+Photos:
+# One photo per line:  - file | caption
+# Put new image files in assets/photos/governair-fanwall/ and list them here. The first one is the main photo.
+- assets/photos/governair-fanwall/1.jpg | Image: Nortek Air Solutions
+- assets/photos/governair-fanwall/2.jpg | Image: Nortek Air Solutions
+
+Documents:
+- Governair product page | https://www.nortekair.com/products/fanwall-systems/
+
+# ---------------- Optional extras ----------------
+# Remove the # at the start of a line to use it.
+# Badge: New
+# Specifications:
+# - Capacity: 20 to 200 tons

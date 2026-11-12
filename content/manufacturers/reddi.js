@@ -14,9 +14,12 @@ DMR.registerManufacturer({
   active: true,
   family: "Independent",
   logo: "assets/logos/reddi.png",
-  website: null,
-  blurb: "Duct heaters, VAV systems and electric unit and wall heaters, built in the USA.",
+  website: "https://www.redd-i.com/",
+  blurb: "Electric duct, unit and wall heaters, controls and ventilation.",
   products: [
-    { id: "reddi-line", category: "electric", shape: "ductheater" }
+    { id: "reddi-duct-heaters", category: "electric", shape: "ductheater" },
+    { id: "reddi-unit-heaters", category: "electric", shape: "unitheater" },
+    { id: "reddi-controls", category: "controls", shape: "box" },
+    { id: "reddi-ventilation", category: "heaters", shape: "unitheater" }
   ]
 });

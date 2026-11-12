@@ -14,10 +14,28 @@ DMR.registerManufacturer({
   active: true,
   family: "Independent",
   logo: "assets/logos/Fisair-Logo-3.jpg",
-  website: null,
-  blurb: "Humidifiers and desiccant dehumidifiers.",
+  website: "https://fisair.com/",
+  blurb: "Diphusair humidifiers, DF desiccant dehumidifiers and HEF evaporative coolers.",
   products: [
-    { id: "fisair-humid", category: "humid", shape: "humidifier" },
-    { id: "fisair-dehum", category: "dehum", shape: "dehumidifier" }
+    { id: "fisair-fsh", category: "humid", shape: "humidifier" },
+    { id: "fisair-mt2", category: "humid", shape: "humidifier" },
+    { id: "fisair-electrode", category: "humid", shape: "humidifier" },
+    { id: "fisair-resistance", category: "humid", shape: "humidifier" },
+    { id: "fisair-asc", category: "humid", shape: "humidifier" },
+    { id: "fisair-vxv", category: "humid", shape: "humidifier" },
+    { id: "fisair-dfa", category: "dehum", shape: "dehumidifier" },
+    { id: "fisair-dfog", category: "dehum", shape: "dehumidifier" },
+    { id: "fisair-dfra", category: "dehum", shape: "dehumidifier" },
+    { id: "fisair-dflex", category: "dehum", shape: "dehumidifier" },
+    { id: "fisair-dflow", category: "dehum", shape: "dehumidifier" },
+    { id: "fisair-dfrb", category: "dehum", shape: "dehumidifier" },
+    { id: "fisair-dfrc", category: "dehum", shape: "dehumidifier" },
+    { id: "fisair-dfrd", category: "dehum", shape: "dehumidifier" },
+    { id: "fisair-dfrigo", category: "dehum", shape: "dehumidifier" },
+    { id: "fisair-dfrm", category: "dehum", shape: "dehumidifier" },
+    { id: "fisair-hef2e", category: "evap", shape: "humidifier" },
+    { id: "fisair-hef3", category: "evap", shape: "humidifier" },
+    { id: "fisair-hef7", category: "evap", shape: "humidifier" },
+    { id: "fisair-atomspray", category: "evap", shape: "humidifier" }
   ]
 });

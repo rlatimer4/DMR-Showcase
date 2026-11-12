@@ -29,18 +29,18 @@ Title: Gallery air handling
 Text: Custom air handlers with close humidity control serve the galleries.
 Equipment:
 - temtrol-ahu | Gallery air handler | Close temperature and humidity control with reheat and humidifier sections
-- uvr-coil | UV-C coil fixture
+- uvr-rlm | UV-C coil fixture
 
 Location: museum-2
 Title: Galleries
 Text: Humidifiers and desiccant systems hold the galleries at setpoint in every season.
 Equipment:
-- fisair-humid | Gallery humidifier
-- novelaire-desiccant | Gallery desiccant dehumidifier
+- fisair-resistance | Gallery humidifier
+- novelaire-comfortdry | Gallery desiccant dehumidifier
 
 Location: museum-3
 Title: Collection storage
 Text: Steam humidification and dehumidifiers protect stored collections.
 Equipment:
-- steamovap-humid | Storage vault humidifier
-- fisair-dehum | Storage dehumidifier
+- steamovap-ier | Storage vault humidifier
+- fisair-dfra | Storage dehumidifier

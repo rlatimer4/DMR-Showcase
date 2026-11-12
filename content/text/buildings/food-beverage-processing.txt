@@ -12,7 +12,7 @@ Why a DMR package:
 # One line per advantage, written as  - Short heading: one sentence
 - Dry after wash-down: Desiccant drying gets rooms back in production sooner
 - Sanitary construction: Stainless interiors, sloped drain pans and UV-C
-- Cold rooms stay cold: Air curtains separate temperature zones
+- No fog at the doors: Dry air stops condensation and frost at cold-room doors
 
 Challenges:
 - Wash-down humidity
@@ -28,13 +28,13 @@ Location: food-beverage-processing-1
 Title: Process air handling
 Text: Custom air handlers with UV-C keep coils clean in sanitary applications.
 Equipment:
-- nortek-ahu | Wash-down air handler | Stainless interior with sloped drain pans
-- uvr-coil | UV-C coil fixture
+- huntair-ahu | Wash-down air handler | Stainless interior with sloped drain pans
+- uvr-rlm | UV-C coil fixture
 
 Location: food-beverage-processing-2
 Title: Processing room
 Text: Desiccant dehumidifiers dry the room after wash-down and prevent condensation.
 Equipment:
-- fisair-dehum | Processing room dehumidifier
-- novelaire-desiccant | Post-wash-down drying system
-- kampmann-curtain | Cold-room air curtain
+- fisair-dfra | Processing room dehumidifier
+- novelaire-precisiondry | Post-wash-down drying system
+- kampmann-top | Door unit heaters | Offset cold air at cold-room and dock doors

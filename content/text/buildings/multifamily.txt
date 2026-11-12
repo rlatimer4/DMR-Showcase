@@ -29,19 +29,19 @@ Title: Corridor ventilation
 Text: Energy recovery ventilators supply corridors and units with fresh air.
 Equipment:
 - venmar-erv | Corridor energy recovery ventilator
-- novelaire-wheel | Energy recovery wheel
+- novelaire-ecw | Energy recovery wheel
 
 Location: multifamily-2
 Title: Apartments
 Text: VRF, mini-splits or fan coils give each apartment its own system.
 Equipment:
-- gree-vrf | Apartment VRF
-- gree-mini | Mini-split heat pump
-- envirotec-fancoil | Vertical-stack fan coil
+- gree-gmv6 | Apartment VRF
+- gree-livo | Mini-split heat pump
+- envirotec-vh | Vertical hi-rise fan coil
 
 Location: multifamily-3
 Title: Amenity level
-Text: Water-source heat pumps and trench units serve the lobby and amenity spaces.
+Text: A multi-zone heat pump and trench units serve the lobby and amenity spaces.
 Equipment:
-- mammoth-wshp | Amenity water-source heat pumps
-- kampmann-trench | Lobby trench heater
+- gree-multi | Amenity multi-zone heat pump | One outdoor unit serves the lobby, gym and lounge
+- kampmann-katherm-qk | Lobby trench heater

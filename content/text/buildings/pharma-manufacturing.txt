@@ -36,13 +36,13 @@ Location: pharma-manufacturing-2
 Title: Cleanroom
 Text: Recirculation units and fan filter units keep particle counts within class. Fan arrays provide redundancy.
 Equipment:
-- huntair-cleanroom | Cleanroom recirculation units and fan filter units
+- huntair-ffu | Cleanroom recirculation units and fan filter units
 - huntair-fanwall | Fan array
 
 Location: pharma-manufacturing-3
 Title: Dry room
 Text: Desiccant systems hold humidity lower than a cooling coil can reach.
 Equipment:
-- novelaire-desiccant | Dry room desiccant system
-- fisair-dehum | Compounding room dehumidifier
-- fisair-humid | Humidifier for humidity-controlled suites
+- novelaire-precisiondry | Dry room desiccant system | Very low dew points for powders and compounding
+- fisair-dfra | Compounding room dehumidifier
+- fisair-resistance | Humidifier for humidity-controlled suites

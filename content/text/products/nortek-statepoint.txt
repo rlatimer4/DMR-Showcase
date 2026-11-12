@@ -1,0 +1,28 @@
+# NORTEK AIR SOLUTIONS — STATEPOINT LIQUID COOLING
+#
+# This file holds the words and photos shown for this product. Edit them freely.
+# Keep the labels (the words before each colon) and the dashes at the start of list lines.
+# Lines that start with # are notes and are not shown on the site.
+
+Name: StatePoint Liquid Cooling
+
+Summary: StatePoint is Nortek Data Center Cooling's liquid cooling technology. It uses indirect evaporative cooling through a membrane exchanger to produce cold water for the data hall with low water and energy use.
+
+Key points:
+- Indirect evaporative liquid cooling
+- Low water and energy use
+- Supplies air handlers, fan walls and liquid-cooled racks
+
+Photos:
+# One photo per line:  - file | caption
+# Put new image files in assets/photos/nortek-statepoint/ and list them here. The first one is the main photo.
+- assets/photos/dmr/Nortek-Image.jpg | Nortek Air Solutions product range. Image: dmr-hvac.com
+
+Documents:
+- Nortek Air Solutions product page | https://www.nortekdatacenter.com/statepoint/
+
+# ---------------- Optional extras ----------------
+# Remove the # at the start of a line to use it.
+# Badge: New
+# Specifications:
+# - Capacity: 20 to 200 tons

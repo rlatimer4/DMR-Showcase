@@ -1,0 +1,27 @@
+# FISAIR — DFRM INDUSTRIAL DESICCANT DEHUMIDIFIERS
+#
+# This file holds the words and photos shown for this product. Edit them freely.
+# Keep the labels (the words before each colon) and the dashes at the start of list lines.
+# Lines that start with # are notes and are not shown on the site.
+
+Name: DFRM Industrial Desiccant Dehumidifiers
+
+Summary: Industrial desiccant dehumidifiers built to order for process air drying.
+
+Key points:
+- Custom configurations
+- Robust industrial construction
+
+Photos:
+# One photo per line:  - file | caption
+# Put new image files in assets/photos/fisair-dfrm/ and list them here. The first one is the main photo.
+- assets/photos/fisair-dfrm/1.jpg | Image: Fisair
+
+Documents:
+- Fisair product page | https://fisair.com/products/df-air-dehumidifiers/industrial-desiccant-dehumidfier-dfrm/
+
+# ---------------- Optional extras ----------------
+# Remove the # at the start of a line to use it.
+# Badge: New
+# Specifications:
+# - Capacity: 20 to 200 tons

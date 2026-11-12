@@ -1,0 +1,27 @@
+# NORTEK AIR SOLUTIONS — STEAM DISTRIBUTING COILS
+#
+# This file holds the words and photos shown for this product. Edit them freely.
+# Keep the labels (the words before each colon) and the dashes at the start of list lines.
+# Lines that start with # are notes and are not shown on the site.
+
+Name: Steam Distributing Coils
+
+Summary: Steam distributing (tube-in-tube) coils that spread steam evenly along the tube, for outdoor air and other freeze-prone duty.
+
+Key points:
+- Even leaving-air temperature
+- For preheat and outdoor air applications
+
+Photos:
+# One photo per line:  - file | caption
+# Put new image files in assets/photos/nortek-steam-distributing-coils/ and list them here. The first one is the main photo.
+- assets/photos/nortek-steam-distributing-coils/1.jpg | Image: Nortek Air Solutions
+
+Documents:
+- Nortek Air Solutions product page | https://www.nortekair.com/products/steam-distributing-coils/
+
+# ---------------- Optional extras ----------------
+# Remove the # at the start of a line to use it.
+# Badge: New
+# Specifications:
+# - Capacity: 20 to 200 tons

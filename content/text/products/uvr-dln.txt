@@ -1,0 +1,27 @@
+# UV RESOURCES — DLN XTREME UV-C FIXTURES
+#
+# This file holds the words and photos shown for this product. Edit them freely.
+# Keep the labels (the words before each colon) and the dashes at the start of list lines.
+# Lines that start with # are notes and are not shown on the site.
+
+Name: DLN Xtreme UV-C Fixtures
+
+Summary: A dual-lamp very high output NEMA-4 UV-C fixture that mounts on the outside of a plenum or duct.
+
+Key points:
+- Mounts from outside the duct
+- NEMA-4 enclosure
+
+Photos:
+# One photo per line:  - file | caption
+# Put new image files in assets/photos/uvr-dln/ and list them here. The first one is the main photo.
+- assets/photos/uvr-dln/1.jpg | Image: UV Resources
+
+Documents:
+- UV Resources product page | https://www.uvresources.com/dln-x/
+
+# ---------------- Optional extras ----------------
+# Remove the # at the start of a line to use it.
+# Badge: New
+# Specifications:
+# - Capacity: 20 to 200 tons

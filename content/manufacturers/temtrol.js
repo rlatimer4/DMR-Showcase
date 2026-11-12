@@ -14,9 +14,12 @@ DMR.registerManufacturer({
   active: true,
   family: "Nortek Air Solutions",
   logo: "assets/logos/Temtrol.jpg",
-  website: null,
-  blurb: "Custom air handlers for institutional and healthcare projects.",
+  website: "https://www.nortekair.com/about/our-brands/temtrol/",
+  blurb: "Custom, knockdown and Temtrol LC air handlers, and FANWALL systems.",
   products: [
-    { id: "temtrol-ahu", category: "ahu", shape: "ahu" }
+    { id: "temtrol-ahu", category: "ahu", shape: "ahu" },
+    { id: "temtrol-knockdown", category: "ahu", shape: "ahu" },
+    { id: "temtrol-fanwall", category: "fanwall", shape: "fanwall" },
+    { id: "temtrol-lc", category: "ahu", shape: "ahu" }
   ]
 });

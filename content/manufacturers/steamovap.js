@@ -14,9 +14,20 @@ DMR.registerManufacturer({
   active: true,
   family: "Independent",
   logo: "assets/logos/SteamOVap-logo.jpg",
-  website: null,
-  blurb: "Steam humidification systems.",
+  website: "https://steamovap.com/",
+  blurb: "Steam, evaporative, ultrasonic and atomizing humidifiers, controls and water treatment.",
   products: [
-    { id: "steamovap-humid", category: "humid", shape: "humidifier" }
+    { id: "steamovap-ier", category: "humid", shape: "humidifier" },
+    { id: "steamovap-res", category: "humid", shape: "humidifier" },
+    { id: "steamovap-ise", category: "humid", shape: "humidifier" },
+    { id: "steamovap-ils", category: "humid", shape: "humidifier" },
+    { id: "steamovap-distribution", category: "humid", shape: "humidifier" },
+    { id: "steamovap-aem", category: "humid", shape: "humidifier" },
+    { id: "steamovap-aul", category: "humid", shape: "humidifier" },
+    { id: "steamovap-aca", category: "humid", shape: "humidifier" },
+    { id: "steamovap-controls", category: "controls", shape: "box" },
+    { id: "steamovap-safety", category: "controls", shape: "box" },
+    { id: "steamovap-water-filter", category: "controls", shape: "box" },
+    { id: "steamovap-wro", category: "controls", shape: "box" }
   ]
 });
