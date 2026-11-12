@@ -32,11 +32,17 @@ Equipment:
 - ventrol-ahu | Air handler with integral energy recovery
 
 Location: mid-rise-office-2
-Title: Office floor
-Text: Blower coils or VAV terminals serve each zone.
+Title: Office floor: VAV system
+Text: VAV terminals vary the air to each zone from a central air handler.
+Equipment:
+- envirotec-sdr | Single-duct VAV boxes | Interior zones
+- envirotec-crb | Series fan-powered VAV terminals | Perimeter zones with reheat
+
+Location: mid-rise-office-4
+Title: Office floor: blower coil system
+Text: A blower coil above the ceiling of each zone heats and cools it directly.
 Equipment:
 - envirotec-hdd | Ceiling blower coil units | Horizontal direct-drive units above the ceiling, one per zone
-- envirotec-sdr | Single-duct VAV boxes
 
 Location: mid-rise-office-3
 Title: Floor-by-floor units

@@ -15,10 +15,9 @@ DMR.registerManufacturer({
   family: "Nortek Air Solutions",
   logo: "assets/logos/Governair.jpg",
   website: "https://www.nortekair.com/about/our-brands/governair/",
-  blurb: "Custom and knockdown air handlers, and FANWALL retrofit systems.",
+  blurb: "Custom air handlers and FANWALL retrofit systems.",
   products: [
     { id: "governair-ahu", category: "ahu", shape: "ahu" },
-    { id: "governair-knockdown", category: "ahu", shape: "ahu" },
     { id: "governair-fanwall", category: "fanwall", shape: "fanwall" }
   ]
 });

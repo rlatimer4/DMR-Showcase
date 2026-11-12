@@ -6,7 +6,7 @@
 
 Name: Custom Air Handlers
 
-Summary: Air handlers engineered unit by unit for the fit, efficiency and reliability a project needs, used in healthcare, education, manufacturing, data centers, cleanrooms, offices and hospitality.
+Summary: Air handlers engineered unit by unit for the fit, efficiency and reliability a project needs, used in healthcare, education, manufacturing, data centers, cleanrooms, offices and hospitality. Governair units are built with construction similar to Temtrol air handlers.
 
 Key points:
 - Custom construction, configuration and materials

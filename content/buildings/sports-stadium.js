@@ -23,6 +23,7 @@ DMR.registerBuilding({
   stops: [
     { id: "sports-stadium-1", at: { floor: "yard", x: 0.2 }, space: "plant" },
     { id: "sports-stadium-2", at: { floor: 1, x: 0.7 }, space: "suite" },
+    { id: "sports-stadium-4", at: { floor: 1, x: 0.25 }, space: "suite" },
     { id: "sports-stadium-3", at: { floor: 0, x: 0.25 }, space: "locker" }
   ],
   // Shapes that make this building recognizable. See CONTENT.md for the kit.

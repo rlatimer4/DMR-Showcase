@@ -15,10 +15,11 @@ DMR.registerManufacturer({
   family: "Nortek Air Solutions",
   logo: "assets/logos/Ventrol.jpg",
   website: "https://www.nortekair.com/about/our-brands/ventrol/",
-  blurb: "Custom and knockdown air handlers, and FANWALL systems.",
+  blurb: "Custom, knockdown and washdown air handlers, and FANWALL systems.",
   products: [
     { id: "ventrol-ahu", category: "ahu", shape: "ahu" },
     { id: "ventrol-knockdown", category: "ahu", shape: "ahu" },
+    { id: "ventrol-washdown", category: "ahu", shape: "ahu" },
     { id: "ventrol-fanwall", category: "fanwall", shape: "fanwall" }
   ]
 });

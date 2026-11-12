@@ -32,12 +32,17 @@ Equipment:
 - novelaire-ecw | Energy recovery wheel
 
 Location: multifamily-2
-Title: Apartments
-Text: VRF, mini-splits or fan coils give each apartment its own system.
+Title: Apartments: VRF and mini-split systems
+Text: Each apartment has its own heat pump system and its own bill.
 Equipment:
-- gree-gmv6 | Apartment VRF
-- gree-livo | Mini-split heat pump
-- envirotec-vh | Vertical hi-rise fan coil
+- gree-gmv6 | Apartment VRF system
+- gree-livo | Mini-split heat pump | Wall-mounted unit in each room
+
+Location: multifamily-4
+Title: Apartments: fan coil system
+Text: Vertical hi-rise fan coils stack floor to floor on a central riser.
+Equipment:
+- envirotec-vh | Vertical hi-rise fan coil | One riser-mounted unit per apartment
 
 Location: multifamily-3
 Title: Amenity level

@@ -301,7 +301,7 @@ function init() {
     g.add(shell);
     scene.add(g);
     const { width: w, depth: dp, floorHeight: fh, bays, height: h } = b.size;
-    const m = models[b.id] = { b, g, shell, cutaways: [], rooms: {}, spots: [], open: 0, openTarget: 0 };
+    const m = models[b.id] = { b, g, shell, cutaways: [], rooms: {}, spots: [], equip: [], open: 0, openTarget: 0 };
     generateShell(b, shell, m);
     if (b.model) loadModel(b, m);
 
@@ -324,14 +324,22 @@ function init() {
         const widths = shapes.map(sh => P.footprint(sh, outdoor)), total = widths.reduce((a, v) => a + v, 0) || 1;
         const k = Math.max(0.45, Math.min(1, room / total));
         let at = centre - total * k / 2;
-        return shapes.map((sh, n) => { at += widths[n] * k; return { shape: sh, x: at - widths[n] * k / 2, k }; });
+        return shapes.map((sh, n) => { at += widths[n] * k; return { shape: sh, x: at - widths[n] * k / 2, k, n }; });
+      };
+      // Each piece of equipment is its own group, so it can be clicked to open its product.
+      const place = (u, where) => {
+        const grp = new THREE.Group(), e = s.equipment[u.n], prod = D.lookup.products[e.product];
+        grp.userData = { product: e.product, label: (e.role || prod.name) + " · " + D.lookup.brands[prod.brand].name };
+        shell.add(grp);
+        P.equip(grp, u.shape, where);
+        m.equip.push(grp);
       };
       let pos;
       if (outdoor) {
         const onRoof = s.at.floor === "roof", y = onRoof ? h + 0.3 : 0.12, z = onRoof ? -1 : dp / 2 + 8.5;
         const room = Math.min(13, w - 2), cx = Math.max(-w / 2 + room / 2 + 0.5, Math.min(w / 2 - room / 2 - 0.5, x));
         if (!b.model) {
-          layout(cx, room).forEach(u => P.equip(shell, u.shape, { x: u.x, floorY: y, z, outdoor: true, scale: u.k }));
+          layout(cx, room).forEach(u => place(u, { x: u.x, floorY: y, z, outdoor: true, scale: u.k }));
           if (onRoof) {
             box(shell, 1.1, h, 1.1, cx + 2.5, h / 2 + 0.3, -dp / 2 + 1.2, M.supply, false);
             box(shell, 0.9, h, 0.9, cx - 2.5, h / 2 + 0.3, -dp / 2 + 1.2, M.return, false);
@@ -346,7 +354,7 @@ function init() {
         const y0 = s.at.floor * fh, cw = w / bays, col = Math.min(bays - 1, Math.floor(s.at.x * bays)), bx = -w / 2 + (col + 0.5) * cw;
         if (!b.model) {
           P.furnish(shell, s.space, { cx: bx, y: y0, w: cw, h: fh, dp });
-          layout(bx, cw - 1.5).forEach(u => P.equip(shell, u.shape, { x: u.x, floorY: y0 + 0.3, ceilY: y0 + fh - 0.75, dp, scale: u.k }));
+          layout(bx, cw - 1.5).forEach(u => place(u, { x: u.x, floorY: y0 + 0.3, ceilY: y0 + fh - 0.75, dp, scale: u.k }));
         }
         const room = new THREE.Mesh(new THREE.BoxGeometry(cw - 0.5, fh - 0.5, dp - 0.8),
           new THREE.MeshBasicMaterial({ color: 0xffa500, transparent: true, opacity: 0.07, depthWrite: false }));
@@ -428,6 +436,11 @@ function init() {
     ray.setFromCamera(ptr, camera);
     const s = ray.intersectObjects(spots.filter(x => x.visible))[0];
     if (s) return { stop: s.object.userData.stop };
+    if (view.building) {
+      // equipment inside the open building
+      const hit = ray.intersectObjects(models[view.building.id].equip, true)[0];
+      for (let o = hit && hit.object; o; o = o.parent) if (o.userData && o.userData.product) return { product: o.userData.product, label: o.userData.label };
+    }
     const h = ray.intersectObjects(hits.filter(x => x.parent.visible))[0];
     return h ? { building: h.object.userData.building } : null;
   }
@@ -436,6 +449,7 @@ function init() {
     if (!down || Math.hypot(e.clientX - down[0], e.clientY - down[1]) > 6) return;   // a drag, not a click
     const p = pick(e);
     if (p && p.stop) D.goToStop(p.stop);
+    else if (p && p.product) D.openProduct(p.product);
     else if (p && (!view.building || view.building.id !== p.building)) D.showBuilding(p.building);
   });
   const tip = document.createElement("p");
@@ -445,7 +459,8 @@ function init() {
     if (e.buttons !== 0) { tip.hidden = true; return; }
     const p = pick(e), r = stage.getBoundingClientRect();
     canvas.style.cursor = p ? "pointer" : "grab";
-    const name = p && p.building && (!view.building || view.building.id !== p.building) ? models[p.building].b.name : "";
+    const name = !p ? "" : p.product ? p.label + " — select for details" : p.building && (!view.building || view.building.id !== p.building) ? models[p.building].b.name : "";
+    canvas.style.cursor = p && (p.stop || p.product || name) ? "pointer" : "grab";
     tip.hidden = !name;
     if (name) { tip.textContent = name; tip.style.left = e.clientX - r.left + 14 + "px"; tip.style.top = e.clientY - r.top + 14 + "px"; }
   });
@@ -491,7 +506,7 @@ function init() {
   stage.appendChild(canvas);
   const hint = document.createElement("p");
   hint.className = "scene-hint";
-  hint.textContent = "Drag to rotate · Select a building, then a numbered point";
+  hint.textContent = "Drag to rotate · Select a building, a numbered point, or a piece of equipment";
   stage.appendChild(hint);
   stage.appendChild(tip);
   new ResizeObserver(resize).observe(stage);

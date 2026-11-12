@@ -22,7 +22,8 @@ DMR.registerBuilding({
   walls: "#cfd8df",
   stops: [
     { id: "mid-rise-office-1", at: { floor: "roof", x: 0.4 }, space: "plant" },
-    { id: "mid-rise-office-2", at: { floor: 3, x: 0.7 }, space: "open-office" },
+    { id: "mid-rise-office-2", at: { floor: 3, x: 0.75 }, space: "open-office" },
+    { id: "mid-rise-office-4", at: { floor: 3, x: 0.25 }, space: "open-office" },
     { id: "mid-rise-office-3", at: { floor: 1, x: 0.25 }, space: "mechanical" }
   ],
   // Shapes that make this building recognizable. See CONTENT.md for the kit.

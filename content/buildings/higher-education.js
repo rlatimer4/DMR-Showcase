@@ -24,6 +24,7 @@ DMR.registerBuilding({
     { id: "higher-education-1", at: { floor: "roof", x: 0.4 }, space: "plant" },
     { id: "higher-education-2", at: { floor: 2, x: 0.17 }, space: "lab" },
     { id: "higher-education-3", at: { floor: 1, x: 0.5 }, space: "lecture" },
+    { id: "higher-education-5", at: { floor: 1, x: 0.83 }, space: "lecture" },
     { id: "higher-education-4", at: { floor: 0, x: 0.83 }, space: "mechanical" }
   ],
   // Shapes that make this building recognizable. See CONTENT.md for the kit.

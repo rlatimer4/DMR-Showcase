@@ -23,6 +23,7 @@ DMR.registerBuilding({
   stops: [
     { id: "multifamily-1", at: { floor: "roof", x: 0.45 }, space: "plant" },
     { id: "multifamily-2", at: { floor: 3, x: 0.25 }, space: "apartment" },
+    { id: "multifamily-4", at: { floor: 3, x: 0.75 }, space: "apartment" },
     { id: "multifamily-3", at: { floor: 0, x: 0.7 }, space: "lobby" }
   ],
   // Shapes that make this building recognizable. See CONTENT.md for the kit.

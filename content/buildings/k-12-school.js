@@ -22,7 +22,9 @@ DMR.registerBuilding({
   walls: "#c0603f",
   stops: [
     { id: "k-12-school-1", at: { floor: "roof", x: 0.5 }, space: "plant" },
-    { id: "k-12-school-2", at: { floor: 1, x: 0.4 }, space: "classroom" },
+    { id: "k-12-school-2", at: { floor: 1, x: 0.375 }, space: "classroom" },
+    { id: "k-12-school-4", at: { floor: 1, x: 0.625 }, space: "classroom" },
+    { id: "k-12-school-5", at: { floor: 1, x: 0.875 }, space: "classroom" },
     { id: "k-12-school-3", at: { floor: 0, x: 0.12 }, space: "lobby" }
   ],
   // Shapes that make this building recognizable. See CONTENT.md for the kit.

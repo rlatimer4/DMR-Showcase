@@ -42,12 +42,18 @@ Equipment:
 - uvr-glo | Upper-room UV-C
 
 Location: hospital-3
-Title: Patient rooms
-Text: Quiet room-level units give each patient room its own temperature control. Flat panel radiators are easy to wipe down.
+Title: Patient rooms: fan coil system
+Text: A quiet fan coil gives each patient room its own temperature control. Flat panel radiators are easy to wipe down.
 Equipment:
 - envirotec-hp | Patient room fan coil | Quiet four-pipe unit above the entry ceiling
 - runtal-hydronic | Flat panel radiator | Easy to wipe down, with no fins to trap dust
+
+Location: hospital-5
+Title: Isolation rooms: VAV system
+Text: VAV boxes with reheat track supply and exhaust airflow to hold the room at the pressure it needs.
+Equipment:
 - envirotec-sdr | VAV box with reheat | Airflow tracking for isolation rooms
+- uvr-glo | Upper-room UV-C
 
 Location: hospital-4
 Title: Mechanical room

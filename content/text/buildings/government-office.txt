@@ -32,11 +32,17 @@ Equipment:
 - temtrol-ahu | Custom penthouse air handler
 
 Location: government-office-2
-Title: Office floors
-Text: VAV boxes and perimeter fan coils serve the office floors.
+Title: Office floors: VAV system
+Text: VAV boxes with reheat serve the office floors from the central air handlers.
 Equipment:
 - envirotec-sdr | VAV boxes with reheat
+
+Location: government-office-4
+Title: Office floors: fan coil system
+Text: Fan coils along the perimeter suit floors where new ductwork will not fit.
+Equipment:
 - envirotec-hp | Perimeter fan coils
+- envirotec-vf | Floor-mounted fan coils | Under the windows
 
 Location: government-office-3
 Title: Mechanical room

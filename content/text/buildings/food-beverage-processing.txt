@@ -28,7 +28,7 @@ Location: food-beverage-processing-1
 Title: Process air handling
 Text: Custom air handlers with UV-C keep coils clean in sanitary applications.
 Equipment:
-- huntair-ahu | Wash-down air handler | Stainless interior with sloped drain pans
+- ventrol-washdown | Washdown air handler | Interior built to be washed down, with sloped drain pans
 - uvr-rlm | UV-C coil fixture
 
 Location: food-beverage-processing-2

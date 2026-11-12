@@ -16,13 +16,14 @@ DMR.registerBuilding({
   id: "warehouse",
   name: "Warehouse",
   use: "industrial",
-  size: { width: 30, depth: 16, floors: 1, floorHeight: 11, bays: 1 },
+  size: { width: 30, depth: 16, floors: 1, floorHeight: 11, bays: 3 },
   model: null,
   facade: { style: "solid", color: "#8b949c", stripe: "#ffa500", doors: 6 },
   walls: "#98a1a9",
   stops: [
     { id: "warehouse-1", at: { floor: "roof", x: 0.3 }, space: "plant" },
-    { id: "warehouse-2", at: { floor: 0, x: 0.35 }, space: "high-bay" },
+    { id: "warehouse-2", at: { floor: 0, x: 0.17 }, space: "high-bay" },
+    { id: "warehouse-4", at: { floor: 0, x: 0.5 }, space: "high-bay" },
     { id: "warehouse-3", at: { floor: 0, x: 0.85 }, space: "dock" }
   ],
   // Shapes that make this building recognizable. See CONTENT.md for the kit.

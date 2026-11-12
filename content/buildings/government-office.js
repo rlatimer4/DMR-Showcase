@@ -23,6 +23,7 @@ DMR.registerBuilding({
   stops: [
     { id: "government-office-1", at: { floor: "roof", x: 0.4 }, space: "plant" },
     { id: "government-office-2", at: { floor: 2, x: 0.5 }, space: "open-office" },
+    { id: "government-office-4", at: { floor: 2, x: 0.17 }, space: "open-office" },
     { id: "government-office-3", at: { floor: 0, x: 0.83 }, space: "mechanical" }
   ],
   // Shapes that make this building recognizable. See CONTENT.md for the kit.

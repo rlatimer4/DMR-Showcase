@@ -32,12 +32,18 @@ Equipment:
 - novelaire-ecw | Energy recovery wheel | Recovers energy from bathroom exhaust
 
 Location: hotel-2
-Title: Guest rooms
-Text: Vertical-stack fan coils or VRF give each room its own control.
+Title: Guest rooms: fan coil system
+Text: A vertical hi-rise fan coil in each room stacks on a shared riser. A towel radiator heats the bathroom.
 Equipment:
 - envirotec-vh | Vertical hi-rise fan coil | One riser-mounted unit per room, stacked floor to floor
-- gree-gmv6 | Guest room VRF | Ducted indoor units with heat recovery between rooms
 - runtal-hydronic | Bathroom towel radiator
+
+Location: hotel-4
+Title: Guest rooms: VRF system
+Text: Ducted VRF indoor units serve each room, and the system moves heat from rooms that need cooling to rooms that need heating.
+Equipment:
+- gree-gmv6 | Guest room VRF system | Heat recovery between rooms
+- gree-ducted | Concealed ducted indoor unit | Above the entry ceiling of each room
 
 Location: hotel-3
 Title: Lobby

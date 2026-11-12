@@ -40,10 +40,16 @@ Equipment:
 - envirotec-sdr | Lab airflow VAV terminals
 
 Location: higher-education-3
-Title: Lecture halls
-Text: A VRF heat recovery system and fan coils keep lecture halls quiet.
+Title: Lecture halls: VRF system
+Text: A VRF heat recovery system moves heat between lecture halls and offices.
 Equipment:
 - gree-gmv6 | VRF heat recovery system | Moves heat between lecture halls and offices
+- gree-ducted | Concealed ducted indoor units
+
+Location: higher-education-5
+Title: Lecture halls: fan coil system
+Text: Fan coils on the campus chilled and hot water loops keep lecture halls quiet.
+Equipment:
 - envirotec-hp | Lecture hall fan coils
 
 Location: higher-education-4

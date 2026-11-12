@@ -31,10 +31,15 @@ Equipment:
 - rapid-mua | Direct-fired make-up air unit
 
 Location: warehouse-2
-Title: Warehouse floor
-Text: Air turnover units keep temperature even from floor to roof. Unit heaters cover local areas.
+Title: Warehouse floor: air turnover system
+Text: Air turnover units move large air volumes to keep temperature even from floor to roof.
 Equipment:
 - rapid-turnover | Air turnover unit
+
+Location: warehouse-4
+Title: Warehouse floor: unit heater system
+Text: Unit heaters hung through the building heat it zone by zone.
+Equipment:
 - sterling-unit-heaters | Hot water unit heaters
 - reddi-unit-heaters | Electric heaters | For offices and guard booths
 

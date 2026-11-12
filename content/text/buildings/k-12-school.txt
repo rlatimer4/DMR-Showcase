@@ -33,12 +33,24 @@ Equipment:
 - novelaire-ecw | Energy recovery wheel
 
 Location: k-12-school-2
-Title: Classrooms
-Text: Each classroom has its own unit and its own thermostat.
+Title: Classrooms: blower coil system
+Text: A vertical blower coil in a closet beside each classroom serves it through a short duct run.
 Equipment:
 - envirotec-vb | Classroom vertical blower coil | Reduced-footprint unit in a closet beside each classroom
-- gree-gmv6 | Classroom VRF | Ceiling cassette indoor units
-- envirotec-hp | Classroom fan coil
+
+Location: k-12-school-4
+Title: Classrooms: VRF system
+Text: Ceiling cassettes on a VRF system give each classroom its own thermostat.
+Equipment:
+- gree-gmv6 | Classroom VRF system
+- gree-cassette | Ceiling cassette indoor units
+
+Location: k-12-school-5
+Title: Classrooms: fan coil system
+Text: Fan coils on the school's hot and chilled water loops serve each classroom.
+Equipment:
+- envirotec-hp | Classroom fan coil | Above the ceiling
+- envirotec-vf | Floor-mounted fan coil | Under the windows
 
 Location: k-12-school-3
 Title: Entrance and gym
