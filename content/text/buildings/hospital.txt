@@ -60,5 +60,5 @@ Title: Mechanical room
 Text: Freeze-resistant preheat coils protect outdoor air systems in winter, and a central humidifier serves the general floors.
 Equipment:
 - cooney-freeze-block | Freeze-resistant preheat coil
-- ventrol-ahu | General-floor air handler
+- nortek-gas-phase | Air handler with gas-phase filtration | Removes helipad and ambulance bay fumes
 - fisair-resistance | Central humidifier

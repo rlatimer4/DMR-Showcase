@@ -152,7 +152,7 @@ export function makeProps({ THREE, box, mesh, material }) {
     const mount = p.outdoor ? "floor" : MOUNT[name] || "floor";
     const o = { x: p.x, scale: scale * (p.outdoor ? 1 : 1.25) * (p.scale || 1), y: p.floorY, z: p.outdoor ? p.z : 0 };
     if (!p.outdoor) {
-      if (mount === "ceiling") { o.y = p.ceilY; o.z = p.dp / 2 - 2.2; }
+      if (mount === "ceiling") { o.y = p.ceilY - (name === "uv" ? 1.5 * o.scale : 0); o.z = p.dp / 2 - 2.2; }   // the UV fixture is drawn upward, so hang it lower
       else if (mount === "door") { o.y = Math.min(p.ceilY, p.floorY + 3.4); o.z = p.dp / 2 - 0.7; }
       else if (mount === "front") { o.z = p.dp / 2 - 1.1; }
       else if (mount === "aisle") { o.z = p.dp / 2 - 2.2; o.x += 1.1; }   // at the open end of an aisle, clear of the racks

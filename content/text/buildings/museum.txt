@@ -29,6 +29,7 @@ Title: Gallery air handling
 Text: Custom air handlers with close humidity control serve the galleries.
 Equipment:
 - temtrol-ahu | Gallery air handler | Close temperature and humidity control with reheat and humidifier sections
+- nortek-gas-phase | Air handler with gas-phase filtration | Protects collections from gaseous pollutants
 - uvr-rlm | UV-C coil fixture
 
 Location: museum-2

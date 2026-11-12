@@ -29,6 +29,7 @@ Title: Packaged rooftop units
 Text: Packaged rooftop units provide heating, cooling and ventilation from one cabinet.
 Equipment:
 - mammoth-ultraline | Packaged rooftop unit
+- mammoth-ashp | Air-source heat pump | Standard or low-ambient model
 - uvr-rlm | UV-C coil fixture
 
 Location: low-rise-office-2

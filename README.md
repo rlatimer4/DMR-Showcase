@@ -19,7 +19,7 @@ The 3D view needs the site served over http(s); opening `index.html` from disk w
 
 | Section | What it does |
 | --- | --- |
-| Walkthrough | A real-time 3D world of building types in four use types (commercial, institutional, industrial, residential). Selecting a building shows what a DMR package brings to it and opens it as a cutaway; selecting a location zooms into the furnished room and lists the specific equipment. |
+| Walkthrough | A real-time 3D world of building types in four use types (commercial, institutional, industrial, residential). Selecting a building shows what a DMR package brings to it and opens it as a cutaway; selecting a room zooms into it, and selecting a piece of equipment marks it with a pointer and opens its product window. |
 | Products | Catalog with search and filters for product type, building type and manufacturer. Each product opens with its own photo gallery. |
 | Manufacturers | Logo tiles; selecting one filters the catalog to that manufacturer's full range. |
 | Installations | Google Map of installed equipment, filterable by manufacturer and building type. |

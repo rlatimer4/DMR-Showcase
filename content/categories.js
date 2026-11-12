@@ -13,6 +13,7 @@ DMR.categories = [
   { id: "datacenter", name: "Data Center Cooling", blurb: "Computer room air handlers and liquid cooling for data halls." },
   { id: "critical", name: "Operating Rooms & Cleanrooms", blurb: "Air delivery systems for surgical suites and classified cleanrooms." },
   { id: "recovery", name: "Energy Recovery", blurb: "Wheels, plates and outdoor air units that reclaim energy from exhaust air." },
+  { id: "heatpump", name: "Air-Source Heat Pumps", blurb: "Standard and low-ambient air-source heat pumps." },
   { id: "vrf", name: "VRF & Ductless", blurb: "Variable refrigerant flow systems and mini-splits." },
   { id: "terminal", name: "Terminal Units", blurb: "Fan coils, blower coils and VAV boxes that deliver air at the zone." },
   { id: "coils", name: "Coils", blurb: "Heating and cooling coils for new and existing air handlers." },

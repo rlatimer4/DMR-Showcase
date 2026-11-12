@@ -19,9 +19,9 @@
   function useName(id) { return D.useTypes.filter(function (u) { return u.id === id; })[0].name; }
 
   // One piece of equipment at a stop: what it is here, who makes it, why it suits.
-  function chip(e) {
+  function chip(e, n) {
     var p = L.products[e.product];
-    return '<li><button type="button" class="p-chip" data-product="' + e.product + '">' +
+    return '<li><button type="button" class="p-chip' + (n === cur.item ? " is-shown" : "") + '" data-item="' + n + '" data-product="' + e.product + '">' +
       "<span class='role'>" + (e.role || p.name) + "</span>" +
       "<strong>" + L.brands[p.brand].name + " · " + p.name + "</strong>" +
       (e.note ? "<em>" + e.note + "</em>" : "") + "</button></li>";
@@ -44,7 +44,7 @@
         (b.challenges.length ? "<details><summary>Typical challenges in this building type</summary><ul class='ticks'>" + b.challenges.map(function (c) { return "<li>" + c + "</li>"; }).join("") + "</ul></details>" : "") +
         "<h4>Where the equipment goes</h4>" +
         '<ol class="stop-list">' + b.stops.map(function (x) {
-          return '<li><button type="button" data-goto="' + x.id + '"><span class="num">' + x.n + "</span><span><strong>" + x.title + "</strong><em>" +
+          return '<li><button type="button" data-goto="' + x.id + '"><span><strong>' + x.title + "</strong><em>" +
             x.equipment.map(function (e) { return e.role || L.products[e.product].name; }).join(" · ") + "</em></span></button></li>";
         }).join("") + "</ol>" +
         '<button type="button" class="link" data-catalog="' + b.id + '">See all products for this building type</button>';
@@ -63,19 +63,27 @@
     tabs.querySelectorAll("button").forEach(function (t) { t.setAttribute("aria-pressed", t.dataset.use === active); });
   }
 
-  function show(use, building, stop) {
-    cur = { use: building ? building.use : use, building: building, stop: stop };
+  function show(use, building, stop, item) {
+    cur = { use: building ? building.use : use, building: building, stop: stop, item: stop ? item || 0 : 0 };
     if (D.view3d) D.view3d.focus(cur);
     render();
   }
   function findStop(id) { return stops.filter(function (s) { return s.id === id; })[0]; }
   function findBuilding(id) { return buildings.filter(function (b) { return b.id === id; })[0] || null; }
 
-  D.goToStop = function (id, scroll) {
+  D.goToStop = function (id, scroll, item) {
     var s = findStop(id);
     if (!s) return;
-    show(null, s.building, s);
+    show(null, s.building, s, item);
     if (scroll) document.getElementById("walkthrough").scrollIntoView({ behavior: reduce ? "auto" : "smooth" });
+  };
+  // Called when a 3D model is selected: point at it, list its room, and open its product window.
+  D.selectEquipment = function (stopId, n, open) {
+    var s = findStop(stopId);
+    if (!s || !s.equipment[n]) return;
+    if (cur.stop !== s) show(null, s.building, s, n);
+    else { cur.item = n; if (D.view3d) D.view3d.point(s.id, n); render(); }
+    if (open) D.openProduct(s.equipment[n].product);
   };
   D.showBuilding = function (id) { show(null, findBuilding(id), null); };
   D.tourState = function () { return cur; };
@@ -88,8 +96,17 @@
     if (t) show(t.dataset.use || null, null, null);
   });
 
+  // Hovering or focusing an equipment entry moves the pointer to its model.
+  function hover(e) {
+    var t = e.target.closest && e.target.closest("[data-item]");
+    if (t && cur.stop && D.view3d) D.view3d.point(cur.stop.id, Number(t.dataset.item));
+  }
+  panel.addEventListener("mouseover", hover);
+  panel.addEventListener("focusin", hover);
+  panel.addEventListener("mouseleave", function () { if (cur.stop && D.view3d) D.view3d.point(cur.stop.id, cur.item); });
   panel.addEventListener("click", function (e) {
     var t;
+    if ((t = e.target.closest("[data-item]")) && cur.stop) { cur.item = Number(t.dataset.item); if (D.view3d) D.view3d.point(cur.stop.id, cur.item); panel.querySelectorAll("[data-item]").forEach(function (c) { c.classList.toggle("is-shown", c === t); }); }
     if ((t = e.target.closest("[data-goto]"))) D.goToStop(t.dataset.goto);
     else if ((t = e.target.closest("[data-bld]"))) D.showBuilding(t.dataset.bld);
     else if ((t = e.target.closest("[data-use]"))) show(t.dataset.use, null, null);

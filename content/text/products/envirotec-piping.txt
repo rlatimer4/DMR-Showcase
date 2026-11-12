@@ -1,0 +1,27 @@
+# ENVIRO-TEC — VALVE PIPING PACKAGES
+#
+# This file holds the words and photos shown for this product. Edit them freely.
+# Keep the labels (the words before each colon) and the dashes at the start of list lines.
+# Lines that start with # are notes and are not shown on the site.
+
+Name: Valve Piping Packages
+
+Summary: Factory-assembled valve piping packages for fan coil and blower coil units.
+
+Key points:
+- Factory assembled and tested
+- Shortens installation on site
+
+Photos:
+# One photo per line:  - file | caption
+# Put new image files in assets/photos/envirotec-piping/ and list them here. The first one is the main photo.
+- assets/photos/envirotec-piping/1.jpg | Image: Enviro-Tec
+
+Documents:
+- Enviro-Tec product page | https://www.enviro-tec.com/products-and-solutions/fan-coil-units/piping_packages_ad/valve-piping-packages
+
+# ---------------- Optional extras ----------------
+# Remove the # at the start of a line to use it.
+# Badge: New
+# Specifications:
+# - Capacity: 20 to 200 tons

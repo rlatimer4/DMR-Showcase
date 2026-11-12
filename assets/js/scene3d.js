@@ -301,7 +301,7 @@ function init() {
     g.add(shell);
     scene.add(g);
     const { width: w, depth: dp, floorHeight: fh, bays, height: h } = b.size;
-    const m = models[b.id] = { b, g, shell, cutaways: [], rooms: {}, spots: [], equip: [], open: 0, openTarget: 0 };
+    const m = models[b.id] = { b, g, shell, cutaways: [], rooms: {}, spots: [], equip: [], items: {}, zones: [], open: 0, openTarget: 0 };
     generateShell(b, shell, m);
     if (b.model) loadModel(b, m);
 
@@ -329,7 +329,8 @@ function init() {
       // Each piece of equipment is its own group, so it can be clicked to open its product.
       const place = (u, where) => {
         const grp = new THREE.Group(), e = s.equipment[u.n], prod = D.lookup.products[e.product];
-        grp.userData = { product: e.product, label: (e.role || prod.name) + " · " + D.lookup.brands[prod.brand].name };
+        grp.userData = { product: e.product, stop: s.id, n: u.n, label: (e.role || prod.name) + " · " + D.lookup.brands[prod.brand].name };
+        m.items[s.id + ":" + u.n] = grp;
         shell.add(grp);
         P.equip(grp, u.shape, where);
         m.equip.push(grp);
@@ -350,6 +351,11 @@ function init() {
         }
         pos = new THREE.Vector3(cx, y + 5.8, z);
         s.frame = { x: cx, y: y + 2, z, w: room + 5, h: 9, outdoor: true };
+        // invisible click target around the outdoor equipment
+        const zone = new THREE.Mesh(new THREE.BoxGeometry(room + 2, 6, 7), new THREE.MeshBasicMaterial({ visible: false }));
+        zone.position.set(cx, y + 3, z);
+        zone.userData = { stop: s.id, title: s.title };
+        g.add(zone); m.zones.push(zone);
       } else {
         const y0 = s.at.floor * fh, cw = w / bays, col = Math.min(bays - 1, Math.floor(s.at.x * bays)), bx = -w / 2 + (col + 0.5) * cw;
         if (!b.model) {
@@ -360,22 +366,40 @@ function init() {
           new THREE.MeshBasicMaterial({ color: 0xffa500, transparent: true, opacity: 0.07, depthWrite: false }));
         room.position.set(bx, y0 + fh / 2 + 0.15, 0);
         room.visible = false; room.renderOrder = 3;
-        g.add(room); m.rooms[s.id] = room;
+        room.userData = { stop: s.id, title: s.title };
+        g.add(room); m.rooms[s.id] = room; m.zones.push(room);
         pos = new THREE.Vector3(bx - cw / 2 + 1.3, y0 + fh - 1.1, dp / 2 + 0.6);
         s.frame = { x: bx, y: y0 + fh / 2, z: 0, w: cw + 3, h: fh + 2.5 };
       }
-      const sp = new THREE.Sprite(new THREE.SpriteMaterial({ map: dotTexture(s.n, false), depthTest: false, transparent: true }));
-      sp.position.copy(pos);
-      sp.renderOrder = 10;
-      sp.visible = false;
-      sp.userData = { stop: s.id, off: sp.material.map, on: dotTexture(s.n, true), phase: s.n * 0.7 };
-      g.add(sp); spots.push(sp); m.spots.push(sp);
     });
   });
 
   /* ---------- camera ---------- */
 
-  let view = { use: null, building: null, stop: null };
+  let view = { use: null, building: null, stop: null, item: 0 };
+
+  // Pointer: an arrow that hovers over the piece of equipment being shown.
+  const pointer = (() => {
+    const c = document.createElement("canvas");
+    c.width = c.height = 128;
+    const g = c.getContext("2d");
+    g.beginPath(); g.moveTo(64, 122); g.lineTo(14, 50); g.lineTo(44, 50); g.lineTo(44, 8); g.lineTo(84, 8); g.lineTo(84, 50); g.lineTo(114, 50); g.closePath();
+    g.fillStyle = "#ffa500"; g.fill(); g.lineWidth = 9; g.lineJoin = "round"; g.strokeStyle = "#ffffff"; g.stroke(); g.lineWidth = 3; g.strokeStyle = "#282c39"; g.stroke();
+    const sp = new THREE.Sprite(new THREE.SpriteMaterial({ map: canvasTexture(c), depthTest: false, transparent: true }));
+    sp.center.set(0.5, 0);           // the tip of the arrow sits on the position
+    sp.renderOrder = 20;
+    sp.visible = false;
+    scene.add(sp);
+    return sp;
+  })();
+  const pointerAt = new THREE.Vector3();
+  function point(stopId, n) {
+    const b = view.building, grp = b && stopId ? models[b.id].items[stopId + ":" + (n || 0)] : null;
+    pointer.visible = !!grp;
+    if (!grp) return;
+    const bb = new THREE.Box3().setFromObject(grp);
+    pointerAt.set((bb.min.x + bb.max.x) / 2, bb.max.y + 0.15, (bb.min.z + bb.max.z) / 2);
+  }
   // A light that moves into whichever room is being looked at.
   const roomLight = new THREE.PointLight(0xffffff, 0, 60, 1.2);
   scene.add(roomLight);
@@ -400,7 +424,8 @@ function init() {
     return [new THREE.Vector3(a.x, d * 0.42, a.z + cell.depth * 0.3 + d * 0.9), new THREE.Vector3(a.x, 6, a.z + cell.depth * 0.3)];
   }
   function focus(v, instant) {
-    view = { use: v.use || null, building: v.building || null, stop: v.stop || null };
+    view = { use: v.use || null, building: v.building || null, stop: v.stop || null, item: v.item || 0 };
+    point(view.stop ? view.stop.id : null, view.item);
     const [p, t] = shot(view);
     fromPos.copy(camera.position); fromTgt.copy(controls.target); toPos.copy(p); toTgt.copy(t);
     if (instant || reduce) { camera.position.copy(p); controls.target.copy(t); t0 = -1; } else t0 = performance.now();
@@ -439,7 +464,10 @@ function init() {
     if (view.building) {
       // equipment inside the open building
       const hit = ray.intersectObjects(models[view.building.id].equip, true)[0];
-      for (let o = hit && hit.object; o; o = o.parent) if (o.userData && o.userData.product) return { product: o.userData.product, label: o.userData.label };
+      for (let o = hit && hit.object; o; o = o.parent) if (o.userData && o.userData.product) return o.userData;
+      // otherwise the room or rooftop area it stands in
+      const zone = ray.intersectObjects(models[view.building.id].zones)[0];
+      if (zone && !(view.stop && view.stop.id === zone.object.userData.stop)) return { room: zone.object.userData.stop, title: zone.object.userData.title };
     }
     const h = ray.intersectObjects(hits.filter(x => x.parent.visible))[0];
     return h ? { building: h.object.userData.building } : null;
@@ -448,8 +476,8 @@ function init() {
   canvas.addEventListener("pointerup", e => {
     if (!down || Math.hypot(e.clientX - down[0], e.clientY - down[1]) > 6) return;   // a drag, not a click
     const p = pick(e);
-    if (p && p.stop) D.goToStop(p.stop);
-    else if (p && p.product) D.openProduct(p.product);
+    if (p && p.product) D.selectEquipment(p.stop, p.n, true);
+    else if (p && p.room) D.goToStop(p.room);
     else if (p && (!view.building || view.building.id !== p.building)) D.showBuilding(p.building);
   });
   const tip = document.createElement("p");
@@ -459,8 +487,8 @@ function init() {
     if (e.buttons !== 0) { tip.hidden = true; return; }
     const p = pick(e), r = stage.getBoundingClientRect();
     canvas.style.cursor = p ? "pointer" : "grab";
-    const name = !p ? "" : p.product ? p.label + " — select for details" : p.building && (!view.building || view.building.id !== p.building) ? models[p.building].b.name : "";
-    canvas.style.cursor = p && (p.stop || p.product || name) ? "pointer" : "grab";
+    const name = !p ? "" : p.product ? p.label + " — select for details" : p.room ? p.title : p.building && (!view.building || view.building.id !== p.building) ? models[p.building].b.name : "";
+    canvas.style.cursor = p && (p.product || p.room || name) ? "pointer" : "grab";
     tip.hidden = !name;
     if (name) { tip.textContent = name; tip.style.left = e.clientX - r.left + 14 + "px"; tip.style.top = e.clientY - r.top + 14 + "px"; }
   });
@@ -498,6 +526,12 @@ function init() {
     });
     if (!reduce) fans.forEach(f => { f.rotation.y += dt * 6; });
     spots.forEach(sp => { if (sp.visible) { const base = view.stop ? 1.1 : 3; const s = reduce ? base : base + Math.sin(now / 420 + sp.userData.phase) * base * 0.07; sp.scale.set(s, s, 1); } });
+    if (pointer.visible) {
+      const k = camera.position.distanceTo(pointerAt) * 0.055;
+      pointer.scale.set(k, k, 1);
+      pointer.position.copy(pointerAt);
+      if (!reduce) pointer.position.y += (0.5 + 0.5 * Math.sin(now / 260)) * k * 0.35;
+    }
     controls.update();
     renderer.render(scene, camera);
   }
@@ -506,12 +540,12 @@ function init() {
   stage.appendChild(canvas);
   const hint = document.createElement("p");
   hint.className = "scene-hint";
-  hint.textContent = "Drag to rotate · Select a building, a numbered point, or a piece of equipment";
+  hint.textContent = "Drag to rotate · Select a building, then a room or a piece of equipment";
   stage.appendChild(hint);
   stage.appendChild(tip);
   new ResizeObserver(resize).observe(stage);
   resize();
-  D.view3d = { focus: v => focus(v, false), models };
+  D.view3d = { focus: v => focus(v, false), point, models };
   focus(D.tourState ? D.tourState() : view, true);
   requestAnimationFrame(frame);
 }

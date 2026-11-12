@@ -1,0 +1,29 @@
+# ENVIRO-TEC — HL HORIZONTAL LOW-PROFILE FAN COIL UNITS
+#
+# This file holds the words and photos shown for this product. Edit them freely.
+# Keep the labels (the words before each colon) and the dashes at the start of list lines.
+# Lines that start with # are notes and are not shown on the site.
+
+Name: HL Horizontal Low-Profile Fan Coil Units
+
+Summary: Horizontal low-profile fan coil units for shallow ceiling spaces.
+
+Key points:
+- Low-profile cabinet
+- Two-pipe and four-pipe coils
+
+Photos:
+# One photo per line:  - file | caption
+# Put new image files in assets/photos/envirotec-hl/ and list them here. The first one is the main photo.
+- assets/photos/envirotec-hl/1.jpg | Image: Enviro-Tec
+- assets/photos/envirotec-hl/2.jpg | Image: Enviro-Tec
+- assets/photos/envirotec-hl/3.jpg | Image: Enviro-Tec
+
+Documents:
+- Enviro-Tec product page | https://www.enviro-tec.com/products-and-solutions/fan-coil-units/hl_ad/hl-horizontal-low-profile-fan-coil-units
+
+# ---------------- Optional extras ----------------
+# Remove the # at the start of a line to use it.
+# Badge: New
+# Specifications:
+# - Capacity: 20 to 200 tons

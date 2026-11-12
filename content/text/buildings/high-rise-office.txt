@@ -29,14 +29,22 @@ Title: Rooftop plant
 Text: A custom rooftop unit matches the existing curb and structure, so replacement does not require roof rework.
 Equipment:
 - governair-ahu | Custom rooftop air handler | Built to the existing curb and structure
+- nortek-low-humidity | Air handler with low-temp desiccant dehumidification | Supplies dry air to the sensible cooling terminals
 - klingenburg-wheel | Energy recovery wheel | Enthalpy wheel on the building exhaust
 
 Location: high-rise-office-2
-Title: Open office
+Title: Open office: VAV system
 Text: Fan-powered VAV boxes condition the floor with small ducts and shallow ceilings.
 Equipment:
 - envirotec-crb | Series fan-powered VAV terminals | Hot water reheat at the perimeter
 - uvr-rlm | UV-C coil fixture | Keeps the floor air handler coil clean
+
+Location: high-rise-office-5
+Title: Open office: sensible cooling system
+Text: A rooftop unit with desiccant dehumidification delivers dry air, and sensible cooling VAV terminals cool each zone with a dry coil.
+Equipment:
+- envirotec-crc | Sensible cooling VAV terminal (DOAS VAV) | Standard-height CRC unit
+- envirotec-cfl-cc | Low-height sensible cooling VAV terminal | CFL-CC unit for shallow ceilings
 
 Location: high-rise-office-3
 Title: Tenant fit-out

@@ -15,9 +15,10 @@ DMR.registerManufacturer({
   family: "Nortek Air Solutions",
   logo: "assets/logos/Venmar.jpg",
   website: "https://www.nortekair.com/about/our-brands/venmar/",
-  blurb: "EnergyPack custom HVAC solutions and energy recovery units.",
+  blurb: "EnergyPack custom HVAC solutions, energy recovery units and air-source heat pumps.",
   products: [
     { id: "venmar-energypack", category: "recovery", shape: "erv" },
-    { id: "venmar-erv", category: "recovery", shape: "erv" }
+    { id: "venmar-erv", category: "recovery", shape: "erv" },
+    { id: "venmar-ashp", category: "heatpump", shape: "rooftop" }
   ]
 });

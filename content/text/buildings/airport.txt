@@ -28,14 +28,14 @@ Location: airport-1
 Title: Terminal air handling
 Text: Custom air handlers with fan arrays serve the concourse and keep running through a fan failure.
 Equipment:
-- temtrol-ahu | Concourse air handler | Custom unit with carbon filtration for jet fumes
+- nortek-gas-phase | Concourse air handler with gas-phase filtration | Removes jet fume odours and gases
 - huntair-fanwall | Fan array | Redundant supply fans for 24-hour operation
 
 Location: airport-2
 Title: Concourse
 Text: Trench units along the glass and UV-C in the air stream keep gate areas comfortable.
 Equipment:
-- kampmann-katherm-qk | Gate lounge trench units | Fan-assisted heating and cooling along the glass
+- kampmann-katherm-hk | Gate lounge trench heating and cooling | Fan-assisted heating and cooling along the glass
 - uvr-sl | In-duct UV-C fixtures | Airstream disinfection for crowded gate areas
 
 Location: airport-3

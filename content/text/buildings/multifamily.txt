@@ -29,6 +29,7 @@ Title: Corridor ventilation
 Text: Energy recovery ventilators supply corridors and units with fresh air.
 Equipment:
 - venmar-erv | Corridor energy recovery ventilator
+- venmar-ashp | Low-ambient air-source heat pump | Heats and cools corridor air without a boiler
 - novelaire-ecw | Energy recovery wheel
 
 Location: multifamily-2

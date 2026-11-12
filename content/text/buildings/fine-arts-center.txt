@@ -28,7 +28,7 @@ Location: fine-arts-center-1
 Title: Auditorium air handling
 Text: Fan arrays produce less low-frequency noise than a single large fan.
 Equipment:
-- temtrol-ahu | Auditorium air handler | Low-velocity unit with sound attenuators
+- nortek-acoustiflo | Auditorium air handler with AcoustiFLO fans | 10 to 20 dB quieter in the critical frequency bands
 - huntair-fanwall | Fan array | Less low-frequency noise than a single large fan
 
 Location: fine-arts-center-2

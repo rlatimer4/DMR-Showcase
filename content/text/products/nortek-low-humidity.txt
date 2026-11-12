@@ -1,16 +1,17 @@
-# NORTEK AIR SOLUTIONS — LOW HUMIDITY AIR HANDLERS
+# NORTEK AIR SOLUTIONS — AIR HANDLERS WITH LOW-TEMP DESICCANT DEHUMIDIFICATION
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
 # Lines that start with # are notes and are not shown on the site.
 
-Name: Low Humidity Air Handlers
+Name: Air Handlers with Low-Temp Desiccant Dehumidification
 
-Summary: Dehumidification air handlers that reduce moisture for both process air and comfort cooling, for spaces that need humidity below what a cooling coil alone can reach.
+Summary: Custom air handlers from the Nortek Air Solutions brands (Temtrol, Governair, Huntair, Mammoth, Venmar and Ventrol) with low-temperature desiccant dehumidification. They deliver dry air so the zone equipment only has to cool sensibly, and are used with sensible cooling series fan-powered VAV terminals and chilled beams.
 
 Key points:
-- Desiccant dehumidification
-- For process and comfort applications
+- Desiccant regenerated with low-temperature heat
+- Supplies dry air for sensible cooling VAV and chilled beam systems
+- Built into a custom air handler
 
 Photos:
 # One photo per line:  - file | caption

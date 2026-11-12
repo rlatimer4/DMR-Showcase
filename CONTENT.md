@@ -154,7 +154,7 @@ Each building has two files: its words in `content/text/buildings/<id>.txt` and
 its 3D model in `content/buildings/<id>.js`.
 
 - **Change the equipment at a location**: edit the `Equipment:` lines in the text file.
-  Every equipment line gets its own 3D model in that room, and visitors can select the model to open the product.
+  Every equipment line gets its own 3D model in that room. Visitors select a room to zoom in, then select a model to open its product; a pointer marks the model being shown.
 - **Different system designs get different rooms**: where a building could use one of several systems (VAV or fan coils, VRF or blower coils), give each its own location in a separate room rather than listing them together. The K-12 school's three classrooms and the hotel's two guest rooms are examples.
 - **Add a location**: add `{ id: "hospital-5", at: { floor: 1, x: 0.5 }, space: "patient-room" }` to `stops` in the model file, then add a matching `Location: hospital-5` block to the text file. `at.floor` is `"roof"`, `"yard"` (on the ground in front) or a floor number (0 is the ground floor); `at.x` is the position across the width from 0 to 1.
 - **Add a building**: copy both files of an existing building, change the `id`, and add its name to `buildings` in `content/manifest.js`. It is placed in its district automatically.

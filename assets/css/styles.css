@@ -336,3 +336,6 @@ address a { color: #fff; font-weight: 700; }
 
 /* product photos are often cut-outs on white: show the whole image rather than cropping it */
 .card img.media, .pgal img.media { object-fit: contain; background: #fff; }
+
+/* the equipment entry whose 3D model the pointer is on */
+.p-chip.is-shown { border-color: var(--amber); box-shadow: inset 4px 0 0 var(--amber); background: #fff; }
