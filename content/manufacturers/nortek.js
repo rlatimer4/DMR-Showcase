@@ -20,13 +20,13 @@ DMR.registerManufacturer({
     { id: "nortek-mua", category: "makeup", shape: "mua" },
     { id: "nortek-low-humidity", category: "dehum", shape: "ahu-desiccant" },
     { id: "nortek-water-coils", category: "coils", shape: "coil" },
-    { id: "nortek-dx-coils", category: "coils", shape: "coil" },
-    { id: "nortek-steam-coils", category: "coils", shape: "coil" },
-    { id: "nortek-steam-distributing-coils", category: "coils", shape: "coil" },
-    { id: "nortek-booster-coils", category: "coils", shape: "coil" },
+    { id: "nortek-dx-coils", category: "coils", shape: "coil-dx" },
+    { id: "nortek-steam-coils", category: "coils", shape: "coil-steam" },
+    { id: "nortek-steam-distributing-coils", category: "coils", shape: "coil-steam" },
+    { id: "nortek-booster-coils", category: "coils", shape: "coil-duct" },
     { id: "nortek-statepoint", category: "datacenter", shape: "chiller" },
     { id: "nortek-cdu", category: "datacenter", shape: "crah" },
-    { id: "nortek-coilwall", category: "datacenter", shape: "fanwall" },
+    { id: "nortek-coilwall", category: "datacenter", shape: "coilwall" },
     { id: "nortek-acoustiflo", category: "ahu", shape: "ahu-acoustiflo" },
     { id: "nortek-gas-phase", category: "ahu", shape: "ahu-gas" }
   ]

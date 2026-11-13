@@ -19,9 +19,62 @@ Challenges:
 - Simple, rugged equipment
 - Heating a tall space
 
+Also applicable:
+# Product lines that also suit this building type but have no 3D model of their own here.
+# One product code per line. They are listed on the building's panel and count for the catalog's building filter.
+- temtrol-ahu
+- huntair-ahu
+- governair-ahu
+- ventrol-ahu
+- temtrol-knockdown
+- huntair-knockdown
+- ventrol-knockdown
+- huntair-fanwall
+- temtrol-fanwall
+- governair-fanwall
+- ventrol-fanwall
+- cooney-freeze-block
+- cooney-smart-coil
+- nortek-water-coils
+- nortek-steam-coils
+- nortek-steam-distributing-coils
+- nortek-dx-coils
+- uvr-rlm
+- uvr-de
+- uvr-sl
+- uvr-sln
+- uvr-dln
+- uvr-x-plus
+- uvr-uvk
+- uvr-lamps
+- uvr-accessories
+- novelaire-ecw
+- klingenburg-wheel
+- klingenburg-plate
+- venmar-energypack
+- venmar-erv
+- reddi-duct-heaters
+- nortek-booster-coils
+- nortek-acoustiflo
+- fisair-dfra
+- fisair-dfa
+- fisair-dflex
+- fisair-dfrb
+- fisair-dfrd
+- fisair-dfrc
+- fisair-dfog
+- fisair-dflow
+- fisair-dfrm
+- novelaire-precisiondry
+- novelaire-desiccant-wheels
+- mammoth-ashp
+- venmar-ashp
+
 # ---------------- Equipment locations ----------------
 # Each location starts with "Location:" and its code. Do not change the code.
 # Equipment lines read:  - product code | what it is in this building | why it suits (optional)
+# A line starting with + under an equipment line is another product line that fits the same role.
+# It shares that model in the 3D view and is listed under it:  + product code | note (optional)
 # Product codes are the file names in content/text/products/.
 
 Location: small-manufacturing-1
@@ -29,12 +82,16 @@ Title: Make-up air
 Text: Direct-fired units replace the air that process exhaust removes.
 Equipment:
 - rapid-mua | Direct-fired make-up air unit
++ nortek-mua
 
 Location: small-manufacturing-2
 Title: Shop floor
 Text: Unit heaters and electric heaters cover the shop floor.
 Equipment:
 - sterling-unit-heaters | Hot water unit heaters
++ kampmann-top
++ reddi-ventilation
++ reddi-controls
 - reddi-unit-heaters | Hazardous-location electric heater | For paint and solvent areas
 
 Location: small-manufacturing-3
@@ -42,5 +99,7 @@ Title: Air handling options
 Text: Other air handlers used in small plants.
 Equipment:
 - nortek-mua | Make-up air unit
++ rapid-mua
 - mammoth-ultraline | Office rooftop unit
++ gree-xpac
 - temtrol-lc | Compact air handler

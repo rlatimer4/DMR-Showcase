@@ -19,9 +19,108 @@ Challenges:
 - Large swings in occupancy
 - Odor and air quality
 
+Also applicable:
+# Product lines that also suit this building type but have no 3D model of their own here.
+# One product code per line. They are listed on the building's panel and count for the catalog's building filter.
+- temtrol-ahu
+- huntair-ahu
+- governair-ahu
+- ventrol-ahu
+- envirotec-mql
+- huntair-fanwall
+- temtrol-fanwall
+- governair-fanwall
+- ventrol-fanwall
+- cooney-freeze-block
+- cooney-smart-coil
+- nortek-water-coils
+- nortek-steam-coils
+- nortek-steam-distributing-coils
+- nortek-dx-coils
+- uvr-rlm
+- uvr-de
+- uvr-sl
+- uvr-sln
+- uvr-dln
+- uvr-x-plus
+- uvr-uvk
+- uvr-lamps
+- uvr-accessories
+- novelaire-ecw
+- klingenburg-wheel
+- klingenburg-plate
+- reddi-duct-heaters
+- nortek-booster-coils
+- nortek-acoustiflo
+- mammoth-ashp
+- venmar-ashp
+- uvr-glo
+- envirotec-sdr
+- envirotec-sdl
+- envirotec-sgx
+- envirotec-crb
+- envirotec-crq
+- envirotec-vfr
+- envirotec-vfl
+- envirotec-cfl
+- envirotec-ddc
+- envirotec-pneumatic
+- envirotec-rft
+- envirotec-crc
+- envirotec-cfl-cc
+- envirotec-hp
+- envirotec-hl
+- envirotec-hdd
+- kampmann-kadeck
+- kampmann-venkon-xl
+- kampmann-kadius
+- envirotec-vf
+- envirotec-vl
+- envirotec-cdv
+- envirotec-vb
+- kampmann-venkon
+- kampmann-powerkon
+- envirotec-piping
+- gree-gmv6
+- gree-gmv6-ultra
+- gree-gmv5
+- gree-gmv5-hr
+- gree-cassette
+- gree-ducted
+- gree-wall
+- gree-floor-ceiling
+- gree-fresh-air
+- gree-ahu-kit
+- gree-livo
+- gree-vireo
+- gree-envo
+- gree-sapphire
+- gree-zeno
+- gree-multi
+- gree-multi-eco
+- sterling-versa-line
+- sterling-classic
+- sterling-custom
+- sterling-dura-vane
+- sterling-guardian
+- sterling-electric-baseboard
+- kampmann-perimeter
+- kampmann-baseboard
+- runtal-hydronic
+- runtal-electric
+- sterling-panel-radiators
+- sterling-radiant
+- kampmann-katherm-hk
+- kampmann-katherm-qk
+- kampmann-katherm-qk-nano
+- kampmann-katherm-nk
+- kampmann-katherm-qe
+
 # ---------------- Equipment locations ----------------
 # Each location starts with "Location:" and its code. Do not change the code.
 # Equipment lines read:  - product code | what it is in this building | why it suits (optional)
+# A line starting with + under an equipment line is another product line that fits the same role.
+# It shares that model in the 3D view and is listed under it:  + product code | note (optional)
 # Product codes are the file names in content/text/products/.
 
 Location: recreation-center-1
@@ -29,7 +128,16 @@ Title: Pool dehumidification
 Text: Desiccant systems hold pool-hall humidity down and protect the structure from condensation.
 Equipment:
 - novelaire-comfortdry | Natatorium dehumidifier | Holds the pool hall at 50 to 60% relative humidity
++ fisair-dfra
++ fisair-dfa
++ fisair-dflex
++ fisair-dfrb
++ fisair-dfrd
++ fisair-dfrc
++ fisair-dfog
++ novelaire-desiccant-wheels
 - venmar-erv | Pool exhaust energy recovery | Recovers heat from the humid exhaust air
++ venmar-energypack
 
 Location: recreation-center-2
 Title: Gymnasium
@@ -37,12 +145,21 @@ Text: Packaged rooftop units handle the gym, and unit heaters cover the entrance
 Equipment:
 - mammoth-ultraline | Gym rooftop unit | Packaged heating and cooling sized for a full gym
 - sterling-unit-heaters | Vestibule unit heaters
++ kampmann-top
++ reddi-unit-heaters
++ reddi-ventilation
++ reddi-controls
 - sterling-cabinet | Vestibule cabinet unit heater | Offsets cold air at the doors
++ sterling-convectors
 
 Location: recreation-center-3
 Title: Air handling options
 Text: Other air handlers used in recreation centers.
 Equipment:
 - venmar-energypack | Pool hall unit with energy recovery
++ venmar-erv
 - nortek-low-humidity | Air handler with desiccant dehumidification
++ novelaire-desiccant-wheels
 - temtrol-knockdown | Knockdown replacement air handler | Assembled inside the existing mechanical room
++ huntair-knockdown
++ ventrol-knockdown

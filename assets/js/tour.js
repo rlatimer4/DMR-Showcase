@@ -24,7 +24,24 @@
     return '<li><button type="button" class="p-chip' + (n === cur.item ? " is-shown" : "") + '" data-item="' + n + '" data-product="' + e.product + '">' +
       "<span class='role'>" + (e.role || p.name) + "</span>" +
       "<strong>" + L.brands[p.brand].name + " · " + p.name + "</strong>" +
-      (e.note ? "<em>" + e.note + "</em>" : "") + "</button></li>";
+      (e.note ? "<em>" + e.note + "</em>" : "") + "</button>" +
+      // other product lines that fit the same role share this model
+      (e.also.length ? '<div class="p-also"><span>Other lines that fit here</span>' + e.also.map(function (a) {
+        var q = L.products[a.product];
+        return '<button type="button" data-open="' + a.product + '"' + (a.note ? ' title="' + a.note.replace(/"/g, "&quot;") + '"' : "") + "><b>" + L.brands[q.brand].name + "</b> " + q.name + "</button>";
+      }).join("") + "</div>" : "") + "</li>";
+  }
+
+  // Product lines that suit the building type but have no model in it, grouped by product type.
+  function alsoHtml(b) {
+    if (!b.also.length) return "";
+    return "<h4>More product lines for this building type</h4>" + D.categories.map(function (c) {
+      var list = b.also.filter(function (id) { return L.products[id].category === c.id; });
+      return list.length ? '<div class="p-also p-also-b"><span>' + c.name + "</span>" + list.map(function (id) {
+        var q = L.products[id];
+        return '<button type="button" data-open="' + id + '"><b>' + L.brands[q.brand].name + "</b> " + q.name + "</button>";
+      }).join("") + "</div>" : "";
+    }).join("");
   }
 
   function render() {
@@ -46,7 +63,7 @@
         '<ol class="stop-list">' + b.stops.map(function (x) {
           return '<li><button type="button" data-goto="' + x.id + '"><span><strong>' + x.title + "</strong><em>" +
             x.equipment.map(function (e) { return e.role || L.products[e.product].name; }).join(" · ") + "</em></span></button></li>";
-        }).join("") + "</ol>" +
+        }).join("") + "</ol>" + alsoHtml(b) +
         '<button type="button" class="link" data-catalog="' + b.id + '">See all products for this building type</button>';
     } else {
       var list = buildings.filter(function (x) { return !cur.use || x.use === cur.use; });
@@ -107,7 +124,8 @@
   panel.addEventListener("click", function (e) {
     var t;
     if ((t = e.target.closest("[data-item]")) && cur.stop) { cur.item = Number(t.dataset.item); if (D.view3d) D.view3d.point(cur.stop.id, cur.item); panel.querySelectorAll("[data-item]").forEach(function (c) { c.classList.toggle("is-shown", c === t); }); }
-    if ((t = e.target.closest("[data-goto]"))) D.goToStop(t.dataset.goto);
+    if ((t = e.target.closest("[data-open]"))) D.openProduct(t.dataset.open);
+    else if ((t = e.target.closest("[data-goto]"))) D.goToStop(t.dataset.goto);
     else if ((t = e.target.closest("[data-bld]"))) D.showBuilding(t.dataset.bld);
     else if ((t = e.target.closest("[data-use]"))) show(t.dataset.use, null, null);
     else if ((t = e.target.closest("[data-catalog]"))) D.filterCatalog({ building: t.dataset.catalog }, true);

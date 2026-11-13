@@ -23,10 +23,10 @@ DMR.registerManufacturer({
     { id: "sterling-classic", category: "hydronic", shape: "fintube" },
     { id: "sterling-custom", category: "hydronic", shape: "fintube" },
     { id: "sterling-dura-vane", category: "hydronic", shape: "fintube" },
-    { id: "sterling-convectors", category: "hydronic", shape: "radiator" },
-    { id: "sterling-cabinet", category: "heaters", shape: "radiator" },
+    { id: "sterling-convectors", category: "hydronic", shape: "cabinetheater" },
+    { id: "sterling-cabinet", category: "heaters", shape: "cabinetheater" },
     { id: "sterling-unit-heaters", category: "heaters", shape: "unitheater" },
-    { id: "sterling-radiant", category: "hydronic", shape: "orceiling" },
+    { id: "sterling-radiant", category: "hydronic", shape: "radiantpanel" },
     { id: "sterling-panel-radiators", category: "hydronic", shape: "radiator" },
     { id: "sterling-baseboard", category: "hydronic", shape: "fintube" },
     { id: "sterling-electric-baseboard", category: "electric", shape: "fintube" }

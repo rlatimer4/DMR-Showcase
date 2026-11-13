@@ -52,6 +52,7 @@ DMR.manifest = {
     "library",
     "fine-arts-center",
     "higher-education",
+    "laboratory",
     "museum",
     "k-12-school",
     "small-manufacturing",

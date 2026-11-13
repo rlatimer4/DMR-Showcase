@@ -19,9 +19,109 @@ Challenges:
 - Doors that are always opening
 - Jet fumes and outdoor air quality
 
+Also applicable:
+# Product lines that also suit this building type but have no 3D model of their own here.
+# One product code per line. They are listed on the building's panel and count for the catalog's building filter.
+- cooney-freeze-block
+- cooney-smart-coil
+- nortek-water-coils
+- nortek-steam-coils
+- nortek-steam-distributing-coils
+- nortek-dx-coils
+- novelaire-ecw
+- klingenburg-wheel
+- klingenburg-plate
+- venmar-energypack
+- venmar-erv
+- reddi-duct-heaters
+- nortek-booster-coils
+- nortek-acoustiflo
+- fisair-electrode
+- fisair-resistance
+- steamovap-ier
+- steamovap-ise
+- fisair-vxv
+- fisair-asc
+- steamovap-ils
+- fisair-fsh
+- fisair-mt2
+- steamovap-distribution
+- fisair-hef2e
+- fisair-hef3
+- steamovap-aem
+- fisair-atomspray
+- steamovap-aca
+- steamovap-aul
+- steamovap-controls
+- steamovap-safety
+- steamovap-water-filter
+- steamovap-wro
+- mammoth-ultraline
+- mammoth-ashp
+- venmar-ashp
+- uvr-glo
+- envirotec-sdr
+- envirotec-sdl
+- envirotec-sgx
+- envirotec-crb
+- envirotec-crq
+- envirotec-vfr
+- envirotec-vfl
+- envirotec-cfl
+- envirotec-ddc
+- envirotec-pneumatic
+- envirotec-rft
+- envirotec-crc
+- envirotec-cfl-cc
+- envirotec-hp
+- envirotec-hl
+- envirotec-hdd
+- kampmann-kadeck
+- kampmann-venkon-xl
+- kampmann-kadius
+- envirotec-vf
+- envirotec-vl
+- envirotec-cdv
+- envirotec-vb
+- kampmann-venkon
+- kampmann-powerkon
+- envirotec-piping
+- gree-gmv6
+- gree-gmv6-ultra
+- gree-gmv5
+- gree-gmv5-hr
+- gree-cassette
+- gree-ducted
+- gree-wall
+- gree-floor-ceiling
+- gree-fresh-air
+- gree-ahu-kit
+- gree-livo
+- gree-vireo
+- gree-envo
+- gree-sapphire
+- gree-zeno
+- gree-multi
+- gree-multi-eco
+- sterling-versa-line
+- sterling-classic
+- sterling-custom
+- sterling-dura-vane
+- sterling-electric-baseboard
+- kampmann-perimeter
+- kampmann-baseboard
+- runtal-hydronic
+- runtal-electric
+- sterling-panel-radiators
+- sterling-convectors
+- sterling-radiant
+- sterling-cabinet
+
 # ---------------- Equipment locations ----------------
 # Each location starts with "Location:" and its code. Do not change the code.
 # Equipment lines read:  - product code | what it is in this building | why it suits (optional)
+# A line starting with + under an equipment line is another product line that fits the same role.
+# It shares that model in the 3D view and is listed under it:  + product code | note (optional)
 # Product codes are the file names in content/text/products/.
 
 Location: airport-1
@@ -30,19 +130,37 @@ Text: Custom air handlers with fan arrays serve the concourse and keep running t
 Equipment:
 - nortek-gas-phase | Concourse air handler with gas-phase filtration | Removes jet fume odours and gases
 - huntair-fanwall | Fan array | Redundant supply fans for 24-hour operation
++ temtrol-fanwall
++ governair-fanwall
++ ventrol-fanwall
 
 Location: airport-2
 Title: Concourse
 Text: Trench units along the glass and UV-C in the air stream keep gate areas comfortable.
 Equipment:
 - kampmann-katherm-hk | Gate lounge trench heating and cooling | Fan-assisted heating and cooling along the glass
++ kampmann-katherm-qk
++ kampmann-katherm-qk-nano
++ kampmann-katherm-nk
++ kampmann-katherm-qe
 - uvr-sl | In-duct UV-C fixtures | Airstream disinfection for crowded gate areas
++ uvr-rlm
++ uvr-de
++ uvr-sln
++ uvr-dln
++ uvr-x-plus
++ uvr-uvk
++ uvr-lamps
++ uvr-accessories
 
 Location: airport-3
 Title: Baggage hall
 Text: Unit heaters offset the cold air at the belt openings and cover the back-of-house.
 Equipment:
 - kampmann-top | Door unit heaters | High-output heaters aimed at the baggage belt openings
++ reddi-unit-heaters
++ reddi-ventilation
++ reddi-controls
 - sterling-unit-heaters | Back-of-house unit heaters
 
 Location: airport-4
@@ -50,5 +168,12 @@ Title: Air handling options
 Text: Other air handlers used in terminals.
 Equipment:
 - temtrol-ahu | Terminal custom air handler
++ huntair-ahu
++ governair-ahu
++ ventrol-ahu
++ envirotec-mql
 - ventrol-knockdown | Knockdown replacement air handler | Built inside the terminal while it stays open
++ temtrol-knockdown
++ huntair-knockdown
 - nortek-mua | Baggage hall make-up air unit
++ rapid-mua

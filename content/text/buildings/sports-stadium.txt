@@ -19,9 +19,90 @@ Challenges:
 - Concourses open to the outdoors
 - Premium seating expectations
 
+Also applicable:
+# Product lines that also suit this building type but have no 3D model of their own here.
+# One product code per line. They are listed on the building's panel and count for the catalog's building filter.
+- temtrol-knockdown
+- huntair-knockdown
+- ventrol-knockdown
+- huntair-fanwall
+- temtrol-fanwall
+- governair-fanwall
+- ventrol-fanwall
+- cooney-freeze-block
+- cooney-smart-coil
+- nortek-water-coils
+- nortek-steam-coils
+- nortek-steam-distributing-coils
+- nortek-dx-coils
+- uvr-rlm
+- uvr-de
+- uvr-sl
+- uvr-sln
+- uvr-dln
+- uvr-x-plus
+- uvr-lamps
+- uvr-accessories
+- novelaire-ecw
+- klingenburg-wheel
+- klingenburg-plate
+- reddi-duct-heaters
+- nortek-booster-coils
+- nortek-acoustiflo
+- mammoth-ashp
+- venmar-ashp
+- uvr-glo
+- envirotec-sdr
+- envirotec-sdl
+- envirotec-sgx
+- envirotec-crb
+- envirotec-crq
+- envirotec-vfr
+- envirotec-vfl
+- envirotec-cfl
+- envirotec-ddc
+- envirotec-pneumatic
+- envirotec-rft
+- envirotec-crc
+- envirotec-cfl-cc
+- envirotec-vf
+- envirotec-vl
+- envirotec-cdv
+- envirotec-vb
+- kampmann-venkon
+- kampmann-powerkon
+- gree-livo
+- gree-vireo
+- gree-envo
+- gree-sapphire
+- gree-zeno
+- gree-multi
+- gree-multi-eco
+- sterling-versa-line
+- sterling-classic
+- sterling-custom
+- sterling-dura-vane
+- sterling-guardian
+- sterling-electric-baseboard
+- kampmann-perimeter
+- kampmann-baseboard
+- runtal-hydronic
+- runtal-electric
+- sterling-panel-radiators
+- sterling-convectors
+- sterling-radiant
+- sterling-cabinet
+- kampmann-katherm-hk
+- kampmann-katherm-qk
+- kampmann-katherm-qk-nano
+- kampmann-katherm-nk
+- kampmann-katherm-qe
+
 # ---------------- Equipment locations ----------------
 # Each location starts with "Location:" and its code. Do not change the code.
 # Equipment lines read:  - product code | what it is in this building | why it suits (optional)
+# A line starting with + under an equipment line is another product line that fits the same role.
+# It shares that model in the 3D view and is listed under it:  + product code | note (optional)
 # Product codes are the file names in content/text/products/.
 
 Location: sports-stadium-1
@@ -30,31 +111,60 @@ Text: Custom rooftop systems condition clubs and concourses and turn down betwee
 Equipment:
 - mammoth-ultraline | Club-level rooftop unit
 - huntair-ahu | Concourse air handler
++ temtrol-ahu
++ governair-ahu
++ ventrol-ahu
++ envirotec-mql
 
 Location: sports-stadium-2
 Title: Suites: fan coil system
 Text: A fan coil in each suite gives it its own thermostat.
 Equipment:
 - envirotec-hp | Suite fan coil | One per suite, each with its own thermostat
++ envirotec-hl
++ envirotec-hdd
++ kampmann-kadeck
++ kampmann-venkon-xl
++ kampmann-kadius
++ envirotec-piping
++ uvr-uvk
 
 Location: sports-stadium-4
 Title: Clubs: VRF system
 Text: A VRF system conditions the club lounges and turns down when they are empty.
 Equipment:
 - gree-gmv6 | Club VRF system
++ gree-gmv6-ultra
++ gree-gmv5
++ gree-gmv5-hr
 - gree-cassette | Ceiling cassettes
++ gree-ducted
++ gree-wall
++ gree-floor-ceiling
++ gree-fresh-air
++ gree-ahu-kit
 
 Location: sports-stadium-3
 Title: Locker rooms
 Text: Energy recovery ventilators handle the high exhaust rates locker rooms need.
 Equipment:
 - venmar-erv | Locker room energy recovery ventilator | High exhaust rate with heat recovery
++ venmar-energypack
 - sterling-unit-heaters | Service tunnel unit heaters
++ kampmann-top
++ reddi-unit-heaters
++ reddi-ventilation
++ reddi-controls
 
 Location: sports-stadium-5
 Title: Air handling options
 Text: Other air handlers used in stadiums.
 Equipment:
 - temtrol-ahu | Concourse custom air handler
++ huntair-ahu
++ governair-ahu
++ ventrol-ahu
++ envirotec-mql
 - nortek-mua | Kitchen make-up air unit
++ rapid-mua
 - mammoth-ultraline | Custom packaged rooftop unit

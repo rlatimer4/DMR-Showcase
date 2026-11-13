@@ -19,9 +19,124 @@ Challenges:
 - Long air throws in high spaces
 - Large outdoor air volumes
 
+Also applicable:
+# Product lines that also suit this building type but have no 3D model of their own here.
+# One product code per line. They are listed on the building's panel and count for the catalog's building filter.
+- cooney-freeze-block
+- cooney-smart-coil
+- nortek-water-coils
+- nortek-steam-coils
+- nortek-steam-distributing-coils
+- nortek-dx-coils
+- uvr-rlm
+- uvr-de
+- uvr-sl
+- uvr-sln
+- uvr-dln
+- uvr-x-plus
+- uvr-uvk
+- uvr-lamps
+- uvr-accessories
+- klingenburg-plate
+- venmar-energypack
+- venmar-erv
+- reddi-duct-heaters
+- nortek-booster-coils
+- reddi-controls
+- sterling-unit-heaters
+- kampmann-top
+- reddi-unit-heaters
+- reddi-ventilation
+- fisair-electrode
+- fisair-resistance
+- steamovap-ier
+- steamovap-ise
+- fisair-vxv
+- fisair-asc
+- steamovap-ils
+- fisair-fsh
+- fisair-mt2
+- steamovap-distribution
+- fisair-hef2e
+- fisair-hef3
+- steamovap-aem
+- fisair-atomspray
+- steamovap-aca
+- steamovap-aul
+- steamovap-controls
+- steamovap-safety
+- steamovap-water-filter
+- steamovap-wro
+- mammoth-ashp
+- venmar-ashp
+- uvr-glo
+- envirotec-sdr
+- envirotec-sdl
+- envirotec-sgx
+- envirotec-crb
+- envirotec-crq
+- envirotec-vfr
+- envirotec-vfl
+- envirotec-cfl
+- envirotec-ddc
+- envirotec-pneumatic
+- envirotec-rft
+- envirotec-crc
+- envirotec-cfl-cc
+- envirotec-hp
+- envirotec-hl
+- envirotec-hdd
+- kampmann-kadeck
+- kampmann-venkon-xl
+- kampmann-kadius
+- envirotec-vf
+- envirotec-vl
+- envirotec-cdv
+- envirotec-vb
+- kampmann-venkon
+- kampmann-powerkon
+- envirotec-piping
+- gree-gmv6
+- gree-gmv6-ultra
+- gree-gmv5
+- gree-gmv5-hr
+- gree-cassette
+- gree-ducted
+- gree-wall
+- gree-floor-ceiling
+- gree-fresh-air
+- gree-ahu-kit
+- gree-livo
+- gree-vireo
+- gree-envo
+- gree-sapphire
+- gree-zeno
+- gree-multi
+- gree-multi-eco
+- sterling-versa-line
+- sterling-classic
+- sterling-custom
+- sterling-dura-vane
+- sterling-electric-baseboard
+- kampmann-perimeter
+- kampmann-baseboard
+- runtal-hydronic
+- runtal-electric
+- sterling-panel-radiators
+- sterling-convectors
+- sterling-radiant
+- sterling-cabinet
+- kampmann-katherm-hk
+- kampmann-katherm-qk
+- kampmann-katherm-qk-nano
+- kampmann-katherm-nk
+- kampmann-katherm-qe
+
 # ---------------- Equipment locations ----------------
 # Each location starts with "Location:" and its code. Do not change the code.
 # Equipment lines read:  - product code | what it is in this building | why it suits (optional)
+# A line starting with + under an equipment line is another product line that fits the same role.
+# It shares that model in the 3D view and is listed under it:  + product code | note (optional)
 # Product codes are the file names in content/text/products/.
 
 Location: convention-center-1
@@ -30,18 +145,32 @@ Text: Custom rooftop systems are sized for peak crowds and turn down when the ha
 Equipment:
 - mammoth-ultraline | Exhibit hall rooftop unit | Large-tonnage custom unit that turns down for an empty hall
 - huntair-fanwall | Fan array | Wide turndown by staging fans
++ temtrol-fanwall
++ governair-fanwall
++ ventrol-fanwall
 
 Location: convention-center-2
 Title: Exhibit hall
 Text: Energy recovery wheels cut the cost of the outdoor air a full hall needs.
 Equipment:
 - klingenburg-wheel | Energy recovery wheel | Recovers energy from the large outdoor air load
++ novelaire-ecw
 - huntair-ahu | Meeting room air handlers
++ temtrol-ahu
++ governair-ahu
++ ventrol-ahu
++ envirotec-mql
 
 Location: convention-center-3
 Title: Air handling options
 Text: Other air handlers used in convention centers.
 Equipment:
 - temtrol-ahu | Meeting room custom air handler
++ huntair-ahu
++ governair-ahu
++ ventrol-ahu
++ envirotec-mql
 - nortek-acoustiflo | Ballroom air handler with AcoustiFLO fans
 - huntair-knockdown | Knockdown replacement air handler
++ temtrol-knockdown
++ ventrol-knockdown

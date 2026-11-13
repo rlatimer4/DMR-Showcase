@@ -19,9 +19,87 @@ Challenges:
 - Renovation in occupied buildings
 - Energy targets
 
+Also applicable:
+# Product lines that also suit this building type but have no 3D model of their own here.
+# One product code per line. They are listed on the building's panel and count for the catalog's building filter.
+- uvr-rlm
+- uvr-de
+- uvr-sl
+- uvr-sln
+- uvr-dln
+- uvr-x-plus
+- uvr-lamps
+- uvr-accessories
+- klingenburg-plate
+- venmar-energypack
+- venmar-erv
+- reddi-duct-heaters
+- nortek-booster-coils
+- reddi-controls
+- sterling-unit-heaters
+- kampmann-top
+- reddi-unit-heaters
+- reddi-ventilation
+- fisair-electrode
+- fisair-resistance
+- steamovap-ier
+- steamovap-ise
+- fisair-vxv
+- fisair-asc
+- steamovap-ils
+- fisair-fsh
+- fisair-mt2
+- steamovap-distribution
+- fisair-hef2e
+- fisair-hef3
+- steamovap-aem
+- fisair-atomspray
+- steamovap-aca
+- steamovap-aul
+- steamovap-controls
+- steamovap-safety
+- steamovap-water-filter
+- steamovap-wro
+- mammoth-ultraline
+- mammoth-ashp
+- venmar-ashp
+- uvr-glo
+- envirotec-crc
+- envirotec-cfl-cc
+- gree-gmv6
+- gree-gmv6-ultra
+- gree-gmv5
+- gree-gmv5-hr
+- gree-cassette
+- gree-ducted
+- gree-wall
+- gree-floor-ceiling
+- gree-fresh-air
+- gree-ahu-kit
+- gree-livo
+- gree-vireo
+- gree-envo
+- gree-sapphire
+- gree-zeno
+- gree-multi
+- gree-multi-eco
+- runtal-hydronic
+- runtal-electric
+- sterling-panel-radiators
+- sterling-convectors
+- sterling-radiant
+- sterling-cabinet
+- kampmann-katherm-hk
+- kampmann-katherm-qk
+- kampmann-katherm-qk-nano
+- kampmann-katherm-nk
+- kampmann-katherm-qe
+
 # ---------------- Equipment locations ----------------
 # Each location starts with "Location:" and its code. Do not change the code.
 # Equipment lines read:  - product code | what it is in this building | why it suits (optional)
+# A line starting with + under an equipment line is another product line that fits the same role.
+# It shares that model in the 3D view and is listed under it:  + product code | note (optional)
 # Product codes are the file names in content/text/products/.
 
 Location: government-office-1
@@ -29,33 +107,81 @@ Title: Custom air handlers
 Text: Air handlers built in sections fit through existing openings for replacement work.
 Equipment:
 - ventrol-knockdown | Knockdown replacement air handler | Built to fit through existing doors and assembled in place
++ temtrol-knockdown
++ huntair-knockdown
 - temtrol-ahu | Custom penthouse air handler
++ huntair-ahu
++ governair-ahu
++ ventrol-ahu
++ envirotec-mql
 
 Location: government-office-2
 Title: Office floors: VAV system
 Text: VAV boxes with reheat serve the office floors from the central air handlers.
 Equipment:
 - envirotec-sdr | VAV boxes with reheat
++ envirotec-sdl
++ envirotec-sgx
++ envirotec-crb
++ envirotec-crq
++ envirotec-vfr
++ envirotec-vfl
++ envirotec-cfl
++ envirotec-ddc
++ envirotec-pneumatic
++ envirotec-rft
 
 Location: government-office-4
 Title: Office floors: fan coil system
 Text: Fan coils along the perimeter suit floors where new ductwork will not fit.
 Equipment:
 - envirotec-hp | Perimeter fan coils
++ envirotec-hl
++ envirotec-hdd
++ kampmann-kadeck
++ kampmann-venkon-xl
++ kampmann-kadius
++ envirotec-piping
++ uvr-uvk
 - envirotec-vf | Floor-mounted fan coils | Under the windows
++ envirotec-vl
++ envirotec-cdv
++ envirotec-vb
++ kampmann-venkon
++ kampmann-powerkon
 
 Location: government-office-3
 Title: Mechanical room
 Text: Replacement coils and an energy recovery retrofit modernize the existing plant.
 Equipment:
 - cooney-freeze-block | Replacement preheat coils
++ cooney-smart-coil
++ nortek-water-coils
++ nortek-steam-coils
++ nortek-steam-distributing-coils
++ nortek-dx-coils
 - sterling-versa-line | Finned tube radiation
++ sterling-classic
++ sterling-custom
++ sterling-dura-vane
++ sterling-guardian
++ sterling-electric-baseboard
++ kampmann-perimeter
++ kampmann-baseboard
 - klingenburg-wheel | Retrofit energy recovery wheel
++ novelaire-ecw
 
 Location: government-office-5
 Title: Air handling options
 Text: Other air handlers used in government buildings.
 Equipment:
 - governair-fanwall | FANWALL retrofit | Renews existing air handlers in place
++ huntair-fanwall
++ temtrol-fanwall
++ ventrol-fanwall
 - huntair-ahu | Custom air handler
++ temtrol-ahu
++ governair-ahu
++ ventrol-ahu
++ envirotec-mql
 - nortek-acoustiflo | Hearing room air handler with AcoustiFLO fans

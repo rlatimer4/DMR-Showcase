@@ -19,9 +19,64 @@ Challenges:
 - Heat loss through glass
 - Even conditions across the crop
 
+Also applicable:
+# Product lines that also suit this building type but have no 3D model of their own here.
+# One product code per line. They are listed on the building's panel and count for the catalog's building filter.
+- temtrol-ahu
+- huntair-ahu
+- governair-ahu
+- ventrol-ahu
+- temtrol-knockdown
+- huntair-knockdown
+- ventrol-knockdown
+- huntair-fanwall
+- temtrol-fanwall
+- governair-fanwall
+- ventrol-fanwall
+- cooney-freeze-block
+- cooney-smart-coil
+- nortek-water-coils
+- nortek-steam-coils
+- nortek-steam-distributing-coils
+- nortek-dx-coils
+- uvr-rlm
+- uvr-de
+- uvr-sl
+- uvr-sln
+- uvr-dln
+- uvr-x-plus
+- uvr-uvk
+- uvr-lamps
+- uvr-accessories
+- novelaire-ecw
+- klingenburg-wheel
+- klingenburg-plate
+- venmar-energypack
+- venmar-erv
+- reddi-duct-heaters
+- nortek-booster-coils
+- nortek-acoustiflo
+- fisair-electrode
+- fisair-resistance
+- steamovap-ier
+- steamovap-ise
+- fisair-vxv
+- fisair-asc
+- steamovap-ils
+- fisair-fsh
+- fisair-mt2
+- steamovap-distribution
+- nortek-mua
+- rapid-mua
+- mammoth-ultraline
+- mammoth-ashp
+- venmar-ashp
+
 # ---------------- Equipment locations ----------------
 # Each location starts with "Location:" and its code. Do not change the code.
 # Equipment lines read:  - product code | what it is in this building | why it suits (optional)
+# A line starting with + under an equipment line is another product line that fits the same role.
+# It shares that model in the 3D view and is listed under it:  + product code | note (optional)
 # Product codes are the file names in content/text/products/.
 
 Location: greenhouse-1
@@ -29,6 +84,16 @@ Title: Dehumidification
 Text: Desiccant systems remove plant moisture without overcooling the space.
 Equipment:
 - novelaire-comfortdry | Grow room dehumidifier
++ fisair-dfa
++ fisair-dflex
++ fisair-dfrb
++ fisair-dfrd
++ fisair-dfrc
++ fisair-dfog
++ fisair-dflow
++ fisair-dfrm
++ novelaire-precisiondry
++ novelaire-desiccant-wheels
 - fisair-dfra | Desiccant dehumidifier
 - nortek-low-humidity | Air handler with desiccant dehumidification
 
@@ -37,5 +102,24 @@ Title: Growing floor
 Text: Humidifiers and hydronic unit heaters hold conditions steady across the crop.
 Equipment:
 - fisair-atomspray | Atomising humidifier | Fine mist humidifies and cools with low energy use
++ fisair-hef2e
++ fisair-hef3
++ steamovap-aem
++ steamovap-aca
++ steamovap-aul
++ steamovap-controls
++ steamovap-safety
++ steamovap-water-filter
++ steamovap-wro
 - sterling-unit-heaters | Hot water unit heaters
++ kampmann-top
++ reddi-unit-heaters
++ reddi-ventilation
++ reddi-controls
 - sterling-versa-line | Perimeter finned tube
++ sterling-classic
++ sterling-custom
++ sterling-dura-vane
++ sterling-electric-baseboard
++ kampmann-perimeter
++ kampmann-baseboard

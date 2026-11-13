@@ -19,9 +19,58 @@ Challenges:
 - Rising rack densities
 - Short construction schedules
 
+Also applicable:
+# Product lines that also suit this building type but have no 3D model of their own here.
+# One product code per line. They are listed on the building's panel and count for the catalog's building filter.
+- temtrol-knockdown
+- huntair-knockdown
+- ventrol-knockdown
+- cooney-freeze-block
+- cooney-smart-coil
+- nortek-water-coils
+- nortek-steam-coils
+- nortek-steam-distributing-coils
+- nortek-dx-coils
+- uvr-rlm
+- uvr-de
+- uvr-sl
+- uvr-sln
+- uvr-dln
+- uvr-x-plus
+- uvr-uvk
+- uvr-lamps
+- uvr-accessories
+- novelaire-ecw
+- klingenburg-wheel
+- klingenburg-plate
+- venmar-energypack
+- venmar-erv
+- reddi-duct-heaters
+- nortek-booster-coils
+- reddi-controls
+- nortek-acoustiflo
+- sterling-unit-heaters
+- kampmann-top
+- reddi-unit-heaters
+- reddi-ventilation
+- fisair-dfra
+- fisair-dfa
+- fisair-dflex
+- fisair-dfrb
+- fisair-dfrd
+- fisair-dfrc
+- fisair-dfog
+- fisair-dflow
+- fisair-dfrm
+- novelaire-comfortdry
+- novelaire-precisiondry
+- novelaire-desiccant-wheels
+
 # ---------------- Equipment locations ----------------
 # Each location starts with "Location:" and its code. Do not change the code.
 # Equipment lines read:  - product code | what it is in this building | why it suits (optional)
+# A line starting with + under an equipment line is another product line that fits the same role.
+# It shares that model in the 3D view and is listed under it:  + product code | note (optional)
 # Product codes are the file names in content/text/products/.
 
 Location: data-center-1
@@ -29,6 +78,7 @@ Title: Cooling plant
 Text: StatePoint liquid cooling produces cold water for the hall, and coolant distribution units carry it to high-density racks.
 Equipment:
 - nortek-statepoint | StatePoint liquid cooling | Indirect evaporative system that produces cold water for the hall with low water and energy use
++ fisair-hef7
 - nortek-cdu | Coolant distribution units | Deliver coolant to high-density racks with 2N redundancy
 
 Location: data-center-2
@@ -37,12 +87,40 @@ Text: Computer room air handlers and liquid cooling remove heat from the racks. 
 Equipment:
 - nortek-coilwall | Computer room air handlers and liquid cooling | CRAH units along the hall, with liquid cooling for high-density racks
 - huntair-fanwall | Fan wall | Supply fan arrays that hold airflow through a fan failure
++ temtrol-fanwall
++ governair-fanwall
++ ventrol-fanwall
 - steamovap-ier | Data hall humidifier | Holds minimum humidity to control static
++ fisair-electrode
++ fisair-resistance
++ steamovap-ise
++ fisair-vxv
++ fisair-asc
++ steamovap-ils
++ fisair-fsh
++ fisair-mt2
++ steamovap-distribution
++ fisair-hef2e
++ fisair-hef3
++ steamovap-aem
++ fisair-atomspray
++ steamovap-aca
++ steamovap-aul
++ steamovap-controls
++ steamovap-safety
++ steamovap-water-filter
++ steamovap-wro
 
 Location: data-center-3
 Title: Air handling options
 Text: Other air handlers used on data centers.
 Equipment:
 - huntair-ahu | Make-up air handler | Custom unit that pressurizes and dehumidifies the hall
++ temtrol-ahu
++ governair-ahu
++ ventrol-ahu
 - governair-fanwall | FANWALL retrofit | Replaces ageing fans in existing air handlers without downtime
++ huntair-fanwall
++ temtrol-fanwall
++ ventrol-fanwall
 - envirotec-mql | Office-area indoor air handler

@@ -19,9 +19,102 @@ Challenges:
 - Low first cost
 - Comfort at the perimeter
 
+Also applicable:
+# Product lines that also suit this building type but have no 3D model of their own here.
+# One product code per line. They are listed on the building's panel and count for the catalog's building filter.
+- temtrol-knockdown
+- huntair-knockdown
+- ventrol-knockdown
+- huntair-fanwall
+- temtrol-fanwall
+- governair-fanwall
+- ventrol-fanwall
+- cooney-freeze-block
+- cooney-smart-coil
+- nortek-water-coils
+- nortek-steam-coils
+- nortek-steam-distributing-coils
+- nortek-dx-coils
+- novelaire-ecw
+- klingenburg-wheel
+- klingenburg-plate
+- venmar-energypack
+- venmar-erv
+- reddi-duct-heaters
+- nortek-booster-coils
+- reddi-controls
+- nortek-acoustiflo
+- sterling-unit-heaters
+- kampmann-top
+- reddi-unit-heaters
+- reddi-ventilation
+- fisair-electrode
+- fisair-resistance
+- steamovap-ier
+- steamovap-res
+- steamovap-ise
+- fisair-vxv
+- fisair-asc
+- steamovap-ils
+- fisair-fsh
+- fisair-mt2
+- steamovap-distribution
+- fisair-hef2e
+- fisair-hef3
+- steamovap-aem
+- fisair-atomspray
+- steamovap-aca
+- steamovap-aul
+- steamovap-controls
+- steamovap-safety
+- steamovap-water-filter
+- steamovap-wro
+- uvr-glo
+- envirotec-sdr
+- envirotec-sdl
+- envirotec-sgx
+- envirotec-crb
+- envirotec-crq
+- envirotec-vfr
+- envirotec-vfl
+- envirotec-cfl
+- envirotec-ddc
+- envirotec-pneumatic
+- envirotec-rft
+- envirotec-crc
+- envirotec-cfl-cc
+- envirotec-hp
+- envirotec-hl
+- envirotec-hdd
+- kampmann-kadeck
+- kampmann-venkon-xl
+- kampmann-kadius
+- envirotec-vf
+- envirotec-vl
+- envirotec-cdv
+- envirotec-vb
+- kampmann-venkon
+- kampmann-powerkon
+- envirotec-piping
+- gree-cassette
+- gree-ducted
+- gree-wall
+- gree-floor-ceiling
+- gree-fresh-air
+- gree-ahu-kit
+- gree-ttw
+- sterling-cabinet
+- kampmann-katherm-hk
+- kampmann-katherm-qk
+- kampmann-katherm-qk-nano
+- kampmann-katherm-nk
+- kampmann-katherm-qe
+
 # ---------------- Equipment locations ----------------
 # Each location starts with "Location:" and its code. Do not change the code.
 # Equipment lines read:  - product code | what it is in this building | why it suits (optional)
+# A line starting with + under an equipment line is another product line that fits the same role.
+# It shares that model in the 3D view and is listed under it:  + product code | note (optional)
 # Product codes are the file names in content/text/products/.
 
 Location: low-rise-office-1
@@ -29,27 +122,67 @@ Title: Packaged rooftop units
 Text: Packaged rooftop units provide heating, cooling and ventilation from one cabinet.
 Equipment:
 - mammoth-ultraline | Packaged rooftop unit
++ gree-xpac
 - mammoth-ashp | Air-source heat pump | Standard or low-ambient model
++ venmar-ashp
 - uvr-rlm | UV-C coil fixture
++ uvr-de
++ uvr-sl
++ uvr-sln
++ uvr-dln
++ uvr-x-plus
++ uvr-uvk
++ uvr-lamps
++ uvr-accessories
 
 Location: low-rise-office-2
 Title: Office suites
 Text: VRF gives each suite its own control without large ductwork.
 Equipment:
 - gree-gmv6 | Suite VRF | Cassette indoor units, one outdoor unit per tenant
++ gree-gmv6-ultra
++ gree-gmv5
++ gree-gmv5-hr
++ gree-gmv6-mini
++ gree-gmv5-mini
++ gree-multipro
++ gree-flexx-ultra
++ gree-flexx-eco
 - gree-livo | IT room mini-split
++ gree-vireo
++ gree-envo
++ gree-sapphire
++ gree-zeno
++ gree-multi
++ gree-multi-eco
 
 Location: low-rise-office-3
 Title: Perimeter
 Text: Finned tube and panel radiators offset heat loss at the glass.
 Equipment:
 - sterling-versa-line | Finned tube under the windows
++ sterling-classic
++ sterling-custom
++ sterling-dura-vane
++ sterling-baseboard
++ sterling-electric-baseboard
++ kampmann-perimeter
++ kampmann-baseboard
 - runtal-hydronic | Entry panel radiator
++ runtal-electric
++ sterling-panel-radiators
++ sterling-convectors
++ sterling-radiant
 
 Location: low-rise-office-4
 Title: Air handling options
 Text: Other air handlers used in low-rise offices.
 Equipment:
 - envirotec-mql | Indoor air handling unit
++ temtrol-ahu
++ huntair-ahu
++ governair-ahu
++ ventrol-ahu
 - temtrol-lc | Compact air handler
 - mammoth-vcube | Vertical self-contained unit
++ mammoth-vcube-slim

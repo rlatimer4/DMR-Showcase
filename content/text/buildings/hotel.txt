@@ -19,9 +19,95 @@ Challenges:
 - Individual room control
 - Ventilation for corridors and bathrooms
 
+Also applicable:
+# Product lines that also suit this building type but have no 3D model of their own here.
+# One product code per line. They are listed on the building's panel and count for the catalog's building filter.
+- huntair-fanwall
+- temtrol-fanwall
+- governair-fanwall
+- ventrol-fanwall
+- cooney-freeze-block
+- cooney-smart-coil
+- nortek-water-coils
+- nortek-steam-coils
+- nortek-steam-distributing-coils
+- nortek-dx-coils
+- uvr-rlm
+- uvr-de
+- uvr-sl
+- uvr-sln
+- uvr-dln
+- uvr-x-plus
+- uvr-lamps
+- uvr-accessories
+- klingenburg-plate
+- reddi-duct-heaters
+- nortek-booster-coils
+- reddi-controls
+- nortek-acoustiflo
+- sterling-unit-heaters
+- kampmann-top
+- reddi-unit-heaters
+- reddi-ventilation
+- fisair-electrode
+- fisair-resistance
+- steamovap-ier
+- steamovap-ise
+- fisair-vxv
+- fisair-asc
+- steamovap-ils
+- fisair-fsh
+- fisair-mt2
+- steamovap-distribution
+- fisair-hef2e
+- fisair-hef3
+- steamovap-aem
+- fisair-atomspray
+- steamovap-aca
+- steamovap-aul
+- steamovap-controls
+- steamovap-safety
+- steamovap-water-filter
+- steamovap-wro
+- mammoth-ultraline
+- mammoth-ashp
+- venmar-ashp
+- uvr-glo
+- envirotec-sdr
+- envirotec-sdl
+- envirotec-sgx
+- envirotec-crb
+- envirotec-crq
+- envirotec-vfr
+- envirotec-vfl
+- envirotec-cfl
+- envirotec-ddc
+- envirotec-pneumatic
+- envirotec-rft
+- envirotec-crc
+- envirotec-cfl-cc
+- gree-livo
+- gree-vireo
+- gree-envo
+- gree-sapphire
+- gree-zeno
+- gree-multi
+- gree-multi-eco
+- sterling-versa-line
+- sterling-classic
+- sterling-custom
+- sterling-dura-vane
+- sterling-light-commercial
+- sterling-baseboard
+- sterling-electric-baseboard
+- kampmann-perimeter
+- kampmann-baseboard
+
 # ---------------- Equipment locations ----------------
 # Each location starts with "Location:" and its code. Do not change the code.
 # Equipment lines read:  - product code | what it is in this building | why it suits (optional)
+# A line starting with + under an equipment line is another product line that fits the same role.
+# It shares that model in the 3D view and is listed under it:  + product code | note (optional)
 # Product codes are the file names in content/text/products/.
 
 Location: hotel-1
@@ -29,33 +115,96 @@ Title: Corridor ventilation
 Text: A dedicated outdoor air system feeds corridors and guest rooms with dry, tempered air.
 Equipment:
 - venmar-energypack | Corridor make-up air unit | 100% outdoor air unit feeding corridors and guest room ventilation
++ venmar-erv
 - novelaire-ecw | Energy recovery wheel | Recovers energy from bathroom exhaust
++ klingenburg-wheel
 
 Location: hotel-2
 Title: Guest rooms: fan coil system
 Text: A vertical hi-rise fan coil in each room stacks on a shared riser. A towel radiator heats the bathroom.
 Equipment:
 - envirotec-vh | Vertical hi-rise fan coil | One riser-mounted unit per room, stacked floor to floor
++ envirotec-vf
++ envirotec-vl
++ envirotec-cdv
++ envirotec-vb
++ kampmann-venkon
++ kampmann-powerkon
++ envirotec-piping
 - runtal-hydronic | Bathroom towel radiator
++ runtal-electric
++ sterling-panel-radiators
++ sterling-convectors
++ sterling-radiant
 
 Location: hotel-4
 Title: Guest rooms: VRF system
 Text: Ducted VRF indoor units serve each room, and the system moves heat from rooms that need cooling to rooms that need heating.
 Equipment:
 - gree-gmv6 | Guest room VRF system | Heat recovery between rooms
++ gree-gmv6-ultra
++ gree-gmv5
++ gree-gmv5-hr
 - gree-ducted | Concealed ducted indoor unit | Above the entry ceiling of each room
++ gree-cassette
++ gree-wall
++ gree-floor-ceiling
++ gree-fresh-air
++ gree-ahu-kit
++ gree-mtac
 
 Location: hotel-3
 Title: Lobby
 Text: Trench units sit in the floor along the glass and a cabinet unit heater warms the entrance.
 Equipment:
 - kampmann-katherm-qk | Lobby trench heater | Floor-recessed along the storefront glass
++ kampmann-katherm-hk
++ kampmann-katherm-qk-nano
++ kampmann-katherm-nk
++ kampmann-katherm-qe
 - sterling-cabinet | Vestibule cabinet unit heater | Recessed heater that offsets cold air at the main doors
++ sterling-convectors
 
 Location: hotel-5
 Title: Air handling options
 Text: Other air handlers used in hotels.
 Equipment:
 - mammoth-vcube | Vertical self-contained unit | Serves ballrooms and meeting rooms
++ mammoth-vcube-slim
 - temtrol-knockdown | Knockdown replacement air handler
++ huntair-knockdown
++ ventrol-knockdown
 - envirotec-mql | Back-of-house indoor air handler
++ temtrol-ahu
++ huntair-ahu
++ governair-ahu
++ ventrol-ahu
+
+Location: hotel-6
+Title: Guest rooms: other fan coil types
+Text: Where a riser-mounted unit does not suit the room, a fan coil can stand in a closet, sit above the entry ceiling or run along the window wall.
+Equipment:
+- envirotec-cdv | Vertical high-performance fan coil | Upright unit in a closet or alcove, with the return low and the discharge on top
++ envirotec-vf
++ envirotec-vb
++ envirotec-vh
++ kampmann-venkon
++ kampmann-powerkon
++ envirotec-piping
+- envirotec-hl | Low-profile horizontal fan coil | Fits the shallow ceiling above the room entry
++ envirotec-hp
++ envirotec-hdd
++ kampmann-kadeck
++ kampmann-venkon-xl
++ kampmann-kadius
++ uvr-uvk
+- envirotec-vl | Low-profile floor fan coil | Sits under a low window sill
+
+Location: hotel-7
+Title: Guest rooms: packaged terminal units
+Text: A packaged terminal unit under the window heats and cools one guest room on its own, with no central plant.
+Equipment:
+- gree-ptac | Packaged terminal heat pump | One self-contained unit per guest room, in a wall sleeve under the window
++ gree-etac
++ gree-ttw
++ gree-mtac

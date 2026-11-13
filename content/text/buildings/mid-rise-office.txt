@@ -19,9 +19,104 @@ Challenges:
 - Zone control on every floor
 - Mechanical space on each floor
 
+Also applicable:
+# Product lines that also suit this building type but have no 3D model of their own here.
+# One product code per line. They are listed on the building's panel and count for the catalog's building filter.
+- temtrol-knockdown
+- huntair-knockdown
+- ventrol-knockdown
+- huntair-fanwall
+- temtrol-fanwall
+- governair-fanwall
+- ventrol-fanwall
+- cooney-freeze-block
+- cooney-smart-coil
+- nortek-water-coils
+- nortek-steam-coils
+- nortek-steam-distributing-coils
+- nortek-dx-coils
+- uvr-rlm
+- uvr-de
+- uvr-sl
+- uvr-sln
+- uvr-dln
+- uvr-x-plus
+- uvr-lamps
+- uvr-accessories
+- novelaire-ecw
+- klingenburg-wheel
+- klingenburg-plate
+- nortek-acoustiflo
+- sterling-unit-heaters
+- kampmann-top
+- reddi-unit-heaters
+- reddi-ventilation
+- fisair-electrode
+- fisair-resistance
+- steamovap-ier
+- steamovap-ise
+- fisair-vxv
+- fisair-asc
+- steamovap-ils
+- fisair-fsh
+- fisair-mt2
+- steamovap-distribution
+- fisair-hef2e
+- fisair-hef3
+- steamovap-aem
+- fisair-atomspray
+- steamovap-aca
+- steamovap-aul
+- steamovap-controls
+- steamovap-safety
+- steamovap-water-filter
+- steamovap-wro
+- mammoth-ashp
+- venmar-ashp
+- uvr-glo
+- envirotec-crc
+- envirotec-cfl-cc
+- gree-gmv6
+- gree-gmv6-ultra
+- gree-gmv5
+- gree-gmv5-hr
+- gree-cassette
+- gree-ducted
+- gree-wall
+- gree-floor-ceiling
+- gree-fresh-air
+- gree-ahu-kit
+- gree-livo
+- gree-vireo
+- gree-envo
+- gree-sapphire
+- gree-zeno
+- gree-multi
+- gree-multi-eco
+- sterling-versa-line
+- sterling-classic
+- sterling-custom
+- sterling-dura-vane
+- sterling-electric-baseboard
+- kampmann-perimeter
+- kampmann-baseboard
+- runtal-hydronic
+- runtal-electric
+- sterling-panel-radiators
+- sterling-convectors
+- sterling-radiant
+- sterling-cabinet
+- kampmann-katherm-hk
+- kampmann-katherm-qk
+- kampmann-katherm-qk-nano
+- kampmann-katherm-nk
+- kampmann-katherm-qe
+
 # ---------------- Equipment locations ----------------
 # Each location starts with "Location:" and its code. Do not change the code.
 # Equipment lines read:  - product code | what it is in this building | why it suits (optional)
+# A line starting with + under an equipment line is another product line that fits the same role.
+# It shares that model in the 3D view and is listed under it:  + product code | note (optional)
 # Product codes are the file names in content/text/products/.
 
 Location: mid-rise-office-1
@@ -29,13 +124,27 @@ Title: Outdoor air and recovery
 Text: Energy recovery ventilators pre-condition outdoor air using the building's exhaust.
 Equipment:
 - venmar-erv | Rooftop energy recovery ventilator
++ venmar-energypack
 - ventrol-ahu | Air handler with integral energy recovery
++ temtrol-ahu
++ huntair-ahu
++ governair-ahu
++ envirotec-mql
 
 Location: mid-rise-office-2
 Title: Office floor: VAV system
 Text: VAV terminals vary the air to each zone from a central air handler.
 Equipment:
 - envirotec-sdr | Single-duct VAV boxes | Interior zones
++ envirotec-sdl
++ envirotec-sgx
++ envirotec-crq
++ envirotec-vfr
++ envirotec-vfl
++ envirotec-cfl
++ envirotec-ddc
++ envirotec-pneumatic
++ envirotec-rft
 - envirotec-crb | Series fan-powered VAV terminals | Perimeter zones with reheat
 
 Location: mid-rise-office-4
@@ -43,13 +152,23 @@ Title: Office floor: blower coil system
 Text: A blower coil above the ceiling of each zone heats and cools it directly.
 Equipment:
 - envirotec-hdd | Ceiling blower coil units | Horizontal direct-drive units above the ceiling, one per zone
++ envirotec-hp
++ envirotec-hl
++ kampmann-kadeck
++ kampmann-venkon-xl
++ kampmann-kadius
++ envirotec-piping
++ uvr-uvk
 
 Location: mid-rise-office-3
 Title: Floor-by-floor units
 Text: Vertical self-contained units serve one floor each from a small closet.
 Equipment:
 - mammoth-vcube-slim | Vertical self-contained VAV unit | One water-cooled unit per floor, sized to fit the elevator
++ mammoth-vcube
 - reddi-duct-heaters | Electric duct heater | Reheat for perimeter zones
++ nortek-booster-coils
++ reddi-controls
 
 Location: mid-rise-office-5
 Title: Air handling options
@@ -58,3 +177,26 @@ Equipment:
 - mammoth-ultraline | Custom packaged rooftop unit
 - temtrol-lc | Compact air handler | For above-ceiling and tight-access locations
 - governair-ahu | Custom air handler
++ temtrol-ahu
++ huntair-ahu
++ ventrol-ahu
++ envirotec-mql
+
+Location: mid-rise-office-6
+Title: Office floor: fan coil system
+Text: Hydronic fan coils on the building's hot and chilled water loops serve each zone, in the ceiling or along the window wall.
+Equipment:
+- kampmann-kadeck | Low-profile ceiling fan coil | Shallow unit for office ceilings, in new and retrofit work
++ envirotec-hp
++ envirotec-hl
++ envirotec-hdd
++ kampmann-kadius
++ envirotec-piping
++ uvr-uvk
+- kampmann-venkon-xl | Ducted fan coil for larger zones | Higher capacity and external static pressure
+- kampmann-venkon | Floor fan coil | Quiet unit along the window wall
++ envirotec-vf
++ envirotec-vl
++ envirotec-cdv
++ envirotec-vb
++ kampmann-powerkon

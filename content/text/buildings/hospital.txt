@@ -20,9 +20,85 @@ Challenges:
 - Infection control
 - Humidity limits in surgical spaces
 
+Also applicable:
+# Product lines that also suit this building type but have no 3D model of their own here.
+# One product code per line. They are listed on the building's panel and count for the catalog's building filter.
+- novelaire-ecw
+- klingenburg-wheel
+- klingenburg-plate
+- venmar-energypack
+- venmar-erv
+- reddi-duct-heaters
+- nortek-booster-coils
+- reddi-controls
+- nortek-acoustiflo
+- sterling-unit-heaters
+- kampmann-top
+- reddi-unit-heaters
+- reddi-ventilation
+- fisair-dfra
+- fisair-dfa
+- fisair-dflex
+- fisair-dfrb
+- fisair-dfrd
+- fisair-dfrc
+- fisair-dfog
+- novelaire-comfortdry
+- mammoth-ultraline
+- mammoth-ashp
+- venmar-ashp
+- envirotec-crc
+- envirotec-cfl-cc
+- envirotec-vf
+- envirotec-vl
+- envirotec-cdv
+- envirotec-vb
+- envirotec-vh
+- kampmann-venkon
+- kampmann-powerkon
+- gree-gmv6
+- gree-gmv6-ultra
+- gree-gmv5
+- gree-gmv5-hr
+- gree-cassette
+- gree-ducted
+- gree-wall
+- gree-floor-ceiling
+- gree-fresh-air
+- gree-ahu-kit
+- gree-mtac
+- gree-livo
+- gree-vireo
+- gree-envo
+- gree-sapphire
+- gree-zeno
+- gree-multi
+- gree-multi-eco
+- gree-ptac
+- gree-etac
+- gree-ttw
+- sterling-versa-line
+- sterling-classic
+- sterling-custom
+- sterling-dura-vane
+- sterling-light-commercial
+- sterling-guardian
+- sterling-baseboard
+- sterling-electric-baseboard
+- kampmann-perimeter
+- kampmann-baseboard
+- sterling-cabinet
+- kampmann-katherm-hk
+- kampmann-katherm-qk
+- kampmann-katherm-qk-nano
+- kampmann-katherm-nk
+- kampmann-katherm-qe
+
 # ---------------- Equipment locations ----------------
 # Each location starts with "Location:" and its code. Do not change the code.
 # Equipment lines read:  - product code | what it is in this building | why it suits (optional)
+# A line starting with + under an equipment line is another product line that fits the same role.
+# It shares that model in the 3D view and is listed under it:  + product code | note (optional)
 # Product codes are the file names in content/text/products/.
 
 Location: hospital-1
@@ -30,15 +106,47 @@ Title: Rooftop air handling
 Text: Custom air handlers with fan arrays keep air moving through a fan failure. UV-C fixtures keep the cooling coils clean.
 Equipment:
 - temtrol-ahu | Surgery air handler | Custom double-wall unit with HEPA final filters
++ huntair-ahu
++ governair-ahu
++ ventrol-ahu
++ envirotec-mql
 - huntair-fanwall | Fan array | N+1 direct-drive fans, so a failed fan does not interrupt surgery
++ temtrol-fanwall
++ governair-fanwall
++ ventrol-fanwall
 - uvr-rlm | UV-C coil fixture | Keeps the cooling coil free of growth
++ uvr-de
++ uvr-sl
++ uvr-sln
++ uvr-dln
++ uvr-x-plus
++ uvr-uvk
++ uvr-lamps
++ uvr-accessories
 
 Location: hospital-2
 Title: Operating suite
 Text: A single ceiling assembly delivers filtered air over the surgical table. Steam humidifiers hold the room within its required humidity range.
 Equipment:
 - huntair-ahu | Operating room air handler | Dedicated custom unit with HEPA final filters for the surgical suite
++ temtrol-ahu
++ governair-ahu
++ ventrol-ahu
++ envirotec-mql
 - steamovap-ise | Steam exchange humidifier | Clean steam from the central boiler holds the room at 20 to 60% relative humidity
++ fisair-electrode
++ fisair-resistance
++ steamovap-ier
++ fisair-vxv
++ fisair-asc
++ steamovap-ils
++ fisair-fsh
++ fisair-mt2
++ steamovap-distribution
++ steamovap-controls
++ steamovap-safety
++ steamovap-water-filter
++ steamovap-wro
 - uvr-glo | Upper-room UV-C
 
 Location: hospital-3
@@ -46,13 +154,34 @@ Title: Patient rooms: fan coil system
 Text: A quiet fan coil gives each patient room its own temperature control. Flat panel radiators are easy to wipe down.
 Equipment:
 - envirotec-hp | Patient room fan coil | Quiet four-pipe unit above the entry ceiling
++ envirotec-hl
++ envirotec-hdd
++ kampmann-kadeck
++ kampmann-venkon-xl
++ kampmann-kadius
++ envirotec-piping
++ uvr-uvk
 - runtal-hydronic | Flat panel radiator | Easy to wipe down, with no fins to trap dust
++ runtal-electric
++ sterling-panel-radiators
++ sterling-convectors
++ sterling-radiant
 
 Location: hospital-5
 Title: Isolation rooms: VAV system
 Text: VAV boxes with reheat track supply and exhaust airflow to hold the room at the pressure it needs.
 Equipment:
 - envirotec-sdr | VAV box with reheat | Airflow tracking for isolation rooms
++ envirotec-sdl
++ envirotec-sgx
++ envirotec-crb
++ envirotec-crq
++ envirotec-vfr
++ envirotec-vfl
++ envirotec-cfl
++ envirotec-ddc
++ envirotec-pneumatic
++ envirotec-rft
 - uvr-glo | Upper-room UV-C
 
 Location: hospital-4
@@ -60,13 +189,38 @@ Title: Mechanical room
 Text: Freeze-resistant preheat coils protect outdoor air systems in winter, and a central humidifier serves the general floors.
 Equipment:
 - cooney-freeze-block | Freeze-resistant preheat coil
++ cooney-smart-coil
++ nortek-water-coils
++ nortek-steam-coils
++ nortek-steam-distributing-coils
++ nortek-dx-coils
 - nortek-gas-phase | Air handler with gas-phase filtration | Removes helipad and ambulance bay fumes
 - fisair-resistance | Central humidifier
++ fisair-electrode
++ steamovap-ier
++ steamovap-ise
++ fisair-vxv
++ fisair-asc
++ steamovap-ils
++ fisair-fsh
++ fisair-mt2
++ steamovap-distribution
++ steamovap-controls
++ steamovap-safety
++ steamovap-water-filter
++ steamovap-wro
 
 Location: hospital-6
 Title: Air handling options
 Text: Other air handlers used in hospitals.
 Equipment:
 - huntair-ahu | General-floor custom air handler
++ temtrol-ahu
++ governair-ahu
++ ventrol-ahu
++ envirotec-mql
 - temtrol-knockdown | Knockdown replacement air handler | Passes through existing doors and corridors
++ huntair-knockdown
++ ventrol-knockdown
 - nortek-low-humidity | Surgery air handler with desiccant dehumidification | Holds low humidity at cool operating room setpoints
++ novelaire-desiccant-wheels
