@@ -6,6 +6,8 @@ representative serving DC, Maryland and Virginia. Styling follows dmr-hvac.com
 
 This is a prototype. It is a static site with no build step.
 
+[PROJECT_CONTEXT.md](PROJECT_CONTEXT.md) summarises the decisions made so far and what is still open.
+
 ## Run it
 
 ```bash

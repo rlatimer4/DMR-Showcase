@@ -57,7 +57,7 @@ Photos:
 ```
 
 The first photo is the main one and is also used on the product's catalog card.
-Use a photo of that specific product. If you do not have one, leave the list empty rather than reusing another product's photo.
+Prefer a photo of that specific product, and avoid using the same photo for several products where you can. A shared or general photo is fine when nothing better exists.
 Until photos are listed, the gallery shows labelled placeholder tiles.
 
 ## Optional product details
