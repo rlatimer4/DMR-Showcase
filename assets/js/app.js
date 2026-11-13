@@ -166,7 +166,7 @@
   D.filterCatalog = function (patch, scroll) {
     state = Object.assign({ q: "", cat: "", building: "", brand: "" }, patch);
     renderCatalog();
-    if (scroll) $("#products").scrollIntoView({ behavior: "smooth" });
+    if (scroll) D.showPage("products");
   };
 
   function catProductCount(catId) {
@@ -503,27 +503,43 @@
   });
   nav.addEventListener("click", function () { nav.classList.remove("open"); toggle.setAttribute("aria-expanded", false); });
 
-  // Highlight active section in primary navigation on scroll.
-  if ("IntersectionObserver" in window) {
-    var navLinks = {};
-    nav.querySelectorAll("a[href^='#']").forEach(function (a) { navLinks[a.getAttribute("href").slice(1)] = a; });
-    var secObs = new IntersectionObserver(function (entries) {
-      entries.forEach(function (en) {
-        if (en.isIntersecting && navLinks[en.target.id]) {
-          Object.keys(navLinks).forEach(function (k) {
-            var on = k === en.target.id;
-            navLinks[k].classList.toggle("is-active", on);
-            if (on) navLinks[k].setAttribute("aria-current", "true");
-            else navLinks[k].removeAttribute("aria-current");
-          });
-        }
-      });
-    }, { rootMargin: "-25% 0px -60% 0px", threshold: 0 });
-    Object.keys(navLinks).forEach(function (id) {
-      var el = document.getElementById(id);
-      if (el) secObs.observe(el);
+  /* ---------- pages ---------- */
+
+  // Each primary-nav tab is its own page: only one section shows at a time.
+  // The URL hash names the page (#products, #gallery …); no hash is the home page.
+  var pages = {}, curPage = null;
+  document.querySelectorAll("[data-page]").forEach(function (sec) { pages[sec.dataset.page] = sec; });
+  var navLinks = {};
+  nav.querySelectorAll("a[href^='#']").forEach(function (a) { navLinks[a.getAttribute("href").slice(1)] = a; });
+
+  function setPage(id) {
+    if (!pages[id]) id = "home";
+    if (id === curPage) return;
+    curPage = id;
+    Object.keys(pages).forEach(function (k) { pages[k].hidden = k !== id; });
+    Object.keys(navLinks).forEach(function (k) {
+      var on = k === id;
+      navLinks[k].classList.toggle("is-active", on);
+      if (on) navLinks[k].setAttribute("aria-current", "page");
+      else navLinks[k].removeAttribute("aria-current");
     });
+    window.scrollTo({ top: 0, behavior: "instant" });
+    var h = pages[id].querySelector("h1, h2");
+    document.title = (id === "home" || !h ? "" : (navLinks[id] ? navLinks[id].textContent : h.textContent) + " — ") + "DMR Associates — Product Showcase";
   }
+  function pageFromHash() {
+    var id = location.hash.slice(1);
+    // #product/<id> opens a product window over whichever page is showing.
+    if (/^product\//.test(id)) return curPage || "home";
+    return id === "top" ? "home" : id;
+  }
+  D.showPage = function (id) {
+    if (id === curPage) { window.scrollTo({ top: 0, behavior: "instant" }); return; }
+    if (location.hash !== "#" + id) location.hash = id;
+    else setPage(id);
+  };
+  window.addEventListener("hashchange", function () { setPage(pageFromHash()); });
+  setPage(pageFromHash());
 
   /* ---------- static content ---------- */
 

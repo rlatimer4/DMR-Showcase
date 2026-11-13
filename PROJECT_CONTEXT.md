@@ -16,6 +16,10 @@ Virginia. It is a static site with no build step.
 
 ## What the site has
 
+- **Pages**: each top-nav tab (Walkthrough, Products, Manufacturers,
+  Installations, Gallery, Contact) is its own page, picked by the URL hash
+  (`#products` and so on); no hash shows the home page. `app.js` shows one
+  `[data-page]` section at a time. `#product/<id>` still opens a product window.
 - **3D walkthrough** (three.js): 28 building types in Commercial, Institutional,
   Industrial and Residential districts, laid out in one row.
   - Selecting a building shows "What a DMR package brings" and opens it as a cutaway.
