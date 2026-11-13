@@ -278,27 +278,36 @@
 
   /* ---------- broader HVAC system classification ---------- */
 
+  // Chilled water and hot water are separate systems: a product gets one or
+  // both depending on whether it cools, heats, or does both from the plant.
+  var CHW = { id: "chw", label: "Chilled Water" }, HW = { id: "hw", label: "Hot Water" };
   D.systemTags = function (p, ctx) {
     if (!p) return [];
     var c = (ctx || "").toLowerCase(), sh = p.shape || "", cat = p.category || "", id = p.id || "";
-    if (/run-around|glycol/.test(c)) return [{ id: "glycol", label: "Run-Around Glycol Loop" }, { id: "hydronic", label: "Chilled / Heated Water" }];
-    if (sh === "vcube" || sh === "vcube-slim") return [{ id: "condenser", label: "Condenser Water" }, { id: "geo", label: "Geothermal" }, { id: "hydronic", label: "Chilled / Heated Water" }];
+    if (/run-around|glycol/.test(c)) return [{ id: "glycol", label: "Run-Around Glycol Loop" }, CHW, HW];
+    if (sh === "vcube" || sh === "vcube-slim") return [{ id: "condenser", label: "Condenser Water" }, { id: "geo", label: "Geothermal" }, CHW, HW];
     if (sh === "wshp") return [{ id: "condenser", label: "Condenser Water" }, { id: "geo", label: "Geothermal" }];
     if (cat === "vrf" || sh === "vrf" || sh === "cassette" || sh === "minisplit" || sh === "coil-dx" || id === "gree-ahu-kit") return [{ id: "split", label: "Split System / VRF" }];
-    if (id === "mammoth-ultraline") return [{ id: "dx", label: "Packaged DX" }, { id: "condenser", label: "Condenser Water" }, { id: "hydronic", label: "Chilled / Heated Water" }];
+    if (id === "mammoth-ultraline") return [{ id: "dx", label: "Packaged DX" }, { id: "condenser", label: "Condenser Water" }, CHW, HW];
     if (cat === "packaged" || cat === "heatpump" || sh === "rooftop" || sh === "ptac" || sh === "mua" || sh === "turnover") return [{ id: "dx", label: "Packaged DX / Air-Source" }];
-    if (id === "nortek-statepoint") return [{ id: "condenser", label: "Evaporative / Condenser Water" }, { id: "hydronic", label: "Chilled Water" }];
-    if (id === "nortek-cdu" || id === "nortek-coilwall" || sh === "chiller" || sh === "crah") return [{ id: "hydronic", label: "Chilled / Heated Water" }];
+    if (id === "nortek-statepoint") return [{ id: "condenser", label: "Evaporative / Condenser Water" }, CHW];
+    // Data center cooling is cooling only.
+    if (id === "nortek-cdu" || id === "nortek-coilwall" || sh === "chiller" || sh === "crah") return [CHW];
     if (/^ahu/.test(sh) || sh === "fanwall") {
-      if (/exhaust/.test(c)) return [{ id: "glycol", label: "Run-Around Glycol Loop" }, { id: "hydronic", label: "Chilled / Heated Water" }];
-      return ctx ? [{ id: "hydronic", label: "Chilled / Heated Water" }] : [{ id: "hydronic", label: "Chilled / Heated Water" }, { id: "split", label: "Split DX / Steam" }];
+      if (/exhaust/.test(c)) return [{ id: "glycol", label: "Run-Around Glycol Loop" }, CHW, HW];
+      return ctx ? [CHW, HW] : [CHW, HW, { id: "split", label: "Split DX / Steam" }];
     }
-    if (/^fancoil|^blowercoil/.test(sh) || sh === "vav-cooling" || sh === "coil" || sh === "coil-freeze" || sh === "coil-smart" || sh === "coil-duct") return [{ id: "hydronic", label: "Chilled / Heated Water" }];
+    if (sh === "vav-cooling") return [CHW];
+    if (/^fancoil|^blowercoil/.test(sh) || sh === "coil" || sh === "coil-freeze" || sh === "coil-smart" || sh === "coil-duct") return [CHW, HW];
     if (sh === "coil-steam" || sh === "humidifier-steam" || sh === "humidifier-exchange") return [{ id: "steam", label: "Central Steam / Boiler" }];
-    if (/^vav/.test(sh)) return [{ id: "hydronic", label: "Chilled / Heated Water" }, { id: "electric", label: "Electric Reheat" }];
+    // VAV boxes reheat with hot water or electric coils.
+    if (/^vav/.test(sh)) return [HW, { id: "electric", label: "Electric Reheat" }];
     if (cat === "electric" || sh === "ductheater") return [{ id: "electric", label: "Electric" }];
-    if (cat === "hydronic" || sh === "radiator" || sh === "fintube" || sh === "trench" || sh === "radiantpanel" || sh === "cabinetheater" || sh === "unitheater") return [{ id: "hydronic", label: "Chilled / Heated Water" }];
-    if (sh === "erv") return [{ id: "hydronic", label: "Chilled / Heated Water" }, { id: "dx", label: "Packaged DX" }];
+    // Perimeter heating is hot water; the lines that also cool say so in their name.
+    if (cat === "hydronic" || sh === "radiator" || sh === "fintube" || sh === "trench" || sh === "radiantpanel" || sh === "cabinetheater" || sh === "unitheater") {
+      return /cooling/i.test(p.name || "") || sh === "radiantpanel" ? [CHW, HW] : [HW];
+    }
+    if (sh === "erv") return [CHW, HW, { id: "dx", label: "Packaged DX" }];
     if (id === "novelaire-novel-ice" || id === "fisair-dfrigo") return [{ id: "dx", label: "Packaged DX + Desiccant" }];
     return [];
   };
