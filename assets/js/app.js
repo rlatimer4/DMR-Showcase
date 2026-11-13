@@ -49,7 +49,7 @@
   var state = { q: "", cat: "", building: "", brand: "" };
 
   function matches(p) {
-    if (state.cat && p.category !== state.cat) return false;
+    if (state.cat && p.category !== state.cat && !((state.cat === "humid" || state.cat === "evap") && (p.shape === "evap" || p.shape === "atomizer"))) return false;
     if (state.building && p.buildings.indexOf(state.building) < 0) return false;
     if (state.brand && p.brand !== state.brand) return false;
     if (state.q) {
@@ -60,12 +60,14 @@
   }
 
   function card(p) {
+    var sys = D.systemTags(p);
     return '<article class="card">' +
       '<button class="card-open" type="button" data-product="' + p.id + '" aria-label="' + brands[p.brand].name + " " + p.name + ': details">' +
       D.media(p) + "</button>" +
       '<div class="card-body">' +
       '<p class="card-meta">' + cats[p.category].name + "</p>" +
       '<h3><span class="card-brand">' + brands[p.brand].name + "</span> " + p.name + (p.badge ? ' <span class="badge">' + p.badge + "</span>" : "") + "</h3>" +
+      D.systemBadgesHtml(sys) +
       "<p>" + p.summary + "</p>" +
       '<div class="card-actions"><button class="link" type="button" data-product="' + p.id + '">View details</button>' +
       '<button class="add" type="button" data-add="' + p.id + '"></button></div>' +
@@ -176,29 +178,52 @@
     var p = products[id];
     if (!p) return;
     var b = brands[p.brand];
-    var stops = [];
+    var stops = [], peers = {};
     D.buildings.forEach(function (bl) {
-      bl.stops.forEach(function (s) { if (s.products.indexOf(id) > -1) stops.push({ b: bl, s: s }); });
+      bl.stops.forEach(function (s) {
+        if (s.products.indexOf(id) > -1) {
+          var idx = 0;
+          s.equipment.forEach(function (eq, i) {
+            if (eq.product === id || eq.also.some(function (a) { return a.product === id; })) {
+              idx = i;
+              peers[eq.product] = true;
+              eq.also.forEach(function (a) { peers[a.product] = true; });
+            }
+          });
+          stops.push({ b: bl, s: s, item: idx });
+        }
+      });
     });
-    var related = D.products.filter(function (x) { return x.id !== id && x.category === p.category; }).slice(0, 4);
+    function relScore(x) {
+      var sameShape = p.shape && p.shape !== "box" && x.shape === p.shape ? 4 : 0;
+      var sameCat = x.category === p.category ? 2 : 0;
+      var peer = peers[x.id] && (sameShape || sameCat || x.category !== "controls") ? 3 : 0;
+      if (!sameShape && !sameCat && !peer) return 0;
+      return sameShape + peer + sameCat + (x.brand !== p.brand ? 1 : 0);
+    }
+    var related = D.products.filter(function (x) { return x.id !== id && relScore(x) > 0; }).sort(function (a, c) {
+      return relScore(c) - relScore(a);
+    }).slice(0, 6);
+    var relTitle = related.every(function (r) { return r.category === p.category; }) ? "More in " + cats[p.category].name : "Related products";
     pd.innerHTML =
       '<form method="dialog"><button class="close" aria-label="Close">Close</button></form>' +
       '<div class="sheet-grid"><div>' + galleryHtml(p) + "</div><div>" +
       '<p class="card-meta">' + cats[p.category].name + "</p>" +
       '<h2 id="pdTitle"><span class="card-brand">' + b.name + "</span> " + p.name + (p.badge ? ' <span class="badge">' + p.badge + "</span>" : "") + "</h2>" +
+      D.systemBadgesHtml(D.systemTags(p), "System type:") +
       '<p class="lede-sm">' + p.summary + "</p>" +
       (p.features.length ? "<h3>Key points</h3><ul class='ticks'>" + p.features.map(function (f) { return "<li>" + f + "</li>"; }).join("") + "</ul>" : "") +
       (p.specs ? "<h3>Specifications</h3><dl class='specs'>" + Object.keys(p.specs).map(function (k) { return "<dt>" + k + "</dt><dd>" + p.specs[k] + "</dd>"; }).join("") + "</dl>" : "") +
       (p.links && p.links.length ? "<h3>Documents and links</h3><ul class='doc-links'>" + p.links.map(function (l) { return '<li><a href="' + l.url + '" target="_blank" rel="noopener">' + l.label + "</a></li>"; }).join("") + "</ul>" : "") +
       (p.buildings.length ? "<h3>Used in</h3><p class='tags'>" + p.buildings.map(function (m) { return "<span>" + buildings[m].name + "</span>"; }).join("") + "</p>" : "") +
       (stops.length ? "<h3>See it in the walkthrough</h3><p class='tags'>" + stops.map(function (x) {
-        return '<button type="button" class="tag-btn" data-stop="' + x.s.id + '">' + x.b.name + ": " + x.s.title + "</button>";
+        return '<button type="button" class="tag-btn" data-stop="' + x.s.id + '" data-item="' + x.item + '">' + x.b.name + ": " + x.s.title + "</button>";
       }).join("") + "</p>" : "") +
       '<div class="sheet-actions"><button class="btn btn-primary add" type="button" data-add="' + p.id + '"></button>' +
       '<a class="btn btn-line" href="mailto:' + D.company.email + "?subject=" + encodeURIComponent("Inquiry: " + b.name + " " + p.name) + '">Ask DMR about this</a></div>' +
       (b.website ? '<p class="maker-link"><a href="' + b.website + '" target="_blank" rel="noopener">Visit ' + b.name + "</a></p>" : "") +
       "</div></div>" +
-      (related.length ? '<div class="related"><h3>More in ' + cats[p.category].name + "</h3><div class='related-row'>" + related.map(function (r) {
+      (related.length ? '<div class="related"><h3>' + relTitle + "</h3><div class='related-row'>" + related.map(function (r) {
         return '<button type="button" data-product="' + r.id + '"><strong>' + brands[r.brand].name + "</strong>" + r.name + "</button>";
       }).join("") + "</div></div>" : "");
     pd.querySelectorAll("[data-add]").forEach(syncAddBtn);
@@ -236,7 +261,7 @@
     if ((t = e.target.closest("[data-shot]"))) { showShot(t.closest(".pgal"), Number(t.dataset.shot)); return; }
     if ((t = e.target.closest("[data-shot-step]"))) { var gal = t.closest(".pgal"); showShot(gal, Number(gal.dataset.at) + Number(t.dataset.shotStep)); return; }
     if ((t = e.target.closest("[data-product]"))) { D.openProduct(t.dataset.product); return; }
-    if ((t = e.target.closest("dialog [data-stop]"))) { pd.close(); D.goToStop(t.dataset.stop, true); return; }
+    if ((t = e.target.closest("dialog [data-stop]"))) { pd.close(); D.goToStop(t.dataset.stop, true, Number(t.dataset.item) || 0); return; }
     // Click on the backdrop closes a dialog.
     if (e.target.tagName === "DIALOG") e.target.close();
   });

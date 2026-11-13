@@ -30,10 +30,10 @@ Why a DMR package:
 
 Location: hospital-2
 Title: Operating suite
-Text: A single ceiling assembly delivers filtered air over the surgical table.
+Text: Clean-steam humidifiers hold the operating room within its required 20 to 60% relative humidity range, and zone reheat coils trim the cold supply air to each surgeon's temperature setpoint.
 Equipment:
-- huntair-ahu | Operating room air handler | Dedicated custom unit with HEPA final filters
-- steamovap-humid | Clean-steam humidifier | Holds the room at 20 to 60% relative humidity
+- steamovap-ise | Steam exchange humidifier | Holds the room at 20 to 60% relative humidity
+- nortek-booster-coils | Surgical zone reheat coil | Trims cold supply air to each operating room's temperature setpoint
 ```
 
 Each equipment line is: product code | what it is in this building | why it suits
@@ -123,21 +123,22 @@ model that stands for it in the buildings:
 
 | shape | looks like |
 | --- | --- |
-| `ahu` | long custom air handler |
-| `ahu-knockdown` | air handler in separate sections, one being lowered in |
-| `ahu-acoustiflo` | air handler with the round AcoustiFLO fan showing at the end |
-| `ahu-gas` | air handler with a bank of black gas-phase media cassettes |
-| `ahu-desiccant` | air handler with a desiccant wheel and reactivation duct |
-| `ahu-lc` | short, compact air handler |
-| `ahu-washdown` | stainless air handler on a drain pan |
-| `vcube` | tall vertical self-contained unit |
+| `ahu` | custom air handler with mixing dampers, cutaway filter/coil bay, CHW/HW risers and fan section |
+| `ahu-knockdown` | air handler in separate modular sections, middle coil section rigged on a crane spreader bar |
+| `ahu-acoustiflo` | air handler with deep blue acoustic fan plenum, perforated gold AcoustiFLO cone and splitter silencers |
+| `ahu-gas` | air handler with cutaway V-bank molecular filtration chamber (carbon & permanganate trays) |
+| `ahu-desiccant` | double-deck air handler with exposed silica-gel desiccant wheel and upper orange reactivation deck |
+| `ahu-lc` | compact, low-profile semi-custom air handler with slate-blue roof cap and slide-out filter track |
+| `ahu-washdown` | pitched-roof brushed stainless air handler on sanitary legs over a sloped drain pan with marine portholes |
+| `ahu-exhaust` | coated lab exhaust air handler with cutaway run-around recovery coil and 3 top-mounted high-plume dilution exhaust fans |
+| `vcube`, `vcube-slim` | Mammoth vertical self-contained VAV units: full modular 3" ITF cabinet (`vcube`) and narrow elevator-width unit with louvered control column and exposed finned coil (`vcube-slim`) |
 | `rooftop` | packaged rooftop unit |
-| `chiller` | air-cooled chiller with V-coils and fans |
+| `chiller`, `statepoint` | air-cooled chiller with V-coils and fans, StatePoint indirect evaporative liquid cooler |
 | `fanwall`, `coilwall` | stacked cube cells with a plug fan in each, in a see-through air handler section; `coilwall` adds a coil behind |
 | `erv`, `wheel`, `plate` | energy recovery unit, wheel in its cassette, plate exchanger |
 | `mua`, `turnover` | make-up air unit, air rotation unit |
-| `crah` | computer room air handlers |
-| `coil`, `coil-dx`, `coil-steam`, `coil-freeze`, `coil-smart` | coil in an air handler section: water, refrigerant with distributor, steam with trap, freeze relief on the return bends, freeze sensors with a panel |
+| `crah`, `cdu` | computer room air handlers, rack-height coolant distribution unit |
+| `coil`, `coil-dx`, `coil-steam`, `coil-freeze`, `coil-smart`, `coil-runaround` | coil in an air handler section: water, refrigerant with distributor, steam with trap, freeze relief on the return bends, freeze sensors with a panel, pumped glycol run-around recovery loop |
 | `coil-duct` | booster coil in a length of duct at the ceiling |
 | `uv` | UV-C lamps on a rack inside an air handler, shining on the coil |
 | `uv-ext` | UV-C fixtures bolted to the outside of a plenum with the lamps reaching in |
@@ -146,7 +147,7 @@ model that stands for it in the buildings:
 | `humidifier-exchange` | steam-to-steam humidifier: tank fed by boiler steam, clean steam to the duct |
 | `humidifier-steam` | boiler steam injection: multi-tube manifold in an air handler, with valve and trap |
 | `evap` | evaporative humidifier or cooler: wetted media with a water header and sump |
-| `atomizer` | atomizing or ultrasonic humidifier: rows of nozzles putting out fog |
+| `atomizer` | direct-space atomizing humidifier: bracket-mounted spray heads with water/air lines and a wall control box |
 | `dehumidifier` | desiccant dehumidifier with its rotor showing |
 | `vrf`, `cassette`, `minisplit` | VRF outdoor unit, ceiling cassette, wall-mounted indoor unit |
 | `ptac` | packaged terminal unit in the wall under a window |
@@ -162,7 +163,7 @@ model that stands for it in the buildings:
 | `radiator`, `fintube`, `trench` | panel radiator, finned tube, floor trench unit |
 | `cabinetheater`, `radiantpanel` | cabinet unit heater or convector, radiant ceiling panels |
 | `unitheater`, `ductheater`, `aircurtain` | hanging unit heater, duct heater, air curtain over a door |
-| `orceiling`, `ffu` | operating room ceiling, cleanroom fan filter ceiling |
+| `ffu`, `ceiling-grid` | cleanroom fan filter units, modular cleanroom ceiling grid |
 | `wshp`, `box` | upright water-source unit, plain cabinet for controls and accessories |
 
 Products of the same kind share a shape on purpose: a model stands for a type of
@@ -200,7 +201,7 @@ its 3D model in `content/buildings/<id>.js`.
 `operating-room`, `patient-room`, `exam-room`, `guest-room`, `apartment`, `suite`,
 `lobby`, `open-office`, `office`, `classroom`, `lecture`, `auditorium`, `sanctuary`,
 `reading-room`, `archive`, `gallery`, `shop`, `concourse`, `baggage`, `exhibit-hall`,
-`gym`, `pool`, `locker`, `data-hall`, `mechanical`, `lab`, `dry-lab`, `vivarium`, `cleanroom`, `dry-room`,
+`gym`, `pool`, `ice-rink`, `locker`, `data-hall`, `mechanical`, `lab`, `dry-lab`, `vivarium`, `cleanroom`, `dry-room`,
 `process`, `production`, `shop-floor`, `high-bay`, `dock`, `grow`, `plant`.
 
 New room types and equipment shapes are added in `assets/js/props3d.js`.

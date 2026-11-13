@@ -20,6 +20,7 @@ DMR.registerManufacturer({
     { id: "novelaire-ecw", category: "recovery", shape: "wheel" },
     { id: "novelaire-desiccant-wheels", category: "dehum", shape: "wheel" },
     { id: "novelaire-comfortdry", category: "dehum", shape: "dehumidifier" },
-    { id: "novelaire-precisiondry", category: "dehum", shape: "dehumidifier" }
+    { id: "novelaire-precisiondry", category: "dehum", shape: "dehumidifier" },
+    { id: "novelaire-novel-ice", category: "dehum", shape: "dehumidifier" }
   ]
 });

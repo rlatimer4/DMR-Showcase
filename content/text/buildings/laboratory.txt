@@ -40,12 +40,30 @@ Also applicable:
 - mammoth-ashp
 - venmar-ashp
 - uvr-glo
+- envirotec-crb
+- envirotec-crq
+- envirotec-vfr
+- envirotec-vfl
+- envirotec-cfl
 - envirotec-vf
 - envirotec-vl
 - envirotec-cdv
 - envirotec-vb
 - kampmann-venkon
 - kampmann-powerkon
+- steamovap-ils
+- fisair-fsh
+- fisair-mt2
+- fisair-hef2e
+- fisair-hef3
+- steamovap-aem
+- fisair-atomspray
+- steamovap-aca
+- steamovap-aul
+- steamovap-controls
+- steamovap-safety
+- steamovap-water-filter
+- steamovap-wro
 - gree-gmv6
 - gree-gmv6-ultra
 - gree-gmv5
@@ -90,19 +108,22 @@ Also applicable:
 # Product codes are the file names in content/text/products/.
 
 Location: laboratory-1
-Title: Lab air handling and exhaust recovery
-Text: Lab air is used once and exhausted. Custom air handlers with fan arrays supply it, and a plate exchanger recovers energy from the exhaust without letting the two airstreams mix.
+Title: Lab air handling, high-plume exhaust and run-around recovery
+Text: Lab air is used once and exhausted. A 100% outdoor air unit supplies the labs, a coated exhaust air handler with top-mounted high-plume dilution fans discharges fume hood exhaust high above the roof, and a pumped glycol run-around coil loop recovers energy between them with zero cross-contamination.
 Equipment:
-- temtrol-ahu | 100% outdoor air lab air handler | Custom double-wall unit sized for once-through air
+- temtrol-ahu | 100% outdoor air supply AHU | Custom double-wall unit sized for once-through lab supply
 + huntair-ahu
 + governair-ahu
 + ventrol-ahu
 + envirotec-mql
-- huntair-fanwall | Fan array | A failed fan does not interrupt supply to hoods and animal rooms
-+ temtrol-fanwall
-+ governair-fanwall
-+ ventrol-fanwall
-- klingenburg-plate | Plate heat exchanger | Recovers exhaust energy with no cross-contamination
+- ventrol-ahu | Lab exhaust AHU with high-plume fans | Coated exhaust air handler with top-mounted high-plume dilution fans and integral run-around coil
++ huntair-ahu
++ temtrol-ahu
++ governair-ahu
+- nortek-water-coils | Run-around energy recovery coil | Pumped glycol coil loop transfers heat from the lab exhaust AHU to the 100% outdoor air supply unit with zero cross-contamination
++ cooney-freeze-block
++ cooney-smart-coil
++ klingenburg-plate
 
 Location: laboratory-2
 Title: Wet lab
@@ -111,11 +132,6 @@ Equipment:
 - envirotec-sdr | Lab supply VAV terminal | Tracks hood exhaust to hold the room negative
 + envirotec-sdl
 + envirotec-sgx
-+ envirotec-crb
-+ envirotec-crq
-+ envirotec-vfr
-+ envirotec-vfl
-+ envirotec-cfl
 + envirotec-ddc
 + envirotec-pneumatic
 + envirotec-rft
@@ -147,30 +163,13 @@ Equipment:
 + fisair-electrode
 + fisair-resistance
 + steamovap-ier
++ steamovap-res
 + fisair-vxv
 + fisair-asc
-+ steamovap-ils
-+ fisair-fsh
-+ fisair-mt2
 + steamovap-distribution
-+ fisair-hef2e
-+ fisair-hef3
-+ steamovap-aem
-+ fisair-atomspray
-+ steamovap-aca
-+ steamovap-aul
-+ steamovap-controls
-+ steamovap-safety
-+ steamovap-water-filter
-+ steamovap-wro
-- envirotec-crb | Constant airflow terminal | Holds each holding room at its airflow and pressure
-+ envirotec-sdr
+- envirotec-sdr | Constant airflow terminal | Holds each holding room at its airflow and pressure
 + envirotec-sdl
 + envirotec-sgx
-+ envirotec-crq
-+ envirotec-vfr
-+ envirotec-vfl
-+ envirotec-cfl
 + envirotec-ddc
 + envirotec-pneumatic
 + envirotec-rft
@@ -222,13 +221,12 @@ Equipment:
 
 Location: laboratory-7
 Title: Air handling options
-Text: Other air handlers used in research buildings.
+Text: Redundant fan arrays, desiccant dehumidification and gas-phase filtration air handlers used in research buildings.
 Equipment:
-- huntair-ahu | Custom lab air handler
-+ temtrol-ahu
-+ governair-ahu
-+ ventrol-ahu
-+ envirotec-mql
+- huntair-fanwall | Redundant fan array | A failed fan does not interrupt supply to hoods and animal rooms
++ temtrol-fanwall
++ governair-fanwall
++ ventrol-fanwall
 - nortek-low-humidity | Air handler with desiccant dehumidification
 + novelaire-desiccant-wheels
 - nortek-gas-phase | Air handler with gas-phase filtration | Removes vivarium odours and ammonia

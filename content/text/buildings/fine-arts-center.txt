@@ -48,6 +48,8 @@ Also applicable:
 - reddi-unit-heaters
 - reddi-ventilation
 - mammoth-ultraline
+- mammoth-vcube
+- mammoth-vcube-slim
 - mammoth-ashp
 - venmar-ashp
 - uvr-glo
@@ -126,6 +128,7 @@ Equipment:
 - steamovap-ier | Stage humidifier | Protects instruments and scenery
 + fisair-electrode
 + fisair-resistance
++ steamovap-res
 + steamovap-ise
 + fisair-vxv
 + fisair-asc

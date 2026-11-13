@@ -21,9 +21,9 @@ DMR.registerManufacturer({
     { id: "huntair-knockdown", category: "ahu", shape: "ahu-knockdown" },
     { id: "huntair-fanwall", category: "fanwall", shape: "fanwall" },
     { id: "huntair-ffu", category: "critical", shape: "ffu" },
-    { id: "huntair-ceiling-grid", category: "critical", shape: "ffu" },
-    { id: "huntair-flex-trak", category: "critical", shape: "ffu" },
-    { id: "huntair-light-grid", category: "critical", shape: "ffu" },
+    { id: "huntair-ceiling-grid", category: "critical", shape: "ceiling-grid" },
+    { id: "huntair-flex-trak", category: "critical", shape: "ceiling-grid" },
+    { id: "huntair-light-grid", category: "critical", shape: "ceiling-grid" },
     { id: "huntair-plenums", category: "critical", shape: "ffu" }
   ]
 });

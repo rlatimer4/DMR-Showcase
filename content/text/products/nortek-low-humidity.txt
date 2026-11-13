@@ -16,8 +16,7 @@ Key points:
 Photos:
 # One photo per line:  - file | caption
 # Put new image files in assets/photos/nortek-low-humidity/ and list them here. The first one is the main photo.
-# No photo of this product has been found yet. Add one here:
-# - assets/photos/nortek-low-humidity/photo.jpg | Caption
+- assets/photos/dmr/Nortek-Image.jpg | Image: Nortek Air Solutions
 
 Documents:
 - Nortek Air Solutions product page | https://www.nortekair.com/products/low-humidity-air-handlers/

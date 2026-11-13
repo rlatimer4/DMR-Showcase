@@ -104,6 +104,7 @@ Equipment:
 - fisair-resistance | Humidifier for humidity-controlled suites
 + fisair-electrode
 + steamovap-ier
++ steamovap-res
 + steamovap-ise
 + fisair-vxv
 + fisair-asc

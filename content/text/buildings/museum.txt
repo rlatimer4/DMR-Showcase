@@ -46,6 +46,8 @@ Also applicable:
 - reddi-unit-heaters
 - reddi-ventilation
 - mammoth-ultraline
+- mammoth-vcube
+- mammoth-vcube-slim
 - mammoth-ashp
 - venmar-ashp
 - uvr-glo
@@ -145,6 +147,7 @@ Equipment:
 - fisair-resistance | Gallery humidifier
 + fisair-electrode
 + steamovap-ier
++ steamovap-res
 + steamovap-ise
 + fisair-vxv
 + fisair-asc
@@ -180,6 +183,7 @@ Equipment:
 - steamovap-ier | Storage vault humidifier
 + fisair-electrode
 + fisair-resistance
++ steamovap-res
 + steamovap-ise
 + fisair-vxv
 + fisair-asc

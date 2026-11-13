@@ -17,6 +17,7 @@ Photos:
 # One photo per line:  - file | caption
 # Put new image files in assets/photos/nortek-cdu/ and list them here. The first one is the main photo.
 - assets/photos/nortek-cdu/2.jpg | Image: Nortek Air Solutions
+- assets/photos/nortek-cdu/1.jpg | Image: Nortek Air Solutions
 
 Documents:
 - Nortek Air Solutions product page | https://www.nortekdatacenter.com/cdu/

@@ -93,6 +93,7 @@ Equipment:
 - steamovap-ier | Data hall humidifier | Holds minimum humidity to control static
 + fisair-electrode
 + fisair-resistance
++ steamovap-res
 + steamovap-ise
 + fisair-vxv
 + fisair-asc

@@ -19,7 +19,7 @@ DMR.registerManufacturer({
   products: [
     { id: "mammoth-ultraline", category: "packaged", shape: "rooftop" },
     { id: "mammoth-vcube", category: "packaged", shape: "vcube" },
-    { id: "mammoth-vcube-slim", category: "packaged", shape: "vcube" },
+    { id: "mammoth-vcube-slim", category: "packaged", shape: "vcube-slim" },
     { id: "mammoth-ashp", category: "heatpump", shape: "rooftop" }
   ]
 });

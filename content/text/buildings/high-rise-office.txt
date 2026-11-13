@@ -42,6 +42,7 @@ Also applicable:
 - fisair-electrode
 - fisair-resistance
 - steamovap-ier
+- steamovap-res
 - steamovap-ise
 - fisair-vxv
 - fisair-asc
@@ -128,12 +129,18 @@ Equipment:
 
 Location: high-rise-office-3
 Title: Tenant fit-out
-Text: VRF and mini-splits add cooling for a tenant's server closet without changing the base building system.
+Text: VRF and mini-splits add cooling for a tenant's conference rooms and server closet without changing the base building system.
 Equipment:
 - gree-gmv6 | Tenant VRF system | Heat recovery VRF for conference rooms
 + gree-gmv6-ultra
 + gree-gmv5
 + gree-gmv5-hr
+- gree-cassette | Conference room ceiling cassettes
++ gree-ducted
++ gree-wall
++ gree-floor-ceiling
++ gree-fresh-air
++ gree-ahu-kit
 - gree-livo | Server closet mini-split | 24-hour cooling independent of the base building
 + gree-vireo
 + gree-envo

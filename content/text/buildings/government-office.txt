@@ -43,6 +43,7 @@ Also applicable:
 - fisair-electrode
 - fisair-resistance
 - steamovap-ier
+- steamovap-res
 - steamovap-ise
 - fisair-vxv
 - fisair-asc
@@ -173,12 +174,14 @@ Equipment:
 
 Location: government-office-5
 Title: Air handling options
-Text: Other air handlers used in government buildings.
+Text: Other air handlers and floor-by-floor self-contained units used in government buildings.
 Equipment:
 - governair-fanwall | FANWALL retrofit | Renews existing air handlers in place
 + huntair-fanwall
 + temtrol-fanwall
 + ventrol-fanwall
+- mammoth-vcube-slim | Floor-by-floor self-contained VAV unit | Passes through standard doorways and elevators for floor-by-floor retrofits
++ mammoth-vcube
 - huntair-ahu | Custom air handler
 + temtrol-ahu
 + governair-ahu

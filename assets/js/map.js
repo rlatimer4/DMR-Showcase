@@ -126,6 +126,7 @@
       "<fieldset><legend>Manufacturers at this site</legend>" + D.brands.map(function (b) {
         return '<label class="check"><input type="checkbox" name="manufacturers" value="' + b.id + '"' + ((i.manufacturers || []).indexOf(b.id) > -1 ? " checked" : "") + "> " + b.name + "</label>";
       }).join("") + "</fieldset>" +
+      '<label>Products (optional, one product code per line)<textarea name="products" rows="2" placeholder="temtrol-ahu">' + esc((i.products || []).join("\n")) + "</textarea></label>" +
       '<label>Photos (optional, one image path or URL per line)<textarea name="photos" rows="2" placeholder="assets/photos/project-1.jpg">' + esc((i.photos || []).join("\n")) + "</textarea></label>" +
       '<label>Notes (optional)<textarea name="notes" rows="2">' + esc(i.notes) + "</textarea></label>" +
       '<div class="row"><button class="btn btn-primary" type="submit">Save pin</button><button class="btn btn-line" type="button" data-cancel-pin>Cancel</button></div>';
@@ -151,6 +152,7 @@
       rec.name = f.name.value.trim(); rec.city = f.city.value.trim(); rec.lat = lat; rec.lng = lng;
       rec.building = f.building.value; rec.year = parseInt(f.year.value, 10) || "";
       rec.manufacturers = Array.prototype.filter.call(form.querySelectorAll("[name=manufacturers]"), function (c) { return c.checked; }).map(function (c) { return c.value; });
+      rec.products = f.products.value.split(/[\s,]+/).map(function (s) { return s.trim(); }).filter(function (id) { return L.products[id]; });
       rec.photos = f.photos.value.split(/\n+/).map(function (s) { return s.trim(); }).filter(Boolean);
       rec.notes = f.notes.value.trim();
       saveDraft(); closeForm(); fillFilters(); draw(); select(rec.id);

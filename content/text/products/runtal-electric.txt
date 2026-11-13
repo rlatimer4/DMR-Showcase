@@ -15,8 +15,7 @@ Key points:
 Photos:
 # One photo per line:  - file | caption
 # Put new image files in assets/photos/runtal-electric/ and list them here. The first one is the main photo.
-# No photo of this product has been found yet. Add one here:
-# - assets/photos/runtal-electric/photo.jpg | Caption
+- assets/photos/dmr/Runtal-Image.jpg | Image: Runtal North America
 
 Documents:
 - Runtal product page | https://runtalnorthamerica.com/

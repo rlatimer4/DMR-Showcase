@@ -45,6 +45,7 @@ Also applicable:
 - fisair-electrode
 - fisair-resistance
 - steamovap-ier
+- steamovap-res
 - steamovap-ise
 - fisair-vxv
 - fisair-asc
@@ -68,6 +69,11 @@ Also applicable:
 - uvr-glo
 - envirotec-crc
 - envirotec-cfl-cc
+- envirotec-crb
+- envirotec-crq
+- envirotec-vfr
+- envirotec-vfl
+- envirotec-cfl
 - envirotec-vf
 - envirotec-vl
 - envirotec-cdv
@@ -126,11 +132,6 @@ Equipment:
 - envirotec-sdr | Lab airflow VAV terminals
 + envirotec-sdl
 + envirotec-sgx
-+ envirotec-crb
-+ envirotec-crq
-+ envirotec-vfr
-+ envirotec-vfl
-+ envirotec-cfl
 + envirotec-ddc
 + envirotec-pneumatic
 + envirotec-rft
@@ -190,9 +191,11 @@ Equipment:
 
 Location: higher-education-6
 Title: Air handling options
-Text: Other air handlers used in campus buildings.
+Text: Other air handlers and self-contained units used in campus buildings.
 Equipment:
 - temtrol-lc | Classroom wing air handler
+- mammoth-vcube | Vertical self-contained VAV unit | Compact floor-by-floor or wing unit for campus buildings
++ mammoth-vcube-slim
 - nortek-low-humidity | Air handler with desiccant dehumidification
 + novelaire-desiccant-wheels
 - governair-fanwall | FANWALL retrofit

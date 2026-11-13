@@ -18,12 +18,25 @@
   var cur = { use: null, building: null, stop: null };
   function useName(id) { return D.useTypes.filter(function (u) { return u.id === id; })[0].name; }
 
+  // Deduplicated system tags across all equipment in a stop.
+  function stopSystems(s) {
+    var seen = {}, out = [];
+    s.equipment.forEach(function (e) {
+      var p = L.products[e.product];
+      D.systemTags(p, (e.role || "") + " " + (e.note || "") + " " + s.title).forEach(function (t) {
+        if (!seen[t.id]) { seen[t.id] = true; out.push(t); }
+      });
+    });
+    return out;
+  }
+
   // One piece of equipment at a stop: what it is here, who makes it, why it suits.
   function chip(e, n) {
-    var p = L.products[e.product];
+    var p = L.products[e.product], sys = D.systemTags(p, (e.role || "") + " " + (e.note || ""));
     return '<li><button type="button" class="p-chip' + (n === cur.item ? " is-shown" : "") + '" data-item="' + n + '" data-product="' + e.product + '">' +
       "<span class='role'>" + (e.role || p.name) + "</span>" +
       "<strong>" + L.brands[p.brand].name + " · " + p.name + "</strong>" +
+      D.systemBadgesHtml(sys) +
       (e.note ? "<em>" + e.note + "</em>" : "") + "</button>" +
       // other product lines that fit the same role share this model
       (e.also.length ? '<div class="p-also"><span>Other lines that fit here</span>' + e.also.map(function (a) {
@@ -47,8 +60,10 @@
   function render() {
     var b = cur.building, s = cur.stop, h;
     if (s) {
+      var sSys = stopSystems(s);
       h = '<button type="button" class="back" data-bld="' + b.id + '">' + b.name + "</button>" +
         "<h3>" + s.title + "</h3><p>" + s.text + "</p>" +
+        (sSys.length ? '<div class="stop-sys">' + D.systemBadgesHtml(sSys, "Broader system:") + "</div>" : "") +
         '<h4>Equipment here</h4><ul class="p-chips">' + s.equipment.map(chip).join("") + "</ul>" +
         '<div class="panel-nav"><button type="button" class="btn btn-line" data-step="-1"' + (s.seq === 0 ? " disabled" : "") + ">Previous</button>" +
         '<button type="button" class="btn btn-primary" data-step="1">' + (s.seq === stops.length - 1 ? "Finish tour" : "Next") + "</button></div>";
@@ -62,7 +77,8 @@
         "<h4>Where the equipment goes</h4>" +
         '<ol class="stop-list">' + b.stops.map(function (x) {
           return '<li><button type="button" data-goto="' + x.id + '"><span><strong>' + x.title + "</strong><em>" +
-            x.equipment.map(function (e) { return e.role || L.products[e.product].name; }).join(" · ") + "</em></span></button></li>";
+            x.equipment.map(function (e) { return e.role || L.products[e.product].name; }).join(" · ") + "</em>" +
+            D.systemBadgesHtml(stopSystems(x)) + "</span></button></li>";
         }).join("") + "</ol>" + alsoHtml(b) +
         '<button type="button" class="link" data-catalog="' + b.id + '">See all products for this building type</button>';
     } else {

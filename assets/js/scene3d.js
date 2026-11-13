@@ -177,19 +177,6 @@ function init() {
     g.fillStyle = color; g.textAlign = "center"; g.textBaseline = "middle"; g.fillText(text, c.width / 2, 68);
     return canvasTexture(c);
   }
-  function dotTexture(n, active) {
-    const c = document.createElement("canvas");
-    c.width = c.height = 128;
-    const g = c.getContext("2d");
-    g.beginPath(); g.arc(64, 64, 54, 0, Math.PI * 2);
-    g.fillStyle = active ? "#ffffff" : "#ffa500"; g.fill();
-    g.lineWidth = 12; g.strokeStyle = active ? "#ffa500" : "#ffffff"; g.stroke();
-    g.fillStyle = "#282c39"; g.font = "800 58px Montserrat, Arial, sans-serif";
-    g.textAlign = "center"; g.textBaseline = "middle"; g.fillText(String(n), 64, 68);
-    const t = new THREE.CanvasTexture(c);
-    t.colorSpace = THREE.SRGBColorSpace;
-    return t;
-  }
   function textSprite(text, bg, size) {
     const c = document.createElement("canvas");
     c.width = 768; c.height = 96;
@@ -207,7 +194,8 @@ function init() {
 
   /* ---------- building models ---------- */
 
-  const models = {}, spots = [], hits = [], fans = [];
+  const models = {}, hits = [];
+  const DUCTLESS = /^(turnover|ptac|minisplit|vrf|cassette|unitheater|atomizer|radiator|fintube|trench|cabinetheater|radiantpanel|fancoil-hirise|fancoil-vertical|fancoil-floor|fancoil-floor-low|crah|cdu)$/;
   let P;
 
   const hexMats = {};
@@ -232,10 +220,19 @@ function init() {
     box(shell, w, h, 0.4, 0, h / 2, -dp / 2 + 0.2, wall);
     box(shell, 0.4, h, dp, -w / 2 + 0.2, h / 2, 0, wall);
     box(shell, 0.4, h, dp, w / 2 - 0.2, h / 2, 0, wall);
+    const cw = w / bays;
     for (let i = 0; i < floors; i++) {
-      for (let k = 1; k < bays; k++) box(shell, 0.25, fh - 0.3, dp * 0.62, -w / 2 + k * w / bays, i * fh + fh / 2 + 0.15, -dp * 0.19, M.partition);
-      box(shell, w * 0.84, 0.5, 0.9, 0, (i + 1) * fh - 0.55, -dp * 0.1, M.supply, false);
-      box(shell, w * 0.84, 0.4, 0.7, 0, (i + 1) * fh - 0.5, -dp * 0.36, M.return, false);
+      for (let k = 1; k < bays; k++) box(shell, 0.25, fh - 0.3, dp * 0.62, -w / 2 + k * cw, i * fh + fh / 2 + 0.15, -dp * 0.19, M.partition);
+      if (b.roof === "open") continue;
+      for (let col = 0; col < bays; col++) {
+        const bayStops = b.stops.filter(s => s.at.floor === i && Math.min(bays - 1, Math.floor(s.at.x * bays)) === col);
+        const isDuctless = bayStops.length > 0 && bayStops.every(s => s.equipment.every(e => DUCTLESS.test(D.lookup.products[e.product].shape || "box")));
+        if (!isDuctless) {
+          const bx = -w / 2 + (col + 0.5) * cw, dw = cw * 0.86;
+          box(shell, dw, 0.5, 0.9, bx, (i + 1) * fh - 0.55, -dp * 0.1, M.supply, false);
+          box(shell, dw, 0.4, 0.7, bx, (i + 1) * fh - 0.5, -dp * 0.36, M.return, false);
+        }
+      }
     }
     const fm = new THREE.MeshStandardMaterial({ map: facadeTexture(w, h, floors, facadeDef), transparent: true, roughness: 0.45 });
     const facade = box(shell, w - 0.04, h - 0.04, 0.24, 0, h / 2, dp / 2 + 0.14, fm, false);
@@ -312,7 +309,7 @@ function init() {
     g.add(shell);
     scene.add(g);
     const { width: w, depth: dp, floorHeight: fh, bays, height: h } = b.size;
-    const m = models[b.id] = { b, g, shell, cutaways: [], rooms: {}, spots: [], equip: [], items: {}, zones: [], tagged: {}, open: 0, openTarget: 0 };
+    const m = models[b.id] = { b, g, shell, cutaways: [], rooms: {}, equip: [], items: {}, zones: [], tagged: {}, open: 0, openTarget: 0 };
     generateShell(b, shell, m);
     if (b.model) loadModel(b, m);
 
@@ -328,7 +325,12 @@ function init() {
 
     b.stops.forEach(s => {
       const x = -w / 2 + s.at.x * w;
-      const shapes = s.equipment.map(e => D.lookup.products[e.product].shape || "box");
+      const shapes = s.equipment.map(e => {
+        const sh = D.lookup.products[e.product].shape || "box";
+        if (/^ahu/.test(sh) && /exhaust/i.test(e.role)) return "ahu-exhaust";
+        if (/^coil/.test(sh) && /run-around/i.test(e.role)) return "coil-runaround";
+        return sh;
+      });
       const outdoor = s.at.floor === "roof" || s.at.floor === "yard";
       // Each piece of equipment is its own group, so it can be clicked to open its product.
       const place = u => {
@@ -343,7 +345,7 @@ function init() {
       if (outdoor) {
         const onRoof = s.at.floor === "roof", y = onRoof ? h + 0.3 : 0.12, z = onRoof ? -1 : dp / 2 + 8.5;
         const shared = b.stops.filter(o => o.at.floor === s.at.floor).length;   // units share the roof or yard
-        const room = Math.min(16, (w - 2) / shared), cx = Math.max(-w / 2 + room / 2 + 0.5, Math.min(w / 2 - room / 2 - 0.5, x));
+        const room = Math.min(21, (w - 2) / shared), cx = Math.max(-w / 2 + room / 2 + 0.5, Math.min(w / 2 - room / 2 - 0.5, x));
         if (!b.model) {
           P.arrange(shapes, { x: cx, w: room, floorY: y, z, outdoor: true }).forEach(place);
           if (onRoof) {
@@ -487,10 +489,6 @@ function init() {
       m.g.visible = !fb || mine || b.pos.z <= fb.pos.z + 1;
       m.label.visible = !fb && (!view.use || b.use === view.use);
       m.label.scale.set(view.use ? 30 : 38, view.use ? 3.75 : 4.75, 1);
-      m.spots.forEach(sp => {
-        sp.visible = mine && !(view.stop && sp.userData.stop === view.stop.id);
-        sp.material.map = view.stop && sp.userData.stop === view.stop.id ? sp.userData.on : sp.userData.off;
-      });
       Object.keys(m.rooms).forEach(id => { m.rooms[id].visible = mine && !!view.stop && view.stop.id === id; });
     });
   }
@@ -503,8 +501,6 @@ function init() {
     const r = canvas.getBoundingClientRect();
     ptr.set(((e.clientX - r.left) / r.width) * 2 - 1, -((e.clientY - r.top) / r.height) * 2 + 1);
     ray.setFromCamera(ptr, camera);
-    const s = ray.intersectObjects(spots.filter(x => x.visible))[0];
-    if (s) return { stop: s.object.userData.stop };
     const tag = ray.intersectObjects(tags.filter(x => x.visible))[0];
     if (tag) return tag.object.userData;
     if (view.building) {
@@ -570,8 +566,6 @@ function init() {
         o.visible = m.open < 0.97;
       });
     });
-    if (!reduce) fans.forEach(f => { f.rotation.y += dt * 6; });
-    spots.forEach(sp => { if (sp.visible) { const base = view.stop ? 1.1 : 3; const s = reduce ? base : base + Math.sin(now / 420 + sp.userData.phase) * base * 0.07; sp.scale.set(s, s, 1); } });
     tags.forEach(sp => {
       if (!sp.visible) return;
       const u = sp.userData, hh = tagHeight(sp, camera.position.distanceTo(u.base));

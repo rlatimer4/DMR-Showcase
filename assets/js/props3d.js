@@ -70,6 +70,24 @@ export function makeProps({ THREE, box, mesh, material }) {
     "exhibit-hall": t => t.grid(5, 5, (x, z, i, k) => { const c = [RED, BLUE, "#2e9e5b", "#ffa500"][(i + k) % 4]; t.B(3, 2.4, 0.12, x, 0, z - 1.4, c); t.B(0.12, 2.4, 2.8, x - 1.5, 0, z, WHITE); t.B(1.6, 0.9, 0.7, x, 0, z + 0.6, WHITE); }),
     "gym": t => { t.B(t.w - 1, 0.06, t.zd * 2 - 1, 0, 0, 0, "#d9a868"); t.B(0.15, 0.07, t.zd * 2 - 1, 0, 0.01, 0, WHITE); [-1, 1].forEach(s => { t.C(0.08, 0.08, 3, s * (t.w / 2 - 1.2), 0, 0, STEEL); t.B(0.1, 1, 1.6, s * (t.w / 2 - 1.5), 2.6, 0, WHITE); }); },
     "pool": t => { t.B(t.w - 1, 0.25, t.zd * 2 - 2, 0, 0, 0, "#f4f1ea"); t.B(t.w - 3, 0.3, t.zd * 2 - 5, 0, 0.02, 0, "#38b6e8"); for (let k = -2; k <= 2; k++) t.B(t.w - 3.2, 0.32, 0.1, 0, 0.02, k * 1.6, WHITE); },
+    "ice-rink": t => {
+      const rw = t.w - 1, rd = t.zd * 2 - 1.6, iw = rw - 0.3, id = rd - 0.3;
+      // Ice surface and markings
+      t.B(iw, 0.08, id, 0, 0, 0, "#dff3ff");
+      t.B(0.16, 0.02, id, 0, 0.08, 0, RED);
+      t.C(1.1, 1.1, 0.015, 0, 0.08, 0, BLUE, 24); t.C(0.96, 0.96, 0.02, 0, 0.08, 0, "#dff3ff", 24); t.C(0.15, 0.15, 0.025, 0, 0.08, 0, RED, 12);
+      [-1, 1].forEach(s => {
+        t.B(0.14, 0.02, id, s * iw * 0.23, 0.08, 0, BLUE);
+        t.B(0.08, 0.02, id, s * (iw / 2 - 0.8), 0.08, 0, RED);
+        const gx = s * (iw / 2 - 0.55);
+        t.B(0.42, 0.65, 1.1, gx, 0.08, 0, RED); t.B(0.38, 0.58, 0.96, gx - s * 0.04, 0.08, 0, WHITE);
+        // Side dasher boards
+        t.B(0.14, 0.75, rd, s * (rw / 2), 0, 0, WHITE); t.B(0.16, 0.08, rd, s * (rw / 2), 0.75, 0, BLUE); t.B(0.16, 0.1, rd, s * (rw / 2), 0, 0, "#f7b500");
+      });
+      // Back and low front dasher boards so the ice markings are clearly visible
+      t.B(rw, 0.75, 0.14, 0, 0, -rd / 2, WHITE); t.B(rw, 0.08, 0.16, 0, 0.75, -rd / 2, BLUE); t.B(rw, 0.1, 0.16, 0, 0, -rd / 2, "#f7b500");
+      t.B(rw, 0.28, 0.14, 0, 0, rd / 2, WHITE); t.B(rw, 0.05, 0.16, 0, 0.28, rd / 2, BLUE); t.B(rw, 0.08, 0.16, 0, 0, rd / 2, "#f7b500");
+    },
     "locker": t => { t.grid(2.4, 100, (x, z, i) => { t.B(0.6, 2, t.zd * 2 - 4, x, 0, 0, [BLUE, "#2a8a8a"][i % 2]); t.B(0.45, 0.45, t.zd * 2 - 5, x + 1, 0, 0, WOOD); }, 0, 0); },
     "data-hall": t => t.grid(2.9, 6, (x, z) => { t.B(1.6, 5.2, 3.4, x, 0, z, "dark"); t.B(1.62, 0.12, 3.42, x, 4.2, z, "#1e9be8"); }, -3.5, 2.5),
     "mechanical": t => { t.C(1, 1, 2.6, -t.w / 2 + 2, 0, -2, STEEL, 20); t.B(1.6, 1, 0.9, 0, 0, -3, BLUE); t.C(0.35, 0.35, 0.9, 0.9, 0.3, -3, "dark").rotation.z = Math.PI / 2; t.B(1.6, 1, 0.9, 2.4, 0, -3, BLUE); t.B(t.w - 2, 0.25, 0.25, 0, 2, -4.5, "supply"); t.B(t.w - 2, 0.25, 0.25, 0, 1.5, -4.5, "return"); t.B(0.8, 1.9, 0.5, t.w / 2 - 1.4, 0, -1, "#3f4854"); },
@@ -86,7 +104,15 @@ export function makeProps({ THREE, box, mesh, material }) {
     // pallet racking in rows running front to back, with aisles between the rows
     "high-bay": t => { const n = Math.max(2, Math.round(t.w / 4.4)), step = t.w / n, len = t.zd * 2 - 1; for (let i = 0; i < n; i++) { const x = (i - (n - 1) / 2) * step - step * 0.22; t.B(1.3, t.h - 3, len, x, 0, 0, "#f08c1a"); for (let k = 0; k < 3; k++) t.B(1.4, 1, len - 0.4, x, 0.3 + k * 2.2, 0, k % 2 ? WOOD : "#cfd8df"); } },
     "dock": t => { t.grid(2, 2, (x, z, i, k) => { t.B(1.2, 0.15, 1.2, x, 0, z, WOOD); t.B(1.1, 0.9 + ((i + k) % 2) * 0.5, 1.1, x, 0.15, z, "#cfa76a"); }, 0, t.zd - 1.5); t.B(1.2, 1.6, 2, 0, 0, -3, "#ffa500"); },
-    "grow": () => {},
+    "grow": t => {
+      const len = t.zd * 2 - 2;
+      t.grid(2.6, 100, (x) => {
+        t.B(1.6, 0.12, len, x, 0.75, 0, STEEL);
+        [-0.7, 0.7].forEach(dx => [-len / 2 + 0.4, 0, len / 2 - 0.4].forEach(dz => t.B(0.06, 0.75, 0.06, x + dx, 0, dz, STEEL)));
+        t.B(1.45, 0.35, len - 0.3, x, 0.87, 0, GREEN);
+        t.B(1.3, 0.06, len - 0.4, x, 2.35, 0, WHITE);
+      }, 0, 0);
+    },
     "plant": () => {}
   };
   function seats(t, color, stage) {
@@ -170,6 +196,7 @@ export function makeProps({ THREE, box, mesh, material }) {
     for (let k = 0; k < Math.min(3, n - 1); k++) { const dx = x - len / 2 + (k + 0.5) * len / n; u.B(1.2, 2.2, 0.06, dx, 0.6, 1.62, "#dfe7ee"); u.B(0.08, 0.3, 0.1, dx + 0.45, 1.6, 1.64, "dark"); }
     u.B(1.6, 0.9, 1.6, x + len / 2 - 1.2, 3.25, 0, GALV);
   }
+  const BEIGE = "#d6cfba", GLYCOL = "#7b61ff", COND = "#2e9e5b";
   // Fan array: stacked cube cells, each with a direct-drive plug fan inside, in a section of air handler.
   function fanArray(u, nx, ny, coil) {
     const c = 1.2, D = 1.3, W = nx * c, H = ny * c, y0 = 0.3, zf = D / 2, zb = -D / 2;
@@ -222,22 +249,230 @@ export function makeProps({ THREE, box, mesh, material }) {
     if (cooling) { u.B(0.16, 0.5, 0.9, -0.94, -0.8, 0.1, COPPER); u.C(0.045, 0.045, 0.6, -0.98, -0.3, -0.2, "supply", 8); u.C(0.045, 0.045, 0.6, -0.98, -0.3, 0.4, "return", 8); u.B(1.64, 0.1, 1.34, 0, -0.5, 0, "supply"); }
   }
   const SHAPES = {
-    // ---- air handlers: one base cabinet, with a visible feature that tells each type apart ----
-    ahu: u => cabinet(u, 9),
-    // knockdown: the same unit as separate sections, one still being lowered into place
-    "ahu-knockdown": u => { for (let k = 0; k < 3; k++) { const x = -3.3 + k * 3.3, up = k === 1 ? 1.6 : 0; u.B(2.7, 3, 3.2, x, 0.25 + up, 0, "unit"); u.B(2.76, 0.25, 3.26, x, up, 0, "trim"); u.B(1.2, 2.2, 0.06, x, 0.6 + up, 1.62, "#dfe7ee"); if (up) { u.C(0.04, 0.04, 2.2, x - 1, 3.25 + up, 1, "dark"); u.C(0.04, 0.04, 2.2, x + 1, 3.25 + up, -1, "dark"); u.B(2.6, 0.12, 0.12, x, 5.4 + up, 0, "#ffa500"); } } },
-    // AcoustiFLO: the round fan with its perforated casing shows at the open end
-    "ahu-acoustiflo": u => { cabinet(u, 7, -1.2); u.B(2.2, 3, 3.2, 3.5, 0.25, 0, "#2f3a46"); const f = u.C(1.35, 1.35, 1.5, 3.7, 1.0, 0, "#d9c9a0", 28); f.rotation.z = Math.PI / 2; const hub = u.C(0.5, 0.5, 1.6, 3.75, 1.25, 0, "#c9a23a", 16); hub.rotation.z = Math.PI / 2; u.B(0.12, 0.5, 3, 4.5, 0.3, 0, "#1f4fb4"); },
-    // gas-phase filtration: a bank of black media cassettes with yellow straps
-    "ahu-gas": u => { cabinet(u, 9); u.B(2.3, 2.6, 0.08, 1.2, 0.45, 1.64, "#1b1f24"); for (let i = 0; i < 3; i++) for (let k = 0; k < 2; k++) { u.B(0.62, 1.1, 0.1, 0.45 + i * 0.75, 0.6 + k * 1.25, 1.66, "#2a2f36"); u.B(0.5, 0.14, 0.12, 0.45 + i * 0.75, 0.95 + k * 1.25, 1.68, "#f2d21b"); } },
-    // low-temp desiccant: desiccant wheel in the side, reactivation duct on top
-    "ahu-desiccant": u => { cabinet(u, 9); const wh = u.C(1.2, 1.2, 0.2, 1.4, 1.1, 1.66, "#2e9e5b", 28); wh.rotation.x = Math.PI / 2; const hub = u.C(0.2, 0.2, 0.26, 1.4, 1.62, 1.66, "dark", 10); hub.rotation.x = Math.PI / 2; u.B(1, 0.8, 1, 1.4, 3.25, 0.6, "#ffa500"); u.C(0.35, 0.35, 1.2, 1.4, 4.05, 0.6, "#ffa500"); },
-    // Temtrol LC: a short, compact cabinet
-    "ahu-lc": u => { u.B(5, 2.2, 2.6, 0, 0.25, 0); u.trim(5, 2.6, 0, 0); u.B(0.08, 2.2, 2.64, -0.8, 0.25, 0, GALV); u.B(0.08, 2.2, 2.64, 0.9, 0.25, 0, GALV); u.B(1, 1.6, 0.06, 0, 0.55, 1.32, "#dfe7ee"); u.B(0.1, 1.4, 1.8, -2.52, 0.6, 0, "dark"); u.B(1.2, 0.6, 1.4, 1.7, 2.45, 0, "supply"); },
-    // washdown: stainless cabinet on a sloped drain pan
-    "ahu-washdown": u => { u.B(9, 0.3, 3.6, 0, 0, 0, "#1e9be8"); u.B(9, 3, 3.2, 0, 0.3, 0, STAIN); for (let k = -1; k <= 2; k++) u.B(0.08, 3, 3.24, k * 2.2 - 1, 0.3, 0, "#8d99a3"); for (let k = 0; k < 3; k++) u.B(1.2, 2.2, 0.06, -2.1 + k * 2.2, 0.65, 1.62, "#eef3f6"); const dr = u.C(0.12, 0.12, 0.9, 4.2, 0.05, 2.1, "#1e9be8"); dr.rotation.x = Math.PI / 2; },
-    // V-Cube: a tall vertical self-contained unit
-    vcube: u => { u.B(3.2, 4.8, 2.6, 0, 0.25, 0); u.trim(3.2, 2.6, 0, 0); u.B(1.3, 3.6, 0.06, -0.75, 0.6, 1.32, "#dfe7ee"); u.B(1.3, 3.6, 0.06, 0.75, 0.6, 1.32, "#dfe7ee"); u.B(2.4, 0.5, 1.8, 0, 5.05, 0, "supply"); u.B(0.5, 0.3, 0.06, 0.75, 3.4, 1.36, "#1e9be8"); },
+    // ---- air handlers: distinct silhouettes, cutaways, and piping for each AHU configuration ----
+    // Custom modular AHU: intake louver mixing box, cutaway filter & hydronic coil bay with CHW/HW risers, and fan section
+    ahu: u => {
+      u.trim(9.2, 3.2, 0, 0);
+      // Left mixing & economizer section with outdoor/return dampers
+      u.B(2.6, 3, 3.2, -3.3, 0.25, 0);
+      u.B(0.12, 2.1, 2.5, -4.62, 0.65, 0, "dark");
+      for (let k = 0; k < 6; k++) u.B(0.16, 0.08, 2.4, -4.64, 0.8 + k * 0.32, 0, GALV);
+      u.B(1.6, 0.65, 2.2, -3.3, 3.25, 0, "return");
+      u.B(1.1, 2.1, 0.06, -3.3, 0.6, 1.62, "#dfe7ee");
+      // Center cutaway filter + hydronic cooling/heating coil bay
+      u.casing(3.1, 3, 3.2, -0.45, 0);
+      for (let k = 0; k < 3; k++) { const fl = u.B(0.18, 2.4, 2.6, -1.55 + k * 0.26, 0.4, 0, "#dce6ee"); fl.rotation.z = k % 2 ? 0.14 : -0.14; }
+      u.B(0.55, 2.4, 2.6, 0.15, 0.4, 0, COPPER);
+      for (let k = 0; k < 8; k++) u.B(0.58, 2.4, 0.04, 0.15, 0.4, -1.1 + k * 0.31, GALV);
+      // Chilled water (blue) and hot water (orange) vertical risers & header manifolds
+      u.C(0.11, 0.11, 3.6, 0.45, 0.4, 1.48, "supply", 12);
+      u.C(0.11, 0.11, 3.6, 0.8, 0.4, 1.48, "return", 12);
+      u.B(0.32, 0.22, 0.22, 0.45, 2.2, 1.52, "supply");
+      u.B(0.32, 0.22, 0.22, 0.8, 1.7, 1.52, "return");
+      // Right supply fan & access section with viewports and top discharge plenum
+      u.B(3.5, 3, 3.2, 2.85, 0.25, 0);
+      [1.95, 3.65].forEach(dx => {
+        u.B(1.25, 2.2, 0.06, dx, 0.6, 1.62, "#dfe7ee");
+        u.Z(0.24, 0.05, dx, 1.95, 1.64, "#8fd0f5", 16);
+        u.B(0.08, 0.28, 0.1, dx + 0.48, 1.4, 1.65, "dark");
+      });
+      u.B(0.55, 0.65, 0.12, 1.25, 1.45, 1.63, SLATE);
+      u.B(0.35, 0.22, 0.04, 1.25, 1.72, 1.69, "#1e9be8");
+      u.B(1.8, 0.95, 2.0, 3.3, 3.25, 0, "supply");
+    },
+    // knockdown: split modular sections with exposed internal coil/fan at open mating flanges, middle section rigged on a crane spreader bar
+    "ahu-knockdown": u => {
+      for (let k = 0; k < 3; k++) {
+        const x = -3.4 + k * 3.4, up = k === 1 ? 1.65 : 0;
+        u.B(2.76, 0.25, 3.26, x, up, 0, "trim");
+        // Orange rigging lifting lugs on base corners
+        [-1.25, 1.25].forEach(lx => u.B(0.18, 0.18, 0.18, x + lx, up + 0.06, 1.68, "#ffa500"));
+        if (k === 1) {
+          // Hoisted center coil module with clear front showing copper coil and CHW/HW headers
+          u.casing(2.7, 2.8, 3.2, x, up);
+          u.B(0.7, 2.2, 2.5, x, 0.35 + up, 0, COPPER);
+          u.C(0.1, 0.1, 2.4, x + 0.6, 0.35 + up, 1.42, "supply", 10);
+          u.C(0.1, 0.1, 2.4, x + 0.9, 0.35 + up, 1.42, "return", 10);
+          u.C(0.04, 0.04, 2.3, x - 1, 3.1 + up, 1, "dark"); u.C(0.04, 0.04, 2.3, x + 1, 3.1 + up, -1, "dark");
+          u.C(0.04, 0.04, 2.3, x - 1, 3.1 + up, -1, "dark"); u.C(0.04, 0.04, 2.3, x + 1, 3.1 + up, 1, "dark");
+          u.B(2.8, 0.18, 2.2, x, 5.35 + up, 0, "#ffa500");
+        } else {
+          u.B(2.7, 3, 3.2, x, 0.25 + up, 0, "unit");
+          u.B(1.2, 2.2, 0.06, x, 0.6 + up, 1.62, "#dfe7ee");
+          u.Z(0.22, 0.05, x, 1.9 + up, 1.64, "#8fd0f5", 16);
+          if (k === 0) u.B(0.12, 2.0, 2.4, x - 1.37, 0.7, 0, "dark");
+          if (k === 2) { u.X(0.95, 0.35, x - 1.32, 1.7, 0, SLATE, 20); u.B(1.5, 0.85, 1.8, x + 0.3, 3.25, 0, "supply"); }
+        }
+      }
+    },
+    // AcoustiFLO: ultra-quiet AHU with dark blue acoustic casing, perforated gold acoustic fan cone, and splitter silencer baffles
+    "ahu-acoustiflo": u => {
+      u.trim(9.4, 3.2, 0, 0);
+      // Left conditioning section in cool acoustic blue-grey with CHW/HW risers
+      u.B(3.8, 3, 3.2, -2.7, 0.25, 0, "#e2eaf2");
+      u.B(0.12, 2.0, 2.4, -4.62, 0.7, 0, "dark");
+      u.B(1.2, 2.2, 0.06, -3.2, 0.6, 1.62, "#cfdbe6");
+      u.C(0.1, 0.1, 3.4, -1.4, 0.4, 1.48, "supply", 10);
+      u.C(0.1, 0.1, 3.4, -1.1, 0.4, 1.48, "return", 10);
+      // Center open acoustic fan plenum in deep navy/slate showing perforated gold AcoustiFLO diffuser cone
+      u.B(2.7, 3, 3.2, 0.55, 0.25, -0.1, "#2f3a46");
+      u.B(2.74, 0.35, 3.26, 0.55, 0.25, 0, "#1f4fb4");
+      u.B(2.74, 0.3, 3.26, 0.55, 2.95, 0, "#1f4fb4");
+      const f = u.C(1.22, 1.22, 1.8, 0.55, 0.85, 0.35, "#d9c9a0", 28); f.rotation.z = Math.PI / 2;
+      const hub = u.C(0.48, 0.48, 1.9, 0.55, 1.22, 0.35, "#c9a23a", 16); hub.rotation.z = Math.PI / 2;
+      // Right integral acoustic splitter-silencer section with cutaway baffles
+      u.casing(2.6, 2.8, 3.2, 3.25, 0);
+      for (let k = 0; k < 4; k++) u.B(1.9, 2.4, 0.28, 3.2, 0.4, -1.05 + k * 0.7, "#5b7691");
+      u.B(1.6, 0.85, 2.0, 3.5, 3.25, 0, "supply");
+    },
+    // gas-phase filtration: wide cutaway molecular filtration chamber with 3x3 V-bank activated-carbon & permanganate trays
+    "ahu-gas": u => {
+      u.trim(9.2, 3.2, 0, 0);
+      u.B(2.3, 3, 3.2, -3.45, 0.25, 0);
+      u.B(0.12, 2.0, 2.4, -4.62, 0.7, 0, "dark");
+      u.B(1.1, 2.1, 0.06, -3.45, 0.6, 1.62, "#dfe7ee");
+      // Center cutaway gas-phase molecular filtration bay
+      u.casing(4.4, 2.8, 3.2, -0.1, 0);
+      u.B(4.0, 2.5, 2.4, -0.1, 0.35, -0.2, "#1b1f24");
+      for (let i = 0; i < 3; i++) for (let k = 0; k < 3; k++) {
+        const cx = -1.35 + i * 1.25, cy = 0.48 + k * 0.8;
+        u.B(1.05, 0.66, 0.35, cx, cy, 1.15, "#2a2f36");
+        u.B(0.92, 0.14, 0.38, cx, cy + 0.18, 1.17, "#f2d21b");
+        u.B(0.92, 0.1, 0.38, cx, cy + 0.38, 1.17, "#b84b7a");
+      }
+      // Right fan & HEPA final filter section
+      u.B(2.5, 3, 3.2, 3.35, 0.25, 0);
+      u.B(1.2, 2.2, 0.06, 3.35, 0.6, 1.62, "#dfe7ee");
+      u.C(0.1, 0.1, 3.3, 2.35, 0.4, 1.48, "supply", 10);
+      u.C(0.1, 0.1, 3.3, 2.65, 0.4, 1.48, "return", 10);
+      u.B(1.6, 0.85, 1.9, 3.5, 3.25, 0, "supply");
+    },
+    // low-temp desiccant: double-deck split-stream AHU with large green silica-gel rotor, orange reactivation purge sector & top regeneration deck
+    "ahu-desiccant": u => {
+      u.trim(9.2, 3.2, 0, 0);
+      u.B(3.0, 3, 3.2, -3.1, 0.25, 0);
+      u.C(0.1, 0.1, 3.4, -2.0, 0.4, 1.48, "supply", 10);
+      u.C(0.1, 0.1, 3.4, -1.7, 0.4, 1.48, "return", 10);
+      // Exposed central desiccant wheel cassette
+      u.B(3.1, 3.3, 3.2, -0.05, 0.25, 0, "#dfe7ee");
+      const wh = u.C(1.32, 1.32, 0.28, -0.05, 1.25, 1.54, "#2e9e5b", 32); wh.rotation.x = Math.PI / 2;
+      const hub = u.C(0.24, 0.24, 0.34, -0.05, 1.72, 1.54, "dark", 12); hub.rotation.x = Math.PI / 2;
+      const sec = u.B(1.28, 0.65, 0.3, 0.42, 2.15, 1.55, "#ffa500"); sec.rotation.z = 0.48;
+      // Upper orange reactivation heater & exhaust deck
+      u.B(4.8, 1.15, 2.4, 0.9, 3.25, 0, "#ffa500");
+      u.B(1.4, 0.85, 0.08, 0.2, 3.4, 1.22, "dark");
+      u.C(0.38, 0.38, 1.2, 2.4, 4.4, 0, "#ffa500", 16);
+      // Right post-cooling & dry supply fan section
+      u.B(3.1, 3, 3.2, 3.05, 0.25, 0);
+      u.C(0.1, 0.1, 3.1, 2.1, 0.4, 1.48, "supply", 10);
+      u.B(1.2, 2.2, 0.06, 3.2, 0.6, 1.62, "#dfe7ee");
+      u.B(1.4, 1.4, 1.8, 4.62, 1.0, 0, "supply");
+    },
+    // Temtrol LC: compact, low-profile semi-custom cabinet with slate-blue pitched roof cap, slide-out filter track and CHW/HW stubs
+    "ahu-lc": u => {
+      u.trim(5.0, 2.5, 0, 0);
+      u.B(5.0, 2.1, 2.5, 0, 0.25, 0);
+      u.B(5.16, 0.16, 2.66, 0, 2.35, 0, "#3a5a78");
+      u.B(0.12, 1.4, 1.8, -2.52, 0.6, 0, "dark");
+      u.B(0.45, 1.75, 0.08, -1.9, 0.42, 1.26, "#8fa3b8");
+      u.C(0.085, 0.085, 2.6, -0.85, 0.35, 1.18, "supply", 10);
+      u.C(0.085, 0.085, 2.6, -0.55, 0.35, 1.18, "return", 10);
+      u.B(1.1, 1.6, 0.06, 0.45, 0.5, 1.26, "#dfe7ee");
+      u.Z(0.2, 0.04, 0.45, 1.5, 1.28, "#8fd0f5", 16);
+      u.B(0.55, 0.65, 0.1, 1.75, 1.1, 1.26, SLATE);
+      u.B(0.35, 0.2, 0.04, 1.75, 1.38, 1.31, "#4caf50");
+      u.B(1.3, 0.65, 1.5, 1.55, 2.5, 0, "supply");
+    },
+    // washdown: brushed stainless food/pharma cabinet on sanitary legs over a blue sloped drain pan, pitched roof, and round marine portholes
+    "ahu-washdown": u => {
+      u.B(9.2, 0.22, 3.6, 0, 0, 0, "#1e9be8");
+      for (let k = -2; k <= 2; k++) u.B(0.22, 0.3, 3.1, k * 2.1, 0.2, 0, STAIN);
+      u.B(9, 2.75, 3.2, 0, 0.48, 0, STAIN);
+      // Pitched sanitary washdown roof so water drains off
+      const rL = u.B(9.16, 0.14, 1.75, 0, 3.3, 0.8, "#b7c2cb"); rL.rotation.x = 0.14;
+      const rR = u.B(9.16, 0.14, 1.75, 0, 3.3, -0.8, "#b7c2cb"); rR.rotation.x = -0.14;
+      for (let k = -1; k <= 2; k++) u.B(0.08, 2.75, 3.24, k * 2.2 - 1, 0.48, 0, "#8d99a3");
+      for (let k = 0; k < 3; k++) {
+        const dx = -2.1 + k * 2.2;
+        u.B(1.2, 2.05, 0.06, dx, 0.78, 1.62, "#eef3f6");
+        u.Z(0.28, 0.06, dx, 2.0, 1.64, STAIN, 18);
+        u.Z(0.21, 0.07, dx, 2.0, 1.65, "#8fd0f5", 16);
+      }
+      u.C(0.1, 0.1, 3.2, -3.4, 0.5, 1.48, "supply", 10);
+      u.C(0.1, 0.1, 3.2, -3.1, 0.5, 1.48, "return", 10);
+      const dr = u.C(0.12, 0.12, 0.9, 4.2, 0.08, 2.1, "#1e9be8"); dr.rotation.x = Math.PI / 2;
+    },
+    // Lab exhaust AHU with integral run-around energy recovery coil and top-mounted high-plume dilution exhaust fans
+    "ahu-exhaust": u => {
+      u.trim(8.4, 3.1, 0, 0);
+      // Left hazardous exhaust inlet plenum with isolation damper & orange exhaust band
+      u.B(2.2, 2.6, 3.0, -3.05, 0.25, 0, "#cfd8df");
+      u.B(2.24, 0.22, 3.06, -3.05, 2.55, 0, "#ffa500");
+      u.B(0.12, 1.9, 2.3, -4.18, 0.6, 0, "dark");
+      // Center cutaway run-around heat recovery coil section with glycol headers & circulator pump
+      u.casing(2.5, 2.4, 3.0, -0.7, 0);
+      u.B(0.65, 2.0, 2.4, -0.7, 0.4, 0, COPPER);
+      for (let k = 0; k < 7; k++) u.B(0.68, 2.0, 0.04, -0.7, 0.4, -1.0 + k * 0.33, GALV);
+      u.C(0.1, 0.1, 2.6, -0.35, 0.3, 1.42, GLYCOL, 12);
+      u.C(0.1, 0.1, 2.6, -0.05, 0.3, 1.42, "supply", 12);
+      u.B(0.45, 0.35, 0.35, -0.2, 0.25, 1.65, GLYCOL);
+      // Right coated exhaust fan plenum supporting 3 top-mounted high-plume dilution exhaust fans
+      u.B(3.6, 2.6, 3.0, 2.35, 0.25, 0, "#2f3a46");
+      u.B(3.64, 0.22, 3.06, 2.35, 2.55, 0, "#ffa500");
+      [1.2, 2.35, 3.5].forEach(fx => {
+        u.B(0.85, 1.85, 0.06, fx, 0.55, 1.52, "#dfe7ee");
+        // High-plume fan base curb, windband entrainment shroud, and tall conical discharge nozzle
+        u.C(0.52, 0.56, 0.55, fx, 2.85, 0, "#3b4754", 18);
+        u.C(0.66, 0.48, 0.85, fx, 3.4, 0, "#cfd8df", 20);
+        u.C(0.32, 0.58, 2.1, fx, 4.25, 0, "#8d99a3", 20);
+        u.C(0.36, 0.32, 0.2, fx, 6.35, 0, "#ffa500", 18);
+        u.see(u.C(0.55, 0.28, 1.5, fx, 6.55, 0, "glass", 14), MIST);
+      });
+    },
+    // V-Cube: Mammoth modular vertical self-contained unit (beige 3" ITF cabinet, lower compressor doors, upper tall latched doors, dual gauges, condenser/geothermal risers)
+    vcube: u => {
+      u.B(3.86, 0.25, 2.86, 0, 0, 0, "#3a3f45");
+      u.B(3.8, 4.4, 2.8, 0, 0.25, 0, BEIGE);
+      // Lower horizontal compressor & water-cooled condenser compartment doors with black D-handles
+      u.B(3.64, 0.95, 0.06, 0, 0.35, 1.41, "#cbc3ad");
+      for (let k = -1; k <= 1; k++) u.B(0.04, 0.95, 0.08, k * 0.9, 0.35, 1.42, "#8d8672");
+      [-1.4, -0.5, 0.4, 1.3].forEach(hx => u.B(0.06, 0.28, 0.08, hx, 0.68, 1.44, "dark"));
+      // Left control column with 2 round Magnehelic gauges and white DDC keypad
+      [3.35, 2.9].forEach(gy => { u.Z(0.13, 0.05, -1.45, gy, 1.42, "dark", 16); u.Z(0.09, 0.06, -1.45, gy, 1.43, WHITE, 14); });
+      u.B(0.48, 0.28, 0.06, -1.45, 2.35, 1.42, "#e9edf0");
+      u.B(0.32, 0.1, 0.07, -1.45, 2.45, 1.43, "#2f3a46");
+      // 3 tall upper evaporator & fan access doors with 3 stacked black lever latches each
+      [-0.65, 0.32, 1.28].forEach(dx => {
+        u.B(0.84, 2.95, 0.06, dx, 1.45, 1.41, "#dfd8c3");
+        [1.8, 2.85, 3.9].forEach(ly => u.B(0.07, 0.22, 0.1, dx + 0.32, ly, 1.44, "dark"));
+      });
+      // Condenser water / geothermal loop risers (green) + chilled/hot water risers (blue/orange) + top supply discharge
+      u.C(0.09, 0.09, 1.1, -1.35, 4.65, -0.6, COND, 10);
+      u.C(0.09, 0.09, 1.1, -0.95, 4.65, -0.6, COND, 10);
+      u.C(0.08, 0.08, 0.9, 1.1, 4.65, -0.6, "supply", 10);
+      u.C(0.08, 0.08, 0.9, 1.4, 4.65, -0.6, "return", 10);
+      u.B(2.3, 0.6, 1.7, 0.15, 4.65, 0.15, "supply");
+    },
+    // V-Cube Slim: narrow floor-by-floor elevator-pass-through unit with louvered control column, exposed finned coil bank, top copper/condenser-water stubs & top discharge hood
+    "vcube-slim": u => {
+      // Fork-liftable notched base rails
+      [-0.85, 0.85].forEach(bx => u.B(0.45, 0.22, 1.65, bx, 0, 0, "#bfb8a2"));
+      u.B(2.4, 4.1, 1.55, 0, 0.22, 0, BEIGE);
+      // Left full-height control & compressor column with upper round fan grille, DDC keypad, 4 status LEDs, and lower louvers
+      u.B(0.95, 3.95, 0.06, -0.66, 0.3, 0.79, "#dfd8c3");
+      u.Z(0.16, 0.05, -0.66, 3.75, 0.81, "dark", 16);
+      u.B(0.46, 0.26, 0.06, -0.66, 2.85, 0.81, "#e9edf0");
+      for (let k = 0; k < 4; k++) u.Z(0.035, 0.05, -0.81 + k * 0.1, 2.62, 0.81, "dark", 10);
+      for (let k = 0; k < 12; k++) u.B(0.68, 0.035, 0.05, -0.66, 0.55 + k * 0.15, 0.81, "#8d8672");
+      // Right slim V-coil & blower section with cutaway finned coil face and removable access panels
+      u.B(1.25, 1.65, 0.05, 0.48, 0.35, 0.78, COPPER);
+      for (let k = 0; k < 14; k++) u.B(1.25, 0.03, 0.07, 0.48, 0.42 + k * 0.11, 0.78, GALV);
+      u.B(1.25, 2.1, 0.06, 0.48, 2.1, 0.79, "#cbc3ad");
+      // Top copper & green condenser-water / geothermal loop headers + top supply discharge plenum
+      u.C(0.075, 0.075, 0.75, 0.55, 4.32, -0.35, COPPER, 10);
+      u.C(0.075, 0.075, 0.75, 0.82, 4.32, -0.35, COND, 10);
+      u.B(1.9, 0.55, 1.2, 0.1, 4.32, 0.1, "supply");
+    },
     rooftop: u => { u.B(6.5, 2.4, 3.4, 0, 0.25, 0); u.trim(6.5, 3.4, 0, 0); u.fanTop(0.85, 1.4, 2.65, 0); u.fanTop(0.85, -0.6, 2.65, 0); u.B(0.08, 1.8, 3, 3.27, 0.5, 0, "dark"); const hood = u.B(1.4, 0.9, 3, -3.6, 1.6, 0, GALV); hood.rotation.z = -0.5; for (let k = 0; k < 6; k++) u.B(0.06, 1.6, 0.06, 0.2 + k * 0.5, 0.5, 1.72, GALV); },
     chiller: u => { u.B(9, 0.5, 2.6, 0, 0.25, 0, SLATE); u.trim(9, 2.6, 0, 0); for (let k = 0; k < 4; k++) { const x = -3.3 + k * 2.2; const a = u.B(0.12, 2, 2.4, x - 0.5, 0.8, 0, GALV); a.rotation.z = 0.32; const b = u.B(0.12, 2, 2.4, x + 0.5, 0.8, 0, GALV); b.rotation.z = -0.32; u.fanTop(0.8, x, 2.75, 0); u.B(2, 0.12, 2.5, x, 2.65, 0); } u.C(0.5, 0.5, 2.2, 3.3, 0.6, 1.5, "#1779ba").rotation.z = Math.PI / 2; },
     fanwall: u => fanArray(u, 3, 2, false),
@@ -255,6 +490,15 @@ export function makeProps({ THREE, box, mesh, material }) {
     "coil-steam": u => coil(u, "steam"),
     "coil-freeze": u => coil(u, "freeze"),       // red pressure relief on every return bend
     "coil-smart": u => coil(u, "smart"),         // freeze sensors on the face, wired to a control panel
+    // Run-around energy recovery coil loop: finned recovery coil with pumped glycol supply/return loop and inline pump skid
+    "coil-runaround": u => {
+      coil(u, "water");
+      u.C(0.11, 0.11, 2.5, 1.55, 0.3, 0.35, GLYCOL, 12);
+      u.C(0.11, 0.11, 2.5, 1.55, 0.3, -0.35, "supply", 12);
+      u.B(0.75, 0.14, 0.85, 1.55, 0, 0, "trim");
+      u.C(0.2, 0.2, 0.45, 1.55, 0.14, 0.2, GLYCOL, 14);
+      u.C(0.18, 0.18, 0.65, -1.55, 1.5, 0.55, HOT, 14);
+    },
     // booster coil in a length of duct
     "coil-duct": u => { u.hang(0.9, 0.3, -0.2); u.B(2.6, 0.6, 0.8, 0, -0.8, 0, DUCT); u.B(0.4, 0.66, 0.86, 0, -0.83, 0, COPPER); for (let k = -1; k <= 1; k++) u.B(0.03, 0.68, 0.88, k * 0.12, -0.84, 0, GALV); u.pipes(0, -0.2, 0.3, 0.6); },
     // ---- UV-C ----
@@ -312,13 +556,24 @@ export function makeProps({ THREE, box, mesh, material }) {
       u.X(0.06, 2.6, 0, 2.55, 0, "supply", 8); u.C(0.05, 0.05, 2.1, 1.42, 0.45, 0.4, "supply", 8); u.C(0.14, 0.14, 0.3, 1.42, 0.3, 0.4, SLATE, 10);
       for (let k = 0; k < 5; k++) u.B(0.05, 0.12, 0.05, -1 + k * 0.5, 2.38, 0, "#38b6e8");
     },
-    // atomizing and ultrasonic: rows of nozzles putting out a fine fog
+    // atomizing and ultrasonic: direct-space spray heads on brackets with water/air lines and a wall control box with gauges, no ductwork
     atomizer: u => {
-      u.casing(3.2, 2.7, 1.9, 0, 0);
-      [-1.3, 1.3].forEach(x => u.B(0.07, 2.3, 0.07, x, 0.3, -0.5, SLATE));
-      for (let k = 0; k < 3; k++) { const y = 0.8 + k * 0.7; u.X(0.045, 2.6, 0, y, -0.5, "supply", 8); u.X(0.03, 2.6, 0, y + 0.12, -0.5, GALV, 8);
-        for (let i = 0; i < 4; i++) { const x = -1.05 + i * 0.7; u.B(0.1, 0.1, 0.16, x, y - 0.05, -0.4, "#c9a23a"); u.see(u.Z(0.03, 0.9, x, y, 0.13, "glass", 12, 0.3), MIST); } }
-      u.B(0.6, 0.8, 0.2, -1, 1.2, 1.05, SLATE); u.B(0.3, 0.2, 0.04, -1, 1.65, 1.16, "#1e9be8");
+      u.wall(2.8, 1.9, 0, -1.7, -0.35);
+      // Wall-mounted water & compressed-air control cabinet with dual pressure gauges (like SteamOVap ACA)
+      u.B(0.85, 0.95, 0.35, -0.8, -1.5, -0.1, WHITE);
+      u.B(0.87, 0.06, 0.37, -0.8, -0.6, -0.1, STAIN);
+      [-0.98, -0.62].forEach(gx => { u.Z(0.11, 0.04, gx, -0.95, 0.08, STAIN, 16); u.Z(0.08, 0.05, gx, -0.95, 0.085, WHITE, 16); });
+      // Water (blue) and compressed-air (dark) header lines feeding bracket-mounted spray heads (like Fisair AtomSpray)
+      u.X(0.035, 2.3, 0.1, -0.45, -0.15, "supply", 10);
+      u.X(0.03, 2.3, 0.1, -0.35, -0.15, "dark", 10);
+      [-0.8, -0.1, 0.55, 1.15].forEach(x => {
+        u.B(0.06, 0.28, 0.22, x, -0.42, -0.05, STAIN);
+        const body = u.Z(0.09, 0.28, x, -0.25, 0.08, STAIN, 14); body.rotation.x = 0.22;
+        u.B(0.05, 0.05, 0.08, x + 0.08, -0.28, 0.04, "supply");
+        u.B(0.05, 0.05, 0.08, x - 0.08, -0.28, 0.04, "dark");
+        const plume = u.Z(0.03, 1.25, x, -0.42, 0.78, "glass", 14, 0.36); plume.rotation.x = 0.22;
+        u.see(plume, MIST);
+      });
     },
     // desiccant dehumidifier: the rotor shows in the front, dry air leaves on the right, wet reactivation air goes up
     dehumidifier: u => {
@@ -329,7 +584,42 @@ export function makeProps({ THREE, box, mesh, material }) {
       u.B(0.8, 0.6, 0.06, 1, 0.9, 0.92, "dark"); u.B(0.3, 0.15, 0.04, 1, 1.25, 0.95, "#1e9be8");
     },
     crah: u => { for (let k = 0; k < 2; k++) { u.B(1.8, 2.3, 1, -1 + k * 2, 0, 0, "#2f3a46"); u.B(1.5, 0.9, 0.06, -1 + k * 2, 0.2, 0.52, "dark"); u.B(0.5, 0.3, 0.06, -1 + k * 2, 1.6, 0.52, "#1e9be8"); } u.B(3.9, 0.25, 1.06, 0, 0, 0, "trim"); },
-    vrf: u => { for (let k = 0; k < 2; k++) { u.B(1.3, 1.9, 0.9, -0.75 + k * 1.5, 0.15, 0); u.fanTop(0.5, -0.75 + k * 1.5, 2.05, 0); u.B(1.1, 1.2, 0.05, -0.75 + k * 1.5, 0.4, 0.47, GALV); } u.B(3, 0.15, 1, 0, 0, 0, "trim"); },
+    // StatePoint indirect evaporative liquid cooling system: enclosed modular cabinet with membrane heat-exchanger bays and chilled-water headers
+    statepoint: u => {
+      u.B(8.4, 3, 2.8, 0, 0.25, 0); u.trim(8.4, 2.8, 0, 0);
+      for (let k = -1; k <= 1; k++) {
+        const x = k * 2.5;
+        u.B(2, 2.1, 0.08, x, 0.6, 1.42, "#2f3a46");
+        u.B(1.8, 1.65, 0.1, x, 0.8, 1.44, "#1e9be8");
+        for (let j = 0; j < 5; j++) u.B(0.04, 1.6, 0.12, x - 0.7 + j * 0.35, 0.82, 1.45, "#8fd0f5");
+        u.fanTop(0.75, x, 3.25, 0);
+      }
+      u.X(0.22, 1.3, 4.3, 1.1, 0.55, "supply", 14);
+      u.X(0.22, 1.3, 4.3, 1.75, -0.55, "return", 14);
+    },
+    // Coolant Distribution Unit (CDU): rack-height liquid-to-liquid heat exchanger and 2N redundant pump skid with top coolant manifolds
+    cdu: u => {
+      u.B(2.4, 0.2, 1.26, 0, 0, 0, "trim");
+      u.B(2.3, 2.2, 1.2, 0, 0.2, 0, "#2f3a46");
+      u.B(0.95, 1.5, 0.06, -0.5, 0.45, 0.61, "#1b222a");
+      u.B(0.38, 1.15, 0.1, -0.72, 0.6, 0.63, STAIN);
+      [0.7, 1.35].forEach(y => { u.C(0.16, 0.16, 0.28, -0.25, y, 0.63, "#1e9be8", 14); u.B(0.22, 0.18, 0.12, -0.25, y, 0.62, "dark"); });
+      u.B(0.95, 1.8, 0.05, 0.55, 0.4, 0.61, "#dfe7ee");
+      u.B(0.55, 0.35, 0.07, 0.55, 1.6, 0.62, "#1e9be8");
+      [-0.55, -0.2, 0.2, 0.55].forEach((x, k) => u.C(0.08, 0.08, 0.55, x, 2.4, 0, k < 2 ? "supply" : "return", 12));
+      u.X(0.1, 2.2, 0, 2.85, -0.15, "supply", 12);
+      u.X(0.1, 2.2, 0, 2.65, 0.15, "return", 12);
+    },
+    vrf: u => {
+      for (let k = 0; k < 2; k++) {
+        u.B(1.3, 1.9, 0.9, -0.75 + k * 1.5, 0.15, 0);
+        u.fanTop(0.5, -0.75 + k * 1.5, 2.05, 0);
+        u.B(1.1, 1.2, 0.05, -0.75 + k * 1.5, 0.4, 0.47, GALV);
+      }
+      u.B(3, 0.15, 1, 0, 0, 0, "trim");
+      for (let p = 0; p < 3; p++) u.X(0.035, 1.8, 0.2, 0.4 + p * 0.11, -0.52, COPPER, 8);
+      u.B(0.65, 0.4, 0.45, 1.1, 1.6, -0.52, SLATE);
+    },
     wshp: u => { u.B(1.1, 2, 1.1, 0, 0, 0); u.trim(1.1, 1.1, 0, 0); u.B(0.9, 0.7, 0.05, 0, 0.4, 0.57, "dark"); u.C(0.08, 0.08, 0.8, -0.3, 2, 0, "supply"); u.C(0.08, 0.08, 0.8, 0.3, 2, 0, "return"); u.B(0.8, 0.5, 0.8, 0, 2, 0, GALV); },
     // ---- fan coils and blower coils ----
     // horizontal fan coil hung above the ceiling: filter at the back, short duct to a diffuser, piping on the side
@@ -363,8 +653,18 @@ export function makeProps({ THREE, box, mesh, material }) {
     unitheater: u => { u.C(0.05, 0.05, 0.8, -0.4, -0.8, 0, "dark"); u.C(0.05, 0.05, 0.8, 0.4, -0.8, 0, "dark"); u.B(1.2, 1, 0.9, 0, -1.8, 0, "#ffa500"); for (let k = 0; k < 4; k++) u.B(1.1, 0.06, 0.1, 0, -1.7 + k * 0.22, 0.48, "dark"); u.Z(0.4, 0.2, 0, -1.3, -0.5, "dark", 18); },
     ductheater: u => { u.hang(0.8, 0.25, -0.2); u.B(2.2, 0.6, 0.7, 0, -0.8, 0, DUCT); u.B(0.5, 0.64, 0.74, 0, -0.82, 0, HOT); u.B(0.35, 0.5, 0.3, 0, -0.75, 0.5, "dark"); },
     aircurtain: u => { u.B(2.8, 0.4, 0.6, 0, -0.4, 0); u.B(2.6, 0.06, 0.2, 0, -0.44, 0.1, "dark"); u.B(2.8, 0.1, 0.62, 0, -0.1, 0, "trim"); for (let k = 0; k < 5; k++) u.B(0.04, 1.3, 0.04, -1 + k * 0.5, -1.75, 0.1, "#8fd0f5"); },
-    orceiling: u => { u.B(3.4, 0.2, 3.4, 0, -0.2, 0); for (let i = -1; i <= 1; i++) for (let k = -1; k <= 1; k++) u.B(0.95, 0.06, 0.95, i * 1.1, -0.24, k * 1.1, "#dff3ff"); u.B(3.5, 0.08, 3.5, 0, -0.1, 0, "trim"); },
-    ffu: u => { for (let i = -1; i <= 1; i++) for (let k = -1; k <= 1; k++) { u.B(1.1, 0.35, 1.1, i * 1.3, -0.35, k * 1.3); u.B(0.9, 0.05, 0.9, i * 1.3, -0.38, k * 1.3, "#dff3ff"); } },
+    ffu: u => { for (let i = -1; i <= 1; i++) for (let k = -1; k <= 1; k++) { u.B(1.1, 0.32, 1.1, i * 1.3, -0.35, k * 1.3); u.C(0.28, 0.32, 0.16, i * 1.3, -0.05, k * 1.3, SLATE, 16); u.B(0.9, 0.05, 0.9, i * 1.3, -0.38, k * 1.3, "#dff3ff"); } },
+    "ceiling-grid": u => {
+      u.hang(1.5, 1.5, 0);
+      for (let i = -1; i <= 1; i++) {
+        u.B(3.6, 0.12, 0.1, 0, -0.22, i * 1.2, STEEL);
+        u.B(0.1, 0.12, 3.6, i * 1.2, -0.22, 0, STEEL);
+        u.B(3.4, 0.04, 0.14, 0, -0.25, i * 1.2, WHITE);
+      }
+      for (let i = -1; i <= 0; i++) for (let k = -1; k <= 0; k++) {
+        u.B(1.06, 0.04, 1.06, (i + 0.5) * 1.2, -0.2, (k + 0.5) * 1.2, "#eef6fb");
+      }
+    },
     // radiant ceiling panels with their pipe connection
     radiantpanel: u => { for (let i = -1; i <= 1; i++) { u.B(0.9, 0.06, 2.4, i, -0.3, 0, "#ffffff"); u.B(0.8, 0.02, 2.3, i, -0.32, 0, "#ffd9b0"); } u.X(0.04, 2.9, 0, -0.18, -1, HOT, 8); u.C(0.04, 0.04, 0.4, 1.4, -0.2, -1, HOT, 8); },
     // ---- floor-standing room units ----
@@ -384,18 +684,18 @@ export function makeProps({ THREE, box, mesh, material }) {
    */
   const SPEC = {
     ahu: ["floor", 9.4, 0.6, 4.2], "ahu-knockdown": ["floor", 9.6, 0.6, 7.2], "ahu-acoustiflo": ["floor", 9.6, 0.6, 4.2], "ahu-gas": ["floor", 9.4, 0.6, 4.2], "ahu-desiccant": ["floor", 9.4, 0.6, 5.3],
-    "ahu-lc": ["floor", 5.2, 0.7, 3.1], "ahu-washdown": ["floor", 9.4, 0.6, 3.3], vcube: ["floor", 3.4, 0.6, 5.6], rooftop: ["floor", 8, 0.55, 2.8], chiller: ["floor", 9.2, 0.55, 2.9],
+    "ahu-lc": ["floor", 5.2, 0.7, 3.1], "ahu-washdown": ["floor", 9.4, 0.6, 3.5], "ahu-exhaust": ["floor", 8.6, 0.6, 6.8], vcube: ["floor", 3.9, 0.65, 5.5], "vcube-slim": ["floor", 2.6, 0.72, 5.0], rooftop: ["floor", 8, 0.55, 2.8], chiller: ["floor", 9.2, 0.55, 2.9],
     fanwall: ["floor", 4.5, 0.8, 3.1], coilwall: ["floor", 4.6, 0.8, 3.1], erv: ["floor", 8.4, 0.55, 2.7], wheel: ["floor", 3.2, 0.75, 3.3], plate: ["floor", 5.4, 0.6, 3.3], mua: ["floor", 9.6, 0.5, 4.3],
-    turnover: ["floor", 2.4, 0.9, 6.6], coil: ["floor", 3.7, 0.75, 3], "coil-dx": ["floor", 3.9, 0.75, 3], "coil-steam": ["floor", 3.7, 0.75, 3], "coil-freeze": ["floor", 3.8, 0.75, 3], "coil-smart": ["floor", 3.7, 0.75, 3],
+    turnover: ["floor", 2.4, 0.9, 6.6], coil: ["floor", 3.7, 0.75, 3], "coil-dx": ["floor", 3.9, 0.75, 3], "coil-steam": ["floor", 3.7, 0.75, 3], "coil-freeze": ["floor", 3.8, 0.75, 3], "coil-smart": ["floor", 3.7, 0.75, 3], "coil-runaround": ["floor", 3.8, 0.75, 3],
     uv: ["floor", 3.7, 0.75, 3], "uv-ext": ["floor", 4, 0.75, 3], humidifier: ["floor", 3.5, 0.85, 2.9], "humidifier-steam": ["floor", 4.2, 0.75, 3], "humidifier-exchange": ["floor", 3.4, 0.85, 2.9],
-    evap: ["floor", 3.4, 0.75, 3], atomizer: ["floor", 3.4, 0.75, 3], dehumidifier: ["floor", 4.4, 0.75, 4], crah: ["floor", 4, 1, 2.4], vrf: ["perimeter", 3.1, 0.6, 2.2], wshp: ["floor", 1.3, 1.1, 2.8],
+    evap: ["floor", 3.4, 0.75, 3], dehumidifier: ["floor", 4.4, 0.75, 4], crah: ["floor", 4, 1, 2.4], statepoint: ["floor", 8.8, 0.55, 3.6], cdu: ["floor", 2.5, 1, 2.9], vrf: ["floor", 3.1, 0.65, 2.2], wshp: ["floor", 1.3, 1.1, 2.8],
     "blowercoil-vertical": ["floor", 1.9, 1, 2.8], "fancoil-hirise": ["floor", 1.6, 1, 0], "fancoil-vertical": ["floor", 1.4, 1.15, 2], ptac: ["floor", 2.7, 1.1, 2.3], box: ["floor", 2.1, 1, 1.4],
     "fancoil-floor": ["perimeter", 1.7, 1.35, 0.8], "fancoil-floor-low": ["perimeter", 2.4, 1.35, 0.5], radiator: ["perimeter", 2.3, 1.25, 1.2], cabinetheater: ["perimeter", 1.5, 1.35, 0.9],
     fintube: ["perimeter", 4.6, 1, 0.7], trench: ["perimeter", 4.4, 1, 0.2],
     fancoil: ["ceiling", 2, 1.25], "fancoil-low": ["ceiling", 2.6, 1.2], blowercoil: ["ceiling", 3.1, 1.05], "fancoil-round": ["ceiling", 1.8, 1.3], "coil-duct": ["ceiling", 2.7, 1.1],
     vav: ["ceiling", 1.6, 1.25], "vav-fan": ["ceiling", 2, 1.2], "vav-cooling": ["ceiling", 2.1, 1.2], cassette: ["ceiling", 1.5, 1.35], unitheater: ["ceiling", 1.3, 1.25], ductheater: ["ceiling", 2.3, 1.2],
-    aircurtain: ["ceiling", 2.9, 1], orceiling: ["ceiling", 3.6, 1.1], ffu: ["ceiling", 3.8, 1.1], radiantpanel: ["ceiling", 3, 1.1],
-    minisplit: ["wall", 2.5, 1.15], upperuv: ["wall", 2.6, 1.15]
+    aircurtain: ["ceiling", 2.9, 1], ffu: ["ceiling", 3.8, 1.1], "ceiling-grid": ["ceiling", 3.8, 1.1], radiantpanel: ["ceiling", 3, 1.1],
+    minisplit: ["wall", 2.5, 1.15], upperuv: ["wall", 2.6, 1.15], atomizer: ["wall", 2.9, 1.15]
   };
 
   /*
@@ -431,7 +731,7 @@ export function makeProps({ THREE, box, mesh, material }) {
     return items;
   }
   // Plant that serves a room but would really stand outside it. In an occupied room it is drawn on a marked service pad.
-  const PLANT = /^(ahu|fanwall|coilwall|coil|uv$|uv-ext|wheel|plate|erv|rooftop|mua|vcube|chiller|dehumidifier|humidifier|evap|atomizer)/;
+  const PLANT = /^(ahu|fanwall|coilwall|coil|uv$|uv-ext|wheel|plate|erv|rooftop|mua|vcube|chiller|statepoint|dehumidifier|humidifier|evap|vrf)/;
   // Draws one placement from arrange() into the group.
   function equip(g, p) {
     if (p.pad) { const w = p.w * p.scale + 0.5; box(g, w, 0.05, 3.6, p.x, p.y + 0.025, p.z, material("#c3ccd4")); box(g, w + 0.16, 0.03, 3.76, p.x, p.y + 0.015, p.z, material("#ffa500")); }

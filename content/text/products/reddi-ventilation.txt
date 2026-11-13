@@ -14,8 +14,7 @@ Key points:
 Photos:
 # One photo per line:  - file | caption
 # Put new image files in assets/photos/reddi-ventilation/ and list them here. The first one is the main photo.
-# No photo of this product has been found yet. Add one here:
-# - assets/photos/reddi-ventilation/photo.jpg | Caption
+- assets/photos/dmr/Redd-i-image.jpg | Image: Redd-i
 
 Documents:
 - Redd-i product page | https://www.redd-i.com/

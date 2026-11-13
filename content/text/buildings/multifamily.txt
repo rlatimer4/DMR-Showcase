@@ -172,7 +172,7 @@ Equipment:
 
 Location: multifamily-3
 Title: Amenity level
-Text: A multi-zone heat pump and trench units serve the lobby and amenity spaces.
+Text: A multi-zone heat pump with ceiling cassettes and perimeter trench units serves the lobby and amenity spaces.
 Equipment:
 - gree-multi | Amenity multi-zone heat pump | One outdoor unit serves the lobby, gym and lounge
 + gree-livo
@@ -182,6 +182,10 @@ Equipment:
 + gree-zeno
 + gree-multi-eco
 + gree-multipro
+- gree-cassette | Amenity ceiling cassettes
++ gree-ducted
++ gree-wall
++ gree-floor-ceiling
 - kampmann-katherm-qk | Lobby trench heater
 + kampmann-katherm-hk
 + kampmann-katherm-qk-nano
