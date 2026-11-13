@@ -22,7 +22,8 @@ DMR.registerBuilding({
   walls: "#e9e2d5",
   stops: [
     { id: "retail-strip-1", at: { floor: "roof", x: 0.4 }, space: "plant" },
-    { id: "retail-strip-2", at: { floor: 0, x: 0.12 }, space: "shop" }
+    { id: "retail-strip-2", at: { floor: 0, x: 0.12 }, space: "shop" },
+    { id: "retail-strip-3", at: { floor: "roof", x: 0.82 }, space: "plant" }
   ],
   // Shapes that make this building recognizable. See CONTENT.md for the kit.
   build: function (kit, d) {

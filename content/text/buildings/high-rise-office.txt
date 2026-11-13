@@ -60,3 +60,11 @@ Equipment:
 - kampmann-katherm-qk | Lobby trench heater
 - runtal-hydronic | Vestibule panel radiator
 - sterling-cabinet | Vestibule cabinet unit heater | Offsets cold air at the doors
+
+Location: high-rise-office-6
+Title: Air handling options
+Text: Other air handlers used in high-rise offices.
+Equipment:
+- mammoth-vcube-slim | Floor-by-floor self-contained unit | Fits the freight elevator
+- ventrol-knockdown | Knockdown replacement air handler
+- governair-fanwall | FANWALL retrofit | Replaces a failed fan without replacing the unit

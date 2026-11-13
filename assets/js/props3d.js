@@ -97,7 +97,7 @@ export function makeProps({ THREE, box, mesh, material }) {
   // Each shape draws around a local origin on the floor; `s` is its scale.
   function unitTools(g, o) {
     const s = o.scale || 1, E = material("unit"), T = material("trim");
-    const B = (w, h, d, x, y, z, m) => box(g, w * s, h * s, d * s, o.x + x * s, o.y + (y + h / 2) * s, o.z + z * s, m ? material(m) : E);
+    const B = (w, h, d, x, y, z, m) => { const e = m ? 0.03 : 0; return box(g, w * s + e, h * s + e, d * s + e, o.x + x * s, o.y + (y + h / 2) * s, o.z + z * s, m ? material(m) : E); };
     const C = (rt, rb, h, x, y, z, m, seg) => mesh(g, new THREE.CylinderGeometry(rt * s, rb * s, h * s, seg || 18), m ? material(m) : E, o.x + x * s, o.y + (y + h / 2) * s, o.z + z * s);
     // fan seen from the front (axis front to back) or from above
     const fanFront = (r, x, y, z) => { const f = C(r, r, 0.12, x, y - 0.06, z, "dark", 20); f.rotation.x = Math.PI / 2; const h = C(r * 0.3, r * 0.3, 0.16, x, y - 0.08, z, "unit", 12); h.rotation.x = Math.PI / 2; };
@@ -114,9 +114,32 @@ export function makeProps({ THREE, box, mesh, material }) {
     };
     return { B, C, fanFront, fanTop, toMain, trim: (w, d, x, z) => B(w + 0.06, 0.25, d + 0.06, x, 0, z, "trim"), T };
   }
+  function cabinet(u, len, x0) {
+    const x = x0 || 0, n = Math.round(len / 2.2);
+    u.B(len, 3, 3.2, x, 0.25, 0); u.trim(len, 3.2, x, 0);
+    for (let k = 1; k < n; k++) u.B(0.08, 3, 3.24, x - len / 2 + k * len / n, 0.25, 0, "#b8c2ca");
+    u.B(0.1, 2, 2.4, x - len / 2 - 0.02, 0.75, 0, "dark");
+    for (let k = 0; k < Math.min(3, n - 1); k++) u.B(1.2, 2.2, 0.06, x - len / 2 + (k + 0.5) * len / n, 0.6, 1.62, "#dfe7ee");
+    u.B(1.6, 0.9, 1.6, x + len / 2 - 1.2, 3.25, 0, "#b8c2ca");
+  }
   const SHAPES = {
     // custom air handler: long cabinet in sections, with louvres and access doors
-    ahu: u => { u.B(9, 3, 3.2, 0, 0.25, 0); u.trim(9, 3.2, 0, 0); for (let k = -1; k <= 2; k++) u.B(0.08, 3, 3.24, k * 2.2 - 1, 0.25, 0, "#b8c2ca"); u.B(0.1, 2, 2.4, -4.52, 0.75, 0, "dark"); for (let k = 0; k < 3; k++) u.B(1.2, 2.2, 0.06, -2.1 + k * 2.2, 0.6, 1.62, "#dfe7ee"); u.B(1.6, 0.9, 1.6, 3.4, 3.25, 0, "#b8c2ca"); },
+    // ---- air handlers: one base cabinet, with a visible feature that tells each type apart ----
+    ahu: u => cabinet(u, 9),
+    // knockdown: the same unit as separate sections, one still being lowered into place
+    "ahu-knockdown": u => { for (let k = 0; k < 3; k++) { const x = -3.3 + k * 3.3, up = k === 1 ? 1.6 : 0; u.B(2.7, 3, 3.2, x, 0.25 + up, 0, "unit"); u.B(2.76, 0.25, 3.26, x, up, 0, "trim"); u.B(1.2, 2.2, 0.06, x, 0.6 + up, 1.62, "#dfe7ee"); if (up) { u.C(0.04, 0.04, 2.2, x - 1, 3.25 + up, 1, "dark"); u.C(0.04, 0.04, 2.2, x + 1, 3.25 + up, -1, "dark"); u.B(2.6, 0.12, 0.12, x, 5.4 + up, 0, "#ffa500"); } } },
+    // AcoustiFLO: the round fan with its perforated casing shows at the open end
+    "ahu-acoustiflo": u => { cabinet(u, 7, -1.2); u.B(2.2, 3, 3.2, 3.5, 0.25, 0, "#2f3a46"); const f = u.C(1.35, 1.35, 1.5, 3.7, 1.0, 0, "#d9c9a0", 28); f.rotation.z = Math.PI / 2; const hub = u.C(0.5, 0.5, 1.6, 3.75, 1.25, 0, "#c9a23a", 16); hub.rotation.z = Math.PI / 2; u.B(0.12, 0.5, 3, 4.5, 0.3, 0, "#1f4fb4"); },
+    // gas-phase filtration: a bank of black media cassettes with yellow straps
+    "ahu-gas": u => { cabinet(u, 9); u.B(2.3, 2.6, 0.08, 1.2, 0.45, 1.64, "#1b1f24"); for (let i = 0; i < 3; i++) for (let k = 0; k < 2; k++) { u.B(0.62, 1.1, 0.1, 0.45 + i * 0.75, 0.6 + k * 1.25, 1.66, "#2a2f36"); u.B(0.5, 0.14, 0.12, 0.45 + i * 0.75, 0.95 + k * 1.25, 1.68, "#f2d21b"); } },
+    // low-temp desiccant: desiccant wheel in the side, reactivation duct on top
+    "ahu-desiccant": u => { cabinet(u, 9); const wh = u.C(1.2, 1.2, 0.2, 1.4, 1.1, 1.66, "#2e9e5b", 28); wh.rotation.x = Math.PI / 2; const hub = u.C(0.2, 0.2, 0.26, 1.4, 1.62, 1.66, "dark", 10); hub.rotation.x = Math.PI / 2; u.B(1, 0.8, 1, 1.4, 3.25, 0.6, "#ffa500"); u.C(0.35, 0.35, 1.2, 1.4, 4.05, 0.6, "#ffa500"); },
+    // Temtrol LC: a short, compact cabinet
+    "ahu-lc": u => { u.B(5, 2.2, 2.6, 0, 0.25, 0); u.trim(5, 2.6, 0, 0); u.B(0.08, 2.2, 2.64, -0.8, 0.25, 0, "#b8c2ca"); u.B(0.08, 2.2, 2.64, 0.9, 0.25, 0, "#b8c2ca"); u.B(1, 1.6, 0.06, 0, 0.55, 1.32, "#dfe7ee"); u.B(0.1, 1.4, 1.8, -2.52, 0.6, 0, "dark"); },
+    // washdown: stainless cabinet on a sloped drain pan
+    "ahu-washdown": u => { u.B(9, 0.3, 3.6, 0, 0, 0, "#1e9be8"); u.B(9, 3, 3.2, 0, 0.3, 0, "#c9d2d9"); for (let k = -1; k <= 2; k++) u.B(0.08, 3, 3.24, k * 2.2 - 1, 0.3, 0, "#8d99a3"); for (let k = 0; k < 3; k++) u.B(1.2, 2.2, 0.06, -2.1 + k * 2.2, 0.65, 1.62, "#eef3f6"); const dr = u.C(0.12, 0.12, 0.9, 4.2, 0.05, 2.1, "#1e9be8"); dr.rotation.x = Math.PI / 2; },
+    // V-Cube: a tall vertical self-contained unit
+    vcube: u => { u.B(3.2, 4.8, 2.6, 0, 0.25, 0); u.trim(3.2, 2.6, 0, 0); u.B(1.3, 3.6, 0.06, -0.75, 0.6, 1.32, "#dfe7ee"); u.B(1.3, 3.6, 0.06, 0.75, 0.6, 1.32, "#dfe7ee"); u.B(2.4, 0.5, 1.8, 0, 5.05, 0, "supply"); u.B(0.5, 0.3, 0.06, 0.75, 3.4, 1.36, "#1e9be8"); },
     rooftop: u => { u.B(6.5, 2.4, 3.4, 0, 0.25, 0); u.trim(6.5, 3.4, 0, 0); u.fanTop(0.85, 1.4, 2.65, 0); u.fanTop(0.85, -0.6, 2.65, 0); u.B(0.08, 1.8, 3, 3.27, 0.5, 0, "dark"); const hood = u.B(1.4, 0.9, 3, -3.6, 1.6, 0, "#b8c2ca"); hood.rotation.z = -0.5; for (let k = 0; k < 6; k++) u.B(0.06, 1.6, 0.06, 0.2 + k * 0.5, 0.5, 1.72, "#b8c2ca"); },
     chiller: u => { u.B(9, 0.5, 2.6, 0, 0.25, 0, "#3f4854"); u.trim(9, 2.6, 0, 0); for (let k = 0; k < 4; k++) { const x = -3.3 + k * 2.2; const a = u.B(0.12, 2, 2.4, x - 0.5, 0.8, 0, "#b8c2ca"); a.rotation.z = 0.32; const b = u.B(0.12, 2, 2.4, x + 0.5, 0.8, 0, "#b8c2ca"); b.rotation.z = -0.32; u.fanTop(0.8, x, 2.75, 0); u.B(2, 0.12, 2.5, x, 2.65, 0); } u.C(0.5, 0.5, 2.2, 3.3, 0.6, 1.5, "#1779ba").rotation.z = Math.PI / 2; },
     fanwall: u => { u.B(4.6, 3.2, 0.5, 0, 0.25, 0, "#dfe7ee"); u.trim(4.6, 0.5, 0, 0); for (let i = 0; i < 3; i++) for (let k = 0; k < 2; k++) u.fanFront(0.6, -1.5 + i * 1.5, 1.05 + k * 1.5, 0.3); },
@@ -132,6 +155,8 @@ export function makeProps({ THREE, box, mesh, material }) {
     crah: u => { for (let k = 0; k < 2; k++) { u.B(1.8, 2.3, 1, -1 + k * 2, 0, 0, "#2f3a46"); u.B(1.5, 0.9, 0.06, -1 + k * 2, 0.2, 0.52, "dark"); u.B(0.5, 0.3, 0.06, -1 + k * 2, 1.6, 0.52, "#1e9be8"); } u.B(3.9, 0.25, 1.06, 0, 0, 0, "trim"); },
     vrf: u => { for (let k = 0; k < 2; k++) { u.B(1.3, 1.9, 0.9, -0.75 + k * 1.5, 0.15, 0); u.fanTop(0.5, -0.75 + k * 1.5, 2.05, 0); u.B(1.1, 1.2, 0.05, -0.75 + k * 1.5, 0.4, 0.47, "#b8c2ca"); } u.B(3, 0.15, 1, 0, 0, 0, "trim"); },
     wshp: u => { u.B(1.1, 2, 1.1, 0, 0, 0); u.trim(1.1, 1.1, 0, 0); u.B(0.9, 0.7, 0.05, 0, 0.4, 0.57, "dark"); u.C(0.08, 0.08, 0.8, -0.3, 2, 0, "supply"); u.C(0.08, 0.08, 0.8, 0.3, 2, 0, "return"); u.B(0.8, 0.5, 0.8, 0, 2, 0, "#b8c2ca"); },
+    // upper-room UV: a louvred fixture high on the wall, with the band of UV it throws across the top of the room
+    upperuv: u => { u.B(1.3, 0.35, 0.4, 0, -0.35, 0, "#e9edf0"); for (let k = 0; k < 4; k++) u.B(1.34, 0.03, 0.44, 0, -0.32 + k * 0.08, 0, "#3f4854"); u.C(0.05, 0.05, 0.75, 0, 0, 0, "#3f4854"); const beam = u.B(5.5, 0.14, 4.2, 0, -0.27, -2.4, "#8f7bff"); beam.material = new THREE.MeshBasicMaterial({ color: 0x8f7bff, transparent: true, opacity: 0.38, depthWrite: false }); beam.castShadow = false; const glow = u.B(1.2, 0.12, 0.06, 0, -0.25, -0.23, "#8f7bff"); glow.material = new THREE.MeshBasicMaterial({ color: 0xb9a8ff }); },
     // ---- ceiling and wall mounted: origin is at the mounting height ----
     fancoil: u => { u.B(1.9, 0.45, 0.9, 0, -0.45, 0); u.B(1.95, 0.12, 0.95, 0, -0.5, 0, "trim"); u.B(1.5, 0.3, 0.3, 0, -0.38, 0.6, "dark"); },
     // VAV box: round primary-air inlet at the back, connected to the supply main; rectangular discharge at the front
@@ -150,8 +175,8 @@ export function makeProps({ THREE, box, mesh, material }) {
     box: u => { u.B(2, 1.4, 1.2, 0, 0, 0); u.trim(2, 1.2, 0, 0); }
   };
   // Where a shape goes in a room. Rooftop-sized shapes are shrunk to fit indoors.
-  const MOUNT = { turnover: "aisle", fancoil: "ceiling", vav: "ceiling", cassette: "ceiling", minisplit: "ceiling", unitheater: "ceiling", ductheater: "ceiling", orceiling: "ceiling", ffu: "ceiling", aircurtain: "door", trench: "front", uv: "ceiling" };
-  const INDOOR = { ahu: 0.5, rooftop: 0.5, chiller: 0.5, fanwall: 0.6, erv: 0.5, wheel: 0.6, plate: 0.55, mua: 0.5, turnover: 0.75, coil: 0.7, dehumidifier: 0.8, vrf: "cassette" };
+  const MOUNT = { upperuv: "upper", turnover: "aisle", fancoil: "ceiling", vav: "ceiling", cassette: "ceiling", minisplit: "ceiling", unitheater: "ceiling", ductheater: "ceiling", orceiling: "ceiling", ffu: "ceiling", aircurtain: "door", trench: "front", uv: "ceiling" };
+  const INDOOR = { "ahu-knockdown": 0.5, "ahu-acoustiflo": 0.5, "ahu-gas": 0.5, "ahu-desiccant": 0.5, "ahu-lc": 0.6, "ahu-washdown": 0.5, vcube: 0.6, ahu: 0.5, rooftop: 0.5, chiller: 0.5, fanwall: 0.6, erv: 0.5, wheel: 0.6, plate: 0.55, mua: 0.5, turnover: 0.75, coil: 0.7, dehumidifier: 0.8, vrf: "cassette" };
 
   /*
    * place: { x, floorY, ceilY, dp, outdoor }.  Returns nothing; draws into the group.
@@ -164,6 +189,7 @@ export function makeProps({ THREE, box, mesh, material }) {
     const o = { x: p.x, scale: scale * (p.outdoor ? 1 : 1.25) * (p.scale || 1), y: p.floorY, z: p.outdoor ? p.z : 0 };
     if (!p.outdoor) {
       if (mount === "ceiling") { o.y = p.ceilY - (name === "uv" ? 1.5 * o.scale : 0); o.z = p.dp / 2 - 2.2; }   // the UV fixture is drawn upward, so hang it lower
+      else if (mount === "upper") { o.y = p.ceilY - 0.75; o.z = p.dp / 2 - 2.6; }               // above head height, throwing its beam back across the upper room
       else if (mount === "door") { o.y = Math.min(p.ceilY, p.floorY + 3.4); o.z = p.dp / 2 - 0.7; }
       else if (mount === "front") { o.z = p.dp / 2 - 1.1; }
       else if (mount === "aisle") { o.z = p.dp / 2 - 2.2; o.x += 1.1; }   // at the open end of an aisle, clear of the racks
@@ -174,8 +200,8 @@ export function makeProps({ THREE, box, mesh, material }) {
   }
   // How much room (metres along x) a shape needs, so several can sit side by side.
   function footprint(shape, outdoor) {
-    const big = { ahu: 9.6, rooftop: 7.6, chiller: 9.6, fanwall: 5, erv: 7.6, wheel: 3.4, plate: 4.6, mua: 8.4, turnover: 2.8, coil: 3.8, dehumidifier: 4, vrf: 3.4, crah: 4.2, uv: 3.4, humidifier: 2.6, wshp: 1.8 };
-    const small = { fancoil: 2.6, vav: 3.6, cassette: 2, minisplit: 2.2, unitheater: 1.8, ductheater: 3, aircurtain: 3.6, orceiling: 4.6, ffu: 5, radiator: 3, fintube: 5.8, trench: 5.4, crah: 5, humidifier: 3.2, wshp: 2.2, uv: 4, box: 3 };
+    const big = { "ahu-knockdown": 10.4, "ahu-acoustiflo": 9.8, "ahu-gas": 9.6, "ahu-desiccant": 9.6, "ahu-lc": 5.6, "ahu-washdown": 9.6, vcube: 3.8, ahu: 9.6, rooftop: 7.6, chiller: 9.6, fanwall: 5, erv: 7.6, wheel: 3.4, plate: 4.6, mua: 8.4, turnover: 2.8, coil: 3.8, dehumidifier: 4, vrf: 3.4, crah: 4.2, uv: 3.4, humidifier: 2.6, wshp: 1.8 };
+    const small = { upperuv: 6, fancoil: 2.6, vav: 3.6, cassette: 2, minisplit: 2.2, unitheater: 1.8, ductheater: 3, aircurtain: 3.6, orceiling: 4.6, ffu: 5, radiator: 3, fintube: 5.8, trench: 5.4, crah: 5, humidifier: 3.2, wshp: 2.2, uv: 4, box: 3 };
     if (outdoor) return big[shape] || 3;
     const k = INDOOR[shape];
     if (typeof k === "string") return small[k];

@@ -38,3 +38,11 @@ Equipment:
 - nortek-coilwall | Computer room air handlers and liquid cooling | CRAH units along the hall, with liquid cooling for high-density racks
 - huntair-fanwall | Fan wall | Supply fan arrays that hold airflow through a fan failure
 - steamovap-ier | Data hall humidifier | Holds minimum humidity to control static
+
+Location: data-center-3
+Title: Air handling options
+Text: Other air handlers used on data centers.
+Equipment:
+- huntair-ahu | Make-up air handler | Custom unit that pressurizes and dehumidifies the hall
+- governair-fanwall | FANWALL retrofit | Replaces ageing fans in existing air handlers without downtime
+- envirotec-mql | Office-area indoor air handler

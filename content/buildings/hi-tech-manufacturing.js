@@ -23,7 +23,8 @@ DMR.registerBuilding({
   stops: [
     { id: "hi-tech-manufacturing-1", at: { floor: "roof", x: 0.35 }, space: "plant" },
     { id: "hi-tech-manufacturing-2", at: { floor: 1, x: 0.5 }, space: "cleanroom" },
-    { id: "hi-tech-manufacturing-3", at: { floor: 0, x: 0.25 }, space: "mechanical" }
+    { id: "hi-tech-manufacturing-3", at: { floor: 0, x: 0.25 }, space: "mechanical" },
+    { id: "hi-tech-manufacturing-4", at: { floor: 1, x: 0.25 }, space: "mechanical" }
   ],
   // Shapes that make this building recognizable. See CONTENT.md for the kit.
   build: function (kit, d) {

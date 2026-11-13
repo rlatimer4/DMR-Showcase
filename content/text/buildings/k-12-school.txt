@@ -59,3 +59,11 @@ Equipment:
 - sterling-cabinet | Vestibule cabinet unit heater | Offsets cold air at the doors
 - sterling-versa-line | Corridor finned tube
 - sterling-unit-heaters | Gym unit heaters
+
+Location: k-12-school-6
+Title: Air handling options
+Text: Other air handlers used in schools.
+Equipment:
+- temtrol-lc | School air handler | Designed for the education market
+- mammoth-vcube | Vertical self-contained unit
+- governair-ahu | Custom air handler

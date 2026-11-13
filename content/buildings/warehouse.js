@@ -24,7 +24,8 @@ DMR.registerBuilding({
     { id: "warehouse-1", at: { floor: "roof", x: 0.3 }, space: "plant" },
     { id: "warehouse-2", at: { floor: 0, x: 0.17 }, space: "high-bay" },
     { id: "warehouse-4", at: { floor: 0, x: 0.5 }, space: "high-bay" },
-    { id: "warehouse-3", at: { floor: 0, x: 0.85 }, space: "dock" }
+    { id: "warehouse-3", at: { floor: 0, x: 0.85 }, space: "dock" },
+    { id: "warehouse-5", at: { floor: "roof", x: 0.8 }, space: "plant" }
   ],
   // Shapes that make this building recognizable. See CONTENT.md for the kit.
   build: function (kit, d) {

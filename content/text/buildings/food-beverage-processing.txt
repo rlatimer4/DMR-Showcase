@@ -38,3 +38,11 @@ Equipment:
 - fisair-dfra | Processing room dehumidifier
 - novelaire-precisiondry | Post-wash-down drying system
 - kampmann-top | Door unit heaters | Offset cold air at cold-room and dock doors
+
+Location: food-beverage-processing-3
+Title: Air handling options
+Text: Other air handlers used in food and beverage plants.
+Equipment:
+- ventrol-ahu | Custom air handler
+- nortek-low-humidity | Air handler with desiccant dehumidification
+- huntair-fanwall | Fan array | Keeps running through a fan failure

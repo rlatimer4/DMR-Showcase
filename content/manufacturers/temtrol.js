@@ -18,9 +18,9 @@ DMR.registerManufacturer({
   blurb: "Custom, knockdown and Temtrol LC air handlers, FANWALL systems and air rotation units.",
   products: [
     { id: "temtrol-ahu", category: "ahu", shape: "ahu" },
-    { id: "temtrol-knockdown", category: "ahu", shape: "ahu" },
+    { id: "temtrol-knockdown", category: "ahu", shape: "ahu-knockdown" },
     { id: "temtrol-fanwall", category: "fanwall", shape: "fanwall" },
-    { id: "temtrol-lc", category: "ahu", shape: "ahu" },
+    { id: "temtrol-lc", category: "ahu", shape: "ahu-lc" },
     { id: "temtrol-air-rotation", category: "makeup", shape: "turnover" }
   ]
 });

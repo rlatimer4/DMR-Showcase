@@ -24,7 +24,7 @@ DMR.registerManufacturer({
     { id: "uvr-dln", category: "iaq", shape: "uv" },
     { id: "uvr-uvk", category: "iaq", shape: "uv" },
     { id: "uvr-x-plus", category: "iaq", shape: "uv" },
-    { id: "uvr-glo", category: "iaq", shape: "uv" },
+    { id: "uvr-glo", category: "iaq", shape: "upperuv" },
     { id: "uvr-lamps", category: "iaq", shape: "uv" },
     { id: "uvr-accessories", category: "iaq", shape: "uv" }
   ]

@@ -45,3 +45,11 @@ Text: Make-up air units with humidifiers supply the cleanroom with conditioned o
 Equipment:
 - huntair-ahu | Cleanroom make-up air handler
 - steamovap-ise | Steam exchange humidifier | Clean steam made from central boiler steam
+
+Location: hi-tech-manufacturing-4
+Title: Air handling options
+Text: Other air handlers used in hi-tech plants.
+Equipment:
+- nortek-low-humidity | Dry room air handler with desiccant dehumidification
+- ventrol-ahu | Custom air handler
+- huntair-fanwall | Fan array

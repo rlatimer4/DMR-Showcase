@@ -23,7 +23,8 @@ DMR.registerBuilding({
   stops: [
     { id: "library-1", at: { floor: "roof", x: 0.45 }, space: "plant" },
     { id: "library-2", at: { floor: 1, x: 0.25 }, space: "reading-room" },
-    { id: "library-3", at: { floor: 0, x: 0.75 }, space: "archive" }
+    { id: "library-3", at: { floor: 0, x: 0.75 }, space: "archive" },
+    { id: "library-4", at: { floor: 0, x: 0.25 }, space: "mechanical" }
   ],
   // Shapes that make this building recognizable. See CONTENT.md for the kit.
   build: function (kit, d) {

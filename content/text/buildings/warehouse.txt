@@ -49,3 +49,10 @@ Text: High-output unit heaters offset the cold air while dock doors are open.
 Equipment:
 - kampmann-top | Dock door unit heaters | High-output heaters aimed at each dock opening
 - sterling-unit-heaters | Dock unit heaters
+
+Location: warehouse-5
+Title: Air handling options
+Text: Other rooftop equipment used on warehouses.
+Equipment:
+- nortek-mua | Make-up air unit
+- mammoth-ultraline | Office rooftop unit

@@ -62,3 +62,11 @@ Equipment:
 - cooney-freeze-block | Freeze-resistant preheat coil
 - nortek-gas-phase | Air handler with gas-phase filtration | Removes helipad and ambulance bay fumes
 - fisair-resistance | Central humidifier
+
+Location: hospital-6
+Title: Air handling options
+Text: Other air handlers used in hospitals.
+Equipment:
+- huntair-ahu | General-floor custom air handler
+- temtrol-knockdown | Knockdown replacement air handler | Passes through existing doors and corridors
+- nortek-low-humidity | Surgery air handler with desiccant dehumidification | Holds low humidity at cool operating room setpoints

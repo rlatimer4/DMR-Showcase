@@ -51,3 +51,11 @@ Text: Trench units sit in the floor along the glass and a cabinet unit heater wa
 Equipment:
 - kampmann-katherm-qk | Lobby trench heater | Floor-recessed along the storefront glass
 - sterling-cabinet | Vestibule cabinet unit heater | Recessed heater that offsets cold air at the main doors
+
+Location: hotel-5
+Title: Air handling options
+Text: Other air handlers used in hotels.
+Equipment:
+- mammoth-vcube | Vertical self-contained unit | Serves ballrooms and meeting rooms
+- temtrol-knockdown | Knockdown replacement air handler
+- envirotec-mql | Back-of-house indoor air handler

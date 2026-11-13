@@ -17,7 +17,7 @@ const stage = document.querySelector(".tour-stage");
 const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
 function init() {
-  const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+  const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true, logarithmicDepthBuffer: true });
   renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
   renderer.shadowMap.enabled = true;
   renderer.shadowMap.type = THREE.PCFSoftShadowMap;
@@ -30,7 +30,7 @@ function init() {
   let t0 = -1;                                  // start time of the camera move in progress, or -1
   const scene = new THREE.Scene();
   scene.fog = new THREE.Fog(0xe4eef6, 500, 1500);
-  const camera = new THREE.PerspectiveCamera(30, 1, 1, 3000);
+  const camera = new THREE.PerspectiveCamera(30, 1, 2, 3000);
   const controls = new OrbitControls(camera, canvas);
   Object.assign(controls, { enableZoom: true, zoomSpeed: 1.2, minDistance: 5, maxDistance: 1400, enablePan: false, enableDamping: true, maxPolarAngle: Math.PI / 2 - 0.08, minPolarAngle: 0.35 });
   // A plain scroll still scrolls the page. Ctrl or Cmd + scroll, a pinch, the buttons, or any scroll in full screen zooms.
@@ -226,7 +226,9 @@ function init() {
     const facadeDef = Object.assign({ style: "windows", color: useColor }, b.facade);
     const wall = material(b.walls || "wall");
     box(shell, w + 3, 0.12, dp + 3, 0, 0.06, 0, M.pad, false);
-    for (let i = 0; i <= floors; i++) if (i < floors || b.roof !== "open") box(shell, w, 0.3, dp, 0, i * fh + 0.15, 0, M.slab);
+    // Floor slabs sit inside the walls and the roof overhangs them, so no two faces share a plane.
+    for (let i = 0; i < floors; i++) box(shell, w - 0.84, 0.3, dp - 0.44, 0, i * fh + 0.15, 0.2, M.slab);
+    if (b.roof !== "open") box(shell, w + 0.3, 0.3, dp + 0.3, 0, h + 0.15, 0, M.slab);
     box(shell, w, h, 0.4, 0, h / 2, -dp / 2 + 0.2, wall);
     box(shell, 0.4, h, dp, -w / 2 + 0.2, h / 2, 0, wall);
     box(shell, 0.4, h, dp, w / 2 - 0.2, h / 2, 0, wall);
@@ -236,7 +238,7 @@ function init() {
       box(shell, w * 0.84, 0.4, 0.7, 0, (i + 1) * fh - 0.5, -dp * 0.36, M.return, false);
     }
     const fm = new THREE.MeshStandardMaterial({ map: facadeTexture(w, h, floors, facadeDef), transparent: true, roughness: 0.45 });
-    const facade = box(shell, w, h, 0.3, 0, h / 2, dp / 2 + 0.16, fm, false);
+    const facade = box(shell, w - 0.04, h - 0.04, 0.24, 0, h / 2, dp / 2 + 0.14, fm, false);
     facade.renderOrder = 2;
     m.cutaways.push(facade);
 
@@ -347,7 +349,8 @@ function init() {
       let pos;
       if (outdoor) {
         const onRoof = s.at.floor === "roof", y = onRoof ? h + 0.3 : 0.12, z = onRoof ? -1 : dp / 2 + 8.5;
-        const room = Math.min(13, w - 2), cx = Math.max(-w / 2 + room / 2 + 0.5, Math.min(w / 2 - room / 2 - 0.5, x));
+        const shared = b.stops.filter(o => o.at.floor === s.at.floor).length;   // units share the roof or yard
+        const room = Math.min(13, (w - 2) / shared), cx = Math.max(-w / 2 + room / 2 + 0.5, Math.min(w / 2 - room / 2 - 0.5, x));
         if (!b.model) {
           layout(cx, room).forEach(u => place(u, { x: u.x, floorY: y, z, outdoor: true, scale: u.k }));
           if (onRoof) {

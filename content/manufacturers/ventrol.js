@@ -18,8 +18,8 @@ DMR.registerManufacturer({
   blurb: "Custom, knockdown and washdown air handlers, and FANWALL systems.",
   products: [
     { id: "ventrol-ahu", category: "ahu", shape: "ahu" },
-    { id: "ventrol-knockdown", category: "ahu", shape: "ahu" },
-    { id: "ventrol-washdown", category: "ahu", shape: "ahu" },
+    { id: "ventrol-knockdown", category: "ahu", shape: "ahu-knockdown" },
+    { id: "ventrol-washdown", category: "ahu", shape: "ahu-washdown" },
     { id: "ventrol-fanwall", category: "fanwall", shape: "fanwall" }
   ]
 });

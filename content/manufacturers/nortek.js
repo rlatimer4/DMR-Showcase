@@ -18,7 +18,7 @@ DMR.registerManufacturer({
   blurb: "Air handlers with AcoustiFLO fans, gas-phase filtration or low-temp desiccant dehumidification, make-up air units, coils, and data center cooling.",
   products: [
     { id: "nortek-mua", category: "makeup", shape: "mua" },
-    { id: "nortek-low-humidity", category: "dehum", shape: "dehumidifier" },
+    { id: "nortek-low-humidity", category: "dehum", shape: "ahu-desiccant" },
     { id: "nortek-water-coils", category: "coils", shape: "coil" },
     { id: "nortek-dx-coils", category: "coils", shape: "coil" },
     { id: "nortek-steam-coils", category: "coils", shape: "coil" },
@@ -27,7 +27,7 @@ DMR.registerManufacturer({
     { id: "nortek-statepoint", category: "datacenter", shape: "chiller" },
     { id: "nortek-cdu", category: "datacenter", shape: "crah" },
     { id: "nortek-coilwall", category: "datacenter", shape: "fanwall" },
-    { id: "nortek-acoustiflo", category: "ahu", shape: "ahu" },
-    { id: "nortek-gas-phase", category: "ahu", shape: "ahu" }
+    { id: "nortek-acoustiflo", category: "ahu", shape: "ahu-acoustiflo" },
+    { id: "nortek-gas-phase", category: "ahu", shape: "ahu-gas" }
   ]
 });

@@ -22,7 +22,8 @@ DMR.registerBuilding({
   walls: "#8a949e",
   stops: [
     { id: "small-manufacturing-1", at: { floor: "yard", x: 0.3 }, space: "plant" },
-    { id: "small-manufacturing-2", at: { floor: 0, x: 0.6 }, space: "shop-floor" }
+    { id: "small-manufacturing-2", at: { floor: 0, x: 0.6 }, space: "shop-floor" },
+    { id: "small-manufacturing-3", at: { floor: 0, x: 0.25 }, space: "mechanical" }
   ],
   // Shapes that make this building recognizable. See CONTENT.md for the kit.
   build: function (kit, d) {

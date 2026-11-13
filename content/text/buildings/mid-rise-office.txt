@@ -50,3 +50,11 @@ Text: Vertical self-contained units serve one floor each from a small closet.
 Equipment:
 - mammoth-vcube-slim | Vertical self-contained VAV unit | One water-cooled unit per floor, sized to fit the elevator
 - reddi-duct-heaters | Electric duct heater | Reheat for perimeter zones
+
+Location: mid-rise-office-5
+Title: Air handling options
+Text: Other air handlers used in mid-rise offices.
+Equipment:
+- mammoth-ultraline | Custom packaged rooftop unit
+- temtrol-lc | Compact air handler | For above-ceiling and tight-access locations
+- governair-ahu | Custom air handler

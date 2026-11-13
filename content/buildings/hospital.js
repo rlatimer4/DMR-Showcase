@@ -25,7 +25,8 @@ DMR.registerBuilding({
     { id: "hospital-2", at: { floor: 2, x: 0.17 }, space: "operating-room" },
     { id: "hospital-3", at: { floor: 1, x: 0.83 }, space: "patient-room" },
     { id: "hospital-5", at: { floor: 1, x: 0.5 }, space: "patient-room" },
-    { id: "hospital-4", at: { floor: 0, x: 0.5 }, space: "mechanical" }
+    { id: "hospital-4", at: { floor: 0, x: 0.5 }, space: "mechanical" },
+    { id: "hospital-6", at: { floor: 3, x: 0.5 }, space: "mechanical" }
   ],
   // Shapes that make this building recognizable. See CONTENT.md for the kit.
   build: function (kit, d) {

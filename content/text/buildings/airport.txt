@@ -44,3 +44,11 @@ Text: Unit heaters offset the cold air at the belt openings and cover the back-o
 Equipment:
 - kampmann-top | Door unit heaters | High-output heaters aimed at the baggage belt openings
 - sterling-unit-heaters | Back-of-house unit heaters
+
+Location: airport-4
+Title: Air handling options
+Text: Other air handlers used in terminals.
+Equipment:
+- temtrol-ahu | Terminal custom air handler
+- ventrol-knockdown | Knockdown replacement air handler | Built inside the terminal while it stays open
+- nortek-mua | Baggage hall make-up air unit

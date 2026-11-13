@@ -30,6 +30,7 @@ Text: Desiccant systems remove plant moisture without overcooling the space.
 Equipment:
 - novelaire-comfortdry | Grow room dehumidifier
 - fisair-dfra | Desiccant dehumidifier
+- nortek-low-humidity | Air handler with desiccant dehumidification
 
 Location: greenhouse-2
 Title: Growing floor

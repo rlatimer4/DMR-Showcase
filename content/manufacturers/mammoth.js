@@ -18,8 +18,8 @@ DMR.registerManufacturer({
   blurb: "UltraLine custom packaged rooftops, V-Cube vertical self-contained systems and air-source heat pumps.",
   products: [
     { id: "mammoth-ultraline", category: "packaged", shape: "rooftop" },
-    { id: "mammoth-vcube", category: "packaged", shape: "wshp" },
-    { id: "mammoth-vcube-slim", category: "packaged", shape: "wshp" },
+    { id: "mammoth-vcube", category: "packaged", shape: "vcube" },
+    { id: "mammoth-vcube-slim", category: "packaged", shape: "vcube" },
     { id: "mammoth-ashp", category: "heatpump", shape: "rooftop" }
   ]
 });

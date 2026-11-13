@@ -22,7 +22,8 @@ DMR.registerBuilding({
   walls: "#f4f6f7",
   stops: [
     { id: "food-beverage-processing-1", at: { floor: "roof", x: 0.3 }, space: "plant" },
-    { id: "food-beverage-processing-2", at: { floor: 0, x: 0.7 }, space: "process" }
+    { id: "food-beverage-processing-2", at: { floor: 0, x: 0.7 }, space: "process" },
+    { id: "food-beverage-processing-3", at: { floor: 0, x: 0.25 }, space: "mechanical" }
   ],
   // Shapes that make this building recognizable. See CONTENT.md for the kit.
   build: function (kit, d) {

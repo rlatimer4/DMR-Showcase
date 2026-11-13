@@ -37,3 +37,11 @@ Equipment:
 - sterling-cabinet | Entrance cabinet unit heater | Offsets cold air at the shop door
 - gree-livo | Stock room mini-split
 - reddi-unit-heaters | Electric wall and duct heaters | Vestibule and restroom heat
+
+Location: retail-strip-3
+Title: Air handling options
+Text: Other rooftop equipment used on retail buildings.
+Equipment:
+- temtrol-lc | Compact air handler
+- mammoth-ashp | Air-source heat pump
+- venmar-erv | Energy recovery ventilator

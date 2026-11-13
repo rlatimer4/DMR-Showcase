@@ -36,3 +36,11 @@ Text: Unit heaters and electric heaters cover the shop floor.
 Equipment:
 - sterling-unit-heaters | Hot water unit heaters
 - reddi-unit-heaters | Hazardous-location electric heater | For paint and solvent areas
+
+Location: small-manufacturing-3
+Title: Air handling options
+Text: Other air handlers used in small plants.
+Equipment:
+- nortek-mua | Make-up air unit
+- mammoth-ultraline | Office rooftop unit
+- temtrol-lc | Compact air handler

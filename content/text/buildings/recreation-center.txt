@@ -38,3 +38,11 @@ Equipment:
 - mammoth-ultraline | Gym rooftop unit | Packaged heating and cooling sized for a full gym
 - sterling-unit-heaters | Vestibule unit heaters
 - sterling-cabinet | Vestibule cabinet unit heater | Offsets cold air at the doors
+
+Location: recreation-center-3
+Title: Air handling options
+Text: Other air handlers used in recreation centers.
+Equipment:
+- venmar-energypack | Pool hall unit with energy recovery
+- nortek-low-humidity | Air handler with desiccant dehumidification
+- temtrol-knockdown | Knockdown replacement air handler | Assembled inside the existing mechanical room

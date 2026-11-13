@@ -124,6 +124,13 @@ model that stands for it in the buildings:
 | shape | looks like |
 | --- | --- |
 | `ahu` | long custom air handler |
+| `ahu-knockdown` | air handler in separate sections, one being lowered in |
+| `ahu-acoustiflo` | air handler with the round AcoustiFLO fan showing at the end |
+| `ahu-gas` | air handler with a bank of black gas-phase media cassettes |
+| `ahu-desiccant` | air handler with a desiccant wheel and reactivation duct |
+| `ahu-lc` | short, compact air handler |
+| `ahu-washdown` | stainless air handler on a drain pan |
+| `vcube` | tall vertical self-contained unit |
 | `rooftop` | packaged rooftop unit |
 | `chiller` | air-cooled chiller with V-coils and fans |
 | `fanwall` | wall of fans |
@@ -135,7 +142,7 @@ model that stands for it in the buildings:
 | `radiator`, `fintube`, `trench` | panel radiator, finned tube, floor trench unit |
 | `unitheater`, `ductheater`, `aircurtain` | hanging unit heater, duct heater, air curtain over a door |
 | `humidifier`, `dehumidifier` | humidifier with steam manifold, desiccant dehumidifier |
-| `coil`, `uv` | coil, UV-C lamp fixture |
+| `coil`, `uv`, `upperuv` | coil, UV-C lamp fixture, upper-room UV fixture with its band of light |
 | `orceiling`, `ffu` | operating room ceiling, cleanroom fan filter ceiling |
 
 ### Retire a product line

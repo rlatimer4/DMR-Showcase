@@ -21,7 +21,8 @@ DMR.registerBuilding({
   facade: { style: "glass", color: "#3a7ca8" },
   stops: [
     { id: "convention-center-1", at: { floor: "yard", x: 0.35 }, space: "plant" },
-    { id: "convention-center-2", at: { floor: 0, x: 0.7 }, space: "exhibit-hall" }
+    { id: "convention-center-2", at: { floor: 0, x: 0.7 }, space: "exhibit-hall" },
+    { id: "convention-center-3", at: { floor: 0, x: 0.25 }, space: "mechanical" }
   ],
   // Shapes that make this building recognizable. See CONTENT.md for the kit.
   build: function (kit, d) {

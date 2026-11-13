@@ -45,3 +45,11 @@ Equipment:
 - steamovap-ier | Procedure room humidifier
 - uvr-glo | Upper-room UV-C
 - gree-livo | Imaging equipment room mini-split
+
+Location: medical-clinic-4
+Title: Air handling options
+Text: Other air handlers used in clinics.
+Equipment:
+- temtrol-lc | Compact air handler
+- envirotec-mql | Indoor air handling unit
+- nortek-gas-phase | Air handler with gas-phase filtration

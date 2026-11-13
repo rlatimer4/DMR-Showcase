@@ -22,7 +22,8 @@ DMR.registerBuilding({
   walls: "#6b7580",
   stops: [
     { id: "data-center-1", at: { floor: "roof", x: 0.3 }, space: "plant" },
-    { id: "data-center-2", at: { floor: 0, x: 0.55 }, space: "data-hall" }
+    { id: "data-center-2", at: { floor: 0, x: 0.55 }, space: "data-hall" },
+    { id: "data-center-3", at: { floor: "roof", x: 0.78 }, space: "plant" }
   ],
   // Shapes that make this building recognizable. See CONTENT.md for the kit.
   build: function (kit, d) {

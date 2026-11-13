@@ -51,3 +51,11 @@ Text: A multi-zone heat pump and trench units serve the lobby and amenity spaces
 Equipment:
 - gree-multi | Amenity multi-zone heat pump | One outdoor unit serves the lobby, gym and lounge
 - kampmann-katherm-qk | Lobby trench heater
+
+Location: multifamily-5
+Title: Air handling options
+Text: Other air handlers used in multifamily buildings.
+Equipment:
+- mammoth-vcube | Vertical self-contained unit | Serves the amenity floor
+- venmar-energypack | Corridor unit with energy recovery
+- envirotec-mql | Indoor air handling unit

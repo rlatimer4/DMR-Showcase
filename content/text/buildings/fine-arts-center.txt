@@ -37,3 +37,11 @@ Text: Steam humidifiers protect instruments and finishes.
 Equipment:
 - steamovap-ier | Stage humidifier | Protects instruments and scenery
 - huntair-ahu | Lobby and rehearsal air handlers
+
+Location: fine-arts-center-3
+Title: Air handling options
+Text: Other air handlers used in performing arts buildings.
+Equipment:
+- temtrol-ahu | Lobby custom air handler
+- venmar-energypack | Rehearsal room unit with energy recovery
+- huntair-knockdown | Knockdown replacement air handler

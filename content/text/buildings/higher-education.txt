@@ -58,3 +58,11 @@ Text: Freeze-resistant coils replace failed preheat coils in existing air handle
 Equipment:
 - cooney-freeze-block | Freeze-resistant preheat coils
 - sterling-versa-line | Corridor finned tube
+
+Location: higher-education-6
+Title: Air handling options
+Text: Other air handlers used in campus buildings.
+Equipment:
+- temtrol-lc | Classroom wing air handler
+- nortek-low-humidity | Air handler with desiccant dehumidification
+- governair-fanwall | FANWALL retrofit

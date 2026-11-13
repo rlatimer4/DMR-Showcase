@@ -45,3 +45,11 @@ Text: Steam humidification and dehumidifiers protect stored collections.
 Equipment:
 - steamovap-ier | Storage vault humidifier
 - fisair-dfra | Storage dehumidifier
+
+Location: museum-4
+Title: Air handling options
+Text: Other air handlers used in museums.
+Equipment:
+- nortek-low-humidity | Gallery air handler with desiccant dehumidification
+- huntair-ahu | Custom air handler
+- temtrol-knockdown | Knockdown replacement air handler | Assembled inside a historic building

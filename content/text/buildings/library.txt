@@ -43,3 +43,11 @@ Text: Desiccant dehumidifiers and humidifiers hold the archive within a narrow h
 Equipment:
 - fisair-dfra | Archive dehumidifier | Desiccant unit holding 35 to 45% relative humidity
 - fisair-resistance | Archive humidifier
+
+Location: library-4
+Title: Air handling options
+Text: Other air handlers used in libraries.
+Equipment:
+- temtrol-ahu | Custom air handler with close humidity control
+- nortek-acoustiflo | Reading room air handler with AcoustiFLO fans
+- temtrol-knockdown | Knockdown replacement air handler

@@ -21,7 +21,8 @@ DMR.registerBuilding({
   facade: { style: "glass", color: "#2f86c2" },
   stops: [
     { id: "recreation-center-1", at: { floor: "yard", x: 0.35 }, space: "pool" },
-    { id: "recreation-center-2", at: { floor: 0, x: 0.75 }, space: "gym" }
+    { id: "recreation-center-2", at: { floor: 0, x: 0.75 }, space: "gym" },
+    { id: "recreation-center-3", at: { floor: 0, x: 0.25 }, space: "mechanical" }
   ],
   // Shapes that make this building recognizable. See CONTENT.md for the kit.
   build: function (kit, d) {

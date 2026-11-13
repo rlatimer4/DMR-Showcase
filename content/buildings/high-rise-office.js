@@ -25,7 +25,8 @@ DMR.registerBuilding({
     { id: "high-rise-office-2", at: { floor: 7, x: 0.25 }, space: "open-office" },
     { id: "high-rise-office-5", at: { floor: 7, x: 0.75 }, space: "open-office" },
     { id: "high-rise-office-3", at: { floor: 4, x: 0.75 }, space: "office" },
-    { id: "high-rise-office-4", at: { floor: 0, x: 0.3 }, space: "lobby" }
+    { id: "high-rise-office-4", at: { floor: 0, x: 0.3 }, space: "lobby" },
+    { id: "high-rise-office-6", at: { floor: 0, x: 0.75 }, space: "mechanical" }
   ],
   // Shapes that make this building recognizable. See CONTENT.md for the kit.
   build: function (kit, d) {

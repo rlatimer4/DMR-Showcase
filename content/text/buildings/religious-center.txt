@@ -30,6 +30,7 @@ Text: Energy recovery ventilators bring in outdoor air for a full congregation a
 Equipment:
 - venmar-erv | Sanctuary ventilation unit | Brings in outdoor air only when the room is full
 - mammoth-ultraline | Ground-mounted packaged unit | Keeps the roofline clear
+- temtrol-lc | Compact air handler | Small enough for a ground-level enclosure
 
 Location: religious-center-2
 Title: Sanctuary

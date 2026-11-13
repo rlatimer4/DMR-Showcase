@@ -37,3 +37,11 @@ Text: Energy recovery wheels cut the cost of the outdoor air a full hall needs.
 Equipment:
 - klingenburg-wheel | Energy recovery wheel | Recovers energy from the large outdoor air load
 - huntair-ahu | Meeting room air handlers
+
+Location: convention-center-3
+Title: Air handling options
+Text: Other air handlers used in convention centers.
+Equipment:
+- temtrol-ahu | Meeting room custom air handler
+- nortek-acoustiflo | Ballroom air handler with AcoustiFLO fans
+- huntair-knockdown | Knockdown replacement air handler

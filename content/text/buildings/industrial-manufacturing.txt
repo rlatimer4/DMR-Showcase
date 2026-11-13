@@ -30,6 +30,7 @@ Text: Direct-fired make-up air units replace exhaust air and pressurize the plan
 Equipment:
 - rapid-mua | Direct-fired make-up air unit
 - klingenburg-plate | Process exhaust heat recovery
+- governair-ahu | Process cooling air handler
 
 Location: industrial-manufacturing-2
 Title: Production floor

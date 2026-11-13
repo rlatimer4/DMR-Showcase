@@ -18,7 +18,7 @@ DMR.registerManufacturer({
   blurb: "Custom air handlers, FANWALL systems, CleanPak fan filter units and cleanroom ceiling grids.",
   products: [
     { id: "huntair-ahu", category: "ahu", shape: "ahu" },
-    { id: "huntair-knockdown", category: "ahu", shape: "ahu" },
+    { id: "huntair-knockdown", category: "ahu", shape: "ahu-knockdown" },
     { id: "huntair-fanwall", category: "fanwall", shape: "fanwall" },
     { id: "huntair-ffu", category: "critical", shape: "ffu" },
     { id: "huntair-ceiling-grid", category: "critical", shape: "ffu" },

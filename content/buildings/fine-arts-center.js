@@ -22,7 +22,8 @@ DMR.registerBuilding({
   walls: "#e6e1ee",
   stops: [
     { id: "fine-arts-center-1", at: { floor: "roof", x: 0.35 }, space: "plant" },
-    { id: "fine-arts-center-2", at: { floor: 0, x: 0.3 }, space: "auditorium" }
+    { id: "fine-arts-center-2", at: { floor: 0, x: 0.3 }, space: "auditorium" },
+    { id: "fine-arts-center-3", at: { floor: 0, x: 0.75 }, space: "mechanical" }
   ],
   // Shapes that make this building recognizable. See CONTENT.md for the kit.
   build: function (kit, d) {
