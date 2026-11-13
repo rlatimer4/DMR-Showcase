@@ -1,4 +1,4 @@
-# STEAMOVAP TECHNOLOGIES — RES RESIDENTIAL STEAM HUMIDIFIER
+﻿# STEAMOVAP TECHNOLOGIES â€” RES RESIDENTIAL STEAM HUMIDIFIER
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -24,5 +24,8 @@ Documents:
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.
 # Badge: New
-# Specifications:
-# - Capacity: 20 to 200 tons
+Specifications:
+- Steam capacity: 5 to 60 lb/h (2.3 to 27 kg/h) compact resistive electric steam humidifier
+- Tank: Cleanable stainless steel chamber (no disposable plastic cylinders required)
+- Water options: Potable, softened or RO water; 120V, 208V or 240V single-phase
+- Distribution: Duct dispersion tube or integral direct-room blower pack

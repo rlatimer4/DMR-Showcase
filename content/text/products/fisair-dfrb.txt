@@ -1,4 +1,4 @@
-# FISAIR — DFRB DEHUMIDIFIERS
+﻿# FISAIR â€” DFRB DEHUMIDIFIERS
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -23,5 +23,7 @@ Documents:
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.
 # Badge: New
-# Specifications:
-# - Capacity: 20 to 200 tons
+Specifications:
+- Process airflow: 1,500 to 25,000 m³/h with integral pre-cooling and/or post-cooling coils
+- Coil options: Chilled water or DX coils plus MERV 8 / MERV 14 filtration
+- Reactivation: Electric, steam or gas reactivation with heat recovery options

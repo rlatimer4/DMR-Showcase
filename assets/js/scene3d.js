@@ -10,7 +10,7 @@
  */
 import * as THREE from "three";
 import { OrbitControls } from "three/addons/controls/OrbitControls.js";
-import { makeProps } from "./props3d.js";
+import { makeProps } from "./props3d.js?v=4";
 
 const D = window.DMR;
 const stage = document.querySelector(".tour-stage");
@@ -377,8 +377,11 @@ function init() {
         room.userData = { stop: s.id, title: s.title };
         g.add(room); m.rooms[s.id] = room; m.zones.push(room);
         pos = new THREE.Vector3(bx - cw / 2 + 1.3, y0 + fh - 1.1, dp / 2 + 0.6);
-        // The close-up looks at the front of the room, where the equipment stands.
-        s.frame = { x: bx, y: y0 + fh / 2, z: dp / 2 - 4.5, w: cw + 0.6, h: fh + 1.2 };
+        // The close-up looks at the front of the room, where the equipment stands (or includes the outdoor VRF pad on low floors).
+        const hasExtVrf = shapes.indexOf("vrf") >= 0 && s.at.floor <= 1;
+        s.frame = hasExtVrf
+          ? { x: bx, y: (y0 + fh) / 2, z: dp / 2 - 2.2, w: cw + 2.4, h: y0 + fh + 2.2 }
+          : { x: bx, y: y0 + fh / 2, z: dp / 2 - 4.5, w: cw + 0.6, h: fh + 1.2 };
       }
     });
   });
@@ -444,7 +447,17 @@ function init() {
     });
   }
   function point(stopId, n) {
-    tags.forEach(sp => { if (sp.visible) { const on = sp.userData.stop === stopId && sp.userData.n === (n || 0); sp.material.map = on ? sp.userData.on : sp.userData.off; sp.renderOrder = on ? 21 : 20; } });
+    const idx = n || 0;
+    tags.forEach(sp => { if (sp.visible) { const on = sp.userData.stop === stopId && sp.userData.n === idx; sp.material.map = on ? sp.userData.on : sp.userData.off; sp.renderOrder = on ? 21 : 20; } });
+    if (view.stop && view.stop.id === stopId && view.building && view.item !== idx) {
+      const m = models[view.building.id], prev = m && m.items[stopId + ":" + view.item], next = m && m.items[stopId + ":" + idx];
+      view.item = idx;
+      if (prev && next && !!prev.userData.at.outdoorUnit !== !!next.userData.at.outdoorUnit && view.stop.at.floor > 1) {
+        const [p, t] = shot(view);
+        fromPos.copy(camera.position); fromTgt.copy(controls.target); toPos.copy(p); toTgt.copy(t);
+        if (reduce) { camera.position.copy(p); controls.target.copy(t); t0 = -1; } else t0 = performance.now();
+      }
+    }
   }
   // A light that moves into whichever room is being looked at.
   const roomLight = new THREE.PointLight(0xffffff, 0, 60, 1.2);
@@ -455,7 +468,15 @@ function init() {
     const fit = (wNeed, hNeed) => Math.max(hNeed / 2 / tan, wNeed / 2 / tan / camera.aspect);
     if (v.stop && v.stop.frame) {
       // Close-up of one room or one group of outdoor equipment.
-      const f = v.stop.frame, p = v.building.pos, d = fit(f.w, f.h) + (f.outdoor ? 3 : 4.5);
+      let f = v.stop.frame;
+      if (v.building && v.stop.at && v.stop.at.floor > 1) {
+        const grp = models[v.building.id] && models[v.building.id].items[v.stop.id + ":" + (v.item || 0)];
+        if (grp && grp.userData.at && grp.userData.at.outdoorUnit) {
+          const a = grp.userData.at;
+          f = { x: a.x, y: a.y + 1.4, z: a.z - 1.2, w: 9, h: 6, outdoor: true };
+        }
+      }
+      const p = v.building.pos, d = fit(f.w, f.h) + (f.outdoor ? 3 : 4.5);
       const up = f.outdoor ? 0.34 : 0.16;
       return [new THREE.Vector3(p.x + f.x + d * 0.3, f.y + d * up, p.z + f.z + d * 0.94), new THREE.Vector3(p.x + f.x, f.y, p.z + f.z)];
     }
@@ -580,7 +601,7 @@ function init() {
   stage.appendChild(canvas);
   const hint = document.createElement("p");
   hint.className = "scene-hint";
-  hint.textContent = "Drag to rotate · Ctrl + scroll or pinch to zoom · Select a building, then a room or a piece of equipment";
+  hint.textContent = "Drag to orbit · Ctrl + scroll to zoom · Click any building, room or unit";
   stage.appendChild(hint);
   stage.appendChild(tip);
   // zoom and full-screen buttons

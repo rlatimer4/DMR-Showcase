@@ -1,4 +1,4 @@
-# HUNTAIR — CLEANPAK FAN FILTER UNITS
+﻿# HUNTAIR â€” CLEANPAK FAN FILTER UNITS
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -27,5 +27,8 @@ Documents:
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.
 # Badge: New
-# Specifications:
-# - Capacity: 20 to 200 tons
+Specifications:
+- Module sizes: 2'x2', 2'x3', 2'x4' and 4'x4' low-profile fan filter units
+- Filtration: Room-side replaceable 99.99% HEPA or 99.9995% ULPA filter (ISO Class 3–8)
+- Airflow & motor: 90 FPM nominal velocity; high-efficiency ECM or PSC motor with BACnet network
+- Sound & power: Low sound (<50 dBA at 90 FPM) and low watt draw

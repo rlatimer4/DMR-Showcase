@@ -1,4 +1,4 @@
-# GREE — GMV6 ULTRA HEAT PUMP AND HEAT RECOVERY VRF
+﻿# GREE â€” GMV6 ULTRA HEAT PUMP AND HEAT RECOVERY VRF
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -23,5 +23,8 @@ Documents:
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.
 # Badge: New
-# Specifications:
-# - Capacity: 20 to 200 tons
+Specifications:
+- Capacity range: 6 to 30 tons ultra-low-ambient Heat Pump or Heat Recovery VRF
+- Low-ambient heating: Continuous heating down to −22°F (−30°C); 100% rated output at −4°F
+- Compressor: Two-stage vapor-injection (EVI) DC inverter compressor
+- Certifications: AHRI 1230 certified, Cold-Climate Heat Pump rated

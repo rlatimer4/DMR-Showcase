@@ -1,4 +1,4 @@
-# UV RESOURCES — SLN XTREME UV-C FIXTURES
+﻿# UV RESOURCES â€” SLN XTREME UV-C FIXTURES
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -23,5 +23,6 @@ Documents:
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.
 # Badge: New
-# Specifications:
-# - Capacity: 20 to 200 tons
+Specifications:
+- Profile: Compact narrow-profile single-ended UV-C fixture for tight coil plenums & fan coils
+- Voltage: 120V–277V high-efficiency electronic ballast; UL 1995 listed

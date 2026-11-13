@@ -1,4 +1,4 @@
-# KAMPMANN — VENKON FAN COILS
+﻿# KAMPMANN â€” VENKON FAN COILS
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -25,5 +25,7 @@ Documents:
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.
 # Badge: New
-# Specifications:
-# - Capacity: 20 to 200 tons
+Specifications:
+- Airflow & sound: Ultra-quiet EC fan coil down to 19 dBA (NC-15) for luxury hotels & hospitals
+- Hygiene: VDI 6022 certified hygienic construction for easy cleaning and disinfection
+- Coils: 2-pipe or 4-pipe chilled/hot water coils; horizontal or vertical concealed/cabinet

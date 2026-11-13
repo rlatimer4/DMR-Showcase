@@ -1,4 +1,4 @@
-# HUNTAIR — LIGHT DUTY CLEANROOM CEILING GRID
+﻿# HUNTAIR â€” LIGHT DUTY CLEANROOM CEILING GRID
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -25,5 +25,7 @@ Documents:
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.
 # Badge: New
-# Specifications:
-# - Capacity: 20 to 200 tons
+Specifications:
+- Profile: Light-duty gasketed cleanroom T-bar grid for ISO Class 6–8 spaces
+- Application: Compounding pharmacies (USP 797/800), tissue culture and clean assembly
+- Compatibility: Standard 2'x4' and 2'x2' CleanPak FFUs, HEPA modules and LED troffers

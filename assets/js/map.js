@@ -14,6 +14,7 @@
   var listEl = document.getElementById("installList");
   var note = document.getElementById("mapNote");
   var fBrand = document.getElementById("mapBrand"), fMarket = document.getElementById("mapMarket");
+  var mapCount = document.getElementById("mapResultCount"), clearMapBtn = document.getElementById("clearMapFilters");
   var editing = /[?&]edit(=1)?(&|$)/.test(location.search);
   var DRAFT = "dmr-pin-drafts";
   var gmap = null, info = null, markers = {}, selected = null, pendingClick = null;
@@ -72,6 +73,13 @@
   }
   function drawList() {
     var v = visible();
+    var isFiltered = Boolean(fBrand.value || fMarket.value);
+    if (mapCount) {
+      mapCount.textContent = isFiltered
+        ? ("Showing " + v.length + " of " + D.installs.length + " installations")
+        : (D.installs.length + " regional installations");
+    }
+    if (clearMapBtn) clearMapBtn.hidden = !isFiltered;
     listEl.innerHTML = v.length ? v.map(function (i) {
       return '<li><button type="button" data-install="' + i.id + '" aria-pressed="' + (selected === i.id) + '">' +
         "<strong>" + esc(i.name) + "</strong><em>" + esc(i.city) + (i.year ? " · " + esc(i.year) : "") + "</em>" +
@@ -103,6 +111,15 @@
   }
   fBrand.addEventListener("change", function () { selected = null; if (info) info.close(); draw(); });
   fMarket.addEventListener("change", function () { selected = null; if (info) info.close(); draw(); });
+  if (clearMapBtn) {
+    clearMapBtn.addEventListener("click", function () {
+      fBrand.value = "";
+      fMarket.value = "";
+      selected = null;
+      if (info) info.close();
+      draw();
+    });
+  }
   listEl.addEventListener("click", function (e) {
     var t = e.target.closest("[data-install]");
     if (t) select(t.dataset.install);

@@ -1,4 +1,4 @@
-# NOVELAIRE — ENERGY CONSERVATION WHEELS (ECW)
+﻿# NOVELAIRE â€” ENERGY CONSERVATION WHEELS (ECW)
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -24,5 +24,8 @@ Documents:
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.
 # Badge: New
-# Specifications:
-# - Capacity: 20 to 200 tons
+Specifications:
+- Airflow range: 300 to 60,000+ CFM slide-out cassette or segmented OEM energy recovery wheel
+- Media: 3Å molecular-sieve desiccant coating on aluminum substrate (selectively transfers water vapor)
+- Cross-contamination: Adjustable purge sector limits EATR to <0.04%–0.1%
+- Certifications: AHRI 1060 certified sensible & latent effectiveness, UL 900 Class 1

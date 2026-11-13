@@ -338,9 +338,9 @@
     });
   }
   var M = D.manifest, content = []
-    .concat(M.manufacturers.map(function (id) { return "content/manufacturers/" + id + ".js"; }))
-    .concat(M.buildings.map(function (id) { return "content/buildings/" + id + ".js"; }))
-    .concat(["content/installs.js", "content/gallery.js"]);
+    .concat(M.manufacturers.map(function (id) { return "content/manufacturers/" + id + ".js?v=4"; }))
+    .concat(M.buildings.map(function (id) { return "content/buildings/" + id + ".js?v=4"; }))
+    .concat(["content/installs.js?v=4", "content/gallery.js?v=4"]);
 
   Promise.all(content.map(function (src) { return load(src); }))
     .then(function () {
@@ -351,10 +351,10 @@
     })
     .then(function () {
       reconcile();
-      return Promise.all(["assets/js/app.js", "assets/js/tour.js", "assets/js/map.js"].map(function (src) { return load(src); }));
+      return Promise.all(["assets/js/app.js?v=4", "assets/js/tour.js?v=4", "assets/js/map.js?v=4"].map(function (src) { return load(src); }));
     })
     .then(function () {
       report();
-      return load("assets/js/scene3d.js", "module");
+      return load("assets/js/scene3d.js?v=4", "module");
     });
 })();

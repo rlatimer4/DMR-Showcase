@@ -1,4 +1,4 @@
-# STEAMOVAP TECHNOLOGIES — AEM EVAPORATIVE HUMIDIFIER
+﻿# STEAMOVAP TECHNOLOGIES â€” AEM EVAPORATIVE HUMIDIFIER
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -25,5 +25,7 @@ Documents:
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.
 # Badge: New
-# Specifications:
-# - Capacity: 20 to 200 tons
+Specifications:
+- Saturation efficiency: 65%, 85% or 95% in-duct adiabatic evaporative humidifier & cooler
+- Media: Inorganic fiberglass or UL 900 Class 1 corrugated media in 304 stainless steel frame
+- Water options: Direct-feed or recirculating pump station with UV-C sterilization and conductivity drain

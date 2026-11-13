@@ -1,4 +1,4 @@
-# KAMPMANN — KADIUS FAN COILS
+﻿# KAMPMANN â€” KADIUS FAN COILS
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -25,5 +25,7 @@ Documents:
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.
 # Badge: New
-# Specifications:
-# - Capacity: 20 to 200 tons
+Specifications:
+- Design: Architectural circular exposed ceiling fan coil with 360° radial air discharge
+- Coils & fan: 2-pipe or 4-pipe hydronic coil with quiet EC radial fan and condensate pump
+- Application: Exposed-structure offices, restaurants, showrooms and retail

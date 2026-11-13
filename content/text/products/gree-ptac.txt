@@ -1,4 +1,4 @@
-# GREE — PTAC II R32
+﻿# GREE â€” PTAC II R32
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -25,5 +25,7 @@ Documents:
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.
 # Badge: New
-# Specifications:
-# - Capacity: 20 to 200 tons
+Specifications:
+- Capacity range: 7,000 to 15,000 BTU/h in standard 42" x 16" industry wall sleeve
+- System options: R-32 heat pump or cooling-only with electric heat or hydronic coil
+- Features: Corrosion-resistant coastal coil protection, occupancy sensor & desk-control ready

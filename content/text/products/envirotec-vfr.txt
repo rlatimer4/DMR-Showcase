@@ -1,4 +1,4 @@
-# ENVIRO-TEC — VFR PARALLEL FLOW FAN POWERED VAV TERMINALS
+﻿# ENVIRO-TEC â€” VFR PARALLEL FLOW FAN POWERED VAV TERMINALS
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -23,5 +23,8 @@ Documents:
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.
 # Badge: New
-# Specifications:
-# - Capacity: 20 to 200 tons
+Specifications:
+- Airflow range: 150 to 4,000 CFM parallel (intermittent) fan-powered terminal
+- Operation: Plenum fan runs only on heating/deadband call, minimizing fan energy
+- Reheat options: Hot water coil or staged/SCR electric heat with backdraft damper
+- Certifications: AHRI 880 certified, UL 1995 listed

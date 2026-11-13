@@ -1,4 +1,4 @@
-# GREE — ZENO R32 MINI-SPLIT
+﻿# GREE â€” ZENO R32 MINI-SPLIT
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -24,5 +24,7 @@ Documents:
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.
 # Badge: New
-# Specifications:
-# - Capacity: 20 to 200 tons
+Specifications:
+- Capacity range: 9,000 to 24,000 BTU/h designer wall-mounted R-32 inverter heat pump
+- Efficiency: Up to 22.0 SEER2 with matte architectural finish
+- Operating range: Cooling to 122°F; heating down to −13°F (−25°C)

@@ -1,4 +1,4 @@
-# STEAMOVAP TECHNOLOGIES — IER ELECTRIC STEAM HUMIDIFIER
+﻿# STEAMOVAP TECHNOLOGIES â€” IER ELECTRIC STEAM HUMIDIFIER
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -10,7 +10,7 @@ Summary: An electric steam humidifier that uses immersed resistive heating eleme
 
 Key points:
 - Steam output 6 to 370 lb/h
-- ±1% RH accuracy
+- Â±1% RH accuracy
 - Stainless steel insulated cylinder
 
 Photos:
@@ -25,5 +25,8 @@ Documents:
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.
 # Badge: New
-# Specifications:
-# - Capacity: 20 to 200 tons
+Specifications:
+- Steam capacity: 5 to 270 lb/h (2.3 to 122 kg/h) per unit; multi-unit up to 1,080 lb/h
+- Technology: Cleanable 304L stainless steel tank with Incoloy immersion resistive heaters
+- Control accuracy: ±1% RH via SSR proportional modulation; operates on potable, DI or RO water
+- Controls: Color touch-screen PLC with native BACnet MS/TP, BACnet IP and Modbus

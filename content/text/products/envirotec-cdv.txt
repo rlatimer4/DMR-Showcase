@@ -1,4 +1,4 @@
-# ENVIRO-TEC — CDV VERTICAL HIGH-PERFORMANCE FAN COIL UNITS
+﻿# ENVIRO-TEC â€” CDV VERTICAL HIGH-PERFORMANCE FAN COIL UNITS
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -23,5 +23,8 @@ Documents:
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.
 # Badge: New
-# Specifications:
-# - Capacity: 20 to 200 tons
+Specifications:
+- Airflow range: 400 to 2,000 CFM vertical closet ducted fan coil
+- External static: Up to 0.75 in. w.g. with direct-drive ECM blower
+- Coils: 2-pipe or 4-pipe chilled/hot water with optional electric heat
+- Certifications: AHRI 440 certified, UL 1995 listed
