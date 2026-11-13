@@ -1,4 +1,4 @@
-# MAMMOTH — V-CUBE VERTICAL SELF-CONTAINED SYSTEMS
+﻿# MAMMOTH â€” V-CUBE VERTICAL SELF-CONTAINED SYSTEMS
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -27,5 +27,8 @@ Documents:
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.
 # Badge: New
-# Specifications:
-# - Capacity: 20 to 200 tons
+Specifications:
+- Capacity range: 9 to 180 tons; 3,000 to 42,500 CFM vertical self-contained VAV unit
+- System options: Water-cooled DX (condenser water), WSHP/geothermal, air-cooled or chilled water
+- Construction: 3" ITF double-wall modular cabinet; modules up to 50 tons fit 36" doorways
+- Features: Scroll Digital compressors, shell-and-tube condensers, FANWALL or plenum fan, waterside economizer

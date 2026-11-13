@@ -6,18 +6,20 @@
 
 Name: Recreation Center
 
-Summary: Pools and gyms put moisture and people loads into one building.
+Summary: Pools, ice rinks and gyms put warm humid air, sub-freezing ice sheets and high spectator loads under one roof.
 
 Why a DMR package:
 # One line per advantage, written as  - Short heading: one sentence
-- Dry pool hall: Desiccant dehumidification protects the structure from condensation and corrosion
+- Dry pool hall: Desiccant dehumidification and corrosion-protected energy recovery protect the natatorium from condensation and chloramines
+- Fog-free ice rink: Low-dew-point desiccant dehumidifiers keep moisture from forming fog over the ice or dripping from the roof structure
 - Lower energy bills: Heat is recovered from the warm, humid pool exhaust
-- Comfort at the doors: Cabinet and unit heaters stop drafts at busy entrances
+- Comfort in the stands and at the doors: Radiant, trench and cabinet heaters warm spectators and entrances without softening the ice
 
 Challenges:
-- Pool humidity and condensation
-- Large swings in occupancy
-- Odor and air quality
+- Pool humidity and chloramine corrosion
+- Low dew point required over the ice sheet to prevent fog and ceiling drip
+- Large swings in spectator and athlete occupancy
+- Odor and indoor air quality in locker and fitness areas
 
 Also applicable:
 # Product lines that also suit this building type but have no 3D model of their own here.
@@ -128,19 +130,42 @@ Also applicable:
 
 Location: recreation-center-1
 Title: Pool dehumidification
-Text: Desiccant systems hold pool-hall humidity down and protect the structure from condensation.
+Text: Energy recovery and desiccant dehumidification hold pool-hall humidity down and protect the structure from condensation and chloramine corrosion.
 Equipment:
-- novelaire-comfortdry | Natatorium dehumidifier | Holds the pool hall at 50 to 60% relative humidity
-+ fisair-dfra
+- venmar-energypack | Natatorium energy recovery unit | Corrosion-protected heat recovery for humid pool exhaust air
++ venmar-erv
+- fisair-dfra | Natatorium desiccant dehumidifier | Holds the pool hall at 50 to 60% relative humidity
 + fisair-dfa
 + fisair-dflex
 + fisair-dfrb
 + fisair-dfrd
 + fisair-dfrc
 + fisair-dfog
++ novelaire-comfortdry
 + novelaire-desiccant-wheels
-- venmar-erv | Pool exhaust energy recovery | Recovers heat from the humid exhaust air
-+ venmar-energypack
+
+Location: recreation-center-4
+Title: Ice rink
+Text: Low-dew-point desiccant dehumidifiers keep moisture from condensing as fog above the ice or dripping from the ceiling structure onto the rink, while radiant and perimeter heaters warm spectators without softening the ice.
+Equipment:
+- novelaire-novel-ice | Ice arena dehumidifier | Hybrid desiccant and DX unit that uses waste condenser heat to hold low dew points above the ice without gas burners
++ novelaire-precisiondry
++ fisair-dfog
++ fisair-dfrigo
++ fisair-dfra
++ fisair-dfa
++ fisair-dflex
++ fisair-dfrb
++ fisair-dfrd
++ fisair-dfrc
++ novelaire-comfortdry
++ novelaire-desiccant-wheels
+- sterling-radiant | Spectator radiant panels | Warms the bleachers without raising air temperature over the ice
+- kampmann-katherm-qk | Rink-side perimeter trench heating | Keeps viewing glass clear of condensation
++ kampmann-katherm-hk
++ kampmann-katherm-qk-nano
++ kampmann-katherm-nk
++ kampmann-katherm-qe
 
 Location: recreation-center-2
 Title: Gymnasium

@@ -1,4 +1,4 @@
-# TEMTROL — CUSTOM AIR HANDLERS
+﻿# TEMTROL â€” CUSTOM AIR HANDLERS
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -16,8 +16,7 @@ Key points:
 Photos:
 # One photo per line:  - file | caption
 # Put new image files in assets/photos/temtrol-ahu/ and list them here. The first one is the main photo.
-# No photo of this product has been found yet. Add one here:
-# - assets/photos/temtrol-ahu/photo.jpg | Caption
+- assets/photos/dmr/Custom-AHU.jpg | Image: Nortek Air Solutions
 
 Documents:
 - Temtrol product page | https://www.nortekair.com/products/custom-air-handlers/
@@ -25,5 +24,8 @@ Documents:
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.
 # Badge: New
-# Specifications:
-# - Capacity: 20 to 200 tons
+Specifications:
+- Airflow range: 1,000 to 150,000+ CFM custom double-wall air handling unit
+- Casing: 2" to 4" foam-injected thermal-break panels with 6" to 12" structural base rail
+- Components: FANWALL array, Cooney or Nortek coils, energy recovery wheels/plates, UV-C
+- Certifications: AHRI 1350 / 430 certified, UL 1995 / ETL listed

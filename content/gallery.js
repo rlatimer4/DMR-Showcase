@@ -9,7 +9,7 @@
 DMR.gallery = [
   { id: "g1", caption: "Custom air handler, rooftop set", product: "temtrol-ahu", photo: null, size: "wide" },
   { id: "g2", caption: "FANWALL retrofit", product: "huntair-fanwall", photo: null },
-  { id: "g3", caption: "Operating room ceiling", product: "huntair-ahu", photo: null },
+  { id: "g3", caption: "Cleanroom fan filter ceiling", product: "huntair-ffu", photo: null },
   { id: "g4", caption: "Rooftop unit delivery", product: "mammoth-ultraline", photo: null },
   { id: "g5", caption: "Data hall cooling", product: "nortek-coilwall", photo: null, size: "wide" },
   { id: "g6", caption: "Fan coils in a classroom", product: "envirotec-hp", photo: null },

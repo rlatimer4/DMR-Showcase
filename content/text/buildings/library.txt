@@ -178,7 +178,7 @@ Equipment:
 
 Location: library-4
 Title: Air handling options
-Text: Other air handlers used in libraries.
+Text: Other air handlers and self-contained units used in libraries.
 Equipment:
 - temtrol-ahu | Custom air handler with close humidity control
 + huntair-ahu
@@ -186,6 +186,8 @@ Equipment:
 + ventrol-ahu
 + envirotec-mql
 - nortek-acoustiflo | Reading room air handler with AcoustiFLO fans
+- mammoth-vcube | Vertical self-contained VAV unit | Compact indoor unit for community and branch libraries
++ mammoth-vcube-slim
 - temtrol-knockdown | Knockdown replacement air handler
 + huntair-knockdown
 + ventrol-knockdown

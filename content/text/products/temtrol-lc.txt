@@ -1,4 +1,4 @@
-# TEMTROL — TEMTROL LC AIR HANDLER
+﻿# TEMTROL â€” TEMTROL LC AIR HANDLER
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -24,5 +24,8 @@ Documents:
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.
 # Badge: New
-# Specifications:
-# - Capacity: 20 to 200 tons
+Specifications:
+- Airflow range: 1,500 to 35,000 CFM semi-custom rapid-ship air handler
+- Casing: 2" double-wall foam-insulated panels for indoor or outdoor rooftop mounting
+- Options: FANWALL or single plenum fan, CHW/HW/DX coils, mixing box, MERV 8–14 filters
+- Certifications: AHRI 430 / 1350 certified, ETL listed

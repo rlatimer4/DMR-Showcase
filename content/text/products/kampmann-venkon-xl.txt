@@ -1,4 +1,4 @@
-# KAMPMANN — VENKON XL FAN COILS
+﻿# KAMPMANN â€” VENKON XL FAN COILS
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -24,5 +24,7 @@ Documents:
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.
 # Badge: New
-# Specifications:
-# - Capacity: 20 to 200 tons
+Specifications:
+- Airflow range: Up to 3,300 m³/h (1,940 CFM) high-capacity commercial EC fan coil
+- External static: Up to 150 Pa (0.60 in. w.g.) for ducted open-plan offices, lobbies and retail
+- Coils: 2-pipe or 4-pipe hydronic coils with VDI 6022 hygiene compliance

@@ -1,4 +1,4 @@
-# GREE — GMV6 HEAT PUMP AND HEAT RECOVERY VRF
+﻿# GREE â€” GMV6 HEAT PUMP AND HEAT RECOVERY VRF
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -23,5 +23,8 @@ Documents:
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.
 # Badge: New
-# Specifications:
-# - Capacity: 20 to 200 tons
+Specifications:
+- Capacity range: 6 to 48 tons (72,000 to 576,000 BTU/h) in 208/230V or 460V 3-phase
+- System type: 2-pipe Heat Pump or 3-pipe simultaneous Heat Recovery VRF
+- Compressor: All-DC inverter variable-speed scroll compressors with CAN-bus communication
+- Certifications: AHRI 1230 certified, ETL listed

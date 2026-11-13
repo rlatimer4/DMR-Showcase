@@ -167,9 +167,11 @@ Equipment:
 
 Location: medical-clinic-4
 Title: Air handling options
-Text: Other air handlers used in clinics.
+Text: Other air handlers and self-contained units used in clinics.
 Equipment:
 - temtrol-lc | Compact air handler
+- mammoth-vcube | Vertical self-contained VAV unit | Serves multi-tenant medical office suites
++ mammoth-vcube-slim
 - envirotec-mql | Indoor air handling unit
 + temtrol-ahu
 + huntair-ahu

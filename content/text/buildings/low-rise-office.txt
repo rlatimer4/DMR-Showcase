@@ -139,7 +139,7 @@ Location: low-rise-office-2
 Title: Office suites
 Text: VRF gives each suite its own control without large ductwork.
 Equipment:
-- gree-gmv6 | Suite VRF | Cassette indoor units, one outdoor unit per tenant
+- gree-gmv6 | Suite VRF | Heat recovery outdoor unit serving each tenant
 + gree-gmv6-ultra
 + gree-gmv5
 + gree-gmv5-hr
@@ -148,6 +148,12 @@ Equipment:
 + gree-multipro
 + gree-flexx-ultra
 + gree-flexx-eco
+- gree-cassette | Ceiling cassette indoor units
++ gree-ducted
++ gree-wall
++ gree-floor-ceiling
++ gree-fresh-air
++ gree-ahu-kit
 - gree-livo | IT room mini-split
 + gree-vireo
 + gree-envo

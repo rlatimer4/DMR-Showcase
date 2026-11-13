@@ -1,4 +1,4 @@
-# ENVIRO-TEC — SDR SINGLE DUCT VAV TERMINALS
+﻿# ENVIRO-TEC â€” SDR SINGLE DUCT VAV TERMINALS
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -23,5 +23,8 @@ Documents:
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.
 # Badge: New
-# Specifications:
-# - Capacity: 20 to 200 tons
+Specifications:
+- Airflow range: 75 to 8,000 CFM across inlet sizes 4" through 24"x16"
+- Flow sensor: Multi-point center-averaging crossflow sensor (±5% accuracy)
+- Reheat options: 1 to 4-row hot water coil or 1 to 3-stage / SCR electric heat
+- Certifications: AHRI 880 certified, UL 1995 listed; fiberglass-free liner options

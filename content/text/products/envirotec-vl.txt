@@ -1,4 +1,4 @@
-# ENVIRO-TEC — VL VERTICAL LOW-PROFILE FAN COIL UNITS
+﻿# ENVIRO-TEC â€” VL VERTICAL LOW-PROFILE FAN COIL UNITS
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -22,5 +22,8 @@ Documents:
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.
 # Badge: New
-# Specifications:
-# - Capacity: 20 to 200 tons
+Specifications:
+- Casing height: Low-sill 14" to 16" vertical floor-mounted perimeter fan coil
+- Airflow range: 150 to 800 CFM for low curtain-wall window sills
+- Coils: 2-pipe or 4-pipe hydronic coils with top or angled supply grille
+- Certifications: AHRI 440 certified, UL 1995 listed

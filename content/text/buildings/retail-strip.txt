@@ -30,6 +30,8 @@ Also applicable:
 - temtrol-knockdown
 - huntair-knockdown
 - ventrol-knockdown
+- mammoth-vcube
+- mammoth-vcube-slim
 - huntair-fanwall
 - temtrol-fanwall
 - governair-fanwall

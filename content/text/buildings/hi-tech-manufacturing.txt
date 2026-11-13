@@ -63,6 +63,19 @@ Also applicable:
 - mammoth-ashp
 - venmar-ashp
 - fisair-hef7
+- steamovap-ils
+- fisair-fsh
+- fisair-mt2
+- fisair-hef2e
+- fisair-hef3
+- steamovap-aem
+- fisair-atomspray
+- steamovap-aca
+- steamovap-aul
+- steamovap-controls
+- steamovap-safety
+- steamovap-water-filter
+- steamovap-wro
 
 # ---------------- Equipment locations ----------------
 # Each location starts with "Location:" and its code. Do not change the code.
@@ -108,22 +121,10 @@ Equipment:
 + fisair-electrode
 + fisair-resistance
 + steamovap-ier
++ steamovap-res
 + fisair-vxv
 + fisair-asc
-+ steamovap-ils
-+ fisair-fsh
-+ fisair-mt2
 + steamovap-distribution
-+ fisair-hef2e
-+ fisair-hef3
-+ steamovap-aem
-+ fisair-atomspray
-+ steamovap-aca
-+ steamovap-aul
-+ steamovap-controls
-+ steamovap-safety
-+ steamovap-water-filter
-+ steamovap-wro
 - huntair-fanwall | Recirculation fan array | Redundant fans in the recirculation air handlers
 + temtrol-fanwall
 + governair-fanwall

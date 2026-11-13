@@ -1,4 +1,4 @@
-# KAMPMANN — KATHERM NK TRENCH HEATING
+﻿# KAMPMANN â€” KATHERM NK TRENCH HEATING
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -24,5 +24,7 @@ Documents:
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.
 # Badge: New
-# Specifications:
-# - Capacity: 20 to 200 tons
+Specifications:
+- Trench dimensions: Widths 180 to 420 mm; depths 95 to 220 mm
+- Operation: 100% natural-convection hydronic trench heating (0 dBA fan noise, no wiring)
+- Application: Libraries, concert halls, museums and glazed curtain-wall perimeters

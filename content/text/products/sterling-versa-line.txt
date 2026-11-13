@@ -1,4 +1,4 @@
-# STERLING — VERSA-LINE FINNED TUBE
+﻿# STERLING â€” VERSA-LINE FINNED TUBE
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -22,5 +22,7 @@ Documents:
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.
 # Badge: New
-# Specifications:
-# - Capacity: 20 to 200 tons
+Specifications:
+- Enclosure heights: 7.5" to 24" slope-top and flat-top commercial finned-tube radiation
+- Elements: 3/4", 1" or 1-1/4" copper/aluminum hydronic or low-pressure steam elements
+- Finish: Baked powder-coat architectural finishes in 18+ standard colors

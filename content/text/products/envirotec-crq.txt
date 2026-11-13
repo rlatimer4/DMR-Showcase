@@ -1,4 +1,4 @@
-# ENVIRO-TEC — CRQ SERIES FLOW FAN POWERED VAV TERMINALS
+﻿# ENVIRO-TEC â€” CRQ SERIES FLOW FAN POWERED VAV TERMINALS
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -23,5 +23,8 @@ Documents:
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.
 # Badge: New
-# Specifications:
-# - Capacity: 20 to 200 tons
+Specifications:
+- Airflow range: 200 to 3,800 CFM ultra-quiet series fan-powered terminal
+- Acoustics: Integral tuned discharge/plenum attenuator for NC-25 to NC-30 spaces
+- Fan motor: Variable-speed ECM motor with constant-volume zone discharge
+- Certifications: AHRI 880 certified radiated & discharge sound, UL 1995

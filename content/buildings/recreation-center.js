@@ -16,20 +16,20 @@ DMR.registerBuilding({
   id: "recreation-center",
   name: "Recreation Center",
   use: "commercial",
-  size: { width: 26, depth: 16, floors: 1, floorHeight: 8, bays: 2, extraHeight: 5 },
+  size: { width: 33, depth: 16, floors: 1, floorHeight: 8, bays: 3, extraHeight: 5 },
   model: null,
   facade: { style: "glass", color: "#2f86c2" },
   stops: [
-    { id: "recreation-center-1", at: { floor: "yard", x: 0.35 }, space: "pool" },
-    { id: "recreation-center-2", at: { floor: 0, x: 0.75 }, space: "gym" },
-    { id: "recreation-center-3", at: { floor: 0, x: 0.25 }, space: "mechanical" }
+    { id: "recreation-center-1", at: { floor: 0, x: 0.17 }, space: "pool" },
+    { id: "recreation-center-4", at: { floor: 0, x: 0.5 }, space: "ice-rink" },
+    { id: "recreation-center-2", at: { floor: 0, x: 0.83 }, space: "gym" },
+    { id: "recreation-center-3", at: { floor: "yard", x: 0.5 }, space: "plant" }
   ],
   // Shapes that make this building recognizable. See CONTENT.md for the kit.
   build: function (kit, d) {
-    var w = d.width, h = d.height, f = d.depth / 2;
-    kit.barrel(w, 4.5, d.depth, 0, h + 0.3, 0, "slab");
-    // outdoor pool
-    kit.box(11, 0.25, 5.5, 7, 0.2, f + 8.5, "#ffffff");
-    kit.box(9.6, 0.3, 4.3, 7, 0.25, f + 8.5, "#38b6e8");
+    var w = d.width, h = d.height, bw = w / 3;
+    for (var k = -1; k <= 1; k++) {
+      kit.barrel(bw - 0.3, 4.2, d.depth, k * bw, h + 0.3, 0, "slab");
+    }
   }
 });

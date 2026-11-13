@@ -1,4 +1,4 @@
-# ENVIRO-TEC — VB / VR VERTICAL REDUCED FOOTPRINT BLOWER COIL UNITS
+﻿# ENVIRO-TEC â€” VB / VR VERTICAL REDUCED FOOTPRINT BLOWER COIL UNITS
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -23,5 +23,8 @@ Documents:
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.
 # Badge: New
-# Specifications:
-# - Capacity: 20 to 200 tons
+Specifications:
+- Airflow range: 800 to 6,000 CFM vertical reduced-footprint blower coil
+- Construction: Double-wall insulated cabinet with sloped stainless drain pan option
+- Coils: 4 to 8-row chilled water, hot water or DX coils; MERV 8 to MERV 14 filters
+- Certifications: AHRI 430 / 440 certified, UL 1995 listed

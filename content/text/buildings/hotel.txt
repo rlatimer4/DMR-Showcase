@@ -52,6 +52,7 @@ Also applicable:
 - fisair-electrode
 - fisair-resistance
 - steamovap-ier
+- steamovap-res
 - steamovap-ise
 - fisair-vxv
 - fisair-asc

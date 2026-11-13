@@ -21,7 +21,7 @@ DMR.registerBuilding({
   facade: { style: "bands", color: "#4f7f9e" },
   walls: "#f2f5f7",
   stops: [
-    { id: "laboratory-1", at: { floor: "roof", x: 0.35 }, space: "plant" },
+    { id: "laboratory-1", at: { floor: "roof", x: 0.5 }, space: "plant" },
     { id: "laboratory-2", at: { floor: 2, x: 0.17 }, space: "lab" },
     { id: "laboratory-3", at: { floor: 2, x: 0.5 }, space: "dry-lab" },
     { id: "laboratory-4", at: { floor: 1, x: 0.5 }, space: "vivarium" },
@@ -32,9 +32,6 @@ DMR.registerBuilding({
   // Shapes that make this building recognizable. See CONTENT.md for the kit.
   build: function (kit, d) {
     var w = d.width, h = d.height, f = d.depth / 2;
-    // fume hood exhaust stacks on a plenum
-    kit.box(7, 1.2, 2, 9, h + 0.9, -5, "#b8c2ca");
-    for (var k = 0; k < 4; k++) { kit.cyl(0.35, 0.35, 5, 6.6 + k * 1.6, h + 4, -5, "#b8c2ca"); kit.cyl(0.25, 0.4, 0.8, 6.6 + k * 1.6, h + 6.9, -5, "#8d99a3"); }
     // liquid nitrogen tank beside the entrance
     kit.cyl(1.1, 1.1, 5, 11, 2.7, f + 4, "#ffffff"); kit.dome(1.1, 11, 5.2, f + 4, "#ffffff"); kit.box(2.8, 0.2, 2.8, 11, 0.2, f + 4, "#b8c2ca");
     // entrance canopy and sign

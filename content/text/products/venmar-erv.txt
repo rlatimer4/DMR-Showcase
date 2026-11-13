@@ -1,4 +1,4 @@
-# VENMAR CES — ENERGY RECOVERY AND DOAS UNITS
+﻿# VENMAR CES â€” ENERGY RECOVERY AND DOAS UNITS
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -24,5 +24,8 @@ Documents:
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.
 # Badge: New
-# Specifications:
-# - Capacity: 20 to 200 tons
+Specifications:
+- Airflow range: 1,000 to 60,000+ CFM custom Energy Recovery Ventilator & 100% OA DOAS unit
+- Recovery options: AHRI 1060 enthalpy/sensible wheel, counterflow/crossflow plate or dual-core recovery
+- Conditioning: Chilled water, DX, air-source heat pump, hot water, indirect gas or electric heat
+- Casing: 2" to 3" double-wall foam thermal-break outdoor/indoor casing

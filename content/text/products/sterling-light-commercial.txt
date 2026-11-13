@@ -1,4 +1,4 @@
-# STERLING — LIGHT COMMERCIAL FINNED TUBE
+﻿# STERLING â€” LIGHT COMMERCIAL FINNED TUBE
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -23,5 +23,7 @@ Documents:
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.
 # Badge: New
-# Specifications:
-# - Capacity: 20 to 200 tons
+Specifications:
+- Enclosure height: Compact 8" to 11" light-commercial perimeter radiation
+- Elements: 3/4" or 1" copper tube with 3"x3.25" aluminum fins
+- Application: Offices, clinics, multifamily corridors and schools

@@ -1,4 +1,4 @@
-# NORTEK AIR SOLUTIONS — WATER COILS
+﻿# NORTEK AIR SOLUTIONS â€” WATER COILS
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -23,5 +23,8 @@ Documents:
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.
 # Badge: New
-# Specifications:
-# - Capacity: 20 to 200 tons
+Specifications:
+- Tube sizes: 3/8", 1/2", 5/8" and 1" OD copper, cupronickel or stainless steel
+- Fin options: 6 to 14 FPI corrugated/sine-wave aluminum, copper or coated fins (1 to 12 rows)
+- Ratings: Up to 300 psig / 400°F; cleanable removable header boxes available
+- Certifications: AHRI 410 certified performance

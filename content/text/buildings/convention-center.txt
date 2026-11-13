@@ -40,11 +40,14 @@ Also applicable:
 - klingenburg-plate
 - venmar-energypack
 - venmar-erv
+- mammoth-vcube
+- mammoth-vcube-slim
 - reddi-duct-heaters
 - nortek-booster-coils
 - fisair-electrode
 - fisair-resistance
 - steamovap-ier
+- steamovap-res
 - steamovap-ise
 - fisair-vxv
 - fisair-asc

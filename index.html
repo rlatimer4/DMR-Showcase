@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=Roboto+Condensed:wght@500;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/styles.css">
+<link rel="stylesheet" href="assets/css/styles.css?v=3">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -42,7 +42,7 @@
       <a class="btn btn-ghost" href="#products">Browse all products</a>
     </div>
     <dl class="stats">
-      <div><dt>Founded</dt><dd id="statFounded"></dd></div>
+      <div><dt>Founded</dt><dd id="statFounded">1969</dd></div>
       <div><dt>Territory</dt><dd>DC · MD · VA</dd></div>
       <div><dt>Office</dt><dd>Gaithersburg, MD</dd></div>
     </dl>
@@ -110,6 +110,7 @@
     <label>Building type
       <select id="mapMarket"></select>
     </label>
+    <p class="result-line"><span id="mapResultCount"></span> <button class="link" id="clearMapFilters" type="button" hidden>Clear filters</button></p>
   </div>
   <div class="map-body">
     <div class="map-wrap">
@@ -122,7 +123,7 @@
     <div class="pin-editor-head">
       <div>
         <h3>Pin editor</h3>
-        <p>Click the map to drop a pin, or drag a pin to move it. Changes stay in this browser until you download the file and replace <code>assets/js/installs.js</code>.</p>
+        <p>Click the map to drop a pin, or drag a pin to move it. Changes stay in this browser until you download the file and replace <code>content/installs.js</code>.</p>
       </div>
       <div class="pin-editor-actions">
         <button class="btn btn-line" type="button" id="pinNew">Add pin at map centre</button>
@@ -151,22 +152,28 @@
       <p>Send your project list or call the office. A DMR sales engineer will help with selections, budget pricing and submittals.</p>
       <div class="hero-cta">
         <button class="btn btn-primary" type="button" id="contactList">Review project list</button>
-        <a class="btn btn-ghost" id="lineCardLink" target="_blank" rel="noopener">Manufacturer line card</a>
+        <a class="btn btn-ghost" id="lineCardLink" href="https://dmr-hvac.com/products" target="_blank" rel="noopener">Manufacturer line card</a>
       </div>
     </div>
-    <address id="contactCard"></address>
+    <address id="contactCard">
+      <strong>DMR Associates, Inc.</strong>
+      <span>15892-B Gaither Drive<br>Gaithersburg, MD 20877</span>
+      <a href="tel:3015560700">301-556-0700</a>
+      <a href="mailto:info@dmr-hvac.com">info@dmr-hvac.com</a>
+      <a href="https://dmr-hvac.com" target="_blank" rel="noopener">dmr-hvac.com</a>
+    </address>
   </div>
 </section>
 
 </main>
 
 <footer class="site-footer">
-  <p id="footLine"></p>
+  <p id="footLine">© 2026 DMR Associates, Inc. · HVAC manufacturers' representative for DC, Maryland &amp; Virginia</p>
   <p class="muted">Prototype. Product descriptions are draft copy, and installations and photos are placeholders.</p>
 </footer>
 
 <dialog id="productDialog" class="sheet" aria-labelledby="pdTitle"></dialog>
-<dialog id="listDialog" class="sheet sheet-narrow" aria-labelledby="ldTitle"></dialog>
+<dialog id="listDialog" class="sheet" aria-labelledby="ldTitle"></dialog>
 
 <script type="importmap">
 { "imports": { "three": "./assets/vendor/three/three.module.min.js", "three/addons/controls/OrbitControls.js": "./assets/vendor/three/OrbitControls.js", "three/addons/loaders/GLTFLoader.js": "./assets/vendor/three/loaders/GLTFLoader.js" } }
@@ -175,6 +182,6 @@
 <script src="content/categories.js"></script>
 <script src="content/manifest.js"></script>
 <!-- core.js loads everything named in content/manifest.js, then starts the site. -->
-<script src="assets/js/core.js"></script>
+<script src="assets/js/core.js?v=4"></script>
 </body>
 </html>

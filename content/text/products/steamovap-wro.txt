@@ -1,4 +1,4 @@
-# STEAMOVAP TECHNOLOGIES — WRO REVERSE OSMOSIS WATER FILTRATION STATION
+﻿# STEAMOVAP TECHNOLOGIES â€” WRO REVERSE OSMOSIS WATER FILTRATION STATION
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -24,5 +24,7 @@ Documents:
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.
 # Badge: New
-# Specifications:
-# - Capacity: 20 to 200 tons
+Specifications:
+- Production capacity: 200 to 6,000+ GPD skid/wall-mounted Reverse Osmosis water station
+- Purity: Removes >97% of dissolved minerals (<10–20 µS/cm permeate) to eliminate humidifier scaling
+- Components: Booster pump, RO membranes, carbon pre-filter, storage bladder tank and UV option

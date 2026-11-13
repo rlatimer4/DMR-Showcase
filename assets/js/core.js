@@ -263,6 +263,10 @@
       D.cleanInstall(i);
       if (i.manufacturers.length < m) issue("info", "Map pin \"" + i.name + "\": " + (m - i.manufacturers.length) + " manufacturer(s) no longer represented were removed from it.");
       if (!i.manufacturers.length) issue("warn", "Map pin \"" + i.name + "\" has no manufacturers left. It still shows, but no manufacturer filter will find it.");
+      i.products.forEach(function (pid) {
+        var bId = products[pid].brand;
+        if (i.manufacturers.indexOf(bId) < 0) issue("warn", "Map pin \"" + i.name + "\" lists product \"" + pid + "\" whose manufacturer (\"" + bId + "\") is not in its manufacturers list.");
+      });
     });
     D.gallery.forEach(function (g) {
       if (g.product && !products[g.product]) { issue("info", "Gallery photo \"" + g.caption + "\" pointed at a product that is no longer available. The link was removed."); g.product = null; }
@@ -271,6 +275,40 @@
     D.lookup = { brands: brands, cats: index(D.categories), products: products, buildings: buildings };
     D.issues.forEach(function (i) { (i.kind === "info" ? console.info : console.warn)("[content] " + i.text); });
   }
+
+  /* ---------- broader HVAC system classification ---------- */
+
+  D.systemTags = function (p, ctx) {
+    if (!p) return [];
+    var c = (ctx || "").toLowerCase(), sh = p.shape || "", cat = p.category || "", id = p.id || "";
+    if (/run-around|glycol/.test(c)) return [{ id: "glycol", label: "Run-Around Glycol Loop" }, { id: "hydronic", label: "Chilled / Heated Water" }];
+    if (sh === "vcube" || sh === "vcube-slim") return [{ id: "condenser", label: "Condenser Water" }, { id: "geo", label: "Geothermal" }, { id: "hydronic", label: "Chilled / Heated Water" }];
+    if (sh === "wshp") return [{ id: "condenser", label: "Condenser Water" }, { id: "geo", label: "Geothermal" }];
+    if (cat === "vrf" || sh === "vrf" || sh === "cassette" || sh === "minisplit" || sh === "coil-dx" || id === "gree-ahu-kit") return [{ id: "split", label: "Split System / VRF" }];
+    if (id === "mammoth-ultraline") return [{ id: "dx", label: "Packaged DX" }, { id: "condenser", label: "Condenser Water" }, { id: "hydronic", label: "Chilled / Heated Water" }];
+    if (cat === "packaged" || cat === "heatpump" || sh === "rooftop" || sh === "ptac" || sh === "mua" || sh === "turnover") return [{ id: "dx", label: "Packaged DX / Air-Source" }];
+    if (id === "nortek-statepoint") return [{ id: "condenser", label: "Evaporative / Condenser Water" }, { id: "hydronic", label: "Chilled Water" }];
+    if (id === "nortek-cdu" || id === "nortek-coilwall" || sh === "chiller" || sh === "crah") return [{ id: "hydronic", label: "Chilled / Heated Water" }];
+    if (/^ahu/.test(sh) || sh === "fanwall") {
+      if (/exhaust/.test(c)) return [{ id: "glycol", label: "Run-Around Glycol Loop" }, { id: "hydronic", label: "Chilled / Heated Water" }];
+      return ctx ? [{ id: "hydronic", label: "Chilled / Heated Water" }] : [{ id: "hydronic", label: "Chilled / Heated Water" }, { id: "split", label: "Split DX / Steam" }];
+    }
+    if (/^fancoil|^blowercoil/.test(sh) || sh === "vav-cooling" || sh === "coil" || sh === "coil-freeze" || sh === "coil-smart" || sh === "coil-duct") return [{ id: "hydronic", label: "Chilled / Heated Water" }];
+    if (sh === "coil-steam" || sh === "humidifier-steam" || sh === "humidifier-exchange") return [{ id: "steam", label: "Central Steam / Boiler" }];
+    if (/^vav/.test(sh)) return [{ id: "hydronic", label: "Chilled / Heated Water" }, { id: "electric", label: "Electric Reheat" }];
+    if (cat === "electric" || sh === "ductheater") return [{ id: "electric", label: "Electric" }];
+    if (cat === "hydronic" || sh === "radiator" || sh === "fintube" || sh === "trench" || sh === "radiantpanel" || sh === "cabinetheater" || sh === "unitheater") return [{ id: "hydronic", label: "Chilled / Heated Water" }];
+    if (sh === "erv") return [{ id: "hydronic", label: "Chilled / Heated Water" }, { id: "dx", label: "Packaged DX" }];
+    if (id === "novelaire-novel-ice" || id === "fisair-dfrigo") return [{ id: "dx", label: "Packaged DX + Desiccant" }];
+    return [];
+  };
+
+  D.systemBadgesHtml = function (tags, label) {
+    if (!tags || !tags.length) return "";
+    return '<span class="sys-badges">' + (label ? '<span class="sys-label">' + label + "</span>" : "") + tags.map(function (t) {
+      return '<span class="sys-tag sys-' + t.id + '">' + t.label + "</span>";
+    }).join("") + "</span>";
+  };
 
   /* ---------- content report (?check=1) ---------- */
 
@@ -300,9 +338,9 @@
     });
   }
   var M = D.manifest, content = []
-    .concat(M.manufacturers.map(function (id) { return "content/manufacturers/" + id + ".js"; }))
-    .concat(M.buildings.map(function (id) { return "content/buildings/" + id + ".js"; }))
-    .concat(["content/installs.js", "content/gallery.js"]);
+    .concat(M.manufacturers.map(function (id) { return "content/manufacturers/" + id + ".js?v=4"; }))
+    .concat(M.buildings.map(function (id) { return "content/buildings/" + id + ".js?v=4"; }))
+    .concat(["content/installs.js?v=4", "content/gallery.js?v=4"]);
 
   Promise.all(content.map(function (src) { return load(src); }))
     .then(function () {
@@ -313,10 +351,10 @@
     })
     .then(function () {
       reconcile();
-      return Promise.all(["assets/js/app.js", "assets/js/tour.js", "assets/js/map.js"].map(function (src) { return load(src); }));
+      return Promise.all(["assets/js/app.js?v=4", "assets/js/tour.js?v=4", "assets/js/map.js?v=4"].map(function (src) { return load(src); }));
     })
     .then(function () {
       report();
-      return load("assets/js/scene3d.js", "module");
+      return load("assets/js/scene3d.js?v=4", "module");
     });
 })();

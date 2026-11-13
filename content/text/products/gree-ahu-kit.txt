@@ -1,4 +1,4 @@
-# GREE — VRF AIR HANDLER AND AHU KIT
+﻿# GREE â€” VRF AIR HANDLER AND AHU KIT
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -23,5 +23,7 @@ Documents:
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.
 # Badge: New
-# Specifications:
-# - Capacity: 20 to 200 tons
+Specifications:
+- Capacity range: 2.5 to 40 tons (combine kits for larger custom DX coils)
+- Components: Weatherproof EEV valve box, main control board, coil & air temperature sensors
+- Integration: Connects third-party custom AHUs (Temtrol, Huntair, Nortek) to GMV5/GMV6 VRF
