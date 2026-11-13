@@ -15,7 +15,8 @@ Key points:
 Photos:
 # One photo per line:  - file | caption
 # Put new image files in assets/photos/venmar-ashp/ and list them here. The first one is the main photo.
-- assets/photos/dmr/Venmar-EnergyPak.jpg | Venmar CES product range. Image: dmr-hvac.com
+# No photo of this product has been found yet. Add one here:
+# - assets/photos/venmar-ashp/photo.jpg | Caption
 
 Documents:
 - Venmar CES product page | https://www.nortekair.com/about/our-brands/venmar/

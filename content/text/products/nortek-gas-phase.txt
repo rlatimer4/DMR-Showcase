@@ -16,7 +16,7 @@ Key points:
 Photos:
 # One photo per line:  - file | caption
 # Put new image files in assets/photos/nortek-gas-phase/ and list them here. The first one is the main photo.
-- assets/photos/dmr/Nortek-Image.jpg | Nortek Air Solutions product range. Image: dmr-hvac.com
+- assets/photos/nortek-gas-phase/1.jpg | AAF SAAF cassette, the gas-phase media cassette used in the filtration section. Image: AAF International
 
 Documents:
 - Nortek Air Solutions product page | https://www.nortekair.com/

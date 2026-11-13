@@ -102,7 +102,17 @@ export function makeProps({ THREE, box, mesh, material }) {
     // fan seen from the front (axis front to back) or from above
     const fanFront = (r, x, y, z) => { const f = C(r, r, 0.12, x, y - 0.06, z, "dark", 20); f.rotation.x = Math.PI / 2; const h = C(r * 0.3, r * 0.3, 0.16, x, y - 0.08, z, "unit", 12); h.rotation.x = Math.PI / 2; };
     const fanTop = (r, x, y, z) => { C(r, r, 0.12, x, y, z, "dark", 20); C(r * 0.3, r * 0.3, 0.16, x, y, z, "unit", 12); };
-    return { B, C, fanFront, fanTop, trim: (w, d, x, z) => B(w + 0.06, 0.25, d + 0.06, x, 0, z, "trim"), T };
+    // round duct from this unit back to the building's supply main
+    const toMain = (r, y, z0) => {
+      if (o.mainZ === undefined) return;
+      const zw = o.z + z0 * s, len = Math.abs(zw - o.mainZ);
+      const yw = o.y + y * s;
+      const c = mesh(g, new THREE.CylinderGeometry(r * s, r * s, len, 14), material("#b8c2ca"), o.x, yw, (zw + o.mainZ) / 2);
+      c.rotation.x = Math.PI / 2;
+      // short riser from the branch up into the main
+      if (o.mainY > yw) mesh(g, new THREE.CylinderGeometry(r * s, r * s, o.mainY - yw, 14), material("#b8c2ca"), o.x, (o.mainY + yw) / 2, o.mainZ);
+    };
+    return { B, C, fanFront, fanTop, toMain, trim: (w, d, x, z) => B(w + 0.06, 0.25, d + 0.06, x, 0, z, "trim"), T };
   }
   const SHAPES = {
     // custom air handler: long cabinet in sections, with louvres and access doors
@@ -124,7 +134,8 @@ export function makeProps({ THREE, box, mesh, material }) {
     wshp: u => { u.B(1.1, 2, 1.1, 0, 0, 0); u.trim(1.1, 1.1, 0, 0); u.B(0.9, 0.7, 0.05, 0, 0.4, 0.57, "dark"); u.C(0.08, 0.08, 0.8, -0.3, 2, 0, "supply"); u.C(0.08, 0.08, 0.8, 0.3, 2, 0, "return"); u.B(0.8, 0.5, 0.8, 0, 2, 0, "#b8c2ca"); },
     // ---- ceiling and wall mounted: origin is at the mounting height ----
     fancoil: u => { u.B(1.9, 0.45, 0.9, 0, -0.45, 0); u.B(1.95, 0.12, 0.95, 0, -0.5, 0, "trim"); u.B(1.5, 0.3, 0.3, 0, -0.38, 0.6, "dark"); },
-    vav: u => { u.B(1.2, 0.5, 0.9, 0, -0.5, 0, "#cfd8df"); const d = u.C(0.2, 0.2, 1.2, -1.2, -0.45, 0, "#b8c2ca"); d.rotation.z = Math.PI / 2; u.B(0.3, 0.3, 0.3, 0.3, -0.4, 0.5, "trim"); u.B(0.9, 0.4, 0.7, 1, -0.45, 0, "supply"); },
+    // VAV box: round primary-air inlet at the back, connected to the supply main; rectangular discharge at the front
+    vav: u => { u.B(1.2, 0.5, 0.9, 0, -0.5, 0, "#cfd8df"); u.toMain(0.2, -0.25, -0.45); u.B(0.3, 0.3, 0.25, 0.75, -0.4, -0.1, "trim"); u.B(0.95, 0.4, 0.9, 0, -0.45, 0.9, "supply"); u.B(1.05, 0.06, 0.5, 0, -0.5, 1.5, "dark"); },
     cassette: u => { u.B(1.3, 0.3, 1.3, 0, -0.3, 0); u.B(0.8, 0.06, 0.8, 0, -0.34, 0, "dark"); u.B(1.36, 0.06, 1.36, 0, -0.32, 0, "trim"); },
     minisplit: u => { u.B(1.5, 0.45, 0.35, 0, -0.6, 0); u.B(1.5, 0.08, 0.37, 0, -0.62, 0, "trim"); u.B(1.2, 0.05, 0.1, 0, -0.52, 0.2, "dark"); },
     unitheater: u => { u.C(0.05, 0.05, 0.8, -0.4, -0.8, 0, "dark"); u.C(0.05, 0.05, 0.8, 0.4, -0.8, 0, "dark"); u.B(1.2, 1, 0.9, 0, -1.8, 0, "#ffa500"); for (let k = 0; k < 4; k++) u.B(1.1, 0.06, 0.1, 0, -1.7 + k * 0.22, 0.48, "dark"); },
@@ -157,6 +168,7 @@ export function makeProps({ THREE, box, mesh, material }) {
       else if (mount === "front") { o.z = p.dp / 2 - 1.1; }
       else if (mount === "aisle") { o.z = p.dp / 2 - 2.2; o.x += 1.1; }   // at the open end of an aisle, clear of the racks
       else o.z = p.dp / 2 - 3.4;
+      if (name === "vav") { o.y = p.ceilY - 0.25; o.z = p.dp / 2 - 3; o.mainZ = -p.dp * 0.1; o.mainY = p.ceilY + 0.2; }   // primary inlet ducted back to the supply main
     }
     SHAPES[name](unitTools(g, o));
   }

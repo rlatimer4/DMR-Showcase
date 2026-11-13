@@ -16,7 +16,8 @@ Key points:
 Photos:
 # One photo per line:  - file | caption
 # Put new image files in assets/photos/ventrol-washdown/ and list them here. The first one is the main photo.
-- assets/photos/governair-ahu/1.jpg | Image: Nortek Air Solutions
+# No photo of this product has been found yet. Add one here:
+# - assets/photos/ventrol-washdown/photo.jpg | Caption
 
 Documents:
 - Ventrol product page | https://www.nortekair.com/about/our-brands/ventrol/

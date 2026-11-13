@@ -339,3 +339,14 @@ address a { color: #fff; font-weight: 700; }
 
 /* the equipment entry whose 3D model the pointer is on */
 .p-chip.is-shown { border-color: var(--amber); box-shadow: inset 4px 0 0 var(--amber); background: #fff; }
+
+/* ---------- 3D view: zoom and full-screen buttons ---------- */
+.scene-tools { position: absolute; right: 12px; top: 12px; display: grid; gap: 6px; }
+.scene-tools button { width: 40px; height: 40px; border: 1px solid var(--rule); border-radius: 4px; background: rgba(255,255,255,0.94); color: var(--charcoal); font-size: 22px; line-height: 1; font-weight: 700; box-shadow: 0 1px 4px rgba(40,44,57,0.18); }
+.scene-tools button:hover { border-color: var(--blue); color: var(--blue); }
+.tour:fullscreen { width: 100vw; height: 100vh; border-radius: 0; display: flex; flex-direction: column; }
+.tour:fullscreen .tour-body { flex: 1; min-height: 0; grid-template-rows: minmax(0, 1fr); }
+.tour:fullscreen .tour-stage, .tour:fullscreen .tour-panel { height: 100%; max-height: none; }
+@media (max-width: 1000px) {
+  .tour:fullscreen .tour-body { grid-template-rows: minmax(0, 3fr) minmax(0, 2fr); }
+}

@@ -14,7 +14,7 @@ Key points:
 Photos:
 # One photo per line:  - file | caption
 # Put new image files in assets/photos/sterling-versa-line/ and list them here. The first one is the main photo.
-- assets/photos/dmr/Sterling-Image.jpg | Sterling product range. Image: dmr-hvac.com
+- assets/photos/dmr/Sterling-Image.jpg | Finned tube along a curved window wall. Image: dmr-hvac.com
 
 Documents:
 - Sterling product page | https://www.sterlingheat.com/versa-line

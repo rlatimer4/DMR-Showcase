@@ -16,7 +16,7 @@ Key points:
 Photos:
 # One photo per line:  - file | caption
 # Put new image files in assets/photos/temtrol-knockdown/ and list them here. The first one is the main photo.
-- assets/photos/dmr/Knockdown-AH.jpg | Temtrol product range. Image: dmr-hvac.com
+- assets/photos/dmr/Knockdown-AH.jpg | Knockdown section being lifted into a building. Image: dmr-hvac.com
 
 Documents:
 - Temtrol product page | https://www.nortekair.com/products/knockdown-air-handlers/

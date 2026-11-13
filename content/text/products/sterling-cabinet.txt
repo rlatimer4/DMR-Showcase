@@ -15,7 +15,7 @@ Key points:
 Photos:
 # One photo per line:  - file | caption
 # Put new image files in assets/photos/sterling-cabinet/ and list them here. The first one is the main photo.
-- assets/photos/dmr/Sterling-Image.jpg | Sterling product range. Image: dmr-hvac.com
+- assets/photos/sterling-cabinet/1.jpg | Image: Sterling
 
 Documents:
 - Sterling product page | https://www.sterlingheat.com/cabinet-unit-heaters

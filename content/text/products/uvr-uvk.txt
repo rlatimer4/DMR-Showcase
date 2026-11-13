@@ -14,7 +14,8 @@ Key points:
 Photos:
 # One photo per line:  - file | caption
 # Put new image files in assets/photos/uvr-uvk/ and list them here. The first one is the main photo.
-- assets/photos/dmr/UV-Resources.jpg | UV Resources product range. Image: dmr-hvac.com
+# No photo of this product has been found yet. Add one here:
+# - assets/photos/uvr-uvk/photo.jpg | Caption
 
 Documents:
 - UV Resources product page | https://www.uvresources.com/uvk-x/

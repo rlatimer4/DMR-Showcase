@@ -14,7 +14,8 @@ Key points:
 Photos:
 # One photo per line:  - file | caption
 # Put new image files in assets/photos/gree-sapphire/ and list them here. The first one is the main photo.
-- assets/photos/dmr/Gree-Ultra-Heating.jpg | GREE product range. Image: dmr-hvac.com
+# No photo of this product has been found yet. Add one here:
+# - assets/photos/gree-sapphire/photo.jpg | Caption
 
 Documents:
 - GREE product page | https://www.greecomfort.com/our-products/sapphire-r32

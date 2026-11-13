@@ -15,7 +15,8 @@ Key points:
 Photos:
 # One photo per line:  - file | caption
 # Put new image files in assets/photos/reddi-duct-heaters/ and list them here. The first one is the main photo.
-- assets/photos/dmr/Redd-i-image.jpg | Redd-i product range. Image: dmr-hvac.com
+# No photo of this product has been found yet. Add one here:
+# - assets/photos/reddi-duct-heaters/photo.jpg | Caption
 
 Documents:
 - Redd-i product page | https://www.redd-i.com/duct-heat-design.html

@@ -14,7 +14,8 @@ Key points:
 Photos:
 # One photo per line:  - file | caption
 # Put new image files in assets/photos/envirotec-pneumatic/ and list them here. The first one is the main photo.
-- assets/photos/dmr/Enviro-Tec-3.jpg | Enviro-Tec product range. Image: dmr-hvac.com
+# No photo of this product has been found yet. Add one here:
+# - assets/photos/envirotec-pneumatic/photo.jpg | Caption
 
 Documents:
 - Enviro-Tec product page | https://www.enviro-tec.com/products-and-solutions/variable-air-volume-terminals/pneumatic_controls_ad/pneumatic-controls

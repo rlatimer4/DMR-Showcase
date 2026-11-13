@@ -27,11 +27,20 @@ function init() {
   canvas.setAttribute("aria-label", "3D model of the DMR world. Use the tabs and the list beside it to choose a building and its equipment locations.");
 
   const layout = D.layoutWorld();
+  let t0 = -1;                                  // start time of the camera move in progress, or -1
   const scene = new THREE.Scene();
   scene.fog = new THREE.Fog(0xe4eef6, 500, 1500);
   const camera = new THREE.PerspectiveCamera(30, 1, 1, 3000);
   const controls = new OrbitControls(camera, canvas);
-  Object.assign(controls, { enableZoom: false, enablePan: false, enableDamping: true, maxPolarAngle: Math.PI / 2 - 0.08, minPolarAngle: 0.35 });
+  Object.assign(controls, { enableZoom: true, zoomSpeed: 1.2, minDistance: 5, maxDistance: 1400, enablePan: false, enableDamping: true, maxPolarAngle: Math.PI / 2 - 0.08, minPolarAngle: 0.35 });
+  // A plain scroll still scrolls the page. Ctrl or Cmd + scroll, a pinch, the buttons, or any scroll in full screen zooms.
+  stage.addEventListener("wheel", e => { if (!(e.ctrlKey || e.metaKey || document.fullscreenElement)) e.stopPropagation(); }, { capture: true });
+  function zoom(factor) {
+    t0 = -1;                                    // stop any camera move in progress
+    const off = camera.position.clone().sub(controls.target);
+    off.setLength(Math.max(controls.minDistance, Math.min(controls.maxDistance, off.length() * factor)));
+    camera.position.copy(controls.target).add(off);
+  }
 
   scene.add(new THREE.HemisphereLight(0xffffff, 0xb9c6d1, 1.5));
   const sun = new THREE.DirectionalLight(0xffffff, 2.0);
@@ -404,7 +413,6 @@ function init() {
   const roomLight = new THREE.PointLight(0xffffff, 0, 60, 1.2);
   scene.add(roomLight);
   const fromPos = new THREE.Vector3(), fromTgt = new THREE.Vector3(), toPos = new THREE.Vector3(), toTgt = new THREE.Vector3();
-  let t0 = -1;
   function shot(v) {
     const tan = Math.tan(THREE.MathUtils.degToRad(camera.fov / 2));
     const fit = (wNeed, hNeed) => Math.max(hNeed / 2 / tan, wNeed / 2 / tan / camera.aspect);
@@ -540,9 +548,32 @@ function init() {
   stage.appendChild(canvas);
   const hint = document.createElement("p");
   hint.className = "scene-hint";
-  hint.textContent = "Drag to rotate · Select a building, then a room or a piece of equipment";
+  hint.textContent = "Drag to rotate · Ctrl + scroll or pinch to zoom · Select a building, then a room or a piece of equipment";
   stage.appendChild(hint);
   stage.appendChild(tip);
+  // zoom and full-screen buttons
+  const tools = document.createElement("div");
+  tools.className = "scene-tools";
+  tools.innerHTML = '<button type="button" data-zoom="0.7" aria-label="Zoom in" title="Zoom in">+</button>' +
+    '<button type="button" data-zoom="1.4" aria-label="Zoom out" title="Zoom out">−</button>' +
+    '<button type="button" data-reset aria-label="Reset view" title="Reset view">⟲</button>' +
+    '<button type="button" data-full aria-label="Full screen" title="Full screen">⛶</button>';
+  stage.appendChild(tools);
+  const frameEl = stage.closest(".tour");
+  tools.addEventListener("click", e => {
+    const b = e.target.closest("button");
+    if (!b) return;
+    if (b.dataset.zoom) zoom(Number(b.dataset.zoom));
+    else if ("reset" in b.dataset) focus(view, false);
+    else if (document.fullscreenElement) document.exitFullscreen();
+    else if (frameEl.requestFullscreen) frameEl.requestFullscreen();
+  });
+  document.addEventListener("fullscreenchange", () => {
+    const on = document.fullscreenElement === frameEl;
+    tools.querySelector("[data-full]").setAttribute("aria-label", on ? "Exit full screen" : "Full screen");
+    tools.querySelector("[data-full]").title = on ? "Exit full screen" : "Full screen";
+  });
+  if (!document.fullscreenEnabled) tools.querySelector("[data-full]").hidden = true;
   new ResizeObserver(resize).observe(stage);
   resize();
   D.view3d = { focus: v => focus(v, false), point, models };

@@ -15,7 +15,8 @@ Key points:
 Photos:
 # One photo per line:  - file | caption
 # Put new image files in assets/photos/klingenburg-plate/ and list them here. The first one is the main photo.
-- assets/photos/dmr/Klingenburg-Image.jpg | Klingenburg product range. Image: dmr-hvac.com
+# No photo of this product has been found yet. Add one here:
+# - assets/photos/klingenburg-plate/photo.jpg | Caption
 
 Documents:
 - Klingenburg product page | http://www.klingenburg.de/en/

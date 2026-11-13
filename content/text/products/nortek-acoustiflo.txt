@@ -17,8 +17,9 @@ Key points:
 Photos:
 # One photo per line:  - file | caption
 # Put new image files in assets/photos/nortek-acoustiflo/ and list them here. The first one is the main photo.
-- assets/photos/nortek-acoustiflo/1.jpg | Image: Nortek Air Solutions
-- assets/photos/nortek-acoustiflo/2.jpg | Image: Nortek Air Solutions
+- assets/photos/nortek-acoustiflo/1.jpg | AcoustiFLO fan. Image: acoustiflo.com
+- assets/photos/nortek-acoustiflo/2.jpg | Fan detail. Image: acoustiflo.com
+- assets/photos/nortek-acoustiflo/3.jpg | Image: acoustiflo.com
 
 Documents:
 - Nortek Air Solutions product page | https://www.nortekair.com/products/fans/

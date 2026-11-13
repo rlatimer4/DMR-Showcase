@@ -8,7 +8,6 @@ site goes live, and replace any that are not cleared.
 | File | Source |
 | --- | --- |
 | `assets/photos/governair-ahu/1.jpg` | https://www.nortekair.com/wp-content/uploads/2024/06/custom-air-handlers-ventrol.png |
-| `assets/photos/governair-ahu/2.jpg` | https://www.nortekair.com/wp-content/uploads/2024/06/V-Cube-Air-Handler-English.jpg |
 | `assets/photos/governair-fanwall/1.jpg` | https://www.nortekair.com/wp-content/uploads/2024/06/fanwall.png |
 | `assets/photos/governair-fanwall/2.jpg` | https://www.nortekair.com/wp-content/uploads/2024/06/FANWALL-TECHNOLOGY-1.jpg |
 | `assets/photos/huntair-ffu/1.jpg` | https://www.nortekair.com/wp-content/uploads/2024/06/Fan-Filter-Unit-On-Filter-4x4-1.png |
@@ -241,8 +240,6 @@ site goes live, and replace any that are not cleared.
 | `assets/photos/uvr-lamps/3.jpg` | https://www.uvresources.com/wp-content/uploads/2026/05/gts-end.png |
 | `assets/photos/uvr-accessories/1.jpg` | https://www.uvresources.com/wp-content/uploads/2025/03/hourmeter.png |
 | `assets/photos/uvr-accessories/2.jpg` | https://www.uvresources.com/wp-content/uploads/2025/03/uv-report-1.png |
-| `assets/photos/nortek-acoustiflo/1.jpg` | https://www.nortekair.com/wp-content/uploads/2024/06/fanwall.png |
-| `assets/photos/nortek-acoustiflo/2.jpg` | https://www.nortekair.com/wp-content/uploads/2024/06/FANWALL-TECHNOLOGY-1.jpg |
 | `assets/photos/envirotec-hl/1.jpg` | https://tyco.widen.net/content/ilzk0a7dgu/jpeg/AID_commercialproductdetail_product_HLE_HLP_AD.jpeg |
 | `assets/photos/envirotec-hl/2.jpg` | https://tyco.widen.net/content/h5hrwfgykb/jpeg/AID_commercialproductdetail_product_HLF_HLP_AD.jpeg |
 | `assets/photos/envirotec-hl/3.jpg` | https://tyco.widen.net/content/oqaplzek71/jpeg/AID_commercialproductdetail_product_HLP_HLP_AD.jpeg |
@@ -256,4 +253,11 @@ site goes live, and replace any that are not cleared.
 | `assets/photos/envirotec-vfl/1.jpg` | https://tyco.widen.net/content/9fadz90ktm/jpeg/AID_commercialproductdetail_product_VFL_VFL_AD.jpeg |
 | `assets/photos/envirotec-sgx/1.jpg` | https://tyco.widen.net/content/ao0wyl3tf4/jpeg/AID_commercialproductdetail_product_TSX_sgx_ssx_AD.jpeg |
 | `assets/photos/envirotec-rft/1.jpg` | https://tyco.widen.net/content/8u28dolyfp/jpeg/AID_commercialproductdetail_product_RFT-MS_rft_ms_AD.jpeg |
+| `assets/photos/nortek-acoustiflo/1.jpg` | https://www.acoustiflo.com/ |
+| `assets/photos/nortek-acoustiflo/2.jpg` | https://www.acoustiflo.com/ |
+| `assets/photos/nortek-acoustiflo/3.jpg` | https://www.acoustiflo.com/ |
+| `assets/photos/nortek-gas-phase/1.jpg` | https://www.aafintl.com/us/products/gas-phase-filtration/cassettes---housings/saaf--cassette-hd |
+| `assets/photos/sterling-cabinet/1.jpg` | https://www.sterlingheat.com/Media/Default/Products/CabinetUnitHeaterInstall.jpg |
+| `assets/photos/sterling-panel-radiators/1.jpg` | https://www.sterlingheat.com/Media/Default/Slider/PanelRadiatorPR.jpg |
+| `assets/photos/uvr-de/1.jpg` | https://www.uvresources.com/wp-content/uploads/2025/01/dex-UVR-UVC-300x300.jpg |
 | `assets/photos/dmr/*` | https://dmr-hvac.com/images/products/ |

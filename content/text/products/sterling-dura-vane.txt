@@ -14,7 +14,8 @@ Key points:
 Photos:
 # One photo per line:  - file | caption
 # Put new image files in assets/photos/sterling-dura-vane/ and list them here. The first one is the main photo.
-- assets/photos/dmr/Sterling-Image.jpg | Sterling product range. Image: dmr-hvac.com
+# No photo of this product has been found yet. Add one here:
+# - assets/photos/sterling-dura-vane/photo.jpg | Caption
 
 Documents:
 - Sterling product page | https://www.sterlingheat.com/dura-vane-ii

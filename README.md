@@ -71,7 +71,7 @@ purposes only" overlay.
   usage rights with each manufacturer before launch.
 - Product summaries were written from the manufacturers' published pages and need
   DMR review. Klingenburg, Rapid Engineering, Runtal and most Redd-i lines could not
-  be read online and use one general image each.
+  be read online. Products with no photo of their own show a placeholder; `?check=1` does not list them, so search `content/text/products/` for "No photo" to find them.
 - The Residential district has one building (Multifamily Residential) that we
   added; the other 26 building types follow Nortek World's list.
 - The building models are simple generated shapes. For render-quality visuals,

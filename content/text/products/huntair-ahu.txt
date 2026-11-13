@@ -16,8 +16,8 @@ Key points:
 Photos:
 # One photo per line:  - file | caption
 # Put new image files in assets/photos/huntair-ahu/ and list them here. The first one is the main photo.
-- assets/photos/governair-ahu/1.jpg | Image: Nortek Air Solutions
-- assets/photos/governair-ahu/2.jpg | Image: Nortek Air Solutions
+# No photo of this product has been found yet. Add one here:
+# - assets/photos/huntair-ahu/photo.jpg | Caption
 
 Documents:
 - Huntair product page | https://www.nortekair.com/products/custom-air-handlers/

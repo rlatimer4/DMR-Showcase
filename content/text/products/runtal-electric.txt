@@ -15,7 +15,8 @@ Key points:
 Photos:
 # One photo per line:  - file | caption
 # Put new image files in assets/photos/runtal-electric/ and list them here. The first one is the main photo.
-- assets/photos/dmr/Runtal-Image.jpg | Runtal product range. Image: dmr-hvac.com
+# No photo of this product has been found yet. Add one here:
+# - assets/photos/runtal-electric/photo.jpg | Caption
 
 Documents:
 - Runtal product page | https://runtalnorthamerica.com/
