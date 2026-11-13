@@ -19,9 +19,110 @@ Challenges:
 - Ventilation for corridors
 - Limited space for equipment
 
+Also applicable:
+# Product lines that also suit this building type but have no 3D model of their own here.
+# One product code per line. They are listed on the building's panel and count for the catalog's building filter.
+- temtrol-knockdown
+- huntair-knockdown
+- ventrol-knockdown
+- huntair-fanwall
+- temtrol-fanwall
+- governair-fanwall
+- ventrol-fanwall
+- cooney-freeze-block
+- cooney-smart-coil
+- nortek-water-coils
+- nortek-steam-coils
+- nortek-steam-distributing-coils
+- nortek-dx-coils
+- uvr-rlm
+- uvr-de
+- uvr-sl
+- uvr-sln
+- uvr-dln
+- uvr-x-plus
+- uvr-uvk
+- uvr-lamps
+- uvr-accessories
+- klingenburg-plate
+- reddi-duct-heaters
+- nortek-booster-coils
+- reddi-controls
+- nortek-acoustiflo
+- sterling-unit-heaters
+- kampmann-top
+- reddi-unit-heaters
+- reddi-ventilation
+- fisair-electrode
+- fisair-resistance
+- steamovap-ier
+- steamovap-res
+- steamovap-ise
+- fisair-vxv
+- fisair-asc
+- steamovap-ils
+- fisair-fsh
+- fisair-mt2
+- steamovap-distribution
+- fisair-hef2e
+- fisair-hef3
+- steamovap-aem
+- fisair-atomspray
+- steamovap-aca
+- steamovap-aul
+- steamovap-controls
+- steamovap-safety
+- steamovap-water-filter
+- steamovap-wro
+- mammoth-ultraline
+- gree-xpac
+- uvr-glo
+- envirotec-sdr
+- envirotec-sdl
+- envirotec-sgx
+- envirotec-crb
+- envirotec-crq
+- envirotec-vfr
+- envirotec-vfl
+- envirotec-cfl
+- envirotec-ddc
+- envirotec-pneumatic
+- envirotec-rft
+- envirotec-crc
+- envirotec-cfl-cc
+- envirotec-hp
+- envirotec-hl
+- envirotec-hdd
+- kampmann-kadeck
+- kampmann-venkon-xl
+- kampmann-kadius
+- gree-cassette
+- gree-ducted
+- gree-wall
+- gree-floor-ceiling
+- gree-fresh-air
+- gree-ahu-kit
+- sterling-versa-line
+- sterling-classic
+- sterling-custom
+- sterling-dura-vane
+- sterling-light-commercial
+- sterling-baseboard
+- sterling-electric-baseboard
+- kampmann-perimeter
+- kampmann-baseboard
+- runtal-hydronic
+- runtal-electric
+- sterling-panel-radiators
+- sterling-convectors
+- sterling-radiant
+- sterling-cabinet
+
 # ---------------- Equipment locations ----------------
 # Each location starts with "Location:" and its code. Do not change the code.
 # Equipment lines read:  - product code | what it is in this building | why it suits (optional)
+# A line starting with + under an equipment line is another product line that fits the same role.
+# It shares that model in the 3D view and is listed under it:  + product code | note (optional)
 # Product codes are the file names in content/text/products/.
 
 Location: multifamily-1
@@ -29,33 +130,96 @@ Title: Corridor ventilation
 Text: Energy recovery ventilators supply corridors and units with fresh air.
 Equipment:
 - venmar-erv | Corridor energy recovery ventilator
++ venmar-energypack
 - venmar-ashp | Low-ambient air-source heat pump | Heats and cools corridor air without a boiler
++ mammoth-ashp
 - novelaire-ecw | Energy recovery wheel
++ klingenburg-wheel
 
 Location: multifamily-2
 Title: Apartments: VRF and mini-split systems
 Text: Each apartment has its own heat pump system and its own bill.
 Equipment:
 - gree-gmv6 | Apartment VRF system
++ gree-gmv6-ultra
++ gree-gmv5
++ gree-gmv5-hr
++ gree-gmv6-mini
++ gree-gmv5-mini
++ gree-multipro
++ gree-flexx-ultra
++ gree-flexx-eco
 - gree-livo | Mini-split heat pump | Wall-mounted unit in each room
++ gree-vireo
++ gree-envo
++ gree-sapphire
++ gree-zeno
++ gree-multi
++ gree-multi-eco
 
 Location: multifamily-4
 Title: Apartments: fan coil system
 Text: Vertical hi-rise fan coils stack floor to floor on a central riser.
 Equipment:
 - envirotec-vh | Vertical hi-rise fan coil | One riser-mounted unit per apartment
++ envirotec-vf
++ envirotec-vl
++ envirotec-cdv
++ envirotec-vb
++ kampmann-venkon
++ kampmann-powerkon
++ envirotec-piping
 
 Location: multifamily-3
 Title: Amenity level
 Text: A multi-zone heat pump and trench units serve the lobby and amenity spaces.
 Equipment:
 - gree-multi | Amenity multi-zone heat pump | One outdoor unit serves the lobby, gym and lounge
++ gree-livo
++ gree-vireo
++ gree-envo
++ gree-sapphire
++ gree-zeno
++ gree-multi-eco
++ gree-multipro
 - kampmann-katherm-qk | Lobby trench heater
++ kampmann-katherm-hk
++ kampmann-katherm-qk-nano
++ kampmann-katherm-nk
++ kampmann-katherm-qe
 
 Location: multifamily-5
 Title: Air handling options
 Text: Other air handlers used in multifamily buildings.
 Equipment:
 - mammoth-vcube | Vertical self-contained unit | Serves the amenity floor
++ mammoth-vcube-slim
 - venmar-energypack | Corridor unit with energy recovery
++ venmar-erv
 - envirotec-mql | Indoor air handling unit
++ temtrol-ahu
++ huntair-ahu
++ governair-ahu
++ ventrol-ahu
+
+Location: multifamily-6
+Title: Apartments: low-temperature hydronic system
+Text: Fan coils sized for low-temperature hot water and chilled water suit a central heat pump plant.
+Equipment:
+- kampmann-powerkon | Low-temperature fan coil | Heats and cools on heat pump water temperatures
++ envirotec-vf
++ envirotec-vl
++ envirotec-vb
++ envirotec-vh
++ kampmann-venkon
++ envirotec-piping
+- envirotec-cdv | Vertical fan coil in a closet
+
+Location: multifamily-7
+Title: Apartments: through-the-wall units
+Text: Through-the-wall units serve one apartment each and are simple to replace.
+Equipment:
+- gree-ttw | Through-the-wall unit | Heat pump, electric heat or cooling-only versions
++ gree-ptac
++ gree-etac
++ gree-mtac

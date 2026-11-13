@@ -133,17 +133,40 @@ model that stands for it in the buildings:
 | `vcube` | tall vertical self-contained unit |
 | `rooftop` | packaged rooftop unit |
 | `chiller` | air-cooled chiller with V-coils and fans |
-| `fanwall` | wall of fans |
-| `erv`, `wheel`, `plate` | energy recovery unit, wheel, plate exchanger |
-| `mua`, `turnover` | make-up air unit, air rotation unit (stands at the end of an aisle) |
+| `fanwall`, `coilwall` | stacked cube cells with a plug fan in each, in a see-through air handler section; `coilwall` adds a coil behind |
+| `erv`, `wheel`, `plate` | energy recovery unit, wheel in its cassette, plate exchanger |
+| `mua`, `turnover` | make-up air unit, air rotation unit |
 | `crah` | computer room air handlers |
-| `vrf`, `minisplit`, `wshp` | VRF unit, wall-mounted split, water-source heat pump |
-| `fancoil`, `vav` | ceiling fan coil, VAV box |
+| `coil`, `coil-dx`, `coil-steam`, `coil-freeze`, `coil-smart` | coil in an air handler section: water, refrigerant with distributor, steam with trap, freeze relief on the return bends, freeze sensors with a panel |
+| `coil-duct` | booster coil in a length of duct at the ceiling |
+| `uv` | UV-C lamps on a rack inside an air handler, shining on the coil |
+| `uv-ext` | UV-C fixtures bolted to the outside of a plenum with the lamps reaching in |
+| `upperuv` | upper-room UV fixture on a wall with its band of light |
+| `humidifier` | electric steam humidifier: wall cabinet, steam hose and dispersion tube in a duct |
+| `humidifier-exchange` | steam-to-steam humidifier: tank fed by boiler steam, clean steam to the duct |
+| `humidifier-steam` | boiler steam injection: multi-tube manifold in an air handler, with valve and trap |
+| `evap` | evaporative humidifier or cooler: wetted media with a water header and sump |
+| `atomizer` | atomizing or ultrasonic humidifier: rows of nozzles putting out fog |
+| `dehumidifier` | desiccant dehumidifier with its rotor showing |
+| `vrf`, `cassette`, `minisplit` | VRF outdoor unit, ceiling cassette, wall-mounted indoor unit |
+| `ptac` | packaged terminal unit in the wall under a window |
+| `fancoil` | horizontal fan coil hung above the ceiling |
+| `fancoil-low` | low-profile horizontal fan coil |
+| `blowercoil` | larger hung blower coil ducted to two diffusers |
+| `blowercoil-vertical` | vertical blower coil in a closet with a duct off the top |
+| `fancoil-hirise` | full-height vertical fan coil with risers through the floors |
+| `fancoil-vertical` | upright fan coil with a low return and a top discharge |
+| `fancoil-floor`, `fancoil-floor-low` | floor fan coil under the window, standard and low-profile |
+| `fancoil-round` | round exposed ceiling fan coil |
+| `vav`, `vav-fan`, `vav-cooling` | single-duct VAV box, fan-powered box, fan-powered box with a sensible cooling coil |
 | `radiator`, `fintube`, `trench` | panel radiator, finned tube, floor trench unit |
+| `cabinetheater`, `radiantpanel` | cabinet unit heater or convector, radiant ceiling panels |
 | `unitheater`, `ductheater`, `aircurtain` | hanging unit heater, duct heater, air curtain over a door |
-| `humidifier`, `dehumidifier` | humidifier with steam manifold, desiccant dehumidifier |
-| `coil`, `uv`, `upperuv` | coil, UV-C lamp fixture, upper-room UV fixture with its band of light |
 | `orceiling`, `ffu` | operating room ceiling, cleanroom fan filter ceiling |
+| `wshp`, `box` | upright water-source unit, plain cabinet for controls and accessories |
+
+Products of the same kind share a shape on purpose: a model stands for a type of
+equipment, and the panel lists every product line that fits it.
 
 ### Retire a product line
 Delete its line from the manufacturer's file.
@@ -162,7 +185,10 @@ Each building has two files: its words in `content/text/buildings/<id>.txt` and
 its 3D model in `content/buildings/<id>.js`.
 
 - **Change the equipment at a location**: edit the `Equipment:` lines in the text file.
-  Every equipment line gets its own 3D model in that room. Visitors select a room to zoom in, then select a model to open its product; a pointer marks the model being shown.
+  Every equipment line (a line starting with a dash) gets its own 3D model in that room, with a name tag. Visitors select a room to zoom in, then select a model or its tag to open the product; the tag of the model being shown is highlighted. Models are spread across the front of the room automatically. Two or three per room read best.
+- **Other product lines for the same role**: under an equipment line, add `+ product code` for each other line that could do the same job (another manufacturer's custom air handler, another type of steam humidifier). They share that model and are listed under it as "Other lines that fit here". An optional note can follow: `+ product code | note`.
+- **Lines that suit the building but have no model**: list them under `Also applicable:` near the top of the text file, one product code per line. They appear on the building's panel as "More product lines for this building type".
+- **Nothing should be missed**: every product a visitor could use in a building type should be in that building's file in one of those three ways. The catalog's building filter uses all three. The `?check=1` report names any product that is in no building at all.
 - **Different system designs get different rooms**: where a building could use one of several systems (VAV or fan coils, VRF or blower coils), give each its own location in a separate room rather than listing them together. The K-12 school's three classrooms and the hotel's two guest rooms are examples.
 - **Add a location**: add `{ id: "hospital-5", at: { floor: 1, x: 0.5 }, space: "patient-room" }` to `stops` in the model file, then add a matching `Location: hospital-5` block to the text file. `at.floor` is `"roof"`, `"yard"` (on the ground in front) or a floor number (0 is the ground floor); `at.x` is the position across the width from 0 to 1.
 - **Add a building**: copy both files of an existing building, change the `id`, and add its name to `buildings` in `content/manifest.js`. It is placed in its district automatically.
@@ -174,7 +200,7 @@ its 3D model in `content/buildings/<id>.js`.
 `operating-room`, `patient-room`, `exam-room`, `guest-room`, `apartment`, `suite`,
 `lobby`, `open-office`, `office`, `classroom`, `lecture`, `auditorium`, `sanctuary`,
 `reading-room`, `archive`, `gallery`, `shop`, `concourse`, `baggage`, `exhibit-hall`,
-`gym`, `pool`, `locker`, `data-hall`, `mechanical`, `lab`, `cleanroom`, `dry-room`,
+`gym`, `pool`, `locker`, `data-hall`, `mechanical`, `lab`, `dry-lab`, `vivarium`, `cleanroom`, `dry-room`,
 `process`, `production`, `shop-floor`, `high-bay`, `dock`, `grow`, `plant`.
 
 New room types and equipment shapes are added in `assets/js/props3d.js`.

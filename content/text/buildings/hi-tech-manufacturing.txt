@@ -19,9 +19,56 @@ Challenges:
 - Tight temperature and humidity
 - Continuous operation
 
+Also applicable:
+# Product lines that also suit this building type but have no 3D model of their own here.
+# One product code per line. They are listed on the building's panel and count for the catalog's building filter.
+- temtrol-knockdown
+- huntair-knockdown
+- ventrol-knockdown
+- uvr-rlm
+- uvr-de
+- uvr-sl
+- uvr-sln
+- uvr-dln
+- uvr-x-plus
+- uvr-uvk
+- uvr-lamps
+- uvr-accessories
+- novelaire-ecw
+- klingenburg-wheel
+- klingenburg-plate
+- venmar-energypack
+- venmar-erv
+- reddi-duct-heaters
+- nortek-booster-coils
+- reddi-controls
+- nortek-acoustiflo
+- sterling-unit-heaters
+- kampmann-top
+- reddi-unit-heaters
+- reddi-ventilation
+- fisair-dfra
+- fisair-dfa
+- fisair-dflex
+- fisair-dfrb
+- fisair-dfrd
+- fisair-dfrc
+- fisair-dfog
+- fisair-dflow
+- fisair-dfrm
+- novelaire-precisiondry
+- nortek-mua
+- rapid-mua
+- mammoth-ultraline
+- mammoth-ashp
+- venmar-ashp
+- fisair-hef7
+
 # ---------------- Equipment locations ----------------
 # Each location starts with "Location:" and its code. Do not change the code.
 # Equipment lines read:  - product code | what it is in this building | why it suits (optional)
+# A line starting with + under an equipment line is another product line that fits the same role.
+# It shares that model in the 3D view and is listed under it:  + product code | note (optional)
 # Product codes are the file names in content/text/products/.
 
 Location: hi-tech-manufacturing-1
@@ -29,27 +76,70 @@ Title: Make-up air plant
 Text: A dedicated make-up air handler conditions the outdoor air the cleanroom needs.
 Equipment:
 - huntair-ahu | Cleanroom make-up air handler | Custom unit that holds close temperature, humidity and pressure
++ temtrol-ahu
++ governair-ahu
++ ventrol-ahu
 - cooney-freeze-block | Make-up air preheat coils
++ cooney-smart-coil
++ nortek-water-coils
++ nortek-steam-coils
++ nortek-steam-distributing-coils
++ nortek-dx-coils
 
 Location: hi-tech-manufacturing-2
 Title: Cleanroom
-Text: Fan arrays and cleanroom air systems recirculate filtered air continuously.
+Text: Fan filter units in a sealed ceiling grid recirculate filtered air continuously.
 Equipment:
 - huntair-ffu | CleanPak fan filter units | Available with a sensible cooling coil on the side (PlenPak)
++ huntair-flex-trak
++ huntair-light-grid
++ huntair-plenums
 - huntair-ceiling-grid | Cleanroom ceiling grid | Supports the filters, lights and fan filter units
-- huntair-fanwall | Recirculation fan array
 
 Location: hi-tech-manufacturing-3
 Title: Make-up air
 Text: Make-up air units with humidifiers supply the cleanroom with conditioned outdoor air.
 Equipment:
 - huntair-ahu | Cleanroom make-up air handler
++ temtrol-ahu
++ governair-ahu
++ ventrol-ahu
 - steamovap-ise | Steam exchange humidifier | Clean steam made from central boiler steam
++ fisair-electrode
++ fisair-resistance
++ steamovap-ier
++ fisair-vxv
++ fisair-asc
++ steamovap-ils
++ fisair-fsh
++ fisair-mt2
++ steamovap-distribution
++ fisair-hef2e
++ fisair-hef3
++ steamovap-aem
++ fisair-atomspray
++ steamovap-aca
++ steamovap-aul
++ steamovap-controls
++ steamovap-safety
++ steamovap-water-filter
++ steamovap-wro
+- huntair-fanwall | Recirculation fan array | Redundant fans in the recirculation air handlers
++ temtrol-fanwall
++ governair-fanwall
++ ventrol-fanwall
 
 Location: hi-tech-manufacturing-4
 Title: Air handling options
 Text: Other air handlers used in hi-tech plants.
 Equipment:
 - nortek-low-humidity | Dry room air handler with desiccant dehumidification
++ novelaire-desiccant-wheels
 - ventrol-ahu | Custom air handler
++ temtrol-ahu
++ huntair-ahu
++ governair-ahu
 - huntair-fanwall | Fan array
++ temtrol-fanwall
++ governair-fanwall
++ ventrol-fanwall

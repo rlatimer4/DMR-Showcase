@@ -12,16 +12,19 @@ Virginia. It is a static site with no build step.
 - **Run it**: `python3 -m http.server 8000` from the repo root, then open
   http://localhost:8000. The 3D view needs http; it will not load from a file
   opened from disk.
-- **Branch**: work so far is on `claude/dmr-product-showcase-bmpu49`.
 - **Guides**: `README.md` (overview) and `CONTENT.md` (how to change content).
 
 ## What the site has
 
-- **3D walkthrough** (three.js): 27 building types in Commercial, Institutional,
+- **3D walkthrough** (three.js): 28 building types in Commercial, Institutional,
   Industrial and Residential districts, laid out in one row.
   - Selecting a building shows "What a DMR package brings" and opens it as a cutaway.
   - Selecting a room zooms in; selecting an equipment model opens its product
-    window, and an arrow marks the model being shown.
+    window. Every model in the open room carries a name tag, and the tag of the
+    model being shown is highlighted.
+  - Each model stands for a type of equipment. The panel lists every other
+    product line that fits the same role under it, and each building lists the
+    lines that suit it but have no model there, so no applicable product is missed.
   - Zoom, reset and full-screen buttons sit on the view.
 - **Catalog**: 171 product lines from 20 manufacturers, filterable by product
   type, building type and manufacturer. Each product has a photo gallery.
@@ -71,6 +74,12 @@ breaks the site: anything that referred to it is skipped.
 - A building may show several system designs that would not coexist in a real
   building (VAV, fan coil, VRF and so on). Each goes in its own room.
 - Equipment models are selected directly; there are no numbered markers.
+- The site must be comprehensive: a visitor who opens a building type should not
+  miss any product that could apply to it.
+- Components (fan arrays, coils, UV-C, humidifier dispersion) are shown inside a
+  see-through air handler or duct section, not loose in a room. FANWALL is drawn
+  as stacked cube cells with a plug fan in each.
+- Research labs (wet lab, dry lab, vivarium, clean lab) have their own building.
 - **Photos**: prefer a photo of the actual product, and avoid using the same
   photo for several products where possible. This is a preference, not a strict
   rule. A shared or general photo is acceptable when nothing better exists.
@@ -89,6 +98,12 @@ breaks the site: anything that referred to it is skipped.
   are draft text and need DMR review. Runtal, Klingenburg, Rapid Engineering and
   most Redd-i text was written without a manufacturer page to check against.
 - **Google Maps**: needs an API key in `content/settings.js`.
+- **Product coverage**: which lines are listed under each model and under each
+  building's "More product lines" was filled in by rule (same kind of equipment,
+  with limits for residential, lodging, healthcare and industrial lines). DMR
+  should review each building's text file and remove anything that does not belong.
+- **Room spacing**: the front 6 m of every room is kept clear for equipment and
+  furniture sits behind it. Rooms with three large air handlers still draw them small.
 - **3D models**: simple generated shapes. Any building can be replaced with an
   artist-made `.glb` file (see `CONTENT.md`).
 - **Choices to confirm**:

@@ -1,0 +1,235 @@
+# RESEARCH LABORATORY
+#
+# This file holds the words shown for this building. Edit them freely.
+# Keep the labels (the words before each colon) and the dashes at the start of list lines.
+# Lines that start with # are notes and are not shown on the site.
+
+Name: Research Laboratory
+
+Summary: Research buildings hold wet labs, dry labs, vivariums and clean spaces side by side, each with its own ventilation, pressure and humidity needs.
+
+Why a DMR package:
+# One line per advantage, written as  - Short heading: one sentence
+- Safe once-through air: Custom air handlers and fan arrays keep hoods and animal rooms supplied through a fan failure
+- Exhaust energy recovered: Plate exchangers and wheels reclaim heat with no cross-contamination
+- Each room held in range: Airflow tracking terminals, clean steam and desiccant drying hold pressure, temperature and humidity room by room
+- Instrument heat handled at the zone: Sensible cooling terminals remove equipment heat without raising the air change rate
+
+Challenges:
+- 100% outdoor air and high air change rates
+- Room pressure and containment
+- Tight humidity for animal holding and instruments
+- No downtime for hoods and animal rooms
+
+Also applicable:
+# Product lines that also suit this building type but have no 3D model of their own here.
+# One product code per line. They are listed on the building's panel and count for the catalog's building filter.
+- temtrol-knockdown
+- huntair-knockdown
+- ventrol-knockdown
+- novelaire-ecw
+- klingenburg-wheel
+- venmar-energypack
+- venmar-erv
+- nortek-acoustiflo
+- sterling-unit-heaters
+- kampmann-top
+- reddi-unit-heaters
+- reddi-ventilation
+- mammoth-ultraline
+- mammoth-ashp
+- venmar-ashp
+- uvr-glo
+- envirotec-vf
+- envirotec-vl
+- envirotec-cdv
+- envirotec-vb
+- kampmann-venkon
+- kampmann-powerkon
+- gree-gmv6
+- gree-gmv6-ultra
+- gree-gmv5
+- gree-gmv5-hr
+- gree-cassette
+- gree-ducted
+- gree-wall
+- gree-floor-ceiling
+- gree-fresh-air
+- gree-ahu-kit
+- gree-livo
+- gree-vireo
+- gree-envo
+- gree-sapphire
+- gree-zeno
+- gree-multi
+- gree-multi-eco
+- sterling-versa-line
+- sterling-classic
+- sterling-custom
+- sterling-dura-vane
+- sterling-electric-baseboard
+- kampmann-perimeter
+- kampmann-baseboard
+- runtal-hydronic
+- runtal-electric
+- sterling-panel-radiators
+- sterling-convectors
+- sterling-radiant
+- sterling-cabinet
+- kampmann-katherm-hk
+- kampmann-katherm-qk
+- kampmann-katherm-qk-nano
+- kampmann-katherm-nk
+- kampmann-katherm-qe
+
+# ---------------- Equipment locations ----------------
+# Each location starts with "Location:" and its code. Do not change the code.
+# Equipment lines read:  - product code | what it is in this building | why it suits (optional)
+# A line starting with + under an equipment line is another product line that fits the same role.
+# It shares that model in the 3D view and is listed under it:  + product code | note (optional)
+# Product codes are the file names in content/text/products/.
+
+Location: laboratory-1
+Title: Lab air handling and exhaust recovery
+Text: Lab air is used once and exhausted. Custom air handlers with fan arrays supply it, and a plate exchanger recovers energy from the exhaust without letting the two airstreams mix.
+Equipment:
+- temtrol-ahu | 100% outdoor air lab air handler | Custom double-wall unit sized for once-through air
++ huntair-ahu
++ governair-ahu
++ ventrol-ahu
++ envirotec-mql
+- huntair-fanwall | Fan array | A failed fan does not interrupt supply to hoods and animal rooms
++ temtrol-fanwall
++ governair-fanwall
++ ventrol-fanwall
+- klingenburg-plate | Plate heat exchanger | Recovers exhaust energy with no cross-contamination
+
+Location: laboratory-2
+Title: Wet lab
+Text: Supply terminals track the fume hood exhaust so the lab stays negative to the corridor, and a reheat coil holds the room temperature at high air change rates.
+Equipment:
+- envirotec-sdr | Lab supply VAV terminal | Tracks hood exhaust to hold the room negative
++ envirotec-sdl
++ envirotec-sgx
++ envirotec-crb
++ envirotec-crq
++ envirotec-vfr
++ envirotec-vfl
++ envirotec-cfl
++ envirotec-ddc
++ envirotec-pneumatic
++ envirotec-rft
+- nortek-booster-coils | Zone reheat coil
++ reddi-duct-heaters
++ reddi-controls
+
+Location: laboratory-3
+Title: Dry lab
+Text: Instruments, lasers and computing give off heat but no fumes. Sensible cooling terminals remove it with chilled water at the zone, so the central system only supplies ventilation air.
+Equipment:
+- envirotec-crc | Sensible cooling terminal | Removes instrument heat at the zone, paired with a dedicated outdoor air system
++ envirotec-cfl-cc
++ envirotec-ddc
+- envirotec-hp | Fan coil for equipment rooms | Extra cooling where instrument loads are concentrated
++ envirotec-hl
++ envirotec-hdd
++ kampmann-kadeck
++ kampmann-venkon-xl
++ kampmann-kadius
++ envirotec-piping
++ uvr-uvk
+
+Location: laboratory-4
+Title: Vivarium
+Text: Animal holding rooms need constant ventilation, a tight temperature and humidity band, and odour control.
+Equipment:
+- steamovap-ise | Clean steam humidifier | Sterile steam with no boiler chemicals for animal holding rooms
++ fisair-electrode
++ fisair-resistance
++ steamovap-ier
++ fisair-vxv
++ fisair-asc
++ steamovap-ils
++ fisair-fsh
++ fisair-mt2
++ steamovap-distribution
++ fisair-hef2e
++ fisair-hef3
++ steamovap-aem
++ fisair-atomspray
++ steamovap-aca
++ steamovap-aul
++ steamovap-controls
++ steamovap-safety
++ steamovap-water-filter
++ steamovap-wro
+- envirotec-crb | Constant airflow terminal | Holds each holding room at its airflow and pressure
++ envirotec-sdr
++ envirotec-sdl
++ envirotec-sgx
++ envirotec-crq
++ envirotec-vfr
++ envirotec-vfl
++ envirotec-cfl
++ envirotec-ddc
++ envirotec-pneumatic
++ envirotec-rft
+- reddi-duct-heaters | Room reheat | Trims each holding room to its own temperature
++ nortek-booster-coils
++ reddi-controls
+
+Location: laboratory-5
+Title: Clean lab
+Text: Tissue culture and clean assembly rooms use a filtered ceiling of fan filter units.
+Equipment:
+- huntair-ffu | Fan filter units
++ huntair-flex-trak
++ huntair-light-grid
++ huntair-plenums
+- huntair-ceiling-grid | Cleanroom ceiling grid
+
+Location: laboratory-6
+Title: Mechanical room
+Text: Preheat coils on 100% outdoor air see the full winter, so they are built to survive a freeze. UV-C keeps cooling coils clean, and a desiccant unit supplies dry air to low-humidity rooms.
+Equipment:
+- cooney-freeze-block | Freeze-resistant preheat coil | Outdoor air coils see full winter air
++ cooney-smart-coil
++ nortek-water-coils
++ nortek-steam-coils
++ nortek-steam-distributing-coils
++ nortek-dx-coils
+- uvr-rlm | UV-C coil fixture | Keeps the cooling coil free of growth
++ uvr-de
++ uvr-sl
++ uvr-sln
++ uvr-dln
++ uvr-x-plus
++ uvr-uvk
++ uvr-lamps
++ uvr-accessories
+- fisair-dfra | Desiccant dehumidifier | Dry air for low-humidity lab spaces
++ fisair-dfa
++ fisair-dflex
++ fisair-dfrb
++ fisair-dfrd
++ fisair-dfrc
++ fisair-dfog
++ fisair-dflow
++ fisair-dfrm
++ novelaire-comfortdry
++ novelaire-precisiondry
++ novelaire-desiccant-wheels
+
+Location: laboratory-7
+Title: Air handling options
+Text: Other air handlers used in research buildings.
+Equipment:
+- huntair-ahu | Custom lab air handler
++ temtrol-ahu
++ governair-ahu
++ ventrol-ahu
++ envirotec-mql
+- nortek-low-humidity | Air handler with desiccant dehumidification
++ novelaire-desiccant-wheels
+- nortek-gas-phase | Air handler with gas-phase filtration | Removes vivarium odours and ammonia
+

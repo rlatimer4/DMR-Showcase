@@ -19,9 +19,63 @@ Challenges:
 - Stratification in high bays
 - Low operating cost
 
+Also applicable:
+# Product lines that also suit this building type but have no 3D model of their own here.
+# One product code per line. They are listed on the building's panel and count for the catalog's building filter.
+- temtrol-ahu
+- huntair-ahu
+- governair-ahu
+- ventrol-ahu
+- temtrol-knockdown
+- huntair-knockdown
+- ventrol-knockdown
+- huntair-fanwall
+- temtrol-fanwall
+- governair-fanwall
+- ventrol-fanwall
+- cooney-freeze-block
+- cooney-smart-coil
+- nortek-water-coils
+- nortek-steam-coils
+- nortek-steam-distributing-coils
+- nortek-dx-coils
+- uvr-rlm
+- uvr-de
+- uvr-sl
+- uvr-sln
+- uvr-dln
+- uvr-x-plus
+- uvr-uvk
+- uvr-lamps
+- uvr-accessories
+- novelaire-ecw
+- klingenburg-wheel
+- klingenburg-plate
+- venmar-energypack
+- venmar-erv
+- reddi-duct-heaters
+- nortek-booster-coils
+- nortek-acoustiflo
+- fisair-dfra
+- fisair-dfa
+- fisair-dflex
+- fisair-dfrb
+- fisair-dfrd
+- fisair-dfrc
+- fisair-dfog
+- fisair-dflow
+- fisair-dfrm
+- fisair-dfrigo
+- novelaire-precisiondry
+- novelaire-desiccant-wheels
+- mammoth-ashp
+- venmar-ashp
+
 # ---------------- Equipment locations ----------------
 # Each location starts with "Location:" and its code. Do not change the code.
 # Equipment lines read:  - product code | what it is in this building | why it suits (optional)
+# A line starting with + under an equipment line is another product line that fits the same role.
+# It shares that model in the 3D view and is listed under it:  + product code | note (optional)
 # Product codes are the file names in content/text/products/.
 
 Location: warehouse-1
@@ -29,6 +83,7 @@ Title: Make-up air
 Text: Direct-fired units heat outdoor air and keep the building at positive pressure.
 Equipment:
 - rapid-mua | Direct-fired make-up air unit
++ nortek-mua
 
 Location: warehouse-2
 Title: Warehouse floor: air rotation system
@@ -41,6 +96,9 @@ Title: Warehouse floor: unit heater system
 Text: Unit heaters hung through the building heat it zone by zone.
 Equipment:
 - sterling-unit-heaters | Hot water unit heaters
++ kampmann-top
++ reddi-ventilation
++ reddi-controls
 - reddi-unit-heaters | Electric heaters | For offices and guard booths
 
 Location: warehouse-3
@@ -48,6 +106,9 @@ Title: Loading dock
 Text: High-output unit heaters offset the cold air while dock doors are open.
 Equipment:
 - kampmann-top | Dock door unit heaters | High-output heaters aimed at each dock opening
++ reddi-unit-heaters
++ reddi-ventilation
++ reddi-controls
 - sterling-unit-heaters | Dock unit heaters
 
 Location: warehouse-5
@@ -55,4 +116,5 @@ Title: Air handling options
 Text: Other rooftop equipment used on warehouses.
 Equipment:
 - nortek-mua | Make-up air unit
++ rapid-mua
 - mammoth-ultraline | Office rooftop unit

@@ -19,9 +19,89 @@ Challenges:
 - Mixed uses in one building
 - Deferred maintenance
 
+Also applicable:
+# Product lines that also suit this building type but have no 3D model of their own here.
+# One product code per line. They are listed on the building's panel and count for the catalog's building filter.
+- temtrol-knockdown
+- huntair-knockdown
+- ventrol-knockdown
+- uvr-rlm
+- uvr-de
+- uvr-sl
+- uvr-sln
+- uvr-dln
+- uvr-x-plus
+- uvr-lamps
+- uvr-accessories
+- novelaire-ecw
+- klingenburg-wheel
+- venmar-energypack
+- venmar-erv
+- nortek-acoustiflo
+- sterling-unit-heaters
+- kampmann-top
+- reddi-unit-heaters
+- reddi-ventilation
+- fisair-electrode
+- fisair-resistance
+- steamovap-ier
+- steamovap-ise
+- fisair-vxv
+- fisair-asc
+- steamovap-ils
+- fisair-fsh
+- fisair-mt2
+- steamovap-distribution
+- fisair-hef2e
+- fisair-hef3
+- steamovap-aem
+- fisair-atomspray
+- steamovap-aca
+- steamovap-aul
+- steamovap-controls
+- steamovap-safety
+- steamovap-water-filter
+- steamovap-wro
+- mammoth-ultraline
+- mammoth-ashp
+- venmar-ashp
+- uvr-glo
+- envirotec-crc
+- envirotec-cfl-cc
+- envirotec-vf
+- envirotec-vl
+- envirotec-cdv
+- envirotec-vb
+- envirotec-vh
+- kampmann-venkon
+- kampmann-powerkon
+- gree-livo
+- gree-vireo
+- gree-envo
+- gree-sapphire
+- gree-zeno
+- gree-multi
+- gree-multi-eco
+- gree-ptac
+- gree-etac
+- gree-ttw
+- runtal-hydronic
+- runtal-electric
+- sterling-panel-radiators
+- sterling-convectors
+- sterling-radiant
+- sterling-cabinet
+- kampmann-katherm-hk
+- kampmann-katherm-qk
+- kampmann-katherm-qk-nano
+- kampmann-katherm-nk
+- kampmann-katherm-qe
+
 # ---------------- Equipment locations ----------------
 # Each location starts with "Location:" and its code. Do not change the code.
 # Equipment lines read:  - product code | what it is in this building | why it suits (optional)
+# A line starting with + under an equipment line is another product line that fits the same role.
+# It shares that model in the 3D view and is listed under it:  + product code | note (optional)
 # Product codes are the file names in content/text/products/.
 
 Location: higher-education-1
@@ -30,34 +110,83 @@ Text: Plate exchangers recover energy from lab exhaust while keeping it separate
 Equipment:
 - klingenburg-plate | Lab exhaust plate exchanger | Recovers energy with no cross-contamination
 - ventrol-ahu | Lab make-up air handler
++ temtrol-ahu
++ huntair-ahu
++ governair-ahu
++ envirotec-mql
+- huntair-fanwall | Lab air handler fan array | Keeps labs supplied through a fan failure
++ temtrol-fanwall
++ governair-fanwall
++ ventrol-fanwall
 
 Location: higher-education-2
 Title: Teaching labs
-Text: Custom air handlers and fan arrays supply the high air change rates labs need.
+Text: Supply terminals track the fume hood exhaust to hold each lab at its pressure, with reheat for the high air change rates.
 Equipment:
-- huntair-ahu | Lab air handler | 100% outdoor air
-- huntair-fanwall | Fan array
 - envirotec-sdr | Lab airflow VAV terminals
++ envirotec-sdl
++ envirotec-sgx
++ envirotec-crb
++ envirotec-crq
++ envirotec-vfr
++ envirotec-vfl
++ envirotec-cfl
++ envirotec-ddc
++ envirotec-pneumatic
++ envirotec-rft
+- nortek-booster-coils | Zone reheat coil
++ reddi-duct-heaters
++ reddi-controls
 
 Location: higher-education-3
 Title: Lecture halls: VRF system
 Text: A VRF heat recovery system moves heat between lecture halls and offices.
 Equipment:
 - gree-gmv6 | VRF heat recovery system | Moves heat between lecture halls and offices
++ gree-gmv6-ultra
++ gree-gmv5
++ gree-gmv5-hr
 - gree-ducted | Concealed ducted indoor units
++ gree-cassette
++ gree-wall
++ gree-floor-ceiling
++ gree-fresh-air
++ gree-ahu-kit
++ gree-mtac
 
 Location: higher-education-5
 Title: Lecture halls: fan coil system
 Text: Fan coils on the campus chilled and hot water loops keep lecture halls quiet.
 Equipment:
 - envirotec-hp | Lecture hall fan coils
++ envirotec-hl
++ envirotec-hdd
++ kampmann-kadeck
++ kampmann-venkon-xl
++ kampmann-kadius
++ envirotec-piping
++ uvr-uvk
 
 Location: higher-education-4
 Title: Mechanical room
 Text: Freeze-resistant coils replace failed preheat coils in existing air handlers.
 Equipment:
 - cooney-freeze-block | Freeze-resistant preheat coils
++ cooney-smart-coil
++ nortek-water-coils
++ nortek-steam-coils
++ nortek-steam-distributing-coils
++ nortek-dx-coils
 - sterling-versa-line | Corridor finned tube
++ sterling-classic
++ sterling-custom
++ sterling-dura-vane
++ sterling-light-commercial
++ sterling-guardian
++ sterling-baseboard
++ sterling-electric-baseboard
++ kampmann-perimeter
++ kampmann-baseboard
 
 Location: higher-education-6
 Title: Air handling options
@@ -65,4 +194,8 @@ Text: Other air handlers used in campus buildings.
 Equipment:
 - temtrol-lc | Classroom wing air handler
 - nortek-low-humidity | Air handler with desiccant dehumidification
++ novelaire-desiccant-wheels
 - governair-fanwall | FANWALL retrofit
++ huntair-fanwall
++ temtrol-fanwall
++ ventrol-fanwall

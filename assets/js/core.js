@@ -44,6 +44,7 @@
     def.stops = def.stops || [];
     def.challenges = def.challenges || [];
     def.advantages = def.advantages || [];
+    def.also = def.also || [];
     D.buildings.push(def);
   };
 
@@ -59,6 +60,10 @@
    *   - another list item
    *   # a note that is not shown
    *
+   * In a building's Equipment list, a line starting with "+" names another product
+   * line that fits the same role as the equipment line above it. It shares that
+   * line's 3D model and is listed under it.
+   *
    * parseText returns the entries in order: [{ key, value, items }].
    */
   function parseText(src) {
@@ -68,6 +73,8 @@
       if (!line || line.charAt(0) === "#") return;
       var m;
       if (/^[-*•]\s*/.test(line)) { if (cur) cur.items.push(line.replace(/^[-*•]\s*/, "").trim()); return; }
+      // "+" lines add to the list item above them (used for other product lines that fit the same role)
+      if (/^\+\s*/.test(line)) { if (cur) cur.items.push("+" + line.replace(/^\+\s*/, "").trim()); return; }
       if ((m = line.match(/^([A-Za-z][A-Za-z '’-]{0,40}):\s*(.*)$/))) { cur = { key: m[1].trim().toLowerCase(), value: m[2].trim(), items: [] }; out.push(cur); return; }
       if (cur) cur.value = (cur.value + " " + line).trim();
     });
@@ -96,11 +103,19 @@
         if (!stop) issue("warn", "content/text/buildings/" + b.id + ".txt mentions the location \"" + e.value + "\", which is not in content/buildings/" + b.id + ".js. It was ignored.");
       } else if (stop && e.key === "title") stop.title = e.value;
       else if (stop && e.key === "text") stop.text = e.value;
-      else if (stop && e.key === "equipment") stop.equipment = e.items.map(cells).map(function (c) { return { product: c[0], role: c[1] || "", note: c[2] || "" }; });
+      else if (stop && e.key === "equipment") {
+        stop.equipment = [];
+        e.items.forEach(function (item) {
+          var also = item.charAt(0) === "+", c = cells(also ? item.slice(1) : item), last = stop.equipment[stop.equipment.length - 1];
+          if (!also) stop.equipment.push({ product: c[0], role: c[1] || "", note: c[2] || "", also: [] });
+          else if (last) last.also.push({ product: c[0], note: c[1] || "" });
+        });
+      }
       else if (e.key === "name") b.name = e.value;
       else if (e.key === "summary") b.intro = e.value;
       else if (e.key === "why a dmr package") b.advantages = e.items.map(pair).map(function (kv) { return { title: kv[0], text: kv[1] }; });
       else if (e.key === "challenges") b.challenges = e.items;
+      else if (e.key === "also applicable") b.also = e.items.map(function (i) { return cells(i)[0]; });
     });
   }
   function loadText(path, target, apply) {
@@ -197,13 +212,25 @@
         s.text = s.text || "";
         s.equipment = s.equipment || (s.products || []).map(function (id) { return { product: id, role: "", note: "" }; });
         var before = s.equipment.length;
+        // If the product behind a model has gone but another line fits the same role, that line takes its place.
+        s.equipment.forEach(function (e) {
+          e.also = (e.also || []).filter(function (a) { return products[a.product]; });
+          if (!products[e.product] && e.also.length) e.product = e.also.shift().product;
+        });
         s.equipment = s.equipment.filter(function (e) { return products[e.product]; });
-        s.products = s.equipment.map(function (e) { return e.product; });
-        if (s.products.length < before) issue("info", "Building \"" + b.name + "\", stop \"" + s.title + "\": " + (before - s.products.length) + " product(s) no longer available were removed.");
+        s.products = [];
+        s.equipment.forEach(function (e) {
+          [e].concat(e.also).forEach(function (x) { if (s.products.indexOf(x.product) < 0) s.products.push(x.product); });
+        });
+        if (s.equipment.length < before) issue("info", "Building \"" + b.name + "\", stop \"" + s.title + "\": " + (before - s.equipment.length) + " product(s) no longer available were removed.");
         if (!s.products.length) issue("warn", "Building \"" + b.name + "\", stop \"" + s.title + "\" has no products left and is hidden. Add equipment to it in content/text/buildings/" + b.id + ".txt.");
         return s.products.length > 0;
       });
       if (!b.stops.length) { issue("warn", "Building \"" + b.name + "\" has no stops left and is hidden."); return false; }
+      // Lines that suit the building type but have no model in it: drop any that are gone or already shown in a room.
+      b.also = b.also.filter(function (id, n, all) {
+        return products[id] && all.indexOf(id) === n && !b.stops.some(function (s) { return s.products.indexOf(id) > -1; });
+      });
       return true;
     });
     D.buildings.sort(function (a, b) {
@@ -217,6 +244,7 @@
       b.stops.forEach(function (s) {
         s.products.forEach(function (id) { if (products[id].buildings.indexOf(b.id) < 0) products[id].buildings.push(b.id); });
       });
+      b.also.forEach(function (id) { products[id].buildings.push(b.id); });
     });
     D.products.forEach(function (p) {
       if (!p.buildings.length) issue("info", "Product \"" + p.id + "\" is not placed in any building. It appears in the catalog only.");

@@ -17,7 +17,7 @@ DMR.registerManufacturer({
   website: "https://cooneytechnologies.com/",
   blurb: "Freeze Block and Smart Coil heating and cooling coil technology.",
   products: [
-    { id: "cooney-freeze-block", category: "coils", shape: "coil" },
-    { id: "cooney-smart-coil", category: "coils", shape: "coil" }
+    { id: "cooney-freeze-block", category: "coils", shape: "coil-freeze" },
+    { id: "cooney-smart-coil", category: "coils", shape: "coil-smart" }
   ]
 });

@@ -19,9 +19,73 @@ Challenges:
 - Tenant-by-tenant flexibility
 - Replacing rooftop plant on an occupied building
 
+Also applicable:
+# Product lines that also suit this building type but have no 3D model of their own here.
+# One product code per line. They are listed on the building's panel and count for the catalog's building filter.
+- cooney-freeze-block
+- cooney-smart-coil
+- nortek-water-coils
+- nortek-steam-coils
+- nortek-steam-distributing-coils
+- nortek-dx-coils
+- klingenburg-plate
+- venmar-energypack
+- venmar-erv
+- reddi-duct-heaters
+- nortek-booster-coils
+- reddi-controls
+- nortek-acoustiflo
+- sterling-unit-heaters
+- kampmann-top
+- reddi-unit-heaters
+- reddi-ventilation
+- fisair-electrode
+- fisair-resistance
+- steamovap-ier
+- steamovap-ise
+- fisair-vxv
+- fisair-asc
+- steamovap-ils
+- fisair-fsh
+- fisair-mt2
+- steamovap-distribution
+- fisair-hef2e
+- fisair-hef3
+- steamovap-aem
+- fisair-atomspray
+- steamovap-aca
+- steamovap-aul
+- steamovap-controls
+- steamovap-safety
+- steamovap-water-filter
+- steamovap-wro
+- uvr-glo
+- envirotec-vf
+- envirotec-vl
+- envirotec-cdv
+- envirotec-vb
+- envirotec-vh
+- kampmann-venkon
+- kampmann-powerkon
+- gree-cassette
+- gree-ducted
+- gree-wall
+- gree-floor-ceiling
+- gree-fresh-air
+- gree-ahu-kit
+- sterling-versa-line
+- sterling-classic
+- sterling-custom
+- sterling-dura-vane
+- sterling-electric-baseboard
+- kampmann-perimeter
+- kampmann-baseboard
+
 # ---------------- Equipment locations ----------------
 # Each location starts with "Location:" and its code. Do not change the code.
 # Equipment lines read:  - product code | what it is in this building | why it suits (optional)
+# A line starting with + under an equipment line is another product line that fits the same role.
+# It shares that model in the 3D view and is listed under it:  + product code | note (optional)
 # Product codes are the file names in content/text/products/.
 
 Location: high-rise-office-1
@@ -29,21 +93,37 @@ Title: Rooftop plant
 Text: A custom rooftop unit matches the existing curb and structure, so replacement does not require roof rework.
 Equipment:
 - governair-ahu | Custom rooftop air handler | Built to the existing curb and structure
++ temtrol-ahu
++ huntair-ahu
++ ventrol-ahu
++ envirotec-mql
 - nortek-low-humidity | Air handler with low-temp desiccant dehumidification | Supplies dry air to the sensible cooling terminals
++ novelaire-desiccant-wheels
 - klingenburg-wheel | Energy recovery wheel | Enthalpy wheel on the building exhaust
++ novelaire-ecw
 
 Location: high-rise-office-2
 Title: Open office: VAV system
 Text: Fan-powered VAV boxes condition the floor with small ducts and shallow ceilings.
 Equipment:
 - envirotec-crb | Series fan-powered VAV terminals | Hot water reheat at the perimeter
-- uvr-rlm | UV-C coil fixture | Keeps the floor air handler coil clean
++ envirotec-sdl
++ envirotec-sgx
++ envirotec-crq
++ envirotec-vfr
++ envirotec-vfl
++ envirotec-cfl
++ envirotec-ddc
++ envirotec-pneumatic
++ envirotec-rft
+- envirotec-sdr | Interior single-duct VAV terminals | Cooling-only boxes for the interior zones
 
 Location: high-rise-office-5
 Title: Open office: sensible cooling system
 Text: A rooftop unit with desiccant dehumidification delivers dry air, and sensible cooling VAV terminals cool each zone with a dry coil.
 Equipment:
 - envirotec-crc | Sensible cooling VAV terminal (DOAS VAV) | Standard-height CRC unit
++ envirotec-ddc
 - envirotec-cfl-cc | Low-height sensible cooling VAV terminal | CFL-CC unit for shallow ceilings
 
 Location: high-rise-office-3
@@ -51,20 +131,61 @@ Title: Tenant fit-out
 Text: VRF and mini-splits add cooling for a tenant's server closet without changing the base building system.
 Equipment:
 - gree-gmv6 | Tenant VRF system | Heat recovery VRF for conference rooms
++ gree-gmv6-ultra
++ gree-gmv5
++ gree-gmv5-hr
 - gree-livo | Server closet mini-split | 24-hour cooling independent of the base building
++ gree-vireo
++ gree-envo
++ gree-sapphire
++ gree-zeno
++ gree-multi
++ gree-multi-eco
 
 Location: high-rise-office-4
 Title: Lobby
 Text: Trench units sit in the floor along the glass. Panel radiators and a cabinet unit heater handle the entrance.
 Equipment:
 - kampmann-katherm-qk | Lobby trench heater
++ kampmann-katherm-hk
++ kampmann-katherm-qk-nano
++ kampmann-katherm-nk
++ kampmann-katherm-qe
 - runtal-hydronic | Vestibule panel radiator
++ runtal-electric
++ sterling-panel-radiators
++ sterling-convectors
++ sterling-radiant
 - sterling-cabinet | Vestibule cabinet unit heater | Offsets cold air at the doors
+- kampmann-kadius | Round exposed ceiling fan coil | Designed to be seen as part of the lobby interior
++ envirotec-hp
++ envirotec-hl
++ envirotec-hdd
++ kampmann-kadeck
++ kampmann-venkon-xl
++ envirotec-piping
++ uvr-uvk
 
 Location: high-rise-office-6
 Title: Air handling options
 Text: Other air handlers used in high-rise offices.
 Equipment:
 - mammoth-vcube-slim | Floor-by-floor self-contained unit | Fits the freight elevator
++ mammoth-vcube
 - ventrol-knockdown | Knockdown replacement air handler
++ temtrol-knockdown
++ huntair-knockdown
 - governair-fanwall | FANWALL retrofit | Replaces a failed fan without replacing the unit
++ huntair-fanwall
++ temtrol-fanwall
++ ventrol-fanwall
+- uvr-rlm | UV-C coil fixture | Keeps the floor air handler coil clean
++ uvr-de
++ uvr-sl
++ uvr-sln
++ uvr-dln
++ uvr-x-plus
++ uvr-uvk
++ uvr-lamps
++ uvr-accessories
+

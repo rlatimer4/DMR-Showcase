@@ -25,7 +25,9 @@ DMR.registerBuilding({
     { id: "hotel-2", at: { floor: 4, x: 0.25 }, space: "guest-room" },
     { id: "hotel-4", at: { floor: 4, x: 0.75 }, space: "guest-room" },
     { id: "hotel-3", at: { floor: 0, x: 0.3 }, space: "lobby" },
-    { id: "hotel-5", at: { floor: 0, x: 0.75 }, space: "mechanical" }
+    { id: "hotel-5", at: { floor: 0, x: 0.75 }, space: "mechanical" },
+    { id: "hotel-6", at: { floor: 2, x: 0.25 }, space: "guest-room" },
+    { id: "hotel-7", at: { floor: 2, x: 0.75 }, space: "guest-room" }
   ],
   // Shapes that make this building recognizable. See CONTENT.md for the kit.
   build: function (kit, d) {

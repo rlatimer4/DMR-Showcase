@@ -19,9 +19,134 @@ Challenges:
 - Tall spaces
 - Intermittent occupancy
 
+Also applicable:
+# Product lines that also suit this building type but have no 3D model of their own here.
+# One product code per line. They are listed on the building's panel and count for the catalog's building filter.
+- temtrol-ahu
+- huntair-ahu
+- governair-ahu
+- ventrol-ahu
+- envirotec-mql
+- temtrol-knockdown
+- huntair-knockdown
+- ventrol-knockdown
+- huntair-fanwall
+- temtrol-fanwall
+- governair-fanwall
+- ventrol-fanwall
+- cooney-freeze-block
+- cooney-smart-coil
+- nortek-water-coils
+- nortek-steam-coils
+- nortek-steam-distributing-coils
+- nortek-dx-coils
+- uvr-rlm
+- uvr-de
+- uvr-sl
+- uvr-sln
+- uvr-dln
+- uvr-x-plus
+- uvr-uvk
+- uvr-lamps
+- uvr-accessories
+- novelaire-ecw
+- klingenburg-wheel
+- klingenburg-plate
+- reddi-duct-heaters
+- nortek-booster-coils
+- reddi-controls
+- nortek-acoustiflo
+- sterling-unit-heaters
+- kampmann-top
+- reddi-unit-heaters
+- reddi-ventilation
+- fisair-electrode
+- fisair-resistance
+- steamovap-ier
+- steamovap-res
+- steamovap-ise
+- fisair-vxv
+- fisair-asc
+- steamovap-ils
+- fisair-fsh
+- fisair-mt2
+- steamovap-distribution
+- fisair-hef2e
+- fisair-hef3
+- steamovap-aem
+- fisair-atomspray
+- steamovap-aca
+- steamovap-aul
+- steamovap-controls
+- steamovap-safety
+- steamovap-water-filter
+- steamovap-wro
+- mammoth-ashp
+- venmar-ashp
+- uvr-glo
+- envirotec-sdr
+- envirotec-sdl
+- envirotec-sgx
+- envirotec-crb
+- envirotec-crq
+- envirotec-vfr
+- envirotec-vfl
+- envirotec-cfl
+- envirotec-ddc
+- envirotec-pneumatic
+- envirotec-rft
+- envirotec-crc
+- envirotec-cfl-cc
+- envirotec-hp
+- envirotec-hl
+- envirotec-hdd
+- kampmann-kadeck
+- kampmann-venkon-xl
+- kampmann-kadius
+- envirotec-vf
+- envirotec-vl
+- envirotec-cdv
+- envirotec-vb
+- kampmann-venkon
+- kampmann-powerkon
+- envirotec-piping
+- gree-gmv6
+- gree-gmv6-ultra
+- gree-gmv5
+- gree-gmv5-hr
+- gree-gmv6-mini
+- gree-gmv5-mini
+- gree-multipro
+- gree-flexx-ultra
+- gree-flexx-eco
+- gree-cassette
+- gree-ducted
+- gree-wall
+- gree-floor-ceiling
+- gree-fresh-air
+- gree-ahu-kit
+- gree-livo
+- gree-vireo
+- gree-envo
+- gree-sapphire
+- gree-zeno
+- gree-multi
+- gree-multi-eco
+- sterling-versa-line
+- sterling-classic
+- sterling-custom
+- sterling-dura-vane
+- sterling-baseboard
+- sterling-electric-baseboard
+- kampmann-perimeter
+- kampmann-baseboard
+- sterling-cabinet
+
 # ---------------- Equipment locations ----------------
 # Each location starts with "Location:" and its code. Do not change the code.
 # Equipment lines read:  - product code | what it is in this building | why it suits (optional)
+# A line starting with + under an equipment line is another product line that fits the same role.
+# It shares that model in the 3D view and is listed under it:  + product code | note (optional)
 # Product codes are the file names in content/text/products/.
 
 Location: religious-center-1
@@ -29,7 +154,9 @@ Title: Sanctuary air
 Text: Energy recovery ventilators bring in outdoor air for a full congregation at low operating cost.
 Equipment:
 - venmar-erv | Sanctuary ventilation unit | Brings in outdoor air only when the room is full
++ venmar-energypack
 - mammoth-ultraline | Ground-mounted packaged unit | Keeps the roofline clear
++ gree-xpac
 - temtrol-lc | Compact air handler | Small enough for a ground-level enclosure
 
 Location: religious-center-2
@@ -37,4 +164,12 @@ Title: Sanctuary
 Text: Panel radiators and trench units heat quietly, with no fan noise in the room.
 Equipment:
 - runtal-hydronic | Panel radiators | Silent perimeter heat
++ runtal-electric
++ sterling-panel-radiators
++ sterling-convectors
++ sterling-radiant
 - kampmann-katherm-qk | Aisle trench heaters
++ kampmann-katherm-hk
++ kampmann-katherm-qk-nano
++ kampmann-katherm-nk
++ kampmann-katherm-qe

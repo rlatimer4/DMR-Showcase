@@ -312,7 +312,7 @@ function init() {
     g.add(shell);
     scene.add(g);
     const { width: w, depth: dp, floorHeight: fh, bays, height: h } = b.size;
-    const m = models[b.id] = { b, g, shell, cutaways: [], rooms: {}, spots: [], equip: [], items: {}, zones: [], open: 0, openTarget: 0 };
+    const m = models[b.id] = { b, g, shell, cutaways: [], rooms: {}, spots: [], equip: [], items: {}, zones: [], tagged: {}, open: 0, openTarget: 0 };
     generateShell(b, shell, m);
     if (b.model) loadModel(b, m);
 
@@ -330,39 +330,33 @@ function init() {
       const x = -w / 2 + s.at.x * w;
       const shapes = s.equipment.map(e => D.lookup.products[e.product].shape || "box");
       const outdoor = s.at.floor === "roof" || s.at.floor === "yard";
-      // Lay the stop's equipment out side by side, shrinking it if it would not fit.
-      const layout = (centre, room) => {
-        const widths = shapes.map(sh => P.footprint(sh, outdoor)), total = widths.reduce((a, v) => a + v, 0) || 1;
-        const k = Math.max(0.45, Math.min(1, room / total));
-        let at = centre - total * k / 2;
-        return shapes.map((sh, n) => { at += widths[n] * k; return { shape: sh, x: at - widths[n] * k / 2, k, n }; });
-      };
       // Each piece of equipment is its own group, so it can be clicked to open its product.
-      const place = (u, where) => {
+      const place = u => {
         const grp = new THREE.Group(), e = s.equipment[u.n], prod = D.lookup.products[e.product];
-        grp.userData = { product: e.product, stop: s.id, n: u.n, label: (e.role || prod.name) + " · " + D.lookup.brands[prod.brand].name };
+        grp.userData = { product: e.product, stop: s.id, n: u.n, name: e.role || prod.name, label: (e.role || prod.name) + " · " + D.lookup.brands[prod.brand].name, at: u };
         m.items[s.id + ":" + u.n] = grp;
         shell.add(grp);
-        P.equip(grp, u.shape, where);
+        P.equip(grp, u);
         m.equip.push(grp);
       };
       let pos;
       if (outdoor) {
         const onRoof = s.at.floor === "roof", y = onRoof ? h + 0.3 : 0.12, z = onRoof ? -1 : dp / 2 + 8.5;
         const shared = b.stops.filter(o => o.at.floor === s.at.floor).length;   // units share the roof or yard
-        const room = Math.min(13, (w - 2) / shared), cx = Math.max(-w / 2 + room / 2 + 0.5, Math.min(w / 2 - room / 2 - 0.5, x));
+        const room = Math.min(16, (w - 2) / shared), cx = Math.max(-w / 2 + room / 2 + 0.5, Math.min(w / 2 - room / 2 - 0.5, x));
         if (!b.model) {
-          layout(cx, room).forEach(u => place(u, { x: u.x, floorY: y, z, outdoor: true, scale: u.k }));
+          P.arrange(shapes, { x: cx, w: room, floorY: y, z, outdoor: true }).forEach(place);
           if (onRoof) {
-            box(shell, 1.1, h, 1.1, cx + 2.5, h / 2 + 0.3, -dp / 2 + 1.2, M.supply, false);
-            box(shell, 0.9, h, 0.9, cx - 2.5, h / 2 + 0.3, -dp / 2 + 1.2, M.return, false);
+            // Risers run from the ground floor up through the roof, ending well above it so no face lies in the roof's plane.
+            box(shell, 1.1, h + 0.9, 1.1, cx + 2.5, (h + 0.9) / 2 + 0.32, -dp / 2 + 1.3, M.supply, false);
+            box(shell, 0.9, h + 0.7, 0.9, cx - 2.5, (h + 0.7) / 2 + 0.32, -dp / 2 + 1.3, M.return, false);
           } else {
             box(shell, 0.9, 0.9, 6.5, cx + 1.5, 0.9, z - 5, M.supply, false);
             box(shell, 0.8, 0.8, 6.5, cx - 1.5, 0.9, z - 5, M.return, false);
           }
         }
         pos = new THREE.Vector3(cx, y + 5.8, z);
-        s.frame = { x: cx, y: y + 2, z, w: room + 5, h: 9, outdoor: true };
+        s.frame = { x: cx, y: y + 2, z, w: room + 8, h: 9, outdoor: true };
         // invisible click target around the outdoor equipment
         const zone = new THREE.Mesh(new THREE.BoxGeometry(room + 2, 6, 7), new THREE.MeshBasicMaterial({ visible: false }));
         zone.position.set(cx, y + 3, z);
@@ -372,7 +366,7 @@ function init() {
         const y0 = s.at.floor * fh, cw = w / bays, col = Math.min(bays - 1, Math.floor(s.at.x * bays)), bx = -w / 2 + (col + 0.5) * cw;
         if (!b.model) {
           P.furnish(shell, s.space, { cx: bx, y: y0, w: cw, h: fh, dp });
-          layout(bx, cw - 1.5).forEach(u => place(u, { x: u.x, floorY: y0 + 0.3, ceilY: y0 + fh - 0.75, dp, scale: u.k }));
+          P.arrange(shapes, { x: bx, w: cw - 1.4, floorY: y0 + 0.3, ceilY: y0 + fh - 0.75, slabY: y0 + fh, dp, occupied: s.space !== "mechanical" && s.space !== "plant" }).forEach(place);
         }
         const room = new THREE.Mesh(new THREE.BoxGeometry(cw - 0.5, fh - 0.5, dp - 0.8),
           new THREE.MeshBasicMaterial({ color: 0xffa500, transparent: true, opacity: 0.07, depthWrite: false }));
@@ -381,7 +375,8 @@ function init() {
         room.userData = { stop: s.id, title: s.title };
         g.add(room); m.rooms[s.id] = room; m.zones.push(room);
         pos = new THREE.Vector3(bx - cw / 2 + 1.3, y0 + fh - 1.1, dp / 2 + 0.6);
-        s.frame = { x: bx, y: y0 + fh / 2, z: 0, w: cw + 3, h: fh + 2.5 };
+        // The close-up looks at the front of the room, where the equipment stands.
+        s.frame = { x: bx, y: y0 + fh / 2, z: dp / 2 - 4.5, w: cw + 0.6, h: fh + 1.2 };
       }
     });
   });
@@ -390,27 +385,64 @@ function init() {
 
   let view = { use: null, building: null, stop: null, item: 0 };
 
-  // Pointer: an arrow that hovers over the piece of equipment being shown.
-  const pointer = (() => {
-    const c = document.createElement("canvas");
-    c.width = c.height = 128;
-    const g = c.getContext("2d");
-    g.beginPath(); g.moveTo(64, 122); g.lineTo(14, 50); g.lineTo(44, 50); g.lineTo(44, 8); g.lineTo(84, 8); g.lineTo(84, 50); g.lineTo(114, 50); g.closePath();
-    g.fillStyle = "#ffa500"; g.fill(); g.lineWidth = 9; g.lineJoin = "round"; g.strokeStyle = "#ffffff"; g.stroke(); g.lineWidth = 3; g.strokeStyle = "#282c39"; g.stroke();
-    const sp = new THREE.Sprite(new THREE.SpriteMaterial({ map: canvasTexture(c), depthTest: false, transparent: true }));
-    sp.center.set(0.5, 0);           // the tip of the arrow sits on the position
-    sp.renderOrder = 20;
-    sp.visible = false;
-    scene.add(sp);
-    return sp;
-  })();
-  const pointerAt = new THREE.Vector3();
+  /*
+   * Name tags: when a room is open, every piece of equipment in it carries a tag with its name.
+   * The tag of the piece being shown is highlighted. Tags are made the first time a room is opened.
+   */
+  function tagTexture(lines, active) {
+    const c = document.createElement("canvas"), g = c.getContext("2d"), font = "700 30px Roboto, Arial, sans-serif";
+    g.font = font;
+    const tw = Math.max(...lines.map(l => g.measureText(l).width)), bh = lines.length * 38 + 20;
+    c.width = Math.ceil(tw + 44); c.height = bh + 22;
+    g.font = font;
+    g.fillStyle = active ? "#ffa500" : "#282c39"; g.strokeStyle = "#ffffff"; g.lineWidth = 4; g.lineJoin = "round";
+    g.beginPath(); g.roundRect(2, 2, c.width - 4, bh - 4, 10);
+    g.moveTo(c.width / 2 - 14, bh - 3); g.lineTo(c.width / 2, c.height - 3); g.lineTo(c.width / 2 + 14, bh - 3);
+    g.stroke(); g.fill();
+    g.fillStyle = active ? "#282c39" : "#ffffff"; g.textAlign = "center"; g.textBaseline = "middle";
+    lines.forEach((l, i) => g.fillText(l, c.width / 2, 30 + i * 38));
+    return canvasTexture(c);
+  }
+  function wrap(text) {
+    if (text.length <= 24) return [text];
+    const words = text.split(" "), lines = [""];
+    words.forEach(w => { const k = lines.length - 1; if (lines[k] && (lines[k] + " " + w).length > Math.ceil(text.length / 2) + 3 && lines.length < 2) lines.push(w); else lines[k] = (lines[k] ? lines[k] + " " : "") + w; });
+    return lines;
+  }
+  const tags = [];
+  function makeTags(m, stop) {
+    stop.equipment.forEach((e, n) => {
+      const grp = m.items[stop.id + ":" + n];
+      if (!grp) return;
+      const lines = wrap(grp.userData.name), off = tagTexture(lines, false), on = tagTexture(lines, true);
+      const sp = new THREE.Sprite(new THREE.SpriteMaterial({ map: off, depthTest: false, transparent: true }));
+      sp.center.set(0.5, 0);           // the tip of the tag sits on the position
+      sp.renderOrder = 20;
+      const bb = new THREE.Box3().setFromObject(grp), a = grp.userData.at;
+      sp.userData = Object.assign({}, grp.userData, { off, on, aspect: off.image.width / off.image.height, rows: lines.length, base: new THREE.Vector3(m.b.pos.x + a.x, bb.max.y + 0.1, m.b.pos.z + a.z), lift: 0 });
+      sp.position.copy(sp.userData.base);
+      scene.add(sp); tags.push(sp);
+    });
+    m.tagged[stop.id] = true;
+  }
+  const tagHeight = (sp, dist) => dist * (sp.userData.rows > 1 ? 0.047 : 0.033);
+  function showTags() {
+    const b = view.building, stop = view.stop;
+    if (stop && !models[b.id].tagged[stop.id]) makeTags(models[b.id], stop);
+    const mine = tags.filter(sp => { sp.visible = !!stop && sp.userData.stop === stop.id; return sp.visible; });
+    // Where two tags would overlap from the room's camera position, the later one is raised above the other.
+    mine.sort((p, q) => p.userData.base.y - q.userData.base.y || p.userData.base.x - q.userData.base.x);
+    mine.forEach((sp, i) => {
+      const u = sp.userData, d = toPos.distanceTo(u.base), hh = tagHeight(sp, d);
+      u.lift = 0;
+      for (let k = 0; k < i; k++) {
+        const o = mine[k], oh = tagHeight(o, d), top = o.userData.base.y + o.userData.lift + oh;
+        if (Math.abs(o.userData.base.x - u.base.x) < (hh * u.aspect + oh * o.userData.aspect) / 2 + d * 0.004 && u.base.y + u.lift < top + d * 0.004 && u.base.y + u.lift + hh > o.userData.base.y + o.userData.lift) u.lift = top + d * 0.004 - u.base.y;
+      }
+    });
+  }
   function point(stopId, n) {
-    const b = view.building, grp = b && stopId ? models[b.id].items[stopId + ":" + (n || 0)] : null;
-    pointer.visible = !!grp;
-    if (!grp) return;
-    const bb = new THREE.Box3().setFromObject(grp);
-    pointerAt.set((bb.min.x + bb.max.x) / 2, bb.max.y + 0.15, (bb.min.z + bb.max.z) / 2);
+    tags.forEach(sp => { if (sp.visible) { const on = sp.userData.stop === stopId && sp.userData.n === (n || 0); sp.material.map = on ? sp.userData.on : sp.userData.off; sp.renderOrder = on ? 21 : 20; } });
   }
   // A light that moves into whichever room is being looked at.
   const roomLight = new THREE.PointLight(0xffffff, 0, 60, 1.2);
@@ -421,7 +453,7 @@ function init() {
     const fit = (wNeed, hNeed) => Math.max(hNeed / 2 / tan, wNeed / 2 / tan / camera.aspect);
     if (v.stop && v.stop.frame) {
       // Close-up of one room or one group of outdoor equipment.
-      const f = v.stop.frame, p = v.building.pos, d = fit(f.w, f.h) + (f.outdoor ? 3 : v.building.size.depth / 2);
+      const f = v.stop.frame, p = v.building.pos, d = fit(f.w, f.h) + (f.outdoor ? 3 : 4.5);
       const up = f.outdoor ? 0.34 : 0.16;
       return [new THREE.Vector3(p.x + f.x + d * 0.3, f.y + d * up, p.z + f.z + d * 0.94), new THREE.Vector3(p.x + f.x, f.y, p.z + f.z)];
     }
@@ -436,9 +468,10 @@ function init() {
   }
   function focus(v, instant) {
     view = { use: v.use || null, building: v.building || null, stop: v.stop || null, item: v.item || 0 };
-    point(view.stop ? view.stop.id : null, view.item);
     const [p, t] = shot(view);
     fromPos.copy(camera.position); fromTgt.copy(controls.target); toPos.copy(p); toTgt.copy(t);
+    showTags();
+    point(view.stop ? view.stop.id : null, view.item);
     if (instant || reduce) { camera.position.copy(p); controls.target.copy(t); t0 = -1; } else t0 = performance.now();
     const fb = view.building;
     if (view.stop && view.stop.frame && !view.stop.frame.outdoor) {
@@ -472,6 +505,8 @@ function init() {
     ray.setFromCamera(ptr, camera);
     const s = ray.intersectObjects(spots.filter(x => x.visible))[0];
     if (s) return { stop: s.object.userData.stop };
+    const tag = ray.intersectObjects(tags.filter(x => x.visible))[0];
+    if (tag) return tag.object.userData;
     if (view.building) {
       // equipment inside the open building
       const hit = ray.intersectObjects(models[view.building.id].equip, true)[0];
@@ -537,12 +572,12 @@ function init() {
     });
     if (!reduce) fans.forEach(f => { f.rotation.y += dt * 6; });
     spots.forEach(sp => { if (sp.visible) { const base = view.stop ? 1.1 : 3; const s = reduce ? base : base + Math.sin(now / 420 + sp.userData.phase) * base * 0.07; sp.scale.set(s, s, 1); } });
-    if (pointer.visible) {
-      const k = camera.position.distanceTo(pointerAt) * 0.055;
-      pointer.scale.set(k, k, 1);
-      pointer.position.copy(pointerAt);
-      if (!reduce) pointer.position.y += (0.5 + 0.5 * Math.sin(now / 260)) * k * 0.35;
-    }
+    tags.forEach(sp => {
+      if (!sp.visible) return;
+      const u = sp.userData, hh = tagHeight(sp, camera.position.distanceTo(u.base));
+      sp.scale.set(hh * u.aspect, hh, 1);
+      sp.position.set(u.base.x, u.base.y + u.lift, u.base.z);
+    });
     controls.update();
     renderer.render(scene, camera);
   }
