@@ -42,11 +42,6 @@ Also applicable:
 - venmar-erv
 - reddi-duct-heaters
 - nortek-booster-coils
-- reddi-controls
-- sterling-unit-heaters
-- kampmann-top
-- reddi-unit-heaters
-- reddi-ventilation
 - fisair-electrode
 - fisair-resistance
 - steamovap-ier
@@ -69,7 +64,6 @@ Also applicable:
 - steamovap-wro
 - mammoth-ashp
 - venmar-ashp
-- uvr-glo
 - envirotec-sdr
 - envirotec-sdl
 - envirotec-sgx
@@ -141,25 +135,31 @@ Also applicable:
 
 Location: convention-center-1
 Title: Hall air handling
-Text: Custom rooftop systems are sized for peak crowds and turn down when the hall is empty.
+Text: Custom systems are sized for peak crowds and turn down when the hall is empty. Energy recovery wheels cut the cost of the outdoor air a full hall needs.
 Equipment:
 - mammoth-ultraline | Exhibit hall rooftop unit | Large-tonnage custom unit that turns down for an empty hall
 - huntair-fanwall | Fan array | Wide turndown by staging fans
 + temtrol-fanwall
 + governair-fanwall
 + ventrol-fanwall
-
-Location: convention-center-2
-Title: Exhibit hall
-Text: Energy recovery wheels cut the cost of the outdoor air a full hall needs.
-Equipment:
-- klingenburg-wheel | Energy recovery wheel | Recovers energy from the large outdoor air load
-+ novelaire-ecw
 - huntair-ahu | Meeting room air handlers
 + temtrol-ahu
 + governair-ahu
 + ventrol-ahu
 + envirotec-mql
+- klingenburg-wheel | Energy recovery wheel | Recovers energy from the large outdoor air load
++ novelaire-ecw
+
+Location: convention-center-2
+Title: Exhibit hall
+Text: Unit heaters built for large halls warm the floor quickly before an event, and upper-room UV-C treats the air over a full hall.
+Equipment:
+- kampmann-top | Hall unit heaters | Warm-air heaters for halls and large spaces
++ sterling-unit-heaters
++ reddi-unit-heaters
++ reddi-ventilation
++ reddi-controls
+- uvr-glo | Upper-room UV-C
 
 Location: convention-center-3
 Title: Air handling options

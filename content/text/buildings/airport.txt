@@ -59,7 +59,6 @@ Also applicable:
 - mammoth-ultraline
 - mammoth-ashp
 - venmar-ashp
-- uvr-glo
 - envirotec-sdr
 - envirotec-sdl
 - envirotec-sgx
@@ -133,17 +132,7 @@ Equipment:
 + temtrol-fanwall
 + governair-fanwall
 + ventrol-fanwall
-
-Location: airport-2
-Title: Concourse
-Text: Trench units along the glass and UV-C in the air stream keep gate areas comfortable.
-Equipment:
-- kampmann-katherm-hk | Gate lounge trench heating and cooling | Fan-assisted heating and cooling along the glass
-+ kampmann-katherm-qk
-+ kampmann-katherm-qk-nano
-+ kampmann-katherm-nk
-+ kampmann-katherm-qe
-- uvr-sl | In-duct UV-C fixtures | Airstream disinfection for crowded gate areas
+- uvr-sl | In-duct UV-C fixtures | Airstream disinfection in the terminal air handlers
 + uvr-rlm
 + uvr-de
 + uvr-sln
@@ -152,6 +141,17 @@ Equipment:
 + uvr-uvk
 + uvr-lamps
 + uvr-accessories
+
+Location: airport-2
+Title: Concourse
+Text: Trench units along the glass keep gate areas comfortable, and upper-room UV-C treats the air above crowded gate lounges.
+Equipment:
+- kampmann-katherm-hk | Gate lounge trench heating and cooling | Fan-assisted heating and cooling along the glass
++ kampmann-katherm-qk
++ kampmann-katherm-qk-nano
++ kampmann-katherm-nk
++ kampmann-katherm-qe
+- uvr-glo | Upper-room UV-C | Treats the air above crowded gate areas
 
 Location: airport-3
 Title: Baggage hall

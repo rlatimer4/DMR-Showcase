@@ -359,7 +359,7 @@ export function makeProps({ THREE, box, mesh, material }) {
     cassette: u => { u.B(1.3, 0.3, 1.3, 0, -0.3, 0); u.B(1.4, 0.05, 1.4, 0, -0.34, 0, "#ffffff"); u.B(0.75, 0.04, 0.75, 0, -0.37, 0, "dark"); [-1, 1].forEach(k => { u.B(1, 0.04, 0.1, 0, -0.37, k * 0.56, "dark"); u.B(0.1, 0.04, 1, k * 0.56, -0.37, 0, "dark"); }); u.B(1.36, 0.06, 1.36, 0, -0.3, 0, "trim"); },
     minisplit: u => { u.wall(2.4, 1.7, 0, -1.7, -0.3); u.B(1.6, 0.5, 0.36, 0, -0.75, 0); u.B(1.6, 0.08, 0.38, 0, -0.77, 0, "trim"); u.B(1.3, 0.05, 0.1, 0, -0.74, 0.2, "dark"); u.B(0.05, 0.9, 0.05, 0.7, -1.65, -0.2, GALV); },
     // packaged terminal unit: through the wall under the window
-    ptac: u => { u.wall(2.6, 2.6, 0, 0, -0.25); u.see(u.B(1.7, 1.1, 0.06, 0, 1.25, -0.2, "glass"), material("glass")); u.B(1.8, 0.08, 0.2, 0, 1.17, -0.15, "#ffffff"); u.B(1.2, 0.45, 0.4, 0, 0.12, 0); u.B(1.2, 0.05, 0.42, 0, 0.12, 0, "trim"); u.B(1.05, 0.03, 0.18, -0.05, 0.57, 0.05, "dark"); for (let k = 0; k < 9; k++) u.B(0.03, 0.04, 0.18, -0.5 + k * 0.11, 0.57, 0.05, GALV); u.B(0.2, 0.03, 0.14, 0.48, 0.575, 0.05, "#1e9be8"); u.B(1.1, 0.1, 0.02, 0, 0.16, 0.2, "dark"); },
+    ptac: u => { u.B(2.6, 2.2, 0.14, 0, 0, -0.25, "#d9d2c5"); u.see(u.B(1.7, 0.95, 0.06, 0, 1.05, -0.2, "glass"), material("glass")); u.B(1.8, 0.08, 0.2, 0, 0.97, -0.15, "#ffffff"); u.B(0.12, 1.5, 0.08, -1, 0.6, -0.14, "#7a5a3a"); u.B(0.12, 1.5, 0.08, 1, 0.6, -0.14, "#7a5a3a"); u.B(1.2, 0.45, 0.4, 0, 0.12, 0); u.B(1.2, 0.05, 0.42, 0, 0.12, 0, "trim"); u.B(1.05, 0.03, 0.18, -0.05, 0.57, 0.05, "dark"); for (let k = 0; k < 9; k++) u.B(0.03, 0.04, 0.18, -0.5 + k * 0.11, 0.57, 0.05, GALV); u.B(0.2, 0.03, 0.14, 0.48, 0.575, 0.05, "#1e9be8"); u.B(1.1, 0.1, 0.02, 0, 0.16, 0.2, "dark"); },
     unitheater: u => { u.C(0.05, 0.05, 0.8, -0.4, -0.8, 0, "dark"); u.C(0.05, 0.05, 0.8, 0.4, -0.8, 0, "dark"); u.B(1.2, 1, 0.9, 0, -1.8, 0, "#ffa500"); for (let k = 0; k < 4; k++) u.B(1.1, 0.06, 0.1, 0, -1.7 + k * 0.22, 0.48, "dark"); u.Z(0.4, 0.2, 0, -1.3, -0.5, "dark", 18); },
     ductheater: u => { u.hang(0.8, 0.25, -0.2); u.B(2.2, 0.6, 0.7, 0, -0.8, 0, DUCT); u.B(0.5, 0.64, 0.74, 0, -0.82, 0, HOT); u.B(0.35, 0.5, 0.3, 0, -0.75, 0.5, "dark"); },
     aircurtain: u => { u.B(2.8, 0.4, 0.6, 0, -0.4, 0); u.B(2.6, 0.06, 0.2, 0, -0.44, 0.1, "dark"); u.B(2.8, 0.1, 0.62, 0, -0.1, 0, "trim"); for (let k = 0; k < 5; k++) u.B(0.04, 1.3, 0.04, -1 + k * 0.5, -1.75, 0.1, "#8fd0f5"); },
@@ -388,8 +388,8 @@ export function makeProps({ THREE, box, mesh, material }) {
     fanwall: ["floor", 4.5, 0.8, 3.1], coilwall: ["floor", 4.6, 0.8, 3.1], erv: ["floor", 8.4, 0.55, 2.7], wheel: ["floor", 3.2, 0.75, 3.3], plate: ["floor", 5.4, 0.6, 3.3], mua: ["floor", 9.6, 0.5, 4.3],
     turnover: ["floor", 2.4, 0.9, 6.6], coil: ["floor", 3.7, 0.75, 3], "coil-dx": ["floor", 3.9, 0.75, 3], "coil-steam": ["floor", 3.7, 0.75, 3], "coil-freeze": ["floor", 3.8, 0.75, 3], "coil-smart": ["floor", 3.7, 0.75, 3],
     uv: ["floor", 3.7, 0.75, 3], "uv-ext": ["floor", 4, 0.75, 3], humidifier: ["floor", 3.5, 0.85, 2.9], "humidifier-steam": ["floor", 4.2, 0.75, 3], "humidifier-exchange": ["floor", 3.4, 0.85, 2.9],
-    evap: ["floor", 3.4, 0.75, 3], atomizer: ["floor", 3.4, 0.75, 3], dehumidifier: ["floor", 4.4, 0.75, 4], crah: ["floor", 4, 1, 2.4], vrf: ["floor", 3.1, 1, 2.2], wshp: ["floor", 1.3, 1.1, 2.8],
-    "blowercoil-vertical": ["floor", 1.9, 1, 2.8], "fancoil-hirise": ["floor", 1.6, 1, 0], "fancoil-vertical": ["floor", 1.4, 1.15, 2], ptac: ["floor", 2.7, 0.95, 2.6], box: ["floor", 2.1, 1, 1.4],
+    evap: ["floor", 3.4, 0.75, 3], atomizer: ["floor", 3.4, 0.75, 3], dehumidifier: ["floor", 4.4, 0.75, 4], crah: ["floor", 4, 1, 2.4], vrf: ["perimeter", 3.1, 0.6, 2.2], wshp: ["floor", 1.3, 1.1, 2.8],
+    "blowercoil-vertical": ["floor", 1.9, 1, 2.8], "fancoil-hirise": ["floor", 1.6, 1, 0], "fancoil-vertical": ["floor", 1.4, 1.15, 2], ptac: ["floor", 2.7, 1.1, 2.3], box: ["floor", 2.1, 1, 1.4],
     "fancoil-floor": ["perimeter", 1.7, 1.35, 0.8], "fancoil-floor-low": ["perimeter", 2.4, 1.35, 0.5], radiator: ["perimeter", 2.3, 1.25, 1.2], cabinetheater: ["perimeter", 1.5, 1.35, 0.9],
     fintube: ["perimeter", 4.6, 1, 0.7], trench: ["perimeter", 4.4, 1, 0.2],
     fancoil: ["ceiling", 2, 1.25], "fancoil-low": ["ceiling", 2.6, 1.2], blowercoil: ["ceiling", 3.1, 1.05], "fancoil-round": ["ceiling", 1.8, 1.3], "coil-duct": ["ceiling", 2.7, 1.1],
@@ -400,7 +400,7 @@ export function makeProps({ THREE, box, mesh, material }) {
 
   /*
    * Works out where each piece of equipment at one location goes.
-   * room: { x, w, floorY, ceilY, slabY, dp } indoors, or { x, w, floorY, z, outdoor: true } on a roof or in a yard.
+   * room: { x, w, floorY, ceilY, slabY, dp, occupied } indoors, or { x, w, floorY, z, outdoor: true } on a roof or in a yard.
    * Floor-level pieces share the width of the room between them, and so do ceiling-level pieces,
    * so nothing overlaps and the width is used. Returns one placement per shape, in the same order.
    */
@@ -421,6 +421,7 @@ export function makeProps({ THREE, box, mesh, material }) {
     items.forEach(i => {
       if (r.outdoor) { i.y = r.floorY + (high(i) ? 2.2 * i.scale : 0); i.z = r.z; return; }
       i.roomH = r.ceilY - r.floorY; i.slab = r.slabY - r.ceilY;
+      i.pad = !!r.occupied && i.lane === "floor" && PLANT.test(i.shape);
       if (i.lane === "ceiling") { i.y = r.ceilY; i.z = r.dp / 2 - 2.8; }
       else if (i.lane === "wall") { i.y = r.ceilY; i.z = r.dp / 2 - 4.4; }
       else if (i.lane === "perimeter") { i.y = r.floorY; i.z = r.dp / 2 - 1.2; }
@@ -429,8 +430,11 @@ export function makeProps({ THREE, box, mesh, material }) {
     });
     return items;
   }
+  // Plant that serves a room but would really stand outside it. In an occupied room it is drawn on a marked service pad.
+  const PLANT = /^(ahu|fanwall|coilwall|coil|uv$|uv-ext|wheel|plate|erv|rooftop|mua|vcube|chiller|dehumidifier|humidifier|evap|atomizer)/;
   // Draws one placement from arrange() into the group.
   function equip(g, p) {
+    if (p.pad) { const w = p.w * p.scale + 0.5; box(g, w, 0.05, 3.6, p.x, p.y + 0.025, p.z, material("#c3ccd4")); box(g, w + 0.16, 0.03, 3.76, p.x, p.y + 0.015, p.z, material("#ffa500")); }
     SHAPES[p.shape](unitTools(g, { x: p.x, y: p.y, z: p.z, scale: p.scale, roomH: p.roomH, slab: p.outdoor ? 0.01 : p.slab, mainZ: p.mainZ, mainY: p.mainY }));
   }
   return { furnish, arrange, equip, shapes: Object.keys(SHAPES) };

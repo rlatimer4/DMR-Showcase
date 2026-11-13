@@ -51,17 +51,6 @@ Also applicable:
 - mammoth-ashp
 - venmar-ashp
 - uvr-glo
-- envirotec-sdr
-- envirotec-sdl
-- envirotec-sgx
-- envirotec-crb
-- envirotec-crq
-- envirotec-vfr
-- envirotec-vfl
-- envirotec-cfl
-- envirotec-ddc
-- envirotec-pneumatic
-- envirotec-rft
 - envirotec-crc
 - envirotec-cfl-cc
 - envirotec-hp
@@ -154,11 +143,17 @@ Equipment:
 + steamovap-safety
 + steamovap-water-filter
 + steamovap-wro
-- huntair-ahu | Lobby and rehearsal air handlers
-+ temtrol-ahu
-+ governair-ahu
-+ ventrol-ahu
-+ envirotec-mql
+- envirotec-sdr | Quiet VAV terminals | Selected for low noise over the seating
++ envirotec-sdl
++ envirotec-sgx
++ envirotec-crb
++ envirotec-crq
++ envirotec-vfr
++ envirotec-vfl
++ envirotec-cfl
++ envirotec-ddc
++ envirotec-pneumatic
++ envirotec-rft
 
 Location: fine-arts-center-3
 Title: Air handling options

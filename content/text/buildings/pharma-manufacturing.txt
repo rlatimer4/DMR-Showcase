@@ -71,20 +71,20 @@ Equipment:
 + temtrol-ahu
 + huntair-ahu
 + governair-ahu
+- huntair-fanwall | Fan array | Redundant fans in the cleanroom air handlers
++ temtrol-fanwall
++ governair-fanwall
++ ventrol-fanwall
 
 Location: pharma-manufacturing-2
 Title: Cleanroom
-Text: Recirculation units and fan filter units keep particle counts within class. Fan arrays provide redundancy.
+Text: Fan filter units in a sealed ceiling grid keep particle counts within class.
 Equipment:
 - huntair-ffu | CleanPak fan filter units | Available with a sensible cooling coil on the side (PlenPak)
 + huntair-flex-trak
 + huntair-light-grid
 + huntair-plenums
 - huntair-ceiling-grid | Cleanroom ceiling grid | Supports the filters, lights and fan filter units
-- huntair-fanwall | Fan array
-+ temtrol-fanwall
-+ governair-fanwall
-+ ventrol-fanwall
 
 Location: pharma-manufacturing-3
 Title: Dry room

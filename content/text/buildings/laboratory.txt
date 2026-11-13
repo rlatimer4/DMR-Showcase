@@ -24,6 +24,9 @@ Challenges:
 Also applicable:
 # Product lines that also suit this building type but have no 3D model of their own here.
 # One product code per line. They are listed on the building's panel and count for the catalog's building filter.
+- temtrol-knockdown
+- huntair-knockdown
+- ventrol-knockdown
 - novelaire-ecw
 - klingenburg-wheel
 - venmar-energypack
@@ -140,7 +143,6 @@ Location: laboratory-4
 Title: Vivarium
 Text: Animal holding rooms need constant ventilation, a tight temperature and humidity band, and odour control.
 Equipment:
-- nortek-gas-phase | Air handler with gas-phase filtration | Removes odours and ammonia
 - steamovap-ise | Clean steam humidifier | Sterile steam with no boiler chemicals for animal holding rooms
 + fisair-electrode
 + fisair-resistance
@@ -172,6 +174,9 @@ Equipment:
 + envirotec-ddc
 + envirotec-pneumatic
 + envirotec-rft
+- reddi-duct-heaters | Room reheat | Trims each holding room to its own temperature
++ nortek-booster-coils
++ reddi-controls
 
 Location: laboratory-5
 Title: Clean lab
@@ -224,8 +229,7 @@ Equipment:
 + governair-ahu
 + ventrol-ahu
 + envirotec-mql
-- ventrol-knockdown | Knockdown replacement air handler | Assembled in place during lab renovations
-+ temtrol-knockdown
-+ huntair-knockdown
 - nortek-low-humidity | Air handler with desiccant dehumidification
 + novelaire-desiccant-wheels
+- nortek-gas-phase | Air handler with gas-phase filtration | Removes vivarium odours and ammonia
+

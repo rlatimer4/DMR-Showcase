@@ -37,9 +37,6 @@ Also applicable:
 - klingenburg-wheel
 - venmar-energypack
 - venmar-erv
-- reddi-duct-heaters
-- nortek-booster-coils
-- reddi-controls
 - nortek-acoustiflo
 - sterling-unit-heaters
 - kampmann-top
@@ -117,20 +114,15 @@ Equipment:
 + huntair-ahu
 + governair-ahu
 + envirotec-mql
-
-Location: higher-education-2
-Title: Teaching labs
-Text: Custom air handlers and fan arrays supply the high air change rates labs need.
-Equipment:
-- huntair-ahu | Lab air handler | 100% outdoor air
-+ temtrol-ahu
-+ governair-ahu
-+ ventrol-ahu
-+ envirotec-mql
-- huntair-fanwall | Fan array
+- huntair-fanwall | Lab air handler fan array | Keeps labs supplied through a fan failure
 + temtrol-fanwall
 + governair-fanwall
 + ventrol-fanwall
+
+Location: higher-education-2
+Title: Teaching labs
+Text: Supply terminals track the fume hood exhaust to hold each lab at its pressure, with reheat for the high air change rates.
+Equipment:
 - envirotec-sdr | Lab airflow VAV terminals
 + envirotec-sdl
 + envirotec-sgx
@@ -142,6 +134,9 @@ Equipment:
 + envirotec-ddc
 + envirotec-pneumatic
 + envirotec-rft
+- nortek-booster-coils | Zone reheat coil
++ reddi-duct-heaters
++ reddi-controls
 
 Location: higher-education-3
 Title: Lecture halls: VRF system

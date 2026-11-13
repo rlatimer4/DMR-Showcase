@@ -126,13 +126,8 @@ Equipment:
 
 Location: hospital-2
 Title: Operating suite
-Text: A single ceiling assembly delivers filtered air over the surgical table. Steam humidifiers hold the room within its required humidity range.
+Text: Steam humidifiers hold the operating room within its required humidity range, and airflow terminals hold it positive to the corridor.
 Equipment:
-- huntair-ahu | Operating room air handler | Dedicated custom unit with HEPA final filters for the surgical suite
-+ temtrol-ahu
-+ governair-ahu
-+ ventrol-ahu
-+ envirotec-mql
 - steamovap-ise | Steam exchange humidifier | Clean steam from the central boiler holds the room at 20 to 60% relative humidity
 + fisair-electrode
 + fisair-resistance
@@ -148,6 +143,17 @@ Equipment:
 + steamovap-water-filter
 + steamovap-wro
 - uvr-glo | Upper-room UV-C
+- envirotec-sdr | Operating room airflow terminal | Holds the room positive to the corridor
++ envirotec-sdl
++ envirotec-sgx
++ envirotec-crb
++ envirotec-crq
++ envirotec-vfr
++ envirotec-vfl
++ envirotec-cfl
++ envirotec-ddc
++ envirotec-pneumatic
++ envirotec-rft
 
 Location: hospital-3
 Title: Patient rooms: fan coil system

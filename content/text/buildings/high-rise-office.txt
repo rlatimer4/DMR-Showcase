@@ -107,7 +107,6 @@ Title: Open office: VAV system
 Text: Fan-powered VAV boxes condition the floor with small ducts and shallow ceilings.
 Equipment:
 - envirotec-crb | Series fan-powered VAV terminals | Hot water reheat at the perimeter
-+ envirotec-sdr
 + envirotec-sdl
 + envirotec-sgx
 + envirotec-crq
@@ -117,15 +116,7 @@ Equipment:
 + envirotec-ddc
 + envirotec-pneumatic
 + envirotec-rft
-- uvr-rlm | UV-C coil fixture | Keeps the floor air handler coil clean
-+ uvr-de
-+ uvr-sl
-+ uvr-sln
-+ uvr-dln
-+ uvr-x-plus
-+ uvr-uvk
-+ uvr-lamps
-+ uvr-accessories
+- envirotec-sdr | Interior single-duct VAV terminals | Cooling-only boxes for the interior zones
 
 Location: high-rise-office-5
 Title: Open office: sensible cooling system
@@ -188,3 +179,13 @@ Equipment:
 + huntair-fanwall
 + temtrol-fanwall
 + ventrol-fanwall
+- uvr-rlm | UV-C coil fixture | Keeps the floor air handler coil clean
++ uvr-de
++ uvr-sl
++ uvr-sln
++ uvr-dln
++ uvr-x-plus
++ uvr-uvk
++ uvr-lamps
++ uvr-accessories
+

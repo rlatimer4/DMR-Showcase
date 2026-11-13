@@ -356,7 +356,7 @@ function init() {
           }
         }
         pos = new THREE.Vector3(cx, y + 5.8, z);
-        s.frame = { x: cx, y: y + 2, z, w: room + 5, h: 9, outdoor: true };
+        s.frame = { x: cx, y: y + 2, z, w: room + 8, h: 9, outdoor: true };
         // invisible click target around the outdoor equipment
         const zone = new THREE.Mesh(new THREE.BoxGeometry(room + 2, 6, 7), new THREE.MeshBasicMaterial({ visible: false }));
         zone.position.set(cx, y + 3, z);
@@ -366,7 +366,7 @@ function init() {
         const y0 = s.at.floor * fh, cw = w / bays, col = Math.min(bays - 1, Math.floor(s.at.x * bays)), bx = -w / 2 + (col + 0.5) * cw;
         if (!b.model) {
           P.furnish(shell, s.space, { cx: bx, y: y0, w: cw, h: fh, dp });
-          P.arrange(shapes, { x: bx, w: cw - 1.4, floorY: y0 + 0.3, ceilY: y0 + fh - 0.75, slabY: y0 + fh, dp }).forEach(place);
+          P.arrange(shapes, { x: bx, w: cw - 1.4, floorY: y0 + 0.3, ceilY: y0 + fh - 0.75, slabY: y0 + fh, dp, occupied: s.space !== "mechanical" && s.space !== "plant" }).forEach(place);
         }
         const room = new THREE.Mesh(new THREE.BoxGeometry(cw - 0.5, fh - 0.5, dp - 0.8),
           new THREE.MeshBasicMaterial({ color: 0xffa500, transparent: true, opacity: 0.07, depthWrite: false }));

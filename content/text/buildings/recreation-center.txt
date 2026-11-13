@@ -27,6 +27,9 @@ Also applicable:
 - governair-ahu
 - ventrol-ahu
 - envirotec-mql
+- temtrol-knockdown
+- huntair-knockdown
+- ventrol-knockdown
 - huntair-fanwall
 - temtrol-fanwall
 - governair-fanwall
@@ -141,9 +144,8 @@ Equipment:
 
 Location: recreation-center-2
 Title: Gymnasium
-Text: Packaged rooftop units handle the gym, and unit heaters cover the entrances.
+Text: Unit heaters and a cabinet heater cover the gym and its entrances.
 Equipment:
-- mammoth-ultraline | Gym rooftop unit | Packaged heating and cooling sized for a full gym
 - sterling-unit-heaters | Vestibule unit heaters
 + kampmann-top
 + reddi-unit-heaters
@@ -160,6 +162,5 @@ Equipment:
 + venmar-erv
 - nortek-low-humidity | Air handler with desiccant dehumidification
 + novelaire-desiccant-wheels
-- temtrol-knockdown | Knockdown replacement air handler | Assembled inside the existing mechanical room
-+ huntair-knockdown
-+ ventrol-knockdown
+- mammoth-ultraline | Gym rooftop unit | Packaged heating and cooling sized for a full gym
+

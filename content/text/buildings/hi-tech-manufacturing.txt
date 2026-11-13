@@ -88,17 +88,13 @@ Equipment:
 
 Location: hi-tech-manufacturing-2
 Title: Cleanroom
-Text: Fan arrays and cleanroom air systems recirculate filtered air continuously.
+Text: Fan filter units in a sealed ceiling grid recirculate filtered air continuously.
 Equipment:
 - huntair-ffu | CleanPak fan filter units | Available with a sensible cooling coil on the side (PlenPak)
 + huntair-flex-trak
 + huntair-light-grid
 + huntair-plenums
 - huntair-ceiling-grid | Cleanroom ceiling grid | Supports the filters, lights and fan filter units
-- huntair-fanwall | Recirculation fan array
-+ temtrol-fanwall
-+ governair-fanwall
-+ ventrol-fanwall
 
 Location: hi-tech-manufacturing-3
 Title: Make-up air
@@ -128,6 +124,10 @@ Equipment:
 + steamovap-safety
 + steamovap-water-filter
 + steamovap-wro
+- huntair-fanwall | Recirculation fan array | Redundant fans in the recirculation air handlers
++ temtrol-fanwall
++ governair-fanwall
++ ventrol-fanwall
 
 Location: hi-tech-manufacturing-4
 Title: Air handling options
