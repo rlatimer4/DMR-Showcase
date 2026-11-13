@@ -351,7 +351,7 @@
     })
     .then(function () {
       reconcile();
-      return Promise.all(["assets/js/app.js?v=4", "assets/js/tour.js?v=4", "assets/js/map.js?v=4"].map(function (src) { return load(src); }));
+      return Promise.all(["assets/js/app.js?v=5", "assets/js/tour.js?v=5", "assets/js/map.js?v=4"].map(function (src) { return load(src); }));
     })
     .then(function () {
       report();

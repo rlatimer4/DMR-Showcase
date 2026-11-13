@@ -112,7 +112,7 @@
     var s = findStop(id);
     if (!s) return;
     show(null, s.building, s, item);
-    if (scroll) document.getElementById("walkthrough").scrollIntoView({ behavior: reduce ? "auto" : "smooth" });
+    if (scroll) D.showPage("walkthrough");
   };
   // Called when a 3D model is selected: point at it, list its room, and open its product window.
   D.selectEquipment = function (stopId, n, open) {
