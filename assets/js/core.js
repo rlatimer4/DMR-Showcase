@@ -496,7 +496,7 @@
   Promise.all(content.map(function (src) { return load(src); }))
     .then(function () {
       // Read the words for every product and building, plus the Spec Match CSV table.
-      var csvJob = fetch("content/spec-match.csv?v=23").then(function (r) {
+      var csvJob = fetch("content/spec-match.csv?v=24").then(function (r) {
         return r.ok ? r.text() : "";
       }).then(function (txt) {
         if (txt) applyCrossRefCsv(txt);
@@ -508,7 +508,7 @@
     })
     .then(function () {
       reconcile();
-      return Promise.all(["assets/js/app.js?v=13", "assets/js/tour.js?v=7", "assets/js/map.js?v=7"].map(function (src) { return load(src); }));
+      return Promise.all(["assets/js/app.js?v=14", "assets/js/tour.js?v=7", "assets/js/map.js?v=7"].map(function (src) { return load(src); }));
     })
     .then(function () {
       report();

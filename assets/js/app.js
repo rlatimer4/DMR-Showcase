@@ -611,6 +611,22 @@
     return true;
   }
 
+  // Products listed in a category but tagged on none of its requirements (accessories and
+  // complementary equipment such as FANWALL arrays or freeze-protection coils) can't be judged
+  // by the requirement filters, so they stay visible as alternates instead of being eliminated.
+  function isUnratedInCategory(rec, pid) {
+    if (!rec) return false;
+    if (!rec.taggedPids) {
+      var tagged = {};
+      var mark = function (o) { Object.keys(o.prodMap || {}).forEach(function (id) { tagged[id] = true; }); };
+      (rec.groups || []).forEach(function (g) { g.options.forEach(mark); });
+      (rec.selects || []).forEach(function (s) { s.options.forEach(mark); });
+      (rec.sliders || []).forEach(function (sl) { sl.steps.forEach(mark); });
+      rec.taggedPids = tagged;
+    }
+    return !rec.taggedPids[pid];
+  }
+
   function xrefCardHtml(entry, bodCtx, activeReqObjs, level1Rec) {
     var catObj = cats[entry.category];
     var roleHint = bodCtx && bodCtx.mfr
@@ -655,9 +671,16 @@
     var primaryList = [];
     var altList = [];
     var matchedLabelsById = {};
+    var unratedById = {};
 
     if (reqs.length) {
+      var unrated = [];
       var passing = candOrder.filter(function (pid) {
+        if (isUnratedInCategory(level1Rec, pid)) {
+          unratedById[pid] = true;
+          unrated.push(pid);
+          return false;
+        }
         var meetsAll = reqs.every(function (ro) { return Boolean(ro.prodMap[pid]); });
         if (!meetsAll || !passesCatalogCombos(pid, reqs)) return false;
         matchedLabelsById[pid] = reqs.map(function (ro) { return ro.label; });
@@ -671,6 +694,8 @@
         primaryList = altList.slice(0, 3);
         altList = altList.slice(3);
       }
+      // Unrated accessories never become the headline match, and only show beside a real match.
+      if (primaryList.length) altList = altList.concat(unrated);
     } else {
       primaryList = (entry.primary || []).filter(function (id) { return Boolean(products[id]); });
       altList = (entry.alternates || []).filter(function (id) { return Boolean(products[id]); });
@@ -721,7 +746,8 @@
       var hitCount = (matchedLabelsById[pid] || []).length;
       return '<div class="xref-alt-row">' +
         '<button type="button" class="xref-alt-name" data-product="' + p.id + '"><strong>' + escHtml(brands[p.brand].name) + "</strong> " + escHtml(p.name) +
-          (reqs.length && hitCount ? ' <span class="xref-alt-hits">(' + hitCount + "/" + reqs.length + ")</span>" : "") + "</button>" +
+          (reqs.length && hitCount ? ' <span class="xref-alt-hits">(' + hitCount + "/" + reqs.length + ")</span>" : "") +
+          (reqs.length && unratedById[pid] ? ' <span class="xref-alt-hits">(accessory — not filtered by requirements)</span>' : "") + "</button>" +
         '<div class="xref-alt-acts">' +
           '<button type="button" class="link cmp-btn" data-compare="' + p.id + '">Compare</button>' +
           '<button type="button" class="add add-mini" data-add="' + p.id + '" data-role="' + escAttr(roleHint) + '" data-entry-id="' + escAttr(entry.id) + '" data-bod="' + escAttr(bodLabelStr) + '" data-reqs="' + escAttr(reqSummaryStr) + '">+ Add to Spec Cart</button>' +

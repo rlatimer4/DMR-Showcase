@@ -6,11 +6,11 @@
 
 Name: VB / VR Vertical Reduced Footprint Blower Coil Units
 
-Summary: Reduced-footprint vertical blower coil units up to 4,000 CFM engineered for tight mechanical closets, stair-core chases, and retrofits where floor area is constrained.
+Summary: Reduced-footprint vertical blower coil units up to 3,000 CFM engineered for tight mechanical closets, stair-core chases, and retrofits where floor area is constrained.
 
 Key points:
 - Compact vertical footprint fits mechanical closets immediately adjacent to occupied classrooms or offices
-- Capacities up to 4,000 CFM with 4- to 8-row chilled water, hot water, or DX coils and MERV 8–14 filters
+- Capacities up to 3,000 CFM with 4- to 8-row chilled water, hot water, or DX coils and MERV 8–14 filters
 - Double-wall insulated interior with sloped stainless steel drain pan option for IAQ compliance
 - AHRI 430 / 440 certified and UL 1995 listed for commercial and institutional retrofits
 
@@ -28,7 +28,7 @@ Documents:
 # Remove the # at the start of a line to use it.
 # Badge: New
 Specifications:
-- Airflow range: Up to 4,000 CFM vertical reduced-footprint closet blower coil
+- Airflow range: Up to 3,000 CFM vertical reduced-footprint closet blower coil
 - Construction: Double-wall insulated cabinet with sloped stainless drain pan option
 - Coils: 4 to 8-row chilled water, hot water or DX coils; MERV 8 to MERV 14 filters
 - Certifications: AHRI 430 / 440 certified, UL 1995 listed
