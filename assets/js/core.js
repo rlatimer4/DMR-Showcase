@@ -496,7 +496,7 @@
   Promise.all(content.map(function (src) { return load(src); }))
     .then(function () {
       // Read the words for every product and building, plus the Spec Match CSV table.
-      var csvJob = fetch("content/spec-match.csv?v=20").then(function (r) {
+      var csvJob = fetch("content/spec-match.csv?v=21").then(function (r) {
         return r.ok ? r.text() : "";
       }).then(function (txt) {
         if (txt) applyCrossRefCsv(txt);
