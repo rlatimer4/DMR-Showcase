@@ -21,6 +21,7 @@
   D.buildings = [];
   D.installs = D.installs || [];
   D.gallery = D.gallery || [];
+  D.crossref = D.crossref || [];
   D.issues = [];
   function issue(kind, text) { D.issues.push({ kind: kind, text: text }); }
 
@@ -124,6 +125,136 @@
       return r.text();
     }).then(function (t) { apply(target, parseText(t)); }, function () {
       issue("error", "Could not read " + path + ". The words for \"" + (target.name || target.id) + "\" are missing until that file exists.");
+    });
+  }
+
+  /* ---------- CSV parser (content/spec-match.csv) ---------- */
+
+  function parseCsv(src) {
+    src = String(src || "").replace(/^\uFEFF/, "");
+    var rows = [], row = [], field = "", inQ = false, i = 0;
+    for (; i < src.length; i++) {
+      var ch = src.charAt(i), next = src.charAt(i + 1);
+      if (inQ) {
+        if (ch === '"' && next === '"') { field += '"'; i++; }
+        else if (ch === '"') inQ = false;
+        else field += ch;
+      } else {
+        if (ch === '"') inQ = true;
+        else if (ch === ",") { row.push(field.trim()); field = ""; }
+        else if (ch === "\r" || ch === "\n") {
+          if (ch === "\r" && next === "\n") i++;
+          row.push(field.trim());
+          if (row.some(function (c) { return c !== ""; }) && row[0].charAt(0) !== "#") rows.push(row);
+          row = []; field = "";
+        } else field += ch;
+      }
+    }
+    if (field.length || row.length) {
+      row.push(field.trim());
+      if (row.some(function (c) { return c !== ""; }) && row[0].charAt(0) !== "#") rows.push(row);
+    }
+    return rows;
+  }
+  function splitCsvList(val, sep) {
+    return String(val || "").split(sep || /[,;|]+/).map(function (s) { return s.trim(); }).filter(Boolean);
+  }
+  function applyCrossRefCsv(src) {
+    var rows = parseCsv(src);
+    if (rows.length < 2) return;
+    var hdr = rows[0].map(function (h) { return h.toLowerCase().trim(); });
+    function col(names) {
+      for (var n = 0; n < names.length; n++) {
+        var idx = hdr.indexOf(names[n]);
+        if (idx > -1) return idx;
+      }
+      return -1;
+    }
+    var iId = col(["id"]), iCat = col(["category"]),
+      iL1 = col(["level 1 category", "level1"]), iL2 = col(["level 2 sub-category", "level2"]), iL3 = col(["level 3 configuration", "level3"]),
+      iType = col(["equipment type", "equipmenttype"]),
+      iComp = col(["bod manufacturer", "competitor"]), iMod = col(["bod models", "models"]),
+      iBodDesc = col(["bod product description", "boddescription"]), iModCat = col(["model catalog", "modelcatalog"]),
+      iReq = col(["requirement checkboxes", "requirements", "reqcheckboxes"]),
+      iKnown = col(["known bod requirements", "bod default requirements", "boddefaults"]),
+      iSug = col(["autofill suggestions", "suggestions"]), iKey = col(["search keywords", "aliases"]),
+      iPrim = col(["closest dmr matches", "primary"]), iAlt = col(["alternate dmr options", "alternates"]),
+      iSum = col(["dmr selection guidance", "matchsummary"]), iSpec = col(["division 23 spec text", "spectext"]);
+    D.crossref = rows.slice(1).map(function (r, idx) {
+      function g(ci) { return ci > -1 && ci < r.length ? r[ci] : ""; }
+      var rowId = g(iId) || ("spec-row-" + (idx + 1));
+      var comp = g(iComp), mods = g(iMod), eqType = g(iType), bodDesc = g(iBodDesc) || eqType;
+      var sugs = splitCsvList(g(iSug), /[|;]+/);
+      var primaryList = splitCsvList(g(iPrim), /[,;|]+/);
+      var altList = splitCsvList(g(iAlt), /[,;|]+/);
+      var fallbackProds = primaryList.concat(altList);
+      var bodDefaults = splitCsvList(g(iKnown), /[|;]+/).map(function (item) {
+        var parts = item.split("::");
+        var grp = (parts[0] || "").trim(), lbl = (parts[1] || "").trim();
+        return grp && lbl ? (grp + "::" + lbl) : "";
+      }).filter(Boolean);
+      var catalog = [], seenMfr = {};
+      splitCsvList(g(iModCat), /[|]+/).forEach(function (item) {
+        var parts = item.split("::");
+        var mfr = (parts[0] || "").trim(), mod = (parts[1] || "").trim(), desc = (parts[2] || "").trim();
+        var modDefs = parts.length > 3
+          ? splitCsvList(parts.slice(3).join("::"), /[;]+/).map(function (x) {
+              var sp = x.split("::");
+              var g0 = (sp[0] || "").trim(), l0 = (sp[1] || "").trim();
+              return g0 && l0 ? (g0 + "::" + l0) : "";
+            }).filter(Boolean)
+          : [];
+        if (mfr && mod) {
+          seenMfr[mfr.toLowerCase()] = true;
+          catalog.push({
+            mfr: mfr,
+            model: mod,
+            desc: desc || bodDesc,
+            entryId: rowId,
+            defaults: modDefs.length ? modDefs : bodDefaults.slice()
+          });
+        }
+      });
+      splitCsvList(comp, /[,\/;]+/).forEach(function (singleMfr) {
+        if (singleMfr && !seenMfr[singleMfr.toLowerCase()]) {
+          seenMfr[singleMfr.toLowerCase()] = true;
+          catalog.push({ mfr: singleMfr, model: eqType, desc: bodDesc, entryId: rowId, defaults: bodDefaults.slice() });
+        }
+      });
+      var reqCheckboxes = [];
+      splitCsvList(g(iReq), /[|]+/).forEach(function (item) {
+        var parts = item.split("::");
+        var group = (parts[0] || "").trim(), label = (parts[1] || "").trim();
+        var prods = splitCsvList(parts.slice(2).join("::").trim(), /[,;\s]+/);
+        if (group && label) {
+          reqCheckboxes.push({
+            group: group,
+            label: label,
+            key: group + "::" + label,
+            products: prods.length ? prods : fallbackProds.slice()
+          });
+        }
+      });
+      return {
+        id: rowId,
+        category: g(iCat).toLowerCase(),
+        level1: g(iL1),
+        level2: g(iL2),
+        level3: g(iL3),
+        equipmentType: eqType,
+        competitor: comp,
+        models: mods,
+        bodDescription: bodDesc,
+        modelCatalog: catalog,
+        reqCheckboxes: reqCheckboxes,
+        bodDefaults: bodDefaults,
+        suggestions: sugs,
+        aliases: splitCsvList(g(iKey), /[,;|]+/),
+        primary: primaryList,
+        alternates: altList,
+        matchSummary: g(iSum),
+        specText: g(iSpec)
+      };
     });
   }
 
@@ -271,6 +402,17 @@
     D.gallery.forEach(function (g) {
       if (g.product && !products[g.product]) { issue("info", "Gallery photo \"" + g.caption + "\" pointed at a product that is no longer available. The link was removed."); g.product = null; }
     });
+    D.crossref = (D.crossref || []).filter(function (x) {
+      x.primary = (x.primary || []).filter(function (id) {
+        if (!products[id]) { issue("warn", "Spec Match row \"" + x.id + "\" referenced an unknown product \"" + id + "\"."); return false; }
+        return true;
+      });
+      x.alternates = (x.alternates || []).filter(function (id) {
+        if (!products[id]) { issue("warn", "Spec Match row \"" + x.id + "\" referenced an unknown alternate product \"" + id + "\"."); return false; }
+        return true;
+      });
+      return x.primary.length || x.alternates.length;
+    });
 
     D.lookup = { brands: brands, cats: index(D.categories), products: products, buildings: buildings };
     D.issues.forEach(function (i) { (i.kind === "info" ? console.info : console.warn)("[content] " + i.text); });
@@ -295,7 +437,7 @@
     if (id === "nortek-cdu" || id === "nortek-coilwall" || sh === "chiller" || sh === "crah") return [CHW];
     if (/^ahu/.test(sh) || sh === "fanwall") {
       if (/exhaust/.test(c)) return [{ id: "glycol", label: "Run-Around Glycol Loop" }, CHW, HW];
-      return ctx ? [CHW, HW] : [CHW, HW, { id: "split", label: "Split DX / Steam" }];
+      return ctx ? [CHW, HW] : [CHW, HW, { id: "split", label: "Split DX" }, { id: "steam", label: "Steam" }];
     }
     if (sh === "vav-cooling") return [CHW];
     if (/^fancoil|^blowercoil/.test(sh) || sh === "coil" || sh === "coil-freeze" || sh === "coil-smart" || sh === "coil-duct") return [CHW, HW];
@@ -347,23 +489,29 @@
     });
   }
   var M = D.manifest, content = []
-    .concat(M.manufacturers.map(function (id) { return "content/manufacturers/" + id + ".js?v=4"; }))
-    .concat(M.buildings.map(function (id) { return "content/buildings/" + id + ".js?v=4"; }))
-    .concat(["content/installs.js?v=4", "content/gallery.js?v=4"]);
+    .concat(M.manufacturers.map(function (id) { return "content/manufacturers/" + id + ".js?v=10"; }))
+    .concat(M.buildings.map(function (id) { return "content/buildings/" + id + ".js?v=7"; }))
+    .concat(["content/installs.js?v=7", "content/gallery.js?v=7"]);
 
   Promise.all(content.map(function (src) { return load(src); }))
     .then(function () {
-      // Read the words for every product and building before checking the content.
+      // Read the words for every product and building, plus the Spec Match CSV table.
+      var csvJob = fetch("content/spec-match.csv?v=20").then(function (r) {
+        return r.ok ? r.text() : "";
+      }).then(function (txt) {
+        if (txt) applyCrossRefCsv(txt);
+      }).catch(function () {});
       return Promise.all(
-        D.products.map(function (p) { return loadText("content/text/products/" + p.id + ".txt", p, applyProductText); })
-          .concat(D.buildings.map(function (b) { return loadText("content/text/buildings/" + b.id + ".txt", b, applyBuildingText); })));
+        D.products.map(function (p) { return loadText("content/text/products/" + p.id + ".txt?v=13", p, applyProductText); })
+          .concat(D.buildings.map(function (b) { return loadText("content/text/buildings/" + b.id + ".txt?v=13", b, applyBuildingText); }))
+          .concat([csvJob]));
     })
     .then(function () {
       reconcile();
-      return Promise.all(["assets/js/app.js?v=5", "assets/js/tour.js?v=5", "assets/js/map.js?v=4"].map(function (src) { return load(src); }));
+      return Promise.all(["assets/js/app.js?v=13", "assets/js/tour.js?v=7", "assets/js/map.js?v=7"].map(function (src) { return load(src); }));
     })
     .then(function () {
       report();
-      return load("assets/js/scene3d.js?v=4", "module");
+      return load("assets/js/scene3d.js?v=7", "module");
     });
 })();

@@ -1,4 +1,4 @@
-﻿# ENVIRO-TEC â€” VF VERTICAL FLOOR MOUNTED FAN COIL UNITS
+# ENVIRO-TEC — VF VERTICAL FLOOR MOUNTED FAN COIL UNITS
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -6,11 +6,13 @@
 
 Name: VF Vertical Floor Mounted Fan Coil Units
 
-Summary: Floor-mounted vertical fan coil units for perimeter spaces, in exposed and concealed cabinets.
+Summary: Floor-mounted vertical perimeter fan coil units from 250 to 1,250 CFM offered in exposed flat-top, slope-top, and concealed wall-recessed cabinets for commercial and institutional perimeters.
 
 Key points:
-- Floor-mounted at the perimeter
-- Exposed and concealed versions
+- 250 to 1,250 CFM vertical perimeter capacities match glass curtain walls and classroom exteriors
+- Exposed architectural heavy-gauge steel cabinets (flat-top or slope-top) or concealed wall-recessed housings
+- Configured with 2-pipe or 4-pipe hydronic coils, optional electric heat, and factory valve piping packages
+- AHRI 440 certified and UL 1995 listed for reliable, serviceable zone conditioning
 
 Photos:
 # One photo per line:  - file | caption
@@ -21,12 +23,13 @@ Photos:
 
 Documents:
 - Enviro-Tec product page | https://www.enviro-tec.com/products-and-solutions/fan-coil-units/vf_ad/vf-floor-mounted-vertical-fan-coil-units
+- Enviro-Tec Submittals & Resources | https://www.enviro-tec.com/resources
 
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.
 # Badge: New
 Specifications:
-- Airflow range: 200 to 1,200 CFM vertical floor/sill perimeter fan coil
+- Airflow range: 250 to 1,250 CFM vertical floor/sill perimeter fan coil
 - Enclosures: Flat-top, slope-top or concealed wall-recessed heavy-gauge steel cabinet
 - Coils: 2-pipe or 4-pipe hydronic with optional electric heat and factory valve package
 - Certifications: AHRI 440 certified, UL 1995 listed

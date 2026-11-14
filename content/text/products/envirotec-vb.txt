@@ -1,4 +1,4 @@
-﻿# ENVIRO-TEC â€” VB / VR VERTICAL REDUCED FOOTPRINT BLOWER COIL UNITS
+# ENVIRO-TEC — VB / VR VERTICAL REDUCED FOOTPRINT BLOWER COIL UNITS
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -6,25 +6,29 @@
 
 Name: VB / VR Vertical Reduced Footprint Blower Coil Units
 
-Summary: Vertical blower coil units with a reduced footprint, for mechanical closets where floor space is tight.
+Summary: Reduced-footprint vertical blower coil units up to 4,000 CFM engineered for tight mechanical closets, stair-core chases, and retrofits where floor area is constrained.
 
 Key points:
-- Reduced-footprint vertical cabinet
-- Suited to closets beside the space served
+- Compact vertical footprint fits mechanical closets immediately adjacent to occupied classrooms or offices
+- Capacities up to 4,000 CFM with 4- to 8-row chilled water, hot water, or DX coils and MERV 8–14 filters
+- Double-wall insulated interior with sloped stainless steel drain pan option for IAQ compliance
+- AHRI 430 / 440 certified and UL 1995 listed for commercial and institutional retrofits
 
 Photos:
 # One photo per line:  - file | caption
 # Put new image files in assets/photos/envirotec-vb/ and list them here. The first one is the main photo.
 - assets/photos/envirotec-vb/1.jpg | Image: Enviro-Tec
+- assets/photos/envirotec-vb/2.png | Enviro-Tec VB/VR vertical reduced-footprint blower coil (800–3,000 CFM). Image: Enviro-Tec
 
 Documents:
 - Enviro-Tec product page | https://www.enviro-tec.com/products-and-solutions/blower-coil-units/vb_vr_ad/vb-vr-vertical-reduced-footprint-blower-coil-units
+- Enviro-Tec Submittals & Resources | https://www.enviro-tec.com/resources
 
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.
 # Badge: New
 Specifications:
-- Airflow range: 800 to 6,000 CFM vertical reduced-footprint blower coil
+- Airflow range: Up to 4,000 CFM vertical reduced-footprint closet blower coil
 - Construction: Double-wall insulated cabinet with sloped stainless drain pan option
 - Coils: 4 to 8-row chilled water, hot water or DX coils; MERV 8 to MERV 14 filters
 - Certifications: AHRI 430 / 440 certified, UL 1995 listed

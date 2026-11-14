@@ -1,4 +1,4 @@
-﻿# NORTEK AIR SOLUTIONS â€” STATEPOINT LIQUID COOLING
+# NORTEK AIR SOLUTIONS — STATEPOINT LIQUID COOLING
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -6,21 +6,22 @@
 
 Name: StatePoint Liquid Cooling
 
-Summary: StatePoint is Nortek Data Center Cooling's liquid cooling technology. It uses indirect evaporative cooling through a membrane exchanger to produce cold water for the data hall with low water and energy use.
+Summary: Nortek Data Center Cooling's StatePoint Liquid Cooling (SPLC) uses a patented hydrophobic microporous membrane exchanger to chill facility water via indirect evaporation — keeping water completely separated from the airstream with zero droplet carryover, no refrigerants and no glycol.
 
 Key points:
-- Indirect evaporative liquid cooling
-- Low water and energy use
-- Supplies air handlers, fan walls and liquid-cooled racks
+- Microporous membrane heat exchanger prevents water carryover, scaling or outdoor contaminants in the facility loop
+- Refrigerant-free and glycol-free indirect evaporative cooling with EC FANWALL array
+- Cuts cooling power use by 20–30% (supporting sub-1.19 design PUEs) and reduces water consumption by up to 90% in cool climates vs. cooling towers
+- Supplies cold water cleanly to CoilWall fan walls, Rear Door Heat Exchangers (RDHx) and liquid-cooling CDUs
 
 Photos:
 # One photo per line:  - file | caption
 # Put new image files in assets/photos/nortek-statepoint/ and list them here. The first one is the main photo.
-# No photo of this product has been found yet. Add one here:
-# - assets/photos/nortek-statepoint/photo.jpg | Caption
+- assets/photos/dmr/Nortek-Image.jpg | Nortek Data Center Cooling. Image: dmr-hvac.com
 
 Documents:
 - Nortek Air Solutions product page | https://www.nortekdatacenter.com/statepoint/
+- Nortek Data Center Cooling Portal & White Papers | https://www.nortekdatacenter.com/
 
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.

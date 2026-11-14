@@ -1,4 +1,4 @@
-﻿# NORTEK AIR SOLUTIONS â€” WATER COILS
+# NORTEK AIR SOLUTIONS — WATER COILS
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -9,8 +9,10 @@ Name: Water Coils
 Summary: Chilled and hot water coils with seamless copper tubes mechanically expanded into the fin collars for a permanent metal-to-metal bond.
 
 Key points:
-- Chilled water and hot water service
-- Custom sizes for new and replacement work
+- 3/8", 1/2", 5/8", and 1" OD seamless copper, cupronickel, or stainless steel tubes
+- 6 to 14 FPI corrugated/sine-wave aluminum, copper, or coated fins (1 to 12 rows)
+- Rated up to 300 psig / 400°F with optional cleanable removable header boxes
+- AHRI 410 certified chilled and hot water performance in custom replacement sizes
 
 Photos:
 # One photo per line:  - file | caption
@@ -19,6 +21,7 @@ Photos:
 
 Documents:
 - Nortek Air Solutions product page | https://www.nortekair.com/products/water-coils/
+- Nortek Air Solutions Technical Literature | https://www.nortekair.com/resources
 
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.

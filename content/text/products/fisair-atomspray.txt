@@ -1,4 +1,4 @@
-﻿# FISAIR â€” ATOMSPRAY
+# FISAIR — ATOMSPRAY
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -6,11 +6,12 @@
 
 Name: AtomSpray
 
-Summary: Water atomising equipment that uses compressed air to produce a fine mist for fast humidification and adiabatic cooling.
+Summary: AtomSpray dual-fluid humidifiers and adiabatic coolers blend potable or RO water with oil-free compressed air to generate an ultra-fine 5 to 10 µm mist for rapid, drip-free evaporation. Configurable for direct-space or in-duct installation to humidify and cool demanding industrial spaces.
 
 Key points:
-- Compressed-air atomisation
-- Humidifies and cools
+- Dual-fluid compressed-air and water spray heads for in-duct or direct-space mounting
+- Ultra-fine 5 to 10 µm droplets evaporate rapidly without wetting nearby surfaces
+- Operates on 1–4 bar potable/RO water and 2.5–4 bar oil-free compressed air
 
 Photos:
 # One photo per line:  - file | caption
@@ -19,6 +20,7 @@ Photos:
 
 Documents:
 - Fisair product page | https://fisair.com/products/hef-evaporative-coolers/atomspray/
+- Fisair Official Portal & Selection Tools | https://fisair.com/en/
 
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.

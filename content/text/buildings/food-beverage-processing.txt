@@ -118,6 +118,7 @@ Equipment:
 - ventrol-ahu | Custom air handler
 + temtrol-ahu
 + huntair-ahu
++ huntair-fpc
 + governair-ahu
 - nortek-low-humidity | Air handler with desiccant dehumidification
 + novelaire-desiccant-wheels

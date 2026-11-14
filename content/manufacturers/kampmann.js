@@ -24,11 +24,11 @@ DMR.registerManufacturer({
     { id: "kampmann-katherm-qe", category: "electric", shape: "trench" },
     { id: "kampmann-top", category: "heaters", shape: "unitheater" },
     { id: "kampmann-perimeter", category: "hydronic", shape: "cabinetheater" },
-    { id: "kampmann-kadius", category: "terminal", shape: "fancoil-round" },
-    { id: "kampmann-venkon", category: "terminal", shape: "fancoil-floor" },
-    { id: "kampmann-venkon-xl", category: "terminal", shape: "blowercoil" },
-    { id: "kampmann-kadeck", category: "terminal", shape: "fancoil-low" },
-    { id: "kampmann-powerkon", category: "terminal", shape: "fancoil-floor" },
+    { id: "kampmann-kadius", category: "fancoil", shape: "fancoil-round" },
+    { id: "kampmann-venkon", category: "fancoil", shape: "fancoil-floor" },
+    { id: "kampmann-venkon-xl", category: "blowercoil", shape: "blowercoil" },
+    { id: "kampmann-kadeck", category: "fancoil", shape: "fancoil-low" },
+    { id: "kampmann-powerkon", category: "fancoil", shape: "fancoil-floor" },
     { id: "kampmann-baseboard", category: "hydronic", shape: "fintube" }
   ]
 });

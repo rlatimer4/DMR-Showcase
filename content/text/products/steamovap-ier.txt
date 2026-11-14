@@ -1,4 +1,4 @@
-﻿# STEAMOVAP TECHNOLOGIES â€” IER ELECTRIC STEAM HUMIDIFIER
+# STEAMOVAP TECHNOLOGIES — IER ELECTRIC STEAM HUMIDIFIER
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -6,27 +6,30 @@
 
 Name: IER Electric Steam Humidifier
 
-Summary: An electric steam humidifier that uses immersed resistive heating elements to produce pure, sterile steam.
+Summary: Industrial and commercial electric steam humidifier using immersed Incoloy resistive heating elements in a cleanable stainless steel tank to deliver 6 to 370 lb/h of sterile, chemical-free steam.
 
 Key points:
-- Steam output 6 to 370 lb/h
-- Â±1% RH accuracy
-- Stainless steel insulated cylinder
+- Steam output 6 to 370 lb/h (2.8 to 168 kg/h) per unit with ±1% RH proportional modulation accuracy
+- Cleanable 304L stainless steel insulated evaporation cylinder eliminates disposable plastic bottles
+- Operates reliably on potable city water, softened water, reverse osmosis (RO), or deionized (DI) water
+- Color touch-screen PLC includes native BACnet MS/TP, BACnet IP, and Modbus communications
 
 Photos:
 # One photo per line:  - file | caption
 # Put new image files in assets/photos/steamovap-ier/ and list them here. The first one is the main photo.
 - assets/photos/steamovap-ier/1.jpg | Image: SteamOVap Technologies
 - assets/photos/steamovap-ier/2.jpg | Image: SteamOVap Technologies
+- assets/photos/steamovap-ier/3.png | SteamOVap IER/VCP resistive clean-steam humidifier cabinet. Image: SteamOVap Technologies
 
 Documents:
 - SteamOVap Technologies product page | https://steamovap.com/electric-resistive-steam-humidifier/
+- SteamOVap Portal & steamOcalc Selection Tool | https://steamovap.com/
 
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.
 # Badge: New
 Specifications:
-- Steam capacity: 5 to 270 lb/h (2.3 to 122 kg/h) per unit; multi-unit up to 1,080 lb/h
+- Steam capacity: 6 to 370 lb/h (2.8 to 168 kg/h) per unit electric resistive steam humidifier
 - Technology: Cleanable 304L stainless steel tank with Incoloy immersion resistive heaters
 - Control accuracy: ±1% RH via SSR proportional modulation; operates on potable, DI or RO water
 - Controls: Color touch-screen PLC with native BACnet MS/TP, BACnet IP and Modbus

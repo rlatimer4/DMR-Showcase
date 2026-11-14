@@ -1,4 +1,4 @@
-﻿# NOVELAIRE â€” PRECISIONDRY PACKAGED DEHUMIDIFICATION UNITS
+# NOVELAIRE — PRECISIONDRY PACKAGED DEHUMIDIFICATION UNITS
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -6,27 +6,31 @@
 
 Name: PrecisionDRY Packaged Dehumidification Units
 
-Summary: Industrial desiccant dehumidification systems for processes that need very low dew points, beyond what refrigeration can reach.
+Summary: NovelAire PrecisionDRY (DH series) active desiccant dehumidifiers span 1,000 to 15,000 CFM standard (up to 30,000 CFM custom)—plus the new PrecisionDRY Apex (150–1,000 CFM)—to reach −5°F to +38°F supply dewpoints (custom down to −40°F DP). High-temperature 150–285°F reactivation (up to 350°F silica gel limit) via gas, electric, or steam pairs with mineral/rock wool insulation and a 75/25 process-to-regen wheel split.
 
 Key points:
-- Very low dew points
-- For process applications
+- DH series (1,000–15,000 CFM std; custom to 30,000 CFM) plus PrecisionDRY Apex (150–1,000 CFM) reach −5°F to +38°F DP (to −40°F DP custom)
+- High-temperature 150–285°F (max 350°F) reactivation via direct/indirect gas, electric, or steam with mineral/rock wool high-temp insulation
+- 75/25 process-to-regen wheel split maximizes moisture removal in a compact footprint (proven at Cloverdale DH15000-ERV & Archie Browning DH8000)
+- Optional ERV section, DX/CW pre- & post-cooling, heat recovery coil on regen exhaust, ECM/VFD fans, and BACnet BMS or standalone HMI
 
 Photos:
 # One photo per line:  - file | caption
 # Put new image files in assets/photos/novelaire-precisiondry/ and list them here. The first one is the main photo.
-- assets/photos/novelaire-precisiondry/1.jpg | Image: NovelAire
-- assets/photos/novelaire-precisiondry/2.jpg | Image: NovelAire
-- assets/photos/novelaire-precisiondry/3.jpg | Image: NovelAire
+- assets/photos/novelaire-precisiondry/1.jpg | NovelAire PrecisionDRY DH series high-temp active desiccant dehumidifier. Image: NovelAire
+- assets/photos/novelaire-precisiondry/2.jpg | PrecisionDRY industrial desiccant cabinet with gas/electric/steam reactivation. Image: NovelAire
+- assets/photos/novelaire-precisiondry/3.jpg | PrecisionDRY DH15000-ERV installation (Cloverdale Arena Phase 2). Image: NovelAire
+- assets/photos/novelaire-precisiondry/4.jpg | PrecisionDRY DH-1000 compact active desiccant unit. Image: NovelAire
 
 Documents:
 - NovelAire product page | https://www.novelaire.com/precisiondry/
+- NovelAire Downloads & Technical Library | https://www.novelaire.com/downloads/
 
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.
 # Badge: New
 Specifications:
-- Airflow range: 500 to 30,000 CFM industrial active desiccant dehumidifier
-- Supply dewpoint: Deep drying down to −40°F to +35°F dewpoint
-- Reactivation: Direct/indirect gas, high-pressure steam or SCR electric regeneration
-- Casing: Heavy-gauge double-wall thermal-break outdoor/indoor cabinet
+- Model & airflow: PrecisionDRY DH (1,000–15,000 CFM std; custom to 30,000 CFM) & Apex (150–1,000 CFM); 75/25 process-to-regen split
+- Supply dew point: −5°F to +38°F standard (down to −40°F DP custom) for pharma, labs, cold storage, and ice arenas
+- Reactivation & casing: 150–285°F (to 350°F limit) direct/indirect gas, electric, or steam; 2" double-wall cabinet with mineral/rock wool insulation
+- Options & controls: ERV section, DX/CW post-cooling, regen heat-recovery coil, ECM/VFD fans, standalone HMI or BACnet BMS

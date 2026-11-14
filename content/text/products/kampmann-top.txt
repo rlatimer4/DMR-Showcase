@@ -1,4 +1,4 @@
-﻿# KAMPMANN â€” TOP UNIT HEATERS
+# KAMPMANN — TOP UNIT HEATERS
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -6,11 +6,12 @@
 
 Name: TOP Unit Heaters
 
-Summary: Warm-air unit heaters for halls and large spaces, in many variants with a wide range of accessories.
+Summary: TOP hydronic unit heaters deliver 5 to 110 kW (17,000 to 375,000 BTU/h) of warm-air heating for industrial halls, warehouses, workshops, and large high-bay interiors. Configurable for horizontal wall mounting or vertical ceiling mounting with KaMax air diffusers and 2-speed AC or 0–10V EC motors.
 
 Key points:
-- Wall and ceiling mounting
-- EC fans
+- Broad 5 to 110 kW (17,000 to 375,000 BTU/h) hydronic output for large volumes
+- Horizontal wall-mount or vertical ceiling-mount with directional KaMax air diffuser
+- Available with 2-speed AC or stepless 0–10V EC fan motors
 
 Photos:
 # One photo per line:  - file | caption
@@ -18,9 +19,11 @@ Photos:
 - assets/photos/kampmann-top/1.jpg | Image: Kampmann
 - assets/photos/kampmann-top/2.jpg | Image: Kampmann
 - assets/photos/kampmann-top/3.jpg | Image: Kampmann
+- assets/photos/kampmann-top/4.png | Kampmann TOP hydronic unit heater with proportional EC fan (optional IP44). Image: Kampmann
 
 Documents:
 - Kampmann product page | https://www.kampmann.ca/en-CA/products/unit-heaters/top
+- Kampmann Download Center & Catalogs | https://www.kampmann.ca/download-center
 
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.

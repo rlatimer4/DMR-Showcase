@@ -1,4 +1,4 @@
-﻿# ENVIRO-TEC â€” CONFIGURABLE VAV DDC CONTROLS
+# ENVIRO-TEC — CONFIGURABLE VAV DDC CONTROLS
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -6,11 +6,12 @@
 
 Name: Configurable VAV DDC Controls
 
-Summary: Factory-mounted, configurable direct digital controls for VAV terminals.
+Summary: Factory-mounted and wired direct digital controls pre-configured and airflow-calibrated inside a NEMA enclosure for Enviro-Tec VAV terminals. Supports native BACnet MS/TP, BACnet IP, or LonWorks protocols with integral differential pressure transducers and sensor ports.
 
 Key points:
-- Factory mounted and wired
-- Configurable for the application
+- Factory-mounted, wired, and airflow-calibrated inside a protective NEMA enclosure
+- Native BACnet MS/TP, BACnet IP, or LonWorks field-configurable controllers
+- Integral differential pressure transducer with supply air and room sensor ports
 
 Photos:
 # One photo per line:  - file | caption
@@ -20,6 +21,7 @@ Photos:
 
 Documents:
 - Enviro-Tec product page | https://www.enviro-tec.com/products-and-solutions/variable-air-volume-terminals/ddc_controls_ad/configurable-vav-direct-digital-controls-ddc
+- Enviro-Tec Submittals & Resources | https://www.enviro-tec.com/resources
 
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.

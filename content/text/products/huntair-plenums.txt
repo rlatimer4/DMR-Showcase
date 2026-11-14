@@ -1,4 +1,4 @@
-﻿# HUNTAIR â€” CLEAN-TRAK CLEANROOM PLENUMS
+# HUNTAIR — CLEAN-TRAK CLEANROOM PLENUMS
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -6,11 +6,12 @@
 
 Name: Clean-Trak Cleanroom Plenums
 
-Summary: Factory-built ceiling plenums that deliver filtered air to a cleanroom ceiling.
+Summary: Factory-built Clean-Trak cleanroom plenums create positive- or negative-pressure interstitial air delivery zones directly above Huntair cleanroom ceiling grids. Low-leakage sealed aluminum or powder-coated steel barriers allow room-side filter replacement without breaching the plenum space.
 
 Key points:
-- Pre-engineered modules
-- Integrates with Clean-Trak ceiling grids
+- Pre-engineered positive- or negative-pressure interstitial cleanroom plenums
+- Low-leakage sealed aluminum or powder-coated steel ceiling barrier construction
+- Supports room-side filter service without disturbing above-ceiling plenum integrity
 
 Photos:
 # One photo per line:  - file | caption
@@ -19,6 +20,7 @@ Photos:
 
 Documents:
 - Huntair product page | https://www.nortekair.com/products/clean-trak-cleanroom-plenums/
+- Nortek Air Solutions Technical Literature | https://www.nortekair.com/resources
 
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.

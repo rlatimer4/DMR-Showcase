@@ -1,4 +1,4 @@
-﻿# GREE â€” X-PAC R32 PACKAGED UNIT
+# GREE — X-PAC R32 PACKAGED UNIT
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -6,11 +6,12 @@
 
 Name: X-PAC R32 Packaged Unit
 
-Summary: A single packaged R32 unit with heating and cooling in one compact cabinet.
+Summary: X-PAC R-32 self-contained packaged heat pumps (2 to 5 tons) integrate heating, cooling, and variable-speed DC inverter compression in a single ducted cabinet. Installs inside a mechanical closet or on a rooftop without requiring a separate outdoor condensing unit.
 
 Key points:
-- Packaged unit
-- R32 refrigerant
+- 2 to 5 tons self-contained packaged heat pump using low-GWP R-32 refrigerant
+- Variable-speed DC inverter compressor inside one factory-packaged cabinet
+- Indoor closet or rooftop ducted installation eliminates outdoor split condenser
 
 Photos:
 # One photo per line:  - file | caption
@@ -19,6 +20,7 @@ Photos:
 
 Documents:
 - GREE product page | https://www.greecomfort.com/our-products/x-pac-r32
+- GREE System Documentation & Submittals | https://www.greecomfort.com/system-documentation
 
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.

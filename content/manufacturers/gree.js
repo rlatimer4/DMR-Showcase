@@ -40,9 +40,9 @@ DMR.registerManufacturer({
     { id: "gree-multi-eco", category: "vrf", shape: "vrf" },
     { id: "gree-flexx-ultra", category: "vrf", shape: "vrf" },
     { id: "gree-flexx-eco", category: "vrf", shape: "vrf" },
-    { id: "gree-xpac", category: "packaged", shape: "rooftop" },
-    { id: "gree-ptac", category: "packaged", shape: "ptac" },
-    { id: "gree-etac", category: "packaged", shape: "ptac" },
-    { id: "gree-ttw", category: "packaged", shape: "ptac" }
+    { id: "gree-xpac", category: "vrf", shape: "rooftop" },
+    { id: "gree-ptac", category: "vrf", shape: "ptac" },
+    { id: "gree-etac", category: "vrf", shape: "ptac" },
+    { id: "gree-ttw", category: "vrf", shape: "ptac" }
   ]
 });

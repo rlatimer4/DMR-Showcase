@@ -1,4 +1,4 @@
-﻿# TEMTROL â€” FANWALL SYSTEMS
+# TEMTROL — FANWALL SYSTEMS
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -6,26 +6,31 @@
 
 Name: FANWALL Systems
 
-Summary: Arrays of smaller direct-drive fans that replace one large fan. Used to replace ageing fans in existing air handlers, they avoid the cost and disruption of a failure and can cut fan energy by as much as 40%.
+Summary: Temtrol Gen IV FANWALL systems replace aging DWDI and belt-drive centrifugal fans with 2 to 32+ direct-drive cube cells fitting 36" doors for live-building retrofits like 777 North Capitol St. (161,000 CFM). Balanced to AMCA 204-96 Class BV-5 Grade G.55 (0.022 in/s peak) with IE5+ or ECMi motors, Zero-System-Effect dampers, Coplanar Silencers, and System Optimization Controls.
 
 Key points:
-- Redundancy: remaining fans keep running if one fails
-- Even airflow across coils and filters
-- Fan cubes pass through a standard doorway for retrofit
+- Gen IV modular arrays (2 to 32+ cubes; e.g., 161,000 CFM 32-fan supply / 16-fan return retrofit at 777 N. Capitol St.)
+- Factory run-tested & balanced to AMCA 204-96 Class BV-5 Grade G.55 (0.022 in/s peak); Zero-System-Effect backdraft dampers
+- Incremental VFD induction, IE5+ Ultra-Premium (200k+ hr L10, ceramic bearings), or FANWALL EC (saves 12"–24" unit length)
+- Coplanar Silencers absorb low-frequency noise while System Optimization Controls stage fans for peak FEI
 
 Photos:
 # One photo per line:  - file | caption
 # Put new image files in assets/photos/temtrol-fanwall/ and list them here. The first one is the main photo.
-- assets/photos/governair-fanwall/1.jpg | Image: Nortek Air Solutions
-- assets/photos/governair-fanwall/2.jpg | Image: Nortek Air Solutions
+- assets/photos/temtrol-fanwall/1.jpg | 32-fan Supply FANWALL retrofit (161,000 CFM, 777 North Capitol St.). Image: Nortek Air Solutions
+- assets/photos/temtrol-fanwall/2.png | 16-fan Return FANWALL array with Coplanar Silencers (777 North Capitol St.). Image: Nortek Air Solutions
+- assets/photos/temtrol-fanwall/3.jpg | Existing 64,000 CFM DWDI housed supply fan prior to Temtrol FANWALL retrofit. Image: Nortek Air Solutions
+- assets/photos/temtrol-fanwall/4.jpg | New dual 32,000 CFM Temtrol FANWALL array replacement module. Image: Nortek Air Solutions
 
 Documents:
 - Temtrol product page | https://www.nortekair.com/products/fanwall-systems/
+- Nortek Air Solutions Technical Literature | https://www.nortekair.com/resources
 
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.
 # Badge: New
 Specifications:
-- Configuration: Custom or retrofit multi-fan array from 2 to 30+ cube cells
-- Redundancy: Individual fan VFDs or group VFD with automatic speed-up on fan fault
-- Acoustics: Coplanar Silencer cell liners attenuate low-frequency octave bands
+- Configuration: Gen IV custom or retrofit FANWALL array from 2 to 32+ cube cells passing through 36" doors
+- Wheels & balance: 12"–27" wheels dynamically balanced to AMCA 204-96 BV-5 Grade G.55 (0.022 in/s peak) with individual balance reports
+- Motors & controls: Matched VFDs, IE5+ Ultra-Premium (460V, 1–15 HP) or ECMi; System Optimization Controls & Zero-System-Effect dampers
+- Acoustics: Coplanar Silencer cell liners attenuate octave-band discharge and radiated sound

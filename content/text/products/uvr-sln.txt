@@ -1,4 +1,4 @@
-﻿# UV RESOURCES â€” SLN XTREME UV-C FIXTURES
+# UV RESOURCES — SLN XTREME UV-C FIXTURES
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -6,11 +6,13 @@
 
 Name: SLN Xtreme UV-C Fixtures
 
-Summary: A single-lamp very high output NEMA-4 UV-C fixture for airstreams, cooling coils and drain pans.
+Summary: A single-lamp very high output NEMA-4 UV-C fixture built for moist airstreams, cooling coils, and drain pans in rooftop units and ducts. Its moisture-sealed enclosure and 16" to 61" lamps maintain coil heat-transfer efficiency in harsh HVAC environments.
 
 Key points:
-- NEMA-4 enclosure
-- For rooftop units and ducts
+- Moisture-resistant NEMA-4 enclosure
+- Engineered for rooftop units, cooling coils, and drain pans
+- 16" to 61" very high output 254 nm germicidal lamps
+- Universal 120V–277V electronic ballast, UL 1995 listed
 
 Photos:
 # One photo per line:  - file | caption
@@ -19,10 +21,12 @@ Photos:
 
 Documents:
 - UV Resources product page | https://www.uvresources.com/sln-x/
+- UV Resources Technical Library & Research | https://www.uvresources.com/white-papers-and-research/
 
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.
 # Badge: New
 Specifications:
-- Profile: Compact narrow-profile single-ended UV-C fixture for tight coil plenums & fan coils
-- Voltage: 120V–277V high-efficiency electronic ballast; UL 1995 listed
+- Fixture type: Single-lamp NEMA-4 very high output UV-C fixture for wet coil plenums and RTUs
+- Lamp lengths: 16" to 61" very high output 254 nm germicidal lamps
+- Electrical & listing: 120V–277V high-efficiency electronic ballast; UL 1995 listed

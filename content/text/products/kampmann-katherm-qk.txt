@@ -1,4 +1,4 @@
-﻿# KAMPMANN â€” KATHERM QK TRENCH HEATING
+# KAMPMANN — KATHERM QK TRENCH HEATING
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -22,6 +22,7 @@ Photos:
 
 Documents:
 - Kampmann product page | https://www.kampmann.ca/en-CA/products/trench-technology/katherm-qk
+- Kampmann Download Center & Catalogs | https://www.kampmann.ca/download-center
 
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.

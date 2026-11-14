@@ -1,4 +1,4 @@
-﻿# UV RESOURCES â€” HIGH OUTPUT UV-C LAMPS
+# UV RESOURCES — HIGH OUTPUT UV-C LAMPS
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -6,20 +6,24 @@
 
 Name: High Output UV-C Lamps
 
-Summary: High output UV-C replacement lamps that fit most UV-C systems.
+Summary: High-output 253.7 nm (254 nm) low-pressure mercury-vapor quartz replacement UV-C lamps fit most commercial HVAC UV-C systems with 9,000 to 12,000 hours rated service life (<20% output depreciation). Optional FEP shatter-resistant EncapsuLamp sleeves contain glass and mercury if accidentally broken.
 
 Key points:
-- Fits most UV-C systems
+- High-output 253.7 nm (254 nm) quartz lamps fit most commercial HVAC UV-C systems
+- 9,000 to 12,000 hours rated continuous service (<20% output depreciation)
+- Optional FEP shatter-resistant EncapsuLamp coating contains glass if broken
 
 Photos:
 # One photo per line:  - file | caption
 # Put new image files in assets/photos/uvr-lamps/ and list them here. The first one is the main photo.
-- assets/photos/uvr-lamps/1.jpg | Image: UV Resources
 - assets/photos/uvr-lamps/2.jpg | Image: UV Resources
 - assets/photos/uvr-lamps/3.jpg | Image: UV Resources
+- assets/photos/uvr-lamps/4.png | UV Resources ballast, viewport, and door safety interlock switch accessories. Image: UV Resources
+- assets/photos/uvr-lamps/5.png | UV Resources encapsulated UV-C lamps and NEMA-4X AHU accessories. Image: UV Resources
 
 Documents:
 - UV Resources product page | https://www.uvresources.com/lamps/
+- UV Resources Technical Library & Research | https://www.uvresources.com/white-papers-and-research/
 
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.

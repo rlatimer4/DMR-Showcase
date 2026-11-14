@@ -1,4 +1,4 @@
-﻿# GREE â€” GMV MTAC
+# GREE — GMV MTAC
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -6,10 +6,13 @@
 
 Name: GMV MTAC
 
-Summary: A GMV indoor unit in a packaged-terminal form for rooms such as hotel guest rooms, connected to a VRF system.
+Summary: Concealed 12,000 BTU/h Mini-VRF condensing unit engineered to slide directly into a standard 42" x 16" PTAC wall sleeve and serve one or two whisper-quiet VRF indoor units in hotels, multifamily, and historic retrofits.
 
 Key points:
-- PTAC-style indoor unit on a VRF system
+- Replaces noisy through-the-wall PTAC units using the existing 42" x 16" wall sleeve with no exterior facade changes
+- Connects in 1:1 or 2:1 configurations to GREE VRF high-wall, concealed duct, cassette, or floor-console indoor units
+- Inverter rotary compressor achieves up to 15.0 SEER2 with cooling to 118°F and low-ambient heating down to −4°F
+- CAN-bus communication uses non-shielded wiring for reliable BAS integration and hotel keycard control
 
 Photos:
 # One photo per line:  - file | caption
@@ -18,11 +21,13 @@ Photos:
 
 Documents:
 - GREE product page | https://www.greecommercial.com/our-products/gmv-mtac
+- GREE Commercial Resources & Submittals | https://www.greecommercial.com/resources
 
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.
 # Badge: New
 Specifications:
-- Capacity range: 9,000 to 18,000 BTU/h ducted vertical/horizontal VTAC-style heat pump
-- Design: Concealed closet installation with architectural exterior wall louver
-- Refrigerant: Low-GWP R-32 inverter compressor for quiet multi-room ducted service
+- Capacity & sleeves: 12,000 BTU/h concealed Mini-VRF outdoor chassis fitting standard 42" x 16" PTAC sleeves
+- Indoor connectivity: Drives 1 to 2 VRF indoor units (high-wall, concealed duct, cassette or console)
+- Efficiency & range: Up to 15.0 SEER2 / 8.0 EER2 / 8.0–9.5 HSPF2; heats down to −4°F ambient
+- Electrical & controls: 208/230V-1Ph, 13.5A MCA, R-410A inverter rotary compressor, CAN-bus BAS control

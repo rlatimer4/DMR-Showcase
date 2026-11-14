@@ -1,4 +1,4 @@
-﻿# MAMMOTH â€” ULTRALINE CUSTOM PACKAGED ROOFTOP SYSTEMS
+# MAMMOTH — ULTRALINE CUSTOM PACKAGED ROOFTOP SYSTEMS
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -6,28 +6,31 @@
 
 Name: UltraLine Custom Packaged Rooftop Systems
 
-Summary: Custom packaged rooftop systems configurable for blow-through or draw-through operation, return or exhaust fans, and footprints that match existing openings.
+Summary: Mammoth UltraLine custom packaged rooftop systems now span 5 to 380 tons and 1,000 to 300,000+ CFM in 3" double-wall ITF framed construction on welded tube base frames (±10" WC @ L/240). Redesigned Vee ACCU microchannel kits (31" MaEr EC fans, 105°F standard ambient), VFD compressors (up to 40 tons/circuit), R-454B, −20°F Liquid Injection ASHP options, and NASDA-integrated electrical FLA/MCA/MOP calculations lower weight and cost.
 
 Key points:
-- Custom capacities and footprints
-- Return or exhaust fan arrangements
-- Suited to replacement on existing curbs
+- Expanded custom DX capacity from 5 to 380 tons (1,000–300,000+ CFM) with 3" ITF double-wall casing (±10" WC @ L/240)
+- Standardized Vee ACCU microchannel kits (105°F design ambient, 31" MaEr EC condenser fans; 80", 94", and 136" min widths)
+- VFD compressors across all condenser types (up to 40 tons/circuit), R-454B, and −20°F Liquid Injection ASHP capability
+- 2" recessed Polyurea washdown floor option, curb-match footprints, ER wheel/plate, and NASDA-calculated FLA/MCA/MOP electrical data
 
 Photos:
 # One photo per line:  - file | caption
 # Put new image files in assets/photos/mammoth-ultraline/ and list them here. The first one is the main photo.
-- assets/photos/mammoth-ultraline/1.jpg | Image: Nortek Air Solutions
-- assets/photos/mammoth-ultraline/2.jpg | Image: Nortek Air Solutions
-- assets/photos/mammoth-ultraline/3.jpg | Image: Nortek Air Solutions
+- assets/photos/mammoth-ultraline/1.jpg | Mammoth UltraLine custom packaged rooftop DX system. Image: Nortek Air Solutions
+- assets/photos/mammoth-ultraline/2.jpg | Curb-matched Mammoth UltraLine commercial rooftop replacement. Image: Nortek Air Solutions
+- assets/photos/mammoth-ultraline/3.jpg | Mammoth UltraLine packaged refrigeration and penthouse construction. Image: Nortek Air Solutions
+- assets/photos/mammoth-ultraline/4.jpg | Mammoth UltraLine system with redesigned Vee ACCU microchannel condenser section. Image: Nortek Air Solutions
 
 Documents:
 - Mammoth product page | https://www.nortekair.com/products/ultraline-custom-packaged-rooftop-systems/
+- Nortek Air Solutions Technical Literature | https://www.nortekair.com/resources
 
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.
 # Badge: New
 Specifications:
-- Capacity range: 20 to 250+ tons; 5,000 to 100,000+ CFM custom packaged rooftop
-- Heat rejection: Air-cooled, evaporative-condensed or water-cooled DX, or chilled water
-- Construction: 2" to 4" double-wall foam thermal-break casing on structural steel base frame
-- Options: FANWALL array, energy recovery wheel/plate, gas/electric/steam/hot-water heat
+- Capacity & airflow: 5 to 380 tons; 1,000 to 300,000+ CFM packaged rooftop with curb-match base
+- Casing & floor: 3" ITF double-wall on welded tube base (±10" WC @ L/240); no thru-metal except fasteners; optional 2" recessed Polyurea washdown floor
+- Refrigeration & ACCU: R-454B VFD/digital compressors (to 40 tons/ckt); Vee ACCU w/ 31" MaEr EC fans & microchannel coils (105°F rating); −20°F ASHP option
+- Options & electrical: Stacked tunnels, FANWALL, ER wheel/plate, gas/electric/steam/HW heat, NASDA-integrated FLA/MCA/MOP electrical data

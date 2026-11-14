@@ -1,4 +1,4 @@
-﻿# HUNTAIR â€” CLEAN-TRAK MODULAR CLEANROOM CEILING GRIDS
+# HUNTAIR — CLEAN-TRAK MODULAR CLEANROOM CEILING GRIDS
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -6,12 +6,12 @@
 
 Name: Clean-Trak Modular Cleanroom Ceiling Grids
 
-Summary: Modular cleanroom ceiling grid that supports filters, lights and fan filter units and seals the cleanroom ceiling.
+Summary: Clean-Trak heavy-duty extruded aluminum modular cleanroom ceiling grids seal ISO Class 3–8 environments with flush gasketed dry-seal or fluid gel-seal channels. Structurally supports CleanPak FFUs, filters, teardown lighting, sprinklers, utility drops, and walkable plenums.
 
 Key points:
-- Gel-seal and gasket-seal versions
-- Supports walkable plenums
-- Modular for fast installation
+- Heavy-duty extruded aluminum modular grid for ISO Class 3–8 cleanrooms
+- Available in flush gasketed dry-seal or fluid gel-seal ceiling channel profiles
+- Supports CleanPak FFUs, walkable plenums, lighting, sprinklers, and utility drops
 
 Photos:
 # One photo per line:  - file | caption
@@ -22,6 +22,7 @@ Photos:
 
 Documents:
 - Huntair product page | https://www.nortekair.com/products/ceiling-grids/
+- Nortek Air Solutions Technical Literature | https://www.nortekair.com/resources
 
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.

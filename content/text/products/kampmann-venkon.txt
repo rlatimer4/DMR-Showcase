@@ -1,4 +1,4 @@
-﻿# KAMPMANN â€” VENKON FAN COILS
+# KAMPMANN — VENKON FAN COILS
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -6,11 +6,13 @@
 
 Name: Venkon Fan Coils
 
-Summary: Fan coils for heating and cooling with very quiet operation and a wide range of variants.
+Summary: Kampmann Venkon VDI 6022 hygienically certified EC fan coils deliver quiet 2-pipe or 4-pipe comfort down to 19 dBA (NC-15), while the new Venkon XXL expands the platform to 4 ducted recirculation sizes handling extra-high static pressures up to 4" H2O. Double-walled Sendzimir galvanized cabinets feature 1" rock wool insulation, 4" MERV 8 or MERV 13 filters, and removable insulated stainless steel condensate pans.
 
 Key points:
-- Very low sound levels
-- Many cabinet variants
+- Venkon VDI 6022 hygienic EC fan coils operate down to 19 dBA (NC-15); Venkon XXL handles up to 4" H2O external static across 4 sizes
+- 0–10 V stepless EC radial fan (120 V or 208–277 V 1-phase) with factory electromechanical terminal block and safety switch
+- 2-pipe or 4-pipe copper/aluminum heat exchanger (300 psi max, 41–194°F EWT, 20–50% glycol) with bottom-access 4" MERV 8 or MERV 13 filter
+- Double-walled Sendzimir galvanized casing with 1" rock wool plus removable 1/4" (6 mm) closed-cell insulated stainless condensate pan (3/4" drain + overflow)
 
 Photos:
 # One photo per line:  - file | caption
@@ -18,14 +20,18 @@ Photos:
 - assets/photos/kampmann-venkon/1.jpg | Image: Kampmann
 - assets/photos/kampmann-venkon/2.jpg | Image: Kampmann
 - assets/photos/kampmann-venkon/3.jpg | Image: Kampmann
+- assets/photos/kampmann-venkon/4.jpg | Kampmann Venkon XXL high-static (up to 4" H2O) ducted fan coil dimensional drawing. Image: Kampmann
+- assets/photos/kampmann-venkon/5.png | Kampmann Venkon VDI 6022 EC fan coil assembly. Image: Kampmann
 
 Documents:
 - Kampmann product page | https://www.kampmann.ca/en-CA/products/fan-coils/venkon
+- Kampmann Download Center & Catalogs | https://www.kampmann.ca/download-center
 
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.
 # Badge: New
 Specifications:
-- Airflow & sound: Ultra-quiet EC fan coil down to 19 dBA (NC-15) for luxury hotels & hospitals
-- Hygiene: VDI 6022 certified hygienic construction for easy cleaning and disinfection
-- Coils: 2-pipe or 4-pipe chilled/hot water coils; horizontal or vertical concealed/cabinet
+- Range & static pressure: Venkon concealed/cased EC fan coils down to 19 dBA (NC-15); Venkon XXL (4 sizes) to 4" H2O external static pressure
+- Casing & filtration: Double-wall Sendzimir galvanized steel w/ 1" rock wool insulation; bottom-access 4" MERV 8 (ePM10 >50%) or MERV 13 (ePM1 >50%) filter
+- Coils & limits: 2-pipe or 4-pipe Cu/Al HX w/ anti-twist device; 300 psi max, 41–194°F EWT, 20–50% glycol, max 77°F EAT / 60% RH
+- Fan, tray & hygiene: 0–10 V stepless EC radial fan (120 V or 208–277 V 1-ph, Class F); removable SS condensate pan w/ 6 mm insulation & 3/4" drain/overflow; VDI 6022

@@ -1,4 +1,4 @@
-﻿# RUNTAL â€” HYDRONIC RADIATORS
+# RUNTAL — HYDRONIC RADIATORS
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -6,20 +6,25 @@
 
 Name: Hydronic Radiators
 
-Summary: Flat-tube steel panel radiators for commercial and institutional buildings, in wall panel, baseboard and vertical styles.
+Summary: Welded flat-tube steel panel radiators and baseboards (UF-2, UF-3, UF-4 and high-output finned VLX series) for architectural commercial, healthcare and institutional perimeter heating.
 
 Key points:
-- Wall panels, baseboards and vertical columns
-- Wide range of sizes and colours
-- Easy-to-clean flat surfaces
+- Low-profile UF-2 (6"), UF-3 (9") and UF-4 (12") baseboards plus high-output finned VLX wall panels
+- 2 mm cold-rolled welded steel waterways rated to 85 psig working (128 psig optional) pressure
+- Performs well with low-temperature hydronic loops (down to 140°F) as well as standard high-temp systems
+- Smooth wipe-clean surfaces for healthcare and labs, custom lengths and 100+ RAL powder-coat finishes
 
 Photos:
 # One photo per line:  - file | caption
 # Put new image files in assets/photos/runtal-hydronic/ and list them here. The first one is the main photo.
+- assets/photos/runtal-hydronic/1.png | Runtal nine architectural welded steel radiator styles (UF, SF, RF, R, R2, R3, UF-9, SF-9, RF-9). Image: Runtal North America
+- assets/photos/runtal-hydronic/2.png | Runtal Charleston Pro vertical hydronic steel radiator. Image: Runtal North America
+- assets/photos/runtal-hydronic/3.png | Runtal Flow Form steam radiator application. Image: Runtal North America
 - assets/photos/dmr/Runtal-Image.jpg | Image: Runtal North America
 
 Documents:
 - Runtal product page | https://runtalnorthamerica.com/
+- DMR Associates Line Card & Submittal Support | https://dmr-hvac.com/
 
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.

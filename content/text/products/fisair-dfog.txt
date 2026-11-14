@@ -1,4 +1,4 @@
-﻿# FISAIR â€” DFOG DEHUMIDIFIERS
+# FISAIR — DFOG DEHUMIDIFIERS
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -6,11 +6,13 @@
 
 Name: DFOG Dehumidifiers
 
-Summary: High-performance silica gel rotor dehumidifiers that hold stable humidity under demanding conditions.
+Summary: Compact, modular silica-gel rotor desiccant dehumidifiers engineered to Eco-Design efficiency standards for stable low-humidity control across temporary drying, construction, cold storage, and data centers.
 
 Key points:
-- High drying capacity
-- Stable humidity control
+- Eco-Design compliant EC fans and insulated corrosion-resistant cabinet hold stable dew points at low energy draw
+- Washable high-absorption silica-gel desiccant rotor maintains drying performance across sub-freezing and ambient air
+- Compact modular footprint deploys cleanly for temporary moisture control, water damage restoration, or permanent industrial rooms
+- Protects cold storage coils, industrial processes, and adiabatically cooled data centers against condensation
 
 Photos:
 # One photo per line:  - file | caption
@@ -19,11 +21,13 @@ Photos:
 
 Documents:
 - Fisair product page | https://fisair.com/products/df-air-dehumidifiers/dfog/
+- Fisair Official Portal & Selection Tools | https://fisair.com/en/
 
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.
 # Badge: New
 Specifications:
-- Application: Cold-storage, freezer door and ice-rink anti-fogging desiccant system
-- Operating temp: Engineered for sub-freezing air temperatures down to −30°C (−22°F)
-- Benefit: Prevents frost, ice buildup on evaporator coils and fog at dock doors
+- Technology: Compact Eco-Design modular silica-gel rotor desiccant dehumidifier
+- Efficiency: High-efficiency direct-drive EC fans with regulated electric reactivation
+- Application: Cold storage, data center condensation protection, construction drying and industrial storage
+- Construction: Modular, transport-ready insulated enclosure with BMS/humidistat interlocks

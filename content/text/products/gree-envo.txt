@@ -1,4 +1,4 @@
-﻿# GREE â€” ENVO R32 MINI-SPLIT
+# GREE — ENVO R32 MINI-SPLIT
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -6,20 +6,22 @@
 
 Name: Envo R32 Mini-Split
 
-Summary: A single-zone R32 mini-split that can bring in outdoor air with an optional fresh air kit.
+Summary: Envo R-32 single-zone mini-split heat pump delivers 9,000 to 24,000 BTU/h at up to 25.0 SEER2 with continuous low-ambient heating down to −13°F (−25°C). Supports an optional outdoor fresh air kit alongside tool-less snap-in service access, humidity control, and Wi-Fi.
 
 Key points:
-- Optional fresh air kit
-- R32 refrigerant
+- 9,000 to 24,000 BTU/h architectural mini-split with low-GWP R-32 refrigerant
+- Up to 25.0 SEER2 efficiency with low-ambient heating down to −13°F (−25°C)
+- Optional outdoor fresh air intake kit, humidity control, and Wi-Fi connectivity
 
 Photos:
 # One photo per line:  - file | caption
 # Put new image files in assets/photos/gree-envo/ and list them here. The first one is the main photo.
 - assets/photos/gree-envo/1.jpg | Image: GREE
-- assets/photos/gree-envo/2.jpg | Image: GREE
+- assets/photos/gree-envo/3.png | GREE Envo single-zone cold-climate wall-mounted heat pump. Image: GREE
 
 Documents:
 - GREE product page | https://www.greecomfort.com/our-products/envo-r32
+- GREE System Documentation & Submittals | https://www.greecomfort.com/system-documentation
 
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.

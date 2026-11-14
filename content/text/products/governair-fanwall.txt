@@ -1,4 +1,4 @@
-﻿# GOVERNAIR â€” FANWALL RETROFIT SYSTEMS
+# GOVERNAIR — FANWALL RETROFIT SYSTEMS
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -6,27 +6,29 @@
 
 Name: FANWALL Retrofit Systems
 
-Summary: Arrays of smaller direct-drive fans that replace one large fan. Used to replace ageing fans in existing air handlers, they avoid the cost and disruption of a failure and can cut fan energy by as much as 40%.
+Summary: Governair Gen IV FANWALL retrofit systems upgrade aging belt-drive centrifugal fans with lower-vibration, lighter direct-drive plug fan arrays featuring 12" to 27" wheels, Zero-System-Effect backdraft dampers, Coplanar Silencers, and IE5+ (200,000+ hr L10) or ECMi motors with System Optimization Controls.
 
 Key points:
-- Redundancy: remaining fans keep running if one fails
-- Even airflow across coils and filters
-- Fan cubes pass through a standard doorway for retrofit
+- Gen IV FANWALL construction with reduced vibration and weight; AMCA 204-96 Class BV-5 Grade G.55 balance (0.022 in/s peak)
+- 12" to 27" wheels (AMCA 211/311 certified to 22") with 1–15 HP (20/30 HP on 27"), IE5+ ferrite-magnet, or ECMi motors
+- Components pass through 36" doors with Zero-System-Effect backdraft dampers and System Optimization Controls
+- Optional Coplanar Silencers and FANWALL EC compact length-saving configuration (saves 12"–24" unit length)
 
 Photos:
 # One photo per line:  - file | caption
 # Put new image files in assets/photos/governair-fanwall/ and list them here. The first one is the main photo.
-- assets/photos/governair-fanwall/2.jpg | Image: Nortek Air Solutions
-- assets/photos/governair-fanwall/1.jpg | Image: Nortek Air Solutions
+- assets/photos/governair-fanwall/3.png | Gen IV FANWALL construction with reduced vibration and weight. Image: Nortek Air Solutions
+- assets/photos/governair-fanwall/4.png | Ultra-Premium Efficient IE5+ motor/drive curve vs. ECMi and induction motors. Image: Nortek Air Solutions
 
 Documents:
 - Governair product page | https://www.nortekair.com/products/fanwall-systems/
+- Nortek Air Solutions Technical Literature | https://www.nortekair.com/resources
 
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.
 # Badge: New
 Specifications:
-- Application: Turnkey FANWALL array retrofit for aging belt-drive centrifugal fans
-- Redundancy: Multiple direct-drive plug fans with ECM or VFD-driven induction motors
-- Installation: Passes through standard 36" mechanical room doors; includes backdraft dampers
-- Acoustics: Optional Coplanar Silencer reduces discharge and radiated sound
+- Array & wheels: Gen IV modular cubes; 12"–27" wheels (AMCA 211/311 certified to 22"); balanced to AMCA 204-96 BV-5 Grade G.55 (0.022 in/s peak)
+- Motors & efficiency: Matched incremental 1–15 HP (20/30 HP on 27") induction, IE5+ Ultra-Premium (460V, 200k+ hr L10, ceramic bearings), or ECMi
+- Controls & dampers: System Optimization Controls map peak wire-to-air FEI; Zero-System-Effect backdraft dampers
+- Acoustics & footprint: Optional Coplanar Silencers reduce discharge and radiated sound; FANWALL EC saves 12"–24" unit length

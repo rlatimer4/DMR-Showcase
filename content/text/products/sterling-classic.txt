@@ -1,4 +1,4 @@
-﻿# STERLING â€” CLASSIC FINNED TUBE
+# STERLING — CLASSIC FINNED TUBE
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -6,19 +6,21 @@
 
 Name: Classic Finned Tube
 
-Summary: Classic commercial finned tube radiation for hydronic perimeter heating.
+Summary: Sterling's flagship Classic Series heavy-gauge steel commercial finned-tube radiation enclosures for hot water and steam perimeter heating.
 
 Key points:
-- Hot water and steam
+- Slope-top, flat-top and expanded-metal 16- and 14-gauge steel enclosures
+- Copper/aluminum or steel-tube/steel-fin elements for hot water or steam systems
+- Single-, two- and three-tier high-output arrangements from 500 to 2,800+ BTU/h per foot
 
 Photos:
 # One photo per line:  - file | caption
 # Put new image files in assets/photos/sterling-classic/ and list them here. The first one is the main photo.
-# No photo of this product has been found yet. Add one here:
-# - assets/photos/sterling-classic/photo.jpg | Caption
+- assets/photos/dmr/Sterling-Image.jpg | Sterling commercial finned-tube radiation. Image: dmr-hvac.com
 
 Documents:
 - Sterling product page | https://www.sterlingheat.com/classic
+- Sterling Commercial Hydronics Literature Library | https://www.sterlingheat.com/
 
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.

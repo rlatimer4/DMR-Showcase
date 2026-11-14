@@ -1,4 +1,4 @@
-﻿# STERLING â€” VERSA-LINE FINNED TUBE
+# STERLING — VERSA-LINE FINNED TUBE
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -6,18 +6,21 @@
 
 Name: Versa-Line Finned Tube
 
-Summary: Sterling's most versatile commercial finned tube enclosure line for hydronic perimeter heating.
+Summary: Versa-Line is Sterling's versatile commercial finned-tube enclosure system offering 7.5" to 24" slope-top and flat-top cabinets in 18+ baked powder-coat colors. Pairs 3/4", 1", or 1-1/4" copper/aluminum elements for hydronic or low-pressure steam perimeter heating.
 
 Key points:
-- Many enclosure styles and heights
+- 7.5" to 24" slope-top and flat-top commercial finned-tube enclosure styles
+- Supports 3/4", 1", and 1-1/4" copper/aluminum hydronic or low-pressure steam elements
+- Finished in 18+ standard baked powder-coat architectural colors
 
 Photos:
 # One photo per line:  - file | caption
 # Put new image files in assets/photos/sterling-versa-line/ and list them here. The first one is the main photo.
-- assets/photos/dmr/Sterling-Image.jpg | Finned tube along a curved window wall. Image: dmr-hvac.com
+- assets/photos/sterling-versa-line/1.png | Sterling Versa-Line sloping-top commercial finned-tube radiation enclosure. Image: Sterling
 
 Documents:
 - Sterling product page | https://www.sterlingheat.com/versa-line
+- Sterling Commercial Hydronics Literature Library | https://www.sterlingheat.com/
 
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.

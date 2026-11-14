@@ -1,4 +1,4 @@
-﻿# KAMPMANN â€” KATHERM HK TRENCH HEATING AND COOLING
+# KAMPMANN — KATHERM HK TRENCH HEATING AND COOLING
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -6,12 +6,12 @@
 
 Name: Katherm HK Trench Heating and Cooling
 
-Summary: Trench units for heating and cooling at floor-to-ceiling glass, running quietly and efficiently.
+Summary: Katherm HK perimeter floor trench units (290 or 360 mm wide × 135 or 190 mm deep) deliver 2-pipe changeover or 4-pipe hydronic heating alongside sensible and latent cooling at floor-to-ceiling glass. Quiet 0–10V EC tangential fans, integral condensate pans, mitred corners, and custom curves integrate seamlessly into glazing lines.
 
 Key points:
-- Heating and cooling
-- EC fans
-- Custom lengths, mitres and curves
+- 290 or 360 mm × 135 or 190 mm floor trench with integral stainless condensate pan
+- 2-pipe changeover or 4-pipe hydronic heating plus sensible and latent cooling
+- Quiet EC tangential fan with 0–10V control, custom lengths, mitres, and curves
 
 Photos:
 # One photo per line:  - file | caption
@@ -19,9 +19,12 @@ Photos:
 - assets/photos/kampmann-katherm-hk/1.jpg | Image: Kampmann
 - assets/photos/kampmann-katherm-hk/2.jpg | Image: Kampmann
 - assets/photos/kampmann-katherm-hk/3.jpg | Image: Kampmann
+- assets/photos/kampmann-katherm-hk/4.png | Kampmann Katherm HK 2- or 4-pipe perimeter trench unit with tangential EC fan. Image: Kampmann
+- assets/photos/kampmann-katherm-hk/5.png | Kampmann Katherm HK trench convector cutaway with integral condensate pump. Image: Kampmann
 
 Documents:
 - Kampmann product page | https://www.kampmann.ca/en-CA/products/trench-technology/katherm-hk
+- Kampmann Download Center & Catalogs | https://www.kampmann.ca/download-center
 
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.

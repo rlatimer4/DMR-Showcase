@@ -1,4 +1,4 @@
-﻿# GREE â€” VIREO R32 MINI-SPLIT
+# GREE — VIREO R32 MINI-SPLIT
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -6,20 +6,23 @@
 
 Name: Vireo R32 Mini-Split
 
-Summary: A single-zone R32 mini-split heat pump with a choice of indoor units.
+Summary: Vireo R-32 single-zone mini-split heat pumps cover 9,000 to 36,000 BTU/h at up to 23.0 SEER2 while maintaining heating performance down to −13°F (−25°C). Pairs flexible indoor configurations with triple-action filtration and I-Feel remote temperature sensing.
 
 Key points:
-- R32 refrigerant
-- Multiple indoor unit styles
+- 9,000 to 36,000 BTU/h inverter heat pump using low-GWP R-32 refrigerant
+- Up to 23.0 SEER2 efficiency with heating down to −13°F (−25°C)
+- Triple-action air filtration and I-Feel remote setpoint temperature sensing
 
 Photos:
 # One photo per line:  - file | caption
 # Put new image files in assets/photos/gree-vireo/ and list them here. The first one is the main photo.
 - assets/photos/gree-vireo/1.jpg | Image: GREE
-- assets/photos/gree-vireo/2.jpg | Image: GREE
+- assets/photos/gree-vireo/3.png | GREE Vireo single-zone inverter wall-mounted heat pump. Image: GREE
+- assets/photos/gree-vireo/4.png | GREE Ultra Heat 2-stage Variable Volume Ratio rotary compressor cutaway. Image: GREE
 
 Documents:
 - GREE product page | https://www.greecomfort.com/our-products/vireo-r32
+- GREE System Documentation & Submittals | https://www.greecomfort.com/system-documentation
 
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.

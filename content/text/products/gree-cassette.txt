@@ -1,4 +1,4 @@
-﻿# GREE â€” VRF CEILING CASSETTES
+# GREE — VRF CEILING CASSETTES
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -6,11 +6,12 @@
 
 Name: VRF Ceiling Cassettes
 
-Summary: Ceiling cassette indoor units for GREE VRF systems: one-way, two-way, 360Â° four-way and compact four-way.
+Summary: GREE VRF ceiling cassette indoor units span 5,000 to 48,000 BTU/h across one-way, two-way, 360° four-way, and compact 2'×2' ceiling-grid models. Each cassette includes a built-in high-head condensate lift pump, 4-way independent louver control, electronic expansion valve, and quiet 26–32 dBA acoustics.
 
 Key points:
-- One-way, two-way and four-way models
-- Compact model fits a 2 x 2 ceiling grid
+- 5,000 to 48,000 BTU/h across compact 2'×2', standard 4-way, round-flow, and 1-way styles
+- Built-in high-head condensate lift pump, EEV, and 4-way independent louver swing
+- Quiet ceiling operation down to 26–32 dBA for offices and hospitality
 
 Photos:
 # One photo per line:  - file | caption
@@ -19,6 +20,7 @@ Photos:
 
 Documents:
 - GREE product page | https://www.greecommercial.com/our-products/360-4-way-cassette
+- GREE Commercial Resources & Submittals | https://www.greecommercial.com/resources
 
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.

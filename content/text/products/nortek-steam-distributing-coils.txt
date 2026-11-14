@@ -1,4 +1,4 @@
-﻿# NORTEK AIR SOLUTIONS â€” STEAM DISTRIBUTING COILS
+# NORTEK AIR SOLUTIONS — STEAM DISTRIBUTING COILS
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -6,11 +6,12 @@
 
 Name: Steam Distributing Coils
 
-Summary: Steam distributing (tube-in-tube) coils that spread steam evenly along the tube, for outdoor air and other freeze-prone duty.
+Summary: Freeze-resistant Nortek steam distributing coils pair a 1" outer condensing tube with a concentric 5/8" inner steam-distributing tube to heat outdoor air evenly. Resists freeze damage on sub-zero preheat coils from 2 to 150 psig modulating steam under AHRI 410 certification.
 
 Key points:
-- Even leaving-air temperature
-- For preheat and outdoor air applications
+- Tube-in-tube 1" outer / 5/8" concentric inner design spreads steam evenly
+- Maintains uniform face temperature and resists freeze damage on sub-zero OA
+- Operates on 2 to 150 psig modulating steam; AHRI 410 certified performance
 
 Photos:
 # One photo per line:  - file | caption
@@ -19,6 +20,7 @@ Photos:
 
 Documents:
 - Nortek Air Solutions product page | https://www.nortekair.com/products/steam-distributing-coils/
+- Nortek Air Solutions Technical Literature | https://www.nortekair.com/resources
 
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.

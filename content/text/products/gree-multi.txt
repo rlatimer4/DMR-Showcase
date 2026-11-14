@@ -1,4 +1,4 @@
-﻿# GREE â€” MULTI R32 MULTI-ZONE SYSTEM
+# GREE — MULTI R32 MULTI-ZONE SYSTEM
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -6,21 +6,21 @@
 
 Name: Multi R32 Multi-Zone System
 
-Summary: Multi-zone R32 heat pump systems with seven indoor unit styles to choose from.
+Summary: Multi R-32 multi-zone inverter heat pump systems (18,000 to 42,000 BTU/h) serve 2 to 5 independent rooms from one compact outdoor condensing unit. Mixes wall-mount, ceiling cassette, slim ducted, and floor console indoor styles with continuous heating down to −13°F (−25°C).
 
 Key points:
-- Seven indoor unit options
-- One outdoor unit serves several rooms
+- 18,000 to 42,000 BTU/h multi-zone R-32 outdoor unit serving 2 to 5 indoor zones
+- Mix-and-match wall-mount, ceiling cassette, slim ducted, and floor console indoor units
+- Continuous low-ambient heat pump operation down to −13°F (−25°C)
 
 Photos:
 # One photo per line:  - file | caption
 # Put new image files in assets/photos/gree-multi/ and list them here. The first one is the main photo.
-- assets/photos/gree-multi/1.jpg | Image: GREE
-- assets/photos/gree-multi/2.jpg | Image: GREE
-- assets/photos/gree-multi/3.jpg | Image: GREE
+- assets/photos/gree-multi/4.png | GREE Multi-Zone outdoor inverter condenser and indoor unit lineup. Image: GREE
 
 Documents:
 - GREE product page | https://www.greecomfort.com/our-products/multi-r32
+- GREE System Documentation & Submittals | https://www.greecomfort.com/system-documentation
 
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.

@@ -1,4 +1,4 @@
-﻿# FISAIR â€” DIPHUSAIR VXV HUMIDIFIERS
+# FISAIR — DIPHUSAIR VXV HUMIDIFIERS
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -9,8 +9,9 @@ Name: Diphusair VxV Humidifiers
 Summary: Steam-to-steam humidifiers that use boiler steam in a copper heat exchanger to generate clean steam from potable, softened or deionised water.
 
 Key points:
-- Clean steam from boiler steam
-- No boiler chemicals in the airstream
+- 20 to 600 kg/h (44 to 1,320 lb/h) clean-steam generation powered by plant boiler steam
+- Isolates chemically treated boiler steam from pure air-side humidification steam
+- 316L stainless steel heat-exchanger tube bundle with automatic blowdown control
 
 Photos:
 # One photo per line:  - file | caption
@@ -19,6 +20,7 @@ Photos:
 
 Documents:
 - Fisair product page | https://fisair.com/products/diphusair-air-humidifiers/humidifiers-diphusair-vxv/
+- Fisair Official Portal & Selection Tools | https://fisair.com/en/
 
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.

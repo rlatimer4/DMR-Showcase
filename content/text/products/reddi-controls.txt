@@ -1,4 +1,4 @@
-﻿# REDD-I â€” CONTROLS AND THERMOSTATS
+# REDD-I — CONTROLS AND THERMOSTATS
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -6,10 +6,13 @@
 
 Name: Controls and Thermostats
 
-Summary: Controls and thermostats for electric heating equipment.
+Summary: Solid-state SCR/SSR power controllers, step controllers, thermostats and UL 508A control panels built for precise modulation of electric heating loads.
 
 Key points:
-- Line and low-voltage thermostats
+- Zero-cross SSR and SCR proportional controllers smoothly match electric heat to partial loads
+- Line-voltage, low-voltage (24V) and digital programmable wall thermostats
+- Accepts 0–10 VDC, 4–20 mA, PWM and BMS integration signals
+- Available in NEMA 1, NEMA 4 and NEMA 4X control enclosures
 
 Photos:
 # One photo per line:  - file | caption
@@ -18,6 +21,7 @@ Photos:
 
 Documents:
 - Redd-i product page | https://www.redd-i.com/
+- TPI Corporation / Redd-i Catalogs & Literature | https://www.tpicorp.com/
 
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.

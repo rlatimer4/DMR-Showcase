@@ -1,4 +1,4 @@
-﻿# HUNTAIR â€” KNOCKDOWN AIR HANDLERS
+# HUNTAIR — KNOCKDOWN AIR HANDLERS
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -6,27 +6,28 @@
 
 Name: Knockdown Air Handlers
 
-Summary: Air handlers designed and built to pass through an existing opening and be assembled in place, for new, replacement and retrofit work where space and access are limited.
+Summary: Huntair knockdown air handlers bring 2,000 to 120,000+ CFM custom construction into tight sites on welded structural tube bases via two platforms: Smooth-Exterior 2"/4" structural panelized units shipped disassembled on pallets (field or palletized knockdown), or Huntair FPC 2-5/8" injected-foam aluminum-framed panels fastened by gullwing clips for simple field or factory assembly.
 
 Key points:
-- Sized to fit through the field opening
-- Shortens installation time on replacement projects
-- Same performance as a factory-assembled custom unit
+- Smooth-Exterior field or palletized knockdown: components ship disassembled on pallets
+- Smooth panels (4" ±12" WC L/240; 2" ±8" WC L/200), modified thermal break, 2" upturned floor lip
+- Huntair FPC field/factory knockdown: 2-5/8" injected foam, epoxy thermal break, gullwing clips (L/500 @ ±10" WC)
+- Full powder coat w/ antimicrobial & FDA options, washdown, OSHPD, BABA & FANWALL arrays
 
 Photos:
 # One photo per line:  - file | caption
 # Put new image files in assets/photos/huntair-knockdown/ and list them here. The first one is the main photo.
-# No photo of this product has been found yet. Add one here:
-# - assets/photos/huntair-knockdown/photo.jpg | Caption
+- assets/photos/huntair-knockdown/1.jpg | Huntair FANWALL and palletized knockdown modules sized for 36" doorways. Image: Nortek Air Solutions
 
 Documents:
 - Huntair product page | https://www.nortekair.com/products/knockdown-air-handlers/
+- Nortek Air Solutions Technical Literature | https://www.nortekair.com/resources
 
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.
 # Badge: New
 Specifications:
-- Airflow range: 2,000 to 120,000+ CFM site-assembled knockdown custom air handler
-- Access: Modular sections engineered to pass through standard 36" doors, shafts & elevators
-- Assembly: No-weld bolted thermal-break panels or field-welded structural frame
-- Fans: Integral FANWALL array with N+1 redundancy and VFD control
+- Smooth Knockdown: 2,000–120,000+ CFM; 2" (±8" WC L/200) or 4" (±12" WC L/240) structural panels shipped disassembled on pallets
+- FPC Knockdown: 2-5/8" injected foam, extruded aluminum w/ epoxy thermal break, gullwing clip fasteners, L/500 @ ±10" WC
+- Insulation & acoustics: Spray foam + melamine foam in perf-lined Smooth sections (no perf liners on FPC); washdown possible
+- Finish, base & certs: Welded structural tube base, full powder coat (antimicrobial/FDA), OSHPD & BABA compliance possible

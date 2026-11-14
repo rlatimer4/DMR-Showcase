@@ -1,4 +1,4 @@
-﻿# HUNTAIR â€” FANWALL SYSTEMS
+# HUNTAIR — FANWALL SYSTEMS
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -6,27 +6,29 @@
 
 Name: FANWALL Systems
 
-Summary: Arrays of smaller direct-drive fans that replace one large fan. Used to replace ageing fans in existing air handlers, they avoid the cost and disruption of a failure and can cut fan energy by as much as 40%.
+Summary: Developed by Huntair—creator of FANWALL Technology—Gen IV FANWALL arrays deliver N+1 redundancy and uniform coil face velocity using 12" to 27" wheels balanced to AMCA 204-96 Class BV-5 Grade G.55 (0.022 in/s peak). Available with IE5+ Ultra-Premium ferrite-magnet motors, space-saving FANWALL EC (12"–24" shorter), Zero-System-Effect dampers, Coplanar Silencers, and System Optimization Controls.
 
 Key points:
-- Redundancy: remaining fans keep running if one fails
-- Even airflow across coils and filters
-- Fan cubes pass through a standard doorway for retrofit
+- Original patented Gen IV FANWALL array dynamically balanced to AMCA 204-96 Class BV-5 Grade G.55 (0.022 in/s peak)
+- 12" to 27" wheels with 1–15 HP (20/30 HP on 27") incremental induction, IE5+ Ultra-Premium (200k+ hr L10), or ECMi motors
+- Zero-System-Effect backdraft dampers, System Optimization Controls for peak FEI, and FANWALL EC (saves 12"–24" length)
+- Coplanar Silencers attenuate airborne noise; AMCA 211/311, UL 1995 listed, and OSHPD pre-approved seismic
 
 Photos:
 # One photo per line:  - file | caption
 # Put new image files in assets/photos/huntair-fanwall/ and list them here. The first one is the main photo.
-- assets/photos/governair-fanwall/1.jpg | Image: Nortek Air Solutions
-- assets/photos/governair-fanwall/2.jpg | Image: Nortek Air Solutions
+- assets/photos/huntair-fanwall/1.jpg | Huntair FANWALL modular direct-drive plug fan array with Coplanar Silencers. Image: Nortek Air Solutions
+- assets/photos/huntair-fanwall/2.png | Compact Huntair FANWALL EC array saving 12"–24" of AHU length. Image: Nortek Air Solutions
 
 Documents:
 - Huntair product page | https://www.nortekair.com/products/fanwall-systems/
+- Nortek Air Solutions Technical Literature | https://www.nortekair.com/resources
 
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.
 # Badge: New
 Specifications:
-- Technology: Original patented FANWALL modular direct-drive plug fan array
-- Motor options: 1.5 to 15 HP high-efficiency induction motors with VFDs or brushless ECM
-- Benefits: N+1 redundancy, uniform coil face velocity, shorter AHU footprint, no belts/bearings
-- Certifications: AMCA 210 / 300 tested, UL 1995, OSHPD pre-approved seismic
+- Technology & balance: Gen IV FANWALL modular cubes; 12"–27" wheels balanced to AMCA 204-96 BV-5 Grade G.55 (0.022 in/s peak)
+- Motors & efficiency: Matched 1–15 HP (20/30 HP on 27") VFD induction, IE5+ Ultra-Premium (460V, ferrite magnets, ceramic bearings), or ECMi
+- Controls & footprint: System Optimization Controls, Zero-System-Effect backdraft dampers, and compact FANWALL EC (12"–24" shorter)
+- Certifications: AMCA 210/300 & 211/311 (to 22"), UL 1995, OSHPD pre-approved seismic

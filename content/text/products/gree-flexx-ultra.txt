@@ -1,4 +1,4 @@
-﻿# GREE â€” FLEXX ULTRA R32 CENTRAL HEAT PUMP
+# GREE — FLEXX ULTRA R32 CENTRAL HEAT PUMP
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -6,21 +6,22 @@
 
 Name: FLEXX Ultra R32 Central Heat Pump
 
-Summary: A central ducted R32 heat pump system with side discharge, designed to heat in cold climates.
+Summary: FLEXX Ultra R-32 central ducted cold-climate heat pumps (2 to 5 tons) pair a side-discharge inverter outdoor unit with a multi-positional air handler up to 1.0 in. w.g. ESP. Its EVI inverter compressor delivers 100% heating capacity at 5°F and continues heating down to −22°F (−30°C).
 
 Key points:
-- Side-discharge outdoor unit
-- Cold-climate heating
+- 2 to 5 tons cold-climate R-32 central ducted split heat pump system
+- EVI inverter compressor maintains 100% heat at 5°F and heats down to −22°F (−30°C)
+- Side-discharge outdoor unit with multi-positional AHU up to 1.0 in. w.g. ESP
 
 Photos:
 # One photo per line:  - file | caption
 # Put new image files in assets/photos/gree-flexx-ultra/ and list them here. The first one is the main photo.
 - assets/photos/gree-flexx-ultra/1.jpg | Image: GREE
-- assets/photos/gree-flexx-ultra/2.jpg | Image: GREE
-- assets/photos/gree-flexx-ultra/3.jpg | Image: GREE
+- assets/photos/gree-flexx-ultra/4.jpg | GREE FLEXX Ultra R-32 universal inverter split system (18.5 SEER2). Image: GREE
 
 Documents:
 - GREE product page | https://www.greecomfort.com/our-products/flexx-ultra-r32
+- GREE System Documentation & Submittals | https://www.greecomfort.com/system-documentation
 
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.

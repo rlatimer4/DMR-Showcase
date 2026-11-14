@@ -103,6 +103,7 @@ Text: Custom air handlers with fan arrays keep air moving through a fan failure.
 Equipment:
 - temtrol-ahu | Surgery air handler | Custom double-wall unit with HEPA final filters
 + huntair-ahu
++ huntair-fpc
 + governair-ahu
 + ventrol-ahu
 + envirotec-mql
@@ -203,6 +204,7 @@ Title: Air handling options
 Text: Other air handlers used in hospitals.
 Equipment:
 - huntair-ahu | General-floor custom air handler
++ huntair-fpc
 + temtrol-ahu
 + governair-ahu
 + ventrol-ahu

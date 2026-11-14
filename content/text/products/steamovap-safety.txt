@@ -1,4 +1,4 @@
-﻿# STEAMOVAP TECHNOLOGIES â€” SAFETY CONTROLS
+# STEAMOVAP TECHNOLOGIES — SAFETY CONTROLS
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -6,11 +6,12 @@
 
 Name: Safety Controls
 
-Summary: High-limit and airflow safety controls that shut off the humidifier before a duct is over-humidified.
+Summary: Hardwired high-limit humidistats, airflow proving switches, and water leak detectors that shut down or modulate the humidifier before duct condensation occurs. Essential protection for air handlers and distribution manifolds across commercial buildings.
 
 Key points:
-- High-limit humidistats
-- Airflow proving switches
+- Modulating and cutout duct high-limit humidistats (85% RH limit)
+- Paddle and electronic airflow proving switches
+- Water leak detectors wired to hardwired humidifier safety interlocks
 
 Photos:
 # One photo per line:  - file | caption
@@ -21,6 +22,7 @@ Photos:
 
 Documents:
 - SteamOVap Technologies product page | https://steamovap.com/product-safety-control/
+- SteamOVap Portal & steamOcalc Selection Tool | https://steamovap.com/
 
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.
@@ -28,3 +30,4 @@ Documents:
 Specifications:
 - Devices: Duct high-limit humidistats (modulating or cutout), paddle/electronic airflow switches & water leak detectors
 - Function: Hardwired safety interlocks to prevent duct condensation when airflow stops or RH exceeds 85%
+- Control interface: Direct relay wiring to SteamOVap humidifier safety circuit

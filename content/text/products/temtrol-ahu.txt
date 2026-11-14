@@ -1,4 +1,4 @@
-﻿# TEMTROL â€” CUSTOM AIR HANDLERS
+# TEMTROL — CUSTOM AIR HANDLERS
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -6,26 +6,29 @@
 
 Name: Custom Air Handlers
 
-Summary: Air handlers engineered unit by unit for the fit, efficiency and reliability a project needs, used in healthcare, education, manufacturing, data centers, cleanrooms, offices and hospitality.
+Summary: Temtrol custom air handlers span 1,000 to 150,000+ CFM using 3" or 3.5" double-wall Integrated Frame (ITF) construction on welded structural tube base frames with injected foam (R-24) or fiberglass (R-12.5). Rated to <1% leakage and L/200 to L/240 up to ±10" WC with no thru-metal except fasteners, stacked air tunnels, slide-out coil racks, third-layer standing seam roofs to 39'-8", and Miami-Dade / OSHPD certifications.
 
 Key points:
-- Custom construction, configuration and materials
-- Available with FANWALL TECHNOLOGY fan arrays
-- Water, steam, booster and DX coil options
+- 3" or 3.5" ITF frame on welded structural tube base (R-24 injected foam or R-12.5 fiberglass; no thru-metal except fasteners)
+- Less than 1% casing leakage at ±8" WC and L/240 deflection up to ±10" WC with perforated acoustic liners
+- Slide-out coil racks with intermediate drain pans, third-layer standing seam roof to 39'-8", and Rapid Knockdown for tight ingress
+- Miami-Dade Intertek TAS-201/202/203 and OSHPD seismic certifications, BABA options, and Gen IV FANWALL arrays
 
 Photos:
 # One photo per line:  - file | caption
 # Put new image files in assets/photos/temtrol-ahu/ and list them here. The first one is the main photo.
-- assets/photos/dmr/Custom-AHU.jpg | Image: Nortek Air Solutions
+- assets/photos/temtrol-ahu/1.jpg | Temtrol Integrated Frame (ITF) custom double-wall air handler. Image: Nortek Air Solutions
+- assets/photos/temtrol-ahu/2.jpg | Temtrol ITF injected polyurethane foam panel assembly. Image: Nortek Air Solutions
 
 Documents:
 - Temtrol product page | https://www.nortekair.com/products/custom-air-handlers/
+- Nortek Air Solutions Technical Literature | https://www.nortekair.com/resources
 
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.
 # Badge: New
 Specifications:
-- Airflow range: 1,000 to 150,000+ CFM custom double-wall air handling unit
-- Casing: 2" to 4" foam-injected thermal-break panels with 6" to 12" structural base rail
-- Components: FANWALL array, Cooney or Nortek coils, energy recovery wheels/plates, UV-C
-- Certifications: AHRI 1350 / 430 certified, UL 1995 / ETL listed
+- Airflow & structure: 1,000 to 150,000+ CFM; stacked air tunnels on welded structural tube base frame
+- Casing & thermal: 3" or 3.5" ITF double-wall (R-24 foam / R-12.5 fiberglass); ±8" to ±10" WC @ L/200–L/240; <1% leakage; no thru-metal except fasteners
+- Roof & components: Third-layer standing seam roof (to 39'-8" span); Gen IV FANWALL w/ IE5+/ECMi; slide-out coil racks; Rapid Knockdown
+- Certifications: AHRI 1350 / 430, UL 1995 / ETL, Miami-Dade TAS-201/202/203, OSHPD seismic; BABA compliance possible

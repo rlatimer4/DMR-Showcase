@@ -1,4 +1,4 @@
-﻿# STEAMOVAP TECHNOLOGIES â€” STEAM DISTRIBUTION
+# STEAMOVAP TECHNOLOGIES — STEAM DISTRIBUTION
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -9,18 +9,22 @@ Name: Steam Distribution
 Summary: Steam distribution equipment: duct and air handler manifolds, and space blowers that distribute steam directly into a room where there is no duct.
 
 Key points:
-- Short-absorption manifolds
-- Space blowers for direct room distribution
+- Single stainless dispersion tubes, SDU short-absorption manifolds, and direct-room fan packs
+- Multi-tube short-absorption manifolds achieve complete absorption down to 6"–12" in AHUs
+- Corrosion-resistant 304L or 316L stainless steel manifolds with condensate drain header
 
 Photos:
 # One photo per line:  - file | caption
 # Put new image files in assets/photos/steamovap-distribution/ and list them here. The first one is the main photo.
 - assets/photos/steamovap-distribution/1.jpg | Image: SteamOVap Technologies
 - assets/photos/steamovap-distribution/2.jpg | Image: SteamOVap Technologies
-- assets/photos/steamovap-distribution/3.jpg | Image: SteamOVap Technologies
+- assets/photos/steamovap-distribution/3.png | SteamOVap single-ramp duct steam dispersion wand. Image: SteamOVap Technologies
+- assets/photos/steamovap-distribution/4.png | SteamOVap multi-ramp rapid-absorption steam dispersion grid. Image: SteamOVap Technologies
+- assets/photos/steamovap-distribution/5.png | SteamOVap space-blower direct steam dispersion unit. Image: SteamOVap Technologies
 
 Documents:
 - SteamOVap Technologies product page | https://steamovap.com/steam-distribution/
+- SteamOVap Portal & steamOcalc Selection Tool | https://steamovap.com/
 
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.

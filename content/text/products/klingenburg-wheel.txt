@@ -1,4 +1,4 @@
-﻿# KLINGENBURG â€” ROTARY HEAT EXCHANGERS
+# KLINGENBURG — ROTARY HEAT EXCHANGERS
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -6,25 +6,31 @@
 
 Name: Rotary Heat Exchangers
 
-Summary: Rotary heat exchangers (energy recovery wheels) supplied as components for air handling units.
+Summary: Klingenburg RRT, RRS, RRU, and RRA-sealed rotary heat exchangers (energy recovery wheels) engineered for commercial AHUs, custom penthouses, and DOAS units, featuring pressure-washable DekaTru™ coating technology with low air friction and high heat/moisture transfer.
 
 Key points:
-- Sensible and enthalpy wheels
-- Wide range of diameters
+- Available in RRT (Premium), RRS (Classic cassette), and RRU (Standard) rotor housings with RRA contact seals
+- DekaTru™ coating delivers high heat/moisture transfer, low air friction, and industry-leading adhesion that withstands pressure washing
+- Matrix options cover sensible aluminum (P), Silikagel enthalpy (E), epoxy-coated (K), and 3Å molecular-sieve sorption (N)
+- Purge sector design limits exhaust-to-supply carryover to <0.1% at up to 85% efficiency; segmented wheels to 20 ft diameter
 
 Photos:
 # One photo per line:  - file | caption
 # Put new image files in assets/photos/klingenburg-wheel/ and list them here. The first one is the main photo.
-- assets/photos/dmr/Klingenburg-Image.jpg | Klingenburg product range. Image: dmr-hvac.com
+- assets/photos/klingenburg-wheel/1.png | Klingenburg DekaTru pressure-washable energy recovery rotor coating. Image: Klingenburg
+- assets/photos/klingenburg-wheel/2.png | Klingenburg RRU and RRS rotary heat exchanger housing assemblies. Image: Klingenburg
+- assets/photos/klingenburg-wheel/3.png | Klingenburg RRT premium insulated wheel casing and RRA contact seal detail. Image: Klingenburg
+- assets/photos/klingenburg-wheel/4.png | Klingenburg rotary heat exchanger housings and segmented wheels. Image: Klingenburg
 
 Documents:
 - Klingenburg product page | http://www.klingenburg.de/en/
+- DMR Associates Line Card & Submittal Support | https://dmr-hvac.com/
 
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.
 # Badge: New
 Specifications:
-- Airflow & size: 500 to 120,000+ CFM; rotor diameters from 600 mm to 6,000 mm (2 ft to 20 ft)
-- Media options: Sensible aluminum, hygroscopic enthalpy coating, or 3Å molecular-sieve zeolite
+- Airflow & size: 500 to 120,000+ CFM; rotor diameters from 600 mm to 6,000 mm (2 ft to 20 ft); RRT, RRS & RRU housings w/ RRA seals
+- Media & coating: Sensible aluminum, Silikagel enthalpy, epoxy, 3Å zeolite, and pressure-washable DekaTru™ coating
 - Efficiency: Up to 80–85% sensible & latent recovery with purge sector (<0.1% EATR)
 - Certifications: AHRI 1060 and Eurovent certified performance

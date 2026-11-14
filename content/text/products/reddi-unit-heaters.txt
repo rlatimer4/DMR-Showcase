@@ -1,4 +1,4 @@
-﻿# REDD-I â€” ELECTRIC UNIT AND WALL HEATERS
+# REDD-I — ELECTRIC UNIT AND WALL HEATERS
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -6,11 +6,13 @@
 
 Name: Electric Unit and Wall Heaters
 
-Summary: Electric unit heaters, including hazardous-location models, and wall heaters for commercial and residential spaces.
+Summary: Suspended industrial and commercial electric unit heaters, hazardous-location heaters and architectural wall/cabinet heaters engineered for reliable spot and space heating.
 
 Key points:
-- Hazardous-location unit heaters
-- Commercial and residential wall heaters
+- Explosion-proof hazardous-location unit heaters alongside commercial suspended models
+- Heavy-duty commercial and residential wall heaters with enclosed finned tubular elements
+- Available from 1.5 kW to 60 kW across 120V–600V single- and three-phase power
+- UL 2021 / CSA listed with integral contactors, transformers and built-in thermostats
 
 Photos:
 # One photo per line:  - file | caption
@@ -18,9 +20,11 @@ Photos:
 - assets/photos/reddi-unit-heaters/1.jpg | Image: Redd-i
 - assets/photos/reddi-unit-heaters/2.jpg | Image: Redd-i
 - assets/photos/reddi-unit-heaters/3.jpg | Image: Redd-i
+- assets/photos/reddi-unit-heaters/4.png | Redd-i heavy-duty horizontal and vertical electric unit heater. Image: Redd-i
 
 Documents:
 - Redd-i product page | https://www.redd-i.com/
+- TPI Corporation / Redd-i Catalogs & Literature | https://www.tpicorp.com/
 
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.

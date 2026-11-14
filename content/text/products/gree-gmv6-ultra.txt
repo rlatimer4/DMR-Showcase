@@ -1,4 +1,4 @@
-﻿# GREE â€” GMV6 ULTRA HEAT PUMP AND HEAT RECOVERY VRF
+# GREE — GMV6 ULTRA HEAT PUMP AND HEAT RECOVERY VRF
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -6,11 +6,13 @@
 
 Name: GMV6 Ultra Heat Pump and Heat Recovery VRF
 
-Summary: GMV6 Ultra VRF outdoor units in heat pump and heat recovery versions, with extended low-ambient heating performance.
+Summary: GMV6 Ultra VRF heat pump and heat recovery outdoor systems (6 to 30 tons) utilize two-stage vapor-injection (EVI) DC inverter compressors for severe cold climates. Delivers 100% rated heating output at −4°F and continuous operation down to −22°F (−30°C) under AHRI 1230.
 
 Key points:
-- Heat pump and heat recovery
-- Extended cold-climate heating
+- 6 to 30 tons ultra-low-ambient Heat Pump and simultaneous Heat Recovery VRF
+- Continuous cold-climate heating to −22°F (−30°C) with 100% output at −4°F
+- Two-stage enhanced vapor-injection (EVI) DC inverter scroll compressors
+- AHRI 1230 certified and Cold-Climate Heat Pump rated
 
 Photos:
 # One photo per line:  - file | caption
@@ -19,6 +21,7 @@ Photos:
 
 Documents:
 - GREE product page | https://www.greecommercial.com/our-products/gmv6-ultra-heat-pump-heat-recovery-208-230v
+- GREE Commercial Resources & Submittals | https://www.greecommercial.com/resources
 
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.

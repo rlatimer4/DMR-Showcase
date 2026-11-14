@@ -1,4 +1,4 @@
-﻿# KAMPMANN â€” BASEBOARD HK
+# KAMPMANN — BASEBOARD HK
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -6,10 +6,12 @@
 
 Name: Baseboard HK
 
-Summary: Baseboard units for spaces with higher heating or cooling loads.
+Summary: Fan-assisted hydronic perimeter heating and cooling baseboard units combining a whisper-quiet EC tangential fan with a high-output copper-aluminum convector for curtain-wall and high-load perimeters.
 
 Key points:
-- Perimeter installation
+- Whisper-quiet EC tangential fan delivers high perimeter heating and cooling output from a compact floor profile
+- Available in 2-pipe or 4-pipe configurations with an integral stainless steel condensate tray for sensible or condensing cooling
+- Custom made-to-measure heavy-gauge enclosures accommodate mitred corners and structural column cut-outs
 
 Photos:
 # One photo per line:  - file | caption
@@ -19,10 +21,13 @@ Photos:
 
 Documents:
 - Kampmann product page | https://www.kampmann.ca/en-CA/products/fan-coils/baseboard-hk
+- Kampmann Download Center & Catalogs | https://www.kampmann.ca/download-center
 
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.
 # Badge: New
 Specifications:
-- Profile: Low-profile hydronic baseboard radiation for continuous perimeter runs
-- Construction: Heavy-gauge architectural steel enclosure with copper-tube/aluminum-fin element
+- Technology: Fan-assisted perimeter heating and cooling unit with EC tangential fan
+- Coil & drainage: High-output copper-aluminum heat exchanger with stainless steel condensate pan (2-pipe or 4-pipe)
+- Acoustics & mounting: Sound-isolated mounting plates and 0–10V modulating EC fan speed control
+- Construction: Custom made-to-measure heavy-gauge architectural steel enclosure with mitred corner options

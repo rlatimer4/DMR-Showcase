@@ -70,6 +70,7 @@ Equipment:
 - ventrol-ahu | Process make-up air handler
 + temtrol-ahu
 + huntair-ahu
++ huntair-fpc
 + governair-ahu
 - huntair-fanwall | Fan array | Redundant fans in the cleanroom air handlers
 + temtrol-fanwall
@@ -128,6 +129,7 @@ Title: Air handling options
 Text: Other air handlers used in pharmaceutical plants.
 Equipment:
 - huntair-ahu | Cleanroom recirculation air handler
++ huntair-fpc
 + temtrol-ahu
 + governair-ahu
 + ventrol-ahu

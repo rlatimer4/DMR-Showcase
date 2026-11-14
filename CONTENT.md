@@ -12,6 +12,7 @@ or any editor. No programming is involved.
 | --- | --- |
 | A building's summary, its "What a DMR package brings" points, its challenges, and the equipment listed at each location | `content/text/buildings/<building>.txt` |
 | A product's name, summary, key points, photos, specifications and documents | `content/text/products/<product>.txt` |
+| The Spec Match (Basis-of-Design cross-reference) table, autofill suggestions and spec text | `content/spec-match.csv` (opens in Excel or Google Sheets) |
 
 The files explain themselves at the top. The rules are short:
 
@@ -85,6 +86,7 @@ content/
   text/products/<id>.txt   words and photos for each product
   manufacturers/<id>.js    which product lines a manufacturer has
   categories.js            product types (the catalog filter buttons)
+  spec-match.csv           Basis-of-Design Spec Match spreadsheet (Excel / Google Sheets)
   buildings/<id>.js        the 3D model of each building
   installs.js              map pins
   gallery.js               gallery photos
@@ -270,6 +272,31 @@ Open the site with `?edit=1` (for example `http://localhost:8000/?edit=1#install
 Click the map to drop a pin, tick the manufacturers, add photo paths if you have
 them, and drag pins to move them. Then choose **Download installs.js** and
 replace `content/installs.js` with the downloaded file.
+
+## Spec Match (`content/spec-match.csv`)
+
+`content/spec-match.csv` is a 17-column spreadsheet table (UTF-8 CSV) that you
+can open and edit in Excel or Google Sheets. It powers the unified Spec Match
+box across both **(1) BOD Manufacturer + Scoped Fuzzy Model Match** and **(2)
+Product Category + Granular Requirements (Sliders, Single-Select Dropdowns, and
+Multi-Select Checkboxes)**, while strictly isolating competitor data so users
+never discover additional competitors or browse unsolicited model lists:
+
+- `ID` — unique row slug (no spaces)
+- `Category` — category id from `content/categories.js` (for example `ahu`, `packaged`, `vav`, `fancoil`, `blowercoil`)
+- `Level 1 Category` — broad product category shown in `#xrefLevel1` (zero competitor names)
+- `Level 2 Sub-Category` — equipment sub-category checkbox row shown in Category Mode (zero competitor names)
+- `Level 3 Configuration` — customer-facing specific configuration / construction heading (zero competitor names)
+- `Equipment Type` — fallback customer-facing equipment heading (zero competitor names)
+- `BOD Manufacturer`, `BOD Models`, `Search Keywords` — internal matching terms (comma/semicolon separated). Manufacturers are only matched once the user types an exact or unique match (`>= 3` characters); model suggestions only appear after typing `>= 2` characters matching the active manufacturer (`<= 5` results, model names only).
+- `BOD Product Description` — concise factual summary describing the competitor/BOD equipment type (shown **only** inside the recommendation card to confirm the unit was understood)
+- `Model Catalog` — pipe-delimited (`|`) entries in the format `Manufacturer :: Model :: Competitor Product Description` (or optionally `Manufacturer :: Model :: Competitor Product Description :: Group :: Option; Group2 :: Option2` to attach per-model pre-selected BOD requirements), used for scoped model matching and the card's verification summary box
+- `Requirement Checkboxes` — pipe-delimited (`|`) engineering requirements rendered for both Category Mode and matched BOD Model Mode, in the format `Group Name :: Requirement Label :: dmr-product-id-1, dmr-product-id-2` (zero competitor names). Prefix `Group Name` with `SLIDER:` to render a stepped range slider (with `Any` as step 0), or `SELECT:` to render a mutually exclusive single-choice dropdown; unprefixed groups render multi-select checkboxes (for simultaneous requirements such as coils).
+- `Known BOD Requirements` — optional pipe/semicolon-delimited (`|` or `;`) list of `Group Name :: Requirement Label` items automatically pre-selected (or hidden when only one option exists) once the BOD model is matched.
+- `Closest DMR Matches`, `Alternate DMR Options` — DMR product ids from `content/manufacturers/*.js`
+- `DMR Selection Guidance`, `Division 23 Spec Text` — engineering selection notes and Division 23 acceptable-manufacturer spec text shown to the user (keep strictly free of competitor names).
+
+Save the edited sheet as **CSV UTF-8 (Comma delimited) (.csv)** to keep changes live.
 
 ## Company details and the map key
 

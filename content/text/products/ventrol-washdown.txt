@@ -1,4 +1,4 @@
-﻿# VENTROL â€” WASHDOWN AIR HANDLERS
+# VENTROL — WASHDOWN AIR HANDLERS
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -6,26 +6,30 @@
 
 Name: Washdown Air Handlers
 
-Summary: Air handlers built to be washed down, for food, beverage and other sanitary applications where the inside of the unit must be cleaned regularly.
+Summary: Ventrol washdown air handlers pair smooth-exterior 2" (R-16 foam) or 4" (R-32 foam; ±12" WC @ L/240) structural panelized construction with continuously welded 1-1/2" to 2" upturned stainless/aluminum floors, caulked internal/external seams, floor drains in every section, liquid-tight conduit, and sprayed non-slip Polyurea membrane coatings for high-pressure sanitation.
 
 Key points:
-- Interior built for regular wash-down
-- Sloped drain pans and sealed construction
-- Custom sizes and configurations
+- Continuously welded floor seams turned up 1-1/2" to 2" with floor drains in every section and liquid-tight conduit
+- Panel seams caulked internally and externally plus cover plates/gasketing and sprayed non-slip Polyurea membrane option
+- PolyBlock True No Thru Metal (1" PolyBlock strips eliminate fastener thermal bridge) with R-32 injected/spray polyurethane foam
+- Stainless steel or all-aluminum skins, perforated cleanable acoustic liners, marine viewports, and palletized knockdown
 
 Photos:
 # One photo per line:  - file | caption
 # Put new image files in assets/photos/ventrol-washdown/ and list them here. The first one is the main photo.
-# No photo of this product has been found yet. Add one here:
-# - assets/photos/ventrol-washdown/photo.jpg | Caption
+- assets/photos/ventrol-washdown/1.png | Ventrol washdown air handler with sprayed non-slip Polyurea floor. Image: Nortek Air Solutions
+- assets/photos/ventrol-washdown/2.png | Continuously welded 1-1/2" to 2" upturned washdown floor and drain detail. Image: Nortek Air Solutions
+- assets/photos/ventrol-washdown/3.png | Washdown section drain, caulked panel seams, and liquid-tight conduit detail. Image: Nortek Air Solutions
 
 Documents:
 - Ventrol product page | https://www.nortekair.com/about/our-brands/ventrol/
+- Nortek Air Solutions Technical Literature | https://www.nortekair.com/resources
 
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.
 # Badge: New
 Specifications:
-- Material: 304 or 316L stainless steel interior and exterior casing with sloped roof
-- Drainage: Full-length double-sloped stainless steel floor and drain pans; zero water retention
-- Sanitation: Food & pharma washdown construction with smooth interior walls and marine viewports
+- Casing & deflection: Smooth exterior 4" (R-32 foam; ±12" WC @ L/240) or 2" (R-16 foam; ±8" WC) structural panels on welded tube base
+- Thermal & materials: 304/316L stainless or all-aluminum; PolyBlock True No Thru Metal; closed-cell spray or injected polyurethane foam
+- Floor & drainage: Continuously welded seams, 1-1/2" to 2" upturned floor/1" recessed Polyurea pan, caulked seams, floor drain in each section
+- Sanitation & ingress: Liquid-tight conduit, smooth cleanable interior, marine viewports & field/palletized knockdown

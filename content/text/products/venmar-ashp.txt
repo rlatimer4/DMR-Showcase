@@ -1,4 +1,4 @@
-﻿# VENMAR CES â€” STANDARD AND LOW-AMBIENT AIR-SOURCE HEAT PUMPS
+# VENMAR CES — STANDARD AND LOW-AMBIENT AIR-SOURCE HEAT PUMPS
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -6,25 +6,30 @@
 
 Name: Standard and Low-Ambient Air-Source Heat Pumps
 
-Summary: Air-source heat pumps in standard and low-ambient versions. The low-ambient units keep heating in cold weather.
+Summary: Venmar CES EnergyPack air-source heat pumps span 25 to 120 tons using R-454B in 3" ITF double-wall cabinets (R-24 foam; ±10" WC @ L/240) for mixed-air or 100% DOAS with integral energy recovery. Sustaining mechanical heating down to 5°F ambient (−10°F SST) or −20°F ambient (−40°F SST) with Liquid Injection at COPs of 2.0–4.5, units are configurable for rooftop or indoor elevator-knockdown installation.
 
 Key points:
-- Standard and low-ambient models
-- Heating and cooling without a boiler or tower
+- 25 to 120 tons EnergyPack ASHP DOAS with R-454B and typical heating COPs of 2.0 to 4.5 (up to 4.1 @ 47°F; 1.7 @ −20°F ambient)
+- Optional Liquid Injection lowers minimum compressor operating ambient to −20°F (−40°F SST), reducing electric/gas backup demand
+- Indoor, elevator-knockdown, or rooftop configurations with integral energy recovery wheel/plate and Vee ACCU 31" MaEr EC condenser fans
+- 3" ITF double-wall construction (±10" WC @ L/240), NASDA-integrated FLA/MCA/MOP data, FANWALL arrays, and factory BACnet DDC
 
 Photos:
 # One photo per line:  - file | caption
 # Put new image files in assets/photos/venmar-ashp/ and list them here. The first one is the main photo.
-# No photo of this product has been found yet. Add one here:
-# - assets/photos/venmar-ashp/photo.jpg | Caption
+- assets/photos/venmar-ashp/1.jpg | Venmar CES indoor 6,600 CFM constant-volume air-source heat pump DOAS. Image: Nortek Air Solutions
+- assets/photos/venmar-ashp/2.png | Venmar CES EnergyPack ASHP low-ambient heat pump rooftop project. Image: Nortek Air Solutions
+- assets/photos/venmar-ashp/3.png | Multi-unit Venmar CES EnergyPack air-source heat pump DOAS installation. Image: Nortek Air Solutions
 
 Documents:
 - Venmar CES product page | https://www.nortekair.com/about/our-brands/venmar/
+- Nortek Air Solutions Technical Literature | https://www.nortekair.com/resources
 
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.
 # Badge: New
 Specifications:
-- Capacity range: 10 to 140 tons; 2,000 to 50,000 CFM cold-climate air-source heat pump DOAS
-- Low-ambient heating: Heat pump operation down to 0°F / −10°F with integral exhaust energy recovery
-- Fans & controls: FANWALL direct-drive fan array and factory DDC controls (BACnet/Modbus)
+- Capacity & climate: 25 to 120 tons EnergyPack platform; R-454B; mechanical heating to 5°F ambient (−10°F SST) or −20°F ambient (−40°F SST) w/ Liquid Injection
+- Efficiency & compressors: Typical COP 2.0–4.5; Digital, VSC, 2-Step, or Liquid Injection scroll compressors; supplemental/defrost electric preheat/post-heat
+- Casing & ACCU: 3" ITF double-wall on welded tube base (±10" WC @ L/240); Vee ACCU w/ 31" MaEr EC fans (105°F rating); indoor/elevator-split options
+- Recovery & controls: Integral ER wheel or plate, FANWALL array, NASDA FLA/MCA/MOP electrical summary, BACnet/Modbus DDC

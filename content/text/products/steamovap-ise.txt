@@ -1,4 +1,4 @@
-﻿# STEAMOVAP TECHNOLOGIES â€” ISE STEAM EXCHANGE HUMIDIFIER
+# STEAMOVAP TECHNOLOGIES — ISE STEAM EXCHANGE HUMIDIFIER
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -6,26 +6,30 @@
 
 Name: ISE Steam Exchange Humidifier
 
-Summary: A steam exchange humidifier that uses energy from a central boiler to produce pure, sterile steam for the air handler or duct.
+Summary: Steam-to-steam exchange humidifiers delivering 4 to 600 lb/h (1.8 to 272 kg/h) of chemical-free clean steam heated indirectly by central boiler steam inside a 316L stainless heat exchanger.
 
 Key points:
-- Clean steam from boiler steam
-- No boiler chemicals in the airstream
+- Completely isolates chemically treated plant boiler steam from clean potable, softened, or RO humidification water
+- Wide capacity range from 4 to 600 lb/h (1.8 to 272 kg/h) meets ASHRAE 170 healthcare and laboratory IAQ standards
+- Cleanable 316L stainless steel heat exchanger coil and evaporation tank reduce long-term scaling maintenance
+- Modulating control valve and touch-screen controller support native BACnet and Modbus BMS integration
 
 Photos:
 # One photo per line:  - file | caption
 # Put new image files in assets/photos/steamovap-ise/ and list them here. The first one is the main photo.
 - assets/photos/steamovap-ise/1.jpg | Image: SteamOVap Technologies
 - assets/photos/steamovap-ise/2.jpg | Image: SteamOVap Technologies
+- assets/photos/steamovap-ise/3.png | SteamOVap ISE steam-to-steam clean humidifier heat exchanger. Image: SteamOVap Technologies
 
 Documents:
 - SteamOVap Technologies product page | https://steamovap.com/ise-steam-exchange-humidifier/
+- SteamOVap Portal & steamOcalc Selection Tool | https://steamovap.com/
 
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.
 # Badge: New
 Specifications:
-- Steam capacity: 50 to 1,350 lb/h (23 to 612 kg/h) steam-to-steam clean humidifier
+- Steam capacity: 4 to 600 lb/h (1.8 to 272 kg/h) steam-to-steam clean humidifier
 - Primary supply: 5 to 15 psig (up to 50 psig) central boiler steam in 316L stainless heat exchanger
 - Secondary output: Chemical-free clean atmospheric steam from potable, softened or RO water
 - Controls: Modulating steam control valve with BACnet / Modbus touch-screen controller

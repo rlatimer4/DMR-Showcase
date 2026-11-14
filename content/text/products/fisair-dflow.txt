@@ -1,4 +1,4 @@
-﻿# FISAIR â€” DFLOW DEHUMIDIFIERS
+# FISAIR — DFLOW DEHUMIDIFIERS
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -6,23 +6,30 @@
 
 Name: DFLOW Dehumidifiers
 
-Summary: Dehumidifiers for industrial processes that need very low humidity.
+Summary: Dual-rotor ultra-low dew point desiccant dehumidifiers engineered for lithium-ion battery dry rooms, pharmaceutical suites, and microelectronics manufacturing down to −70°C (−94°F) dew point with faster setpoint recovery and lower OPEX. Backed by 55+ years in humidity control, FST selection software, and a 2-year standard warranty.
 
 Key points:
-- For low-humidity process rooms
+- Dual-rotor cascade architecture reaches ultra-low supply dew points down to −70°C (−94°F) CDP with faster setpoint recovery
+- Energy-recovery purge sector dramatically cuts reactivation energy and operating cost compared to single-wheel dry-room units
+- Double-wall thermal-break vapor-tight construction prevents ambient moisture infiltration into dry rooms
+- Selected via FST (Fisair Selection Tool) with BACnet/Modbus PLC/HMI controls and a 2-year standard warranty
 
 Photos:
 # One photo per line:  - file | caption
 # Put new image files in assets/photos/fisair-dflow/ and list them here. The first one is the main photo.
 - assets/photos/fisair-dflow/1.jpg | Image: Fisair
+- assets/photos/fisair-dflow/2.png | Fisair DFLOW ultra-low dew-point dry-room desiccant unit. Image: Fisair
+- assets/photos/fisair-dflow/3.png | Fisair DFLOW dual-rotor purge and energy-saving flow schematic. Image: Fisair
 
 Documents:
 - Fisair product page | https://fisair.com/products/df-air-dehumidifiers/dflow-air-dehumidifiers/
+- Fisair Official Portal & Selection Tools | https://fisair.com/en/
 
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.
 # Badge: New
 Specifications:
-- Supply dewpoint: Ultra-low dewpoint down to −60°C (−76°F)
-- Process airflow: 500 to 20,000 m³/h for dry-room, battery and pharma suites
-- Rotor: Specialized low-dewpoint silica-gel / molecular-sieve rotor with purge sector
+- Supply dewpoint: Ultra-low dewpoint down to −70°C (−94°F) CDP with rapid setpoint recovery and lower OPEX
+- Technology: High-efficiency dual-rotor desiccant system with multi-stage purge & heat recovery
+- Process airflow: 500 to 20,000 m³/h (295 to 11,770 CFM) for dry rooms, battery plants & pharma
+- Construction & support: Vapor-tight double-wall thermal-break casing, dewpoint PLC controls, FST selection software & 2-yr warranty

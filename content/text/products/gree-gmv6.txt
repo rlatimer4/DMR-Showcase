@@ -1,4 +1,4 @@
-﻿# GREE â€” GMV6 HEAT PUMP AND HEAT RECOVERY VRF
+# GREE — GMV6 HEAT PUMP AND HEAT RECOVERY VRF
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -6,19 +6,23 @@
 
 Name: GMV6 Heat Pump and Heat Recovery VRF
 
-Summary: GMV6 variable refrigerant flow outdoor units in heat pump and heat recovery versions, 208/230V three-phase.
+Summary: GMV6 variable refrigerant flow outdoor units span 6 to 48 tons (72,000 to 576,000 BTU/h) in 208/230V or 460V three-phase 2-pipe heat pump and 3-pipe heat recovery models. Driven by all-DC inverter variable-speed scroll compressors with CAN-bus communications under AHRI 1230.
 
 Key points:
-- Heat pump and heat recovery
-- Connects to the full range of GREE VRF indoor units
+- 6 to 48 tons (72k–576k BTU/h) in 208/230V or 460V 3-phase modular configurations
+- Available in 2-pipe Heat Pump or 3-pipe simultaneous Heat Recovery VRF
+- All-DC inverter scroll compressors with CAN-bus communication; AHRI 1230 certified
 
 Photos:
 # One photo per line:  - file | caption
 # Put new image files in assets/photos/gree-gmv6/ and list them here. The first one is the main photo.
 - assets/photos/gree-gmv6/1.jpg | Image: GREE
+- assets/photos/gree-gmv6/2.png | GREE GMV6 Heat Pump / Heat Recovery 208/230V 3-phase VRF outdoor unit. Image: GREE
+- assets/photos/gree-gmv6/3.png | GREE GMV6 modular VRF outdoor condenser bank. Image: GREE
 
 Documents:
 - GREE product page | https://www.greecommercial.com/our-products/gmv6-heat-pump-heat-recovery-208-230v
+- GREE Commercial Resources & Submittals | https://www.greecommercial.com/resources
 
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.

@@ -1,4 +1,4 @@
-﻿# FISAIR â€” DIPHUSAIR FSH HUMIDIFIERS
+# FISAIR — DIPHUSAIR FSH HUMIDIFIERS
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -6,11 +6,13 @@
 
 Name: Diphusair FSH Humidifiers
 
-Summary: Steam injection humidifiers that distribute pressurised boiler steam through double-jacketed tubes with a steam separator.
+Summary: Diphusair FSH humidifiers inject 5 to 1,800 kg/h (11 to 3,960 lb/h) of dry clean steam from 0.2 to 4.0 bar (3 to 58 psig) pressurized boiler steam supplies. Built with 316L TIG-welded stainless steel jacketed drying chambers, dispersion lances, and modulating pneumatic or electric control valves.
 
 Key points:
-- For pressurised boiler steam
-- Jacketed dispersion tubes for dry steam
+- 5 to 1,800 kg/h (11 to 3,960 lb/h) capacity from 0.2–4.0 bar (3–58 psig) boiler steam
+- 316L TIG-welded stainless steel jacketed drying chamber and dispersion lance
+- Integrated steam separator ensures condensate-free dry steam discharge
+- Pneumatic or electric modulating control valve (0–10V / 4–20mA)
 
 Photos:
 # One photo per line:  - file | caption
@@ -19,6 +21,7 @@ Photos:
 
 Documents:
 - Fisair product page | https://fisair.com/products/diphusair-air-humidifiers/humidifiers-diphusair-fsh/
+- Fisair Official Portal & Selection Tools | https://fisair.com/en/
 
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.

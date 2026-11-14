@@ -1,4 +1,4 @@
-﻿# NOVELAIRE â€” COMFORTDRY PACKAGED DEHUMIDIFICATION UNITS
+# NOVELAIRE — COMFORTDRY PACKAGED DEHUMIDIFICATION UNITS
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -6,25 +6,31 @@
 
 Name: ComfortDRY Packaged Dehumidification Units
 
-Summary: Packaged recirculating dehumidification units that control humidity directly instead of overcooling and reheating.
+Summary: NovelAire ComfortDRY (DES/DX & DES/HYD) packaged desiccant DOAS and humidity-control units span 300 to 15,000 CFM (custom to 25,000 CFM) to deliver 35°F–45°F supply dew points at neutral dry-bulb temperatures. Using proprietary 4A molecular-sieve ECW wheels, R-454B scrolls, and 115–125°F condenser-reclaim regeneration (105–145°F DES/HYD), ComfortDry+ adds an ERV and third regen tunnel for up to 100% OA and cooling-only mode.
 
 Key points:
-- Up to 40% less energy than overcool-and-reheat
-- For restaurants, schools, stores and offices
+- ComfortDRY DES/DX (300–15,000 CFM; custom 25,000 CFM) & DES/HYD (1,000–15,000 CFM) hold 35°F–45°F dewpoints at neutral dry bulb
+- Condenser-reclaim regeneration at 115–125°F (110–120°F w/ ComfortDry+ ERV; 105–145°F w/ hot water on DES/HYD) eliminates overcool/reheat penalties
+- ComfortDry+ adds an ERV wheel and dedicated third regen tunnel for up to 100% OA and cooling-only mode for multipurpose buildings
+- Proprietary 4A molecular-sieve ECW wheel, R-454B scrolls, 2" R-13 foam casing, SelectDRY sizing to ASHRAE 0.4% design day, BACnet HMI
 
 Photos:
 # One photo per line:  - file | caption
 # Put new image files in assets/photos/novelaire-comfortdry/ and list them here. The first one is the main photo.
-- assets/photos/novelaire-comfortdry/1.jpg | Image: NovelAire
+- assets/photos/novelaire-comfortdry/1.jpg | NovelAire ComfortDRY DES/DX packaged desiccant DOAS cabinet. Image: NovelAire
+- assets/photos/novelaire-comfortdry/2.jpg | ComfortDRY+ DES/DX-ERV installation with freeze protection and regen boost (Arena Gadbois). Image: NovelAire
+- assets/photos/novelaire-comfortdry/3.jpg | ComfortDRY DES/DX internal cutaway showing ECW/desiccant wheels, coils, and compressors. Image: NovelAire
+- assets/photos/novelaire-comfortdry/4.jpg | Weatherproof indoor/outdoor ComfortDRY DES/DX unit housing. Image: NovelAire
 
 Documents:
 - NovelAire product page | https://www.novelaire.com/comfortdry/
+- NovelAire Downloads & Technical Library | https://www.novelaire.com/downloads/
 
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.
 # Badge: New
 Specifications:
-- Airflow range: 1,000 to 25,000 CFM packaged desiccant DOAS & humidity control unit
-- Design: Packaged DX or chilled-water pre-cooling + active silica-gel desiccant wheel
-- Regeneration: Free condenser-reheat regeneration or modulating gas/electric/hot-water heat
-- Supply condition: Independently holds 40°F–55°F supply dewpoint and neutral dry-bulb temperature
+- Models & airflow: ComfortDRY DES/DX (300–15,000 CFM; custom 25,000 CFM) & DES/HYD (1,000–15,000 CFM hydronic); up to 20% OA std or 100% OA w/ ERV
+- Dew point & regen: 35–45°F discharge dew point; 115–125°F (110–120°F ComfortDry+ ERV) internal R-454B condenser reclaim, or 105–145°F hot water
+- Wheel & casing: Proprietary 4A molecular-sieve ECW wheel + active DES wheel (50/50 split); 2" R-13 foam double-wall cabinet
+- Selection & controls: Sized to ASHRAE 0.4% design day via SelectDRY software; ECM/VFD fans, speed-controlled wheels, BACnet/HMI

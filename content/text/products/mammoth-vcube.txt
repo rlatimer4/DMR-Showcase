@@ -1,4 +1,4 @@
-﻿# MAMMOTH â€” V-CUBE VERTICAL SELF-CONTAINED SYSTEMS
+# MAMMOTH — V-CUBE VERTICAL SELF-CONTAINED SYSTEMS
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -6,29 +6,33 @@
 
 Name: V-Cube Vertical Self-Contained Systems
 
-Summary: Vertical self-contained VAV systems in a compact footprint, from 9 to 150 tons and 4,000 to 40,000 CFM. Available air-cooled, water-cooled or glycol-cooled, as a water-source heat pump, and as a chilled-water air handler.
+Summary: Mammoth V-Cube semi-custom vertical self-contained VAV systems span 9 to 180 tons (3,000 to 43,000 CFM) using 2"/3" double-wall ITF cabinets on welded structural tube bases (±10" WC @ L/240). Built with lead variable-speed compressors, CNC tube bending, shell-and-tube or brazed-plate heat exchangers, 36" factory-charged split modules with isolation valves, and optional FANWALL with Coplanar Silencers.
 
 Key points:
-- 9 to 150 tons, 4,000 to 40,000 CFM
-- DX, water-source heat pump and chilled-water configurations
-- Airside or waterside economizer
-- Steam, hot water or electric heat
+- 9 to 180 tons (3,000–43,000 CFM) water/glycol/air-cooled DX, WSHP, or CHW VAV self-contained systems
+- Lead variable-speed compressors, CNC tube bending for minimal pipe stress, and HGRH or drainable condenser-water reheat
+- Splits into 36" modules factory-charged with isolation valves for narrow mechanical rooms and freight elevator retrofits
+- Direct-drive FANWALL (optional Coplanar Silencer) or belt-drive fans, mixing box, waterside economizer, and integral electric heat
 
 Photos:
 # One photo per line:  - file | caption
 # Put new image files in assets/photos/mammoth-vcube/ and list them here. The first one is the main photo.
-- assets/photos/mammoth-vcube/1.jpg | Image: Nortek Air Solutions
-- assets/photos/mammoth-vcube/2.jpg | Image: Nortek Air Solutions
-- assets/photos/mammoth-vcube/3.jpg | Image: Nortek Air Solutions
+- assets/photos/mammoth-vcube/1.jpg | Mammoth V-Cube vertical self-contained VAV packaged system. Image: Nortek Air Solutions
+- assets/photos/mammoth-vcube/2.jpg | V-Cube modular vertical air-conditioning unit interior. Image: Nortek Air Solutions
+- assets/photos/mammoth-vcube/4.png | V-Cube 36" modular layout with CNC tube bending and FANWALL array. Image: Nortek Air Solutions
+- assets/photos/mammoth-vcube/5.jpg | Installed Mammoth V-Cube SCU-5 North unit in curved mechanical room (Crystal Gateway). Image: Nortek Air Solutions
+- assets/photos/mammoth-vcube/6.jpg | Installed Mammoth V-Cube SCU-6 South corridor MAU retrofit (Crystal Gateway). Image: Nortek Air Solutions
+- assets/photos/mammoth-vcube/7.jpg | Unit-mounted electrical control panel and VSC compressor retrofit (Crystal Gateway). Image: Nortek Air Solutions
 
 Documents:
 - Mammoth product page | https://www.nortekair.com/products/v-cube-vertical-self-contained-systems/
+- Nortek Air Solutions Technical Literature | https://www.nortekair.com/resources
 
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.
 # Badge: New
 Specifications:
-- Capacity range: 9 to 180 tons; 3,000 to 42,500 CFM vertical self-contained VAV unit
-- System options: Water-cooled DX (condenser water), WSHP/geothermal, air-cooled or chilled water
-- Construction: 3" ITF double-wall modular cabinet; modules up to 50 tons fit 36" doorways
-- Features: Scroll Digital compressors, shell-and-tube condensers, FANWALL or plenum fan, waterside economizer
+- Capacity & systems: 9 to 180 tons (3,000–43,000 CFM); water/glycol/air-cooled DX (shell & tube HX), WSHP (brazed plate HX), or CHW
+- Casing & thermal: 2"/3" ITF double-wall on welded tube base (±10" WC @ L/240); no thru-metal except fasteners; optional 2" Polyurea floor
+- Refrigeration & ingress: Lead VSC + CNC tube bending; splits into 36" modules factory-charged with isolation valves; HGRH or condenser-water reheat
+- Airside & options: Direct-drive FANWALL (w/ Coplanar Silencer), WiSE/CW/HW/DX coils, integral electric heat, packaged DDC controls

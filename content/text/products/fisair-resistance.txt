@@ -1,4 +1,4 @@
-﻿# FISAIR â€” DIPHUSAIR RESISTANCE HUMIDIFIERS
+# FISAIR — DIPHUSAIR RESISTANCE HUMIDIFIERS
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -9,8 +9,10 @@ Name: Diphusair Resistance Humidifiers
 Summary: Self-contained humidifiers that generate clean steam with electric heating elements, for close humidity control on any water quality.
 
 Key points:
-- Resistive element steam generation
-- Suited to treated and deionised water
+- 2 to 180 kg/h (4.4 to 396 lb/h) self-contained electric resistive steam humidifier
+- Tight ±1% RH control accuracy via solid-state relay (SSR) proportional modulation
+- Operates on potable, softened, DI, or RO water with 304/316L stainless steel tank
+- Integral PLC controller supporting BACnet IP, BACnet MS/TP, and Modbus RTU
 
 Photos:
 # One photo per line:  - file | caption
@@ -19,6 +21,7 @@ Photos:
 
 Documents:
 - Fisair product page | https://fisair.com/products/diphusair-air-humidifiers/humidifiers-diphusair-resistance/
+- Fisair Official Portal & Selection Tools | https://fisair.com/en/
 
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.

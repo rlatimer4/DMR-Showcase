@@ -1,4 +1,4 @@
-﻿# UV RESOURCES â€” UVK XTREME UV-C KITS
+# UV RESOURCES — UVK XTREME UV-C KITS
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -6,24 +6,26 @@
 
 Name: UVK Xtreme UV-C Kits
 
-Summary: UV-C kits for indoor air handlers with coils up to 84 inches, fan coil units and unit ventilators.
+Summary: Compact UV-C kits engineered for indoor air handlers with coils up to 84 inches, fan coil units, unit ventilators, and heat pumps. Seven lamp lengths from 16" to 61" and a slim 120V–277V electronic ballast simplify retrofits in tight terminal equipment.
 
 Key points:
-- For fan coils and unit ventilators
+- Sized for coils up to 84" in fan coils, unit ventilators, and indoor AHUs
+- Seven lamp lengths from 16" to 61" (16", 20", 24", 30", 36", 42", 61")
+- Slim 120V–277V electronic ballast fits tight mechanical compartments
 
 Photos:
 # One photo per line:  - file | caption
 # Put new image files in assets/photos/uvr-uvk/ and list them here. The first one is the main photo.
-# No photo of this product has been found yet. Add one here:
-# - assets/photos/uvr-uvk/photo.jpg | Caption
+- assets/photos/dmr/UV-Resources.jpg | UV Resources germicidal UV-C systems. Image: dmr-hvac.com
 
 Documents:
 - UV Resources product page | https://www.uvresources.com/uvk-x/
+- UV Resources Technical Library & Research | https://www.uvresources.com/white-papers-and-research/
 
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.
 # Badge: New
 Specifications:
-- Application: Compact UV-C kit for fan coils, PTACs, unit ventilators, VAV boxes and heat pumps
-- Voltage: 120V–230V or 24VAC low-voltage ballast with magnetic/bracket mount
-- Lamp: 7" to 16" high-output germicidal UV-C lamp
+- Application: Compact UV-C kit for coils up to 84", fan coils, unit ventilators, VAV boxes, and heat pumps
+- Lamp lengths: 16", 20", 24", 30", 36", 42", and 61" high-output 254 nm UV-C lamps
+- Electrical: Slim 120V–277V high-efficiency electronic ballast

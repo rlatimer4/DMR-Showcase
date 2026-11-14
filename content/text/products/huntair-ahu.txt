@@ -1,31 +1,35 @@
-﻿# HUNTAIR â€” CUSTOM AIR HANDLERS
+# HUNTAIR — SMOOTH-EXTERIOR CUSTOM AIR HANDLERS
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
 # Lines that start with # are notes and are not shown on the site.
 
-Name: Custom Air Handlers
+Name: Smooth-Exterior Custom Air Handlers
 
-Summary: Air handlers engineered unit by unit for the fit, efficiency and reliability a project needs, used in healthcare, education, manufacturing, data centers, cleanrooms, offices and hospitality.
+Summary: Huntair Smooth-Exterior custom air handlers deliver 1,500 to 200,000+ CFM using 2" (R-16 injected foam / R-8.3 fiberglass; ±8" WC @ L/200) or 4" (R-32 injected foam / R-16.7 fiberglass; ±12" WC @ L/240, up to 0.5% leakage) structural panelized construction on welded tube bases. Options include PolyBlock True No Thru Metal (including fasteners), full powder coating (antimicrobial/FDA), 2" upturned floor lip, washdown, third-layer standing seam roof up to 39'-8", and field/palletized knockdown.
 
 Key points:
-- Custom construction, configuration and materials
-- Available with FANWALL TECHNOLOGY fan arrays
-- Water, steam, booster and DX coil options
+- Smooth-exterior 4" (R-32 foam; ±12" WC @ L/240, to 0.5% leakage) or 2" (R-16 foam; ±8" WC @ L/200) panelized casing on welded tube base
+- Modified thermal break or PolyBlock True No Thru Metal option (1" PolyBlock strips eliminate fastener thermal bridging)
+- Full interior/exterior powder coat (antimicrobial/FDA), 2" upturned floor lip, washdown construction, and standing seam roof to 39'-8"
+- Field or palletized knockdown shipping, stacked air tunnels, cantilevered/bolt-on catwalks, OSHPD seismic, and BABA options
 
 Photos:
 # One photo per line:  - file | caption
 # Put new image files in assets/photos/huntair-ahu/ and list them here. The first one is the main photo.
-- assets/photos/dmr/Custom-AHU.jpg | Image: Nortek Air Solutions
+- assets/photos/huntair-ahu/1.jpg | Huntair Smooth-Exterior panelized custom air handler. Image: Nortek Air Solutions
+- assets/photos/huntair-ahu/2.png | Huntair 2" and 4" structural panelized casing and thermal-break joint. Image: Nortek Air Solutions
+- assets/photos/huntair-ahu/3.png | Huntair panelized interior with acoustic liner and welded floor pan. Image: Nortek Air Solutions
 
 Documents:
 - Huntair product page | https://www.nortekair.com/products/custom-air-handlers/
+- Nortek Air Solutions Technical Literature | https://www.nortekair.com/resources
 
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.
 # Badge: New
 Specifications:
-- Airflow range: 1,500 to 200,000+ CFM mission-critical custom air handler
-- Casing: Low-leakage (<0.5% at ±8 in. w.g.) thermal-break steel, aluminum or 304/316L stainless
-- Filtration: Pre-filters, bag/cartridge filters, molecular filtration and 99.99% HEPA frames
-- Certifications: AHRI 1350 / 430, ASHRAE 170 healthcare compliant, OSHPD seismic
+- Airflow & structure: 1,500 to 200,000+ CFM; structural panels on welded tube base; stacked air tunnels and factory catwalks
+- Casing & thermal: 4" (R-32 foam / R-16.7 fiberglass; ±12" WC @ L/240; 0.5% leakage) or 2" (R-16 foam / R-8.3 fiberglass; ±8" WC @ L/200); single-wall option
+- Thermal break & acoustics: Modified thermal break or PolyBlock True No Thru Metal; polyurethane spray/injected foam; melamine foam perf liners
+- Finish, ingress & certs: Powder coat (antimicrobial/FDA), washdown w/ 2" floor lip, field/palletized knockdown; OSHPD & BABA compliance possible

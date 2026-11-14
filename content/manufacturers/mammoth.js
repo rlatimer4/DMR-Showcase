@@ -17,9 +17,9 @@ DMR.registerManufacturer({
   website: "https://www.nortekair.com/about/our-brands/mammoth/",
   blurb: "UltraLine custom packaged rooftops, V-Cube vertical self-contained systems and air-source heat pumps.",
   products: [
-    { id: "mammoth-ultraline", category: "packaged", shape: "rooftop" },
-    { id: "mammoth-vcube", category: "packaged", shape: "vcube" },
-    { id: "mammoth-vcube-slim", category: "packaged", shape: "vcube-slim" },
+    { id: "mammoth-ultraline", category: "ahu", shape: "rooftop" },
+    { id: "mammoth-vcube", category: "ahu", shape: "vcube" },
+    { id: "mammoth-vcube-slim", category: "ahu", shape: "vcube-slim" },
     { id: "mammoth-ashp", category: "heatpump", shape: "rooftop" }
   ]
 });

@@ -1,4 +1,4 @@
-﻿# HUNTAIR â€” LIGHT DUTY CLEANROOM CEILING GRID
+# HUNTAIR — LIGHT DUTY CLEANROOM CEILING GRID
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -6,11 +6,12 @@
 
 Name: Light Duty Cleanroom Ceiling Grid
 
-Summary: A lighter cleanroom ceiling grid for less demanding cleanroom classes and smaller rooms.
+Summary: Huntair Light Duty cleanroom ceiling grids offer a lightweight gasketed aluminum T-bar solution for ISO Class 6–8 rooms such as USP 797/800 compounding pharmacies and tissue culture labs. Accepts standard 2'×4' and 2'×2' CleanPak FFUs, HEPA modules, blank panels, and LED troffers at lower installed weight and cost.
 
 Key points:
-- Lower weight and cost than heavy-duty grids
-- Accepts filters, lights and blank panels
+- Light-duty gasketed T-bar cleanroom grid designed for ISO Class 6–8 environments
+- Ideal for USP 797/800 compounding pharmacies, tissue culture, and clean assembly
+- Accepts standard 2'×4' and 2'×2' CleanPak FFUs, HEPA modules, and LED troffers
 
 Photos:
 # One photo per line:  - file | caption
@@ -21,6 +22,7 @@ Photos:
 
 Documents:
 - Huntair product page | https://www.nortekair.com/products/light-duty-cleanroom-ceiling-grid/
+- Nortek Air Solutions Technical Literature | https://www.nortekair.com/resources
 
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.

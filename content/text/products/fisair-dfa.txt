@@ -1,4 +1,4 @@
-﻿# FISAIR â€” DFA DEHUMIDIFIERS
+# FISAIR — DFA DEHUMIDIFIERS
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -6,11 +6,13 @@
 
 Name: DFA Dehumidifiers
 
-Summary: Industrial desiccant dehumidifiers designed to current eco-design requirements for efficiency.
+Summary: Industrial desiccant dehumidifiers designed to global Eco-Design efficiency requirements, delivering 700 to 9,000 m³/h (412 to 5,297 CFM) of process dry air down to −60°C dew point.
 
 Key points:
-- Silica gel rotor
-- Energy-efficient reactivation
+- Eco-Design compliant design minimizes fan and reactivation energy across 700 to 9,000 m³/h process airflows
+- High-absorption silica-gel desiccant rotor delivers ultra-dry supply air down to −60°C dew point (CDP)
+- Energy-saving internal heat recovery and modulating reactivation controls match variable latent loads
+- Industrial galvanized or stainless steel cabinet suits electronics, battery, pharma, and moisture-sensitive storage
 
 Photos:
 # One photo per line:  - file | caption
@@ -20,11 +22,13 @@ Photos:
 
 Documents:
 - Fisair product page | https://fisair.com/products/df-air-dehumidifiers/dfa-dehumidifiers/
+- Fisair Official Portal & Selection Tools | https://fisair.com/en/
 
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.
 # Badge: New
 Specifications:
-- Process airflow: 200 to 3,300 m³/h (120 to 1,940 CFM) compact desiccant dehumidifier
-- Moisture removal: 1.1 to 26 kg/h (2.4 to 57 lb/h) at 20°C / 60% RH
-- Rotor: Washable high-performance silica-gel desiccant rotor with electric reactivation
+- Process airflow: 700 to 9,000 m³/h (412 to 5,297 CFM) Eco-Design industrial desiccant dehumidifier
+- Dew point capability: Low dew point capability down to −60°C (−76°F) CDP
+- Rotor: Washable high-performance silica-gel desiccant rotor with energy-efficient reactivation
+- Construction: Insulated thermal-break industrial cabinet with EC fans and modulating controls

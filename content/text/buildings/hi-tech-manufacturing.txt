@@ -89,6 +89,7 @@ Title: Make-up air plant
 Text: A dedicated make-up air handler conditions the outdoor air the cleanroom needs.
 Equipment:
 - huntair-ahu | Cleanroom make-up air handler | Custom unit that holds close temperature, humidity and pressure
++ huntair-fpc
 + temtrol-ahu
 + governair-ahu
 + ventrol-ahu
@@ -114,6 +115,7 @@ Title: Make-up air
 Text: Make-up air units with humidifiers supply the cleanroom with conditioned outdoor air.
 Equipment:
 - huntair-ahu | Cleanroom make-up air handler
++ huntair-fpc
 + temtrol-ahu
 + governair-ahu
 + ventrol-ahu

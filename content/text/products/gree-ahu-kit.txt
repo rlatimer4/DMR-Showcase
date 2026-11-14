@@ -1,4 +1,4 @@
-﻿# GREE â€” VRF AIR HANDLER AND AHU KIT
+# GREE — VRF AIR HANDLER AND AHU KIT
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -6,11 +6,12 @@
 
 Name: VRF Air Handler and AHU Kit
 
-Summary: Multi-position air handlers and AHU kit control boxes that connect a GREE VRF outdoor unit to a ducted air handler.
+Summary: GREE VRF multi-position air handlers and weatherproof AHU kit control boxes (2.5 to 40 tons, combinable for larger coils) connect GMV5 and GMV6 outdoor units to ducted air handlers. Includes an EEV valve box, main control board, and coil/air sensors to run third-party custom AHUs on GREE VRF.
 
 Key points:
-- Multi-position air handler
-- AHU kit for third-party air handlers
+- 2.5 to 40 tons per kit; multiple kits combine for large third-party custom DX coils
+- Weatherproof EEV valve box, main control board, and coil/air temperature sensors
+- Integrates custom AHUs (Temtrol, Huntair, Nortek) onto GREE GMV5/GMV6 VRF systems
 
 Photos:
 # One photo per line:  - file | caption
@@ -19,6 +20,7 @@ Photos:
 
 Documents:
 - GREE product page | https://www.greecommercial.com/our-products/air-handler
+- GREE Commercial Resources & Submittals | https://www.greecommercial.com/resources
 
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.

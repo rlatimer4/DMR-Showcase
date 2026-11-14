@@ -1,4 +1,4 @@
-﻿# FISAIR â€” DFRM INDUSTRIAL DESICCANT DEHUMIDIFIERS
+# FISAIR — DFRM INDUSTRIAL DESICCANT DEHUMIDIFIERS
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -6,11 +6,12 @@
 
 Name: DFRM Industrial Desiccant Dehumidifiers
 
-Summary: Industrial desiccant dehumidifiers built to order for process air drying.
+Summary: DFRM custom industrial desiccant dehumidifiers handle 20,000 to 65,000 m³/h (11,800 to 38,200 CFM) of process air with continuous moisture extraction exceeding 450 kg/h (990+ lb/h). Heavy-duty construction supports high-capacity steam, direct-fired gas, electric, or hybrid regeneration.
 
 Key points:
-- Custom configurations
-- Robust industrial construction
+- Heavy-duty 20,000 to 65,000 m³/h (11,800 to 38,200 CFM) process air drying
+- Continuous moisture removal capacity exceeding 450 kg/h (990+ lb/h)
+- Custom steam, direct-fired gas, electric, or hybrid reactivation options
 
 Photos:
 # One photo per line:  - file | caption
@@ -19,6 +20,7 @@ Photos:
 
 Documents:
 - Fisair product page | https://fisair.com/products/df-air-dehumidifiers/industrial-desiccant-dehumidfier-dfrm/
+- Fisair Official Portal & Selection Tools | https://fisair.com/en/
 
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.
