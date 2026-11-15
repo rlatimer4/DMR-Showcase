@@ -1,4 +1,4 @@
-﻿# MAMMOTH â€” STANDARD AND LOW-AMBIENT AIR-SOURCE HEAT PUMPS
+# MAMMOTH — STANDARD AND LOW-AMBIENT AIR-SOURCE HEAT PUMPS
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -6,25 +6,30 @@
 
 Name: Standard and Low-Ambient Air-Source Heat Pumps
 
-Summary: Air-source heat pumps in standard and low-ambient versions. The low-ambient units keep heating in cold weather.
+Summary: Mammoth standard and low-ambient commercial packaged air-source heat pumps span 25 to 120 tons on the UltraLine platform using low-GWP R-454B in 3" ITF double-wall cabinets (R-24 foam; ±10" WC @ L/240). Variable-speed and digital scroll compressors sustain mechanical heating down to 5°F ambient (−10°F SST), while optional Liquid Injection extends reliable heat down to −20°F ambient (−40°F SST) at COPs up to 4.1 (1.7 at −20°F).
 
 Key points:
-- Standard and low-ambient models
-- Heating and cooling without a boiler or tower
+- 25 to 120 tons UltraLine ASHP platform with R-454B achieving typical heating COPs of 2.0 to 4.5 (1.7 at −20°F up to 4.1 at 47°F OA)
+- 5°F ambient (−10°F SST) with VSC/digital scroll; optional Liquid Injection extends compressor heating down to −20°F ambient (−40°F SST)
+- Redundant Vee ACCU microchannel kits (105°F design ambient, 31" MaEr EC condenser fans, VFD compressors to 40 tons/ckt)
+- 3" ITF double-wall cabinet (±10" WC @ L/240), NASDA-integrated FLA/MCA/MOP electrical data, defrost electric heat, and ER wheels/cores
 
 Photos:
 # One photo per line:  - file | caption
 # Put new image files in assets/photos/mammoth-ashp/ and list them here. The first one is the main photo.
-# No photo of this product has been found yet. Add one here:
-# - assets/photos/mammoth-ashp/photo.jpg | Caption
+- assets/photos/mammoth-ashp/1.jpg | Mammoth commercial packaged rooftop air-source heat pump. Image: Nortek Air Solutions
+- assets/photos/mammoth-ashp/2.jpg | Packaged commercial ASHP rooftop installation with energy recovery. Image: Nortek Air Solutions
+- assets/photos/mammoth-ashp/3.png | Mammoth UltraLine low-ambient air-source heat pump project installation. Image: Nortek Air Solutions
 
 Documents:
 - Mammoth product page | https://www.nortekair.com/about/our-brands/mammoth/
+- Nortek Air Solutions Technical Literature | https://www.nortekair.com/resources
 
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.
 # Badge: New
 Specifications:
-- Capacity range: 10 to 140 tons; 2,000 to 50,000 CFM commercial air-source heat pump
-- Low-ambient heating: Electrification heat pump operation down to 0°F / −10°F ambient
-- Options: Integral energy recovery wheel or core, FANWALL array, auxiliary electric/gas heat
+- Capacity & climate: 25 to 120 tons UltraLine platform; R-454B; mechanical heating to 5°F ambient (−10°F SST) or −20°F ambient (−40°F SST) w/ Liquid Injection
+- Efficiency & compressors: Typical COP 2.0–4.5 (4.1 @ 47°F, 3.0 @ 17°F, 2.5 @ 5°F, 2.0 @ −10°F, 1.7 @ −20°F); On-Off, 2-Step, Digital, VSC, or Liquid Injection
+- Casing & ACCU: 3" ITF double-wall on welded tube base (±10" WC @ L/240); Vee ACCU kits w/ 31" MaEr EC fans & 105°F ambient rating; 2" Polyurea floor option
+- Controls & options: NASDA-calculated FLA/MCA/MOP electrical data, supplemental/defrost electric heat, integral ER wheel/plate, FANWALL

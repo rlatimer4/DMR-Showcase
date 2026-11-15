@@ -1,4 +1,4 @@
-﻿# STERLING â€” DURA-VANE II FINNED TUBE
+# STERLING — DURA-VANE II FINNED TUBE
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -6,19 +6,21 @@
 
 Name: Dura-Vane II Finned Tube
 
-Summary: Finned tube heating that combines extruded aluminum linear grilles with a steel enclosure, for contemporary interiors.
+Summary: Architectural finned-tube radiation combining rugged steel enclosures with smooth-flowing extruded aluminum linear bar grilles and forward-sloping "pencil-proof" discharge vanes.
 
 Key points:
-- Extruded aluminum linear grille
+- Extruded aluminum linear bar grille with forward-sloping pencil-proof louver vanes
+- Low-sill 7" to 26" heights for floor-to-ceiling curtain-wall and pedestal installations
+- Heavy-gauge steel fronts with concealed mounting for clean architectural sightlines
 
 Photos:
 # One photo per line:  - file | caption
 # Put new image files in assets/photos/sterling-dura-vane/ and list them here. The first one is the main photo.
-# No photo of this product has been found yet. Add one here:
-# - assets/photos/sterling-dura-vane/photo.jpg | Caption
+- assets/photos/dmr/Sterling-Image.jpg | Sterling commercial finned-tube radiation. Image: dmr-hvac.com
 
 Documents:
 - Sterling product page | https://www.sterlingheat.com/dura-vane-ii
+- Sterling Commercial Hydronics Literature Library | https://www.sterlingheat.com/
 
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.

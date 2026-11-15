@@ -1,4 +1,4 @@
-﻿# FISAIR â€” DFRIGO DEHUMIDIFIERS
+# FISAIR — DFRIGO DEHUMIDIFIERS
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -6,11 +6,12 @@
 
 Name: DFRIGO Dehumidifiers
 
-Summary: Dehumidifiers for refrigerated rooms and processes, with high thermal insulation.
+Summary: DFRIGO packaged low-temperature desiccant dehumidifiers deliver 350 to 9,500 m³/h process airflow inside thermally insulated casings built for cold rooms and ice rinks. Supports electric, steam, or gas reactivation with automatic defrost and purge cycles.
 
 Key points:
-- For cold rooms and refrigerated processes
-- Insulated cabinet
+- 350 to 9,500 m³/h packaged desiccant dehumidifier for cold rooms and ice rinks
+- Thermally insulated low-temperature cabinet minimizes condensation losses
+- Electric, steam, or gas regeneration with automatic defrost/purge control
 
 Photos:
 # One photo per line:  - file | caption
@@ -19,6 +20,7 @@ Photos:
 
 Documents:
 - Fisair product page | https://fisair.com/products/df-air-dehumidifiers/dfrigo/
+- Fisair Official Portal & Selection Tools | https://fisair.com/en/
 
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.

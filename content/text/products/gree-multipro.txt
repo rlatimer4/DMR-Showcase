@@ -1,4 +1,4 @@
-﻿# GREE â€” MULTIPRO R32 ULTRA HEAT PUMP
+# GREE — MULTIPRO R32 ULTRA HEAT PUMP
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -6,11 +6,12 @@
 
 Name: MultiPRO R32 Ultra Heat Pump
 
-Summary: MultiPRO R32 Ultra heat pump systems with a choice of cassette, ducted, wall-mounted and air handler indoor units.
+Summary: MultiPRO R-32 Ultra multi-zone heat pump systems (18,000 to 48,000 BTU/h) feature a two-stage EVI compressor delivering cold-climate heating down to −22°F (−30°C). Extended line-set lengths link cassette, ducted, wall-mounted, and air handler indoor units via branch boxes or multi-port headers.
 
 Key points:
-- R32 refrigerant
-- Cassette, ducted, wall and air handler indoor units
+- 18,000 to 48,000 BTU/h cold-climate R-32 multi-zone heat pump system
+- Two-stage EVI inverter compressor maintains heating down to −22°F (−30°C)
+- Extended line sets pair cassette, ducted, wall-mount, and air handler indoor units
 
 Photos:
 # One photo per line:  - file | caption
@@ -18,9 +19,11 @@ Photos:
 - assets/photos/gree-multipro/1.jpg | Image: GREE
 - assets/photos/gree-multipro/2.jpg | Image: GREE
 - assets/photos/gree-multipro/3.jpg | Image: GREE
+- assets/photos/gree-multipro/4.png | GREE MultiPRO full DC inverter light-commercial VRF heat pump. Image: GREE
 
 Documents:
 - GREE product page | https://www.greecommercial.com/our-products/multipro-r32-ultra-heat-pump
+- GREE Commercial Resources & Submittals | https://www.greecommercial.com/resources
 
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.

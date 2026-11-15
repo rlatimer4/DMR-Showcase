@@ -261,3 +261,21 @@ site goes live, and replace any that are not cleared.
 | `assets/photos/sterling-panel-radiators/1.jpg` | https://www.sterlingheat.com/Media/Default/Slider/PanelRadiatorPR.jpg |
 | `assets/photos/uvr-de/1.jpg` | https://www.uvresources.com/wp-content/uploads/2025/01/dex-UVR-UVC-300x300.jpg |
 | `assets/photos/dmr/*` | https://dmr-hvac.com/images/products/ |
+
+## Presentation & Submittal Media Sources
+
+| Local Path / Product Group | Presentation / Document Source |
+|---|---|
+| `assets/photos/huntair-fpc/1.png..3.png`, `huntair-ahu/1.jpg..3.png`, `governair-ahu/2.jpg..3.jpg`, `temtrol-ahu/1.jpg..2.jpg`, `temtrol-lc/2.png..3.jpg`, `ventrol-ahu/1.jpg..2.png`, `ventrol-washdown/1.png..3.png` | `Nortek Intro - Engineers.pptx` (Slides 4–9, 28) |
+| `assets/photos/huntair-fanwall/1.jpg..2.png`, `temtrol-fanwall/3.jpg..4.jpg`, `mammoth-ashp/2.jpg`, `venmar-ashp/1.jpg`, `venmar-erv/2.jpg`, `venmar-energypack/3.jpg..4.jpg` | `Nortek Intro - Engineers.pptx` (Slides 13, 18, 22–26) |
+| `assets/photos/ventrol-fanwall/1.jpg..3.jpg`, `ventrol-knockdown/1.jpg..3.jpg` | `Presentation/Virginia Hosiptal Center/2024-05-23 AH-02-13.jpg` & `Virginia Hospital Center Supply Fan Retrofit.pptx` (Slides 9–12) |
+| `assets/photos/mammoth-vcube/5.jpg..7.jpg` | `Presentation/Crystal Gateway/Crystal Gateway.pptx` (Slides 10, 14, 17) |
+| `assets/photos/mammoth-ashp/3.png`, `venmar-ashp/2.png..3.png` | `Presentation/Air Source Heat pump/Venmar Low Amb ASHP focus- 2026-05-06.pptx` (Slides 31–34) |
+| `assets/photos/governair-fanwall/3.png`, `nortek-low-humidity/1.jpg`, `nortek-coilwall/4.jpg`, `mammoth-ultraline/4.jpg`, `novelaire-comfortdry/3.jpg`, `fisair-dflex/2.png`, `fisair-dflow/2.png..3.png` | `Presentation/Desiccants/Desiccant Dehumidification - Lunch and Learn v3.pptx` (Slides 36–44) |
+| `assets/photos/nortek-low-humidity/2.png` | `Presentation/Desiccants/Desiccant Dehumidification - Lunch and Learn.pptx` (Slides 9–11, 33) |
+| `assets/photos/venmar-erv/1.jpg` | `Presentation/Desiccants/Demystifying-DX-Desiccant-Dehumidification-11-29-22-03_50_45.pptx` (Slides 31–32) |
+| `assets/photos/novelaire-novel-ice/1.jpg..3.jpg`, `novelaire-precisiondry/3.jpg..4.jpg`, `novelaire-comfortdry/2.jpg,4.jpg` | `Presentation/Novelaire Ice Rink/Mastering Ice Arena Dehumidification_NovelAire.pdf` |
+| `assets/photos/novelaire-desiccant-wheels/4.jpg` | `Presentation/Desiccants/May 2026 NovelAire Webinar Presentation.pdf` |
+| `assets/photos/kampmann-venkon/4.jpg` | `Presentation/Kampmann/DMR Presentation 21 Sep 2026/drawing Venkon XXL.jpg` |
+| `assets/photos/huntair-knockdown/1.jpg`, `temtrol-knockdown/1.jpg..4.jpg`, `governair-fanwall/4.png`, `temtrol-fanwall/1.jpg..2.png`, `mammoth-ashp/1.jpg`, `mammoth-vcube/4.png`, `mammoth-vcube-slim/3.jpg..4.png`, `envirotec-*/*`, `gree-*/*`, `klingenburg-wheel/1.png..4.png`, `runtal-*/*`, `reddi-*/*`, `sterling-*/*`, `steamovap-*/*`, `uvr-*/*`, `kampmann-*/4.png..5.png`, `cooney-freeze-block/4.png..5.png`, `rapid-mua/1.jpg..3.png` | `Presentation/WIP - DMR 2025 - Bob.pptx` (Slides 8–90) |
+

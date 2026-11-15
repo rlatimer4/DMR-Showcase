@@ -1,4 +1,4 @@
-﻿# TEMTROL â€” KNOCKDOWN AIR HANDLERS
+# TEMTROL — KNOCKDOWN AIR HANDLERS
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -6,25 +6,31 @@
 
 Name: Knockdown Air Handlers
 
-Summary: Air handlers designed and built to pass through an existing opening and be assembled in place, for new, replacement and retrofit work where space and access are limited.
+Summary: Temtrol Rapid Knockdown air handlers use 3" or 3.5" double-wall ITF framed construction on welded structural tube base frames, factory-assembled with minimal fasteners and caulk for straightforward field disassembly during tight ingress. Rated to ±10" WC at L/240 deflection with foam or fiberglass insulation, no thru-metal except fasteners, and optional perforated liners.
 
 Key points:
-- Sized to fit through the field opening
-- Shortens installation time on replacement projects
-- Same performance as a factory-assembled custom unit
+- Rapid Knockdown built with minimal fasteners and caulk for field disassembly at ingress
+- 3" or 3.5" double-wall ITF frame on welded structural tube base (±10" WC, L/240 deflection)
+- No thru-metal except fasteners; injected/spray polyurethane foam or fiberglass + perforated liners
+- Stacked air tunnels, Seismic and Miami-Dade certifications, and BABA compliance options
 
 Photos:
 # One photo per line:  - file | caption
 # Put new image files in assets/photos/temtrol-knockdown/ and list them here. The first one is the main photo.
-- assets/photos/dmr/Knockdown-AH.jpg | Knockdown section being lifted into a building. Image: dmr-hvac.com
+- assets/photos/temtrol-knockdown/1.jpg | Temtrol Rapid Knockdown casing retrofit assembly. Image: Nortek Air Solutions
+- assets/photos/temtrol-knockdown/2.jpg | Field-assembled Temtrol knockdown enclosure panels and framing. Image: Nortek Air Solutions
+- assets/photos/temtrol-knockdown/3.jpg | Completed Temtrol knockdown air handler and FANWALL retrofit interior. Image: Nortek Air Solutions
+- assets/photos/temtrol-knockdown/4.jpg | Wrapped FANWALL cubes rigged through 36" mechanical room doorways (777 N. Capitol St.). Image: Nortek Air Solutions
 
 Documents:
 - Temtrol product page | https://www.nortekair.com/products/knockdown-air-handlers/
+- Nortek Air Solutions Technical Literature | https://www.nortekair.com/resources
 
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.
 # Badge: New
 Specifications:
-- Application: Custom knockdown air handler engineered for constrained interior mechanical rooms
-- Delivery: Sub-assemblies sized to rig through existing 36" doors, louvers or elevators
-- Casing & fan: Thermal-break bolt-together panels with FANWALL array and AHRI 410 coils
+- Ingress & knockdown: Rapid Knockdown — factory-assembled with minimal fasteners & caulk for field disassembly
+- Casing & thermal: 3" or 3.5" ITF double-wall on welded tube base (±10" WC @ L/240); no thru-metal except fasteners
+- Insulation & acoustics: Injected or spray polyurethane foam or fiberglass; perforated acoustic liners & stacked tunnels
+- Components & certs: FANWALL array, AHRI 410 coils; Seismic & Miami-Dade certified; BABA compliance possible

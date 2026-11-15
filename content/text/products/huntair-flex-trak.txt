@@ -1,4 +1,4 @@
-﻿# HUNTAIR â€” CLEANPAK FLEX-TRAK T GRID CEILING SYSTEM
+# HUNTAIR — CLEANPAK FLEX-TRAK T GRID CEILING SYSTEM
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -6,11 +6,12 @@
 
 Name: CleanPak Flex-Trak T Grid Ceiling System
 
-Summary: A T-grid cleanroom ceiling system for fan filter units, lights and blank panels.
+Summary: CleanPak Flex-Trak extruded aluminum cleanroom T-grid ceilings (1.5" and 2" profiles) provide fast modular framing for pharmaceutical, biotech, medical-device, and microelectronics cleanrooms. Engineered to support suspended CleanPak fan filter units, walkable panels, blank tiles, and cleanroom luminaires.
 
 Key points:
-- Standard T-grid module sizes
-- Works with CleanPak fan filter units
+- 1.5" and 2" extruded aluminum cleanroom T-grid profiles in standard module sizes
+- Engineered for pharmaceutical, biotech, medical-device, and electronics cleanrooms
+- Loads accommodate walkable panels, CleanPak FFUs, and cleanroom luminaires
 
 Photos:
 # One photo per line:  - file | caption
@@ -21,6 +22,7 @@ Photos:
 
 Documents:
 - Huntair product page | https://www.nortekair.com/products/cleanpak-flex-trak-t-grid-ceiling-system/
+- Nortek Air Solutions Technical Literature | https://www.nortekair.com/resources
 
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.

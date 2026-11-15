@@ -1,4 +1,4 @@
-﻿# UV RESOURCES â€” RLM XTREME UV-C FIXTURES
+# UV RESOURCES — RLM XTREME UV-C FIXTURES
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -6,12 +6,13 @@
 
 Name: RLM Xtreme UV-C Fixtures
 
-Summary: A UV-C fixture system for air handlers of virtually any size, with very high output lamps in 33 and 61 inch lengths and up to six power supplies per housing.
+Summary: A modular UV-C fixture system for air handlers of virtually any size, offering very high output 33", 36", 42", and 61" lamps with up to six power supplies per NEMA-4 housing. Improves coil heat transfer and cuts manual cleaning across commercial and institutional AHUs.
 
 Key points:
-- Fits air handlers of any size
-- 33 and 61 inch lamps
-- Improves coil heat transfer and reduces cleaning
+- Scales to air handlers of virtually any width and height
+- Very high output 33", 36", 42", and 61" germicidal lamps
+- Up to six 120V–277V power supplies per NEMA-4 housing with 12V safety interlock
+- Improves coil heat transfer and reduces maintenance cleaning
 
 Photos:
 # One photo per line:  - file | caption
@@ -19,14 +20,18 @@ Photos:
 - assets/photos/uvr-rlm/1.jpg | Image: UV Resources
 - assets/photos/uvr-rlm/2.jpg | Image: UV Resources
 - assets/photos/uvr-rlm/3.jpg | Image: UV Resources
+- assets/photos/uvr-rlm/4.jpg | Fouled cooling coil before RLM Xtreme UV-C irradiation. Image: UV Resources
+- assets/photos/uvr-rlm/5.jpg | Restored clean coil and Xbox ballast following RLM Xtreme installation. Image: UV Resources
 
 Documents:
 - UV Resources product page | https://www.uvresources.com/rlm-x/
+- UV Resources Technical Library & Research | https://www.uvresources.com/white-papers-and-research/
 
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.
 # Badge: New
 Specifications:
 - Application: Interior AHU cooling-coil and drain-pan germicidal UV-C rack system
-- Wavelength: 254 nm high-output germicidal UV-C; meets ASHRAE Handbook coil-irradiation guidelines
-- Ballast & lamp: Encapsulated water-resistant EncapsuLamp option, 120–277V electronic ballast, UL/cUL listed
+- Lamp lengths: 33", 36", 42", and 61" very high output 254 nm lamps (optional EncapsuLamp)
+- Housing & controls: NEMA-4 housing for up to 6 electronic power supplies with 12V safety interlock
+- Electrical & listing: 120V–277V input; UL/cUL listed; meets ASHRAE coil-irradiation guidelines

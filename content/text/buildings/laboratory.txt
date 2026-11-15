@@ -113,11 +113,13 @@ Text: Lab air is used once and exhausted. A 100% outdoor air unit supplies the l
 Equipment:
 - temtrol-ahu | 100% outdoor air supply AHU | Custom double-wall unit sized for once-through lab supply
 + huntair-ahu
++ huntair-fpc
 + governair-ahu
 + ventrol-ahu
 + envirotec-mql
 - ventrol-ahu | Lab exhaust AHU with high-plume fans | Coated exhaust air handler with top-mounted high-plume dilution fans and integral run-around coil
 + huntair-ahu
++ huntair-fpc
 + temtrol-ahu
 + governair-ahu
 - nortek-water-coils | Run-around energy recovery coil | Pumped glycol coil loop transfers heat from the lab exhaust AHU to the 100% outdoor air supply unit with zero cross-contamination

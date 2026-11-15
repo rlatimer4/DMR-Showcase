@@ -1,4 +1,4 @@
-﻿# UV RESOURCES â€” UV-C ACCESSORIES
+# UV RESOURCES — UV-C ACCESSORIES
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -6,11 +6,12 @@
 
 Name: UV-C Accessories
 
-Summary: Accessories for UV-C systems, including lamp hour meters that signal when to replace lamps.
+Summary: Safety and monitoring accessories for UV-C installations, including lamp hour meters, UV-C radiometers, door-interlock switches, viewport glass, and BMS alarm relays. Helps facilities teams verify UV-C output and protect technicians during AHU service.
 
 Key points:
-- Lamp runtime meters
-- Radiometers and safety items
+- Lamp runtime hour meters and calibrated UV-C radiometers
+- Door-interlock kill switches and UV-blocking viewport glass
+- 4–20mA monitors and current-sensing relays for BMS lamp-out alarms
 
 Photos:
 # One photo per line:  - file | caption
@@ -20,6 +21,7 @@ Photos:
 
 Documents:
 - UV Resources product page | https://www.uvresources.com/accessories/
+- UV Resources Technical Library & Research | https://www.uvresources.com/white-papers-and-research/
 
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.
@@ -27,3 +29,4 @@ Documents:
 Specifications:
 - Safety & monitoring: UV-C radiometers, door-interlock kill switches, UV-blocking viewport glass & warning labels
 - BAS integration: Current-sensing relays and 4–20mA radiometer monitors for BMS lamp-out alarms
+- Serviceability: Lamp runtime hour meters and warning decals for scheduled lamp replacement

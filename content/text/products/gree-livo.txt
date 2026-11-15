@@ -1,4 +1,4 @@
-﻿# GREE â€” LIVO R32 MINI-SPLIT
+# GREE — LIVO R32 MINI-SPLIT
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -6,21 +6,24 @@
 
 Name: Livo R32 Mini-Split
 
-Summary: A single-zone R32 mini-split heat pump with a variable-speed compressor, built for efficiency and quiet operation.
+Summary: Livo R-32 single-zone mini-split heat pumps cover 9,000 to 36,000 BTU/h with G10 variable-speed inverter technology delivering up to 20.5 SEER2 and 10.0 HSPF2. Uses low-GWP R-32 refrigerant with built-in Wi-Fi, −13°F (−25°C) heating, and 115V options in 9k/12k sizes.
 
 Key points:
-- Up to 20.5 SEER2
-- Heating down to -13Â°F
-- 115 V option in 9k and 12k sizes
+- 9,000 to 36,000 BTU/h single-zone inverter mini-split with low-GWP R-32 refrigerant
+- Up to 20.5 SEER2 and 10.0 HSPF2 efficiency with quiet G10 variable-speed compressor
+- Continuous heating down to −13°F (−25°C) with 115V options in 9k and 12k sizes
+- Built-in Wi-Fi smart control for mobile and scheduling integration
 
 Photos:
 # One photo per line:  - file | caption
 # Put new image files in assets/photos/gree-livo/ and list them here. The first one is the main photo.
 - assets/photos/gree-livo/1.jpg | Image: GREE
 - assets/photos/gree-livo/2.jpg | Image: GREE
+- assets/photos/gree-livo/3.png | GREE Livo single-zone wall-mounted inverter system. Image: GREE
 
 Documents:
 - GREE product page | https://www.greecomfort.com/our-products/livo-r32
+- GREE System Documentation & Submittals | https://www.greecomfort.com/system-documentation
 
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.
@@ -28,4 +31,4 @@ Documents:
 Specifications:
 - Capacity range: 9,000 to 36,000 BTU/h single-zone R-32 inverter heat pump mini-split
 - Efficiency: Up to 20.5 SEER2 / 10.0 HSPF2 with G10 inverter compressor
-- Refrigerant: Low-GWP R-32 with built-in Wi-Fi control; heating down to −4°F (−20°C)
+- Refrigerant: Low-GWP R-32 with built-in Wi-Fi control; heating down to -13°F (-25°C)

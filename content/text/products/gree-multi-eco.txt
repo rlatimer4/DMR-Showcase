@@ -1,4 +1,4 @@
-﻿# GREE â€” MULTI ECO R32 MULTI-ZONE SYSTEM
+# GREE — MULTI ECO R32 MULTI-ZONE SYSTEM
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -6,10 +6,12 @@
 
 Name: Multi ECO R32 Multi-Zone System
 
-Summary: A value multi-zone R32 heat pump system with a choice of indoor units.
+Summary: Multi ECO R-32 value multi-zone heat pump systems (18,000 to 36,000 BTU/h) condition 2 to 4 independent zones from a single outdoor unit at up to 21.0 SEER2. Built with low-GWP R-32 refrigerant, pre-charged manifold connections, and flexible indoor style pairings.
 
 Key points:
-- Multiple indoor unit options
+- 18,000 to 36,000 BTU/h value multi-zone R-32 system serving 2 to 4 independent zones
+- Up to 21.0 SEER2 efficiency with individual zone temperature control
+- Low-GWP R-32 refrigerant with simplified pre-charged manifold connections
 
 Photos:
 # One photo per line:  - file | caption
@@ -20,6 +22,7 @@ Photos:
 
 Documents:
 - GREE product page | https://www.greecomfort.com/our-products/multi-eco-r32
+- GREE System Documentation & Submittals | https://www.greecomfort.com/system-documentation
 
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.

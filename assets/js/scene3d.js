@@ -10,7 +10,7 @@
  */
 import * as THREE from "three";
 import { OrbitControls } from "three/addons/controls/OrbitControls.js";
-import { makeProps } from "./props3d.js?v=4";
+import { makeProps } from "./props3d.js?v=7";
 
 const D = window.DMR;
 const stage = document.querySelector(".tour-stage");
@@ -565,7 +565,13 @@ function init() {
     renderer.setSize(w, h, false);
     camera.aspect = w / h;
     camera.updateProjectionMatrix();
-    focus(view, true);
+    if (t0 < 0) {
+      focus(view, true);
+    } else {
+      const [p, t] = shot(view);
+      toPos.copy(p);
+      toTgt.copy(t);
+    }
   }
   let onScreen = true, last = performance.now();
   new IntersectionObserver(en => { onScreen = en[0].isIntersecting; }).observe(stage);
@@ -629,7 +635,7 @@ function init() {
   if (!document.fullscreenEnabled) tools.querySelector("[data-full]").hidden = true;
   new ResizeObserver(resize).observe(stage);
   resize();
-  D.view3d = { focus: v => focus(v, false), point, models };
+  D.view3d = { focus: v => focus(v, false), point, models, resize };
   focus(D.tourState ? D.tourState() : view, true);
   requestAnimationFrame(frame);
 }

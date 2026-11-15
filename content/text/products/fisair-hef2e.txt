@@ -1,4 +1,4 @@
-﻿# FISAIR â€” HEF2E EVAPORATIVE COOLERS
+# FISAIR — HEF2E EVAPORATIVE COOLERS
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -6,11 +6,13 @@
 
 Name: HEF2E Evaporative Coolers
 
-Summary: Evaporative coolers and humidifiers that pass air through wetted media, cooling and humidifying it with very little energy.
+Summary: HEF2E in-duct and AHU adiabatic evaporative coolers and humidifiers deliver 65%, 85%, or 92% saturation efficiency with minimal electrical energy draw. Built to VDI 6022 hygienic standards using UL 900 Class 1 non-combustible glass-fibre media inside 304 or 316L stainless steel casings.
 
 Key points:
-- Adiabatic cooling and humidification
-- For air handlers and ducts
+- 65%, 85%, or 92% adiabatic saturation efficiency for AHUs and ductwork
+- Inorganic non-combustible glass-fibre media (UL 900 Class 1 / Eurovent)
+- 304 or 316L stainless steel casing and sloped sump with UV/drain control
+- VDI 6022 certified hygienic construction minimizes waterborne risk
 
 Photos:
 # One photo per line:  - file | caption
@@ -19,6 +21,7 @@ Photos:
 
 Documents:
 - Fisair product page | https://fisair.com/products/hef-evaporative-coolers/hef2e/
+- Fisair Official Portal & Selection Tools | https://fisair.com/en/
 
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.

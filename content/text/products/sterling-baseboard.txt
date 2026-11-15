@@ -1,4 +1,4 @@
-﻿# STERLING â€” KOMPAK AND SENIOR BASEBOARD
+# STERLING — KOMPAK AND SENIOR BASEBOARD
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -6,19 +6,21 @@
 
 Name: Kompak and Senior Baseboard
 
-Summary: Kompak and Senior hydronic baseboard, with a fingertip damper for temperature control and silent operation.
+Summary: Kompak (7.5" high) and Senior (9.4" high) hydronic baseboards pair a 3/4" copper tube and aluminum fins on full-length acoustic expansion cradles for silent heating. Delivers 550 to 940 BTU/h per linear foot at 180°F EWT with a built-in fingertip damper for local room control.
 
 Key points:
-- Standard and high-output models
+- Kompak (7.5" height) and Senior (9.4" height) profiles deliver 550–940 BTU/h per ft
+- 3/4" copper tube with aluminum fins on full-length acoustic expansion cradles
+- Fingertip damper provides local room comfort trim with silent operation
 
 Photos:
 # One photo per line:  - file | caption
 # Put new image files in assets/photos/sterling-baseboard/ and list them here. The first one is the main photo.
 - assets/photos/sterling-baseboard/1.jpg | Image: Sterling
-- assets/photos/sterling-baseboard/2.jpg | Image: Sterling
 
 Documents:
 - Sterling product page | https://www.sterlingheat.com/baseboard
+- Sterling Commercial Hydronics Literature Library | https://www.sterlingheat.com/
 
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.

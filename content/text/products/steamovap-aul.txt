@@ -1,4 +1,4 @@
-﻿# STEAMOVAP TECHNOLOGIES â€” AUL ULTRASONIC HUMIDIFIER
+# STEAMOVAP TECHNOLOGIES — AUL ULTRASONIC HUMIDIFIER
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -6,21 +6,22 @@
 
 Name: AUL Ultrasonic Humidifier
 
-Summary: An ultrasonic humidifier that produces a dry fog quickly absorbed by the air, in a compact modular unit.
+Summary: AUL compact modular ultrasonic humidifiers produce 2 to 72 lb/h (1 to 33 kg/h) of 1 µm cold-mist dry fog for rapid airstream or space absorption. Consumes under 40 W per lb/h (93% energy savings vs. steam) running on RO/DI water (<15 µS/cm) with automatic flush and hygiene cycles.
 
 Key points:
-- Compact and modular
-- Dry fog
+- 2 to 72 lb/h (1 to 33 kg/h) modular ultrasonic capacity producing 1 µm dry fog
+- Uses <40 W per lb/h—cutting electrical consumption up to 93% versus electric steam
+- Operates on RO/DI water (<15 µS/cm) with automated flush and hygiene cycles
 
 Photos:
 # One photo per line:  - file | caption
 # Put new image files in assets/photos/steamovap-aul/ and list them here. The first one is the main photo.
 - assets/photos/steamovap-aul/1.jpg | Image: SteamOVap Technologies
 - assets/photos/steamovap-aul/2.jpg | Image: SteamOVap Technologies
-- assets/photos/steamovap-aul/3.jpg | Image: SteamOVap Technologies
 
 Documents:
 - SteamOVap Technologies product page | https://steamovap.com/aul-ultrasonic-humidifier/
+- SteamOVap Portal & steamOcalc Selection Tool | https://steamovap.com/
 
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.

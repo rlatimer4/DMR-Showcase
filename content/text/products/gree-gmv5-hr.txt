@@ -1,4 +1,4 @@
-﻿# GREE â€” GMV5 HEAT RECOVERY 460V
+# GREE — GMV5 HEAT RECOVERY 460V
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -6,11 +6,12 @@
 
 Name: GMV5 Heat Recovery 460V
 
-Summary: GMV5 VRF heat recovery outdoor units for 460V three-phase service, heating and cooling different zones at once.
+Summary: GMV5 Heat Recovery 460V three-phase outdoor units (6 to 40 tons) enable simultaneous heating and cooling across different building zones on a 3-pipe VRF network. Mode-changeover branch boxes recover rejected heat to achieve high IEER and SCHE ratings under AHRI 1230.
 
 Key points:
-- 460V three-phase
-- Simultaneous heating and cooling
+- 6 to 40 tons 3-pipe Heat Recovery VRF for 460V/3Ph/60Hz commercial service
+- Simultaneous zone heating and cooling via mode-changeover branch boxes
+- High IEER and SCHE efficiency ratings; AHRI 1230 certified and ETL listed
 
 Photos:
 # One photo per line:  - file | caption
@@ -19,6 +20,7 @@ Photos:
 
 Documents:
 - GREE product page | https://www.greecommercial.com/our-products/gmv5-heat-recovery-460v
+- GREE Commercial Resources & Submittals | https://www.greecommercial.com/resources
 
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.

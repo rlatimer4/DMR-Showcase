@@ -1,4 +1,4 @@
-﻿# GREE â€” FLEXX ECO R32 CENTRAL HEAT PUMP
+# GREE — FLEXX ECO R32 CENTRAL HEAT PUMP
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -9,8 +9,9 @@ Name: FLEXX ECO R32 Central Heat Pump
 Summary: A central ducted R32 heat pump system for southern climates, using 24 VAC controls and a side-discharge design, for replacement and new construction.
 
 Key points:
-- 24 VAC controls
-- Side-discharge outdoor unit
+- 2 to 5 tons (24,000 to 60,000 BTU/h) central ducted R-32 heat pump system
+- Compact side-discharge inverter outdoor unit pairs with multi-positional AHU or A-coil
+- Up to 18.0 SEER2 efficiency with direct 24VAC thermostat compatibility
 
 Photos:
 # One photo per line:  - file | caption
@@ -21,6 +22,7 @@ Photos:
 
 Documents:
 - GREE product page | https://www.greecomfort.com/our-products/flexx-eco-r32
+- GREE System Documentation & Submittals | https://www.greecomfort.com/system-documentation
 
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.

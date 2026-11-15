@@ -1,4 +1,4 @@
-﻿# STERLING â€” LIGHT COMMERCIAL FINNED TUBE
+# STERLING — LIGHT COMMERCIAL FINNED TUBE
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -6,19 +6,21 @@
 
 Name: Light Commercial Finned Tube
 
-Summary: Light commercial finned tube (LB2 and LCS-10) for dormitories, military housing, nursing homes and apartment buildings.
+Summary: Compact light-commercial finned-tube enclosures (LB2 floor-mounted and low-profile LCS-10 slope-top wall-hung) for dormitories, military housing, clinics and apartments.
 
 Key points:
-- To-the-floor and wall-hung styles
+- LB2 heavy-gauge to-the-floor style built for high-density student and military housing
+- LCS-10 low-profile slope-top accommodates two element tiers without a full backplate
+- Compact 8" to 11" heights deliver high hydronic output along tight wall perimeters
 
 Photos:
 # One photo per line:  - file | caption
 # Put new image files in assets/photos/sterling-light-commercial/ and list them here. The first one is the main photo.
-# No photo of this product has been found yet. Add one here:
-# - assets/photos/sterling-light-commercial/photo.jpg | Caption
+- assets/photos/sterling-baseboard/2.jpg | Sterling light commercial HeatTrim Plus baseboard radiation. Image: Sterling
 
 Documents:
 - Sterling product page | https://www.sterlingheat.com/light-commercial
+- Sterling Commercial Hydronics Literature Library | https://www.sterlingheat.com/
 
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.

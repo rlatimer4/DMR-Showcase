@@ -1,4 +1,4 @@
-﻿# GREE â€” GMV6 ULTRA HEAT MINI HEAT PUMP
+# GREE — GMV6 ULTRA HEAT MINI HEAT PUMP
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -6,19 +6,23 @@
 
 Name: GMV6 Ultra Heat Mini Heat Pump
 
-Summary: A compact single-phase GMV6 Ultra Heat VRF heat pump for smaller commercial buildings and large homes.
+Summary: GMV6 Ultra Heat Mini VRF outdoor units provide 3, 4, and 5 tons (36,000 to 60,000 BTU/h) on 208/230V single-phase service with cold-climate EVI heating down to −22°F (−30°C). Supports up to 984 ft of piping and connects up to 9 indoor units for light commercial and residential projects.
 
 Key points:
-- 208-230V single-phase
-- Side-discharge compact cabinet
+- 3, 4, and 5 tons (36k–60k BTU/h) 208/230V single-phase compact side-discharge cabinet
+- EVI Ultra Heat technology sustains heating operation down to −22°F (−30°C)
+- Up to 984 ft total piping connects as many as 9 VRF indoor units
+- AHRI 1230 / 210/240 certified and ETL listed
 
 Photos:
 # One photo per line:  - file | caption
 # Put new image files in assets/photos/gree-gmv6-mini/ and list them here. The first one is the main photo.
 - assets/photos/gree-gmv6-mini/1.jpg | Image: GREE
+- assets/photos/gree-gmv6-mini/2.png | GREE GMV6 Mini (MultiPRO) 3/4/5-ton inverter VRF outdoor unit. Image: GREE
 
 Documents:
 - GREE product page | https://www.greecommercial.com/our-products/gmv6-ultra-heat-mini-heat-pump-208-230v
+- GREE Commercial Resources & Submittals | https://www.greecommercial.com/resources
 
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.

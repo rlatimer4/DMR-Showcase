@@ -1,4 +1,4 @@
-﻿# NORTEK AIR SOLUTIONS â€” AIR HANDLERS WITH LOW-TEMP DESICCANT DEHUMIDIFICATION
+# NORTEK AIR SOLUTIONS — AIR HANDLERS WITH LOW-TEMP DESICCANT DEHUMIDIFICATION
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -6,26 +6,29 @@
 
 Name: Air Handlers with Low-Temp Desiccant Dehumidification
 
-Summary: Custom air handlers from the Nortek Air Solutions brands (Temtrol, Governair, Huntair, Mammoth, Venmar and Ventrol) with low-temperature desiccant dehumidification. They deliver dry air so the zone equipment only has to cool sensibly, and are used with sensible cooling series fan-powered VAV terminals and chilled beams.
+Summary: Custom air handlers from the Nortek Air Solutions brands (Temtrol, Governair, Huntair, Mammoth, Venmar, and Ventrol) with low-temperature desiccant dehumidification. Built on welded structural tube bases with polyurethane spray/injected foam casings (3"/3.5" ITF or 2"/4" smooth-exterior panelized or 2-5/8" Huntair FPC) and perforated acoustic liners (all except Temtrol LC & Huntair FPC).
 
 Key points:
-- Desiccant regenerated with low-temperature heat
-- Supplies dry air for sensible cooling VAV and chilled beam systems
-- Built into a custom air handler
+- Low-temperature regenerated desiccant delivers dry air for sensible VAV & chilled beams
+- Welded structural tube base with polyurethane spray or injected foam insulation
+- Available in brand-specific 3"/3.5" ITF (±10" WC L/240) or 2"/4" smooth-exterior / 2-5/8" FPC casings
+- Perforated acoustic liners available on all custom AHU platforms (except Temtrol LC & Huntair FPC)
 
 Photos:
 # One photo per line:  - file | caption
 # Put new image files in assets/photos/nortek-low-humidity/ and list them here. The first one is the main photo.
-- assets/photos/dmr/Nortek-Image.jpg | Image: Nortek Air Solutions
+- assets/photos/nortek-low-humidity/1.jpg | Nortek Custom Desiccant EnergyPack unit (2,000 to 60,000 CFM). Image: Nortek Air Solutions
+- assets/photos/nortek-low-humidity/2.png | Active desiccant wheel sorption, reactivation (120–285°F), and cooling cycle diagram. Image: Nortek Air Solutions
 
 Documents:
 - Nortek Air Solutions product page | https://www.nortekair.com/products/low-humidity-air-handlers/
+- Nortek Air Solutions Technical Literature | https://www.nortekair.com/resources
 
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.
 # Badge: New
 Specifications:
-- Supply dewpoint: Low-humidity control down to −40°F to +45°F dewpoint
-- Airflow range: 1,000 to 80,000+ CFM custom integrated desiccant air handler
+- Supply dewpoint: Low-humidity control down to −40°F to +45°F dewpoint (1,000–80,000+ CFM)
+- Casing platforms: Welded structural tube base; brand-matched 3"/3.5" ITF, 2"/4" smooth panelized, or 2-5/8" FPC; perf liners (excl. LC/FPC)
 - Components: Pre-cooling CHW/DX coil, silica-gel desiccant rotor, reactivation heater, FANWALL array
 - Applications: Operating rooms, cleanrooms, pharma, battery dry rooms and ice arenas

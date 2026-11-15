@@ -1,4 +1,4 @@
-﻿# ENVIRO-TEC â€” HL HORIZONTAL LOW-PROFILE FAN COIL UNITS
+# ENVIRO-TEC — HL HORIZONTAL LOW-PROFILE FAN COIL UNITS
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -6,11 +6,13 @@
 
 Name: HL Horizontal Low-Profile Fan Coil Units
 
-Summary: Horizontal low-profile fan coil units for shallow ceiling spaces.
+Summary: Horizontal low-profile HL fan coil units (200 to 1,200 CFM) fit shallow 10" to 11" ceiling soffits and guestroom entries. Features quiet ECM motors, 2-pipe or 4-pipe hydronic coils, and removable sloped drain pans under AHRI 440 and UL 1995 listings.
 
 Key points:
-- Low-profile cabinet
-- Two-pipe and four-pipe coils
+- Low-profile 10" to 11" casing depth fits tight soffits and guestroom entries
+- 200 to 1,200 CFM concealed or cabinet configurations with quiet ECM motor
+- 2-pipe and 4-pipe hydronic coil options with removable sloped drain pan
+- AHRI 440 certified performance and UL 1995 listed assembly
 
 Photos:
 # One photo per line:  - file | caption
@@ -21,6 +23,7 @@ Photos:
 
 Documents:
 - Enviro-Tec product page | https://www.enviro-tec.com/products-and-solutions/fan-coil-units/hl_ad/hl-horizontal-low-profile-fan-coil-units
+- Enviro-Tec Submittals & Resources | https://www.enviro-tec.com/resources
 
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.

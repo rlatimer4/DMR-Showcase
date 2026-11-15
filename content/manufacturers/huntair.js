@@ -15,9 +15,10 @@ DMR.registerManufacturer({
   family: "Nortek Air Solutions",
   logo: "assets/logos/Huntair.jpg",
   website: "https://www.nortekair.com/about/our-brands/huntair/",
-  blurb: "Custom air handlers, FANWALL systems, CleanPak fan filter units and cleanroom ceiling grids.",
+  blurb: "Smooth-Exterior and FPC custom air handlers, knockdown units, FANWALL systems, CleanPak fan filter units and cleanroom ceiling grids.",
   products: [
     { id: "huntair-ahu", category: "ahu", shape: "ahu" },
+    { id: "huntair-fpc", category: "ahu", shape: "ahu" },
     { id: "huntair-knockdown", category: "ahu", shape: "ahu-knockdown" },
     { id: "huntair-fanwall", category: "fanwall", shape: "fanwall" },
     { id: "huntair-ffu", category: "critical", shape: "ffu" },

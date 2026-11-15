@@ -1,4 +1,4 @@
-﻿# FISAIR â€” DFLEX DEHUMIDIFIERS
+# FISAIR — DFLEX DEHUMIDIFIERS
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -6,23 +6,29 @@
 
 Name: DFLEX Dehumidifiers
 
-Summary: Desiccant dehumidifiers similar to the DFRA range with higher airflow and drying capacity.
+Summary: Large-capacity modular desiccant air handling dehumidifiers delivering 7,500 to 24,000 m³/h (~4,400 to 14,125 CFM) and up to 152 kg/h of moisture extraction in an EN 1886 thermal-break cabinet. Backed by Fisair's 55+ years in humidity control, 2-year standard warranty, and Fisair Selection Tool (FST) application software.
 
 Key points:
-- Higher flow and capacity than DFRA
+- High drying capacity from 51 to 152 kg/h (112 to 335 lb/h) across ~4,400 to 14,125 CFM process airflow
+- Configurable modular AHU sections combine mixing boxes, MERV/HEPA filtration, pre/post cooling, and silica-gel rotors
+- Rigid EN 1886 Class T2/TB2 double-wall thermal-break panels minimize casing air leakage and condensation
+- Selected via FST (Fisair Selection Tool) with factory engineering support, dependable lead times, and a 2-year warranty
 
 Photos:
 # One photo per line:  - file | caption
 # Put new image files in assets/photos/fisair-dflex/ and list them here. The first one is the main photo.
 - assets/photos/fisair-dflex/1.jpg | Image: Fisair
+- assets/photos/fisair-dflex/2.png | Fisair DFLEX high-flow modular desiccant air handling unit (~4,400–14,000 CFM). Image: Fisair
 
 Documents:
 - Fisair product page | https://fisair.com/products/df-air-dehumidifiers/dflex-dehumidifiers/
+- Fisair Official Portal & Selection Tools | https://fisair.com/en/
 
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.
 # Badge: New
 Specifications:
-- Process airflow: 1,000 to 35,000 m³/h modular configurable desiccant AHU
-- Modules: Mixing box, pre-filter, pre-cool, silica-gel rotor, post-cool/heat, HEPA final filter
-- Casing: EN 1886 Class T2/TB2 double-wall thermal-break construction
+- Process airflow: 7,500 to 24,000 m³/h (~4,400 to 14,125 CFM) modular desiccant AHU
+- Moisture removal: 51 to 152 kg/h (112 to 335 lb/h) at 20°C / 60% RH
+- Modules & reactivation: Mixing box, pre-filter, pre-cool, silica-gel rotor, post-cool/heat, HEPA final filter; electric, steam, HW, or gas
+- Casing & support: EN 1886 Class T2/TB2 double-wall thermal-break casing; FST selection tool & 2-year standard warranty

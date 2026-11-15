@@ -1,4 +1,4 @@
-﻿# UV RESOURCES â€” SL XTREME UV-C FIXTURES
+# UV RESOURCES — SL XTREME UV-C FIXTURES
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -6,10 +6,13 @@
 
 Name: SL Xtreme UV-C Fixtures
 
-Summary: A very high output UV-C fixture for small to medium HVAC units and ducts.
+Summary: A single-ended very high output UV-C fixture engineered for small to medium HVAC air handlers, coil plenums, and ductwork. Features a 360° articulated lamp clamp and universal 120V–277V electronic power supply for flexible mounting in tight interior spaces.
 
 Key points:
-- For small to medium units
+- Designed for small to medium HVAC units and ducts
+- 16" to 61" very high output 254 nm germicidal lamps
+- 360° mounting clamp for any interior orientation
+- Universal 120V–277V high-efficiency electronic ballast
 
 Photos:
 # One photo per line:  - file | caption
@@ -18,11 +21,12 @@ Photos:
 
 Documents:
 - UV Resources product page | https://www.uvresources.com/sl-x/
+- UV Resources Technical Library & Research | https://www.uvresources.com/white-papers-and-research/
 
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.
 # Badge: New
 Specifications:
-- Fixture type: Single-ended (SL) interior plenum/coil UV-C fixture with 360° lamp clamp
-- Installation: Mounts to AHU framing posts, filter racks or duct walls in any orientation
-- Lamp lengths: 14" to 60" high-output 254 nm germicidal lamps; 120–277V
+- Fixture type: Single-ended (SL-X) interior plenum and coil UV-C fixture with 360° lamp clamp
+- Installation: Mounts to AHU framing posts, filter racks, or duct walls in any orientation
+- Lamp lengths: 16" to 61" very high output 254 nm germicidal lamps; 120V–277V

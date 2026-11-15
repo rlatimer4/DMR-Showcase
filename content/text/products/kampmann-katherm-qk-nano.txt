@@ -1,4 +1,4 @@
-﻿# KAMPMANN â€” KATHERM QK NANO TRENCH HEATING
+# KAMPMANN — KATHERM QK NANO TRENCH HEATING
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -6,11 +6,12 @@
 
 Name: Katherm QK nano Trench Heating
 
-Summary: A compact version of the Katherm QK trench heater with tangential fans.
+Summary: Katherm QK nano is an ultra-shallow 70 mm (2.75") high × 165 mm wide fan-assisted hydronic floor trench convector engineered for post-tensioned slabs, raised access floors, and thin floor toppings. Pairs a miniaturized EC tangential fan with a copper/brass finned convector for fast perimeter heat.
 
 Key points:
-- Shallow, narrow trench
-- Fan-assisted heating
+- Ultra-shallow 70 mm (2.75") × 165 mm profile fits post-tensioned slabs and raised floors
+- Miniaturized EC tangential fan boosts convective output along tall glass walls
+- Durable copper/brass finned hydronic convector in a compact architectural trench
 
 Photos:
 # One photo per line:  - file | caption
@@ -21,6 +22,7 @@ Photos:
 
 Documents:
 - Kampmann product page | https://www.kampmann.ca/en-CA/products/trench-technology/katherm-qk-nano
+- Kampmann Download Center & Catalogs | https://www.kampmann.ca/download-center
 
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.

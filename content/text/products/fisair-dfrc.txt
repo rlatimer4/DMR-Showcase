@@ -1,4 +1,4 @@
-﻿# FISAIR â€” DFRC DEHUMIDIFIERS
+# FISAIR — DFRC DEHUMIDIFIERS
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -6,11 +6,13 @@
 
 Name: DFRC Dehumidifiers
 
-Summary: Mobile, self-supporting desiccant dehumidifiers for drying a space.
+Summary: Industrial and portable self-supporting desiccant dehumidifiers built on a protective tubular crash frame for rugged industrial drying, temporary construction dehumidification, and space humidity control.
 
 Key points:
-- Mobile and robust
-- Silica gel rotor
+- Protective stainless steel tubular frame and carry-ready roof shielding resist site handling and weather exposure
+- Available in industrial capacities from 1,200 to 15,000 m³/h (706 to 8,828 CFM) removing 9 to 106 kg/h at 20°C / 60% RH
+- High-performance washable silica-gel rotor holds low relative humidity across cold or hot ambient air
+- Plug-and-play electrical reactivation and PLC controls simplify rapid deployment and industrial integration
 
 Photos:
 # One photo per line:  - file | caption
@@ -19,11 +21,13 @@ Photos:
 
 Documents:
 - Fisair product page | https://fisair.com/products/df-air-dehumidifiers/dfrc/
+- Fisair Official Portal & Selection Tools | https://fisair.com/en/
 
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.
 # Badge: New
 Specifications:
-- Process airflow: 1,500 to 25,000 m³/h packaged desiccant dehumidifier
-- Configuration: Custom pre/post conditioning modules for process & archival drying
-- Controls: PLC with touch HMI, dewpoint tracking, BACnet and Modbus
+- Process airflow: 1,200 to 15,000 m³/h (706 to 8,828 CFM) self-supporting desiccant dehumidifier
+- Moisture removal: 9 to 106 kg/h (20 to 234 lb/h) at 20°C / 60% RH
+- Frame & rotor: Protective tubular outer frame with washable silica-gel desiccant rotor
+- Controls: Integral humidistat and PLC/HMI interface for continuous space or process drying

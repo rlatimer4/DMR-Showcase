@@ -1,4 +1,4 @@
-﻿# NORTEK AIR SOLUTIONS â€” DIRECT EXPANSION EVAPORATOR COILS
+# NORTEK AIR SOLUTIONS — DIRECT EXPANSION EVAPORATOR COILS
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -6,11 +6,13 @@
 
 Name: Direct Expansion Evaporator Coils
 
-Summary: Direct expansion evaporator coils with seamless copper tubes mechanically expanded into the fins.
+Summary: Custom Nortek direct expansion evaporator coils use 3/8", 1/2", and 5/8" OD seamless copper tubes mechanically expanded into fins and pressure-tested above 450 psig. Configurable with single, dual, intertwined, or face-split circuiting for R-410A, R-32, R-454B, R-134a, and R-513A under AHRI 410.
 
 Key points:
-- Custom circuiting
-- For new units and replacement
+- 3/8", 1/2", and 5/8" OD rifled or smooth seamless copper tubes expanded into fins
+- Single, dual, intertwined, or face-split circuits with brass distributor nozzles
+- Compatible with R-410A, R-32, R-454B, R-134a, and R-513A refrigerants
+- AHRI 410 certified performance and UL 1995 pressure-tested at 450+ psig
 
 Photos:
 # One photo per line:  - file | caption
@@ -19,6 +21,7 @@ Photos:
 
 Documents:
 - Nortek Air Solutions product page | https://www.nortekair.com/products/direct-expansion-evaporator-coils/
+- Nortek Air Solutions Technical Literature | https://www.nortekair.com/resources
 
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.

@@ -1,4 +1,4 @@
-﻿# KAMPMANN â€” KATHERM NK TRENCH HEATING
+# KAMPMANN — KATHERM NK TRENCH HEATING
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -6,10 +6,12 @@
 
 Name: Katherm NK Trench Heating
 
-Summary: Trench heating by natural convection, with no fan.
+Summary: Katherm NK hydronic floor trench heaters deliver silent 0 dBA natural convection without fans or electrical wiring across 180 to 420 mm widths and 95 to 220 mm depths. Designed for acoustic-sensitive libraries, museums, concert halls, and full-height glazed curtain walls.
 
 Key points:
-- Silent, no moving parts
+- 100% passive natural-convection trench heating at 0 dBA with zero moving parts
+- Broad trench sizing from 180 to 420 mm widths and 95 to 220 mm depths
+- Ideal for libraries, concert halls, museums, and curtain-wall perimeters
 
 Photos:
 # One photo per line:  - file | caption
@@ -20,6 +22,7 @@ Photos:
 
 Documents:
 - Kampmann product page | https://www.kampmann.ca/en-CA/products/trench-technology/katherm-nk
+- Kampmann Download Center & Catalogs | https://www.kampmann.ca/download-center
 
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.

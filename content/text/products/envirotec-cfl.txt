@@ -1,4 +1,4 @@
-﻿# ENVIRO-TEC â€” CFL SERIES FLOW FAN POWERED LOW-HEIGHT VAV TERMINALS
+# ENVIRO-TEC — CFL SERIES FLOW FAN POWERED LOW-HEIGHT VAV TERMINALS
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -6,25 +6,30 @@
 
 Name: CFL Series Flow Fan Powered Low-Height VAV Terminals
 
-Summary: Series-flow fan-powered VAV terminals in a low-height cabinet for shallow ceiling spaces.
+Summary: Low-height series-flow fan-powered VAV terminal units in a shallow 11" to 12" cabinet spanning 100 to 4,100 CFM for congested ceiling plenums. Pairs a variable-speed ECM motor with the patented FlowStar™ multi-point primary inlet airflow sensor yielding 230% to 290% signal amplification for accurate low-flow turndown.
 
 Key points:
-- Low-height cabinet
-- Series fan-powered operation
+- Shallow 11" to 12" cabinet profile fits above structural beams and crowded MEP plenums across 100 to 4,100 CFM
+- FlowStar™ airflow sensor delivers 230–290% amplification (1.50" w.g. @ 3,000 FPM vs. 0.56" Pitot) for stable low-flow VAV control
+- Hinged bottom and side access panels simplify CR-series ECM blower and electric/HW coil servicing without dropping ceiling grid
+- AHRI 880 certified and UL 1995 listed with hot water or staged/SCR electric reheat options
 
 Photos:
 # One photo per line:  - file | caption
 # Put new image files in assets/photos/envirotec-cfl/ and list them here. The first one is the main photo.
-- assets/photos/envirotec-cfl-cc/1.jpg | Image: Enviro-Tec
+- assets/photos/envirotec-cfl/1.jpg | Enviro-Tec CFL low-height series-flow fan-powered VAV terminal unit. Image: Enviro-Tec
+- assets/photos/envirotec-cfl/2.jpg | New CR/CFL series FPVAV access door and internal blower arrangement. Image: Enviro-Tec
+- assets/photos/envirotec-cfl/3.png | Enviro-Tec FlowStar multi-point inlet airflow sensor (230–290% amplification). Image: Enviro-Tec
 
 Documents:
 - Enviro-Tec product page | https://www.enviro-tec.com/products-and-solutions/variable-air-volume-terminals/cfl_ad/cfl-series-flow-fan-powered-low-height-vav-terminal-units
+- Enviro-Tec Submittals & Resources | https://www.enviro-tec.com/resources
 
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.
 # Badge: New
 Specifications:
-- Casing height: Low-profile 11" to 12.5" height for shallow ceiling plenums
-- Airflow range: 150 to 2,400 CFM series fan-powered terminal
-- Fan motor: High-efficiency ECM motor; bottom & side service access
+- Casing height: Low-profile 11" to 12" height for shallow ceiling plenums
+- Airflow & sensor: 100 to 4,100 CFM series fan-powered terminal with FlowStar™ sensor (230–290% signal amplification)
+- Fan motor & access: High-efficiency ECM motor with bottom & side hinged service access
 - Certifications: AHRI 880 certified, UL 1995 listed

@@ -1,4 +1,4 @@
-﻿# NOVELAIRE â€” DESICCANT DEHUMIDIFICATION WHEELS
+# NOVELAIRE — DESICCANT DEHUMIDIFICATION WHEELS
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -6,11 +6,13 @@
 
 Name: Desiccant Dehumidification Wheels
 
-Summary: Desiccant dehumidification wheels for equipment that must hold low humidity.
+Summary: Manufactured in Baton Rouge, LA across 300 to 50,000+ CFM sizes, NovelAire desiccant wheels cover three media chemistries: 4A molecular sieve (ECW passive enthalpy), activated alumina (DES low-temp 90–150°F waste/condenser heat regen), and silica gel (FSG / LT3 / WSG washable matrices for 120–350°F high-capacity drying). Slow 8–24 RPH wheel rotation supports 50/50 or 75/25 airstream splits.
 
 Key points:
-- For OEM equipment and replacement
-- Range of diameters
+- Three specialized media options: 4A molecular sieve (ECW), activated alumina (DES), and silica gel (FSG / LT3 / WSG washable)
+- Activated alumina (DES) regenerates at low 90–150°F waste/hot-water/condenser heat; LT3 silica gel uses 120–180°F and WSG/FSG uses 150–350°F (<300°F typ.)
+- Engineered cassette rotations of 8–24 RPH with 50/50 (DES) or 75/25 (DH) process-to-regen splits on rigid fiberglass matrices
+- Custom OEM and drop-in replacement wheels from 300 to 50,000+ CFM backed by SelectDRY performance modeling
 
 Photos:
 # One photo per line:  - file | caption
@@ -18,14 +20,17 @@ Photos:
 - assets/photos/novelaire-desiccant-wheels/1.jpg | Image: NovelAire
 - assets/photos/novelaire-desiccant-wheels/2.jpg | Image: NovelAire
 - assets/photos/novelaire-desiccant-wheels/3.jpg | Image: NovelAire
+- assets/photos/novelaire-desiccant-wheels/4.jpg | NovelAire molecular-sieve, activated-alumina, and silica-gel desiccant cassette lineup. Image: NovelAire
 
 Documents:
 - NovelAire product page | https://www.novelaire.com/dehumidification-wheels/
+- NovelAire Downloads & Technical Library | https://www.novelaire.com/downloads/
 
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.
 # Badge: New
 Specifications:
-- Media options: LT3 low-temperature silica gel or WSG washable synthesized silica gel on fiberglass matrix
-- Regeneration temp: Reactivates with low-grade heat (120°F–180°F on LT3) or up to 285°F (WSG)
-- Airflow & size: Custom OEM cassette sizes from 300 to 50,000+ CFM
+- Media chemistries: 4A molecular sieve (ECW passive), activated alumina (DES low-temp), and silica gel (FSG / LT3 / WSG washable) on fiberglass matrix
+- Regeneration temps: 90–150°F on activated alumina (DES); 120–180°F on LT3 silica gel; 150–350°F (typ. <300°F) on FSG/WSG silica gel
+- Rotation & splits: 8–24 rotations/hr speed-controlled drive; 50/50 (DES) or 75/25 (DH) airstream split
+- Airflow & sizing: 300 to 50,000+ CFM OEM and replacement cassettes modeled in SelectDRY software

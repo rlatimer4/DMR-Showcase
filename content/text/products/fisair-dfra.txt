@@ -1,4 +1,4 @@
-﻿# FISAIR â€” DFRA DEHUMIDIFIERS
+# FISAIR — DFRA DEHUMIDIFIERS
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -6,11 +6,13 @@
 
 Name: DFRA Dehumidifiers
 
-Summary: Desiccant rotor dehumidifiers for commercial and industrial humidity control, using a silica gel rotor tested against bacteria and fungi.
+Summary: Versatile industrial desiccant rotor dehumidifiers delivering 450 to 6,000 m³/h (~265 to 3,530 CFM) of dry air using a bacteriostatic, washable silica-gel rotor. Backed by Fisair's 55+ years of humidity engineering, Fisair Selection Tool (FST) software, competitive lead times, and a 2-year standard warranty.
 
 Key points:
-- Silica gel desiccant rotor
-- Low energy consumption
+- Drying capacities from 4 to 42 kg/h (8.8 to 92.6 lb/h) across ~265 to 3,530 CFM process airflow
+- Bacteriostatic washable silica-gel desiccant rotor tested against bacterial and fungal growth
+- Multiple reactivation options (electric, steam, gas, or hot water) match available plant utilities
+- Selected via FST (Fisair Selection Tool) with factory application engineering support and a 2-year standard warranty
 
 Photos:
 # One photo per line:  - file | caption
@@ -19,12 +21,13 @@ Photos:
 
 Documents:
 - Fisair product page | https://fisair.com/products/df-air-dehumidifiers/dehumidifiers-dfra/
+- Fisair Official Portal & Selection Tools | https://fisair.com/en/
 
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.
 # Badge: New
 Specifications:
-- Process airflow: 1,500 to 25,000 m³/h (880 to 14,700 CFM) industrial desiccant unit
-- Moisture removal: 12 to 210 kg/h (26 to 463 lb/h) at 20°C / 60% RH
+- Process airflow: 450 to 6,000 m³/h (~265 to 3,530 CFM) industrial desiccant unit
+- Moisture removal: 4 to 42 kg/h (8.8 to 92.6 lb/h) at 20°C / 60% RH
 - Reactivation: Electric, steam coil, direct/indirect gas or hot water regeneration
-- Casing: Double-wall thermal-break corrosion-resistant panels
+- Casing & support: Double-wall thermal-break panels, washable silica-gel rotor, FST selection tool & 2-year warranty

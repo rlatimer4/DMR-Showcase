@@ -1,4 +1,4 @@
-﻿# GREE â€” TTW R32 THROUGH-THE-WALL UNIT
+# GREE — TTW R32 THROUGH-THE-WALL UNIT
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -6,11 +6,12 @@
 
 Name: TTW R32 Through-the-Wall Unit
 
-Summary: Through-the-wall units in heat pump, electric heat and cooling-only versions.
+Summary: TTW R-32 through-the-wall units (8,000 to 14,000 BTU/h) provide heat pump, electric heat, and cooling-only comfort designed to retrofit standard 26" architectural sleeves. Offered in 115V and 208/230V models with both handheld remote and wall thermostat support.
 
 Key points:
-- Heat pump, electric heat and cooling-only models
-- R32 refrigerant
+- 8,000 to 14,000 BTU/h R-32 heat pump, electric heat, and cooling-only units
+- Engineered to fit standard 26" through-the-wall sleeves for clean retrofits
+- 115V or 208/230V electrical options with remote and wall thermostat support
 
 Photos:
 # One photo per line:  - file | caption
@@ -21,6 +22,7 @@ Photos:
 
 Documents:
 - GREE product page | https://www.greecomfort.com/our-products/ttw-r32
+- GREE System Documentation & Submittals | https://www.greecomfort.com/system-documentation
 
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.

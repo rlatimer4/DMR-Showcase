@@ -1,4 +1,4 @@
-﻿# KAMPMANN â€” VENKON XL FAN COILS
+# KAMPMANN — VENKON XL FAN COILS
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -6,10 +6,12 @@
 
 Name: Venkon XL Fan Coils
 
-Summary: Fan coils for larger capacities and higher external static pressure.
+Summary: Venkon XL commercial EC fan coils scale hydronic heating and cooling up to 3,300 m³/h (1,940 CFM) and 150 Pa (0.60 in. w.g.) external static pressure for larger ducted zones. Combines 2-pipe or 4-pipe coils with VDI 6022 hygienic compliance for open-plan offices, lobbies, and retail.
 
 Key points:
-- Higher capacity and static pressure
+- High airflow up to 3,300 m³/h (1,940 CFM) for open-plan offices, lobbies, and retail
+- Up to 150 Pa (0.60 in. w.g.) external static pressure supports extended ductwork
+- 2-pipe or 4-pipe hydronic coils engineered with VDI 6022 hygiene compliance
 
 Photos:
 # One photo per line:  - file | caption
@@ -20,6 +22,7 @@ Photos:
 
 Documents:
 - Kampmann product page | https://www.kampmann.ca/en-CA/products/fan-coils/venkon-xl
+- Kampmann Download Center & Catalogs | https://www.kampmann.ca/download-center
 
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.

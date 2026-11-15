@@ -1,4 +1,4 @@
-﻿# ENVIRO-TEC â€” VH VERTICAL HI-RISE FAN COIL UNITS
+# ENVIRO-TEC — VH VERTICAL HI-RISE FAN COIL UNITS
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -6,12 +6,13 @@
 
 Name: VH Vertical Hi-Rise Fan Coil Units
 
-Summary: Vertical hi-rise fan coil units that stack floor to floor on a common riser, with multiple coil row and circuit options.
+Summary: Vertical hi-rise fan coil units delivering 350 to 1,200 CFM per unit that stack floor-to-floor on factory-insulated risers to trim field piping labor in hotels, apartments, and dormitories.
 
 Key points:
-- Riser-mounted, stacked floor to floor
-- For hotels, apartments and dormitories
-- Multiple coil configurations
+- 350 to 1,200 CFM vertical stack units ship with factory-insulated 3/4" to 3" copper risers for fast rough-in
+- Single or master/secondary twin configurations serve adjacent guestrooms or multifamily suites from one chase
+- Multiple 2-pipe and 4-pipe coil row/circuiting options with factory valve piping packages
+- AHRI 440 certified and UL 1995 listed for multi-story residential and hospitality construction
 
 Photos:
 # One photo per line:  - file | caption
@@ -21,12 +22,13 @@ Photos:
 
 Documents:
 - Enviro-Tec product page | https://www.enviro-tec.com/products-and-solutions/fan-coil-units/vh_ad/vh-vertical-high-rise-fan-coil-units
+- Enviro-Tec Submittals & Resources | https://www.enviro-tec.com/resources
 
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.
 # Badge: New
 Specifications:
-- Airflow range: 300 to 1,200 CFM vertical stack high-rise fan coil
+- Airflow range: 350 to 1,200 CFM vertical stack high-rise fan coil
 - Risers: Factory-installed insulated copper supply, return and condensate risers (3/4" to 3")
 - Configurations: Single or master/secondary twin units for hotel & residential towers
 - Certifications: AHRI 440 certified, UL 1995 listed

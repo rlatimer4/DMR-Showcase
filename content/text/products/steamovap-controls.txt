@@ -1,4 +1,4 @@
-﻿# STEAMOVAP TECHNOLOGIES â€” SENSORS AND HUMIDITY CONTROLLERS
+# STEAMOVAP TECHNOLOGIES — SENSORS AND HUMIDITY CONTROLLERS
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -6,10 +6,12 @@
 
 Name: Sensors and Humidity Controllers
 
-Summary: Room and duct humidity sensors and controllers, with setpoint adjustment and optional BACnet.
+Summary: Room and duct humidity sensors and PID controllers with LCD setpoint adjustment, ±1.5% to ±2% RH sensing accuracy, and optional BACnet or Modbus networking. Pairs directly with SteamOVap humidifiers for tight, automated space and duct humidity control.
 
 Key points:
-- Optional BACnet
+- Duct and wall RH/temperature transmitters (±1.5% to ±2% RH)
+- Standalone PID humidity controllers with 0–10V / 4–20mA signals
+- Optional BACnet and Modbus building automation interfaces
 
 Photos:
 # One photo per line:  - file | caption
@@ -20,6 +22,7 @@ Photos:
 
 Documents:
 - SteamOVap Technologies product page | https://steamovap.com/sensor-controller/
+- SteamOVap Portal & steamOcalc Selection Tool | https://steamovap.com/
 
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.
@@ -27,3 +30,4 @@ Documents:
 Specifications:
 - Sensors: Duct and wall relative humidity & temperature transmitters (±1.5% to ±2% RH, 0–10V / 4–20mA)
 - Integration: Standalone PID humidity controllers and BACnet/Modbus interfaces
+- Application: Precision space and duct humidity regulation for commercial SteamOVap humidifiers

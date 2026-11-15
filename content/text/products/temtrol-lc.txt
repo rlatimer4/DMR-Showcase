@@ -1,4 +1,4 @@
-﻿# TEMTROL â€” TEMTROL LC AIR HANDLER
+# TEMTROL — TEMTROL LC AIR HANDLER
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -6,26 +6,30 @@
 
 Name: Temtrol LC Air Handler
 
-Summary: An air handler designed for schools, addressing indoor air quality, acoustics, energy use and maintenance. Suited to indoor and outdoor applications under 20,000 CFM, including above-ceiling installation.
+Summary: Temtrol LC is Nortek's lowest-cost semi-custom indoor/outdoor AHU, delivering up to 20,000 CFM in 2" injected-foam panelized construction (R-16 walls and base) on a bolted formed galvanized steel base rated to <1% leakage and L/200 deflection at ±8" WC. Sized around 96"W x 72"H x 48" modules variable in 1" increments with galvanized, stainless, or aluminum skins.
 
 Key points:
-- Airflows below 20,000 CFM
-- Compact for above-ceiling and tight-access locations
-- Mid to high static pressure
+- Semi-custom indoor/outdoor AHU up to 20,000 CFM with <1% casing leakage and L/200 deflection at ±8" WC
+- 2" injected-foam panelized construction (R-16 base & walls) on a bolted formed galvanized steel base in GS, SS, or AL
+- Modular 96"W x 72"H x 48" footprints variable in 1" increments across horizontal, side-by-side heat wheel ER, and vertical layouts
+- Direct-drive plenum PF09 or FANWALL EC fans plus economizer with RA and EA fans (module delivery only; no knockdown or perf liners)
 
 Photos:
 # One photo per line:  - file | caption
 # Put new image files in assets/photos/temtrol-lc/ and list them here. The first one is the main photo.
-- assets/photos/temtrol-lc/1.jpg | Image: Nortek Air Solutions
+- assets/photos/temtrol-lc/1.jpg | Temtrol LC semi-custom modular 2" injected-foam air handler. Image: Nortek Air Solutions
+- assets/photos/temtrol-lc/2.png | Temtrol LC horizontal, side-by-side ER wheel, and vertical unit layouts. Image: Nortek Air Solutions
+- assets/photos/temtrol-lc/3.jpg | Installed Temtrol LC semi-custom rooftop air handling unit. Image: Nortek Air Solutions
 
 Documents:
 - Temtrol product page | https://www.nortekair.com/products/temtrol-lc-air-handler/
+- Nortek Air Solutions Technical Literature | https://www.nortekair.com/resources
 
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.
 # Badge: New
 Specifications:
-- Airflow range: 1,500 to 35,000 CFM semi-custom rapid-ship air handler
-- Casing: 2" double-wall foam-insulated panels for indoor or outdoor rooftop mounting
-- Options: FANWALL or single plenum fan, CHW/HW/DX coils, mixing box, MERV 8–14 filters
-- Certifications: AHRI 430 / 1350 certified, ETL listed
+- Airflow & sizing: Up to 20,000 CFM indoor/outdoor; 96"W x 72"H x 48" modules variable in 1" increments
+- Casing & leakage: 2" injected-foam panelized walls & base (R-16) on bolted formed galvanized base; <1% leakage & L/200 @ ±8" WC
+- Materials & layouts: Galvanized, stainless steel, or aluminum w/ optional paint; horizontal, side-by-side heat wheel, or vertical top-fan
+- Fans & components: Direct-drive plenum PF09 or FANWALL EC, economizer w/ RA & EA fans, CHW/HW/DX coils, MERV 8–14; AHRI 430 / 1350, ETL

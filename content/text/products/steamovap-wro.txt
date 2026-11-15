@@ -1,4 +1,4 @@
-﻿# STEAMOVAP TECHNOLOGIES â€” WRO REVERSE OSMOSIS WATER FILTRATION STATION
+# STEAMOVAP TECHNOLOGIES — WRO REVERSE OSMOSIS WATER FILTRATION STATION
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -6,11 +6,12 @@
 
 Name: WRO Reverse Osmosis Water Filtration Station
 
-Summary: A reverse osmosis water filtration station that supplies purified water to humidifiers.
+Summary: WRO skid- and wall-mounted Reverse Osmosis water filtration stations generate 200 to 6,000+ GPD of purified makeup water for humidifiers. Removes over 97% of dissolved minerals (<10–20 µS/cm permeate) via booster pump, carbon pre-filter, RO membranes, storage bladder tank, and optional UV.
 
 Key points:
-- Multi-stage filtration
-- Removes dissolved salts
+- 200 to 6,000+ GPD skid- or wall-mounted reverse osmosis water pretreatment station
+- Removes >97% of dissolved minerals (<10–20 µS/cm permeate) to stop humidifier scaling
+- Complete package with booster pump, RO membranes, carbon pre-filter, bladder tank & UV
 
 Photos:
 # One photo per line:  - file | caption
@@ -20,6 +21,7 @@ Photos:
 
 Documents:
 - SteamOVap Technologies product page | https://steamovap.com/wro-reverse-osmosis-water-filtration-station/
+- SteamOVap Portal & steamOcalc Selection Tool | https://steamovap.com/
 
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.

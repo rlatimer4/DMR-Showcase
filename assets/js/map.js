@@ -45,7 +45,7 @@
       "<strong>" + esc(i.name) + "</strong>" +
       "<span>" + esc(i.city) + (L.buildings[i.building] ? " · " + L.buildings[i.building].name : "") + (i.year ? " · " + esc(i.year) : "") + "</span>" +
       '<p class="tags">' + brandsOf(i).map(function (b) { return "<span>" + L.brands[b].name + "</span>"; }).join("") + "</p>" +
-      (prods.length ? "<ul>" + prods.map(function (p) { return "<li>" + L.brands[L.products[p].brand].name + " " + L.products[p].name + "</li>"; }).join("") + "</ul>" : "") +
+      (prods.length ? "<ul>" + prods.map(function (p) { return '<li><button type="button" class="link" data-product="' + p + '">' + esc(L.brands[L.products[p].brand].name + " " + L.products[p].name) + "</button></li>"; }).join("") + "</ul>" : "") +
       (i.notes ? "<p>" + esc(i.notes) + "</p>" : "") +
       (editing ? '<p><button type="button" class="link" data-edit-pin="' + i.id + '">Edit pin</button> · <button type="button" class="link" data-delete-pin="' + i.id + '">Delete</button></p>' : "") +
       "</div>";
@@ -75,9 +75,7 @@
     var v = visible();
     var isFiltered = Boolean(fBrand.value || fMarket.value);
     if (mapCount) {
-      mapCount.textContent = isFiltered
-        ? ("Showing " + v.length + " of " + D.installs.length + " installations")
-        : (D.installs.length + " regional installations");
+      mapCount.textContent = isFiltered ? "Filtered view" : "";
     }
     if (clearMapBtn) clearMapBtn.hidden = !isFiltered;
     listEl.innerHTML = v.length ? v.map(function (i) {
@@ -219,6 +217,13 @@
       openForm(null, { lat: +e.latLng.lat().toFixed(5), lng: +e.latLng.lng().toFixed(5) });
     });
     draw();
+    if (window.ResizeObserver) {
+      new ResizeObserver(function () {
+        if (!gmap || !el.clientWidth || !el.clientHeight) return;
+        google.maps.event.trigger(gmap, "resize");
+        gmap.panTo(selected && markers[selected] ? markers[selected].getPosition() : cfg.center);
+      }).observe(el);
+    }
   };
   window.gm_authFailure = function () {
     note.hidden = false;

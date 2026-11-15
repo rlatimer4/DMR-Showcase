@@ -1,4 +1,4 @@
-﻿# KAMPMANN â€” POWERKON LT FORCE FLOWS
+# KAMPMANN — POWERKON LT FORCE FLOWS
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -9,8 +9,9 @@ Name: PowerKon LT Force Flows
 Summary: A compact two-pipe hydronic fan coil that heats and cools with low-temperature hot water and chilled water, suited to heat pump and chiller systems.
 
 Key points:
-- Works with low water temperatures
-- Heating and cooling
+- High-output 2-pipe hydronic cabinet heater and cooler with quiet EC crossflow fan
+- Optimized for low-temperature heat-pump loops (95°F–110°F EWT) or standard CHW/HW
+- Wall-mounted or floor-standing installation for foyers, classrooms, and corridors
 
 Photos:
 # One photo per line:  - file | caption
@@ -18,9 +19,11 @@ Photos:
 - assets/photos/kampmann-powerkon/1.jpg | Image: Kampmann
 - assets/photos/kampmann-powerkon/2.jpg | Image: Kampmann
 - assets/photos/kampmann-powerkon/3.jpg | Image: Kampmann
+- assets/photos/kampmann-powerkon/4.png | Kampmann PowerKon high-capacity low-water-temperature perimeter convector. Image: Kampmann
 
 Documents:
 - Kampmann product page | https://www.kampmann.ca/en-CA/products/fan-coils/powerkon-lt
+- Kampmann Download Center & Catalogs | https://www.kampmann.ca/download-center
 
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.

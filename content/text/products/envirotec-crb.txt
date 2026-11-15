@@ -1,4 +1,4 @@
-﻿# ENVIRO-TEC â€” CRB SERIES FLOW FAN POWERED VAV TERMINALS
+# ENVIRO-TEC — CRB SERIES FLOW FAN POWERED VAV TERMINALS
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -6,26 +6,30 @@
 
 Name: CRB Series Flow Fan Powered VAV Terminals
 
-Summary: Series-flow fan-powered VAV terminal units that run quietly while delivering constant airflow to the zone.
+Summary: CRB / CR series-flow fan-powered VAV terminal units span 100 to 4,400 CFM delivering constant, low-sound airflow while blending primary air with warm plenum return air. Equipped with brushless ECM motors, easy-service CR cabinet access, and the FlowStar™ inlet sensor yielding 230% to 290% signal amplification down to 20% airflow turndown.
 
 Key points:
-- Series fan-powered operation
-- Hot water or electric reheat
-- Low sound levels
+- Series-flow ECM fan delivers constant zone discharge volume across 100 to 4,400 CFM
+- FlowStar™ primary inlet sensor provides 230–290% amplification (0.04" w.g. @ 480 FPM / 20% flow) for tight low-end control
+- New CR series cabinet refinements improve serviceability and whisper-quiet operation in offices and conference rooms
+- AHRI 880 certified and UL 1995 listed with 1- to 3-row hot water coils or staged/SCR electric reheat
 
 Photos:
 # One photo per line:  - file | caption
 # Put new image files in assets/photos/envirotec-crb/ and list them here. The first one is the main photo.
 - assets/photos/envirotec-crb/1.jpg | Image: Enviro-Tec
+- assets/photos/envirotec-crb/2.jpg | Enviro-Tec new CR series fan-powered VAV terminal unit exterior. Image: Enviro-Tec
+- assets/photos/envirotec-crb/3.png | Enviro-Tec CR series FPVAV internal blower, damper, and control enclosure. Image: Enviro-Tec
 
 Documents:
 - Enviro-Tec product page | https://www.enviro-tec.com/products-and-solutions/variable-air-volume-terminals/crb_ad/crb-series-flow-fan-powered-vav-terminal-units
+- Enviro-Tec Submittals & Resources | https://www.enviro-tec.com/resources
 
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.
 # Badge: New
 Specifications:
-- Airflow range: 150 to 4,200 CFM series fan-powered terminal
+- Airflow & sensor: 100 to 4,400 CFM series fan-powered VAV terminal with FlowStar™ sensor (230–290% amplification)
 - Fan motor: High-efficiency brushless DC ECM motor with local/remote speed control
 - Reheat options: 1 to 3-row hot water coil or staged/proportional SCR electric heat
 - Certifications: AHRI 880 certified, UL 1995 listed

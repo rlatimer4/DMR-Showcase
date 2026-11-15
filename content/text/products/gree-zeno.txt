@@ -1,4 +1,4 @@
-﻿# GREE â€” ZENO R32 MINI-SPLIT
+# GREE — ZENO R32 MINI-SPLIT
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -6,11 +6,12 @@
 
 Name: Zeno R32 Mini-Split
 
-Summary: GREE's entry-level single-zone R32 mini-split for straightforward comfort at a lower price.
+Summary: Zeno R-32 single-zone mini-split heat pumps (9,000 to 24,000 BTU/h) pair an accessible entry price point with matte architectural wall-mount styling and up to 22.0 SEER2 efficiency. Operates across wide ambient conditions from 122°F cooling down to −13°F (−25°C) heating.
 
 Key points:
-- Value line
-- R32 refrigerant
+- 9,000 to 24,000 BTU/h value mini-split with matte architectural finish and R-32
+- Up to 22.0 SEER2 variable-speed inverter performance
+- Wide operating envelope: cooling to 122°F and heating down to −13°F (−25°C)
 
 Photos:
 # One photo per line:  - file | caption
@@ -20,6 +21,7 @@ Photos:
 
 Documents:
 - GREE product page | https://www.greecomfort.com/our-products/zeno-r32
+- GREE System Documentation & Submittals | https://www.greecomfort.com/system-documentation
 
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.

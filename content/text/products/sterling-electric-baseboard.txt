@@ -1,4 +1,4 @@
-﻿# STERLING â€” ELECTRIC BASEBOARD
+# STERLING — ELECTRIC BASEBOARD
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -6,10 +6,12 @@
 
 Name: Electric Baseboard
 
-Summary: Commercial electric baseboard and finned tube heaters in several intake and discharge arrangements.
+Summary: Sterling commercial electric baseboard and finned-tube heaters deliver 187 to 250 W/ft across 2 ft to 10 ft lengths (500W to 2,500W) in 120V, 208V, 240V, and 277V single-phase. UL-listed heavy-gauge sloped-top and front-intake steel enclosures house stainless/sheathed elements with linear thermal cutouts.
 
 Key points:
-- Sloped-top and front-intake styles
+- 187 to 250 W/ft across 2 ft to 10 ft lengths (500W to 2,500W total output)
+- Available in 120V, 208V, 240V, and 277V single-phase with linear thermal cutout
+- Heavy-gauge sloped-top or front-intake steel cabinets with sheathed elements; UL listed
 
 Photos:
 # One photo per line:  - file | caption
@@ -18,6 +20,7 @@ Photos:
 
 Documents:
 - Sterling product page | https://www.sterlingheat.com/electric-finned-tube
+- Sterling Commercial Hydronics Literature Library | https://www.sterlingheat.com/
 
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.

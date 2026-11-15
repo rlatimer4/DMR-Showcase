@@ -1,4 +1,4 @@
-﻿# STEAMOVAP TECHNOLOGIES â€” ILS LIVE STEAM HUMIDIFIER
+# STEAMOVAP TECHNOLOGIES — ILS LIVE STEAM HUMIDIFIER
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -6,24 +6,30 @@
 
 Name: ILS Live Steam Humidifier
 
-Summary: A live steam humidifier that conditions and distributes steam from a central boiler in an air handler or duct.
+Summary: Pressurized live-steam injection humidifiers delivering 4 to 3,300 lb/h (2 to 1,500 kg/h) by separating condensate and injecting dry boiler steam evenly across AHUs and ductwork.
 
 Key points:
-- Uses central boiler steam directly
+- High capacity range from 4 to 3,300 lb/h (2 to 1,500 kg/h) driven directly by central plant steam at 2 to 50 psig
+- Stainless steel centrifugal steam separator and heated jacket ensure condensate-free, drip-free dispersion
+- Paired with electric or pneumatic modulating control valves for tight duct relative humidity control
+- Ideal for large institutional campuses, hospitals, and universities with existing steam distribution mains
 
 Photos:
 # One photo per line:  - file | caption
 # Put new image files in assets/photos/steamovap-ils/ and list them here. The first one is the main photo.
 - assets/photos/steamovap-ils/1.jpg | Image: SteamOVap Technologies
 - assets/photos/steamovap-ils/2.jpg | Image: SteamOVap Technologies
+- assets/photos/steamovap-ils/3.png | SteamOVap ILS-P, ILS-SO, and ILS-SE direct live-steam injection manifolds. Image: SteamOVap Technologies
+- assets/photos/steamovap-ils/4.png | SteamOVap high-efficiency insulated manifold option for reduced duct condensate. Image: SteamOVap Technologies
 
 Documents:
 - SteamOVap Technologies product page | https://steamovap.com/ils-live-steam-humidifier/
+- SteamOVap Portal & steamOcalc Selection Tool | https://steamovap.com/
 
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.
 # Badge: New
 Specifications:
-- Steam capacity: 10 to 3,000+ lb/h direct boiler live-steam injection humidifier
+- Steam capacity: 4 to 3,300 lb/h (2 to 1,500 kg/h) direct boiler live-steam injection humidifier
 - Operating pressure: 2 to 50 psig pressurized steam with 304/316L stainless separator & jacket
 - Actuation: Electric (0–10V / 2–10V) or pneumatic modulating steam control valve

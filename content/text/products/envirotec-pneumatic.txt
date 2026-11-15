@@ -1,4 +1,4 @@
-﻿# ENVIRO-TEC â€” PNEUMATIC CONTROLS
+# ENVIRO-TEC — PNEUMATIC CONTROLS
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -6,19 +6,21 @@
 
 Name: Pneumatic Controls
 
-Summary: Pneumatic controls for VAV terminals in buildings with pneumatic control systems.
+Summary: Factory-calibrated pneumatic VAV control packages operating on 15 to 25 psig control air (direct-acting or reverse-acting) for legacy pneumatic control buildings. Combines a calibrated pneumatic velocity controller and damper actuator as a direct drop-in replacement for existing zones.
 
 Key points:
-- For pneumatic control systems
+- Direct drop-in replacement for legacy pneumatic VAV zones (15 to 25 psig air)
+- Available in both direct-acting and reverse-acting control configurations
+- Includes factory-calibrated pneumatic velocity controller and damper actuator
 
 Photos:
 # One photo per line:  - file | caption
 # Put new image files in assets/photos/envirotec-pneumatic/ and list them here. The first one is the main photo.
-# No photo of this product has been found yet. Add one here:
-# - assets/photos/envirotec-pneumatic/photo.jpg | Caption
+- assets/photos/dmr/Enviro-Tec-3.jpg | Enviro-Tec VAV terminal and controls. Image: Enviro-Tec
 
 Documents:
 - Enviro-Tec product page | https://www.enviro-tec.com/products-and-solutions/variable-air-volume-terminals/pneumatic_controls_ad/pneumatic-controls
+- Enviro-Tec Submittals & Resources | https://www.enviro-tec.com/resources
 
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.

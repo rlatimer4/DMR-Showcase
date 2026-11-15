@@ -1,4 +1,4 @@
-﻿# STEAMOVAP TECHNOLOGIES â€” WATER FILTERS
+# STEAMOVAP TECHNOLOGIES — WATER FILTERS
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -6,10 +6,12 @@
 
 Name: Water Filters
 
-Summary: Filters for the water supply to steam humidifiers, removing sediment and fine particles.
+Summary: Pre-filtration assemblies for steam, evaporative, and atomizing humidifier water supplies featuring 5 µm sediment cartridges, activated carbon dechlorination, and scale inhibitors. Extends cylinder and element life while reducing maintenance downtime.
 
 Key points:
-- Protects humidifier components
+- 5 µm sediment filtration protects valves and fill solenoids
+- Activated carbon dechlorination and scale-inhibitor cartridge options
+- Wall-mounted housings designed for steam, evaporative, and atomizing units
 
 Photos:
 # One photo per line:  - file | caption
@@ -20,10 +22,12 @@ Photos:
 
 Documents:
 - SteamOVap Technologies product page | https://steamovap.com/water-filter/
+- SteamOVap Portal & steamOcalc Selection Tool | https://steamovap.com/
 
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.
 # Badge: New
 Specifications:
-- Filtration: 5 µm sediment pre-filter, activated carbon dechlorination and scale-inhibitor cartridges
-- Application: Pretreatment for steam, evaporative and atomizing humidifiers
+- Filtration: 5 µm sediment pre-filter, activated carbon dechlorination, and scale-inhibitor cartridges
+- Application: Pretreatment for steam, evaporative, and atomizing humidifiers
+- Maintenance: Replaceable cartridges in service-ready wall-mounted filter housings

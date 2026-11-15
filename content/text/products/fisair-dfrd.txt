@@ -1,4 +1,4 @@
-﻿# FISAIR â€” DFRD DEHUMIDIFIERS
+# FISAIR — DFRD DEHUMIDIFIERS
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -6,10 +6,13 @@
 
 Name: DFRD Dehumidifiers
 
-Summary: Desiccant dehumidifiers with double fans for very demanding drying conditions, keeping process air separate from humid ambient air.
+Summary: Double-fan closed-circuit desiccant dehumidifiers delivering 300 to 700 m³/h (176 to 412 CFM) with completely isolated process and reactivation airstreams for demanding industrial and process drying.
 
 Key points:
-- Separate process and reactivation fans
+- Dual independent process and reactivation fans eliminate cross-air leakage in closed-loop drying systems
+- Drying capacities from 3 to 4.2 kg/h (6.6 to 9.3 lb/h) at 20°C / 60% RH in a compact stainless enclosure
+- Achieves low process dew points without mixing humid outdoor ambient air into the dried supply stream
+- Suited to plastic resin hopper drying, seed storage, pharmaceutical packaging, and archival vaults
 
 Photos:
 # One photo per line:  - file | caption
@@ -18,11 +21,13 @@ Photos:
 
 Documents:
 - Fisair product page | https://fisair.com/products/df-air-dehumidifiers/dfrd/
+- Fisair Official Portal & Selection Tools | https://fisair.com/en/
 
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.
 # Badge: New
 Specifications:
-- Process airflow: 1,500 to 25,000 m³/h with air-to-air sensible heat recovery
-- Reactivation: Energy-saving purge sector and reactivation heat recovery
-- Application: Pharmaceutical, food drying, lithium battery and industrial storage
+- Process airflow: 300 to 700 m³/h (176 to 412 CFM) double-fan closed-circuit dehumidifier
+- Moisture removal: 3 to 4.2 kg/h (6.6 to 9.3 lb/h) at 20°C / 60% RH
+- Airflow isolation: Separate process and reactivation fans in air-tight stainless casing
+- Application: Closed-loop plastic drying, pharmaceutical packaging, seed preservation and vaults

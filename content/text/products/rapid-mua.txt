@@ -1,4 +1,4 @@
-﻿# RAPID ENGINEERING â€” MAKE-UP AIR UNITS
+# RAPID ENGINEERING — MAKE-UP AIR UNITS
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -6,25 +6,31 @@
 
 Name: Make-Up Air Units
 
-Summary: Direct-fired make-up air units that heat outdoor air to replace what exhaust systems remove.
+Summary: Rapid Engineering 4000-Series welded-frame (up to 150,000 CFM) and 2000-Series mechanical-frame (up to 40,000 CFM) industrial direct-fired and indirect/hydronic make-up air handlers deliver 100% OA, VAV, economizer, or 80/20 recirculating air with optional supplemental cooling and energy recovery.
 
 Key points:
-- Direct gas-fired heating
-- Building pressurization control
+- 4000-Series welded-frame industrial direct-fired AHUs up to 150,000 CFM; 2000-Series mechanical-frame units up to 40,000 CFM
+- Direct-fired gas line burners deliver up to 92% thermal efficiency with 25:1 to 30:1 modulation turndown
+- Vertical, horizontal, indoor, or outdoor configurations for 100% OA, VAV, economizer, or RAM-M 80/20 recirculating duty
+- Optional supplemental DX/CHW cooling and energy recovery integrate with heavy-duty G-90 galvanized steel housings
 
 Photos:
 # One photo per line:  - file | caption
 # Put new image files in assets/photos/rapid-mua/ and list them here. The first one is the main photo.
+- assets/photos/rapid-mua/1.jpg | Rapid Engineering 4000-Series welded-frame industrial make-up air handler. Image: Rapid Engineering
+- assets/photos/rapid-mua/2.jpg | Rapid Engineering rooftop direct-fired air handling installation. Image: Rapid Engineering
+- assets/photos/rapid-mua/3.png | Rapid 4000-Series customizable cooling, energy recovery, and burner airflow options. Image: Rapid Engineering
 - assets/photos/dmr/Rapid-image.jpg | Rapid Engineering product range. Image: dmr-hvac.com
 
 Documents:
 - Rapid Engineering product page | http://rapidengineering.com/
+- Rapid Engineering Downloads & Manuals | https://rapidengineering.com/downloads/
 
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.
 # Badge: New
 Specifications:
-- Airflow range: 2,000 to 120,000 CFM industrial direct-fired & indirect-fired make-up air
-- Heating capacity: Up to 15,000 MBH; 92% thermal efficiency with 25:1 to 30:1 burner turndown
-- Configurations: 100% outdoor air, variable air volume or 80/20 recirculating air
+- Product series & airflow: 4000-Series welded-frame up to 150,000 CFM; 2000-Series mechanical-frame up to 40,000 CFM (2,000–150,000 CFM overall)
+- Heating capacity: Up to 15,000 MBH; 92% thermal efficiency with 25:1 to 30:1 burner turndown (direct & indirect gas)
+- Configurations: Vertical, horizontal, indoor, or outdoor; 100% OA, VAV, economizer, or 80/20 recirculating; optional cooling & ER
 - Certifications: ANSI Z83.4 / Z83.18, CSA / ETL certified

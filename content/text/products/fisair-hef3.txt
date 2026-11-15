@@ -1,4 +1,4 @@
-﻿# FISAIR â€” HEF3-CAD EVAPORATIVE COOLERS
+# FISAIR — HEF3-CAD EVAPORATIVE COOLERS
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -6,11 +6,12 @@
 
 Name: HEF3-CAD Evaporative Coolers
 
-Summary: Hygienic evaporative coolers for commercial premises, offices and public buildings such as museums and libraries.
+Summary: HEF3-CAD hygienic packaged outdoor evaporative coolers combine integral supply fans, filtration, and adiabatic cooling from 2,500 to 60,000 m³/h (1,500 to 35,000 CFM). Achieves up to 90% saturation efficiency with very low kW draw for offices, museums, libraries, and commercial buildings.
 
 Key points:
-- Hygienic design
-- Reduces cooling energy
+- Packaged outdoor unit with integral supply fan and filters (1,500 to 35,000 CFM)
+- Up to 90% evaporative saturation efficiency with ultra-low electrical kW input
+- Hygienic commercial design suited for offices, museums, and libraries
 
 Photos:
 # One photo per line:  - file | caption
@@ -19,6 +20,7 @@ Photos:
 
 Documents:
 - Fisair product page | https://fisair.com/products/hef-evaporative-coolers/evaporative-air-cooler-hef3-cad/
+- Fisair Official Portal & Selection Tools | https://fisair.com/en/
 
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.

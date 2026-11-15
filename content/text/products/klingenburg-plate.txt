@@ -1,4 +1,4 @@
-﻿# KLINGENBURG â€” PLATE HEAT EXCHANGERS
+# KLINGENBURG — PLATE HEAT EXCHANGERS
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -6,20 +6,22 @@
 
 Name: Plate Heat Exchangers
 
-Summary: Plate heat exchangers that recover energy while keeping supply and exhaust air streams separate.
+Summary: Klingenburg PWT cross-flow and counter-flow plate heat exchangers recover sensible heat while keeping supply and exhaust airstreams completely isolated with zero moving parts.
 
 Key points:
-- No moving parts
-- Cross-flow and counter-flow designs
+- Sealed aluminum, epoxy-coated or stainless steel PWT transfer plates prevent airstream cross-contamination
+- Cross-flow and high-efficiency counter-flow cores up to 85% sensible effectiveness
+- No moving parts for minimal maintenance; available with integrated face-and-bypass dampers
+- Modular block stacking suits laboratories, hospitals and custom air handlers
 
 Photos:
 # One photo per line:  - file | caption
 # Put new image files in assets/photos/klingenburg-plate/ and list them here. The first one is the main photo.
-# No photo of this product has been found yet. Add one here:
-# - assets/photos/klingenburg-plate/photo.jpg | Caption
+- assets/photos/dmr/Klingenburg-Image.jpg | Klingenburg energy recovery heat exchangers. Image: dmr-hvac.com
 
 Documents:
 - Klingenburg product page | http://www.klingenburg.de/en/
+- DMR Associates Line Card & Submittal Support | https://dmr-hvac.com/
 
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.

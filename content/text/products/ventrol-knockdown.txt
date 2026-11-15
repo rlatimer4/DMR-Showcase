@@ -1,4 +1,4 @@
-﻿# VENTROL â€” KNOCKDOWN AIR HANDLERS
+# VENTROL — KNOCKDOWN AIR HANDLERS
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -6,26 +6,30 @@
 
 Name: Knockdown Air Handlers
 
-Summary: Air handlers designed and built to pass through an existing opening and be assembled in place, for new, replacement and retrofit work where space and access are limited.
+Summary: Ventrol field or palletized knockdown air handlers ship with 2" (±8" WC @ L/200) or 4" (±12" WC @ L/240) smooth-exterior structural panels and components already disassembled on pallets for rigging into tight mechanical rooms. Built on welded structural tube base frames with a standard 2" upturned floor lip, washdown sealing, modified thermal break or PolyBlock True No Thru Metal, and optional all-aluminum construction.
 
 Key points:
-- Sized to fit through the field opening
-- Shortens installation time on replacement projects
-- Same performance as a factory-assembled custom unit
+- Field or palletized knockdown: unit components ship already disassembled on pallets
+- 4" (±12" WC L/240) or 2" (±8" WC L/200) smooth-exterior structural panelized construction
+- Modified thermal break or PolyBlock True No Thru Metal; polyurethane spray or injected foam
+- Welded structural tube base, 2" upturned floor lip, washdown, perf liners & all-aluminum option
 
 Photos:
 # One photo per line:  - file | caption
 # Put new image files in assets/photos/ventrol-knockdown/ and list them here. The first one is the main photo.
-# No photo of this product has been found yet. Add one here:
-# - assets/photos/ventrol-knockdown/photo.jpg | Caption
+- assets/photos/ventrol-knockdown/1.jpg | Phased live-building Ventrol knockdown FANWALL retrofit (Virginia Hospital Center). Image: Nortek Air Solutions
+- assets/photos/ventrol-knockdown/2.jpg | Ventrol knockdown casing sections sized for 85"H x 48"W freight elevator ingress. Image: Nortek Air Solutions
+- assets/photos/ventrol-knockdown/3.jpg | Rigging Ventrol knockdown sound attenuator and panel modules through hospital corridors. Image: Nortek Air Solutions
 
 Documents:
 - Ventrol product page | https://www.nortekair.com/products/knockdown-air-handlers/
+- Nortek Air Solutions Technical Literature | https://www.nortekair.com/resources
 
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.
 # Badge: New
 Specifications:
-- Airflow range: 2,000 to 120,000+ CFM site-assembled modular knockdown air handler
-- Construction: Heavy-gauge thermal-break panels and structural perimeter base frame
-- Application: Hospital, university and high-rise mechanical room replacements
+- Airflow & delivery: 2,000 to 120,000+ CFM; components ship disassembled on pallets for field/palletized knockdown
+- Casing & deflection: Smooth exterior 4" (±12" WC @ L/240) or 2" (±8" WC @ L/200) structural panels; all-aluminum option
+- Thermal & acoustics: Modified thermal break or PolyBlock True No Thru Metal; spray or injected foam; perforated liners
+- Base & washdown: Welded structural tube base, 2" upturned floor lip standard, washdown construction & stacked tunnels

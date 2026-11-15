@@ -1,4 +1,4 @@
-﻿# VENMAR CES â€” ENERGYPACK CUSTOM HVAC SOLUTION
+# VENMAR CES — ENERGYPACK CUSTOM HVAC SOLUTION
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -6,26 +6,31 @@
 
 Name: EnergyPack Custom HVAC Solution
 
-Summary: A custom HVAC unit built around energy recovery, using enthalpy wheels, heat pipes, plates or membrane cores, alone or in combination, certified to AHRI Standard 1060.
+Summary: Venmar CES EnergyPack systems combine custom energy recovery with heating, cooling, and packaged refrigeration in a 3" double-wall ITF framed casing on a welded structural tube base. Rated to ±10" WC at L/240 deflection with polyurethane spray foam or fiberglass insulation, no thru-metal except fasteners, stacked air tunnels, perforated liners, and a 2" recessed Polyurea washdown floor option.
 
 Key points:
-- Wheel, heat pipe, plate and membrane recovery options
-- Combines recovery with cooling and heating in one unit
-- Custom casing, including aluminum construction
+- 3" double-wall ITF frame on welded structural tube base (±10" WC, L/240 deflection)
+- No thru-metal except fasteners; polyurethane spray foam or fiberglass + perforated liners
+- 2" recessed floor with watertight insulating Polyurea membrane & washdown option
+- AHRI 1060 wheels, plates, heat pipes, or membranes + packaged refrigeration & stacked tunnels
 
 Photos:
 # One photo per line:  - file | caption
 # Put new image files in assets/photos/venmar-energypack/ and list them here. The first one is the main photo.
 - assets/photos/venmar-energypack/2.jpg | Image: Nortek Air Solutions
 - assets/photos/venmar-energypack/1.jpg | Image: Nortek Air Solutions
+- assets/photos/venmar-energypack/3.jpg | Venmar CES water-cooled 100% outdoor air corridor make-up air unit. Image: Nortek Air Solutions
+- assets/photos/venmar-energypack/4.jpg | Venmar CES water-cooled corridor make-up air unit installation. Image: Nortek Air Solutions
 
 Documents:
 - Venmar CES product page | https://www.nortekair.com/products/energypack-custom-hvac-solution/
+- Nortek Air Solutions Technical Literature | https://www.nortekair.com/resources
 
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.
 # Badge: New
 Specifications:
-- Capacity range: 10 to 120+ tons; 2,000 to 50,000 CFM semi-custom packaged DOAS & ERV
-- Features: High-efficiency enthalpy wheel or plate core, inverter scroll DX/heat pump or CHW coils, FANWALL array
-- Application: Schools, offices, multifamily corridors and commercial buildings
+- Capacity & structure: 10 to 120+ tons (2,000–50,000 CFM); welded tube base with stacked tunnels & packaged DX
+- Casing & thermal: 3" ITF double-wall (±10" WC @ L/240); no thru-metal except fasteners; spray foam or fiberglass; perf liners
+- Floor & washdown: 2" recessed floor with watertight insulating Polyurea membrane; washdown construction available
+- Recovery options: AHRI 1060 enthalpy/sensible wheels, heat pipes, plates or membranes; FANWALL arrays

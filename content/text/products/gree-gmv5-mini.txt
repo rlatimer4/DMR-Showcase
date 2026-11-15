@@ -1,4 +1,4 @@
-﻿# GREE â€” GMV5 MINI HEAT PUMP
+# GREE — GMV5 MINI HEAT PUMP
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -6,10 +6,12 @@
 
 Name: GMV5 Mini Heat Pump
 
-Summary: A compact GMV5 VRF heat pump for smaller buildings.
+Summary: GMV5 Mini VRF outdoor heat pump units provide 3, 4, and 5-ton capacities in a slim side-discharge 208/230V single-phase cabinet for smaller commercial buildings. Connects up to 8–10 VRF indoor units on a single two-pipe loop under AHRI 1230 and ETL certification.
 
 Key points:
-- Compact side-discharge cabinet
+- 3, 4, and 5 tons in a compact side-discharge 208/230V single-phase cabinet
+- Drives up to 8–10 VRF indoor units from a single two-pipe outdoor loop
+- AHRI 1230 and AHRI 210/240 certified, ETL listed
 
 Photos:
 # One photo per line:  - file | caption
@@ -18,6 +20,7 @@ Photos:
 
 Documents:
 - GREE product page | https://www.greecommercial.com/our-products/gmv5-mini-heat-pump
+- GREE Commercial Resources & Submittals | https://www.greecommercial.com/resources
 
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.

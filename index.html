@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=Roboto+Condensed:wght@500;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/styles.css?v=5">
+<link rel="stylesheet" href="assets/css/styles.css?v=12">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -22,24 +22,26 @@
     <a href="#walkthrough">Walkthrough</a>
     <a href="#products">Products</a>
     <a href="#manufacturers">Manufacturers</a>
+    <a href="#spec-match">Spec Match</a>
     <a href="#installations">Installations</a>
     <a href="#gallery">Gallery</a>
     <a href="#contact">Contact</a>
   </nav>
-  <button class="list-btn" id="listBtn" type="button">Project list <span class="count" id="listCount">0</span></button>
+  <button class="list-btn" id="listBtn" type="button">Project list</button>
 </header>
 
 <main id="main">
 
-<section class="hero" data-page="home">
+<div class="home-page" data-page="home">
+<section class="hero">
   <div class="hero-shapes" aria-hidden="true"><i></i><i></i><i></i></div>
   <div class="hero-inner">
     <p class="eyebrow">HVAC manufacturers' representative · DC · Maryland · Virginia</p>
     <h1>See where every piece of equipment goes.</h1>
-    <p class="lede">Explore a 3D world of building types and see the air handlers, heat pumps, humidifiers and controls DMR supplies for each one.</p>
+    <p class="lede">Explore an interactive 3D world of commercial, institutional and industrial buildings — inspect equipment inside mechanical rooms, compare manufacturers side by side, and build a Basis-of-Design schedule for your next project or retrofit.</p>
     <div class="hero-cta">
-      <a class="btn btn-primary" href="#walkthrough" id="heroTour">Start the walkthrough</a>
-      <a class="btn btn-ghost" href="#products">Browse all products</a>
+      <a class="btn btn-primary" href="#walkthrough" id="heroTour">Start the 3D walkthrough</a>
+      <a class="btn btn-ghost" href="#products">Browse product catalog</a>
     </div>
     <dl class="stats">
       <div><dt>Founded</dt><dd id="statFounded">1969</dd></div>
@@ -48,6 +50,149 @@
     </dl>
   </div>
 </section>
+
+<section class="home-hub" aria-labelledby="hubTitle">
+  <div class="section-head">
+    <p class="eyebrow">Interactive Engineering Hub</p>
+    <h2 id="hubTitle">What are you designing or retrofitting?</h2>
+    <p>Jump straight into the right building system, retrofit strategy, or plant loop — built for design engineers, installing contractors and building owners across the DMV.</p>
+  </div>
+  <div class="hub-grid">
+    <article class="hub-card hub-card--accent">
+      <p class="hub-kicker">Minimize Downtime</p>
+      <h3>Occupied-Building Retrofits &amp; Knockdowns</h3>
+      <p>Replace aging air handlers, coils, self-contained units and VAV boxes in tight mechanical rooms without shutting down occupied floors.</p>
+      <div class="hub-links">
+        <button type="button" class="tag-btn" data-product="mammoth-vcube-slim">Mammoth V-Cube Slim (36" door fit)</button>
+        <button type="button" class="tag-btn" data-product="huntair-fanwall">FANWALL® Fan-Array Retrofits</button>
+        <button type="button" class="tag-btn" data-product="huntair-knockdown">Knockdown Site-Built AHUs</button>
+        <button type="button" class="tag-btn" data-product="cooney-freeze-block">Cooney Freeze Block™ Coils</button>
+        <button type="button" class="tag-btn" data-product="mammoth-ultraline">Curb-Match Custom Rooftops</button>
+        <button type="button" class="tag-btn" data-product="envirotec-sgx">Slide-In VAV Retrofits</button>
+      </div>
+      <div class="hub-foot">
+        <button type="button" class="btn btn-primary" data-filter-app="retrofit">Filter catalog to retrofit solutions</button>
+      </div>
+    </article>
+
+    <article class="hub-card">
+      <p class="hub-kicker">3D Facility Explorer</p>
+      <h3>Jump into a Building Type</h3>
+      <p>Open any facility in the 3D walkthrough to step room-by-room and see how DMR integrates central air handling, energy recovery, terminals and controls.</p>
+      <div class="hub-links">
+        <button type="button" class="tag-btn" data-home-bld="hospital">Hospital</button>
+        <button type="button" class="tag-btn" data-home-bld="data-center">Data Center</button>
+        <button type="button" class="tag-btn" data-home-bld="laboratory">Research Laboratory</button>
+        <button type="button" class="tag-btn" data-home-bld="pharma-manufacturing">Pharma / Cleanroom</button>
+        <button type="button" class="tag-btn" data-home-bld="high-rise-office">High-Rise Office</button>
+        <button type="button" class="tag-btn" data-home-bld="k-12-school">K-12 School</button>
+        <button type="button" class="tag-btn" data-home-bld="higher-education">Higher Education</button>
+        <button type="button" class="tag-btn" data-home-bld="government-office">Government Facility</button>
+        <button type="button" class="tag-btn" data-home-bld="recreation-center">Natatorium / Recreation</button>
+        <button type="button" class="tag-btn" data-home-bld="multifamily">Multifamily Tower</button>
+      </div>
+      <div class="hub-foot">
+        <a class="btn btn-line" href="#walkthrough">Open full 3D world</a>
+      </div>
+    </article>
+
+    <article class="hub-card">
+      <p class="hub-kicker">Plant &amp; Distribution</p>
+      <h3>Filter by System / Hydronic Loop</h3>
+      <p>Select the heating, cooling or ventilation plant loop you are engineering to see compatible primary and terminal equipment across all represented manufacturers.</p>
+      <div class="hub-links">
+        <button type="button" class="tag-btn" data-home-sys="chw">Chilled Water</button>
+        <button type="button" class="tag-btn" data-home-sys="hw">Hot Water</button>
+        <button type="button" class="tag-btn" data-home-sys="condenser">Condenser Water / Geo</button>
+        <button type="button" class="tag-btn" data-home-sys="split">Split System / VRF</button>
+        <button type="button" class="tag-btn" data-home-sys="dx">Packaged DX / Air-Source</button>
+        <button type="button" class="tag-btn" data-home-sys="steam">Central Steam / Boiler</button>
+        <button type="button" class="tag-btn" data-home-sys="glycol">Run-Around Glycol Loop</button>
+        <button type="button" class="tag-btn" data-home-sys="electric">Electric</button>
+      </div>
+      <div class="hub-foot">
+        <a class="btn btn-line" href="#products">Open full product catalog</a>
+      </div>
+    </article>
+
+    <article class="hub-card">
+      <p class="hub-kicker">Design &amp; Salesman Tools</p>
+      <h3>Compare Lines &amp; Build a Schedule</h3>
+      <p>Evaluate competing equipment families side-by-side, tag equipment selections with CFM and design notes, and export a CSV Basis-of-Design schedule for DMR engineering review.</p>
+      <div class="hub-links">
+        <button type="button" class="tag-btn" data-home-compare="temtrol-ahu,huntair-ahu,governair-ahu,ventrol-ahu">Compare Custom AHUs</button>
+        <button type="button" class="tag-btn" data-home-compare="mammoth-ultraline,mammoth-vcube,mammoth-vcube-slim">Compare Self-Contained &amp; RTUs</button>
+        <button type="button" class="tag-btn" data-home-compare="steamovap-ier,steamovap-ils,fisair-fsh">Compare Humidifiers</button>
+        <button type="button" class="tag-btn" data-home-compare="nortek-statepoint,nortek-coilwall,nortek-cdu">Compare Data Center Cooling</button>
+      </div>
+      <div class="hub-foot">
+        <a class="btn btn-primary" href="#spec-match">Competitor Spec Cross-Reference</a>
+        <button type="button" class="btn btn-line" id="homeScheduleBtn">Open Schedule Builder</button>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="home-why" aria-labelledby="whyTitle">
+  <div class="section-head">
+    <p class="eyebrow">Why DMR Associates</p>
+    <h2 id="whyTitle">Engineering support that lives every project from concept to commissioning.</h2>
+    <p>Serving Washington, D.C., Maryland and Northern Virginia since 1969, DMR Associates pairs premier manufacturers with hands-on local application engineering.</p>
+  </div>
+  <div class="why-grid">
+    <article class="why-card">
+      <h3>Single-Point Design-Assist</h3>
+      <p>Every DMR salesperson lives your project from early schematic design and psychrometric/acoustic sizing through submittals, factory witness testing, start-up and closeout.</p>
+    </article>
+    <article class="why-card">
+      <h3>Occupied Retrofit Expertise</h3>
+      <p>Decades of field experience modernizing occupied DMV office towers, hospitals and laboratories — engineering knockdown modules, split-width cabinets and curb-match packages to slash downtime.</p>
+    </article>
+    <article class="why-card">
+      <h3>Coordinated Multi-Line Packages</h3>
+      <p>Coordinate air handling, FANWALL® redundancy, energy recovery, coils, desiccant dehumidification, steam humidification, germicidal UV-C and VRF/fan-coil zones through one accountable team.</p>
+    </article>
+  </div>
+</section>
+
+<section class="home-cases" aria-labelledby="casesTitle">
+  <div class="section-head">
+    <p class="eyebrow">Proven in the DMV</p>
+    <h2 id="casesTitle">Published DMR retrofit case studies.</h2>
+    <p>Real projects featured by DMR Associates where custom engineering solved access, footprint and schedule constraints in occupied regional buildings.</p>
+  </div>
+  <div class="case-grid">
+    <article class="case-card">
+      <p class="case-loc">Arlington, VA · High-Rise Office</p>
+      <h3>Arlington Tower (NEMA Headquarters)</h3>
+      <p>Upgraded the HVAC system across a 19-story, 398,000+ sq. ft. occupied office tower delivering 294,000 CFM and 980 nominal tons via sectionalized Mammoth V-Cube Slim units engineered to roll through standard 36-inch doors and service elevators with zero field refrigerant breaks.</p>
+      <div class="hub-links">
+        <button type="button" class="tag-btn" data-product="mammoth-vcube-slim">Mammoth V-Cube Slim</button>
+        <button type="button" class="tag-btn" data-home-bld="high-rise-office">Explore High-Rise Office in 3D</button>
+      </div>
+    </article>
+    <article class="case-card">
+      <p class="case-loc">Chevy Chase, MD · Luxury Condominiums</p>
+      <h3>Parc Somerset High-Rise Retrofit</h3>
+      <p>Engineered custom replacement Mammoth UltraLine 100% outside air units tailored to extremely tight mechanical clearances while aligning precisely with existing structural connections, ductwork transitions and electrical infrastructure.</p>
+      <div class="hub-links">
+        <button type="button" class="tag-btn" data-product="mammoth-ultraline">Mammoth UltraLine 100% OA</button>
+        <button type="button" class="tag-btn" data-home-bld="multifamily">Explore Multifamily in 3D</button>
+      </div>
+    </article>
+    <article class="case-card">
+      <p class="case-loc">Chantilly, VA · Commercial Office</p>
+      <h3>Corporate Oaks II</h3>
+      <p>Executed an occupied commercial office modernization built to minimize tenant disruption by reusing the existing roof curb, ductwork and utility connections while upgrading legacy aluminum electrical feeders to copper.</p>
+      <div class="hub-links">
+        <button type="button" class="tag-btn" data-product="mammoth-ultraline">Curb-Match Rooftop Replacement</button>
+        <button type="button" class="tag-btn" data-home-bld="mid-rise-office">Explore Mid-Rise Office in 3D</button>
+      </div>
+    </article>
+  </div>
+  <p class="case-more"><a class="btn btn-line" href="#installations">View case studies &amp; regional applications on the map</a></p>
+</section>
+</div>
 
 <section class="tour-section" id="walkthrough" data-page="walkthrough" aria-labelledby="tourTitle">
   <div class="section-head">
@@ -73,13 +218,34 @@
   <div class="filters">
     <label class="search">
       <span class="sr-only">Search products</span>
-      <input type="search" id="q" placeholder="Search products, e.g. chilled beam" autocomplete="off">
+      <input type="search" id="q" placeholder="Search products, e.g. chilled beam, FANWALL, knockdown" autocomplete="off">
     </label>
     <label>Building type
       <select id="fMarket"><option value="">All building types</option></select>
     </label>
     <label>Manufacturer
       <select id="fBrand"><option value="">All manufacturers</option></select>
+    </label>
+    <label>Plant / system loop
+      <select id="fSystem">
+        <option value="">All system loops</option>
+        <option value="chw">Chilled Water</option>
+        <option value="hw">Hot Water</option>
+        <option value="condenser">Condenser Water / Geo</option>
+        <option value="split">Split System / VRF</option>
+        <option value="dx">Packaged DX / Air-Source</option>
+        <option value="steam">Central Steam / Boiler</option>
+        <option value="glycol">Run-Around Glycol Loop</option>
+        <option value="electric">Electric</option>
+      </select>
+    </label>
+    <label>Application focus
+      <select id="fApp">
+        <option value="">All applications</option>
+        <option value="retrofit">Retrofit &amp; Occupied Replacement</option>
+        <option value="critical">Healthcare, Lab &amp; Cleanroom</option>
+        <option value="decarb">Electrification &amp; Heat Recovery</option>
+      </select>
     </label>
   </div>
   <div class="chips" id="catChips" role="group" aria-label="System type"></div>
@@ -97,11 +263,78 @@
   <div class="brand-grid" id="brandGrid"></div>
 </section>
 
+<section class="spec-match" id="spec-match" data-page="spec-match" aria-labelledby="xrefTitle">
+  <div class="section-head">
+    <p class="eyebrow">Basis-of-Design Spec Matcher</p>
+    <h2 id="xrefTitle">Find the closest DMR match for your spec.</h2>
+    <p>Enter a Basis-of-Design manufacturer and model or choose a broad product category in the box below &mdash; it automatically adapts to show granular requirement checkboxes and DMR Associates' closest equipment recommendations and Division 23 specification text.</p>
+  </div>
+  <div class="xref-unified-box" id="xrefBox">
+    <div class="xref-box-head" id="xrefBoxHead">
+      <span class="xref-mode-badge" id="xrefModeLabel">Choose How to Start — Enter BOD Model or Select Product Category</span>
+      <div class="xref-box-actions">
+        <button type="button" class="btn btn-line btn-xs" id="xrefCartBtn">Spec Match Cart</button>
+        <button type="button" class="btn btn-line btn-xs" id="clearXref" hidden>Switch / Reset</button>
+      </div>
+    </div>
+    <div class="xref-entry-grid" id="xrefEntryGrid" data-mode="idle">
+      <form class="xref-bod-side" id="xrefMfrForm" novalidate>
+        <div class="xref-field xref-autocomplete">
+          <label for="xrefMfr"><span>BOD Manufacturer</span></label>
+          <input type="text" id="xrefMfr" placeholder="Type BOD manufacturer name..." autocomplete="off" aria-autocomplete="list" aria-controls="xrefMfrSuggest" aria-expanded="false">
+          <ul class="xref-suggest" id="xrefMfrSuggest" role="listbox" hidden></ul>
+        </div>
+        <div class="xref-field xref-autocomplete">
+          <label for="xrefQ"><span>BOD Model or Series</span></label>
+          <input type="text" id="xrefQ" placeholder="Enter manufacturer first, then type model..." autocomplete="off" aria-autocomplete="list" aria-controls="xrefSuggest" aria-expanded="false" disabled>
+          <ul class="xref-suggest" id="xrefSuggest" role="listbox" hidden></ul>
+        </div>
+      </form>
+      <div class="xref-or" id="xrefOrDivider" aria-hidden="true"><span>OR</span></div>
+      <div class="xref-cat-side" id="xrefTreePanel">
+        <label class="xref-field" for="xrefLevel1">
+          <span>Broad Product Category</span>
+          <select id="xrefLevel1"><option value="">Select broad product category...</option></select>
+        </label>
+      </div>
+    </div>
+    <div class="xref-req-panel" id="xrefReqPanel" hidden>
+      <div class="xref-req-head">
+        <div class="xref-req-titles">
+          <strong id="xrefReqTitle">Project &amp; Equipment Requirements</strong>
+          <span id="xrefReqHint">Check any requirements below to filter and rank the exact DMR equipment and spec text.</span>
+        </div>
+        <button type="button" class="link" id="clearXrefReqs" hidden>Clear checked requirements</button>
+      </div>
+      <div class="xref-req-groups" id="xrefReqGroups" role="group" aria-labelledby="xrefReqTitle"></div>
+    </div>
+    <div class="xref-bar">
+      <p class="xref-notice" id="xrefStatus">Start typing a Basis-of-Design manufacturer on the left, or select a broad product category on the right.</p>
+    </div>
+  </div>
+  <div class="xref-cart-bar" id="xrefCartBar" hidden aria-live="polite">
+    <div class="xref-cart-info">
+      <span class="xref-cart-kicker">Spec Match Cart</span>
+      <div class="xref-cart-chips" id="xrefCartChips"></div>
+    </div>
+    <div class="xref-cart-actions">
+      <button type="button" class="btn btn-primary btn-xs" id="xrefCheckoutBtn">Check Out — Full Compliance Review</button>
+      <button type="button" class="btn btn-line btn-xs" id="xrefCartClearBtn">Clear cart</button>
+    </div>
+  </div>
+  <div class="xref-list" id="xrefGrid"></div>
+  <div class="xref-direct" id="xrefDirectWrap" hidden>
+    <h3 class="xref-subhead">Additional Matching DMR Equipment</h3>
+    <p class="muted">Individual DMR equipment families whose specifications and features also match your selection:</p>
+    <div class="grid" id="xrefDirectGrid"></div>
+  </div>
+</section>
+
 <section class="installs" id="installations" data-page="installations" aria-labelledby="mapTitle">
   <div class="section-head">
     <p class="eyebrow">Installations</p>
     <h2 id="mapTitle">Equipment in service across the region.</h2>
-    <p><strong class="sample-tag">Sample data</strong> These pins are placeholders that show how the map works. Real DMR project records will replace them.</p>
+    <p>Includes published DMR Associates retrofit case studies alongside representative regional applications across DC, Maryland, and Virginia. Select a pin or project to view equipment and application notes.</p>
   </div>
   <div class="filters map-filters">
     <label>Manufacturer
@@ -137,9 +370,9 @@
 
 <section class="gallery" id="gallery" data-page="gallery" aria-labelledby="galTitle">
   <div class="section-head">
-    <p class="eyebrow">Project gallery</p>
-    <h2 id="galTitle">Photos from the field.</h2>
-    <p>Reserved for photos of DMR-supplied equipment. Each tile below is a placeholder.</p>
+    <p class="eyebrow">Equipment showcase</p>
+    <h2 id="galTitle">Equipment across the DMR line card.</h2>
+    <p>Select any photo or manufacturer link below to inspect detailed product specifications, capacities and building applications.</p>
   </div>
   <div class="gallery-grid" id="galleryGrid"></div>
 </section>
@@ -169,19 +402,29 @@
 
 <footer class="site-footer">
   <p id="footLine">© 2026 DMR Associates, Inc. · HVAC manufacturers' representative for DC, Maryland &amp; Virginia</p>
-  <p class="muted">Prototype. Product descriptions are draft copy, and installations and photos are placeholders.</p>
+  <p class="muted">DMR Associates, Inc. — Interactive HVAC Product &amp; Retrofit Engineering Showcase for DC, Maryland &amp; Virginia.</p>
 </footer>
+
+<div id="compareBar" class="compare-bar" hidden aria-live="polite">
+  <div class="compare-bar-items" id="compareBarItems"></div>
+  <div class="compare-bar-actions">
+    <button type="button" class="btn btn-primary" id="compareOpenBtn">Compare side-by-side</button>
+    <button type="button" class="link" id="compareClearBtn">Clear</button>
+  </div>
+</div>
 
 <dialog id="productDialog" class="sheet" aria-labelledby="pdTitle"></dialog>
 <dialog id="listDialog" class="sheet" aria-labelledby="ldTitle"></dialog>
+<dialog id="specCartDialog" class="sheet" aria-labelledby="scTitle"></dialog>
+<dialog id="compareDialog" class="sheet sheet-wide" aria-labelledby="cmpTitle"></dialog>
 
 <script type="importmap">
 { "imports": { "three": "./assets/vendor/three/three.module.min.js", "three/addons/controls/OrbitControls.js": "./assets/vendor/three/OrbitControls.js", "three/addons/loaders/GLTFLoader.js": "./assets/vendor/three/loaders/GLTFLoader.js" } }
 </script>
 <script src="content/settings.js"></script>
-<script src="content/categories.js"></script>
-<script src="content/manifest.js"></script>
+<script src="content/categories.js?v=12"></script>
+<script src="content/manifest.js?v=11"></script>
 <!-- core.js loads everything named in content/manifest.js, then starts the site. -->
-<script src="assets/js/core.js?v=6"></script>
+<script src="assets/js/core.js?v=20"></script>
 </body>
 </html>

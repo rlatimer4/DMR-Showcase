@@ -1,4 +1,4 @@
-﻿# VENTROL â€” FANWALL SYSTEMS
+# VENTROL — FANWALL SYSTEMS
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -6,26 +6,30 @@
 
 Name: FANWALL Systems
 
-Summary: Arrays of smaller direct-drive fans that replace one large fan. Used to replace ageing fans in existing air handlers, they avoid the cost and disruption of a failure and can cut fan energy by as much as 40%.
+Summary: Ventrol Gen IV FANWALL systems deliver N+1 and N-2 redundant direct-drive fan arrays in aluminum, galvanized, or stainless cubes engineered for elevators (85"H x 48"W) and tight retrofits like Virginia Hospital Center (two 65,000 CFM 12-fan arrays holding 4" duct static down to 10% flow). Available with Coplanar Silencers, Passive Noise Control (PNC), motorized isolation dampers, and IE5+ or ultra-low-harmonic VFDs.
 
 Key points:
-- Redundancy: remaining fans keep running if one fails
-- Even airflow across coils and filters
-- Fan cubes pass through a standard doorway for retrofit
+- Proven live-hospital retrofit design (e.g., VHC Arlington dual 65,000 CFM 12-fan N-2 arrays rigged via 85"H x 48"W elevator)
+- Maintains high static pressure (4"+ WC down to 10% flow) with N+1 / N-2 redundancy and System Optimization Controls
+- Coplanar Silencers plus optional inlet Passive Noise Control (PNC) and knockdown discharge attenuators
+- Zero-System-Effect backdraft dampers, motorized discharge isolation dampers, IE5+ / ultra-low harmonic VFDs, AMCA & UL 1995/CSA
 
 Photos:
 # One photo per line:  - file | caption
 # Put new image files in assets/photos/ventrol-fanwall/ and list them here. The first one is the main photo.
-- assets/photos/governair-fanwall/1.jpg | Image: Nortek Air Solutions
-- assets/photos/governair-fanwall/2.jpg | Image: Nortek Air Solutions
+- assets/photos/ventrol-fanwall/1.jpg | Ventrol 12-fan (65,000 CFM) supply FANWALL retrofit array (VHC Health). Image: Nortek Air Solutions
+- assets/photos/ventrol-fanwall/2.jpg | Completed Ventrol FANWALL array inside knockdown casing in hospital penthouse. Image: Nortek Air Solutions
+- assets/photos/ventrol-fanwall/3.jpg | Coplanar Silencers paired with inlet Passive Noise Control (PNC) and attenuators. Image: Nortek Air Solutions
 
 Documents:
 - Ventrol product page | https://www.nortekair.com/products/fanwall-systems/
+- Nortek Air Solutions Technical Literature | https://www.nortekair.com/resources
 
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.
 # Badge: New
 Specifications:
-- Configuration: Modular direct-drive FANWALL array in aluminum, galvanized or stainless steel
-- Redundancy: N+1 fan cube redundancy with individual motor disconnect and backdraft damper
-- Certifications: AMCA licensed performance, UL 1995 / CSA listed
+- Configuration: Gen IV FANWALL cubes in aluminum, galvanized, or stainless steel sized for freight elevators and 36" doors
+- Redundancy & isolation: N+1 or N-2 redundancy; Zero-System-Effect backdraft dampers; motorized discharge isolation dampers; balance BV-5 G.55
+- Acoustics: Coplanar Silencers, inlet Passive Noise Control (PNC), and knockdown discharge attenuators
+- Electrical & certs: Incremental VFDs, ultra-low harmonic VFDs, or IE5+ Ultra-Premium motors; AMCA licensed & UL 1995 / CSA

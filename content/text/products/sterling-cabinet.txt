@@ -1,4 +1,4 @@
-﻿# STERLING â€” CABINET UNIT HEATERS
+# STERLING — CABINET UNIT HEATERS
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -6,11 +6,12 @@
 
 Name: Cabinet Unit Heaters
 
-Summary: Cabinet unit heaters for entrances, vestibules, stairwells and corridors.
+Summary: Sterling cabinet unit heaters deliver 200 to 1,800 CFM and 10,000 to 135,000 BTU/h of forced-air hot water or steam heat for entrances, vestibules, stairwells, and corridors. Offered in floor, wall, ceiling, and recessed mounts across 8 ducted or free-blow styles with PSC or ECM motors.
 
 Key points:
-- Floor, wall and ceiling models
-- Hot water and steam
+- 200 to 1,800 CFM and 10,000 to 135,000 BTU/h hydronic or steam heating output
+- Floor, wall, ceiling, and recessed cabinets across 8 ducted or free-blow styles
+- Direct-drive multi-speed PSC or high-efficiency ECM motor options
 
 Photos:
 # One photo per line:  - file | caption
@@ -19,6 +20,7 @@ Photos:
 
 Documents:
 - Sterling product page | https://www.sterlingheat.com/cabinet-unit-heaters
+- Sterling Commercial Hydronics Literature Library | https://www.sterlingheat.com/
 
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.

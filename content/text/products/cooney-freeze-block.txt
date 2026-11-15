@@ -1,4 +1,4 @@
-﻿# COONEY TECHNOLOGIES â€” FREEZE BLOCK COIL TECHNOLOGY
+# COONEY TECHNOLOGIES — FREEZE BLOCK COIL TECHNOLOGY
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -19,9 +19,12 @@ Photos:
 - assets/photos/cooney-freeze-block/1.jpg | Image: Cooney Technologies
 - assets/photos/cooney-freeze-block/2.jpg | Image: Cooney Technologies
 - assets/photos/cooney-freeze-block/3.jpg | Image: Cooney Technologies
+- assets/photos/cooney-freeze-block/4.png | Cooney Freeze Block temperature/pressure relief valve coil protection schematic. Image: Cooney Technologies
+- assets/photos/cooney-freeze-block/5.png | Freeze Block rupture-proof chilled, hot, and heat-recovery coil header assembly. Image: Cooney Technologies
 
 Documents:
 - Cooney Technologies product page | https://cooneytechnologies.com/freeze-block/
+- Cooney Support & Resources Library | https://cooneytechnologies.com/support-resources/
 
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.

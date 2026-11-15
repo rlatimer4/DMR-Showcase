@@ -1,4 +1,4 @@
-﻿# STERLING â€” STEAM AND HOT WATER UNIT HEATERS
+# STERLING — STEAM AND HOT WATER UNIT HEATERS
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -6,19 +6,22 @@
 
 Name: Steam and Hot Water Unit Heaters
 
-Summary: Steam and hot water unit heaters with horizontal and vertical discharge.
+Summary: Sterling horizontal- and vertical-discharge propeller unit heaters deliver 15,000 to 610,000 BTU/h on hot water (up to 150 psig / 375°F) or steam (2 to 150 psig) with copper or steel coils. Rugged construction handles mechanical rooms, loading docks, warehouses, greenhouses, and parking garages.
 
 Key points:
-- Horizontal and vertical discharge
-- Wide capacity range
+- Broad 15,000 to 610,000 BTU/h horizontal- and vertical-discharge range
+- Handles hot water (up to 150 psig / 375°F) or steam (2 to 150 psig) coils
+- Built for warehouses, loading docks, mechanical rooms, and greenhouses
 
 Photos:
 # One photo per line:  - file | caption
 # Put new image files in assets/photos/sterling-unit-heaters/ and list them here. The first one is the main photo.
 - assets/photos/sterling-unit-heaters/1.jpg | Image: Sterling
+- assets/photos/sterling-unit-heaters/2.png | Sterling HS / VS horizontal and vertical hydronic/steam unit heater. Image: Sterling
 
 Documents:
 - Sterling product page | https://www.sterlingheat.com/steam-hot-water-unit-heaters
+- Sterling Commercial Hydronics Literature Library | https://www.sterlingheat.com/
 
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.

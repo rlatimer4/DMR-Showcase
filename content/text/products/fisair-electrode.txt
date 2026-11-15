@@ -1,4 +1,4 @@
-﻿# FISAIR â€” DIPHUSAIR ELECTRODE HUMIDIFIERS
+# FISAIR — DIPHUSAIR ELECTRODE HUMIDIFIERS
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -6,11 +6,13 @@
 
 Name: Diphusair Electrode Humidifiers
 
-Summary: Self-contained humidifiers that generate clean steam with immersed electrodes.
+Summary: Self-contained Diphusair electrode humidifiers generate 2 to 130 kg/h (4.4 to 286 lb/h) of clean steam per unit—or up to 780 kg/h in master/slave arrays—from potable water. Features disposable or cleanable cylinders and touchscreen controls with native Modbus and BACnet IP/MS/TP.
 
 Key points:
-- Electrode steam generation
-- Disposable or cleanable cylinders
+- 2 to 130 kg/h (4.4 to 286 lb/h) per unit; master/slave arrays up to 780 kg/h
+- Clean electrode steam generation on standard potable water (125–1,250 µS/cm)
+- Choice of disposable or cleanable steam cylinders across 208V–575V power
+- Touchscreen controller with native Modbus, BACnet IP, and BACnet MS/TP
 
 Photos:
 # One photo per line:  - file | caption
@@ -19,6 +21,7 @@ Photos:
 
 Documents:
 - Fisair product page | https://fisair.com/products/diphusair-air-humidifiers/humidifiers-diphusair-electrode/
+- Fisair Official Portal & Selection Tools | https://fisair.com/en/
 
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.

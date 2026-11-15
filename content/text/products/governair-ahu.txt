@@ -1,4 +1,4 @@
-﻿# GOVERNAIR â€” CUSTOM AIR HANDLERS
+# GOVERNAIR — CUSTOM AIR HANDLERS
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -6,26 +6,29 @@
 
 Name: Custom Air Handlers
 
-Summary: Air handlers engineered unit by unit for the fit, efficiency and reliability a project needs, used in healthcare, education, manufacturing, data centers, cleanrooms, offices and hospitality. Governair units are built with construction similar to Temtrol air handlers.
+Summary: Governair custom air handlers deliver 2,000 to 150,000+ CFM using 3" or 3.5" double-wall Integrated Frame (ITF) construction on welded structural tube base frames with injected foam (R-24) or fiberglass (R-12.5) insulation. Rated up to ±10" WC at L/240 deflection (<1% leakage at ±8" WC) with no thru-metal except fasteners, stacked air tunnels, optional third-layer standing seam roofs up to 39'-8" span, and Miami-Dade / OSHPD seismic certifications.
 
 Key points:
-- Custom construction, configuration and materials
-- Available with FANWALL TECHNOLOGY fan arrays
-- Water, steam, booster and DX coil options
+- 3" or 3.5" ITF frame on welded structural tube base (R-24 injected foam or R-12.5 fiberglass; no thru-metal except fasteners)
+- Low leakage (<1% at ±8" WC) and rigid L/200 to L/240 deflection up to ±10" WC with perforated acoustic liners
+- Miami-Dade Intertek TAS-201/202/203, OSHPD seismic, third-layer standing seam roof up to 39'-8" span, and Rapid Knockdown
+- Available with Gen IV FANWALL arrays (IE5+ or ECMi motors), slide-out coil racks, CHW/HW/DX/steam/gas heat, and BABA options
 
 Photos:
 # One photo per line:  - file | caption
 # Put new image files in assets/photos/governair-ahu/ and list them here. The first one is the main photo.
-- assets/photos/dmr/Custom-AHU.jpg | Image: Nortek Air Solutions
+- assets/photos/governair-ahu/2.jpg | Governair Integrated Frame (ITF) custom double-wall air handler. Image: Nortek Air Solutions
+- assets/photos/governair-ahu/3.jpg | Governair ITF injected-foam panel assembly detail. Image: Nortek Air Solutions
 
 Documents:
 - Governair product page | https://www.nortekair.com/products/custom-air-handlers/
+- Nortek Air Solutions Technical Literature | https://www.nortekair.com/resources
 
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.
 # Badge: New
 Specifications:
-- Airflow range: 2,000 to 150,000+ CFM custom factory-assembled air handler
-- Casing: 2" to 4" double-wall foam or mineral-wool thermal break panels
-- Fans & coils: FANWALL Technology or plenum fans; CHW, HW, DX, steam or gas heat
-- Certifications: AHRI 1350 / 430 certified, UL 1995 / ETL listed
+- Airflow & structure: 2,000 to 150,000+ CFM; stacked air tunnels on welded structural tube base frame
+- Casing & thermal: 3" or 3.5" ITF double-wall (R-24 foam / R-12.5 fiberglass); ±8" to ±10" WC @ L/200–L/240; <1% leakage; no thru-metal except fasteners
+- Roof & components: Third-layer standing seam roof (to 39'-8" span); thermal-break double-gasketed doors; Gen IV FANWALL w/ IE5+/ECMi; slide-out coil racks
+- Certifications: AHRI 1350 / 430, UL 1995 / ETL, Miami-Dade TAS-201/202/203, OSHPD seismic; BABA compliance possible

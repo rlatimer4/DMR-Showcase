@@ -1,4 +1,4 @@
-﻿# NORTEK AIR SOLUTIONS â€” AIR HANDLERS WITH GAS-PHASE FILTRATION
+# NORTEK AIR SOLUTIONS — AIR HANDLERS WITH GAS-PHASE FILTRATION
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -6,12 +6,13 @@
 
 Name: Air Handlers with Gas-Phase Filtration
 
-Summary: Custom air handlers from the Nortek Air Solutions brands (Temtrol, Governair, Huntair, Mammoth, Venmar and Ventrol) with gas-phase filtration sections that remove odours and gaseous contaminants, for airports, museums and healthcare.
+Summary: Custom air handlers from the Nortek Air Solutions brands (Temtrol, Governair, Huntair, Mammoth, Venmar, and Ventrol) integrating gas-phase molecular filtration sections for airports, museums, and healthcare. Built on welded structural tube bases with polyurethane spray/injected foam casings and perforated acoustic liners across Nortek's custom ITF, smooth-exterior panelized, or Huntair FPC platforms.
 
 Key points:
-- Removes odours and gaseous contaminants
-- For airports, museums and healthcare
-- Built into a custom air handler
+- Removes jet exhaust, VOCs, ozone, and gaseous odors in custom Nortek air handlers
+- Welded structural tube base with polyurethane spray/injected foam insulation
+- Configured in 3"/3.5" ITF (±10" WC L/240), 2"/4" smooth panelized, or 2-5/8" Huntair FPC
+- Perforated acoustic liners available (all except Temtrol LC & Huntair FPC)
 
 Photos:
 # One photo per line:  - file | caption
@@ -20,12 +21,13 @@ Photos:
 
 Documents:
 - Nortek Air Solutions product page | https://www.nortekair.com/
+- Nortek Air Solutions Technical Literature | https://www.nortekair.com/resources
 
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.
 # Badge: New
 Specifications:
-- Airflow range: 1,500 to 100,000+ CFM custom air handler with molecular filtration
-- Media options: Activated carbon, potassium permanganate or blended V-bank/tray cassettes
+- Airflow range: 1,500 to 100,000+ CFM custom AHU on welded structural tube base frame
+- Casing platforms: Spray/injected polyurethane foam; brand-matched 3"/3.5" ITF, 2"/4" smooth panelized or 2-5/8" FPC; perf liners (excl. LC/FPC)
+- Media & filtration: MERV 8 pre-filter + carbon/potassium permanganate V-bank/trays + MERV 14/HEPA after-filter
 - Target contaminants: Jet exhaust, VOCs, ozone, SO₂/H₂S (ISA 71.04 G1) and vivarium odors
-- Filtration: MERV 8 pre-filter + gas-phase bank + MERV 14/HEPA after-filter

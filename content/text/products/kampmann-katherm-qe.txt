@@ -1,4 +1,4 @@
-﻿# KAMPMANN â€” KATHERM QE ELECTRIC TRENCH HEATING
+# KAMPMANN — KATHERM QE ELECTRIC TRENCH HEATING
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -6,11 +6,12 @@
 
 Name: Katherm QE Electric Trench Heating
 
-Summary: Trench heating with an electric heating coil and fan.
+Summary: Katherm QE electric perimeter floor trenches (190 mm wide × 110 mm deep) combine a modulating stainless-steel electric heating element with a quiet tangential EC fan and thermal cutouts. Operates via 0–10V BAS or room thermostat without running hydronic piping to exterior glass walls.
 
 Key points:
-- Electric heat
-- Fan-assisted
+- 190 mm × 110 mm perimeter floor trench with no hydronic piping required
+- Modulating stainless-steel electric heating element with thermal safety cutouts
+- Tangential EC fan with 0–10V BAS or room thermostat control
 
 Photos:
 # One photo per line:  - file | caption
@@ -21,6 +22,7 @@ Photos:
 
 Documents:
 - Kampmann product page | https://www.kampmann.ca/en-CA/products/trench-technology/katherm-qe
+- Kampmann Download Center & Catalogs | https://www.kampmann.ca/download-center
 
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.

@@ -1,4 +1,4 @@
-﻿# RUNTAL â€” ELECTRIC RADIATORS
+# RUNTAL — ELECTRIC RADIATORS
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -6,19 +6,24 @@
 
 Name: Electric Radiators
 
-Summary: Electric versions of Runtal's flat-tube panel radiators.
+Summary: Electric flat-tube steel panel radiators, baseboards and designer Omnipanel warmers delivering silent radiant and convective perimeter comfort where hydronic piping cannot reach.
 
 Key points:
-- No piping required
-- Wall panel and baseboard styles
+- Sealed heat-transfer fluid core provides even surface warmth with zero fan noise or exposed hot elements
+- Baseboard, vertical wall panel and Omnipanel architectural warmer configurations
+- 500W to 3,000W capacities across 120V–277V with optional integral programmable thermostats
+- UL listed and offered in Runtal's full architectural powder-coat color range
 
 Photos:
 # One photo per line:  - file | caption
 # Put new image files in assets/photos/runtal-electric/ and list them here. The first one is the main photo.
-- assets/photos/dmr/Runtal-Image.jpg | Image: Runtal North America
+- assets/photos/runtal-electric/1.png | Runtal electric towel and architectural flat-tube radiators. Image: Runtal North America
+- assets/photos/runtal-electric/2.png | Runtal Omnipanel / vertical electric wall-mounted flat-tube radiator. Image: Runtal North America
+- assets/photos/runtal-electric/3.png | Runtal Fiero horizontal electric flat-tube perimeter radiator. Image: Runtal North America
 
 Documents:
 - Runtal product page | https://runtalnorthamerica.com/
+- DMR Associates Line Card & Submittal Support | https://dmr-hvac.com/
 
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.

@@ -1,4 +1,4 @@
-﻿# MAMMOTH â€” V-CUBE SLIM VERTICAL SELF-CONTAINED SYSTEMS
+# MAMMOTH — V-CUBE SLIM VERTICAL SELF-CONTAINED SYSTEMS
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -6,27 +6,31 @@
 
 Name: V-Cube Slim Vertical Self-Contained Systems
 
-Summary: A slim vertical self-contained cooling and heat pump system for floor-by-floor VAV service, from 15 to 80 tons, sized to pass through tight openings.
+Summary: Mammoth V-Cube Slim cataloged floor-by-floor VAV self-contained units span 13 sizes from 15 to 90 tons (5,000 to 24,100 CFM), reaching up to 16.1 EER and 4.3 COP heating. Engineered with variable-speed lead compressors, CNC tube bending, and direct-drive FANWALL fans, narrow <36" doorway modules—including 70–90 ton split-width units—fit inside a 57" deep freight elevator without refrigeration breaks.
 
 Key points:
-- 15 to 80 tons
-- Floor-by-floor VAV cooling and heat pump operation
-- Narrow cabinet for elevator and doorway access
+- 13 sizes from 15 to 90 tons (5,000–24,100 CFM) achieving up to 16.1 EER cooling and 4.3 COP heat-pump efficiency
+- Cataloged <36" doorway knockdown design; 70–90 ton split-width unit fits into a 57" deep freight elevator with zero refrigerant breaks
+- Variable-speed lead compressors, CNC tube bending, shell-and-tube (cooling) or brazed-plate (WSHP) HX, and waterside economizer
+- Direct-drive FANWALL supply fans with optional Coplanar Silencers, DX/CW/HW/WiSE coils, and remote electric heat control
 
 Photos:
 # One photo per line:  - file | caption
 # Put new image files in assets/photos/mammoth-vcube-slim/ and list them here. The first one is the main photo.
-- assets/photos/mammoth-vcube-slim/1.jpg | Image: Nortek Air Solutions
-- assets/photos/mammoth-vcube-slim/2.jpg | Image: Nortek Air Solutions
+- assets/photos/mammoth-vcube-slim/1.jpg | Mammoth V-Cube Slim floor-by-floor self-contained VAV unit (Arlington Tower). Image: Nortek Air Solutions
+- assets/photos/mammoth-vcube-slim/2.jpg | Narrow-footprint V-Cube Slim mechanical room installation. Image: Nortek Air Solutions
+- assets/photos/mammoth-vcube-slim/3.jpg | Mammoth V-Cube Slim 15–90 ton water-cooled / heat-pump VAV SCU. Image: Nortek Air Solutions
+- assets/photos/mammoth-vcube-slim/4.png | V-Cube Slim 70–90 ton split-width module fitting a 57" deep freight elevator. Image: Nortek Air Solutions
 
 Documents:
 - Mammoth product page | https://www.nortekair.com/products/v-cube-slim-vertical-self-contained-systems/
+- Nortek Air Solutions Technical Literature | https://www.nortekair.com/resources
 
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.
 # Badge: New
 Specifications:
-- Capacity range: 15 to 80 tons; 4,500 to 26,000 CFM floor-by-floor vertical self-contained unit
-- Retrofit access: Narrow <36" knockdown module width fits standard freight elevators & doors
-- System options: Water-cooled cooling or water-source / geothermal heat pump with waterside economizer
-- Features: Slide-out compressor & coil serviceability, VAV ECM/FANWALL supply
+- Capacity & efficiency: 13 sizes from 15 to 90 tons (5,000–24,100 CFM); up to 16.1 EER cooling and 4.3 COP heating
+- Ingress & footprint: Narrow <36" doorway modules; 70–90 ton split-width fits 57" deep freight elevators with zero refrigeration breaks
+- Casing & systems: 2"/3" ITF double-wall on welded tube base (±10" WC @ L/240); water-cooled DX or WSHP/geothermal; lead VSC & CNC tube bending
+- Airside & options: Direct-drive FANWALL w/ Coplanar Silencer, waterside economizer (WiSE), DX/CW/HW coils, remote electric heat control

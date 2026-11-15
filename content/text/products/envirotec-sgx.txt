@@ -1,4 +1,4 @@
-﻿# ENVIRO-TEC â€” SGX AND SSX SINGLE DUCT RETROFIT TERMINALS
+# ENVIRO-TEC — SGX AND SSX SINGLE DUCT RETROFIT TERMINALS
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -6,18 +6,24 @@
 
 Name: SGX and SSX Single Duct Retrofit Terminals
 
-Summary: Single-duct retrofit terminals (SGX and SSX) for converting or replacing existing terminals.
+Summary: SGX and SSX slide-in single-duct VAV retrofit terminals handle 100 to 5,000 CFM with round, oval, or rectangular slip-and-drive inlets. Designed for fast pneumatic-to-DDC or dual-duct conversions using factory-mounted Belimo actuators and multi-point flow rings under AHRI 880.
 
 Key points:
-- For retrofit of existing systems
+- 100 to 5,000 CFM slide-in VAV retrofit with round, oval, or rectangular inlets
+- Ideal for fast pneumatic-to-DDC and dual-duct terminal conversions
+- Factory-mounted Belimo actuator with multi-point averaging flow ring
+- AHRI 880 rated performance and UL 1995 listed
 
 Photos:
 # One photo per line:  - file | caption
 # Put new image files in assets/photos/envirotec-sgx/ and list them here. The first one is the main photo.
 - assets/photos/envirotec-sgx/1.jpg | Image: Enviro-Tec
+- assets/photos/envirotec-sgx/2.jpg | Enviro-Tec supply retrofit VAV terminal module. Image: Enviro-Tec
+- assets/photos/envirotec-sgx/3.jpg | Enviro-Tec exhaust retrofit VAV terminal module. Image: Enviro-Tec
 
 Documents:
 - Enviro-Tec product page | https://www.enviro-tec.com/products-and-solutions/variable-air-volume-terminals/sgx_ssx_ad/sgx-ssx-single-duct-retrofit-terminals
+- Enviro-Tec Submittals & Resources | https://www.enviro-tec.com/resources
 
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.

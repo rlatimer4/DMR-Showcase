@@ -1,4 +1,4 @@
-﻿# TEMTROL â€” AIR ROTATION UNITS
+# TEMTROL — AIR ROTATION UNITS
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -21,6 +21,7 @@ Photos:
 
 Documents:
 - Temtrol product page | https://www.nortekair.com/products/air-rotation-units/
+- Nortek Air Solutions Technical Literature | https://www.nortekair.com/resources
 
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.

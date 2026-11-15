@@ -1,4 +1,4 @@
-﻿# KAMPMANN â€” PERIMETER HEATING
+# KAMPMANN — PERIMETER HEATING
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -6,25 +6,28 @@
 
 Name: Perimeter Heating
 
-Summary: Hydronic perimeter heating by natural convection, freestanding or wall-mounted.
+Summary: Hydronic perimeter heating by natural convection using twin-tube copper/aluminum elements in freestanding bench, wall-mounted, or low-sill architectural enclosures. Silent passive operation offsets perimeter glazing heat loss in offices, lobbies, and institutions.
 
 Key points:
-- Freestanding or wall-mounted
-- Natural convection
+- Freestanding bench, wall-mounted, or low-sill configurations
+- Silent natural convection offsets cold window downdrafts
+- High-output copper/aluminum element in powder-coated casing
 
 Photos:
 # One photo per line:  - file | caption
 # Put new image files in assets/photos/kampmann-perimeter/ and list them here. The first one is the main photo.
 - assets/photos/kampmann-perimeter/1.jpg | Image: Kampmann
-- assets/photos/kampmann-perimeter/2.jpg | Image: Kampmann
 - assets/photos/kampmann-perimeter/3.jpg | Image: Kampmann
+- assets/photos/kampmann-perimeter/4.png | Kampmann wall-mounted and perimeter HK/convector enclosure. Image: Kampmann
 
 Documents:
 - Kampmann product page | https://www.kampmann.ca/en-CA/products/perimeter-heating
+- Kampmann Download Center & Catalogs | https://www.kampmann.ca/download-center
 
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.
 # Badge: New
 Specifications:
-- Configurations: Wall-mounted, freestanding bench or low-sill architectural hydronic convectors
+- Configurations: Wall-mounted, freestanding bench, or low-sill architectural hydronic convectors
 - Element: High-output copper/aluminum twin-tube convector element in powder-coated steel casing
+- Operation: Silent natural convection with custom lengths and architectural grille options

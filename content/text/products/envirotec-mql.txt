@@ -1,4 +1,4 @@
-﻿# ENVIRO-TEC â€” MQL INDOOR AIR HANDLING UNITS
+# ENVIRO-TEC — MQL INDOOR AIR HANDLING UNITS
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -6,12 +6,13 @@
 
 Name: MQL Indoor Air Handling Units
 
-Summary: A flexible, easy-to-clean indoor air handling unit that can be configured to fit the building.
+Summary: Flexible modular indoor air handling units spanning 600 to 10,000 CFM in horizontal or vertical configurations with single-wall or 1" double-wall construction, hinged access doors, and wide coil and filtration flexibility.
 
 Key points:
-- Modular sections
-- Indoor installation
-- Wide range of coil and filter options
+- Modular indoor sections deliver 600 to 10,000 CFM in horizontal or vertical configurations for tight mechanical rooms
+- Available in single-wall or 1" double-wall construction with easy-clean interior surfaces and hinged access doors
+- Configurable with mixing boxes, MERV 8–14 filters, CHW/HW/DX/steam/electric coils, and VFD plenum fans
+- AHRI 430 / 1350 certified performance and UL 1995 safety listed
 
 Photos:
 # One photo per line:  - file | caption
@@ -22,12 +23,13 @@ Photos:
 
 Documents:
 - Enviro-Tec product page | https://www.enviro-tec.com/products-and-solutions/air-handling-units/mql_ad/mql-indoor-air-handling-units
+- Enviro-Tec Submittals & Resources | https://www.enviro-tec.com/resources
 
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.
 # Badge: New
 Specifications:
-- Airflow range: 1,200 to 21,000 CFM modular indoor air handling unit
-- Casing: 2" double-wall foam-injected thermal break panels with hinged access doors
-- Options: Mixing box, MERV 8–14 filtration, CW/HW/DX/steam coils, VFD plenum fan
+- Airflow range: 600 to 10,000 CFM modular indoor air handling unit
+- Configurations & casing: Horizontal or vertical configuration; single-wall or 1" double-wall construction with hinged access doors
+- Options: Mixing box, MERV 8–14 filtration, CHW/HW/DX/steam/electric coils, VFD plenum fan
 - Certifications: AHRI 430 / 1350 certified, UL 1995 listed

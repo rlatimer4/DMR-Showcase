@@ -1,4 +1,4 @@
-﻿# STERLING â€” PANEL RADIATORS
+# STERLING — PANEL RADIATORS
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -6,10 +6,12 @@
 
 Name: Panel Radiators
 
-Summary: Commercial panel radiators that combine radiant heating with an architectural appearance.
+Summary: Sterling wall-mounted commercial panel radiators span flat and profiled steel Types 10, 11, 21, 22, and 33 in 12" to 36" heights and 16" to 118" lengths. Designed for clean architectural appearance and high efficiency on low-temperature 110°F–180°F condensing boiler or heat-pump loops with optional integral TRVs.
 
 Key points:
-- Wall-mounted panels
+- Flat and profiled wall-mounted steel panel radiators in Types 10, 11, 21, 22, and 33
+- 12" to 36" heights and 16" to 118" lengths with optional integral TRV valve
+- Optimized output for 110°F–180°F condensing boiler and heat-pump water systems
 
 Photos:
 # One photo per line:  - file | caption
@@ -18,6 +20,7 @@ Photos:
 
 Documents:
 - Sterling product page | https://www.sterlingheat.com/panel-radiators
+- Sterling Commercial Hydronics Literature Library | https://www.sterlingheat.com/
 
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.

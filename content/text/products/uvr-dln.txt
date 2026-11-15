@@ -1,4 +1,4 @@
-﻿# UV RESOURCES â€” DLN XTREME UV-C FIXTURES
+# UV RESOURCES — DLN XTREME UV-C FIXTURES
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -6,23 +6,29 @@
 
 Name: DLN Xtreme UV-C Fixtures
 
-Summary: A dual-lamp very high output NEMA-4 UV-C fixture that mounts on the outside of a plenum or duct.
+Summary: A dual-lamp very high output NEMA-4 UV-C fixture that mounts on the exterior of a plenum or duct to deliver double irradiance inside the airstream. Built for high-velocity coils and demanding microbial control while allowing external ballast access.
 
 Key points:
-- Mounts from outside the duct
-- NEMA-4 enclosure
+- Exterior duct and plenum mounting with NEMA-4 enclosure
+- Dual-lamp configuration doubles UV-C dose density
+- 16" to 61" very high output 254 nm lamps
+- 120V–277V electronic power supply
 
 Photos:
 # One photo per line:  - file | caption
 # Put new image files in assets/photos/uvr-dln/ and list them here. The first one is the main photo.
 - assets/photos/uvr-dln/1.jpg | Image: UV Resources
+- assets/photos/uvr-dln/2.png | UV Resources DLN external duct-mounted UV-C lamp fixture. Image: UV Resources
+- assets/photos/uvr-dln/3.png | UV Resources DLN flange mount and lamp insertion detail. Image: UV Resources
 
 Documents:
 - UV Resources product page | https://www.uvresources.com/dln-x/
+- UV Resources Technical Library & Research | https://www.uvresources.com/white-papers-and-research/
 
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.
 # Badge: New
 Specifications:
-- Fixture type: Dual-lamp high-irradiance UV-C fixture for high-velocity AHU airstreams & deep coils
-- Output: Double UV-C dose density for rapid microbial inactivation and heavy biofilm removal
+- Fixture type: Exterior-mounted dual-lamp NEMA-4 UV-C fixture for high-velocity AHUs and ducts
+- Lamp lengths: Two 16" to 61" very high output 254 nm germicidal lamps
+- Electrical: 120V–277V high-efficiency electronic ballast in moisture-sealed housing

@@ -1,4 +1,4 @@
-﻿# STERLING â€” RADIANT CEILING PANELS
+# STERLING — RADIANT CEILING PANELS
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -6,11 +6,12 @@
 
 Name: Radiant Ceiling Panels
 
-Summary: Radiant ceiling panels for heating and cooling.
+Summary: Sterling radiant ceiling panels bond 1/2" copper serpentine tubing mechanically to extruded aluminum or steel ceiling panels for draft-free heating and sensible cooling. Fits 2'×2' and 2'×4' T-bar lay-in grids, drywall ceilings, or linear suspended arrays to keep floors and perimeter walls clear.
 
 Key points:
-- Frees up wall and floor space
-- Silent
+- Extruded aluminum or steel panels bonded to 1/2" copper serpentine tubing
+- 2'×2' and 2'×4' T-bar lay-in, drywall recessed, or linear suspended mounts
+- Silent, draft-free perimeter heating and chilled-ceiling sensible cooling freeing walls
 
 Photos:
 # One photo per line:  - file | caption
@@ -19,6 +20,7 @@ Photos:
 
 Documents:
 - Sterling product page | https://www.sterlingheat.com/radiant-heating
+- Sterling Commercial Hydronics Literature Library | https://www.sterlingheat.com/
 
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.

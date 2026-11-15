@@ -1,4 +1,4 @@
-﻿# STEAMOVAP TECHNOLOGIES â€” RES RESIDENTIAL STEAM HUMIDIFIER
+# STEAMOVAP TECHNOLOGIES — RES RESIDENTIAL STEAM HUMIDIFIER
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -6,26 +6,30 @@
 
 Name: RES Residential Steam Humidifier
 
-Summary: A resistive-element steam humidifier for residential and light commercial applications.
+Summary: Compact residential and light-commercial resistive steam humidifier delivering 1.9 to 13.5 lb/h (0.86 to 6.1 kg/h) of pure, sterile steam with a cleanable stainless steel chamber.
 
 Key points:
-- On-demand sterile steam
-- For homes and small buildings
+- Precision 1.9 to 13.5 lb/h (0.86 to 6.1 kg/h) on-demand steam output for luxury residences, archives, and small suites
+- Permanent cleanable stainless steel evaporation chamber eliminates recurring disposable plastic cylinder costs
+- Operates on potable, softened, or RO water across 120V, 208V, or 240V single-phase electrical service
+- Flexible duct dispersion manifold or optional integral room fan pack for ductless direct-space humidification
 
 Photos:
 # One photo per line:  - file | caption
 # Put new image files in assets/photos/steamovap-res/ and list them here. The first one is the main photo.
 - assets/photos/steamovap-res/1.jpg | Image: SteamOVap Technologies
 - assets/photos/steamovap-res/2.jpg | Image: SteamOVap Technologies
+- assets/photos/steamovap-res/3.png | SteamOVap RES residential and light-commercial resistive humidifier. Image: SteamOVap Technologies
 
 Documents:
 - SteamOVap Technologies product page | https://steamovap.com/res-residential-steam-humidifier/
+- SteamOVap Portal & steamOcalc Selection Tool | https://steamovap.com/
 
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.
 # Badge: New
 Specifications:
-- Steam capacity: 5 to 60 lb/h (2.3 to 27 kg/h) compact resistive electric steam humidifier
+- Steam capacity: 1.9 to 13.5 lb/h (0.86 to 6.1 kg/h) compact resistive electric steam humidifier
 - Tank: Cleanable stainless steel chamber (no disposable plastic cylinders required)
 - Water options: Potable, softened or RO water; 120V, 208V or 240V single-phase
 - Distribution: Duct dispersion tube or integral direct-room blower pack

@@ -1,4 +1,4 @@
-﻿# NORTEK AIR SOLUTIONS â€” AIR HANDLERS WITH ACOUSTIFLO FANS
+# NORTEK AIR SOLUTIONS — AIR HANDLERS WITH ACOUSTIFLO FANS
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -6,13 +6,13 @@
 
 Name: Air Handlers with AcoustiFLO Fans
 
-Summary: Custom air handlers from the Nortek Air Solutions brands (Temtrol, Governair, Huntair, Mammoth, Venmar and Ventrol) fitted with AcoustiFLO fans, for projects where low noise matters, such as performing arts halls.
+Summary: Custom air handlers from the Nortek Air Solutions brands (Temtrol, Governair, Huntair, Mammoth, Venmar, and Ventrol) fitted with AcoustiFLO mixed-flow fans for noise-critical venues. Pairs 10–20 dB lower 250–500 Hz sound power with welded structural tube bases, polyurethane spray/injected foam casings, and optional perforated acoustic liners (all except Temtrol LC & Huntair FPC).
 
 Key points:
-- 10 to 20 dB quieter in the 250 to 500 Hz bands
-- Often removes the need for sound attenuators
-- Optimized for 5,000 to 25,000 CFM
-- Over 10% higher peak static efficiency than plenum fan arrays (AMCA certified)
+- 10 to 20 dB quieter at 250–500 Hz; >10% higher AMCA peak static efficiency than plenum arrays
+- Optimized for 5,000 to 25,000 CFM per fan module, often eliminating sound attenuators
+- Built on welded structural tube bases with brand-specific ITF, smooth panelized, or FPC casings
+- Perforated acoustic liners available (all except Temtrol LC & Huntair FPC) + stacked air tunnels
 
 Photos:
 # One photo per line:  - file | caption
@@ -23,12 +23,13 @@ Photos:
 
 Documents:
 - Nortek Air Solutions product page | https://www.nortekair.com/products/fans/
+- Nortek Air Solutions Technical Literature | https://www.nortekair.com/resources
 
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.
 # Badge: New
 Specifications:
-- Airflow range: 2,000 to 120,000+ CFM ultra-quiet custom air handler
-- Fan technology: Direct-drive mixed-flow impeller with perforated acoustic radial diffuser cone
-- Acoustics: Up to 8–12 dB lower low-frequency (63/125/250 Hz) sound power vs. conventional fans
-- Application: Concert halls, libraries, broadcast studios, courtrooms and classrooms
+- Airflow capacity: 5,000 to 25,000 CFM per mixed-flow fan module (scalable in parallel arrays)
+- Acoustics & efficiency: 10–20 dB quieter at 250–500 Hz and >10% higher AMCA peak static efficiency than plenum arrays
+- Casing platforms: Welded structural tube base; polyurethane spray/injected foam; 3"/3.5" ITF, 2"/4" smooth or 2-5/8" FPC; perf liners (excl. LC/FPC)
+- Application: Concert halls, libraries, broadcast studios, courtrooms, and classrooms

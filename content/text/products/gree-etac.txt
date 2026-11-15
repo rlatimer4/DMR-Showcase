@@ -1,4 +1,4 @@
-﻿# GREE â€” ETAC III R32
+# GREE — ETAC III R32
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -6,10 +6,12 @@
 
 Name: ETAC III R32
 
-Summary: Packaged terminal units with electric heat for hospitality, healthcare and specialty residential rooms.
+Summary: ETAC III R-32 packaged terminal air conditioner and heat pump units (7,000 to 15,000 BTU/h) fit standard 42" × 16" wall sleeves with electric heat. Variable-speed inverter compressors and optional Make-Up Air (MUA) kits provide quiet comfort for hospitality and senior living.
 
 Key points:
-- R32 refrigerant
+- 7,000 to 15,000 BTU/h R-32 PTAC/ETAC fits standard 42" × 16" wall sleeves
+- Variable-speed inverter compressor delivers quiet, efficient guestroom comfort
+- Optional Make-Up Air (MUA) kit suited for hotels, healthcare, and multifamily
 
 Photos:
 # One photo per line:  - file | caption
@@ -20,6 +22,7 @@ Photos:
 
 Documents:
 - GREE product page | https://www.greecomfort.com/our-products/etac-iii-r32
+- GREE System Documentation & Submittals | https://www.greecomfort.com/system-documentation
 
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.

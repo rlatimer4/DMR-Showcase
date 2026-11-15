@@ -1,4 +1,4 @@
-﻿# FISAIR â€” DIPHUSAIR ASC HUMIDIFIERS
+# FISAIR — DIPHUSAIR ASC HUMIDIFIERS
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -6,10 +6,13 @@
 
 Name: Diphusair ASC Humidifiers
 
-Summary: Self-generating humidifiers that produce steam by heat exchange with superheated water.
+Summary: Self-generating Diphusair ASC steam humidifiers use pressurized superheated boiler water in a cleanable heat exchanger to generate chemical-free clean steam at 55 to 1,400 lb/h without electric heaters or boiler carry-over chemicals.
 
 Key points:
-- Uses superheated water as the energy source
+- Uses pressurized superheated boiler water (>105°C to 180°C) as the clean thermal energy source
+- Separates closed-loop heating water from potable, softened, or DI water for chemical-free humidification
+- High steam capacity from 25 to 635 kg/h (55 to 1,400 lb/h) suited for hospitals, labs, and cleanrooms
+- 316L stainless steel evaporating chamber and removable scale-collector pan simplify maintenance
 
 Photos:
 # One photo per line:  - file | caption
@@ -18,12 +21,13 @@ Photos:
 
 Documents:
 - Fisair product page | https://fisair.com/products/diphusair-air-humidifiers/humidifiers-diphusair-asc/
+- Fisair Official Portal & Selection Tools | https://fisair.com/en/
 
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.
 # Badge: New
 Specifications:
 - Steam capacity: 25 to 635 kg/h (55 to 1,400 lb/h) clean-steam generator
-- Heat source: Pressurized plant boiler steam (0.35 to 4.0 bar) in primary heat exchanger
-- Secondary steam: Chemical-free clean atmospheric steam from softened or RO water
+- Heat source: Pressurized superheated boiler water (>105°C to 180°C / 221°F to 356°F) in primary coil heat exchanger
+- Secondary steam: Chemical-free clean atmospheric steam from potable, softened or DI water
 - Construction: 316L stainless steel evaporating chamber and scale-collector pan

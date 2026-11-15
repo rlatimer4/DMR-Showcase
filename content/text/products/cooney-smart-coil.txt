@@ -1,4 +1,4 @@
-﻿# COONEY TECHNOLOGIES â€” SMART COIL
+# COONEY TECHNOLOGIES — SMART COIL
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -9,8 +9,10 @@ Name: Smart Coil
 Summary: A coil that senses a freeze event and signals the building automation system, so the system can act to prevent freeze and thaw damage.
 
 Key points:
-- Alerts the BAS at the moment of a freeze
-- Wires into existing building automation
+- Mechanical Freeze Block relief valves with multi-point capillary/thermistor sensor array
+- NEMA 4X control panel with digital display, audible horn, and alarm beacon
+- Dry-contact interlocks alert the BAS to trip outdoor air dampers, fans, and pumps
+- AHRI 410 certified coil performance with UL 508A listed control panel
 
 Photos:
 # One photo per line:  - file | caption
@@ -19,6 +21,7 @@ Photos:
 
 Documents:
 - Cooney Technologies product page | https://cooneytechnologies.com/smart-coil/
+- Cooney Support & Resources Library | https://cooneytechnologies.com/support-resources/
 
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.

@@ -1,4 +1,4 @@
-﻿# NORTEK AIR SOLUTIONS â€” MAKEUP AIR UNITS
+# NORTEK AIR SOLUTIONS — MAKEUP AIR UNITS
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -6,11 +6,13 @@
 
 Name: Makeup Air Units
 
-Summary: Make-up air units that supply 100% outdoor air to a building, tempered and filtered for comfort and indoor air quality.
+Summary: Nortek Air Solutions custom make-up air units deliver 2,000 to 100,000+ CFM of tempered 100% outdoor air on welded structural tube bases with polyurethane spray/injected foam insulation across brand-matched 3"/3.5" ITF or 2"/4" smooth-exterior casings. Offers direct-fired gas (92% thermal efficiency, 30:1 turndown), indirect gas, steam, HW, or electric heat plus packaged DX, CHW, or evaporative cooling.
 
 Key points:
-- 100% outdoor air
-- Custom heating and cooling sections
+- 2,000 to 100,000+ CFM 100% OA make-up air on welded structural tube base frames
+- Polyurethane spray/injected foam; 3"/3.5" ITF or 2"/4" smooth casings + perforated liners
+- Direct-fired gas (92% eff., 30:1 turndown), indirect gas, steam, HW, or electric heat
+- Optional packaged DX, chilled water, or adiabatic evaporative cooling; ANSI Z83.4 / Z83.8
 
 Photos:
 # One photo per line:  - file | caption
@@ -19,12 +21,13 @@ Photos:
 
 Documents:
 - Nortek Air Solutions product page | https://www.nortekair.com/products/makeup-air-units/
+- Nortek Air Solutions Technical Literature | https://www.nortekair.com/resources
 
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.
 # Badge: New
 Specifications:
-- Airflow range: 2,000 to 100,000+ CFM 100% outdoor air make-up air unit
-- Heating options: Direct-fired gas (92% thermal efficiency, up to 30:1 turndown), indirect gas, steam, HW or electric
-- Cooling options: Packaged DX, chilled water or evaporative cooling section
+- Airflow & structure: 2,000 to 100,000+ CFM 100% OA MUA on welded structural tube base frame
+- Casing & acoustics: Polyurethane spray/injected foam; brand-matched 3"/3.5" ITF or 2"/4" smooth panelized; perforated liners
+- Heating & cooling: Direct-fired gas (92% eff., 30:1 turndown), indirect gas, steam/HW/electric + packaged DX, CHW or evap
 - Certifications: ANSI Z83.4 / Z83.8, ETL listed

@@ -1,4 +1,4 @@
-﻿# ENVIRO-TEC â€” HP HORIZONTAL HIGH PERFORMANCE FAN COIL UNITS
+# ENVIRO-TEC — HP HORIZONTAL HIGH PERFORMANCE FAN COIL UNITS
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -6,12 +6,13 @@
 
 Name: HP Horizontal High Performance Fan Coil Units
 
-Summary: Horizontal high-performance fan coil units in exposed and concealed cabinets, from 600 to 2,400 CFM, with sloped drain pans and insulated cabinets for air quality and low sound.
+Summary: Horizontal high-performance fan coil units from 600 to 2,400 CFM in exposed and concealed cabinets, featuring sloped IAQ drain pans, removable fan decks, and quiet acoustic performance.
 
 Key points:
-- 600 to 2,400 CFM
-- Exposed, concealed free-return or plenum-return cabinets
-- Two-pipe or four-pipe coils
+- High-capacity 600 to 2,400 CFM airflow range bridges standard fan coils and commercial blower coils
+- Exposed, concealed free-return, and plenum-return cabinets with rear or bottom return options
+- Available in 2-pipe or 4-pipe hydronic coil configurations with factory-assembled valve piping packages
+- Removable fan deck and double-sloped IAQ drain pan support AHRI 440 performance and easy servicing
 
 Photos:
 # One photo per line:  - file | caption
@@ -22,12 +23,13 @@ Photos:
 
 Documents:
 - Enviro-Tec product page | https://www.enviro-tec.com/products-and-solutions/fan-coil-units/hp_ad/hp-horizontal-high-performance-fan-coil-units
+- Enviro-Tec Submittals & Resources | https://www.enviro-tec.com/resources
 
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.
 # Badge: New
 Specifications:
-- Airflow range: 200 to 2,000 CFM concealed or exposed horizontal fan coil
+- Airflow range: 600 to 2,400 CFM concealed or exposed horizontal fan coil
 - Coils: 2-pipe or 4-pipe hydronic (3 to 6 rows) plus optional electric heat
-- Features: Brushless ECM motor, double-sloped IAQ drain pan (galvanized or stainless)
+- Features: Brushless ECM motor, removable fan deck & double-sloped IAQ drain pan
 - Certifications: AHRI 440 certified, UL 1995 listed

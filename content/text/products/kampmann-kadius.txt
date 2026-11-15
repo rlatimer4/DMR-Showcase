@@ -1,4 +1,4 @@
-﻿# KAMPMANN â€” KADIUS FAN COILS
+# KAMPMANN — KADIUS FAN COILS
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -6,11 +6,12 @@
 
 Name: KaDius Fan Coils
 
-Summary: A round, exposed ceiling unit for hydronic heating and cooling that is designed to be seen as part of the interior.
+Summary: KaDius exposed circular ceiling hydronic fan coils are styled as an architectural ceiling feature delivering 360° radial air distribution with quiet EC fan operation. Available with 2-pipe or 4-pipe cooling and heating coils plus an integral condensate pump for open-ceiling offices, retail, and restaurants.
 
 Key points:
-- Heating and cooling
-- Exposed architectural design
+- Architectural circular exposed ceiling fan coil with 360° radial discharge
+- 2-pipe or 4-pipe hydronic cooling and heating with quiet EC radial fan
+- Integral condensate pump suited to open-ceiling offices, showrooms, and retail
 
 Photos:
 # One photo per line:  - file | caption
@@ -18,9 +19,11 @@ Photos:
 - assets/photos/kampmann-kadius/1.jpg | Image: Kampmann
 - assets/photos/kampmann-kadius/2.jpg | Image: Kampmann
 - assets/photos/kampmann-kadius/3.jpg | Image: Kampmann
+- assets/photos/kampmann-kadius/4.png | Kampmann KaDius 360-degree high-bay circular EC air heater. Image: Kampmann
 
 Documents:
 - Kampmann product page | https://www.kampmann.ca/en-CA/products/fan-coils/kadius
+- Kampmann Download Center & Catalogs | https://www.kampmann.ca/download-center
 
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.

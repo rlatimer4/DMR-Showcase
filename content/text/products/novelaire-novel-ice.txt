@@ -6,24 +6,30 @@
 
 Name: Novel-Ice Ice Arena Dehumidifiers
 
-Summary: Hybrid DX refrigeration and desiccant dehumidification units built for indoor ice arenas, using reclaimed compressor condenser heat to regenerate the desiccant wheel without natural gas burners.
+Summary: NovelAire PrecisionDRY-Ice+ (DESDX-CR) systems combine DX refrigeration with a desiccant rotor in a 600–15,000 CFM Cromer-cycle cabinet purpose-built for year-round indoor ice arenas, hockey rinks, and curling clubs. Using 90–105°F condenser-reclaim regeneration without a separate regen airstream or gas burner, units handle up to 100% OA at up to 40% lower operating cost than gas-fired units.
 
 Key points:
-- Delivers low, below-freezing dew points to prevent rink fog, ceiling drip and soft ice
-- Regenerates the desiccant wheel with waste condenser heat, eliminating gas combustion
-- Minimizes sensible heat added to the arena, reducing load on the ice plant
+- PrecisionDRY-Ice+ (DESDX-CR) holds rink dew points (28–38°F, e.g., ~36°F DP skating/NHL; ~20°F DP curling) to stop fog, drip, and soft ice
+- Cromer-cycle DX + desiccant slipstream uses 90–105°F reclaimed condenser heat with no separate regen airstream and up to 40% lower OPEX vs. gas
+- 600 to 15,000 CFM 2" R-13 foam double-wall cabinets (frequently paired, e.g., dual units at Kirkland Ice Plex delivering 478 lb/hr each at 50.5°F / 19.2 gr/lb)
+- ECM/VFD fans, speed-controlled wheels, standalone HMI or BACnet BMS controls, sized to the ASHRAE 0.4% dehumidification design day
 
 Photos:
 # One photo per line:  - file | caption
 # Put new image files in assets/photos/novelaire-novel-ice/ and list them here. The first one is the main photo.
-- assets/photos/novelaire-precisiondry/3.jpg | Image: NovelAire
-- assets/photos/novelaire-precisiondry/2.jpg | Image: NovelAire
+- assets/photos/novelaire-novel-ice/1.jpg | PrecisionDRY-Ice+ (DESDX-CR) hybrid DX/desiccant unit for year-round ice arenas. Image: NovelAire
+- assets/photos/novelaire-novel-ice/2.jpg | Installed PrecisionDRY-Ice+ ice arena dehumidification system. Image: NovelAire
+- assets/photos/novelaire-novel-ice/3.jpg | Two-tunnel desiccant dehumidification airflow and Cromer-cycle principle. Image: NovelAire
 
 Documents:
 - NovelAire product page | https://www.novelaire.com/precisiondry/
+- NovelAire Downloads & Technical Library | https://www.novelaire.com/downloads/
 
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.
 # Badge: New
-# Specifications:
-# - Capacity: 20 to 200 tons
+Specifications:
+- Model & capacity: PrecisionDRY-Ice+ (DESDX-CR); 600–15,000 CFM cabinet range (pairable for 20,000+ CFM arenas); up to 100% OA
+- Dew point & regen: 28–38°F discharge dew point (50–70°F inlet); 90–105°F Cromer-cycle DX condenser-reclaim regen with no separate regen stream
+- Casing & recovery: 2" R-13 foam double-wall cabinet (20 ga. exterior, spray-foam base/roof, rigid-foam doors); optional ERV, CW/DX pre/post-cooling
+- Controls & sizing: ECM/VFD fans, speed-controlled wheel, onboard HMI or BACnet BMS; sized to ASHRAE 0.4% dehumidification design day

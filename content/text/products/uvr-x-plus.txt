@@ -1,4 +1,4 @@
-﻿# UV RESOURCES â€” X-PLUS UV-C FIXTURES
+# UV RESOURCES — X-PLUS UV-C FIXTURES
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -6,11 +6,13 @@
 
 Name: X-Plus UV-C Fixtures
 
-Summary: An economical NEMA-4X UV-C fixture for 17 to 61 inch lamps that mounts from the outside of an air handler, plenum or duct.
+Summary: An economical NEMA-4X UV-C fixture for 17" to 61" very high output lamps that mounts from the outside of an air handler, plenum, or duct through a 1" hole. Designed for both new construction and quick retrofit installations, allowing lamp and ballast service without entering the airstream.
 
 Key points:
-- NEMA-4X enclosure
-- New and retrofit installation
+- NEMA-4X weather-resistant exterior enclosure
+- Single 1" access hole for new and retrofit installation
+- 17" to 61" very high output 254 nm germicidal lamps
+- 120V–277V electronic ballast serviced from outside the unit
 
 Photos:
 # One photo per line:  - file | caption
@@ -18,14 +20,18 @@ Photos:
 - assets/photos/uvr-x-plus/1.jpg | Image: UV Resources
 - assets/photos/uvr-x-plus/2.jpg | Image: UV Resources
 - assets/photos/uvr-x-plus/3.jpg | Image: UV Resources
+- assets/photos/uvr-x-plus/4.png | UV Resources Hornet compact UV-C kit for fan coils and terminal units. Image: UV Resources
+- assets/photos/uvr-x-plus/5.png | UV Resources Stinger single-ended UV-C fixture for VAV and blower coils. Image: UV Resources
 
 Documents:
 - UV Resources product page | https://www.uvresources.com/x-plus/
+- UV Resources Technical Library & Research | https://www.uvresources.com/white-papers-and-research/
 
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.
 # Badge: New
 Specifications:
-- Installation: Exterior-mounted UV-C fixture (bolts to outside of AHU/duct wall; lamp reaches inside)
+- Installation: Exterior-mounted NEMA-4X UV-C fixture through a 1" wall opening
 - Serviceability: Lamp and ballast service performed from outside the unit without entering the plenum
-- Lamp lengths: 16" to 60" high-output 254 nm lamps; 120V–277V
+- Lamp lengths: 17" to 61" very high output 254 nm lamps; 120V–277V
+- Application: Coil irradiation and airstream disinfection in new or retrofit AHUs and ducts

@@ -1,4 +1,4 @@
-﻿# GREE â€” GMV5 HEAT PUMP 460V
+# GREE — GMV5 HEAT PUMP 460V
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -6,11 +6,12 @@
 
 Name: GMV5 Heat Pump 460V
 
-Summary: GMV5 VRF heat pump outdoor units for 460V three-phase service.
+Summary: GMV5 460V three-phase modular VRF heat pump outdoor units span 6 to 40 tons with high-efficiency DC inverter scroll compressors under AHRI 1230 certification. Supports total refrigerant piping runs up to 3,280 ft and vertical elevation lifts up to 360 ft for large commercial buildings.
 
 Key points:
-- 460V three-phase
-- Heat pump operation
+- 6 to 40 tons modular VRF heat pump outdoor units for 460V/3Ph/60Hz service
+- Long piping reach up to 3,280 ft total length and 360 ft vertical lift
+- High-efficiency DC inverter scroll compressors; AHRI 1230 and ETL certified
 
 Photos:
 # One photo per line:  - file | caption
@@ -19,6 +20,7 @@ Photos:
 
 Documents:
 - GREE product page | https://www.greecommercial.com/our-products/gmv5-heat-pump-460v
+- GREE Commercial Resources & Submittals | https://www.greecommercial.com/resources
 
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.

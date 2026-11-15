@@ -1,4 +1,4 @@
-﻿# NOVELAIRE â€” ENERGY CONSERVATION WHEELS (ECW)
+# NOVELAIRE — ENERGY CONSERVATION WHEELS (ECW)
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -6,11 +6,13 @@
 
 Name: Energy Conservation Wheels (ECW)
 
-Summary: Energy conservation wheels that recover heat and moisture from exhaust air, reducing equipment size and energy use.
+Summary: NovelAire Energy Conservation Wheels (ECW) cover 300 to 60,000+ CFM in slide-out cassettes or segmented OEM frames using selective 3Å molecular-sieve desiccant-coated aluminum media. AHRI 1060 certified with adjustable purge sectors limiting exhaust cross-contamination (EATR) to <0.04%–0.1%.
 
 Key points:
-- Total energy recovery
-- Cassettes for new equipment and replacement
+- 300 to 60,000+ CFM slide-out cassettes and segmented OEM total-recovery wheels
+- 3Å molecular-sieve coating on aluminum selectively transfers moisture without VOCs
+- Adjustable purge sector restricts EATR exhaust carryover to <0.04%–0.1%
+- AHRI 1060 certified effectiveness and UL 900 Class 1 rated
 
 Photos:
 # One photo per line:  - file | caption
@@ -20,6 +22,7 @@ Photos:
 
 Documents:
 - NovelAire product page | https://www.novelaire.com/energy-conservation-wheels/
+- NovelAire Downloads & Technical Library | https://www.novelaire.com/downloads/
 
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.

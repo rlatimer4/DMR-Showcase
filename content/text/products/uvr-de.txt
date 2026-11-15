@@ -1,4 +1,4 @@
-﻿# UV RESOURCES â€” DE XTREME UV-C FIXTURES
+# UV RESOURCES — DE XTREME UV-C FIXTURES
 #
 # This file holds the words and photos shown for this product. Edit them freely.
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
@@ -6,18 +6,23 @@
 
 Name: DE Xtreme UV-C Fixtures
 
-Summary: Double-ended very high output UV-C fixtures for new and existing air handlers.
+Summary: DE Xtreme double-ended NEMA 4X moisture-proof UV-C fixtures mount 18" to 61" germicidal lamps on modular framing inside high-humidity air handlers. Auto-switching 120V–277V electronic ballasts include lamp-status LEDs under UL 1995 and AB1 listings for medium to large AHUs.
 
 Key points:
-- For medium to large air handlers
+- Double-ended NEMA 4X moisture-proof fixture for medium to large high-humidity AHUs
+- 18" to 61" very high output UV-C lamps on modular coil-plenum framing
+- Auto-switching 120V–277V ballast with lamp-status LED; UL 1995 / AB1 listed
 
 Photos:
 # One photo per line:  - file | caption
 # Put new image files in assets/photos/uvr-de/ and list them here. The first one is the main photo.
 - assets/photos/uvr-de/1.jpg | Image: UV Resources
+- assets/photos/uvr-de/2.png | UV Resources DEF-HO high-output dual-ended UV-C fixture. Image: UV Resources
+- assets/photos/uvr-de/3.png | UV Resources DEF-SO standard-output dual-ended UV-C fixture. Image: UV Resources
 
 Documents:
 - UV Resources product page | https://www.uvresources.com/de-x/
+- UV Resources Technical Library & Research | https://www.uvresources.com/white-papers-and-research/
 
 # ---------------- Optional extras ----------------
 # Remove the # at the start of a line to use it.
