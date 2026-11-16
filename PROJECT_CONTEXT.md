@@ -30,7 +30,7 @@ Virginia. It is a static site with no build step.
     product line that fits the same role under it, and each building lists the
     lines that suit it but have no model there, so no applicable product is missed.
   - Zoom, reset and full-screen buttons sit on the view.
-- **Catalog**: 171 product lines from 20 manufacturers, filterable by product
+- **Catalog**: 174 product lines from 20 manufacturers, filterable by product
   type, building type and manufacturer. Each product has a photo gallery.
 - **Manufacturers**: logo tiles styled like dmr-hvac.com.
 - **Installations**: Google Map with pins filterable by manufacturer; pin editor
@@ -84,6 +84,13 @@ breaks the site: anything that referred to it is skipped.
   see-through air handler or duct section, not loose in a room. FANWALL is drawn
   as stacked cube cells with a plug fan in each.
 - Research labs (wet lab, dry lab, vivarium, clean lab) have their own building.
+- Kampmann Venkon XL is a high-performance fan coil; Venkon XXL is a blower coil
+  (its own product line). KaDius is a ceiling cassette, alongside KaDeck.
+- The Nortek alpha-plate photo is not a desiccant unit (the plates give free
+  reheat), so it is not used for the desiccant air handlers.
+- Spec Match: for fan coils and VAV terminals the Cabinet Style / Terminal
+  Configuration dropdown is the one place to pick the unit type; those rows share
+  one Level 2 sub-category so the duplicate sub-category checkboxes are not shown.
 - **Photos**: prefer a photo of the actual product, and avoid using the same
   photo for several products where possible. This is a preference, not a strict
   rule. A shared or general photo is acceptable when nothing better exists.

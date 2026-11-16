@@ -195,6 +195,7 @@ Equipment:
 - envirotec-hl | Low-profile horizontal fan coil | Fits the shallow ceiling above the room entry
 + envirotec-hp
 + envirotec-hdd
++ kampmann-venkon-xxl
 + kampmann-kadeck
 + kampmann-venkon-xl
 + kampmann-kadius

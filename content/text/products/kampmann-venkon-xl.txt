@@ -4,9 +4,9 @@
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
 # Lines that start with # are notes and are not shown on the site.
 
-Name: Venkon XL Fan Coils
+Name: Venkon XL High-Performance Fan Coils
 
-Summary: Venkon XL commercial EC fan coils scale hydronic heating and cooling up to 3,300 m³/h (1,940 CFM) and 150 Pa (0.60 in. w.g.) external static pressure for larger ducted zones. Combines 2-pipe or 4-pipe coils with VDI 6022 hygienic compliance for open-plan offices, lobbies, and retail.
+Summary: Venkon XL high-performance EC fan coils scale hydronic heating and cooling up to 3,300 m³/h (1,940 CFM) and 150 Pa (0.60 in. w.g.) external static pressure for larger ducted zones. Combines 2-pipe or 4-pipe coils with VDI 6022 hygienic compliance for open-plan offices, lobbies, and retail.
 
 Key points:
 - High airflow up to 3,300 m³/h (1,940 CFM) for open-plan offices, lobbies, and retail
@@ -28,6 +28,6 @@ Documents:
 # Remove the # at the start of a line to use it.
 # Badge: New
 Specifications:
-- Airflow range: Up to 3,300 m³/h (1,940 CFM) high-capacity commercial EC fan coil
+- Airflow range: Up to 3,300 m³/h (1,940 CFM) high-performance commercial EC fan coil
 - External static: Up to 150 Pa (0.60 in. w.g.) for ducted open-plan offices, lobbies and retail
 - Coils: 2-pipe or 4-pipe hydronic coils with VDI 6022 hygiene compliance

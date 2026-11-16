@@ -24,7 +24,7 @@ DMR.gallery = [
   { id: "g17", caption: "NovelAire PrecisionDRY-Ice+ (DESDX-CR) Cromer-cycle hybrid desiccant ice arena dehumidifier", product: "novelaire-novel-ice", photo: "assets/photos/novelaire-novel-ice/1.jpg" },
   { id: "g18", caption: "NovelAire ComfortDRY DES/DX cutaway showing 4A molecular-sieve ECW wheel and condenser-reclaim regeneration", product: "novelaire-comfortdry", photo: "assets/photos/novelaire-comfortdry/3.jpg" },
   { id: "g19", caption: "Klingenburg DekaTru pressure-washable energy recovery rotor coating technology", product: "klingenburg-wheel", photo: "assets/photos/klingenburg-wheel/1.png" },
-  { id: "g20", caption: "Kampmann Venkon XXL high-static (up to 4\" H2O) ducted EC fan coil dimensional drawing", product: "kampmann-venkon", photo: "assets/photos/kampmann-venkon/4.jpg" },
+  { id: "g20", caption: "Kampmann Venkon XXL high-static (up to 4\" H2O) ducted EC blower coil dimensional drawing", product: "kampmann-venkon-xxl", photo: "assets/photos/kampmann-venkon-xxl/1.jpg" },
   { id: "g21", caption: "Ventrol washdown custom AHU with continuously welded floor and sprayed non-slip Polyurea membrane", product: "ventrol-washdown", photo: "assets/photos/ventrol-washdown/1.png" },
   { id: "g22", caption: "Rapid Engineering 4000-Series welded-frame direct-fired industrial make-up air handler (up to 150,000 CFM)", product: "rapid-mua", photo: "assets/photos/rapid-mua/1.jpg" }
 ];

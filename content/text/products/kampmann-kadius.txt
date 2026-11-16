@@ -4,12 +4,12 @@
 # Keep the labels (the words before each colon) and the dashes at the start of list lines.
 # Lines that start with # are notes and are not shown on the site.
 
-Name: KaDius Fan Coils
+Name: KaDius Ceiling Cassette Fan Coils
 
-Summary: KaDius exposed circular ceiling hydronic fan coils are styled as an architectural ceiling feature delivering 360° radial air distribution with quiet EC fan operation. Available with 2-pipe or 4-pipe cooling and heating coils plus an integral condensate pump for open-ceiling offices, retail, and restaurants.
+Summary: KaDius circular hydronic ceiling cassettes, for exposed or recessed ceiling mounting, are styled as an architectural ceiling feature delivering 360° radial air distribution with quiet EC fan operation. Available with 2-pipe or 4-pipe cooling and heating coils plus an integral condensate pump for open-ceiling offices, retail, and restaurants.
 
 Key points:
-- Architectural circular exposed ceiling fan coil with 360° radial discharge
+- Architectural circular ceiling cassette fan coil with 360° radial discharge
 - 2-pipe or 4-pipe hydronic cooling and heating with quiet EC radial fan
 - Integral condensate pump suited to open-ceiling offices, showrooms, and retail
 
@@ -29,6 +29,6 @@ Documents:
 # Remove the # at the start of a line to use it.
 # Badge: New
 Specifications:
-- Design: Architectural circular exposed ceiling fan coil with 360° radial air discharge
+- Design: Architectural circular ceiling cassette fan coil with 360° radial air discharge
 - Coils & fan: 2-pipe or 4-pipe hydronic coil with quiet EC radial fan and condensate pump
 - Application: Exposed-structure offices, restaurants, showrooms and retail

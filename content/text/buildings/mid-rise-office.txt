@@ -153,6 +153,7 @@ Title: Office floor: blower coil system
 Text: A blower coil above the ceiling of each zone heats and cools it directly.
 Equipment:
 - envirotec-hdd | Ceiling blower coil units | Horizontal direct-drive units above the ceiling, one per zone
++ kampmann-venkon-xxl
 + envirotec-hp
 + envirotec-hl
 + kampmann-kadeck
@@ -191,6 +192,7 @@ Equipment:
 + envirotec-hp
 + envirotec-hl
 + envirotec-hdd
++ kampmann-venkon-xxl
 + kampmann-kadius
 + envirotec-piping
 + uvr-uvk

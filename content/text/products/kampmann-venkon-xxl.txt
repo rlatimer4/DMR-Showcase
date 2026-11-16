@@ -1,0 +1,32 @@
+# KAMPMANN — VENKON XXL HIGH-STATIC BLOWER COILS
+#
+# This file holds the words and photos shown for this product. Edit them freely.
+# Keep the labels (the words before each colon) and the dashes at the start of list lines.
+# Lines that start with # are notes and are not shown on the site.
+# Figures are from the Kampmann presentation to DMR (21 Sep 2026); kampmann.ca has no Venkon XXL page yet.
+
+Name: Venkon XXL High-Static Blower Coils
+
+Summary: Venkon XXL is the ducted blower coil member of the Kampmann Venkon family. Four sizes of ducted recirculation units handle extra-high external static pressures up to 4" H2O, for long duct runs and multi-diffuser zones that a fan coil cannot reach.
+
+Key points:
+- Ducted blower coil in 4 sizes for long duct runs and multi-diffuser zones
+- Up to 4" H2O external static pressure
+- EC fan with 2-pipe or 4-pipe hydronic coils, from the VDI 6022 hygienic Venkon platform
+
+Photos:
+# One photo per line:  - file | caption
+# Put new image files in assets/photos/kampmann-venkon-xxl/ and list them here. The first one is the main photo.
+- assets/photos/kampmann-venkon-xxl/1.jpg | Kampmann Venkon XXL high-static (up to 4" H2O) ducted blower coil dimensional drawing. Image: Kampmann
+
+Documents:
+- Kampmann Venkon product family | https://www.kampmann.ca/en-CA/products/fan-coils/venkon
+- Kampmann Download Center & Catalogs | https://www.kampmann.ca/download-center
+
+# ---------------- Optional extras ----------------
+# Remove the # at the start of a line to use it.
+# Badge: New
+Specifications:
+- Sizes: 4 ducted recirculation sizes
+- External static: Up to 4" H2O for extended ductwork
+- Coils & fan: 2-pipe or 4-pipe hydronic coils with EC fan; VDI 6022 hygienic Venkon platform

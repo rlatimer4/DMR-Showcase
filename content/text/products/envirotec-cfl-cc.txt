@@ -16,7 +16,8 @@ Key points:
 Photos:
 # One photo per line:  - file | caption
 # Put new image files in assets/photos/envirotec-cfl-cc/ and list them here. The first one is the main photo.
-- assets/photos/envirotec-cfl-cc/1.jpg | Image: Enviro-Tec
+- assets/photos/envirotec-cfl-cc/1.jpg | CFL-CC with its sensible cooling coil, hot water or electric reheat coil and integral drip tray. Image: Enviro-Tec
+- assets/photos/envirotec-cfl-cc/2.jpg | Image: Enviro-Tec
 
 Documents:
 - Enviro-Tec product page | https://www.enviro-tec.com/products-and-solutions/variable-air-volume-terminals/cfl_ad/cfl-series-flow-fan-powered-low-height-vav-terminal-units

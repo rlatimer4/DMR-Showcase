@@ -17,7 +17,6 @@ Key points:
 Photos:
 # One photo per line:  - file | caption
 # Put new image files in assets/photos/nortek-low-humidity/ and list them here. The first one is the main photo.
-- assets/photos/nortek-low-humidity/1.jpg | Nortek Custom Desiccant EnergyPack unit (2,000 to 60,000 CFM). Image: Nortek Air Solutions
 - assets/photos/nortek-low-humidity/2.png | Active desiccant wheel sorption, reactivation (120–285°F), and cooling cycle diagram. Image: Nortek Air Solutions
 
 Documents:
