@@ -591,15 +591,14 @@
     var hasEH = Boolean(hasKey["Coil Options::Electric Heat Coil"]);
     var hasDX = Boolean(hasKey["Coil Options::DX Cooling Coil"]);
     var hasSteam = Boolean(hasKey["Coil Options::Steam Heating Coil"]);
-    var is2Pipe = Boolean(hasKey["SELECT: Hydronic Piping::2-Pipe Hydronic"]);
 
     // VAV terminal boxes support one reheat source at a time (either hot water OR electric heat).
     if (/^envirotec-(sdr|sdl|vfr|vfl|crb|crq|cfl|crc|cfl-cc|sgx|rft|pneumatic)$/.test(pid)) {
       if (hasHW && hasEH) return false;
     }
 
-    // 2-Pipe changeover hydronic systems and single-coil perimeter units (PowerKon LT) cannot hold simultaneous CHW + HW coils.
-    if ((hasCHW && hasHW) && (is2Pipe || pid === "kampmann-powerkon")) return false;
+    // Single-coil 2-pipe perimeter units (PowerKon LT) cannot hold simultaneous CHW + HW coils.
+    if (hasCHW && hasHW && pid === "kampmann-powerkon") return false;
 
     // Compact/vertical FCUs cannot pair hot water and electric heat coils simultaneously, and FCU/BCU cabinets cannot mix CHW+DX or Steam+(HW/EH).
     if (/^(envirotec-(hp|hl|vf|vl|vh|cdv|hdd|vb)|kampmann-(venkon|venkon-xl|venkon-xxl|kadeck|kadius|powerkon))$/.test(pid)) {
