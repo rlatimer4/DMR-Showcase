@@ -156,6 +156,7 @@ Equipment:
 - envirotec-hp | Classroom fan coil | Above the ceiling
 + envirotec-hl
 + envirotec-hdd
++ kampmann-venkon-xxl
 + kampmann-kadeck
 + kampmann-venkon-xl
 + kampmann-kadius

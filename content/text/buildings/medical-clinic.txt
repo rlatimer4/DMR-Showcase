@@ -55,6 +55,7 @@ Also applicable:
 - envirotec-hp
 - envirotec-hl
 - envirotec-hdd
+- kampmann-venkon-xxl
 - kampmann-kadeck
 - kampmann-venkon-xl
 - kampmann-kadius

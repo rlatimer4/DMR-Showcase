@@ -489,26 +489,26 @@
     });
   }
   var M = D.manifest, content = []
-    .concat(M.manufacturers.map(function (id) { return "content/manufacturers/" + id + ".js?v=10"; }))
+    .concat(M.manufacturers.map(function (id) { return "content/manufacturers/" + id + ".js?v=11"; }))
     .concat(M.buildings.map(function (id) { return "content/buildings/" + id + ".js?v=7"; }))
-    .concat(["content/installs.js?v=7", "content/gallery.js?v=7"]);
+    .concat(["content/installs.js?v=7", "content/gallery.js?v=8"]);
 
   Promise.all(content.map(function (src) { return load(src); }))
     .then(function () {
       // Read the words for every product and building, plus the Spec Match CSV table.
-      var csvJob = fetch("content/spec-match.csv?v=24").then(function (r) {
+      var csvJob = fetch("content/spec-match.csv?v=25").then(function (r) {
         return r.ok ? r.text() : "";
       }).then(function (txt) {
         if (txt) applyCrossRefCsv(txt);
       }).catch(function () {});
       return Promise.all(
-        D.products.map(function (p) { return loadText("content/text/products/" + p.id + ".txt?v=13", p, applyProductText); })
-          .concat(D.buildings.map(function (b) { return loadText("content/text/buildings/" + b.id + ".txt?v=13", b, applyBuildingText); }))
+        D.products.map(function (p) { return loadText("content/text/products/" + p.id + ".txt?v=14", p, applyProductText); })
+          .concat(D.buildings.map(function (b) { return loadText("content/text/buildings/" + b.id + ".txt?v=14", b, applyBuildingText); }))
           .concat([csvJob]));
     })
     .then(function () {
       reconcile();
-      return Promise.all(["assets/js/app.js?v=14", "assets/js/tour.js?v=7", "assets/js/map.js?v=7"].map(function (src) { return load(src); }));
+      return Promise.all(["assets/js/app.js?v=15", "assets/js/tour.js?v=7", "assets/js/map.js?v=7"].map(function (src) { return load(src); }));
     })
     .then(function () {
       report();

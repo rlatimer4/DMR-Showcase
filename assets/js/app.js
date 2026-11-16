@@ -602,7 +602,7 @@
     if ((hasCHW && hasHW) && (is2Pipe || pid === "kampmann-powerkon")) return false;
 
     // Compact/vertical FCUs cannot pair hot water and electric heat coils simultaneously, and FCU/BCU cabinets cannot mix CHW+DX or Steam+(HW/EH).
-    if (/^(envirotec-(hp|hl|vf|vl|vh|cdv|hdd|vb)|kampmann-(venkon|venkon-xl|kadeck|kadius|powerkon))$/.test(pid)) {
+    if (/^(envirotec-(hp|hl|vf|vl|vh|cdv|hdd|vb)|kampmann-(venkon|venkon-xl|venkon-xxl|kadeck|kadius|powerkon))$/.test(pid)) {
       if (hasHW && hasEH && /^envirotec-(hl|vf|vl|vh|cdv)$/.test(pid)) return false;
       if (hasCHW && hasDX) return false;
       if (hasSteam && (hasHW || hasEH)) return false;
@@ -763,7 +763,8 @@
       : "";
 
     var eyebrowText = bodCtx && bodCtx.mfr ? "Recommended DMR Specification Match" : (entry.level1 || "Recommended DMR Specification Match");
-    var subText = (entry.level2 ? escHtml(entry.level2) + " · " : "") + (catObj ? escHtml(catObj.name) : "");
+    var showL2 = entry.level2 && !(catObj && entry.level2.toLowerCase() === catObj.name.toLowerCase());
+    var subText = (showL2 ? escHtml(entry.level2) + " · " : "") + (catObj ? escHtml(catObj.name) : "");
     var bundlePid = primaryList[0] || altList[0] || "";
 
     return '<article class="xref-card">' +

@@ -144,6 +144,7 @@ Equipment:
 - envirotec-hp | Patient room fan coil | Quiet four-pipe unit above the entry ceiling
 + envirotec-hl
 + envirotec-hdd
++ kampmann-venkon-xxl
 + kampmann-kadeck
 + kampmann-venkon-xl
 + kampmann-kadius

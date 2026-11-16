@@ -130,6 +130,7 @@ Equipment:
 - envirotec-hp | Concealed fan coils | Low-speed, quiet units
 + envirotec-hl
 + envirotec-hdd
++ kampmann-venkon-xxl
 + kampmann-kadeck
 + kampmann-venkon-xl
 + kampmann-kadius

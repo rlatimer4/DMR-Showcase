@@ -139,6 +139,7 @@ Equipment:
 - envirotec-hp | Perimeter fan coils
 + envirotec-hl
 + envirotec-hdd
++ kampmann-venkon-xxl
 + kampmann-kadeck
 + kampmann-venkon-xl
 + kampmann-kadius

@@ -247,7 +247,8 @@ site goes live, and replace any that are not cleared.
 | `assets/photos/envirotec-vl/1.jpg` | https://tyco.widen.net/content/emivjvg75h/jpeg/AID_commercialproductdetail_product_VLC_VL_AD.jpeg |
 | `assets/photos/envirotec-piping/1.jpg` | https://tyco.widen.net/content/6xaqq1izoc/jpeg/AID_commercialproductdetail_product_Piping-Package-Group_piping_packages_AD.jpeg |
 | `assets/photos/envirotec-crc/1.jpg` | https://tyco.widen.net/content/u1yffwjpxi/jpeg/AID_commercialproductdetail_product_CRC_AD.jpeg |
-| `assets/photos/envirotec-cfl-cc/1.jpg` | https://tyco.widen.net/content/nve8tvyqb0/jpeg/AID_commercialproductdetail_product_CFL_AD.jpeg |
+| `assets/photos/envirotec-cfl-cc/1.jpg` | Enviro-Tec CFL-CC image supplied by DMR; callout text removed, cleaned and upscaled |
+| `assets/photos/envirotec-cfl-cc/2.jpg` | https://tyco.widen.net/content/nve8tvyqb0/jpeg/AID_commercialproductdetail_product_CFL_AD.jpeg |
 | `assets/photos/envirotec-crq/1.jpg` | https://tyco.widen.net/content/cgowiy8zno/jpeg/AID_commercialproductdetail_product_CRQ_AD.jpeg |
 | `assets/photos/envirotec-sdl/1.jpg` | https://tyco.widen.net/content/nrfgdmyc4c/jpeg/AID_commercialproductdetail_product_SDL_SDL_AD.jpeg |
 | `assets/photos/envirotec-vfl/1.jpg` | https://tyco.widen.net/content/9fadz90ktm/jpeg/AID_commercialproductdetail_product_VFL_VFL_AD.jpeg |
@@ -276,6 +277,6 @@ site goes live, and replace any that are not cleared.
 | `assets/photos/venmar-erv/1.jpg` | `Presentation/Desiccants/Demystifying-DX-Desiccant-Dehumidification-11-29-22-03_50_45.pptx` (Slides 31–32) |
 | `assets/photos/novelaire-novel-ice/1.jpg..3.jpg`, `novelaire-precisiondry/3.jpg..4.jpg`, `novelaire-comfortdry/2.jpg,4.jpg` | `Presentation/Novelaire Ice Rink/Mastering Ice Arena Dehumidification_NovelAire.pdf` |
 | `assets/photos/novelaire-desiccant-wheels/4.jpg` | `Presentation/Desiccants/May 2026 NovelAire Webinar Presentation.pdf` |
-| `assets/photos/kampmann-venkon/4.jpg` | `Presentation/Kampmann/DMR Presentation 21 Sep 2026/drawing Venkon XXL.jpg` |
+| `assets/photos/kampmann-venkon-xxl/1.jpg` | `Presentation/Kampmann/DMR Presentation 21 Sep 2026/drawing Venkon XXL.jpg` |
 | `assets/photos/huntair-knockdown/1.jpg`, `temtrol-knockdown/1.jpg..4.jpg`, `governair-fanwall/4.png`, `temtrol-fanwall/1.jpg..2.png`, `mammoth-ashp/1.jpg`, `mammoth-vcube/4.png`, `mammoth-vcube-slim/3.jpg..4.png`, `envirotec-*/*`, `gree-*/*`, `klingenburg-wheel/1.png..4.png`, `runtal-*/*`, `reddi-*/*`, `sterling-*/*`, `steamovap-*/*`, `uvr-*/*`, `kampmann-*/4.png..5.png`, `cooney-freeze-block/4.png..5.png`, `rapid-mua/1.jpg..3.png` | `Presentation/WIP - DMR 2025 - Bob.pptx` (Slides 8–90) |
 

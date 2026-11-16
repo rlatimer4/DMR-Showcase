@@ -15,7 +15,7 @@ DMR.registerManufacturer({
   family: "Independent",
   logo: "assets/logos/Kampmann.png",
   website: "https://www.kampmann.ca/en-CA",
-  blurb: "Katherm trench units, fan coils, perimeter heating and unit heaters.",
+  blurb: "Katherm trench units, fan coils, ceiling cassettes, blower coils, perimeter heating and unit heaters.",
   products: [
     { id: "kampmann-katherm-hk", category: "hydronic", shape: "trench" },
     { id: "kampmann-katherm-qk", category: "hydronic", shape: "trench" },
@@ -26,7 +26,8 @@ DMR.registerManufacturer({
     { id: "kampmann-perimeter", category: "hydronic", shape: "cabinetheater" },
     { id: "kampmann-kadius", category: "fancoil", shape: "fancoil-round" },
     { id: "kampmann-venkon", category: "fancoil", shape: "fancoil-floor" },
-    { id: "kampmann-venkon-xl", category: "blowercoil", shape: "blowercoil" },
+    { id: "kampmann-venkon-xl", category: "fancoil", shape: "fancoil" },
+    { id: "kampmann-venkon-xxl", category: "blowercoil", shape: "blowercoil" },
     { id: "kampmann-kadeck", category: "fancoil", shape: "fancoil-low" },
     { id: "kampmann-powerkon", category: "fancoil", shape: "fancoil-floor" },
     { id: "kampmann-baseboard", category: "hydronic", shape: "fintube" }

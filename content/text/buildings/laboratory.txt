@@ -151,6 +151,7 @@ Equipment:
 - envirotec-hp | Fan coil for equipment rooms | Extra cooling where instrument loads are concentrated
 + envirotec-hl
 + envirotec-hdd
++ kampmann-venkon-xxl
 + kampmann-kadeck
 + kampmann-venkon-xl
 + kampmann-kadius
