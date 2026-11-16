@@ -91,6 +91,8 @@ breaks the site: anything that referred to it is skipped.
 - Spec Match: for fan coils and VAV terminals the Cabinet Style / Terminal
   Configuration dropdown is the one place to pick the unit type; those rows share
   one Level 2 sub-category so the duplicate sub-category checkboxes are not shown.
+  Fan coils have no Hydronic Piping dropdown; the Coil Options checkboxes cover it
+  (chilled water plus hot water means 4-pipe).
 - **Photos**: prefer a photo of the actual product, and avoid using the same
   photo for several products where possible. This is a preference, not a strict
   rule. A shared or general photo is acceptable when nothing better exists.
