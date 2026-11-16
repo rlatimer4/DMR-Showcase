@@ -247,7 +247,7 @@ site goes live, and replace any that are not cleared.
 | `assets/photos/envirotec-vl/1.jpg` | https://tyco.widen.net/content/emivjvg75h/jpeg/AID_commercialproductdetail_product_VLC_VL_AD.jpeg |
 | `assets/photos/envirotec-piping/1.jpg` | https://tyco.widen.net/content/6xaqq1izoc/jpeg/AID_commercialproductdetail_product_Piping-Package-Group_piping_packages_AD.jpeg |
 | `assets/photos/envirotec-crc/1.jpg` | https://tyco.widen.net/content/u1yffwjpxi/jpeg/AID_commercialproductdetail_product_CRC_AD.jpeg |
-| `assets/photos/envirotec-cfl-cc/1.jpg` | Enviro-Tec CFL-CC image supplied by DMR; callout text removed, cleaned and upscaled |
+| `assets/photos/envirotec-cfl-cc/1.jpg` | Enviro-Tec CFL-CC image supplied by DMR; callout text removed, upscaled 4x with Real-ESRGAN (x4plus) |
 | `assets/photos/envirotec-cfl-cc/2.jpg` | https://tyco.widen.net/content/nve8tvyqb0/jpeg/AID_commercialproductdetail_product_CFL_AD.jpeg |
 | `assets/photos/envirotec-crq/1.jpg` | https://tyco.widen.net/content/cgowiy8zno/jpeg/AID_commercialproductdetail_product_CRQ_AD.jpeg |
 | `assets/photos/envirotec-sdl/1.jpg` | https://tyco.widen.net/content/nrfgdmyc4c/jpeg/AID_commercialproductdetail_product_SDL_SDL_AD.jpeg |
